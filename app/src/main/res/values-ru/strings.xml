@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="refresh">Обновить</string>
+    <string name="please_wait">Пожалуйста, подождите...</string>
+    <string name="main_info">Это приложение работает как расширение для браузеров, поддерживающих блокировку нежелательного контента.\n\nНа данный момент это два браузера:\n\n1. Samsung Internet\n2. Yandex Browser\n\nС помощью этого приложения вы сможете заблокировать в этих браузерах всю рекламу.\n\nКроме того, в настройках вы можете настроить используемые фильтры.</string>
+    <string name="progressGenericErrorText">Произошла ошибка!</string>
+    <string name="importUserRulesSuccessResultMessage">Импортировано {0} фильтров!</string>
+    <string name="importUserRulesErrorResultMessage">Ошибка импортирования фильтров!</string>
+    <string name="importUserRulesProgressDialogTitle">Импортирование...</string>
+    <string name="importUserRulesProgressDialogMessage">Загрузка...</string>
+    <string name="checkUpdatesProgressDialogTitle">Проверка обновлений</string>
+    <string name="checkUpdatesProgressDialogMessage">Проверка обновлений, пожалуйста, подождите...</string>
+    <string name="checkUpdatesErrorResultMessage">Не получилось проверить обновления. Попробуйте позже.</string>
+    <string name="checkUpdatesZeroResultMessage">Вы используете самые свежие версии фильтров.</string>
+    <string name="checkUpdatesOneResultMessage">Обновлен один фильтр:{0}</string>
+    <string name="checkUpdatesManyResultMessage">Обновлено {0} фильтров:{1}</string>
+    <string name="action_settings">Настройки</string>
+    <string name="openned_drawer_title">Настройки</string>
+    <string name="about">О программе</string>
+    <string name="settings">Настройки</string>
+    <string name="pref_autoupdate_filters">Автообновление фильтров</string>
+    <string name="pref_summary_autoupdate_filters">Обновлять фильтры автоматически</string>
+    <string name="pref_update_wifi_only">Обновлять только по Wi-Fi</string>
+    <string name="pref_summary_update_wifi_only">Не обновлять фильтры по мобильной сети</string>
+    <string name="pref_show_useful_ads">Показывать полезную рекламу</string>
+    <string name="pref_summary_show_useful_ads">Разблокирует рекламу, которая может быть полезна.</string>
+    <string name="pref_filters_category">Фильтры</string>
+    <string name="pref_summary_filters_category">Выбрать, какие фильтры использовать</string>
+    <string name="filters">Фильтры</string>
+    <string name="stats_enabled_filters">Фильтров:</string>
+    <string name="stats_enabled_rules">Правил:</string>
+    <string name="stats_update_time">Обновлено:</string>
+    <string name="start_samsung_browser">Запустить настройки Samsung Internet</string>
+    <string name="start_yandex_browser">Запустить настройки Yandex Browser</string>
+    <string name="open_browsers_info">Чтобы включить в браузере функцию блокировки контента с использованием наших фильтров, нажмите здесь:</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">Версия {0}</string>
+    <string name="copyrightInfoTextViewText">© 2008–2016. ООО \"Перформикс\".\nВсе права защищены.</string>
+    <string name="rateAdguardButtonText">Оценить Adguard</string>
+    <string name="feedbackButtonText">Сообщение в поддержку</string>
+    <string name="officialSiteLabelText">Официальный сайт</string>
+    <string name="forumLabelText">Форум</string>
+    <string name="emailLabelText">Email</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Конфиденциальность</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/ru/eula.html">Соглашение</a></string>
+    <string name="copyrightMessage">Предупреждение: данная программа защищается законами об авторских правах и международными конвенциями. Незаконное копирование или распространение данной программы или какой-либо ее части может повлечь суровые гражданские и уголовные наказания и будет преследоваться по всей строгости закона.</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
+    <string name="install_browsers">У вас не установлено ни одного поддерживаемого браузера! Установите их из Google Play:</string>
+    <string name="install_samsung_browser">Установить Samsung Internet</string>
+    <string name="install_yandex_browser">Установить Yandex Browser</string>
+    <string name="issuesButtonText">Нашли ошибку?</string>
+    <string name="githubLabelText">Исходный код</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="app_name" translatable="false">Adguard Content Blocker</string>
+    <string name="refresh">Refresh</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="main_info">This application is an extension for browsers that support content-blocking.\n\nCurrently there are two such browsers:\n\n1. Samsung Internet browser\n2. Yandex Browser\n\nWith the help of this application you can block all advertisements in these browsers.\n\nAlso, you can select which filters to use in Settings.</string>
+    <string name="app_language_english" translatable="false">English</string>
+    <string name="app_language_russian" translatable="false">Русский</string>
+    <string name="progressGenericErrorText">Some error occurred!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} filter(s) imported successfully!</string>
+    <string name="importUserRulesErrorResultMessage">Error importing filters!</string>
+    <string name="importUserRulesProgressDialogTitle">Import in progress</string>
+    <string name="importUserRulesProgressDialogMessage">Loading…</string>
+    <string name="checkUpdatesProgressDialogTitle">Checking updates</string>
+    <string name="checkUpdatesProgressDialogMessage">Checking updates, please wait…</string>
+    <string name="checkUpdatesErrorResultMessage">Update failed. Please try again later.</string>
+    <string name="checkUpdatesZeroResultMessage">You are using the most recent versions of filters.</string>
+    <string name="checkUpdatesOneResultMessage">One filter has been updated:{0}</string>
+    <string name="checkUpdatesManyResultMessage">{0} filters have been updated:{1}</string>
+    <string name="action_settings">Settings</string>
+    <string name="openned_drawer_title">Options</string>
+    <string name="closed_drawer_title" translatable="false">Adguard Content Blocker</string>
+    <string name="about">About</string>
+    <string name="settings">Settings</string>
+    <string name="pref_autoupdate_filters">Autoupdate filters</string>
+    <string name="pref_summary_autoupdate_filters">Update filters automatically</string>
+    <string name="pref_update_wifi_only">Update over Wi-Fi only</string>
+    <string name="pref_summary_update_wifi_only">Don\'t update filters over mobile network</string>
+    <string name="pref_show_useful_ads">Show useful ads</string>
+    <string name="pref_summary_show_useful_ads">Unblocks ads which may be useful to users.</string>
+    <string name="pref_filters_category">Filters</string>
+    <string name="pref_summary_filters_category">Select what filters to use</string>
+    <string name="filters">Filters</string>
+    <string name="stats_enabled_filters">Filters:</string>
+    <string name="stats_enabled_rules">Rules:</string>
+    <string name="stats_update_time">Updated on:</string>
+    <string name="start_samsung_browser">Open Samsung Internet options</string>
+    <string name="start_yandex_browser">Open Yandex Browser options</string>
+    <string name="open_browsers_info">To enable content blocking using our filters you can directly open browser options by clicking here:</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">Version {0}</string>
+    <string name="copyrightInfoTextViewText">© 2008–2016. Performix LLC.\nAll Rights Reserved.</string>
+    <string name="rateAdguardButtonText">Rate Adguard</string>
+    <string name="feedbackButtonText">Send Feedback</string>
+    <string name="officialSiteLabelText">Official site</string>
+    <string name="forumLabelText">Forum</string>
+    <string name="emailLabelText">Email</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="copyrightMessage">Warning: this program is protected by copyrights and international conventions.
+Illegal copying or distribution of this program or its parts may result in severe administrative and criminal punishments.</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
+    <string name="install_browsers">You have no supported browsers installed! You can install them from Google Play:</string>
+    <string name="install_samsung_browser">Install Samsung Internet</string>
+    <string name="install_yandex_browser">Install Yandex Browser</string>
+    <string name="issuesButtonText">Report Bug</string>
+    <string name="githubLabelText">Source code</string>
+    <!--Do not translate.-->
+    <string name="githubLink" translatable="false">github.com</string>
+</resources>

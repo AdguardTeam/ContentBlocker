@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView style="@style/staticScrollViewer">
+
+        <LinearLayout style="@style/staticContentWrapper">
+
+            <TextView
+                android:id="@+id/versionInfoTextView"
+                style="@style/subHeaderTextView"
+                android:text="@string/versionInfoTextViewText" />
+
+            <LinearLayout style="@style/verticalStackPanel">
+
+                <TextView
+                    style="@style/descriptionTextView"
+                    android:text="@string/copyrightInfoTextViewText" />
+
+                <Button
+                    android:id="@+id/rateAppButton"
+                    style="@style/commonBigButton"
+                    android:layout_marginTop="@dimen/inputSectionMarginTop"
+                    android:text="@string/rateAdguardButtonText" />
+
+                <Button
+                    android:id="@+id/issuesButton"
+                    style="@style/commonBigButton"
+                    android:layout_marginTop="@dimen/inputMarginTop"
+                    android:text="@string/issuesButtonText" />
+
+                <!--<Button
+                    android:id="@+id/feedbackButton"
+                    style="@style/grayBigButton"
+                    android:text="@string/feedbackButtonText"
+                    android:layout_marginTop="@dimen/inputMarginTop"/>-->
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/inputSectionMarginTop">
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/textViewAboutLabel"
+                            android:text="@string/officialSiteLabelText" />
+
+                        <TextView
+                            android:id="@+id/adguardComLinkTextView"
+                            style="@style/buttonAboutLink"
+                            android:text="@string/adguardComLink" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/textViewAboutLabel"
+                            android:text="@string/forumLabelText" />
+
+                        <TextView
+                            android:id="@+id/forumAdguardComLinkTextView"
+                            style="@style/buttonAboutLink"
+                            android:text="@string/forumAdguardComLink" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/textViewAboutLabel"
+                            android:text="@string/githubLabelText" />
+
+                        <TextView
+                            android:id="@+id/githubLinkTextView"
+                            style="@style/buttonAboutLink"
+                            android:text="@string/githubLink" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/horizontalStackPanel"
+                android:layout_marginTop="@dimen/inputSectionMarginTop">
+
+                <TextView
+                    android:id="@+id/eulaLinkTextView"
+                    style="@style/greenButtonLink"
+                    android:text="@string/eulaLinkText" />
+
+                <TextView
+                    android:id="@+id/privacyPolicyLinkTextView"
+                    style="@style/greenButtonLink"
+                    android:layout_marginLeft="@dimen/inputMarginLeft"
+                    android:text="@string/privacyPolicyLinkText" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/verticalStackPanel"
+                android:layout_marginBottom="@dimen/inputSectionMarginTop"
+                android:layout_marginTop="@dimen/inputSectionMarginTop">
+
+                <TextView
+                    style="@style/descriptionTextView"
+                    android:maxWidth="@dimen/aboutFooterWidth"
+                    android:text="@string/copyrightMessage" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

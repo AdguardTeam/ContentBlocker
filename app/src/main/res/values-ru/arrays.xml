@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menu_titles">
+        <item>Настройки</item>
+        <item>О программе</item>
+        <item>Выход</item>
+    </string-array>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text sizes -->
+    <dimen name="smallTextSize">10sp</dimen>
+    <dimen name="commonTextSize">12sp</dimen>
+    <dimen name="dialogTextSize">18sp</dimen>
+    <dimen name="firewallItemSecondTextSize">14sp</dimen>
+    <dimen name="labelTextSize">16sp</dimen>
+    <dimen name="headerTextSize">24sp</dimen>
+    <dimen name="subHeaderTextSize">20sp</dimen>
+    <dimen name="buttonTextSize">20sp</dimen>
+    <dimen name="smallButtonTextSize">14sp</dimen>
+    <dimen name="linkButtonTextSize">16sp</dimen>
+    <dimen name="smallLinkButtonTextSize">15sp</dimen>
+    <dimen name="faqHeaderTextSize">16sp</dimen>
+    <dimen name="faqQuestionTextSize">16sp</dimen>
+    <dimen name="settingsTitleTextSize">18sp</dimen>
+    <dimen name="settingsDescriptionTextSize">14sp</dimen>
+    <dimen name="settingsMenuItemTextSize">20sp</dimen>
+
+    <dimen name="headerTextViewMarginTop">10dp</dimen>
+    <dimen name="headerTextViewMarginBottom">15dp</dimen>
+    <dimen name="inputMarginTop">6dp</dimen>
+    <dimen name="inputSectionMarginTop">15dp</dimen>
+    <dimen name="inputMarginLeft">15dp</dimen>
+
+    <!-- About view sizes -->
+    <dimen name="aboutViewLinkButtonMarginLeft">15dp</dimen>
+    <dimen name="aboutFooterWidth">500dp</dimen>
+
+    <!-- Layout sizes -->
+    <dimen name="staticLayoutWidth">300dp</dimen>
+
+    <!-- Settings view sizes -->
+    <dimen name="settingsItemPaddingRight">8dp</dimen>
+    <dimen name="settingsItemPaddingBottom">15dp</dimen>
+    <dimen name="settingsItemTextMarginLeft">15dp</dimen>
+    <dimen name="settingsItemTextPaddingRight">45dp</dimen>
+    <dimen name="settingsItemTextPaddingLeft">50dp</dimen>
+    <dimen name="settingsItemDescriptionPaddingBottom">3dp</dimen>
+    <dimen name="settingsItemTextPremiumMarginLeft">36dp</dimen>
+    <dimen name="settingsTitleMarginTop">15dp</dimen>
+    <dimen name="settingsCheckBoxMarginLeft">25dp</dimen>
+    <dimen name="settingsEditableListItemPaddingLeft">15dp</dimen>
+    <dimen name="settingsEditableListItemPaddingRight">35dp</dimen>
+    <dimen name="settingsListItemCloseButtonPaddingLeftRight">15dp</dimen>
+    <dimen name="settingsListItemCloseButtonPaddingTopBottom">5dp</dimen>
+    <dimen name="settingsMenuItemPadding">15dp</dimen>
+    <dimen name="settingsMenuItemPaddingRight">12dp</dimen>
+    <dimen name="settingsPremiumMenuItemPadding">32dp</dimen>
+    <dimen name="settingsEmptyListImageMarginTop">40dp</dimen>
+    <dimen name="settingsEmptyListImageMarginBottom">40dp</dimen>
+
+</resources>

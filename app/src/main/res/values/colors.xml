@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#39b349</color>
+    <color name="colorPrimaryDark">#0c851a</color>
+    <color name="colorAccent">#0c851a</color>
+    <color name="secondary_text_material">#141414</color>
+    <color name="primary_text_material">#ffffff</color>
+
+    <color name="adguard_green">#39B54A</color>
+    <color name="adguard_green_pressed">@color/colorPrimary</color>
+    <color name="adguard_green_border">#33A343</color>
+    <color name="adguard_green_light">#DFF7E2</color>
+    <color name="common_text">#333333</color>
+    <color name="text_disabled">#C7C7C7</color>
+    <color name="light_gray_text">#999999</color>
+    <color name="gray">#D8D8D8</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_common">#ffffffff</color>
+    <color name="button_gray">#808080</color>
+    <color name="light_gray">#F0F0F0</color>
+</resources>

@@ -26,6 +26,8 @@ public class AboutActivity extends AppCompatActivity {
         adguardComLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
         final TextView forumAdguardComLinkTextView = (TextView) findViewById(R.id.forumAdguardComLinkTextView);
         forumAdguardComLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
+        final TextView githubLinkTextView = (TextView) findViewById(R.id.githubLinkTextView);
+        githubLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
         final View rateAppButton = findViewById(R.id.rateAppButton);
         rateAppButton.setOnClickListener(new View.OnClickListener() {
@@ -40,14 +42,6 @@ public class AboutActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 redirectToWebSite(AboutActivity.this, "https://github.com/AdguardTeam/ContentBlocker/issues");
-            }
-        });
-
-        final View githubLink = findViewById(R.id.githubLinkTextView);
-        githubLink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                redirectToWebSite(AboutActivity.this, "https://github.com/AdguardTeam/ContentBlocker");
             }
         });
 

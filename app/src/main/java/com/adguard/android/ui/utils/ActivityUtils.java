@@ -1,3 +1,19 @@
+/**
+ This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
+ Copyright © 2016 Performix LLC. All rights reserved.
+
+ Adguard Content Blocker is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by the
+ Free Software Foundation, either version 3 of the License, or (at your option)
+ any later version.
+
+ Adguard Content Blocker is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along with
+ Adguard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
+ */
 package com.adguard.android.ui.utils;
 
 import android.app.Activity;
@@ -24,21 +40,6 @@ import java.util.Locale;
  * Activity utils methods.
  */
 public class ActivityUtils {
-
-    /**
-     * Inflates menu
-     *
-     * @param activity     Activity
-     * @param menu         Menu
-     * @param itemIdToHide Item to hide
-     */
-    public static void inflateMenu(Activity activity, Menu menu, Integer itemIdToHide) {
-        MenuInflater menuInflater = activity.getMenuInflater();
-        menuInflater.inflate(R.menu.main_menu, menu);
-        if (itemIdToHide != null) {
-            menu.removeItem(itemIdToHide);
-        }
-    }
 
     /**
      * Formats date string
@@ -90,16 +91,6 @@ public class ActivityUtils {
         }
 
         return numberFormat.format(v.setScale(scale, RoundingMode.UP));
-    }
-
-    /**
-     * Checks if passed expiration date is so after in the future so we can say the license is endless.
-     *
-     * @param expirationDate Expiration date
-     * @return true if this is lifetime license
-     */
-    public static boolean isLifetimeExpirationDate(Date expirationDate) {
-        return expirationDate != null && expirationDate.after(DateUtils.addDays(new Date(), 10000));
     }
 
     /**

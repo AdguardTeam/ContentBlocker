@@ -43,7 +43,7 @@
     <string name="emailLabelText">Email</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Конфиденциальность</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/ru/eula.html">Соглашение</a></string>
-    <string name="copyrightMessage">Предупреждение: данная программа защищается законами об авторских правах и международными конвенциями. Незаконное копирование или распространение данной программы или какой-либо ее части может повлечь суровые гражданские и уголовные наказания и будет преследоваться по всей строгости закона.</string>
+    <string name="copyrightMessage">Adguard Content Blocker является свободным программным обеспечением: вы можете распространять и/или изменять его в соответствии с GNU General Public License, опубликованной Free Software Foundation, либо версией 3 данной лицензии, либо (по вашему желанию) более поздней версии.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>

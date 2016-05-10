@@ -1,13 +1,26 @@
+/**
+ This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
+ Copyright © 2016 Performix LLC. All rights reserved.
+
+ Adguard Content Blocker is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by the
+ Free Software Foundation, either version 3 of the License, or (at your option)
+ any later version.
+
+ Adguard Content Blocker is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along with
+ Adguard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
+ */
 package com.adguard.android.contentblocker;
 
 import android.content.Context;
 
 import com.adguard.android.commons.RawResources;
 import com.adguard.android.filtering.api.HttpServiceClient;
-import com.adguard.android.model.AppConfiguration;
 import com.adguard.android.model.FilterList;
-import com.adguard.android.model.MobileStatusResponse;
-import com.adguard.android.model.UpdateResponse;
 import com.adguard.commons.web.UrlUtils;
 
 import org.apache.commons.lang.StringUtils;
@@ -22,9 +35,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Special client to communicate with out backend
@@ -98,190 +109,8 @@ public class ServiceApiClient extends HttpServiceClient {
         return parseFiltersVersionData(response);
     }
 
-    /**
-     * Downloads application status info
-     *
-     * @param context       Application context
-     * @param applicationId Application ID
-     * @param versionName   Version
-     * @param licenseKey    License key
-     * @param purchaseToken Purchase token
-     * @param storeName     Name of store like Google, Amazon, etc.
-     * @param webmasterId   Webmaster ID
-     * @param couponId      Coupon ID
-     * @param deviceName    Device name
-     * @return Response from backend
-     */
-    public static MobileStatusResponse downloadStatusInfo(Context context, String applicationId, String versionName,
-                                                          String licenseKey, String purchaseToken, String storeName,
-                                                          String webmasterId, Integer couponId, String deviceName) {
-        try {
-            String downloadUrl = RawResources.getApplicationStatusUrl(context)
-                    .replace("{0}", UrlUtils.urlEncode(applicationId))
-                    .replace("{1}", UrlUtils.urlEncode(versionName))
-                    .replace("{2}", UrlUtils.urlEncode(licenseKey != null ? licenseKey : ""))
-                    .replace("{3}", UrlUtils.urlEncode(Locale.getDefault().getLanguage()))
-                    .replace("{4}", UrlUtils.urlEncode(purchaseToken != null ? purchaseToken : ""))
-                    .replace("{5}", UrlUtils.urlEncode(storeName != null ? storeName : ""))
-                    .replace("{6}", UrlUtils.urlEncode(webmasterId != null ? webmasterId : ""))
-                    .replace("{7}", UrlUtils.urlEncode(couponId != null ? String.valueOf(couponId) : ""))
-                    .replace("{8}", UrlUtils.urlEncode(deviceName != null ? deviceName : ""));
-
-            final String response = downloadString(downloadUrl);
-            LOG.info(response);
-            return OBJECT_MAPPER.readValue(response, MobileStatusResponse.class);
-        } catch (Exception ex) {
-            LOG.error("Error requesting application status\r\n", ex);
-        }
-
-        return null;
-    }
-
-    /**
-     * Downloads application update info
-     *
-     * @param context       Context
-     * @param applicationId Application id
-     * @param versionName   Current version name
-     * @param force         true means manual update check
-     */
-    public static UpdateResponse downloadUpdateInfo(Context context, String applicationId, String versionName, boolean force) {
-        try {
-            String downloadUrl = RawResources.getCheckUpdateUrl(context)
-                    .replace("{0}", UrlUtils.urlEncode(applicationId))
-                    .replace("{1}", UrlUtils.urlEncode(versionName))
-                    .replace("{2}", UrlUtils.urlEncode(Locale.getDefault().getLanguage()))
-                    .replace("{3}", UrlUtils.urlEncode(Boolean.toString(force)))
-                    .replace("{4}", "release");
-
-            LOG.info("Send request to {}", downloadUrl);
-            final String response = downloadString(downloadUrl);
-            LOG.info(response);
-
-            if (StringUtils.isEmpty(response)) {
-                LOG.info("Application update response is empty");
-                return null;
-            }
-
-            return OBJECT_MAPPER.readValue(response, UpdateResponse.class);
-        } catch (Exception ex) {
-            LOG.error("Error requesting application update\r\n", ex);
-        }
-
-        return null;
-    }
-
     private static List<FilterList> parseFiltersVersionData(String json) throws IOException {
         return OBJECT_MAPPER.readValue(json, new TypeReference<List<FilterList>>() {
         });
-    }
-
-    /**
-     * Sends feedback message to backend.
-     *
-     * @param context       Context
-     * @param applicationId Application unique ID
-     * @param versionName   Application version
-     * @param userEmail     User email
-     * @param feedbackType  Feedback type
-     * @param message       Message content
-     */
-    public static String sendFeedbackMessage(Context context, String applicationId, String versionName,
-                                             String userEmail, String feedbackType, String message) {
-        return sendFeedbackMessage(context, applicationId, versionName, userEmail, feedbackType, message, null, null);
-    }
-
-    /**
-     * Sends feedback message with additional debug info included
-     *
-     * @param context          Context
-     * @param applicationId    Application unique ID
-     * @param versionName      Application version
-     * @param userEmail        User's email
-     * @param feedbackType     Feedback type
-     * @param message          Message text
-     * @param applicationState Application configuration
-     * @param debugInfo        Additional debug info
-     */
-    public static String sendFeedbackMessage(Context context, String applicationId, String versionName,
-                                             String userEmail, String feedbackType,
-                                             String message, AppConfiguration applicationState, String debugInfo) {
-        String url = RawResources.getFeedbackUrl(context);
-        try {
-            HashMap<String, String> map = new HashMap<>();
-            map.put("applicationId", applicationId);
-            map.put("version", versionName);
-            map.put("email", userEmail);
-            map.put("language", Locale.getDefault().getLanguage());
-            map.put("subject", feedbackType);
-            map.put("description", message);
-            map.put("applicationState", OBJECT_MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(applicationState));
-            map.put("debugInfo", debugInfo);
-
-            StringBuilder sb = new StringBuilder();
-            for (String key : map.keySet()) {
-                final String value = map.get(key);
-                if (value == null) continue;
-
-                sb.append("&");
-                sb.append(key);
-                sb.append("=");
-                sb.append(UrlUtils.urlEncode(value));
-            }
-
-            String body = sb.toString();
-            body = body.substring(1);
-
-            LOG.info("Sending feedback. Body length is {}", body.length());
-            final String response = postData(url, body);
-            LOG.info("Feedback has been sent. Response is {}", response);
-            return response;
-        } catch (IOException ex) {
-            LOG.error("Error while sending feedback message:\r\n", ex);
-        }
-
-        return null;
-    }
-
-    /**
-     * Performs license reset request
-     *
-     * @param context       Context
-     * @param applicationId Application id
-     */
-    public static void resetLicense(Context context, String applicationId) {
-        try {
-            String downloadUrl = RawResources.getResetLicenseUrl(context).replace("{0}", UrlUtils.urlEncode(applicationId));
-
-            LOG.info("Send request to {}", downloadUrl);
-            final String response = downloadString(downloadUrl);
-            LOG.info(response);
-        } catch (Exception ex) {
-            LOG.error("Error resetting license\r\n", ex);
-        }
-    }
-
-    /**
-     * Performs license trial request
-     *
-     * @param context       Context
-     * @param applicationId Application ID
-     * @param webmasterId   Webmaster ID
-     */
-    public static MobileStatusResponse requestLicenseTrial(Context context, String applicationId, String webmasterId) {
-        try {
-            String downloadUrl = RawResources.getRequestLicenseTrialUrl(context);
-            downloadUrl = downloadUrl.replace("{0}", UrlUtils.urlEncode(applicationId));
-            downloadUrl = downloadUrl.replace("{1}", UrlUtils.urlEncode(webmasterId != null ? webmasterId : ""));
-
-            LOG.info("Send request to {}", downloadUrl);
-            final String response = downloadString(downloadUrl);
-            LOG.info(response);
-            return OBJECT_MAPPER.readValue(response, MobileStatusResponse.class);
-        } catch (Exception ex) {
-            LOG.error("Error requesting trial\r\n", ex);
-        }
-
-        return null;
     }
 }

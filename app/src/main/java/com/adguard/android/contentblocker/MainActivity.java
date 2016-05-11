@@ -99,7 +99,9 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeButtonEnabled(true);
         }
+    }
 
+    private void refreshMainInfo() {
         boolean available = false;
 
         if (isSamsungBrowserAvailable()) {
@@ -186,6 +188,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     public void onStart() {
         super.onStart();
         PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
+        refreshMainInfo();
     }
 
     @Override

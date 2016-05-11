@@ -16,7 +16,9 @@
  */
 package com.adguard.android.contentblocker;
 
-import android.content.Context;
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,11 +34,11 @@ import com.adguard.android.service.FilterService;
  */
 public class FilterViewAdapter extends BaseAdapter implements View.OnClickListener {
 
-    private final Context context;
+    private final Activity context;
     private final LayoutInflater layoutInflater;
     private final FilterService filterService;
 
-    public FilterViewAdapter(Context context, FilterService filterService) {
+    public FilterViewAdapter(Activity context, FilterService filterService) {
         this.context = context;
         this.filterService = filterService;
         this.layoutInflater = LayoutInflater.from(context);
@@ -96,5 +98,34 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
         FilterList list = (FilterList) v.getTag();
         filterService.updateFilterEnabled(list, !list.isEnabled());
         ((CheckBox)v.findViewById(R.id.checkbox)).setChecked(list.isEnabled());
+        new ApplyAndRefreshTask(filterService, context).execute();
+    }
+
+    public static class ApplyAndRefreshTask extends AsyncTask<Void, Void, Void> {
+
+        private final FilterService service;
+        private final Activity activity;
+        private ProgressDialog dialog;
+
+        public ApplyAndRefreshTask(FilterService service, Activity activity) {
+            this.service = service;
+            this.activity = activity;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            dialog = ProgressDialog.show(activity, null, activity.getText(R.string.please_wait), true);
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            service.applyNewSettings();
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void res) {
+            dialog.dismiss();
+        }
     }
 }

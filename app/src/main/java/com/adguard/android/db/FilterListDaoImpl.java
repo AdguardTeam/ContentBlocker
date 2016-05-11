@@ -170,6 +170,7 @@ public class FilterListDaoImpl implements FilterListDao {
         } finally {
             close(null, db);
         }
+        cachedEnabledFilterCount = 0;
     }
 
     @Override

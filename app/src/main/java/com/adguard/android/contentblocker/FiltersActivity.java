@@ -21,14 +21,19 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import com.adguard.android.ServiceLocator;
+import com.adguard.android.service.FilterService;
 
 public class FiltersActivity extends AppCompatActivity {
+
+    private FilterViewAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filters);
         ListView listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(new FilterViewAdapter(this, ServiceLocator.getInstance(getApplicationContext()).getFilterService()));
+        FilterService filterService = ServiceLocator.getInstance(getApplicationContext()).getFilterService();
+        adapter = new FilterViewAdapter(this, filterService);
+        listView.setAdapter(adapter);
     }
 }

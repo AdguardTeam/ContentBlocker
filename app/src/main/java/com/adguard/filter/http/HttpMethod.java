@@ -16,7 +16,7 @@
  */
 package com.adguard.filter.http;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Contains possible HTTP methods

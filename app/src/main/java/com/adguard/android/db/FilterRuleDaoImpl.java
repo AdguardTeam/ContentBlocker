@@ -18,9 +18,9 @@ package com.adguard.android.db;
 
 import android.content.Context;
 import com.adguard.filter.rules.FilterRule;
-import org.apache.commons.collections.list.SetUniqueList;
+import org.apache.commons.collections4.list.SetUniqueList;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,7 +51,7 @@ public class FilterRuleDaoImpl implements FilterRuleDao {
     @Override
     public List<String> selectRuleTexts(List<Integer> filterIds, boolean useCosmetics) {
         //noinspection unchecked
-        List<String> rules = SetUniqueList.decorate(new ArrayList<String>());
+        List<String> rules = SetUniqueList.setUniqueList(new ArrayList<String>());
 
         for (int filterId : filterIds) {
             addRules(filterId, rules, useCosmetics);

@@ -21,8 +21,8 @@ import com.adguard.commons.utils.CharsetUtils;
 import com.adguard.filter.html.Chars;
 import com.adguard.filter.http.HttpMethod;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.ArrayUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -26,7 +26,7 @@ import android.graphics.Point;
 import android.net.Uri;
 import android.view.*;
 import com.adguard.android.contentblocker.R;
-import org.apache.commons.lang.time.DateUtils;
+//import org.apache.commons.lang.time.DateUtils;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

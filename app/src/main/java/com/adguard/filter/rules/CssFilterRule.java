@@ -16,7 +16,7 @@
  */
 package com.adguard.filter.rules;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Rule for adding CSS filters to page.

@@ -18,8 +18,8 @@ package com.adguard.filter.rules;
 
 import com.adguard.commons.collections.Lists;
 import com.adguard.commons.web.UrlUtils;
-import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;

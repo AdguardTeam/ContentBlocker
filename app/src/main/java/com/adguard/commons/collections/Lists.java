@@ -17,7 +17,7 @@
 package com.adguard.commons.collections;
 
 import com.adguard.commons.collections.predicates.Predicate;
-import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;

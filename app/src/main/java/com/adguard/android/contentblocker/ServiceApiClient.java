@@ -23,7 +23,7 @@ import com.adguard.android.filtering.api.HttpServiceClient;
 import com.adguard.android.model.FilterList;
 import com.adguard.commons.web.UrlUtils;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.codehaus.jackson.annotate.JsonAutoDetect;
 import org.codehaus.jackson.annotate.JsonMethod;
 import org.codehaus.jackson.map.DeserializationConfig;

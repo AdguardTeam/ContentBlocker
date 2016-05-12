@@ -17,7 +17,7 @@
 package com.adguard.filter.rules;
 
 import com.adguard.filter.html.HtmlElements;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.LoggerFactory;
 
 import java.net.URL;

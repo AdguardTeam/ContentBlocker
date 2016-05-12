@@ -18,7 +18,7 @@ package com.adguard.commons.io;
 
 import com.adguard.commons.utils.CharsetUtils;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.*;
 import java.nio.charset.Charset;

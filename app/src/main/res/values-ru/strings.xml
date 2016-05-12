@@ -33,6 +33,8 @@
     <string name="start_samsung_browser">Запустить настройки Samsung Internet</string>
     <string name="start_yandex_browser">Запустить настройки Yandex Browser</string>
     <string name="open_browsers_info">Чтобы включить в браузере функцию блокировки контента с использованием наших фильтров, нажмите здесь:</string>
+    <string name="filterVersionTemplate">Версия {0}.</string>
+    <string name="filterUpdatedTemplate">Обновлен {0} в {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Версия {0}</string>
     <string name="copyrightInfoTextViewText">© 2008–2016. ООО \"Перформикс\".\nВсе права защищены.</string>

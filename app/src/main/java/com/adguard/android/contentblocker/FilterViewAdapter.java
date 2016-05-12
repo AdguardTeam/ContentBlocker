@@ -28,6 +28,10 @@ import android.widget.TextView;
 
 import com.adguard.android.model.FilterList;
 import com.adguard.android.service.FilterService;
+import com.adguard.android.ui.utils.ActivityUtils;
+
+import java.util.Date;
+import java.util.Locale;
 
 /**
  *
@@ -74,7 +78,8 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
         }
 
         ((TextView) view.findViewById(R.id.title)).setText(filterList.getName());
-        ((TextView) view.findViewById(R.id.summary)).setText(filterList.getDescription());
+        CharSequence description = getFilterSummaryText(filterList);
+        ((TextView) view.findViewById(R.id.summary)).setText(description);
         ((CheckBox) view.findViewById(R.id.checkbox)).setChecked(filterList.isEnabled());
         view.setOnClickListener(this);
 
@@ -99,6 +104,29 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
         filterService.updateFilterEnabled(list, !list.isEnabled());
         ((CheckBox)v.findViewById(R.id.checkbox)).setChecked(list.isEnabled());
         new ApplyAndRefreshTask(filterService, context).execute();
+    }
+
+    private CharSequence getFilterSummaryText(FilterList filter) {
+        StringBuilder sb = new StringBuilder();
+
+        // Description
+        sb.append(filter.getDescription());
+        sb.append("\r\n");
+
+        // Filter version
+        sb.append(context.getString(R.string.filterVersionTemplate).replace("{0}", filter.getVersion().getLongVersionString()));
+
+        // Updated time
+        final Date updated = filter.getLastTimeDownloaded();
+        if (updated != null && updated.getTime() > 0) {
+            sb.append("\r\n");
+            final Locale locale = Locale.getDefault();
+            sb.append(context.getString(R.string.filterUpdatedTemplate)
+                    .replace("{0}", ActivityUtils.formatDate(updated, locale))
+                    .replace("{1}", ActivityUtils.formatTime(updated, locale)));
+        }
+
+        return sb.toString();
     }
 
     public static class ApplyAndRefreshTask extends AsyncTask<Void, Void, Void> {

@@ -37,6 +37,8 @@
     <string name="start_samsung_browser">Open Samsung Internet options</string>
     <string name="start_yandex_browser">Open Yandex Browser options</string>
     <string name="open_browsers_info">To enable content blocking using our filters you can directly open browser options by clicking here:</string>
+    <string name="filterVersionTemplate">Version {0}.</string>
+    <string name="filterUpdatedTemplate">Updated {0} at {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Version {0}</string>
     <string name="copyrightInfoTextViewText">© 2008–2016. Performix LLC.\nAll Rights Reserved.</string>

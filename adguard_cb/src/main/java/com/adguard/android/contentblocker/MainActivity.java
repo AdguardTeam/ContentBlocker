@@ -279,7 +279,17 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         List<ResolveInfo> list = getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
-            startActivity(intent);
+            boolean found = false;
+            for (ResolveInfo info : list)
+            {
+                if (info.activityInfo.packageName.contains("com.sec.") || info.activityInfo.packageName.contains("samsung")) {
+                    found = true;
+                    intent.setClassName(info.activityInfo.packageName, info.activityInfo.name);
+                }
+            }
+            if (found) {
+                startActivity(intent);
+            }
         }
     }
 
@@ -317,6 +327,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             {
                 if (info.activityInfo.packageName.contains(YANDEX)) {
                     found = true;
+                    intent.setClassName(info.activityInfo.packageName, info.activityInfo.name);
                 }
             }
             if (found) {

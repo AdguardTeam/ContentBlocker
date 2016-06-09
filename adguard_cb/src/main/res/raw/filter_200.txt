@@ -1,10 +1,10 @@
 ! Title: ABP Japanese Filters
-! Version: 1.0.3.30
+! Version: 1.0.3.55
 ! Name: ABP Japanese Filters
 ! Description: 日本語
 ! NameEn: ABP Japanese Filters
 ! DescriptionEn: 日本語
-! TimeUpdated: 2016-04-28T02:03:11.975+04:00
+! TimeUpdated: 2016-06-07T02:03:26.601+04:00
 @@||google.*/maps/_/js/
 @@||alicdn.com/tb-mod/$domain=taobao.com
 @@|http:*?*&ip=$domain=play.google.com
@@ -27,6 +27,7 @@ e.mail.ru#@#[class*="advertising"]:not(body):not(input)
 @@||oracleimg.com^*/assets/metrics/ora_$domain=oracle.com
 @@||yimg.jp/bdv/yahoo/darla/$domain=mail.yahoo.co.jp
 @@||yimg.jp/bdv/yahoo/javascript/csc/$domain=mail.yahoo.co.jp
+@@/images/trialpay/download_btn.$image
 @@/lazy-load/images/1x1.
 @@//player.ooyala.com^
 @@||images.apple.com^*/promo_$domain=apple.com
@@ -86,12 +87,21 @@ e.mail.ru#@#[class*="advertising"]:not(body):not(input)
 &subid=*&data_ss=*&data_rc=$third-party
 &trackid=
 &voluumdata=
+&voluumdata=$popup
 &zoneid=
 |https:*-ad^
 -ad1.
 -ad2.
 -ad3.
 -ad4.
+-adcombo-
+-adcombo.
+-adcombo^
+-adcombo_
+-adpop-
+-adpop.
+-adpop^
+-adpop_
 -ads-
 -ads.$domain=~retweet-ads.net
 -adsdata-
@@ -195,6 +205,14 @@ e.mail.ru#@#[class*="advertising"]:not(body):not(input)
 -landingpages^$third-party
 -landingpages_$third-party
 -redirect?target=*&caid=*&zpid=$popup
+.adcombo-
+.adcombo.
+.adcombo^
+.adcombo_
+.adpop-
+.adpop.
+.adpop^
+.adpop_
 .adriver.
 .adsdata-
 .adsdata.
@@ -298,10 +316,11 @@ e.mail.ru#@#[class*="advertising"]:not(body):not(input)
 .landingpages.$third-party
 .landingpages^$third-party
 .landingpages_$third-party
-.owa.$script,domain=~outlook.live.com
+.owa.$script,domain=~outlook.live.com|~outlook.office365.com
 .php?k=*&h=*&ban=*&iid=
 .php?k=*&h=*&ban=*&iid=$popup
 .ppc.$domain=~ppc.go.jp
+/?folio=$popup
 /?placement=*&redirect^
 /?placement=*&redirect^$popup
 /?sov=$popup
@@ -364,8 +383,10 @@ e.mail.ru#@#[class*="advertising"]:not(body):not(input)
 /autotrack.$script
 /bb-mxad/*$third-party
 /bb-serve/*$third-party
+/bebi_$script,third-party
 /better-stop-adblock/*
 /choixPubJS.
+/click?impid=
 /Conversion.engine?pid=
 /ctxengine/*$third-party
 /ctxjs/*
@@ -464,6 +485,7 @@ e.mail.ru#@#[class*="advertising"]:not(body):not(input)
 /rsstool/*$third-party
 /?subid=*&subid1=*&subid2=*&tid=*&k=$third-party
 /scjs/*
+/script/?sourceURL=*&cacheBuster=
 /script.js^$subdocument,third-party
 /scripts/a/ai.$script,third-party
 /scripts/sj_$script,third-party
@@ -511,6 +533,8 @@ e.mail.ru#@#[class*="advertising"]:not(body):not(input)
 ?url=$image,object,subdocument,domain=fc2.com
 ?visitid=
 ?visitid=$popup
+?voluumdata=
+?voluumdata=$popup
 ?zona=$third-party
 |http:*^ad-
 |http:*^ad.
@@ -537,6 +561,10 @@ e.mail.ru#@#[class*="advertising"]:not(body):not(input)
 ^adclickurl.
 ^adclickurl^
 ^adclickurl_
+^adcombo-
+^adcombo.
+^adcombo^
+^adcombo_
 ^adk2x-$third-party
 ^adk2x.$third-party
 ^adk2x^$third-party
@@ -561,8 +589,20 @@ e.mail.ru#@#[class*="advertising"]:not(body):not(input)
 ^adPixel.
 ^adPixel^
 ^adPixel_
+^adpop-
+^adpop.
+^adpop^
+^adpop_
 ^AdPortalWebService^
 ^ads^
+^adscript-
+^adscript.
+^adscript^
+^adscript_
+^adscripts-
+^adscripts.
+^adscripts^
+^adscripts_
 ^adsdata-
 ^adsdata.
 ^adsdata^
@@ -1011,6 +1051,14 @@ _ad2.
 _ad3.
 _ad6.
 _ad9.
+_adcombo-
+_adcombo.
+_adcombo^
+_adcombo_
+_adpop-
+_adpop.
+_adpop^
+_adpop_
 _adsdata-
 _adsdata.
 _adsdata^
@@ -1164,9 +1212,9 @@ _teaser_
 ://clicks.$popup
 ://clickeu.$popup
 ://clk.$popup
+://creative.
 ://creative.$popup
-://creative.$third-party
-://creatives.$third-party
+://creatives.
 ://d.*/l/load.js^$script,third-party
 ://d.*/r/rd.html^
 ://delivery.$third-party
@@ -1257,7 +1305,7 @@ _teaser_
 ||*-mmm.net^
 ||*-mmm.net^$popup
 ||*tab.com/?*&subid=
-||*tab.com/click.gif?landing_id=*&placement_id=
+||*tab.com/click.gif?landing_id=
 ||*tab.com/watch?key=
 ||*tab.com/watch?key=$popup
 ||net/sd/$script,third-party
@@ -1348,6 +1396,7 @@ _teaser_
 ||adblade.com^$third-party
 ||adbooth.com^$third-party
 ||adbrite.com^$third-party
+||adbroker.de^$third-party
 ||adcash.com^$third-party
 ||addclips.org^$third-party
 ||addelive.com^$third-party
@@ -1356,6 +1405,8 @@ _teaser_
 ||adedy.com^$third-party
 ||ademails.com^$third-party
 ||adengage.com^$third-party
+||adexc.net^
+||adexce.net^
 ||adexcite.com^$third-party
 ||adextent.com^$third-party
 ||adforce.ru^$third-party
@@ -1450,9 +1501,12 @@ _teaser_
 ||adsk2.$third-party
 ||adskape.ru^$third-party
 ||adsmarketplace.
+||adsnative.com^$third-party
 ||adsonar.com^$third-party
+||adspirit.$third-party
 ||adsplats.com^$third-party
 ||adstager.com^
+||adsterramail.com^
 ||adstract.com^$popup
 ||adsupplyads.
 ||adswizz.com^$third-party
@@ -1513,6 +1567,7 @@ _teaser_
 ||aliexpress.com^
 ||allmyvideos.$third-party
 ||allyes.com^$third-party
+||allyouneed.com^$popup
 ||fls-*.amazon.
 ||rcm*.amazon.$third-party
 ||amazonaws.com^$popup
@@ -1562,6 +1617,7 @@ _teaser_
 ||batilo.de^$third-party
 ||bazaarvoice.$third-party
 ||stats.bbc.co.uk^
+||bebi.com^$third-party
 ||beforescence.com^
 ||begun.ru^$third-party
 ||bestoffersjs.info^
@@ -1621,6 +1677,7 @@ _teaser_
 ||certified-apps.com^$third-party
 ||cettenu.com^
 ||chango.com^$third-party
+||channeltraffic.net^
 ||chartbeat.com^$third-party
 ||cheapito.com^
 ||checkm8.com^$third-party
@@ -1706,6 +1763,7 @@ _teaser_
 ||crsspxl.com^$third-party
 ||crtinv.com^
 ||cszz.ru^
+||ctresbien.net^
 ||ctx-traffic.com^
 ||cxense.com^$third-party
 ||d1110e4.se^$popup
@@ -1719,6 +1777,9 @@ _teaser_
 ||dcbfjs.info^
 ||deals-way.com^$third-party
 ||dedicatedmedia.com^$third-party
+||default7.com^
+||default72.com^
+||deliverydom.com^
 ||demandbase.com^$third-party
 ||demdex.net^$third-party
 ||detroposal.com^
@@ -1730,14 +1791,17 @@ _teaser_
 ||directrev.$popup
 ||directrev.$third-party
 ||directtrack.com^$third-party
+||disqusads.com^
 ||dl-rms.com^$third-party
 ||dmcdn.net/behavior/
 ||dmm.com/lp/$popup
+||dmpcounter.com^
 ||dmtracker.com^$third-party
 ||donation-tools.org^$third-party
 ||dotomi.com^$third-party
 ||doublepimp.com^
 ||doubleverify.com^$third-party
+||download-links.info^$third-party
 ||dreamhost.com/rewards/
 ||dropinsavingsjs.info^
 ||dt00.net^
@@ -1748,6 +1812,7 @@ _teaser_
 ||rover.ebay.com^
 ||ebocornac.com^
 ||ebuzzing.com^$third-party
+||ecpmrocks.com^
 ||edigitalsurvey.com^
 ||edrsurvey.com^
 ||edrsurveys.com^
@@ -1821,6 +1886,7 @@ _teaser_
 ||geki.jp/images/jack_sp_$domain=gekisaka.jp
 ||geki.jp/data/image/etc/$domain=gekisaka.jp
 ||gemineering.com^
+||genieessp.com^$third-party
 ||genieesspv.jp^
 ||cnt.geo.jp^
 ||geoplugin.net^
@@ -1833,6 +1899,7 @@ _teaser_
 ||collector-cdn.github.com^
 ||gloadmarket.com^
 ||gnezdo.ru^$third-party
+||go60.ru^
 ||goodadvert.ru^$third-party
 ||google.*/jsapi?autoload=*%22ads%22
 ||google.*/uds/afs/
@@ -2007,6 +2074,7 @@ _teaser_
 ||mathtag.com^$third-party
 ||matrixinner.info^
 ||maxidivx.com^
+||maxonclick.com^
 ||medi-8.net^$third-party
 ||media-clic.com^$third-party
 ||media.net^$third-party
@@ -2060,7 +2128,7 @@ _teaser_
 ||rad.msn.com^
 ||udc.msn.com^
 ||msparktrk.com^
-||mtagmonetizationa.com^
+||mtagmonetization*.com^
 ||mumbai-invest.email^
 ||musicboxnewtab.com^
 ||musicboxnewtab.com^$popup
@@ -2071,6 +2139,7 @@ _teaser_
 ||ack.mynv.jp^
 ||mynv.jp^$script
 ||mypartnerapp.com^
+||mystreamdelivery.xyz^
 ||mythings.com^$third-party
 ||mythingsmedia.
 ||myxvids.com^$third-party
@@ -2139,6 +2208,7 @@ _teaser_
 ||onclickrev.com^$popup
 ||onclicktop.com^
 ||onclicktop.com^$popup
+||onedmp.com^
 ||onestat.com^$third-party
 ||online-adnetwork.com^$third-party
 ||onlinewebstat.com^$third-party
@@ -2218,6 +2288,7 @@ _teaser_
 ||prpops.com^
 ||prscripts.com^
 ||prwidgets.com^
+||psma01.com^
 ||pubdirecte.com^
 ||pubdirecte.com^$popup
 ||pubexchange.com^$third-party
@@ -2235,6 +2306,7 @@ _teaser_
 ||q1media.com^$third-party
 ||q1mediahydraplatform.com^$third-party
 ||qiyou.com^$third-party
+||qlip.jp^$third-party
 ||qualaroo.com^$third-party
 ||qubitproducts.com^$third-party
 ||questionmarket.com^$third-party
@@ -2374,6 +2446,26 @@ _teaser_
 ||soosooka.com^
 ||sparkstudios.com^$third-party
 ||spectato.com^
+||speednetwork0.com^
+||speednetwork1.com^
+||speednetwork10.com^
+||speednetwork11.com^
+||speednetwork12.com^
+||speednetwork13.com^
+||speednetwork14.com^
+||speednetwork15.com^
+||speednetwork16.com^
+||speednetwork17.com^
+||speednetwork18.com^
+||speednetwork19.com^
+||speednetwork2.com^
+||speednetwork3.com^
+||speednetwork4.com^
+||speednetwork5.com^
+||speednetwork6.com^
+||speednetwork7.com^
+||speednetwork8.com^
+||speednetwork9.com^
 ||spigpcjs.info^
 ||sponsorselect.com^$third-party
 ||spotscenered.info^
@@ -2402,6 +2494,7 @@ _teaser_
 ||swiki.com^$third-party
 ||systweak.com^$third-party
 ||taboola.com^$third-party
+||tacdn.com^$domain=~tripadvisor.at|~tripadvisor.be|~tripadvisor.ca|~tripadvisor.ch|~tripadvisor.cl|~tripadvisor.co|~tripadvisor.co.id|~tripadvisor.co.il|~tripadvisor.co.kr|~tripadvisor.co.nz|~tripadvisor.co.uk|~tripadvisor.co.za|~tripadvisor.com|~tripadvisor.com.ar|~tripadvisor.com.au|~tripadvisor.com.br|~tripadvisor.com.eg|~tripadvisor.com.gr|~tripadvisor.com.mx|~tripadvisor.com.my|~tripadvisor.com.pe|~tripadvisor.com.ph|~tripadvisor.com.sg|~tripadvisor.com.tr|~tripadvisor.com.tw|~tripadvisor.com.ve|~tripadvisor.com.vn|~tripadvisor.cz|~tripadvisor.de|~tripadvisor.dk|~tripadvisor.es|~tripadvisor.fi|~tripadvisor.fr|~tripadvisor.ie|~tripadvisor.in|~tripadvisor.it|~tripadvisor.jp|~tripadvisor.nl|~tripadvisor.pt|~tripadvisor.rs|~tripadvisor.ru|~tripadvisor.se|~tripadvisor.sk
 ||tacoda.net^$third-party
 ||tacrater.com^
 ||tag-cloud-generator.com^
@@ -2435,6 +2528,7 @@ _teaser_
 ||tpucdn.com/images/b/$object,domain=techpowerup.com
 ||tracer.jp^$third-party
 ||trackfeed.com^$third-party
+||tracknson.com^
 ||trackstormalert.com^$third-party
 ||trackvoluum.com^
 ||trackvoluum.com^$popup
@@ -2462,6 +2556,7 @@ _teaser_
 ||traforet.$third-party
 ||treasuredata.com^$third-party
 ||trendtext.eu^
+||tribalfusion.com^$popup
 ||tribalfusion.com^$third-party
 ||triggit.com^$third-party
 ||tritondigital.com^$third-party
@@ -2480,6 +2575,7 @@ _teaser_
 ||undertone.com^$third-party
 ||uimserv.net^
 ||unibet.$third-party
+||unitedblades.co.jp^$third-party
 ||unoblotto.net^
 ||update-apps.com^
 ||update-software.net$popup
@@ -2537,6 +2633,7 @@ _teaser_
 ||whoson.com^$third-party
 ||wife-board.net^$third-party
 ||wigetmedia.com^$third-party
+||williamhill.
 ||1app.blob.core.windows.net^
 ||woopra.com^$third-party
 ||stats.wordpress.com^
@@ -3051,6 +3148,7 @@ _teaser_
 ##a[href*=".ebis.ne.jp"][href*="_rd."]
 ##a[href*=".ebis.ne.jp"][href*="/tr_"]
 ##a[href*="//ec-design.jp/cc/"]
+##a[href*="//employment.en-japan.com/"]
 ##a[href*="//ever-adsense.com"]
 ##a[href*="//ever-click.com"]
 ##a[href*="//ever-clix.com"]
@@ -3140,6 +3238,7 @@ _teaser_
 ##a[href*="xmax.jp/click/"]
 ##a[href*="xtendmedia.com/clk?"]
 ##a[href*="//rd.listing.yahoo."]
+##a[href*="//r.search.yahoo."][href*="/cbclk/"]
 ##a[href*="//z99pc.com/"]
 ##a[href*=".ziyu.net/jump."]
 ##img[alt^="[PR-"]
@@ -4104,6 +4203,7 @@ japan.cnet.com,japan.zdnet.com##a[href*="//japan.cnet.com/click/"]
 japan.cnet.com,japan.zdnet.com##a[href*="//japan.cnet.com/extra/"]
 japan.cnet.com,japan.zdnet.com##a[href*="//japan.zdnet.com/click/"]
 japan.cnet.com,japan.zdnet.com##a[href*="//japan.zdnet.com/extra/"]
+codecguide.com##a[href*="/ref/"] > img
 codezine.jp###shoeisha_gnavi
 codezine.jp##.shoeisha_gnavi
 codezine.jp##div[id*="_pnlHeadSuper"]
@@ -4352,12 +4452,15 @@ mycom.co.jp##[src*="adspecial"]:not(body):not(input)
 mycom.co.jp##[src*="kali.mycom.co.jp"]:not(body):not(input)
 mynavi.jp##.ts
 mywot.com###wotads-slideup
+mywot.com##.popup__container
 download.hr###mediaget_box
 download.hr##.AddCenterRight
 download.hr##.file_infoleft
+download.hr##.give_slogan
 download.hr##a[href*="//get.down2desk.com/"]
-download.hr##a[href*="//giveaway.download.hr/"]
-download.hr##a[href*="//media.download.hr/"]
+download.hr##a[href*="//discount.download.hr"]
+download.hr##a[href*="//giveaway.download.hr"]
+download.hr##a[href*="//media.download.hr"]
 download.hr##a[href*="hotfile.com/dl/"]
 download.hr##a[href*="mediaget.com/torrent.php?r="]
 download.hr##a[href*="myotherdrive.com/dyn/file/"]
@@ -4483,6 +4586,7 @@ sourceforge.jp##*[id^="gpt-"]
 sourceforge.net###site-sec-header
 sourceforge.net##.psp_newsletter_subscribe
 sourceforge.net##.recommended
+sourceforge.net##.sterling
 sourceforge.net##a[href*="//deals.sourceforge.net/"]
 stackasterisk.jp##table.tableCaution
 surfcanyon.com###eastAds

@@ -1,0 +1,12 @@
+UPDATE filter_lists SET filter_name='Russian filter' WHERE filter_list_id = 1;
+UPDATE filter_lists SET filter_name='English filter' WHERE filter_list_id = 2;
+UPDATE filter_lists SET filter_name='Spyware filter' WHERE filter_list_id = 3;
+UPDATE filter_lists SET filter_name='Social media filter' WHERE filter_list_id = 4;
+UPDATE filter_lists SET filter_name='Experimental filter' WHERE filter_list_id = 5;
+UPDATE filter_lists SET filter_name='German filter' WHERE filter_list_id = 6;
+UPDATE filter_lists SET filter_name='Japanese filter' WHERE filter_list_id = 7;
+UPDATE filter_lists SET filter_name='Dutch filter' WHERE filter_list_id = 8;
+UPDATE filter_lists SET filter_name='Spanish/Portuguese filter' WHERE filter_list_id = 9;
+UPDATE filter_lists SET filter_name='Filter for useful ads' WHERE filter_list_id = 10;
+UPDATE filter_lists SET filter_name='Mobile ads filter' WHERE filter_list_id = 11;
+UPDATE filter_lists SET filter_name='Turkish filter' WHERE filter_list_id = 13;

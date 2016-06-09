@@ -1,10 +1,10 @@
 ! Title: void.gr
-! Version: 1.0.0.59
+! Version: 1.0.0.63
 ! Name: void.gr
 ! Description: ελληνικά supplement for EasyList
 ! NameEn: void.gr
 ! DescriptionEn: ελληνικά supplement for EasyList
-! TimeUpdated: 2016-04-28T22:03:08.363+04:00
+! TimeUpdated: 2016-06-07T14:09:14.856+04:00
 ||www.diaforetiko.gr/wp-content/uploads/2015/03/droidbanner3.gif
 ||skai.gr/Themes/1/Default/Media/Skins/samsung*
 ||in.gr/Themes/1/Default/Media/senso_pro*
@@ -98,7 +98,8 @@ stercinemas.gr/SterCinemas/SterImagesLive/Banners/Right%20Banners/emporiki*
 stercinemas.gr/SterCinemas/SterImagesLive/NESCAFE*
 villagecinemas.gr/media/Banners/*
 webtv.antenna.gr/webtv/images/banners/*
-alfavita.gr/001.diafimisi.1.selidas/*
+||alfavita.gr/sites/www.alfavita.gr/themes/mixon/images/bannernew.swf
+||alfavita.gr/sites/default/files/efsyn_4.png
 kathimerini.gr/webadmin/Glife/Chartis/*
 ||athinorama.gr/adv/lmnts/*
 media.adslgr.com/www/images/934adc119cb74c815df8b1697cae4c98.png
@@ -420,7 +421,6 @@ ad.gr.doubleclick.net
 ||contra.gr/multimedia/article3679751.ece/BINARY/original/contra-fasa-hp.png
 ||dikaiologitika.gr/images/banners/defence1.gif
 ||defencenet.gr/defence/images/aroma300x250_black.jpg
-||alfavita.gr/sites/www.alfavita.gr/themes/mixon/images/bannernew.swf
 ||makeleio.gr/wp-content/uploads/2015/09/HyalurOn-250X250-Zampidis-2.jpg
 ||makeleio.gr/wp-content/uploads/2014/11/Klamin-300X250.jpg
 ||makeleio.gr/wp-content/uploads/2013/10/iatros4u.png
@@ -442,6 +442,31 @@ ad.gr.doubleclick.net
 ||contra.gr/multimedia/article3679751.ece/BINARY/original/contra-fasa-hp.png
 ||lifo.gr/icache/300/600/1/989673_wind_mila.jpg
 ||lifo.gr/icache/940/337/1/983904_GOT_970.jpg
+||travelstyle.gr/portal/files/banners/*$image
+||sport-fm.gr/resrc/images/customBanners/novi_438x75_paysafe.jpg
+||kritikes.ka-web.gr/www/images/05ae36c9444d919dd6e3823af59d952a.gif$image
+||kritikes.ka-web.gr/www/images/27b4e974322605438a5673f6bc7391e6.gif$image
+||kritikes.ka-web.gr/www/images/stefanakis.jpg$image
+||kritikes.ka-web.gr/www/images/affcda2fcc00d8b70add300fbfbd0706.jpg$image
+||kritikes.ka-web.gr/www/images/3dfccc2726af1d37f04476627e01bc46.jpg$image
+||kritikes.ka-web.gr/www/images/c3ec4bdc5f3ed5a99af63c483488943e.gif$image
+||kritikes.ka-web.gr/www/images/20b5f22dfd476ef5e484407d351b0ffa.gif$image
+||kritikes.ka-web.gr/www/images/Xrisominoiki2.jpg$image
+||kritikes.ka-web.gr/www/images/8de4019dc3e5bfe49f9f8db88f60bd3b.jpg$image
+||kritikes.ka-web.gr/www/images/d321c031a1ba49705722b25a37c0191a.gif$image
+||kritikes.ka-web.gr/www/images/7b6416ddec2a849e6701961e001b3a31.jpg$image
+||kritikes.ka-web.gr/www/images/koufetouli.gif$image
+||kritikes.ka-web.gr/www/images/65cb57bd93f9c058f0b98273c0a41ebf.jpg$image
+||kritikes.ka-web.gr/www/images/mathimatikos.gif$image
+||kritikes.ka-web.gr/www/images/5b67330c9296dac72f1790299e8fcf44.gif$image
+||kritikes.ka-web.gr/www/images/01baadcb61149d7fbce556b666a032a3.gif$image
+||kritikes.ka-web.gr/www/images/grivaki.gif$image
+||kritikes.ka-web.gr/www/images/3dac34b96c53fa1b31004f7f79da0bf9.png$image
+||kritikes-aggelies.gr/templates/ka/images/cicrete_voutcher__vertical_2016.gif$image
+||kritikes-aggelies.gr/templates/ka/images/dress-up/BANNER_RIGHT.png$image
+||kritikes-aggelies.gr/templates/ka/images/dress-up/BANNER_LEFT.png$image
+||www.kritikes-aggelies.gr/templates/ka/images/xmoto-moto-new.png.pagespeed.ic.C3FcTY-SPs.png$image
+||www.kritikes-aggelies.gr/templates/ka/images/xmoto-moto-logo-vertical3.png.pagespeed.ic.TblpkXpo_a.png$image
 www.insomnia.gr###ipbwrapper > .bgad[href="http://ads.nativad.net/servlet/click/zone?zid=351&pid=111&lookup=true&position=1&uuid=(email)"]
 www.insomnia.gr###ipbwrapper > .bgad[href="http://www.kotsovolos.gr/site/mobile-phones-gps/mobile-phones/smartphones?v=0&company=Apple&11202=44834&utm_source=insomnia.gr&utm_medium=skin&utm_content=NEWiphone6s-6splus-insomnia-skin-2015&utm_campaign=iphone6s-6splus-insomnia-"]
 antenna.gr###afdiv
@@ -507,7 +532,6 @@ in.gr##DIV[style="width: 150px; height: 100px; margin-top: 5px; margin-bottom: 5
 sport-fm.gr##DIV.banner
 gamato.info##IMG[src="images/728_generic_betnow.gif"]
 oddbanner.bet-at-home.com##TABLE#bannerLandscape
-alfavita.gr##SPAN.style5
 contra.gr##DIV#bfair
 cosmo.gr##A.sponsLink
 ethnos.gr##DIV#promotext
@@ -795,8 +819,6 @@ voria.gr###financial_widget > .financial_widget_top_line.financial_widget_line >
 www.skroutz.gr###featurette
 contra.gr###stoiximan-cont > a[href^="http://www.stoiximan.gr"]
 newsbomb.gr###json-textlinks
-alfavita.gr###arthroad
-alfavita.gr###arthroad2
 makeleio.gr###text-88 > .textwidget
 insomnia.gr###ipbwrapper > .bgad[href="http://www.e-shop.gr/ypologistes-trofodotika-psu-seasonic-list?table=PER&category=%D4%D1%CF%D6%CF%C4%CF%D4%C9%CA%CF&filter-2891=1&utm_source=insomnia.gr&utm_medium=otherads&utm_content=skin&utm_campaign=seasonic-insomnia"]
 www.techgear.gr##.rightClickable
@@ -810,6 +832,7 @@ www.contra.gr###top_story_wrap > .grid_12 > div:nth-of-type(8) > a[href^="http:/
 www.lifo.gr###das_out
 www.lifo.gr###das_top > a[href^="/lines/click/"]
 www.lifo.gr###das_r1 > a[href^="/lines/click/"]
+www.sport24.gr###stoiximan-cont > a[href^="http://www.stoiximan.gr"]
 @@sport-fm.gr/newspapers/$elemhide
 @@resources.sport-fm.gr/sportfm/newspapers/
 @@politis-news.com/banners/entheta/

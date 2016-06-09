@@ -1,10 +1,10 @@
 ! Title: Adblock polskie reguły cookies
-! Version: 1.0.1.5
+! Version: 1.0.1.9
 ! Name: Adblock polskie reguły cookies
 ! Description: polski filtr cookies
 ! NameEn: Adblock polskie reguły cookies
 ! DescriptionEn: polski filtr cookies
-! TimeUpdated: 2016-04-27T22:05:32.653+04:00
+! TimeUpdated: 2016-06-02T02:05:16.624+04:00
 1000dni.pl##DIV[style="width: 100%; background-color: rgb(0, 60, 122); padding: 10px 8px; line-height: 20px; left: 0px; position: fixed; margin: 10px auto 0px; bottom: 0px; z-index: 1000; font-size: 13px; font-family: Helvetica,Arial,sans-serif; color: rgb(255, 255, 255);"]
 4hifi.pl##div#myModal
 4hifi.pl##div.reveal-modal-bg
@@ -97,6 +97,7 @@ dodrukarki.pl##div[style="background:#FFFADE; padding:6px 0px;"]
 domena.pl##div[style="width: 950px; display: block; margin: 0px auto; background-color: rgb(255, 250, 222); padding: 15px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; border: 1px solid rgb(238, 238, 238); font-size: 11px; position: relative; z-index: 1999; "]
 domkibieszczady.pl###cookiesDiv
 dpd.com.pl##div[style="width:940px; border:#CCCCCC 1px solid; padding:10px; z-index:100; position: fixed; left:auto; bottom:10px; background-color: #CCCCCC; font-size:10px;"]
+bravekingdoms.com##DIV[style="position: absolute; margin-top: 30px; margin-left: 550px;"]
 drony.net##div#cop
 drukuj24.pl##div#politykacooki
 dvbsklep.pl,naturo.pl##[id^="simple-modal"]
@@ -240,7 +241,6 @@ joemonster.org,mistrzowie.org,komixxy.pl,demotywatory.pl,faktopedia.pl,fabrykame
 k-ex.pl##div[style="position: fixed; bottom: 0px; width: 100%; background-color: rgb(204, 204, 204); z-index: 1; box-shadow: rgb(102, 102, 102) 0px 0px 5px;"]
 kabam.com##div#eu_privacy
 kacperkowalski.pl##DIV[style="position: relative; top: 0px; left: 0px; right: 0px; z-index: 9999; background: rgb(119, 119, 119) none repeat scroll 0% 0%; color: rgb(255, 255, 255); font-size: 12px; font-family: Arial,sans-serif; border-bottom: 2px ridge rgb(204, 204, 204); padding: 3px 40px; line-height: 16px; cursor: pointer;"]
-kaessbohrer.com.pl##.ek-bar
 kamilianie.eu##div[style="position: fixed; top: 50px; left: 0px; right: 0px; bottom: auto; z-index: 5; visibility: hidden; font-family: Arial, Verdana, Tahoma; font-size: 14px; line-height: 1em; color: rgb(34, 34, 34); "]
 kappahl.com##.warning
 karmimypsiaki.pl##div#ciasteczkaInfoContainer
@@ -335,6 +335,7 @@ nacydr.pl##div#pasek
 nakanapie.pl##div.sticker
 naszamlawa.pl###fancybox-overlay
 net-speak.pl##div.uwaga
+nespresso.com###consent_blackbar
 net4car.pl###notice_messages
 nettg.pl##.fade
 niezalezna.pl##div[style="border: 2px solid #900; margin-left: auto; margin-right: auto; padding: 3px; width: 984px"]
@@ -404,7 +405,6 @@ policja.pl##div.informationBar
 polskapress.pl###cookies-policy
 polskawoda.pl##DIV[style="width: 100%;float: left;background: #fff;padding: 15px 0;position: fixed;bottom: 0px;left: 0px;text-align: center;color: #000;border-top: 1px #000 solid;z-index: 100;"]
 polskielng.pl##.ccc-widget
-polskilotnik.pl###ZATAKIEUSTAWYPOWINNIZAMYKAC
 popoznaniu.pl##div#divcook
 portalgorski.pl###aToolTip
 portalspozywczy.pl###axbg
@@ -556,6 +556,10 @@ www.tanie-leczenie.pl,e-zikoapteka.pl###notice_bar
 www.wapteka.pl##.coo
 www.wiedzakontrowersyjna.pl###ad-bg-transparent
 www.youtube.com##.clearfix.yt-consent-banner.yt-consent
+www.promise.com.pl##.ui-resizable
+www.promise.com.pl##.ui-front
+www.miplo.pl##.rounded.error
+www.halico.pl##.sqs-announcement-bar-custom-location
 wydawca.com.pl##div#kuki
 wydruki-wroclaw.pl##div.activebar-container
 yp.pl##div#jQ_cookiBox
@@ -571,6 +575,8 @@ zosiaikevin.pl##div#novem-slot
 www.cefarm24.pl###notice_bar
 wiif.nowybip.pl###jGrowl
 stylowi.pl##DIV[style="position: fixed; left:0; right:0; bottom:0; height:120px; background-color:#eee; border-top: 1px solid black; z-index:16; overflow: auto"]
+www.e-petrol.pl###statement
+www.mercedes-benz.pl###emb-cp-overlay
 ||exploder.pl/info_o_cookie.js$script
 ||jak-zablokowac-cookies.pl/cookies_komunikat.js$script
 ||paypass.pl/themes/paypass/js/cookies.js$script
@@ -580,18 +586,18 @@ cookie-law-popup.js$script
 ||www.pianomedia.pl/cookies-on-pianomedia$xmlhttprequest
 ||asus.com/cookienotice.json$xmlhttprequest
 ||pl/wp-content/plugins/eu-cookie-law-wp-cookie-law/$script
-~appki.com.pl,~paypal.com,~accounts.google.com##:not(input)[id*="Cookie"]
+~piekarniaanka.pl,~xboxarcade.pl,~appki.com.pl,~paypal.com,~accounts.google.com##:not(input)[id*="Cookie"]
 ~intel.com,~pkn.pl,~topsecret.pl,~starbucks.pl,~isobar.com,~morizon.pl,~abctygodnik.pl,~wykop.pl,~bt4.pl,~kolba.pl,~tablety.pl,~tesco.pl##div[class*="cookie"]
-~everafterhigh.com,~wmeritum.pl,~microsoft.com,~paypal.com,~reserved.com,~zumi.pl,~komunikacja.bialystok.pl,~nvidia.com##:not(input)[id*="cookie"]
+~piekarniaanka.pl,~xboxarcade.pl,~everafterhigh.com,~wmeritum.pl,~microsoft.com,~paypal.com,~reserved.com,~zumi.pl,~komunikacja.bialystok.pl,~nvidia.com##:not(input)[id*="cookie"]
 ##[id*="coockie"]
 ~addons.mozilla.org##.privacy-policy
 ##[class*="coockie"]
 ###AcceptCookie
-~appki.com.pl,~mvno-gsm.pl##[id*="cookie-"]
+~piekarniaanka.pl,~xboxarcade.pl,~appki.com.pl,~mvno-gsm.pl##[id*="cookie-"]
 ~microsoft.com##[id*="cookie_"]
 ##.cookie-notification
 ###polityka-ciastek
-~mcdonalds.co.uk,~astroweb.pl,~zadane.pl,~apteka-amica.pl,~naziemna.info,~planeteplus.pl,~abctygodnik.pl,~fundraising.org.pl,~filmydokumentalne.eu,~mvno-gsm.pl,~infoskawina.pl,~pikio.pl,~qt.io,~teleman.pl,~tablety.pl,~com##[class*="cookie-"]
+~futurevoicesystem.pl,~wmeritum.pl,~pl.forum.elvenar.com,~mcdonalds.co.uk,~astroweb.pl,~zadane.pl,~apteka-amica.pl,~naziemna.info,~planeteplus.pl,~abctygodnik.pl,~fundraising.org.pl,~filmydokumentalne.eu,~mvno-gsm.pl,~infoskawina.pl,~pikio.pl,~qt.io,~teleman.pl,~tablety.pl,~com##[class*="cookie-"]
 ###cookiesEU-box
 ###cookies_info
 ###ciastka_wiadomosc
@@ -617,7 +623,7 @@ cookie-law-popup.js$script
 ##[id^="cookies-message"]
 ###cookies-politics
 ###cookiesdirective
-###cookiewarning
+~piekarniaanka.pl###cookiewarning
 ###popup-cookies
 ###showCookieInfo
 ~zadane.pl##[class*="cookie-policy"]
@@ -634,6 +640,7 @@ cookie-law-popup.js$script
 ##span[class*="Cookie"]
 ##span[class*="cookie"]
 ##[id*="ciasteczka_alert"]
+###ZATAKIEUSTAWYPOWINNIZAMYKAC
 /js/cookieinfo.js
 /js/polityka_cookies.js$script
 /js/info_o_cookie.js
@@ -668,7 +675,15 @@ pl##[id^="polityka-prywatnosci"]
 ###info_c_box
 ##.RACKWrapper
 ##.cookieForm
+/wp-content/plugins/cookie-warning/cookiewarning.$stylesheet,script
+##cookidiv
+##.ek-bar
+##.message--cookie--show
+##.footerCookieNotice
+###CPolicy
 @@||static.wirtualnemedia.pl/new/js/cookie.js$script
 @@/plugins/uk-cookie-consent/assets/js/uk-cookie-consent-js.js$script,domain=escaperooms.pl
 @@||rozklad-pkp.pl/js/$script,domain=rozklad-pkp.pl
 @@||cdaction.pl/views/js1/cookie.js$script
+@@/plugins/uk-cookie-consent/assets/js/uk-cookie-consent-js.js$script,domain=xboxarcade.pl
+telepizza.pl#@#div[class*="cookie"]

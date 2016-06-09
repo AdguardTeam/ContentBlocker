@@ -1,10 +1,10 @@
 ! Title: EasyList Czech and Slovak
-! Version: 1.0.0.93
+! Version: 1.0.1.9
 ! Name: EasyList Czech and Slovak
 ! Description: čeština, slovenčina supplement for EasyList
 ! NameEn: EasyList Czech and Slovak
 ! DescriptionEn: čeština, slovenčina supplement for EasyList
-! TimeUpdated: 2016-04-29T02:01:29.060+04:00
+! TimeUpdated: 2016-06-07T02:01:10.154+04:00
 .com/bannery/
 .cz/BAN/
 .cz/banners/$domain=~web.volny.cz
@@ -142,7 +142,7 @@ exashare.com###player_img
 ||mamincinyrecepty.cz/images/banner*
 ||matematika.cz/content/files/*/background*.jpg
 ||matematika.cz/content/files/snapbacks/
-||mfad*.advantage.as
+||mf*ad*.advantage.as
 ||mluveneslovo.chaves.cz/images/banners/castor_745x150.jpg
 ||mluveneslovo.chaves.cz/images/banners/palace.gif
 ||mluveneslovo.chaves.cz/images/user/pokourenicko.jpg
@@ -152,6 +152,8 @@ exashare.com###player_img
 ||mrk.cz/images/baners/
 ||naseadresa.cz/cz/$subdocument
 ||naseadresa.cz^*/flash/baner
+||navratdoreality.cz/static/branding$image
+||navratdoreality.cz/static/takeover$image
 ||novinky.cz/static/css/xmas.css
 ||old.disk.cz/disk/Lib.adv.Server.cls
 ||online-filmy-zdarma.cz/upload/Banner/
@@ -419,6 +421,7 @@ exashare.com###player_img
 @@||alfacomp.cz/reklama/
 @@||autotube.cz/ui/player/ad.php
 @@||bbelements.com/crossdomain.xml$domain=idnes.cz
+@@||bibloo.cz^$xmlhttprequest
 @@||blesk.cz/js/*adocean.js*$domain=synotliga.isport.blesk.cz
 @@||blesk.cz/js/*/player/videoad.swf*$domain=synotliga.isport.blesk.cz
 @@||c.mfstatic.cz/js/advantage.min.js$domain=doupe.zive.cz
@@ -594,6 +597,7 @@ autoesa.cz###bannerPopup
 autohit.cz###leva-reklama
 autorevue.cz###adblock-leaderboard-clip
 autorevue.cz##.banner
+autorevue.cz##.bx-bb
 autotube.cz##.rklh
 autotube.cz##.rklv
 autoweb.cz##.rklh
@@ -654,6 +658,7 @@ csfd.cz##.branding.top
 csfd.cz##.ct-general.th-5
 ct24.cz##.commercialBox
 ctrlv.cz##DIV[id^="ad"]
+ctrlv.cz##DIV.behind
 cyklotoulkytv.cz##.advert_vert_cs.advert_745x100
 cztorrent.net###banner_header
 cztorrent.net###banner_skyscraper_right
@@ -672,6 +677,7 @@ doktorka.cz##.ban1
 doupe.zive.cz###adframe-shell
 dpp.cz###top-banner
 drumandbass.cz##.banner
+e15.cz##.bx-bb
 e15.cz##.hp-page-card.hp-page-card-zive-firmy
 edna.cz##.banner
 echo24.cz##.relama-caption
@@ -728,11 +734,16 @@ gamepark.cz###bmenu
 gamepark.cz###supersize
 gamepark.cz##.banner
 gamepark.cz##.headerpicture
-games.tiscali.cz##A[href*="go.cz.bbelements.com"]
-games.tiscali.cz##A[href*="click.performax.cz"]
 games.tiscali.cz##A[href*="CREFURL"]
 games.tiscali.cz##A[href*="utm_campaign"]
 games.tiscali.cz##A[href*="mmotraffic.com"]
+games.tiscali.cz##DIV[-abp-properties="min-height: 200px;"]
+games.tiscali.cz##DIV[-abp-properties="padding-top: 12px;"]
+games.tiscali.cz##DIV[-abp-properties="padding-top: 1*.*px;"]
+games.tiscali.cz##DIV[-abp-properties="height: 20*.*px"]
+games.tiscali.cz##DIV[-abp-properties="height: 19*.*px"]
+games.tiscali.cz##DIV[style*="z-index:9999"]
+games.tiscali.cz##DIV[style*="height: 200px; position: relative;"]
 games.tiscali.cz##.adtext
 games.tiscali.cz##.article-offer
 games.tiscali.cz##.b-300x250
@@ -742,7 +753,6 @@ games.tiscali.cz##.box-article-detail ~ DIV
 games.tiscali.cz##.col-side > DIV:not(.box-std)
 games.tiscali.cz##.page-bg > DIV:first-of-type
 games.tiscali.cz##.pe-banner
-games.tiscali.cz##.row > DIV:nth-of-type(2) > DIV:not(.box-news):not(.box-fight-club):not(.crossroad-videos):not(.box-subscription):not(.box-fanatics):not(.box-reviews)
 games.tiscali.cz##.sklik-ads
 games.tiscali.cz##.sklik-ad
 games.tiscali.cz##.top.row-main
@@ -750,6 +760,8 @@ games.tiscali.cz##.wide
 games.tiscali.cz###alzadiv
 games.tiscali.cz###aw0
 games.tiscali.cz###banner
+games.tiscali.cz###brand-right
+games.tiscali.cz###brand-left
 games.tiscali.cz###cookie-bar
 games.tiscali.cz###intAds
 games.tiscali.cz###menu-accessibility + DIV:not(#header)
@@ -810,6 +822,7 @@ ihned.cz##.karieraweb-box
 ihned.cz##.karieraweb-label
 itnetwork.cz##div.ad-730
 i-navody.cz###slider
+jizdnirady.idnes.cz##.advert
 kalkulacka-hypoteka.cz##IMG[src="/images/neomezene-banner-left.jpeg"]
 kalkulacka-hypoteka.cz##IMG[src="/images/ebook-banner-left.jpeg"]
 karaoketexty.cz###branding_link
@@ -839,6 +852,7 @@ lidovky.cz###self-box
 lidovky.cz###self-promo
 lidovky.cz###selfik-box
 lidovky.cz##.ahead
+lidovky.cz##.authors + DIV:not(.related)
 lidovky.cz##.widesquare
 lui-magazine.cz##.bannergroup
 lupa.cz###speed-promo
@@ -846,6 +860,7 @@ mapy.in-pocasi.cz###topbanner
 mapy.in-pocasi.cz##.devicewidth
 maminka.cz###adframe-shell
 maminka.cz###hledejceny-banner
+maminka.cz##.bx-bb
 matematika.cz###box-3
 matematika.cz###rbackground-link
 matematika.cz##DIV[id*="reklama"]
@@ -857,6 +872,7 @@ mesec.cz##.ad.ad-stickyboard
 minecrafak.cz###poutak
 minecrafak.cz###sidebar
 mladypodnikatel.cz##.scroll_banner
+mobilmania.cz##.bx-bb
 moda.cz##.square
 moda.cz##DIV[style="clear:both; padding-top:30px; width:540px;"]
 mojevideo.sk###brnd
@@ -875,6 +891,7 @@ naseadresa.cz##.advertAlignBoxSpec
 naseadresa.cz##.homeAdvertisement
 nasepenize.cz##.ks-detail-clanku
 nasepenize.cz##.latest-hypertext
+navratdoreality.cz##A[href*="utm_campaign"]
 navratdoreality.cz##IMG[src="pub/naprivat-250x250-02.jpg"]
 nejlevnejsiramy.cz###banner_overlay
 netu.tv###this-pays-for-bandwidth-container-hor
@@ -893,6 +910,8 @@ nova.cz##.big_baner
 nova.cz##.pr_box
 novaplus.nova.cz##.vjs-marker.active
 novinky.cz###advertRightTopPosition
+olomouckadrbna.cz###bannerTop
+olomouckadrbna.cz##.bs-overhidden
 onlajny.com###banner-top-four
 onlajny.com###sportObchodBanner
 orbion.cz###DIV[style="text-align: center; display: none; z-index: 9999; bottom: 0px;"]
@@ -914,6 +933,8 @@ programujte.com##.jobs
 prozeny.blesk.cz##.pinkHeader.sportnanetuIco
 prozeny.blesk.cz##.sportnanetu
 recepty.vareni.cz##.banner
+rejstrik.finance.cz##.right > IFRAME
+rejstrik.finance.cz##.toScroll
 restaurace.cz##.banner-120-600
 restaurace.cz##.banner-300-300
 ronnie.cz###fixedMenu
@@ -1036,6 +1057,7 @@ zive.cz###ctl01_jobs
 zive.cz###page-hub-wrapper
 zive.cz##.banner
 zive.cz##.banner-box
+zive.cz##.bx-bb
 zive.cz##.bx-ext-rss
 zive.cz##.bx-livecompanies
 zpravy.tiscali.cz###zone-tiscali-zpravy-wide
@@ -1152,8 +1174,14 @@ poradte.cz#@#.pub_300x250
 @@||poradte.cz/js/ads.js
 @@||iprima.cz^$generichide
 @@||play.iprima.cz/ad/banner/_adsense_/_adserver/_adview_.ad.json?adzone
+@@||api.play-backend.iprima.cz/ad/banner/_adsense_/_adserver/*
 mazdaclub.cz#@#.reklama
 games.tiscali.cz#@##ads-test
 games.tiscali.cz#@#.afs_ads
+games.tiscali.cz#@#.tracked-event
 @@||go.cz.bbelements.com/bb/bb_one2n$domain=games.tiscali.cz
 @@||games.tiscali.cz/img/adblock_on.gif
+@@||games.tiscali.cz^$generichide
+@@||topserialy.sk/*fuck-adblock$script
+@@||topserialy.sk$generichide
+idnes.cz##DIV[id*="adb-box"]

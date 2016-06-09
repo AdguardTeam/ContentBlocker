@@ -1,10 +1,10 @@
-! Title: EstonianList
-! Version: 1.0.0.17
-! Name: EstonianList
+! Title: Estonian List
+! Version: 1.0.0.26
+! Name: Estonian List
 ! Description: Estonian filtr
-! NameEn: EstonianList
+! NameEn: Estonian List
 ! DescriptionEn: Estonian filtr
-! TimeUpdated: 2016-04-28T02:05:19.370+04:00
+! TimeUpdated: 2016-06-07T18:05:38.542+04:00
 ##A[href*="http://pay4results24.eu"]
 ##iframe[src*="cherrystatic.net"]
 ##iframe[src*="date.elu24.ee"]
@@ -21,6 +21,7 @@
 @@http://ads.postimees.ee/crossdomain.xml
 @@||emediate.se$third-party,domain=tartupostimees.ee|postimees.ee
 @@||kinnistuportaal.rik.ee/KAEP/Media/img/logos/exchange_banner_idkaart.gif
+ado.delfi.ee
 aripaev.ee##div[class*="banner-placeholder"]
 auto24.ee##DIV.adzones
 auto24.ee##DIV[id*="_panels_kb_ad"]
@@ -65,8 +66,8 @@ facebook.com##DIV.fbTimelineSideAds
 facebook.com##div._sf6
 facebook.com##div[class^=ego_][class$=column]
 facebook.com##div[data-adblock-hash]
-facebook.com##div[data-xt-vimp*="pixel_in_percentage"]
 facebook.com##li[class*="uiStreamStoryAttachmentOnly"]
+geenius.ee##a[href*="delivery/ck.php"]
 hinnavaatlus.ee###rek160
 hinnavaatlus.ee###rek728
 hinnavaatlus.ee##A[href*="delivery/ck.php"]
@@ -115,6 +116,9 @@ lpdigileht.epl.ee,ajaleht.ekspress.ee##a[class~=player][href*="reklaam_"]
 lpdigileht.epl.ee,ajaleht.ekspress.ee##div[class~=img][style*="reklaam_"]
 lpdigileht.epl.ee,ajaleht.ekspress.ee##div[class~=thumb][style*="reklaam_"]
 maaleht.ee##DIV.col2
+mail.ee###inx-main-roof
+mail.ee##tr[id^="row"]
+mail.ee/banners/2.0/bx.js*
 mallukas.com##aside[class*="widget_image"]
 mallukas.com##aside[id^="black-studio-tinymce"]
 mallukas.com##div[class*="main-banner"]
@@ -185,6 +189,7 @@ www.ehitusfoorum.com/bannerid/www/delivery/ajs.php
 ||admeld.com$third-party
 ||admin.naistemaailm.ee/upload/images/reklaam/*
 ||admixer.net$third-party
+||admp-tc.delfi.ee
 ||admulti.com$third-party
 ||adnet.ee$third-party
 ||adnetmedia.ee$third-party
@@ -237,6 +242,8 @@ www.ehitusfoorum.com/bannerid/www/delivery/ajs.php
 ||buduaar.ee/files/Upload/Banners
 ||buduaar.ee/files/Upload/marketItems
 ||casalemedia.com$third-party
+||chartbeat.com$third-party
+||chartbeat.net$third-party
 ||cherry.ee$third-party
 ||cherrystatic.net$third-party,domain=~cherry.ee
 ||cherrystatic.net/banners
@@ -247,6 +254,8 @@ www.ehitusfoorum.com/bannerid/www/delivery/ajs.php
 ||contextweb.com$third-party
 ||cpxinteractive.com$third-party
 ||crowdscience.com$third-party
+||crwdcntrl.net$third-party
+||cxense.com$third-party
 ||dclick.ru$third-party
 ||domdex.com$third-party
 ||doubleclick.be$third-party
@@ -283,6 +292,7 @@ www.ehitusfoorum.com/bannerid/www/delivery/ajs.php
 ||klikki.com$third-party
 ||kqzyfj.com$third-party
 ||laanlane.ee/reklaam*
+||lekane.net$third-party
 ||lpdigileht.epl.ee/*/reklaam_*
 ||luxup.ru$third-party
 ||magnetic.is$third-party
@@ -300,6 +310,7 @@ www.ehitusfoorum.com/bannerid/www/delivery/ajs.php
 ||newrelic.com$third-party
 ||novem.pl$third-party
 ||olark.com$third-party
+||onthe.io$third-party
 ||openx.org$third-party
 ||overture.com$third-party
 ||oxado.com$third-party
@@ -329,6 +340,7 @@ www.ehitusfoorum.com/bannerid/www/delivery/ajs.php
 ||smartadserver.com$third-party
 ||sn00.net$third-party
 ||specificclick.net$third-party
+||spring-tns.net$third-party
 ||spylog.com$third-party
 ||spylog.ru$third-party
 ||starwave.com$third-party

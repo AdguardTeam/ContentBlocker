@@ -1,18 +1,22 @@
-! Title: Mobile ads filter
-! Version: 1.0.3.39
-! Name: Mobile ads filter
-! Description: Filter for all known mobile ad networks
-! NameEn: Mobile ads filter
-! DescriptionEn: Filter for all known mobile ad networks
-! TimeUpdated: 2016-04-29T15:08:48.356+04:00
+! Title: Mobile Ads filter
+! Version: 1.0.3.82
+! Name: Mobile Ads filter
+! Description: Filter for all known mobile ad networks. Useful for mobile devices.
+! NameEn: Mobile Ads filter
+! DescriptionEn: Filter for all known mobile ad networks. Useful for mobile devices.
+! TimeUpdated: 2016-06-07T20:01:28.327+04:00
 #%#window.AG_onLoad = function(func) { if (window.addEventListener) { window.addEventListener('DOMContentLoaded', func); } };
 #%#window.AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
 #%#window.AG_removeElementBySelector = function(selector) { if (!document.querySelectorAll) { return; } var nodes = document.querySelectorAll(selector); if (nodes) { for (var i = 0; i < nodes.length; i++) { if (nodes[i] && nodes[i].parentNode) { nodes[i].parentNode.removeChild(nodes[i]); } } } };
 #%#window.AG_each = function(selector, fn) { if (!document.querySelectorAll) return; var elements = document.querySelectorAll(selector); for (var i = 0; i < elements.length; i++) { fn(elements[i]); }; };
 #%#var AG_removeParent = function(el, fn) { while (el && el.parentNode) { if (fn(el)) { el.parentNode.removeChild(el); return; } el = el.parentNode; } };
+||ad.daum.net/imp$empty
+||afreeca-tag.ad-mapps.com^$empty
+||mtag.mman.kr^$empty
 ://o0e.ru^$third-party
 ||1mp.mobi^$empty
 ||247realmedia.com^$empty
+||31.14.252.148^$third-party
 ||360yield.com^$empty
 ||52.87.215.72/oapi/getAd$empty
 ||78.138.126.253/www/
@@ -147,7 +151,6 @@
 ||api.appfireworks.com^$empty
 ||api.appodeal.com/show
 ||api.appodeal.com/stats
-||api.appsflyer.com^$empty
 ||api.fusepowered.com^$empty
 ||api.taboola.com/*/recommendations.get^$empty
 ||app-measurement.com^$empty
@@ -156,13 +159,16 @@
 ||appclick.co^$empty
 ||appclick.net^$empty
 ||appintop.com^$empty
-||applifier.com/impact/$empty
+||applifier.com^$empty
+||appserver-ap.com^$empty
+||appserver-cp.com^$empty
 ||applift.com^empty
 ||applovin.com^$empty
 ||appnext-a.akamaihd.net^$empty
 ||appodeal.com^$empty
 ||apps.outfit7.com/rest/ad/$empty
 ||appsdt.com^$empty
+||appsflyer.com^$empty
 ||as.adfonic.net^$empty
 ||asrety.com^$empty
 ||assoc-amazon.com^$empty
@@ -293,7 +299,6 @@
 ||i.tapit.com^$empty
 ||iamediaserve.com^$empty
 ||imasdk.googleapis.com^$empty
-||impact.staging.applifier.com^$empty
 ||imwx.com/mobile/adconfig/$empty
 ||infolinks.com^$empty
 ||inmobi.com^$empty
@@ -387,6 +392,7 @@
 ||mocean.mobi^$empty
 ||mofox.com^$empty
 ||mojiva.com^$empty
+||mologiq.net^$empty
 ||mookie1.com^$empty
 ||mopub.web107-east.manage.com^$empty
 ||morgdm.ru^$empty
@@ -411,8 +417,11 @@
 ||networld.hk^$empty
 ||newsnet.in.ua^$empty
 ||nexac.com^$empty
+||njs.manhuahome.com^$third-party
 ||nkredir.com^$empty
 ||nmcdn.us^$empty
+||nomalleadzuaff.com^$empty
+||nonmoves.date^$empty
 ||novostimira.biz^$empty
 ||numbers.md^$empty
 ||nxtck.com^$empty
@@ -466,6 +475,7 @@
 ||rtbpop.com^$empty
 ||rubiconproject.com^$empty
 ||runnergamesch.com/*/BasCount/adAll
+||s.*.com/pp.php?uid=$third-party
 ||s.innovid.com^$empty
 ||saymedia.com^$empty
 ||scorecardresearch.com^$empty
@@ -502,7 +512,6 @@
 ||supersonicads.com^$empty
 ||swelen.com^$empty
 ||switchadhub.com^$empty
-||t.appsflyer.com^$empty
 ||t3q7af0z.com^$empty
 ||tapad.com^$empty
 ||tapcreatives.net^$third-party
@@ -527,7 +536,6 @@
 ||tm1.hoiplay.com^$empty
 ||tonefuse.com^$empty
 ||tpc.googlesyndication.com^$empty
-||track.appsflyer.com^$empty
 ||track.cpatool.net^$popup,third-party
 ||trackimpression.com^$empty
 ||tradeadexchange.com^$empty
@@ -555,7 +563,6 @@
 ||visitweb.com^$empty
 ||vogo-vogo.ru^$empty
 ||vserv.mobi^$empty
-||vungle.com/*/requestAd
 ||vungle.com^$empty
 ||waiads.com^$empty
 ||wap-click.com^$empty
@@ -585,26 +592,27 @@
 ||ziffdavis.com^$empty
 ||zoglafi.info^$empty
 ||graph.facebook.com/network_ads$empty
-||yottos.com^$empty
 moroccoworldnews.com#@#.header-ad
 moroccoworldnews.com#@#.custom-ad
 gizchina.com#@#.header-ad
-voici.fr#@#.adblock
 gizmobolt.com#@#.custom-ad
 gizmobolt.com#@#.header-ad
 blogdoiphone.com#@#.header-ad
 blogdoiphone.com#@#.custom-ad
 westseattleblog.com#@#.custom-ad
 westseattleblog.com#@#.header-ad
+rsload.net#%#window.WebSocket = undefined;
 pcgames.de#%#AG_onLoad(function() { $('a[href*="/E-Commerce"]').closest('li[class*="ticker_item withOutImage"]').remove(); });
-spaces.ru#%#AG_onLoad(function() { $('span[class*="ico_close"').trigger('click'); });
+factroom.ru#$#.mobile-pop-direct { display: none!important; height: 0px!important; }
 deviantart.com#$#div[class*="dp-ad-"] {height:0px!important; width:0px!important;}
 spaces.ru$$a[href="http://m.mobiads.ru/"][parent-elements="div"][parent-search-level="1"]
 /adfurikun/*
-@@||kotaku.com^$elemhide
-@@||lifehacker.com^$document
-@@||gizmodo.com^$document
-@@||kinja.com^$document
+@@||ads.adfox.ru/208108/getCode
+@@||pubads.g.doubleclick.net/gampad/ads?*&_package_name=com.goldtouch.ynet
+@@||imasdk.googleapis.com/native/sdkloader/native_sdk_v3.html?*&app=com.goldtouch.ynet
+@@||relap.io/api/*/head.js?$domain=surfingbird.ru
+@@||docs.newrelic.com^$~third-party
+@@||ad.doubleclick.net/ddm/clk/*?https://creditcards.chase.com/
 @@||auto-api.yelp.com
 @@||olx.ua/*/observed/getads/?json=
 @@||ana.112.2o7.net/b/ss/
@@ -646,15 +654,18 @@ deviantart.com#@#.mobile-ad
 m.auto.ru##.card.i-bem > div[class^="_"] > div[class^="_"]
 m.auto.ru##.index.i-bem > div[class]:not([data-bem])
 m.auto.ru##.listing__page > div[class^="_"]:not([class$="listing__item_view_old"])
+||images-*.ssl-images-amazon.com/images/*/ape/sf/MAsf-*_.js
+sinoptik.ua##div[class^="rozetka"]
 ulm-news.de###SWU-schwabenstrom
 russian7.ru###bottomLine-banner
 fishki.net###fixed-mobile
-spaces.ru###index_page > div[class$=" widgets-group"]
 only-tv.org###meelba_overlay
 accuweather.com###mid-ad
+amazon.co.uk,amazon.com,amazon.de###mobile-ad
 red-forum.com###mobile_banner
 vesti.ru###rb_fs_wrapper__ID
 filext.com###sc-overlay
+nettavisen.no###sportspill-box-top
 reshil.org###trr
 rg.ru###yandex_ads_hor_pda
 anwap.org##.MIXADVERT_NET
@@ -667,7 +678,6 @@ onliner.by##.b-top-line-1__items
 timesofisrael.com##.b320x50
 m.yingshidaquan.cc##.banner
 vnexpress.net##.banner_mobile
-spaces.ru##.content_wrap > div[id]:not([class]):not([id="header_elements"]):not([id="coins_gift"]) > div[class]
 ircity.ru##.cr_mobile_banner
 filext.com##.dap-wrap
 yelp.be,yelp.ca,yelp.ch,yelp.co.nz,yelp.co.uk,yelp.com,yelp.com.au,yelp.com.sg,yelp.ie##.data-ad-placement
@@ -683,8 +693,6 @@ idownloadblog.com##.wptouch-custom-ad
 udaff.com##[width="240"][height="300"]
 111cn.net##a[class][style][onclick$="JpgClick();"]
 cnbeta.com##a[href^="http://click.aliyun.com/"]
-spaces.ru##a[href^="http://m.mobiads.ru/"]
-spaces.ru##a[href^="http://m.mobiads.ru/"] + div[class]
 androidcentral.com##a[href^="http://www.amazon.com/gp/"]
 wapbaike.baidu.com##a[onclick^="Mixedor.mixedOpen"]
 pcgameshardware.de##aside[class$="inArticleTextAd"]
@@ -696,6 +704,7 @@ eastmoney.com##div[class^="ban"]
 dreamfilmhd.bz##div[class^="mob-slider"]
 mobilesyrup.com##div[class^="mobile-ads"]
 piluli.ru##div[class^="ya_adv_"]
+muzmo.ru##div[id] > [style="width: 100%; max-width: 800px; margin: 0px auto;"]
 4pda.ru##div[id] > div[class] > link[rel="stylesheet"]
 piluli.ru##div[id^="medads_banner"]
 bash.im##div[style*="width: 300px; height: 250px;"]
@@ -703,11 +712,15 @@ sports.ru##iframe[src^="http://www.sports.ru/desktop/special"]
 bubluoteka.org##iframe[width="320"][height="50"]
 ||48dreams.com/player/adstype/advmaker.php
 ||campaign.brandseven.com/get^$third-party
+||coandroid.ru/uploads/mobcoin.png
 ||i.now.ru/*/MobileBannerView.js
 ||m.eporner.com/dot/pop.php
 ||m.sports.ru/*/banner.html
 ||m.telegraaf.nl/static/lib/bva-widget.html
+||muzmo.ru/static/images/*_banners_ru/
+||onlain-multiki.ru/config.json
 ||only-tv.org/config.json
+||sodu.cc/js/tj1.js
 ||static.uniblue.com/media/spacecleaner/sc-post-script.min.js$domain=filext.com
 ||ulm-news.de/image/banners
 ||veronicamagazine.nl/srv/*/banner
@@ -721,6 +734,19 @@ login.wi-fi.ru#%#window.isPremium = true;
 ||vmet.ro^$third-party
 ||wi-fi.ru/ad_video/
 ||wi-fi.ru^$script,third-party
+||banners.etermax.com^
+||espresso.economist.com/api/v1/ad/*/json$replace=/html/abcd\,/i
+@@||mingle.kijiji.ca/api/ads/
+||s3.amazonaws.com/promos.withbuddies.com/prod/ads/
+||config.sdk.scopely.io/*/android/ads_config.json
+||onceux.unicornmedia.com/now/ads/vmap/*&UMADPARAMcsid=imdb.us.android$replace=/(<vmap:VMAP[\s\S]*?>)[\s\S]*<\/vmap:VMAP>/\$1<\/vmap:VMAP>/
+@@||googleads.g.doubleclick.net/mads/gma?*&_package_name=com.nextradiotv.bfmbusiness
+@@||googleads.g.doubleclick.net/mads/gma?request_id=*&_package_name=com.nextradiotv.bfmbusiness
+||googleapis.com/youtubei/v1/browse?$protobuf=62887855|49413586|51621377
+||googleapis.com/youtubei/v1/next?$protobuf=62960614|65002523
+||googleapis.com/youtubei/v1/player$protobuf=48841103|63112829
+||api.live.daum.net/*/ad/
+||vads-api.daumkakao.com/xylophone/adrequest/json
 ||spoofgames.com/prod/*.txt$empty
 ||bahamut.com.tw/JS/ad/
 ||gdeposylka.ru/js/primatic.js?_=
@@ -732,9 +758,6 @@ login.wi-fi.ru#%#window.isPremium = true;
 @@||api.bufferapp.com/*/profiles.json
 @@||api.bufferapp.com/*/service/
 @@||api.bufferapp.com/*/user
-||applifier.com^$empty
-||appserver-ap.com^$empty
-||appserver-cp.com^$empty
 ||d27tpsznug51gz.cloudfront.net/creatives/*.mp4$mp4
 ||d27tpsznug51gz.cloudfront.net^$empty
 @@||api.crunchyroll.com/log_ad_event.0.json
@@ -761,24 +784,37 @@ _*sec.mp4$mp4,domain=ivi.ru
 ||do-not-tracker.org^$empty
 ||eviltracker.net^$empty
 ||trackersimulator.org^$empty
-||yahoo.com/pageview?client=1&property=$empty
-||graph.instagram.com/logging_client_events$empty
+||sstats.economist.com/b/ss/econdarwinproduction/
+||cedexis.com^$empty
+||api.apptentive.com^$empty
+||cedexis-radar.net^$empty
+||api.segment.io^$empty
+||installtracker.com^$empty
 ||2o7.net^$empty
+||acompli.helpshift.com^$empty
+||analytics.ad.daum.net^$empty
 ||analytics.liftoff.io^$empty
 ||analytics.mobile.yandex.net^$empty
 ||analytics.mopub.com^$empty
 ||analytics.query.yahoo.com^$empty
+||api.amplitude.com^$empty
 ||api.analytics.omgpop.com^$empty
+||api.branch.io^$empty
+||api.crittercism.com^$empty
 ||api.vigo.ru^$empty
 ||app.adjust.com^$empty
 ||appmetrica.yandex.com^$empty
 ||bmbs.baidu.com/reportinfo.php$empty
+||brahe.apptimize.com^$empty
 ||c.bigmir.net^$empty
 ||crashlytics.com^$empty
+||crittercism.com/api/$empty
 ||demdex.net^$empty
 ||ep.xone.com^$empty
 ||facebook.com/rtb_impression/?tr=
+||gate.hockeyapp.net^$empty
 ||google-analytics.com^$empty
+||graph.instagram.com/logging_client_events$empty
 ||krxd.net^$empty
 ||m.vk.com/counters.php$empty
 ||mixpanel.com/track$empty
@@ -793,6 +829,7 @@ _*sec.mp4$mp4,domain=ivi.ru
 ||sc-analytics.appspot.com^$empty
 ||sdk-api.yozio.com/?os$empty
 ||sdk.appbrain.com/api/$empty
+||statistics.videofarm.daum.net^$empty
 ||tapjoy.com^$empty
 ||tracker-api.my.com^$empty
 ||tracking.miui.com^$empty
@@ -802,6 +839,7 @@ _*sec.mp4$mp4,domain=ivi.ru
 ||upalytics.com^$empty
 ||xiti.com^$empty
 ||yadro.ru^$empty
+||yikyakapi.net/api/logEvent?$empty
 ||zdbb.net^$empty
 ||alog.umeng.co/app_logs^$empty
 ||localytics.com^$empty
@@ -813,6 +851,7 @@ _*sec.mp4$mp4,domain=ivi.ru
 /popads/*
 ||adf.ly^$domain=buchpirat.org
 ||googleadservices.com^$empty
+||20min.ch/werbung/
 @@||4p.de/*adtag.check.js
 @@||ads.adthebest.de/delivery/ajs.php^$domain=4players.de
 u-f.ru##body > div#pp

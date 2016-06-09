@@ -1,0 +1,1 @@
+INSERT INTO filter_lists (filter_list_id, filter_name, filter_description, enabled, version, time_last_downloaded, time_updated, display_order) VALUES (218,'EstonianList','Estonian filtr',0,'1.0.0.14',1460628349127,1460628349127,218);

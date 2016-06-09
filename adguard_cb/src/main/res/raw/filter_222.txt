@@ -1,10 +1,10 @@
 ! Title: Adblock-Persian list
-! Version: 1.0.0.3
+! Version: 1.0.0.5
 ! Name: Adblock-Persian list
 ! Description: Adblock-Persian list
 ! NameEn: Adblock-Persian list
 ! DescriptionEn: Adblock-Persian list
-! TimeUpdated: 2016-04-26T18:07:46.168+04:00
+! TimeUpdated: 2016-05-23T18:06:25.238+04:00
 .ir/baner
 /banner.js
 images/banner*.gif
@@ -21,6 +21,8 @@ _TabBanner_
 -120x180
 -265x265
 -230x230.
+_468x120
+468x60
 -120x120
 -120x90
 *haraji*
@@ -149,6 +151,8 @@ _vps-banner*.gif
 ||digiato.com/*afranet.jpg
 ||digiato.com/*Banner*
 ||digiato.com/*800-80.gif
+||donya-e-eqtesad.com*.gif
+||donya-e-eqtesad.com*BannerFile*
 ||e-estekhdam.com*.swf
 ||exirstore.ir*/banner*
 ||eghtesadnews.com/library/*

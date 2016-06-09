@@ -16,6 +16,7 @@
  */
 package com.adguard.android.contentblocker.preferences;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +25,10 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.adguard.android.ServiceLocator;
+import com.adguard.android.contentblocker.ApplyAndRefreshTask;
 import com.adguard.android.contentblocker.R;
+import com.adguard.android.service.FilterService;
 
 /**
  *
@@ -82,7 +86,7 @@ public class PreferenceViewAdapter extends BaseAdapter {
         ((TextView)view.findViewById(R.id.title)).setText(item.title);
         ((TextView)view.findViewById(R.id.summary)).setText(item.summary);
         if (item.value instanceof Boolean) {
-            ((CheckBox)view.findViewById(R.id.checkbox)).setChecked(((Boolean) item.value).booleanValue());
+            ((CheckBox)view.findViewById(R.id.checkbox)).setChecked((Boolean) item.value);
             view.setOnClickListener(booleanPrefListener);
         } else if (item.value == null) {
             // Let the activity handle this click
@@ -108,6 +112,11 @@ public class PreferenceViewAdapter extends BaseAdapter {
         String name = (String) view.getTag();
         PreferenceItem item = prefs.getPreference(name);
         prefs.setPreference(name, !((Boolean)item.value));
-        ((CheckBox)view.findViewById(R.id.checkbox)).setChecked(((Boolean) item.value).booleanValue());
+        ((CheckBox)view.findViewById(R.id.checkbox)).setChecked((Boolean) item.value);
+        if (name.equals(PreferenceDb.PREF_SHOW_USEFUL_ADS)) {
+            FilterService filterService = ServiceLocator.getInstance(context).getFilterService();
+            filterService.setShowUsefulAds(!((Boolean)item.value));
+            new ApplyAndRefreshTask(filterService, (Activity) context).execute();
+        }
     }
 }

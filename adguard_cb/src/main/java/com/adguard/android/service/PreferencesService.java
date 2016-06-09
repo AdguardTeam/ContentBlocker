@@ -213,6 +213,10 @@ public interface PreferencesService {
     void setUpdateChannel(int selectedChannel);
 
     /**
+     * Set whether we should show useful ads
+     */
+    void setShowUsefulAds(boolean value);
+    /**
      * Whether we should show useful ads
      */
     boolean isShowUsefulAds();

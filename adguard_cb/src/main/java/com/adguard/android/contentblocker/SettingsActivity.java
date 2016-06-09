@@ -29,14 +29,26 @@ import com.adguard.android.contentblocker.preferences.PreferenceViewAdapter;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private ListView listView;
+    private PreferenceViewAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new PreferenceFragment()).commit();
         setContentView(R.layout.activity_settings);
-        ListView listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(new PreferenceViewAdapter(this, new PreferenceDb(getApplicationContext()), this));
+        listView = (ListView) findViewById(R.id.listView);
+        adapter = new PreferenceViewAdapter(this, new PreferenceDb(getApplicationContext()), this);
+        assert listView != null;
+        listView.setAdapter(adapter);
         setupActionBar();
+    }
+
+    public void onResume() {
+        super.onResume();
+        // Ugly but effective
+        adapter = new PreferenceViewAdapter(this, new PreferenceDb(getApplicationContext()), this);
+        listView.setAdapter(adapter);
     }
 
     /**

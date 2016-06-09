@@ -355,6 +355,13 @@ public class PreferencesServiceImpl implements PreferencesService {
     }
 
     @Override
+    public void setShowUsefulAds(boolean value) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(PreferenceDb.PREF_SHOW_USEFUL_ADS, value);
+        editor.commit();
+    }
+
+    @Override
     public boolean isShowUsefulAds() {
         return sharedPreferences.getBoolean(PreferenceDb.PREF_SHOW_USEFUL_ADS, true);
     }

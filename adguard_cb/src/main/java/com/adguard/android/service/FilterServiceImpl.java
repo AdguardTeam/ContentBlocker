@@ -65,7 +65,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     private static final int FILTERS_UPDATE_PERIOD = 60 * 60; // 1 hour
     private static final int UPDATE_INVALIDATE_PERIOD = 4 * 24 * 60 * 60; // 4 days
 
-    private static final int SHOW_USEFUL_ADS_FILTER_ID = 10;
+    public static final int SHOW_USEFUL_ADS_FILTER_ID = 10;
     private static final int SOCIAL_MEDIA_WIDGETS_FILTER_ID = 4;
     private static final int SPYWARE_FILTER_ID = 3;
 

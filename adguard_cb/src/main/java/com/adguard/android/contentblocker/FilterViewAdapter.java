@@ -17,8 +17,6 @@
 package com.adguard.android.contentblocker;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,8 +24,12 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.adguard.android.ServiceLocator;
+import com.adguard.android.contentblocker.preferences.PreferenceDb;
 import com.adguard.android.model.FilterList;
 import com.adguard.android.service.FilterService;
+import com.adguard.android.service.FilterServiceImpl;
+import com.adguard.android.service.PreferencesService;
 import com.adguard.android.ui.utils.ActivityUtils;
 
 import java.util.Date;
@@ -103,6 +105,10 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
         FilterList list = (FilterList) v.getTag();
         filterService.updateFilterEnabled(list, !list.isEnabled());
         ((CheckBox)v.findViewById(R.id.checkbox)).setChecked(list.isEnabled());
+        if (list.getFilterId() == FilterServiceImpl.SHOW_USEFUL_ADS_FILTER_ID) {
+            PreferencesService preferencesService = ServiceLocator.getInstance(context.getApplicationContext()).getPreferencesService();
+            preferencesService.setShowUsefulAds(list.isEnabled());
+        }
         new ApplyAndRefreshTask(filterService, context).execute();
     }
 
@@ -129,31 +135,4 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
         return sb.toString();
     }
 
-    public static class ApplyAndRefreshTask extends AsyncTask<Void, Void, Void> {
-
-        private final FilterService service;
-        private final Activity activity;
-        private ProgressDialog dialog;
-
-        public ApplyAndRefreshTask(FilterService service, Activity activity) {
-            this.service = service;
-            this.activity = activity;
-        }
-
-        @Override
-        protected void onPreExecute() {
-            dialog = ProgressDialog.show(activity, null, activity.getText(R.string.please_wait), true);
-        }
-
-        @Override
-        protected Void doInBackground(Void... params) {
-            service.applyNewSettings();
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void res) {
-            dialog.dismiss();
-        }
-    }
 }

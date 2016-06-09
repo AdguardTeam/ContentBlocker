@@ -60,4 +60,6 @@
     <string name="githubLabelText">Source code</string>
     <!--Do not translate.-->
     <string name="githubLink" translatable="false"><a href="https://github.com/AdguardTeam/ContentBlocker">github.com</a></string>
+    <string name="warning">Warning</string>
+    <string name="too_many_filters_warning">You have selected too many filter subscriptions. It may slow down your web browsing significantly.</string>
 </resources>

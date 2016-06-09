@@ -54,4 +54,6 @@
     <string name="install_yandex_browser">Установить Yandex Browser</string>
     <string name="issuesButtonText">Нашли ошибку?</string>
     <string name="githubLabelText">Исходный код</string>
+    <string name="warning">Внимание</string>
+    <string name="too_many_filters_warning">Вы выбрали слишком много фильтров. Это может значительно замедлить скорость загрузки сайтов.</string>
 </resources>

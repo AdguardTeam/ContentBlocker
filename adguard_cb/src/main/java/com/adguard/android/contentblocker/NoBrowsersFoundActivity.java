@@ -40,7 +40,7 @@ public class NoBrowsersFoundActivity extends AppCompatActivity {
         findViewById(R.id.install_yandex_browser).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityUtils.startMarket(NoBrowsersFoundActivity.this, "com.yandex.browser.beta");
+                ActivityUtils.startMarket(NoBrowsersFoundActivity.this, "com.yandex.browser");
                 finish();
             }
         });

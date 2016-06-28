@@ -32,7 +32,7 @@ public class NoBrowsersFoundActivity extends AppCompatActivity {
         findViewById(R.id.install_samsung_browser).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityUtils.startMarket(NoBrowsersFoundActivity.this, "com.sec.android.app.sbrowser");
+                ActivityUtils.startMarket(NoBrowsersFoundActivity.this, "com.sec.android.app.sbrowser", null);
                 finish();
             }
         });
@@ -40,7 +40,7 @@ public class NoBrowsersFoundActivity extends AppCompatActivity {
         findViewById(R.id.install_yandex_browser).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityUtils.startMarket(NoBrowsersFoundActivity.this, "com.yandex.browser");
+                ActivityUtils.startMarket(NoBrowsersFoundActivity.this, "com.yandex.browser", "adguard1");
                 finish();
             }
         });

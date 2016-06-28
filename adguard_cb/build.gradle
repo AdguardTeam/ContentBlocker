@@ -14,7 +14,7 @@ android {
     defaultConfig {
         targetSdkVersion 23
         applicationId 'com.adguard.android.contentblocker'
-        versionName "1.0.6"
+        versionName "1.0.7"
         signingConfig signingConfigs.config
     }
     buildTypes {
@@ -27,11 +27,11 @@ android {
     productFlavors {
         yandex_api16 {
             minSdkVersion 16
-            versionCode 1600106
+            versionCode 1600107
         }
         samsung_api21 {
             minSdkVersion 21
-            versionCode 2100106
+            versionCode 2100107
         }
     }
     compileOptions {

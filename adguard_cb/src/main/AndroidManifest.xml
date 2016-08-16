@@ -15,7 +15,9 @@
             android:name="com.samsung.android.sbrowser.contentBlocker.interfaceVersion"
             android:value="API_1.0" />
 
-        <activity android:name=".MainActivity" android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -46,6 +48,11 @@
             android:authorities="com.adguard.android.contentblocker.contentBlocker.contentProvider"
             android:enabled="true"
             android:exported="true" />
+
+        <activity
+            android:name=".onboarding.OnboardingActivity"
+            android:label="@string/title_activity_onboarding"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

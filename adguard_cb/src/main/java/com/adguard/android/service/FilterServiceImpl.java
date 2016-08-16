@@ -85,18 +85,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         preferencesService = ServiceLocator.getInstance(context).getPreferencesService();
     }
 
-    public static void enableYandexContentBlocker(Context context, boolean enable) {
-        Intent intent = new Intent();
-        if (enable) {
-            intent.setAction("com.yandex.browser.contentFilter.INSTALLED");
-        } else {
-            intent.setAction("com.yandex.browser.contentFilter.UNINSTALLED");
-        }
-        intent.setPackage(context.getPackageName());
-        context.startService(intent);
-    }
-
-    public static void enableSamsungContentBlocker(Context context) {
+    public static void enableContentBlocker(Context context) {
         Intent intent = new Intent();
         intent.setAction("com.samsung.android.sbrowser.contentBlocker.ACTION_UPDATE");
         intent.setData(Uri.parse("package:com.adguard.android.contentblocker"));
@@ -266,8 +255,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
             LOG.info("Saving {} filters...", cachedFilterRuleCount);
             FileUtils.writeLines(new File(context.getFilesDir().getAbsolutePath() + "/filters.txt"), allEnabledRules);
             preferencesService.setFilterRuleCount(cachedFilterRuleCount);
-            enableSamsungContentBlocker(context);
-            enableYandexContentBlocker(context, true);
+            enableContentBlocker(context);
         } catch (IOException e) {
             LOG.warn("Unable to save filters to file!!!", e);
         }
@@ -501,10 +489,10 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
                                 .replace("{1}", parseFilterNames(filters));
                         showToast(activity, message);
                     }
-                    applyNewSettings();
                 }
                 preferencesService.setLastUpdateCheck(System.currentTimeMillis());
             }
+            applyNewSettings();
         }
 
         private String parseFilterNames(List<FilterList> filters) {

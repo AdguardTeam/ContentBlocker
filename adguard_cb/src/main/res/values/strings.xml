@@ -62,4 +62,17 @@
     <string name="githubLink" translatable="false"><a href="https://github.com/AdguardTeam/ContentBlocker">github.com</a></string>
     <string name="warning">Warning</string>
     <string name="too_many_filters_warning">You have selected too many filter subscriptions. It may slow down your web browsing significantly.</string>
+    <string name="pref_whitelist_category">Whitelist</string>
+    <string name="pref_summary_whitelist_category">Domains in this list will not be filtered</string>
+    <string name="title_activity_onboarding">Welcome!</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="onboarding_title1">Welcome!</string>
+    <string name="onboarding_text1">You are only a couple steps away from fast and clean internet without ads.</string>
+    <string name="onboarding_button_text1">Get started</string>
+    <string name="onboarding_title2">Select a browser</string>
+    <string name="onboarding_text2">To operate, Adguard needs a browser that supports ad blocking technology. Currently, there are two such browsers.</string>
+    <string name="onboarding_button_text2">Select browser</string>
+    <string name="onboarding_title3">Almost there!</string>
+    <string name="onboarding_text3">An appropriate browser found. It is only left to enable Adguard in its settings.</string>
+    <string name="onboarding_button_text3">Enable Adguard</string>
 </resources>

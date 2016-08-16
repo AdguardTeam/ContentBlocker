@@ -56,4 +56,6 @@
     <string name="githubLabelText">Исходный код</string>
     <string name="warning">Внимание</string>
     <string name="too_many_filters_warning">Вы выбрали слишком много фильтров. Это может значительно замедлить скорость загрузки сайтов.</string>
+    <string name="pref_whitelist_category">Белый список</string>
+    <string name="pref_summary_whitelist_category">Сайты в этом списке не будут фильтроваться</string>
 </resources>

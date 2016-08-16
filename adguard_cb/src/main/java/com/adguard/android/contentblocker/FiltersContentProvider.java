@@ -18,9 +18,13 @@ package com.adguard.android.contentblocker;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
+import android.support.annotation.NonNull;
+import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
 
 import com.adguard.android.ServiceLocator;
 
@@ -29,29 +33,32 @@ import java.io.FileNotFoundException;
 
 public class FiltersContentProvider extends ContentProvider {
 
+    public static final String ACTION_CONNECTED = "com.adguard.contentblocker.ACTION_CONNECTED";
     private String filtersPath;
 
     public FiltersContentProvider() {
     }
 
     @Override
-    public ParcelFileDescriptor openFile(Uri uri, String mode) throws FileNotFoundException {
+    public ParcelFileDescriptor openFile(@NonNull Uri uri, @NonNull String mode) throws FileNotFoundException {
         ParcelFileDescriptor parcel = ParcelFileDescriptor.open(new File(filtersPath), ParcelFileDescriptor.MODE_READ_ONLY);
+        Log.i("FiltersContentProvider", "Browser openned filters...");
+        sendConnectedBroadcast();
         return parcel;
     }
 
     @Override
-    public int delete(Uri uri, String selection, String[] selectionArgs) {
+    public int delete(@NonNull Uri uri, String selection, String[] selectionArgs) {
         throw new UnsupportedOperationException("Not implemented");
     }
 
     @Override
-    public String getType(Uri uri) {
+    public String getType(@NonNull Uri uri) {
         return "text/plain";
     }
 
     @Override
-    public Uri insert(Uri uri, ContentValues values) {
+    public Uri insert(@NonNull Uri uri, ContentValues values) {
         throw new UnsupportedOperationException("Not implemented");
     }
 
@@ -60,18 +67,23 @@ public class FiltersContentProvider extends ContentProvider {
         filtersPath = getContext().getFilesDir().getAbsolutePath() + "/filters.txt";
         File f = new File(filtersPath);
         if (!f.exists()) {
-            ServiceLocator.getInstance(getContext()).getFilterService().scheduleFiltersUpdate();
+            ServiceLocator.getInstance(getContext().getApplicationContext()).getFilterService().applyNewSettings();
         }
         return true;
     }
 
     @Override
-    public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
+    public Cursor query(@NonNull Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         throw new UnsupportedOperationException("Not implemented");
     }
 
     @Override
-    public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
+    public int update(@NonNull Uri uri, ContentValues values, String selection, String[] selectionArgs) {
         throw new UnsupportedOperationException("Not implemented");
+    }
+
+    private void sendConnectedBroadcast() {
+        Intent i = new Intent(ACTION_CONNECTED);
+        LocalBroadcastManager.getInstance(getContext()).sendBroadcast(i);
     }
 }

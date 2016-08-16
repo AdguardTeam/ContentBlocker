@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#39b349</color>
-    <color name="colorPrimaryDark">#0c851a</color>
-    <color name="colorAccent">#0c851a</color>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#388E3C</color>
+    <color name="colorSecondary">#388E3C</color>
+    <color name="colorAccent">#FF5722</color>
     <color name="secondary_text_material">#141414</color>
     <color name="primary_text_material">#ffffff</color>
 
@@ -14,8 +15,12 @@
     <color name="text_disabled">#C7C7C7</color>
     <color name="light_gray_text">#999999</color>
     <color name="gray">#D8D8D8</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#ffffff</color>
     <color name="background_common">#ffffffff</color>
     <color name="button_gray">#808080</color>
     <color name="light_gray">#F0F0F0</color>
+    <color name="indicator_unselected">#388E3C</color>
+    <color name="indicator_selected">#ffffff</color>
+    <color name="primaryText">#212121</color>
+    <color name="secondaryText">#757575</color>
 </resources>

@@ -1,6 +1,6 @@
 # Adguard Content Blocker
 
-Adguard Content Blocker can be used only in browsers that support content blocking technology. Currently these browsers are Samsung Internet and Yandex Browser (note that currently only Alpha and Beta versions of Yandex Browser are supported).
+Adguard Content Blocker can be used only in browsers that support content blocking technology. Currently these browsers are Samsung Internet and Yandex Browser.
 
 ![menu-en-github](https://cloud.githubusercontent.com/assets/8577533/15713067/884ceb9e-281d-11e6-8669-29c71b0a79f1.png)
 ![main-en-github](https://cloud.githubusercontent.com/assets/8577533/15713101/a31720d4-281d-11e6-9a4e-de1f75220e19.png)

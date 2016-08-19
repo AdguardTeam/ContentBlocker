@@ -27,8 +27,8 @@
     <string name="pref_filters_category">Фильтры</string>
     <string name="pref_summary_filters_category">Выбрать, какие фильтры использовать</string>
     <string name="filters">Фильтры</string>
-    <string name="stats_enabled_filters">Фильтров:</string>
-    <string name="stats_enabled_rules">Правил:</string>
+    <string name="stats_enabled_filters">Фильтров</string>
+    <string name="stats_enabled_rules">Правил</string>
     <string name="stats_update_time">Обновлено:</string>
     <string name="start_samsung_browser">Запустить настройки Samsung Internet</string>
     <string name="start_yandex_browser">Запустить настройки Yandex Browser</string>
@@ -58,4 +58,22 @@
     <string name="too_many_filters_warning">Вы выбрали слишком много фильтров. Это может значительно замедлить скорость загрузки сайтов.</string>
     <string name="pref_whitelist_category">Белый список</string>
     <string name="pref_summary_whitelist_category">Сайты в этом списке не будут фильтроваться</string>
+    <string name="browser">Браузер</string>
+    <string name="check_filter_updates">Проверить обновления</string>
+    <string name="count">Число</string>
+    <string name="go_to_filters">Открыть фильтры</string>
+    <string name="install">Установить</string>
+    <string name="onboarding_button_text1">Начать</string>
+    <string name="onboarding_button_text2">Выбрать браузер</string>
+    <string name="onboarding_button_text3">Включить Adguard</string>
+    <string name="onboarding_text1">Вы всего в паре шагов от быстрого и чистого Интернета без рекламы.</string>
+    <string name="onboarding_text2">Для работы Adguard требует браузер, поддерживающий технологию блокировки рекламы. Сейчас существует два таких браузера.</string>
+    <string name="onboarding_text3">Подходящий браузер найден. Осталось только включить использование Adguard в его настройках.</string>
+    <string name="onboarding_title1">Добро пожаловать!</string>
+    <string name="onboarding_title2">Выберите браузер</string>
+    <string name="onboarding_title3">Почти готово!</string>
+    <string name="start">Запуск</string>
+    <string name="adguard_needs_compatible_browser">Для работы, Adguard требует браузер, поддерживающий технологию блокировки рекламы.</string>
+    <string name="choose_browser">Выбрать браузер</string>
+    <string name="get_started">Начать</string>
 </resources>

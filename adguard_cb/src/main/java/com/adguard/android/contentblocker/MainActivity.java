@@ -18,6 +18,7 @@ package com.adguard.android.contentblocker;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -28,6 +29,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateUtils;
 import android.view.Menu;
@@ -68,13 +70,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (!BrowserUtils.isYandexBrowserAvailable(this) && !BrowserUtils.isSamsungBrowserAvailable(this)) {
-            Intent intent = new Intent(this, NoBrowsersFoundActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS | Intent.FLAG_ACTIVITY_NO_ANIMATION | Intent.FLAG_ACTIVITY_NO_HISTORY);
-            startActivity(intent);
-            finish();
-        }
-
         // As we're using a Toolbar, we should retrieve it and set it to be our ActionBar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -94,20 +89,58 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.openned_drawer_title, R.string.closed_drawer_title);
         drawerToggle.setHomeAsUpIndicator(R.drawable.ic_drawer);
 
+        final View menuImageView = findViewById(R.id.menuImageView);
+        if (menuImageView != null) {
+            menuImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // inflate menu
+                    PopupMenu popup = new PopupMenu(menuImageView.getContext(), menuImageView);
+                    MenuInflater inflater = popup.getMenuInflater();
+                    inflater.inflate(R.menu.filters_popup_menu, popup.getMenu());
+                    popup.setOnMenuItemClickListener(new FiltersMenuItemClickListener());
+                    popup.show();
+                }
+            });
+        }
+
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeButtonEnabled(true);
         }
-        startActivity(new Intent(this, OnboardingActivity.class));
+
+        PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
+        if (!preferencesService.isOnboardingShown()) {
+            startActivity(new Intent(this, OnboardingActivity.class));
+        }
     }
 
+    @SuppressWarnings("ConstantConditions")
     private void refreshMainInfo() {
         boolean available = false;
+        boolean reorder = false;
 
-        if (BrowserUtils.isSamsungBrowserAvailable(this)) {
+        boolean samsungBrowserAvailable = BrowserUtils.isSamsungBrowserAvailable(this);
+        boolean yandexBrowserAvailable = BrowserUtils.isYandexBrowserAvailable(this);
+
+        if (samsungBrowserAvailable) {
             available = true;
+            if (!yandexBrowserAvailable) {
+                reorder = true;
+            }
+            findViewById(R.id.install_samsung_browser).setVisibility(View.GONE);
             findViewById(R.id.start_samsung_browser).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_MAIN);
+                    intent.addCategory(Intent.CATEGORY_LAUNCHER);
+                    intent.setComponent(new ComponentName("com.sec.android.app.sbrowser", "com.sec.android.app.sbrowser.SBrowserMainActivity"));
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }
+            });
+            findViewById(R.id.start_samsung_settings).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     BrowserUtils.openSamsungBlockingOptions(MainActivity.this);
@@ -115,11 +148,23 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             });
         } else {
             findViewById(R.id.start_samsung_browser).setVisibility(View.GONE);
+            findViewById(R.id.start_samsung_settings).setVisibility(View.GONE);
         }
 
-        if (BrowserUtils.isYandexBrowserAvailable(this)) {
+        if (yandexBrowserAvailable) {
             available = true;
+            findViewById(R.id.install_yandex_browser).setVisibility(View.GONE);
             findViewById(R.id.start_yandex_browser).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_MAIN);
+                    intent.addCategory(Intent.CATEGORY_LAUNCHER);
+                    intent.setComponent(new ComponentName("com.yandex.browser", "com.yandex.browser.YandexBrowserMainActivity"));
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }
+            });
+            findViewById(R.id.start_yandex_settings).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     BrowserUtils.openYandexBlockingOptions(MainActivity.this);
@@ -127,10 +172,27 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             });
         } else {
             findViewById(R.id.start_yandex_browser).setVisibility(View.GONE);
+            findViewById(R.id.start_yandex_settings).setVisibility(View.GONE);
         }
 
-        if (!available) {
-            findViewById(R.id.start_browsers_card).setVisibility(View.GONE);
+        if (available) {
+            findViewById(R.id.no_browsers_card).setVisibility(View.GONE);
+            if (reorder) {
+                View yandex = findViewById(R.id.yandex_card);
+                LinearLayout layout = (LinearLayout) findViewById(R.id.cards_layout);
+                layout.removeView(yandex);
+                layout.addView(yandex);
+            }
+        } else {
+            findViewById(R.id.yandex_card).setVisibility(View.GONE);
+            findViewById(R.id.samsung_card).setVisibility(View.GONE);
+
+            findViewById(R.id.choose_browser_button).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    BrowserUtils.showBrowserInstallDialog(MainActivity.this);
+                }
+            });
         }
 
         refreshStatistics();
@@ -317,6 +379,23 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                     finish();
                     break;
             }
+        }
+    }
+
+    private class FiltersMenuItemClickListener implements PopupMenu.OnMenuItemClickListener {
+        @Override
+        public boolean onMenuItemClick(MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.go_to_filters:
+                    Intent intent = new Intent(MainActivity.this, FiltersActivity.class);
+                    startActivity(intent);
+                    return true;
+                case R.id.check_filter_updates:
+                    refreshStatus();
+                    return true;
+            }
+
+            return false;
         }
     }
 }

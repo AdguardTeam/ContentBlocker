@@ -1,10 +1,7 @@
 package com.adguard.android.contentblocker.onboarding;
 
-import android.content.Context;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
@@ -16,17 +13,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.adguard.android.ServiceLocator;
 import com.adguard.android.commons.BrowserUtils;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ui.ClickViewPager;
-import com.adguard.android.ui.utils.ActivityUtils;
+import com.adguard.android.service.PreferencesService;
 
 import java.util.Set;
 
@@ -155,7 +152,7 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
                 viewPager.setCurrentItem(1, true);
             }
         } else if (page == 1) {
-            showBrowserInstallDialog();
+            BrowserUtils.showBrowserInstallDialog(this);
         } else {
             Set<String> browsersAvailable = BrowserUtils.getBrowsersAvailable(getApplicationContext());
             if (browsersAvailable.contains(BrowserUtils.YANDEX)) {
@@ -163,56 +160,10 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
             } else if (browsersAvailable.contains(BrowserUtils.SAMSUNG)) {
                 BrowserUtils.openSamsungBlockingOptions(getApplicationContext());
             }
+            PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
+            preferencesService.setOnboardingShown(true);
             finish();
         }
-    }
-
-    private void showBrowserInstallDialog() {
-        // Touch listener for changing colors of CardViews
-        View.OnTouchListener touchListener = new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                int action = event.getActionMasked();
-                if (action == MotionEvent.ACTION_DOWN)
-                {
-                    ((CardView)v).setCardBackgroundColor(0xFFdbdbdb);
-                }
-                else if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL || action == MotionEvent.ACTION_OUTSIDE)
-                {
-                    ((CardView)v).setCardBackgroundColor(0xFFffffff);
-                }
-                return false;
-            }
-        };
-
-        final LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        final View dialogLayout = inflater.inflate(R.layout.select_browser_dialog, null);
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AlertDialog);
-        builder.setNegativeButton(android.R.string.cancel, null);
-        builder.setView(dialogLayout);
-        final AlertDialog dialog = builder.create();
-
-        View cardView = dialogLayout.findViewById(R.id.browser_yandex);
-        cardView.setOnTouchListener(touchListener);
-        cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ActivityUtils.startMarket(OnboardingActivity.this, "com.yandex.browser", "adguard1");
-                dialog.dismiss();
-            }
-        });
-
-        cardView = dialogLayout.findViewById(R.id.browser_samsung);
-        cardView.setOnTouchListener(touchListener);
-        cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ActivityUtils.startMarket(OnboardingActivity.this, "com.sec.android.app.sbrowser", null);
-                dialog.dismiss();
-            }
-        });
-
-        dialog.show();
     }
 
     /**

@@ -58,6 +58,17 @@ public interface PreferencesService {
     void setSendAnonymousStatistics(boolean value);
 
     /**
+     * @return True if we have shown the onboarding screen
+     */
+    boolean isOnboardingShown();
+
+    /**
+     * Save the flag determining that we have shown onboarding screen
+     * @param value True if shown
+     */
+    void setOnboardingShown(boolean value);
+
+    /**
      * @return Whitelisted domains
      */
     Set<String> getWhiteList();

@@ -20,8 +20,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.CardView;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
 
 import com.adguard.android.contentblocker.MainActivity;
+import com.adguard.android.contentblocker.R;
+import com.adguard.android.ui.utils.ActivityUtils;
 
 import java.util.HashSet;
 import java.util.List;
@@ -142,5 +149,53 @@ public class BrowserUtils {
             }
         }
         return false;
+    }
+
+    public static void showBrowserInstallDialog(final Context context) {
+        // Touch listener for changing colors of CardViews
+        View.OnTouchListener touchListener = new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                int action = event.getActionMasked();
+                if (action == MotionEvent.ACTION_DOWN)
+                {
+                    ((CardView)v).setCardBackgroundColor(0xFFdbdbdb);
+                }
+                else if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL || action == MotionEvent.ACTION_OUTSIDE)
+                {
+                    ((CardView)v).setCardBackgroundColor(0xFFffffff);
+                }
+                return false;
+            }
+        };
+
+        final LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        final View dialogLayout = inflater.inflate(R.layout.select_browser_dialog, null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AlertDialog);
+        builder.setNegativeButton(android.R.string.cancel, null);
+        builder.setView(dialogLayout);
+        final AlertDialog dialog = builder.create();
+
+        View cardView = dialogLayout.findViewById(R.id.browser_yandex);
+        cardView.setOnTouchListener(touchListener);
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityUtils.startMarket(context, "com.yandex.browser", "adguard1");
+                dialog.dismiss();
+            }
+        });
+
+        cardView = dialogLayout.findViewById(R.id.browser_samsung);
+        cardView.setOnTouchListener(touchListener);
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityUtils.startMarket(context, "com.sec.android.app.sbrowser", null);
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 }

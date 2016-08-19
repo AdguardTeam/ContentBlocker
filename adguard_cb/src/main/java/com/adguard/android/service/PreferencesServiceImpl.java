@@ -58,6 +58,7 @@ public class PreferencesServiceImpl implements PreferencesService {
     private final static String KEY_LAST_IMPORT_URL = "key_last_import_rule";
     private final static String KEY_UPDATE_CHANNEL = "key_update_channel";
     private final static String KEY_FILTER_RULE_COUNT = "key_filter_rule_count";
+    private final static String KEY_ONBOARDING_SHOWN = "key_onboarding_shown";
 
     private final SharedPreferences sharedPreferences;
     private final Context context;
@@ -109,6 +110,18 @@ public class PreferencesServiceImpl implements PreferencesService {
     public void setSendAnonymousStatistics(boolean value) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(KEY_SEND_ANONYMOUS_STATISTICS, value);
+        editor.commit();
+    }
+
+    @Override
+    public boolean isOnboardingShown() {
+        return sharedPreferences.getBoolean(KEY_ONBOARDING_SHOWN, false);
+    }
+
+    @Override
+    public void setOnboardingShown(boolean value) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(KEY_ONBOARDING_SHOWN, value);
         editor.commit();
     }
 

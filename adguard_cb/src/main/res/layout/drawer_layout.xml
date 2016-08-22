@@ -1,43 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/left_drawer"
-    android:layout_width="240dp"
+    android:layout_width="250dp"
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="240dp"
-        android:layout_height="150dp"
-        android:background="@drawable/drawer_background"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimary"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="40dp"
-            android:src="@drawable/icon_white" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/drawer_title"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="20dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="Roboto Medium"
-
-            android:text="@string/app_name"
-            android:textColor="#FFF"
-            android:textSize="14sp" />
     </LinearLayout>
 
     <ListView
         android:id="@+id/drawer_list"
-        android:layout_width="240dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFF"
         android:choiceMode="singleChoice"
-        android:divider="#8039b349"
-        android:dividerHeight="1dp" />
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        android:entries="@array/menu_titles"/>
 </LinearLayout>

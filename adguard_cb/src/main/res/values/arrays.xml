@@ -2,6 +2,10 @@
 <resources>
     <string-array name="menu_titles">
         <item>Settings</item>
+        <item>Filters</item>
+        <!--<item>Whitelist</item> Unimplemented for now -->
+        <item>Check filter updates</item>
+        <item>Rate Adguard</item>
         <item>About</item>
         <item>Exit</item>
     </string-array>

@@ -19,6 +19,7 @@ package com.adguard.android.contentblocker;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -36,8 +37,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -49,6 +52,7 @@ import com.adguard.android.model.FilterList;
 import com.adguard.android.service.FilterService;
 import com.adguard.android.service.FilterServiceImpl;
 import com.adguard.android.service.PreferencesService;
+import com.adguard.android.ui.utils.ActivityUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -76,13 +80,13 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
-        String[] menuTitles = getResources().getStringArray(R.array.menu_titles);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerList = (ListView) findViewById(R.id.drawer_list);
         leftDrawer = (LinearLayout) findViewById(R.id.left_drawer);
 
         // Set the adapter for the list view
-        drawerList.setAdapter(new ArrayAdapter<>(this, R.layout.drawer_list_item, R.id.textView, menuTitles));
+        DrawerArrayAdapter<DrawerListItem> adapter = new DrawerArrayAdapter<>(this, R.layout.drawer_list_item, R.id.text_view, R.id.image_view, getDrawerItems());
+        drawerList.setAdapter(adapter);
         // Set the list's click listener
         drawerList.setOnItemClickListener(new DrawerItemClickListener());
         drawerLayout.setDrawerListener(this);
@@ -123,6 +127,24 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         if (!preferencesService.isOnboardingShown()) {
             startActivity(new Intent(this, OnboardingActivity.class));
         }
+    }
+
+    private DrawerListItem[] getDrawerItems() {
+        String[] menuTitles = getResources().getStringArray(R.array.menu_titles);
+        int[] images = {
+                R.drawable.ic_settings_black,
+                0,
+                // 0, // Whitelist is unimplemented now
+                R.drawable.ic_sync_black_24dp,
+                R.drawable.ic_stars_black,
+                R.drawable.ic_info_black_24dp,
+                R.drawable.ic_exit
+        };
+        DrawerListItem[] items = new DrawerListItem[menuTitles.length];
+        for (int i = 0; i < menuTitles.length; i++) {
+            items[i] = new DrawerListItem(menuTitles[i], images[i]);
+        }
+        return items;
     }
 
     @SuppressWarnings("ConstantConditions")
@@ -387,9 +409,21 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                     break;
                 case 1:
                     drawerLayout.closeDrawers();
-                    startActivity(new Intent(MainActivity.this, AboutActivity.class));
+                    startActivity(new Intent(MainActivity.this, FiltersActivity.class));
                     break;
                 case 2:
+                    drawerLayout.closeDrawers();
+                    refreshStatus();
+                    break;
+                case 3:
+                    drawerLayout.closeDrawers();
+                    ActivityUtils.startMarket(MainActivity.this, getPackageName(), "rate_menu_item");
+                    break;
+                case 4:
+                    drawerLayout.closeDrawers();
+                    startActivity(new Intent(MainActivity.this, AboutActivity.class));
+                    break;
+                default:
                     finish();
                     break;
             }
@@ -409,6 +443,70 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             }
 
             return false;
+        }
+    }
+
+    private class DrawerListItem {
+        String text;
+        int imageResourceId;
+
+        public DrawerListItem(String text, int imageResourceId) {
+            this.text = text;
+            this.imageResourceId = imageResourceId;
+        }
+
+        @Override
+        public String toString() {
+            return text;
+        }
+    }
+
+    private class DrawerArrayAdapter<T> extends ArrayAdapter<T> {
+
+        private int imageFieldId = 0;
+
+        public DrawerArrayAdapter(Context context, int resource) {
+            super(context, resource);
+        }
+
+        public DrawerArrayAdapter(Context context, int resource, int textViewResourceId, int imageFieldId) {
+            super(context, resource, textViewResourceId);
+            this.imageFieldId = imageFieldId;
+        }
+
+        public DrawerArrayAdapter(Context context, int resource, T[] objects) {
+            super(context, resource, objects);
+        }
+
+        public DrawerArrayAdapter(Context context, int resource, int textViewResourceId, int imageFieldId, T[] objects) {
+            super(context, resource, textViewResourceId, objects);
+            this.imageFieldId = imageFieldId;
+        }
+
+        public DrawerArrayAdapter(Context context, int resource, List<T> objects) {
+            super(context, resource, objects);
+        }
+
+        public DrawerArrayAdapter(Context context, int resource, int textViewResourceId, int imageFieldId, List<T> objects) {
+            super(context, resource, textViewResourceId, objects);
+            this.imageFieldId = imageFieldId;
+        }
+
+        /**
+         * {@inheritDoc}
+         */
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View view = super.getView(position, convertView, parent);
+
+            if (imageFieldId != 0) {
+                ImageView imageView = (ImageView) view.findViewById(imageFieldId);
+                T item = getItem(position);
+                if (item instanceof DrawerListItem) {
+                    imageView.setImageResource(((DrawerListItem)item).imageResourceId);
+                }
+            }
+
+            return view;
         }
     }
 }

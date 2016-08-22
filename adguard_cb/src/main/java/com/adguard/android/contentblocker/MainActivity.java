@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     private LinearLayout leftDrawer;
     private ActionBarDrawerToggle drawerToggle;
 
+    @SuppressWarnings("ConstantConditions")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
         // As we're using a Toolbar, we should retrieve it and set it to be our ActionBar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
         String[] menuTitles = getResources().getStringArray(R.array.menu_titles);
@@ -88,6 +90,13 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.openned_drawer_title, R.string.closed_drawer_title);
         drawerToggle.setHomeAsUpIndicator(R.drawable.ic_drawer);
+
+        findViewById(R.id.go_to_filters).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFiltersSettings();
+            }
+        });
 
         final View menuImageView = findViewById(R.id.menuImageView);
         if (menuImageView != null) {
@@ -312,6 +321,11 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
     }
 
+    private void openFiltersSettings() {
+        Intent intent = new Intent(MainActivity.this, FiltersActivity.class);
+        startActivity(intent);
+    }
+
     public static class ApplyAndRefreshTask extends AsyncTask<Void, Void, Integer> {
 
         private final FilterService service;
@@ -387,8 +401,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         public boolean onMenuItemClick(MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.go_to_filters:
-                    Intent intent = new Intent(MainActivity.this, FiltersActivity.class);
-                    startActivity(intent);
+                    openFiltersSettings();
                     return true;
                 case R.id.check_filter_updates:
                     refreshStatus();

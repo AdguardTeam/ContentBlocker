@@ -85,4 +85,5 @@
     <string name="get_started">Get started</string>
     <string name="choose_browser">Choose browser</string>
     <string name="adguard_needs_compatible_browser">To operate, Adguard needs a browser that supports ad blocking technology.</string>
+    <string name="logo">Adguard Content Blocker logo</string>
 </resources>

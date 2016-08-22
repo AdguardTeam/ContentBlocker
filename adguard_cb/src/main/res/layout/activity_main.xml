@@ -22,22 +22,29 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_height="120dp"
             android:background="?attr/colorPrimary"
             android:elevation="16dp"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/logo"
+                android:src="@drawable/drawer_title"/>
+
+        </android.support.v7.widget.Toolbar>
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/cards_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:id="@+id/cards_layout">
+                android:orientation="vertical">
 
                 <!-- A CardView that contains a TextView -->
                 <android.support.v7.widget.CardView
@@ -45,17 +52,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/white">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="5dp">
+                        >
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -63,7 +70,7 @@
                             android:baselineAligned="false"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
-                            android:padding="5dp">
+                            android:padding="10dp">
 
                             <TextView
                                 android:layout_width="0dp"
@@ -78,7 +85,8 @@
                                 android:id="@+id/menuImageView"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:padding="3dp"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
                                 android:src="@drawable/ic_dots"/>
 
                         </LinearLayout>
@@ -88,7 +96,8 @@
                             android:layout_height="match_parent"
                             android:baselineAligned="false"
                             android:orientation="horizontal"
-                            android:padding="5dp">
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -115,7 +124,7 @@
                             android:layout_marginBottom="4dp"
                             android:layout_marginTop="4dp"
                             android:gravity="right"
-                            android:padding="5dp"
+                            android:padding="10dp"
                             android:text="@string/count"
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textColor="@color/black"
@@ -130,7 +139,8 @@
                             android:layout_marginTop="4dp"
                             android:baselineAligned="false"
                             android:orientation="horizontal"
-                            android:padding="5dp">
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
 
                             <TextView
                                 android:layout_width="0dp"
@@ -159,7 +169,8 @@
                             android:layout_marginTop="4dp"
                             android:baselineAligned="false"
                             android:orientation="horizontal"
-                            android:padding="5dp">
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
 
                             <TextView
                                 android:layout_width="0dp"
@@ -181,17 +192,15 @@
 
                         <View style="@style/divLine"/>
 
-                        <TextView
-                            android:id="@+id/goToFiltersLink"
+                        <Button
+                            android:id="@+id/go_to_filters"
+                            style="@style/Widget.AppCompat.Button.Borderless"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="5dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="25dp"
-                            android:text="Go To Filters"
-                            android:textAllCaps="true"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@color/colorAccent"/>
+                            android:text="Go To Filters"/>
 
                     </LinearLayout>
 
@@ -202,10 +211,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp">
+                    app:cardBackgroundColor="@color/white">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -234,11 +243,11 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:paddingTop="5dp"
                                     android:text="@string/browser"
                                     android:textAppearance="?android:attr/textAppearanceLarge"
                                     android:textColor="#757575"
-                                    android:textSize="16sp"
-                                    android:paddingTop="5dp"/>
+                                    android:textSize="16sp"/>
                             </LinearLayout>
 
                             <ImageView
@@ -252,29 +261,29 @@
                             android:layout_height="wrap_content">
 
                             <Button
+                                android:id="@+id/install_yandex_browser"
+                                style="@style/Widget.AppCompat.Button.Borderless"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/install_yandex_browser"
                                 android:maxLines="1"
                                 android:text="@string/install"
-                                style="@style/Widget.AppCompat.Button.Borderless"
                                 />
 
                             <Button
+                                android:id="@+id/start_yandex_settings"
+                                style="@style/Widget.AppCompat.Button.Borderless"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/start_yandex_settings"
                                 android:maxLines="1"
-                                android:text="@string/settings"
-                                style="@style/Widget.AppCompat.Button.Borderless"/>
+                                android:text="@string/settings"/>
 
                             <Button
+                                android:id="@+id/start_yandex_browser"
+                                style="@style/Widget.AppCompat.Button.Borderless"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/start_yandex_browser"
                                 android:maxLines="1"
-                                android:text="@string/start"
-                                style="@style/Widget.AppCompat.Button.Borderless"/>
+                                android:text="@string/start"/>
                         </LinearLayout>
                     </LinearLayout>
 
@@ -285,10 +294,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp">
+                    app:cardBackgroundColor="@color/white">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -335,31 +344,31 @@
                             >
 
                             <Button
+                                android:id="@+id/install_samsung_browser"
+                                style="@style/Widget.AppCompat.Button.Borderless"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/install_samsung_browser"
                                 android:maxLines="1"
                                 android:text="@string/install"
-                                android:textAllCaps="true"
-                                style="@style/Widget.AppCompat.Button.Borderless"/>
+                                android:textAllCaps="true"/>
 
                             <Button
+                                android:id="@+id/start_samsung_settings"
+                                style="@style/Widget.AppCompat.Button.Borderless"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/start_samsung_settings"
                                 android:maxLines="1"
                                 android:text="@string/settings"
-                                android:textAllCaps="true"
-                                style="@style/Widget.AppCompat.Button.Borderless"/>
+                                android:textAllCaps="true"/>
 
                             <Button
+                                android:id="@+id/start_samsung_browser"
+                                style="@style/Widget.AppCompat.Button.Borderless"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/start_samsung_browser"
                                 android:maxLines="1"
                                 android:text="@string/start"
-                                android:textAllCaps="true"
-                                style="@style/Widget.AppCompat.Button.Borderless"/>
+                                android:textAllCaps="true"/>
                         </LinearLayout>
                     </LinearLayout>
 
@@ -370,10 +379,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp">
+                    app:cardBackgroundColor="@color/white">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -383,36 +392,36 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
                             android:text="@string/get_started"
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textColor="@color/black"
-                            android:paddingTop="10dp"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
                             android:textSize="20sp"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:paddingTop="5dp"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:textSize="16sp"
+                            android:paddingTop="5dp"
+                            android:text="@string/adguard_needs_compatible_browser"
                             android:textColor="@color/black"
-                            android:text="@string/adguard_needs_compatible_browser"/>
+                            android:textSize="16sp"/>
 
                         <Button
+                            android:id="@+id/choose_browser_button"
+                            style="@style/Widget.AppCompat.Button.Borderless"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/choose_browser_button"
                             android:maxLines="1"
                             android:text="@string/choose_browser"
-                            android:textAllCaps="true"
-                            style="@style/Widget.AppCompat.Button.Borderless"/>
+                            android:textAllCaps="true"/>
 
                     </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>
 
             </LinearLayout>
 

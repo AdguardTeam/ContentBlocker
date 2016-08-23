@@ -1,5 +1,6 @@
 package com.adguard.android.contentblocker.onboarding;
 
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
@@ -25,6 +26,7 @@ import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ui.ClickViewPager;
 import com.adguard.android.service.PreferencesService;
 
+import java.util.List;
 import java.util.Set;
 
 public class OnboardingActivity extends AppCompatActivity implements View.OnClickListener {
@@ -56,8 +58,11 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        FragmentManager supportFragmentManager = getSupportFragmentManager();
+        // Remove all fragments on configuration change (screen rotation)
+        removeAllFragments(supportFragmentManager);
         // Create the adapter that will return a fragment for each of the three primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        mSectionsPagerAdapter = new SectionsPagerAdapter(this, supportFragmentManager);
 
         indicators = new ImageView[]{
                 (ImageView) findViewById(R.id.intro_indicator_0),
@@ -91,14 +96,6 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
             indicators[1].setVisibility(View.GONE);
         }
         updateIndicators(0);
-    }
-
-    void updateIndicators(int position) {
-        for (int i = 0; i < indicators.length; i++) {
-            indicators[i].setBackgroundResource(
-                    i == position ? R.drawable.indicator_selected : R.drawable.indicator_unselected
-            );
-        }
     }
 
     @Override
@@ -163,6 +160,27 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
             PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
             preferencesService.setOnboardingShown(true);
             finish();
+        }
+    }
+
+    private void removeAllFragments(FragmentManager fragmentManager) {
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+        List<Fragment> fragments = fragmentManager.getFragments();
+        if (fragments != null) {
+            for (Fragment fragment : fragments) {
+                Log.i(TAG, "Removing fragment " + fragment.toString());
+                transaction.remove(fragment);
+            }
+        }
+        transaction.commit();
+    }
+
+    private void updateIndicators(int position) {
+        for (int i = 0; i < indicators.length; i++) {
+            indicators[i].setBackgroundResource(
+                    i == position ? R.drawable.indicator_selected : R.drawable.indicator_unselected
+            );
         }
     }
 

@@ -207,6 +207,8 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
 
         if (available) {
+            findViewById(R.id.yandex_card).setVisibility(View.VISIBLE);
+            findViewById(R.id.samsung_card).setVisibility(View.VISIBLE);
             findViewById(R.id.no_browsers_card).setVisibility(View.GONE);
             if (reorder) {
                 View yandex = findViewById(R.id.yandex_card);

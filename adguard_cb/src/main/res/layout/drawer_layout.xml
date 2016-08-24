@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/left_drawer"
-    android:layout_width="250dp"
-    android:layout_height="match_parent"
-    android:layout_gravity="start"
-    android:fitsSystemWindows="true"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="@color/colorPrimary"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/drawer_title"
-            android:adjustViewBounds="true"
-            android:layout_marginBottom="20dp"/>
-
-    </LinearLayout>
+              android:id="@+id/left_drawer"
+              android:layout_width="250dp"
+              android:layout_height="match_parent"
+              android:background="#FFF"
+              android:layout_gravity="start"
+              android:orientation="vertical">
 
     <ListView
         android:id="@+id/drawer_list"
@@ -28,7 +13,8 @@
         android:layout_height="match_parent"
         android:background="#FFF"
         android:choiceMode="singleChoice"
-        android:dividerHeight="0dp"
+        android:layout_marginTop="8dp"
         android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
         android:entries="@array/menu_titles"/>
 </LinearLayout>

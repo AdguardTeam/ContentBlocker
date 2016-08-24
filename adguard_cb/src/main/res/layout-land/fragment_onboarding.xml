@@ -6,13 +6,15 @@
     android:background="@color/colorPrimary">
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="210dp"
         android:layout_height="match_parent"
         android:id="@+id/sectionImage"
         android:src="@drawable/onboarding_image1"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:adjustViewBounds="true" />
+        android:adjustViewBounds="false"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitCenter"/>
 
     <LinearLayout
         android:orientation="vertical"

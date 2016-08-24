@@ -52,7 +52,8 @@
         <activity
             android:name=".onboarding.OnboardingActivity"
             android:label="@string/title_activity_onboarding"
-            android:theme="@style/AppTheme"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

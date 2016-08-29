@@ -192,6 +192,12 @@
         <item name="android:colorBackground">@color/button_gray</item>
     </style>
 
+    <style name="orangeBigButton" parent="Base.Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
     <style name="greenButtonLink">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
@@ -227,5 +233,16 @@
         <item name="android:clickable">true</item>
         <!--<item name="android:foreground">?android:attr/selectableItemBackground</item>-->
         <!--<item name="android:foreground">@drawable/cardview_selector</item>-->
+    </style>
+
+    <style name="Widget.AppCompat.Button.Borderless.CardView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginLeft">@dimen/cardview_button_margin</item>
+        <item name="android:layout_marginTop">@dimen/cardview_button_margin</item>
+        <item name="android:layout_marginBottom">@dimen/cardview_button_margin</item>
+        <item name="android:minWidth">@dimen/cardview_button_minwidth</item>
     </style>
 </resources>

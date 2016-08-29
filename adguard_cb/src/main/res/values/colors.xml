@@ -23,5 +23,5 @@
     <color name="indicator_selected">#ffffff</color>
     <color name="primaryText">#212121</color>
     <color name="secondaryText">#757575</color>
-    <color name="black">#FF000000</color>
+    <color name="black">#000000</color>
 </resources>

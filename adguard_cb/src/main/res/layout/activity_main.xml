@@ -45,16 +45,77 @@
                     android:orientation="vertical">
 
                     <!-- A CardView that contains a TextView -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/cardview_margin"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:padding="@dimen/cardview_margin"
+                        android:text="@string/main_activity_adguard_info"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/no_browsers_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/cardview_margin"
+                        android:layout_marginRight="@dimen/cardview_margin"
+                        android:layout_marginTop="@dimen/cardview_margin"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/cardview_horizontal_padding"
+                                android:layout_marginRight="@dimen/cardview_horizontal_padding"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/cardview_vertical_padding"
+                                    android:paddingTop="24dp"
+                                    android:text="@string/get_started"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/cardview_vertical_padding"
+                                    android:text="@string/adguard_needs_compatible_browser"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"/>
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/choose_browser_button"
+                                style="@style/Widget.AppCompat.Button.Borderless.CardView"
+                                android:text="@string/choose_browser"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
                     <android.support.v7.widget.CardView
                         android:id="@+id/info_card"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="10dp"
-                        app:cardBackgroundColor="@color/white">
+                        android:layout_marginLeft="@dimen/cardview_margin"
+                        android:layout_marginRight="@dimen/cardview_margin"
+                        app:cardBackgroundColor="@color/white"
+                        >
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -68,10 +129,8 @@
                                 android:baselineAligned="false"
                                 android:gravity="center_vertical"
                                 android:orientation="horizontal"
-                                android:paddingBottom="2dp"
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp"
-                                android:paddingTop="10dp">
+                                android:paddingLeft="@dimen/cardview_horizontal_padding"
+                                android:paddingTop="@dimen/cardview_vertical_padding">
 
                                 <TextView
                                     android:layout_width="0dp"
@@ -80,15 +139,16 @@
                                     android:text="@string/filters"
                                     android:textAppearance="?android:attr/textAppearanceLarge"
                                     android:textColor="@color/black"
-                                    android:textSize="20sp"/>
+                                    android:textSize="20sp"
+                                    />
 
                                 <ImageView
                                     android:id="@+id/menuImageView"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
                                     android:paddingBottom="5dp"
                                     android:paddingTop="5dp"
-                                    android:src="@drawable/ic_dots"/>
+                                    android:src="@drawable/ic_more_vert_black_24dp"/>
 
                             </LinearLayout>
 
@@ -97,8 +157,9 @@
                                 android:layout_height="match_parent"
                                 android:baselineAligned="false"
                                 android:orientation="horizontal"
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp">
+                                android:paddingLeft="@dimen/cardview_horizontal_padding"
+                                android:paddingRight="@dimen/cardview_horizontal_padding"
+                                >
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -120,13 +181,8 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
-                                android:layout_marginTop="4dp"
+                                android:layout_margin="@dimen/cardview_horizontal_padding"
                                 android:gravity="right"
-                                android:paddingBottom="4dp"
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp"
-                                android:paddingTop="10dp"
                                 android:text="@string/count"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="@color/black"
@@ -137,12 +193,9 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_marginBottom="6dp"
-                                android:layout_marginTop="6dp"
                                 android:baselineAligned="false"
                                 android:orientation="horizontal"
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp">
+                                android:padding="@dimen/cardview_horizontal_padding">
 
                                 <TextView
                                     android:layout_width="0dp"
@@ -167,12 +220,9 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_marginBottom="6dp"
-                                android:layout_marginTop="6dp"
                                 android:baselineAligned="false"
                                 android:orientation="horizontal"
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp">
+                                android:padding="@dimen/cardview_horizontal_padding">
 
                                 <TextView
                                     android:layout_width="0dp"
@@ -192,17 +242,14 @@
                                     android:textSize="14sp"/>
                             </LinearLayout>
 
-                            <View style="@style/divLine"/>
+                            <View
+                                style="@style/divLine"
+                                android:layout_marginBottom="@dimen/cardview_vertical_padding"/>
 
                             <Button
                                 android:id="@+id/go_to_filters"
-                                style="@style/Widget.AppCompat.Button.Borderless"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="5dp"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginTop="16dp"
-                                android:text="Go To Filters"/>
+                                style="@style/Widget.AppCompat.Button.Borderless.CardView"
+                                android:text="@string/go_to_filters"/>
 
                         </LinearLayout>
 
@@ -213,9 +260,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/cardview_margin"
+                        android:layout_marginRight="@dimen/cardview_margin"
+                        android:layout_marginTop="@dimen/cardview_margin"
                         app:cardBackgroundColor="@color/white">
 
                         <LinearLayout
@@ -226,7 +273,10 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:padding="10dp">
+                                android:paddingBottom="@dimen/cardview_vertical_padding"
+                                android:paddingLeft="@dimen/cardview_horizontal_padding"
+                                android:paddingRight="@dimen/cardview_horizontal_padding"
+                                android:paddingTop="@dimen/cardview_vertical_padding">
 
                                 <LinearLayout
                                     android:layout_width="0dp"
@@ -264,27 +314,18 @@
 
                                 <Button
                                     android:id="@+id/install_yandex_browser"
-                                    style="@style/Widget.AppCompat.Button.Borderless"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:maxLines="1"
+                                    style="@style/Widget.AppCompat.Button.Borderless.CardView"
                                     android:text="@string/install"
                                     />
 
                                 <Button
                                     android:id="@+id/start_yandex_settings"
-                                    style="@style/Widget.AppCompat.Button.Borderless"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:maxLines="1"
+                                    style="@style/Widget.AppCompat.Button.Borderless.CardView"
                                     android:text="@string/settings"/>
 
                                 <Button
                                     android:id="@+id/start_yandex_browser"
-                                    style="@style/Widget.AppCompat.Button.Borderless"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:maxLines="1"
+                                    style="@style/Widget.AppCompat.Button.Borderless.CardView"
                                     android:text="@string/start"/>
                             </LinearLayout>
                         </LinearLayout>
@@ -296,9 +337,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="@dimen/cardview_margin"
+                        android:layout_marginLeft="@dimen/cardview_margin"
+                        android:layout_marginRight="@dimen/cardview_margin"
+                        android:layout_marginTop="@dimen/cardview_margin"
                         app:cardBackgroundColor="@color/white">
 
                         <LinearLayout
@@ -309,7 +351,10 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:padding="10dp">
+                                android:paddingBottom="@dimen/cardview_vertical_padding"
+                                android:paddingLeft="@dimen/cardview_horizontal_padding"
+                                android:paddingRight="@dimen/cardview_horizontal_padding"
+                                android:paddingTop="@dimen/cardview_vertical_padding">
 
                                 <LinearLayout
                                     android:layout_width="0dp"
@@ -343,85 +388,23 @@
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                >
+                                android:layout_height="wrap_content">
 
                                 <Button
                                     android:id="@+id/install_samsung_browser"
-                                    style="@style/Widget.AppCompat.Button.Borderless"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:maxLines="1"
-                                    android:text="@string/install"
-                                    android:textAllCaps="true"/>
+                                    style="@style/Widget.AppCompat.Button.Borderless.CardView"
+                                    android:text="@string/install"/>
 
                                 <Button
                                     android:id="@+id/start_samsung_settings"
-                                    style="@style/Widget.AppCompat.Button.Borderless"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:maxLines="1"
-                                    android:text="@string/settings"
-                                    android:textAllCaps="true"/>
+                                    style="@style/Widget.AppCompat.Button.Borderless.CardView"
+                                    android:text="@string/settings"/>
 
                                 <Button
                                     android:id="@+id/start_samsung_browser"
-                                    style="@style/Widget.AppCompat.Button.Borderless"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:maxLines="1"
-                                    android:text="@string/start"
-                                    android:textAllCaps="true"/>
+                                    style="@style/Widget.AppCompat.Button.Borderless.CardView"
+                                    android:text="@string/start"/>
                             </LinearLayout>
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>
-
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/no_browsers_card"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        app:cardBackgroundColor="@color/white">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp"
-                                android:paddingTop="10dp"
-                                android:text="@string/get_started"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:textColor="@color/black"
-                                android:textSize="20sp"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp"
-                                android:paddingTop="5dp"
-                                android:text="@string/adguard_needs_compatible_browser"
-                                android:textColor="@color/black"
-                                android:textSize="16sp"/>
-
-                            <Button
-                                android:id="@+id/choose_browser_button"
-                                style="@style/Widget.AppCompat.Button.Borderless"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:maxLines="1"
-                                android:text="@string/choose_browser"
-                                android:textAllCaps="true"/>
-
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>

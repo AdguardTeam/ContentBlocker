@@ -49,9 +49,12 @@
             android:textSize="15sp"
             android:text="@string/onboarding_text1"
             android:id="@+id/sectionMessage"
-            android:layout_margin="10dp"
             android:textColor="@color/white"
-            android:gravity="center_vertical|center_horizontal" />
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"/>
     </LinearLayout>
 
     <android.support.v7.widget.AppCompatButton
@@ -62,6 +65,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        style="@style/orangeBigButton"
         android:textColor="@color/white"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"

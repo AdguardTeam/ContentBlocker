@@ -160,6 +160,8 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             if (!yandexBrowserAvailable) {
                 reorder = true;
             }
+            findViewById(R.id.start_samsung_browser).setVisibility(View.VISIBLE);
+            findViewById(R.id.start_samsung_settings).setVisibility(View.VISIBLE);
             findViewById(R.id.install_samsung_browser).setVisibility(View.GONE);
             findViewById(R.id.start_samsung_browser).setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -180,10 +182,13 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         } else {
             findViewById(R.id.start_samsung_browser).setVisibility(View.GONE);
             findViewById(R.id.start_samsung_settings).setVisibility(View.GONE);
+            findViewById(R.id.install_samsung_browser).setVisibility(View.VISIBLE);
         }
 
         if (yandexBrowserAvailable) {
             available = true;
+            findViewById(R.id.start_yandex_browser).setVisibility(View.VISIBLE);
+            findViewById(R.id.start_yandex_settings).setVisibility(View.VISIBLE);
             findViewById(R.id.install_yandex_browser).setVisibility(View.GONE);
             findViewById(R.id.start_yandex_browser).setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -204,6 +209,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         } else {
             findViewById(R.id.start_yandex_browser).setVisibility(View.GONE);
             findViewById(R.id.start_yandex_settings).setVisibility(View.GONE);
+            findViewById(R.id.install_yandex_browser).setVisibility(View.VISIBLE);
         }
 
         if (available) {
@@ -219,6 +225,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         } else {
             findViewById(R.id.yandex_card).setVisibility(View.GONE);
             findViewById(R.id.samsung_card).setVisibility(View.GONE);
+            findViewById(R.id.no_browsers_card).setVisibility(View.VISIBLE);
 
             findViewById(R.id.choose_browser_button).setOnClickListener(new View.OnClickListener() {
                 @Override

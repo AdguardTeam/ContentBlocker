@@ -52,7 +52,7 @@
                         android:gravity="center_vertical|center_horizontal"
                         android:padding="@dimen/cardview_margin"
                         android:text="@string/main_activity_adguard_info"
-                        android:textColor="@color/black"
+                        android:textColor="@color/primaryText"
                         android:textSize="14sp"/>
 
                     <android.support.v7.widget.CardView
@@ -64,7 +64,8 @@
                         android:layout_marginRight="@dimen/cardview_margin"
                         android:layout_marginTop="@dimen/cardview_margin"
                         android:visibility="gone"
-                        app:cardBackgroundColor="@color/white">
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_marginBottom="@dimen/cardview_margin">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -138,7 +139,7 @@
                                     android:layout_weight="1"
                                     android:text="@string/filters"
                                     android:textAppearance="?android:attr/textAppearanceLarge"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/primaryText"
                                     android:textSize="20sp"
                                     />
 
@@ -165,7 +166,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="@string/stats_update_time"
-                                    android:textColor="#757575"
+                                    android:textColor="@color/secondaryText"
                                     android:textSize="14sp"/>
 
                                 <TextView
@@ -174,7 +175,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="4dp"
                                     android:text="28 Mar 13:07"
-                                    android:textColor="#757575"
+                                    android:textColor="@color/secondaryText"
                                     android:textSize="14sp"/>
                             </LinearLayout>
 
@@ -185,7 +186,7 @@
                                 android:gravity="right"
                                 android:text="@string/count"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:textColor="@color/black"
+                                android:textColor="@color/secondaryText"
                                 android:textSize="14sp"/>
 
                             <View style="@style/divLine"/>
@@ -203,7 +204,7 @@
                                     android:layout_weight="1"
                                     android:text="@string/stats_enabled_filters"
                                     android:textAppearance="?android:attr/textAppearanceLarge"
-                                    android:textColor="#757575"
+                                    android:textColor="@color/secondaryText"
                                     android:textSize="14sp"/>
 
                                 <TextView
@@ -212,7 +213,8 @@
                                     android:layout_height="wrap_content"
                                     android:text="12"
                                     android:textAppearance="?android:attr/textAppearanceLarge"
-                                    android:textSize="14sp"/>
+                                    android:textSize="14sp"
+                                    android:textColor="@color/secondaryText"/>
                             </LinearLayout>
 
                             <View style="@style/divLine"/>
@@ -230,7 +232,7 @@
                                     android:layout_weight="1"
                                     android:text="@string/stats_enabled_rules"
                                     android:textAppearance="?android:attr/textAppearanceLarge"
-                                    android:textColor="#757575"
+                                    android:textColor="@color/secondaryText"
                                     android:textSize="14sp"/>
 
                                 <TextView
@@ -239,7 +241,8 @@
                                     android:layout_height="wrap_content"
                                     android:text="28999"
                                     android:textAppearance="?android:attr/textAppearanceLarge"
-                                    android:textSize="14sp"/>
+                                    android:textSize="14sp"
+                                    android:textColor="@color/secondaryText"/>
                             </LinearLayout>
 
                             <View
@@ -249,7 +252,8 @@
                             <Button
                                 android:id="@+id/go_to_filters"
                                 style="@style/Widget.AppCompat.Button.Borderless.CardView"
-                                android:text="@string/go_to_filters"/>
+                                android:text="@string/go_to_filters"
+                                android:textColor="@color/primaryText"/>
 
                         </LinearLayout>
 
@@ -273,7 +277,6 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:paddingBottom="@dimen/cardview_vertical_padding"
                                 android:paddingLeft="@dimen/cardview_horizontal_padding"
                                 android:paddingRight="@dimen/cardview_horizontal_padding"
                                 android:paddingTop="@dimen/cardview_vertical_padding">
@@ -289,17 +292,50 @@
                                         android:layout_height="wrap_content"
                                         android:text="@string/yandex_browser"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
-                                        android:textColor="@color/black"
+                                        android:textColor="@color/primaryText"
                                         android:textSize="20sp"/>
 
-                                    <TextView
-                                        android:layout_width="wrap_content"
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:paddingTop="4dp"
-                                        android:text="@string/browser"
-                                        android:textAppearance="?android:attr/textAppearanceLarge"
-                                        android:textColor="#757575"
-                                        android:textSize="14sp"/>
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="4dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Yandex"
+                                            android:textColor="@color/secondaryText"
+                                            android:textSize="14sp"/>
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="2dp"
+                                            android:src="@drawable/ic_best_developer"/>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="4,4"
+                                            android:textColor="@color/primaryText"
+                                            android:textSize="12sp"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingLeft="2dp"
+                                            android:text="&#9733;"
+                                            android:textColor="@color/primaryText"
+                                            android:textSize="12sp"/>
+                                    </LinearLayout>
                                 </LinearLayout>
 
                                 <ImageView
@@ -316,17 +352,19 @@
                                     android:id="@+id/install_yandex_browser"
                                     style="@style/Widget.AppCompat.Button.Borderless.CardView"
                                     android:text="@string/install"
-                                    />
+                                    android:textColor="@color/primaryText"/>
 
                                 <Button
                                     android:id="@+id/start_yandex_settings"
                                     style="@style/Widget.AppCompat.Button.Borderless.CardView"
-                                    android:text="@string/settings"/>
+                                    android:text="@string/settings"
+                                    android:textColor="@color/primaryText"/>
 
                                 <Button
                                     android:id="@+id/start_yandex_browser"
                                     style="@style/Widget.AppCompat.Button.Borderless.CardView"
-                                    android:text="@string/start"/>
+                                    android:text="@string/start"
+                                    android:textColor="@color/primaryText"/>
                             </LinearLayout>
                         </LinearLayout>
 
@@ -351,7 +389,6 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:paddingBottom="@dimen/cardview_vertical_padding"
                                 android:paddingLeft="@dimen/cardview_horizontal_padding"
                                 android:paddingRight="@dimen/cardview_horizontal_padding"
                                 android:paddingTop="@dimen/cardview_vertical_padding">
@@ -367,17 +404,34 @@
                                         android:layout_height="wrap_content"
                                         android:text="@string/samsung_browser"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
-                                        android:textColor="@color/black"
+                                        android:textColor="@color/primaryText"
                                         android:textSize="20sp"/>
 
                                     <TextView
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:paddingTop="4dp"
-                                        android:text="@string/browser"
-                                        android:textAppearance="?android:attr/textAppearanceLarge"
-                                        android:textColor="#757575"
-                                        android:textSize="14sp"/>
+                                        android:text="Samsung Electronics Co., Ltd."
+                                        android:textColor="@color/secondaryText"
+                                        android:textSize="14sp"
+                                        android:layout_marginTop="4dp"/>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="3,9"
+                                            android:textColor="@color/primaryText"
+                                            android:textSize="12sp"/>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="&#9733;"
+                                            android:paddingLeft="2dp"
+                                            android:textColor="@color/primaryText"
+                                            android:textSize="14sp"/>
+                                    </LinearLayout>
                                 </LinearLayout>
 
                                 <ImageView
@@ -393,17 +447,20 @@
                                 <Button
                                     android:id="@+id/install_samsung_browser"
                                     style="@style/Widget.AppCompat.Button.Borderless.CardView"
-                                    android:text="@string/install"/>
+                                    android:text="@string/install"
+                                    android:textColor="@color/primaryText"/>
 
                                 <Button
                                     android:id="@+id/start_samsung_settings"
                                     style="@style/Widget.AppCompat.Button.Borderless.CardView"
-                                    android:text="@string/settings"/>
+                                    android:text="@string/settings"
+                                    android:textColor="@color/primaryText"/>
 
                                 <Button
                                     android:id="@+id/start_samsung_browser"
                                     style="@style/Widget.AppCompat.Button.Borderless.CardView"
-                                    android:text="@string/start"/>
+                                    android:text="@string/start"
+                                    android:textColor="@color/primaryText"/>
                             </LinearLayout>
                         </LinearLayout>
 

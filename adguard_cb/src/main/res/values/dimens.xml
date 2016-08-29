@@ -13,7 +13,7 @@
     <dimen name="pager_indicator_size">8dp</dimen>
     <dimen name="cardview_margin">8dp</dimen>
     <dimen name="cardview_horizontal_padding">16dp</dimen>
-    <dimen name="cardview_vertical_padding">24dp</dimen>
+    <dimen name="cardview_vertical_padding">16dp</dimen>
     <dimen name="cardview_button_margin">8dp</dimen>
     <dimen name="cardview_button_minwidth">10dp</dimen>
 </resources>

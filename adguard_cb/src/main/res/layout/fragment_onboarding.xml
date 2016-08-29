@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:gravity="center_vertical|center_horizontal">
+            android:gravity="center_horizontal">
 
             <TextView
                 android:id="@+id/sectionTitle"
@@ -38,7 +38,8 @@
                 android:gravity="center_horizontal"
                 android:textColor="@color/white"
                 android:textSize="24sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
 
             <TextView
                 android:layout_width="wrap_content"

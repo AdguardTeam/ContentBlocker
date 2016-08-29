@@ -1,75 +1,70 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.adguard.android.contentblocker.onboarding.OnboardingActivity$PlaceholderFragment"
-    android:background="@color/colorPrimary">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context="com.adguard.android.contentblocker.onboarding.OnboardingActivity$PlaceholderFragment"
+              android:background="@color/colorPrimary"
+              android:orientation="vertical"
+              android:weightSum="10">
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:id="@+id/sectionImage"
         android:src="@drawable/adguard_new"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:layout_above="@+id/dummyViewCenterSeparator"/>
-
-    <View
-        android:id="@+id/dummyViewCenterSeparator"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:visibility="invisible"
-        android:layout_centerVertical="true"/>
+        android:layout_weight="6"/>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/dummyViewCenterSeparator"
-        android:layout_above="@+id/sectionButton"
-        android:gravity="center_vertical">
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:gravity="center_horizontal">
 
-        <TextView
-            android:id="@+id/sectionTitle"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/onboarding_title1"
-            android:gravity="center_horizontal"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:layout_marginTop="10dp"
-            android:textStyle="bold"/>
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal">
 
-        <TextView
+            <TextView
+                android:id="@+id/sectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/onboarding_title1"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="@string/onboarding_text1"
+                android:id="@+id/sectionMessage"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:gravity="center_vertical|center_horizontal"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:text="@string/onboarding_text1"
-            android:id="@+id/sectionMessage"
+            android:text="@string/onboarding_button_text1"
+            android:id="@+id/sectionButton"
+            style="@style/orangeBigButton"
             android:textColor="@color/white"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"/>
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            />
     </LinearLayout>
 
-    <android.support.v7.widget.AppCompatButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/onboarding_button_text1"
-        android:id="@id/sectionButton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        style="@style/orangeBigButton"
-        android:textColor="@color/white"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp" />
-
-</RelativeLayout>
+</LinearLayout>

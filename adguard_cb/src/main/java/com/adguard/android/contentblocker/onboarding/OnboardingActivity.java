@@ -265,8 +265,8 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
                 case 2: return R.drawable.adguard_new;
                 case 3:
                     switch (browser) {
-                        case 1: return R.drawable.onboarding_browser_yandex;
-                        case 2: return R.drawable.onboarding_browser_samsung;
+                        case 1: return R.drawable.adguard_new;
+                        case 2: return R.drawable.adguard_new;
                         default: return 0;
                     }
                 default: return 0;

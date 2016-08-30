@@ -163,6 +163,17 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        if (page > 0) {
+            if (browsersFound) {
+                viewPager.setCurrentItem(0, false);
+            } else {
+                viewPager.setCurrentItem(page - 1, true);
+            }
+        }
+    }
+
     private void removeAllFragments(FragmentManager fragmentManager) {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
 

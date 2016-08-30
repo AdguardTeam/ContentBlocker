@@ -261,12 +261,12 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
 
         private int getImageForBrowser(int page, int browser) {
             switch (page) {
-                case 1: return R.drawable.adguard_new;
-                case 2: return R.drawable.adguard_new;
+                case 1: return R.drawable.onboarding_1;
+                case 2: return R.drawable.onboarding_2;
                 case 3:
                     switch (browser) {
-                        case 1: return R.drawable.adguard_new;
-                        case 2: return R.drawable.adguard_new;
+                        case 1: return R.drawable.onboarding_3;
+                        case 2: return R.drawable.onboarding_3;
                         default: return 0;
                     }
                 default: return 0;

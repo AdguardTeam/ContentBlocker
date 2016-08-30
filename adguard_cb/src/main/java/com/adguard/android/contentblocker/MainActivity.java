@@ -124,9 +124,9 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
 
         PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
-        //if (!preferencesService.isOnboardingShown()) {
+        if (!preferencesService.isOnboardingShown()) {
             startActivity(new Intent(this, OnboardingActivity.class));
-        //}
+        }
     }
 
     private DrawerListItem[] getDrawerItems() {
@@ -213,8 +213,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
 
         if (available) {
-            findViewById(R.id.yandex_card).setVisibility(View.VISIBLE);
-            findViewById(R.id.samsung_card).setVisibility(View.VISIBLE);
             findViewById(R.id.no_browsers_card).setVisibility(View.GONE);
             if (reorder) {
                 View yandex = findViewById(R.id.yandex_card);
@@ -223,8 +221,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 layout.addView(yandex);
             }
         } else {
-            findViewById(R.id.yandex_card).setVisibility(View.GONE);
-            findViewById(R.id.samsung_card).setVisibility(View.GONE);
             findViewById(R.id.no_browsers_card).setVisibility(View.VISIBLE);
 
             findViewById(R.id.choose_browser_button).setOnClickListener(new View.OnClickListener() {

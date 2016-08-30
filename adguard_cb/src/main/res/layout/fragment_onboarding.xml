@@ -5,7 +5,7 @@
               tools:context="com.adguard.android.contentblocker.onboarding.OnboardingActivity$PlaceholderFragment"
               android:background="@color/colorPrimary"
               android:orientation="vertical"
-              android:weightSum="10">
+              android:weightSum="11">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -20,7 +20,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="5"
         android:gravity="center_horizontal">
 
         <LinearLayout

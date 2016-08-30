@@ -183,6 +183,12 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             findViewById(R.id.start_samsung_browser).setVisibility(View.GONE);
             findViewById(R.id.start_samsung_settings).setVisibility(View.GONE);
             findViewById(R.id.install_samsung_browser).setVisibility(View.VISIBLE);
+            findViewById(R.id.install_samsung_browser).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ActivityUtils.startMarket(MainActivity.this, "com.sec.android.app.sbrowser", null);
+                }
+            });
         }
 
         if (yandexBrowserAvailable) {
@@ -210,6 +216,12 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             findViewById(R.id.start_yandex_browser).setVisibility(View.GONE);
             findViewById(R.id.start_yandex_settings).setVisibility(View.GONE);
             findViewById(R.id.install_yandex_browser).setVisibility(View.VISIBLE);
+            findViewById(R.id.install_yandex_browser).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ActivityUtils.startMarket(MainActivity.this, "com.yandex.browser", "adguard1");
+                }
+            });
         }
 
         if (available) {

@@ -83,8 +83,9 @@
     <string name="start">Start</string>
     <string name="samsung_browser" translatable="false">Samsung Internet</string>
     <string name="get_started">Get started</string>
+    <string name="adguard_needs_compatible_browser">Two conditions have to be met for Adguard to work:\n\n* A browser that supports ad blocking technology should be installed\n* Adguard must be enabled in this browser\'s settings</string>
     <string name="choose_browser">Choose browser</string>
-    <string name="adguard_needs_compatible_browser">To operate, Adguard needs a browser that supports ad blocking technology.</string>
+    <string name="enable_adguard">Enable Adguard</string>
     <string name="logo" translatable="false">Application logo</string>
     <string name="main_activity_adguard_info">Adguard blocks ads, protects your privacy, boosts page load speed and reduces your mobile data usage.</string>
 </resources>

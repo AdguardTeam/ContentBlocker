@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.adguard.android.contentblocker">
+          package="com.adguard.android.contentblocker">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.samsung.android.sbrowser.permission.CONTENTBLOCKER" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.samsung.android.sbrowser.permission.CONTENTBLOCKER"/>
 
     <application
         android:allowBackup="true"
@@ -13,41 +13,41 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.samsung.android.sbrowser.contentBlocker.interfaceVersion"
-            android:value="API_1.0" />
+            android:value="API_1.0"/>
 
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".AboutActivity"
             android:label="@string/about"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.Toolbar" />
+            android:theme="@style/AppTheme.Toolbar"/>
         <activity
             android:name=".SettingsActivity"
             android:label="@string/settings"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.Toolbar" />
+            android:theme="@style/AppTheme.Toolbar"/>
         <activity
             android:name=".FiltersActivity"
             android:label="@string/filters"
             android:parentActivityName=".SettingsActivity"
-            android:theme="@style/AppTheme.Toolbar" />
+            android:theme="@style/AppTheme.Toolbar"/>
         <activity
             android:name=".NoBrowsersFoundActivity"
-            android:theme="@style/AppTheme.Toolbar" />
+            android:theme="@style/AppTheme.Toolbar"/>
 
         <provider
             android:name=".FiltersContentProvider"
             android:authorities="com.adguard.android.contentblocker.contentBlocker.contentProvider"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"/>
 
         <activity
             android:name=".onboarding.OnboardingActivity"

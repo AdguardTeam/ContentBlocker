@@ -58,6 +58,7 @@ public class PreferencesServiceImpl implements PreferencesService {
     private final static String KEY_LAST_IMPORT_URL = "key_last_import_rule";
     private final static String KEY_UPDATE_CHANNEL = "key_update_channel";
     private final static String KEY_FILTER_RULE_COUNT = "key_filter_rule_count";
+    private final static String KEY_BROWSER_CONNECTED_COUNT = "key_browser_connected_count";
     private final static String KEY_ONBOARDING_SHOWN = "key_onboarding_shown";
 
     private final SharedPreferences sharedPreferences;
@@ -389,5 +390,15 @@ public class PreferencesServiceImpl implements PreferencesService {
     @Override
     public int getFilterRuleCount() {
         return sharedPreferences.getInt(KEY_FILTER_RULE_COUNT, 0);
+    }
+
+    public void incBrowserConnectedCount() {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(KEY_BROWSER_CONNECTED_COUNT, sharedPreferences.getInt(KEY_BROWSER_CONNECTED_COUNT, 0) + 1);
+        editor.commit();
+    }
+
+    public int getBrowserConnectedCount() {
+        return sharedPreferences.getInt(KEY_BROWSER_CONNECTED_COUNT, 0);
     }
 }

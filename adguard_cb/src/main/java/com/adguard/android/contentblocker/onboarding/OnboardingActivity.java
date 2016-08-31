@@ -1,6 +1,12 @@
 package com.adguard.android.contentblocker.onboarding;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
@@ -25,9 +31,12 @@ import com.adguard.android.commons.BrowserUtils;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ui.ClickViewPager;
 import com.adguard.android.service.PreferencesService;
+import com.adguard.commons.concurrent.ExecutorsPool;
 
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 
 public class OnboardingActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -50,6 +59,7 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
     private ImageView[] indicators;
     private int page = 0;
     private boolean browsersFound = false;
+    private PackageReceiver packageReceiver = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,16 +90,18 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
             }
+
             @Override
             public void onPageSelected(int position) {
                 page = position;
                 updateIndicators(page);
             }
+
             @Override
             public void onPageScrollStateChanged(int state) {
             }
         });
-        Set<String> browsersAvailable = BrowserUtils.getBrowsersAvailable(getApplicationContext());
+        Set<String> browsersAvailable = BrowserUtils.getBrowsersAvailableByIntent(getApplicationContext());
         for (String browser : browsersAvailable) {
             Log.i(TAG, "Browser found: " + browser);
             browsersFound = true;
@@ -102,7 +114,7 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
     public void onResume() {
         super.onResume();
         if (page == 1) {
-            Set<String> browsersAvailable = BrowserUtils.getBrowsersAvailable(getApplicationContext());
+            Set<String> browsersAvailable = BrowserUtils.getBrowsersAvailableByIntent(getApplicationContext());
             for (String browser : browsersAvailable) {
                 Log.i(TAG, "Browser installed: " + browser);
                 browsersFound = true;
@@ -116,6 +128,10 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onDestroy() {
         super.onDestroy();
+        if (packageReceiver != null) {
+            getApplicationContext().unregisterReceiver(packageReceiver);
+            packageReceiver = null;
+        }
     }
 
     @Override
@@ -150,17 +166,30 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
             }
         } else if (page == 1) {
             BrowserUtils.showBrowserInstallDialog(this);
+            startPackageReceiver();
         } else {
-            Set<String> browsersAvailable = BrowserUtils.getBrowsersAvailable(getApplicationContext());
-            if (browsersAvailable.contains(BrowserUtils.YANDEX)) {
-                BrowserUtils.openYandexBlockingOptions(getApplicationContext());
-            } else if (browsersAvailable.contains(BrowserUtils.SAMSUNG)) {
-                BrowserUtils.openSamsungBlockingOptions(getApplicationContext());
-            }
-            PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
-            preferencesService.setOnboardingShown(true);
-            finish();
+            onLastPageClick();
         }
+    }
+
+    public void onLastPageClick() {
+        Set<String> browsersAvailable = BrowserUtils.getBrowsersAvailableByPackage(getApplicationContext());
+        if (browsersAvailable.contains(BrowserUtils.YANDEX)) {
+            BrowserUtils.openYandexBlockingOptions(getApplicationContext());
+        } else if (browsersAvailable.contains(BrowserUtils.SAMSUNG)) {
+            BrowserUtils.openSamsungBlockingOptions(getApplicationContext());
+        }
+        PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
+        preferencesService.setOnboardingShown(true);
+        finish();
+    }
+
+    private void startPackageReceiver() {
+        packageReceiver = new PackageReceiver(OnboardingActivity.this);
+        IntentFilter filter = new IntentFilter(Intent.ACTION_PACKAGE_ADDED);
+        filter.addDataScheme("package");
+        getApplicationContext().registerReceiver(packageReceiver, filter);
+        Log.i(TAG, "Registered package receiver...");
     }
 
     @Override
@@ -193,6 +222,26 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
                     i == position ? R.drawable.indicator_selected : R.drawable.indicator_unselected
             );
         }
+    }
+
+    private void onNewBrowserInstalled() {
+        Log.i(TAG, "onNewBrowserInstalled()");
+        if (page < 2) {
+            viewPager.setCurrentItem(2, false);
+            BrowserUtils.startYandexBrowser(OnboardingActivity.this);
+            scheduleOptionsEnabledCheckTask();
+        }
+    }
+
+    private void scheduleOptionsEnabledCheckTask() {
+        BrowserInstallPollingTask job = new BrowserInstallPollingTask();
+        job.future = ExecutorsPool.getSingleThreadScheduledExecutorService().scheduleAtFixedRate(job, 10000, 500, TimeUnit.MILLISECONDS);
+    }
+
+    private void bringActivityToFront() {
+        Intent i = new Intent(OnboardingActivity.this, OnboardingActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(i);
     }
 
     /**
@@ -245,42 +294,60 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
 
         private String getTitleForPage(int page) {
             switch (page) {
-                case 1: return getString(R.string.onboarding_title1);
-                case 2: return getString(R.string.onboarding_title2);
-                case 3: return getString(R.string.onboarding_title3);
-                default: return null;
+                case 1:
+                    return getString(R.string.onboarding_title1);
+                case 2:
+                    return getString(R.string.onboarding_title2);
+                case 3:
+                    return getString(R.string.onboarding_title3);
+                default:
+                    return null;
             }
         }
 
         private String getTextForPage(int page) {
             switch (page) {
-                case 1: return getString(R.string.onboarding_text1);
-                case 2: return getString(R.string.onboarding_text2);
-                case 3: return getString(R.string.onboarding_text3);
-                default: return null;
+                case 1:
+                    return getString(R.string.onboarding_text1);
+                case 2:
+                    return getString(R.string.onboarding_text2);
+                case 3:
+                    return getString(R.string.onboarding_text3);
+                default:
+                    return null;
             }
         }
 
         private String getButtonTextForPage(int page) {
             switch (page) {
-                case 1: return getString(R.string.onboarding_button_text1);
-                case 2: return getString(R.string.onboarding_button_text2);
-                case 3: return getString(R.string.onboarding_button_text3);
-                default: return null;
+                case 1:
+                    return getString(R.string.onboarding_button_text1);
+                case 2:
+                    return getString(R.string.onboarding_button_text2);
+                case 3:
+                    return getString(R.string.onboarding_button_text3);
+                default:
+                    return null;
             }
         }
 
         private int getImageForBrowser(int page, int browser) {
             switch (page) {
-                case 1: return R.drawable.onboarding_1;
-                case 2: return R.drawable.onboarding_2;
+                case 1:
+                    return R.drawable.onboarding_1;
+                case 2:
+                    return R.drawable.onboarding_2;
                 case 3:
                     switch (browser) {
-                        case 1: return R.drawable.onboarding_3;
-                        case 2: return R.drawable.onboarding_3;
-                        default: return 0;
+                        case 1:
+                            return R.drawable.onboarding_3;
+                        case 2:
+                            return R.drawable.onboarding_3;
+                        default:
+                            return 0;
                     }
-                default: return 0;
+                default:
+                    return 0;
             }
         }
     }
@@ -322,6 +389,42 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
                     return "SECTION 3";
             }
             return null;
+        }
+    }
+
+    public static class PackageReceiver extends BroadcastReceiver {
+        private final OnboardingActivity activity;
+
+        public PackageReceiver(OnboardingActivity activity) {
+            this.activity = activity;
+        }
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Log.i(TAG, "onReceive: " + intent.toString());
+            if (Intent.ACTION_PACKAGE_ADDED.equals(intent.getAction())) {
+                String intentPackageName = intent.getData().getSchemeSpecificPart();
+                Log.i(TAG, "package = " + intentPackageName);
+                if (intentPackageName.startsWith("com.yandex.browser")) {
+                    activity.onNewBrowserInstalled();
+                }
+            }
+        }
+    }
+
+    private class BrowserInstallPollingTask implements Runnable {
+
+        ScheduledFuture<?> future = null;
+
+        @Override
+        public void run() {
+            if (!BrowserUtils.getBrowsersAvailableByIntent(OnboardingActivity.this).isEmpty()) {
+                bringActivityToFront();
+                if (future != null) {
+                    future.cancel(false);
+                    future = null;
+                }
+            }
         }
     }
 }

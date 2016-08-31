@@ -27,6 +27,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 import com.adguard.android.ServiceLocator;
+import com.adguard.android.service.PreferencesService;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -42,8 +43,9 @@ public class FiltersContentProvider extends ContentProvider {
     @Override
     public ParcelFileDescriptor openFile(@NonNull Uri uri, @NonNull String mode) throws FileNotFoundException {
         ParcelFileDescriptor parcel = ParcelFileDescriptor.open(new File(filtersPath), ParcelFileDescriptor.MODE_READ_ONLY);
-        Log.i("FiltersContentProvider", "Browser openned filters...");
-        sendConnectedBroadcast();
+        Log.i("FiltersContentProvider", "Browser opened filters...");
+        PreferencesService preferencesService = ServiceLocator.getInstance(getContext().getApplicationContext()).getPreferencesService();
+        preferencesService.incBrowserConnectedCount();
         return parcel;
     }
 
@@ -80,10 +82,5 @@ public class FiltersContentProvider extends ContentProvider {
     @Override
     public int update(@NonNull Uri uri, ContentValues values, String selection, String[] selectionArgs) {
         throw new UnsupportedOperationException("Not implemented");
-    }
-
-    private void sendConnectedBroadcast() {
-        Intent i = new Intent(ACTION_CONNECTED);
-        LocalBroadcastManager.getInstance(getContext()).sendBroadcast(i);
     }
 }

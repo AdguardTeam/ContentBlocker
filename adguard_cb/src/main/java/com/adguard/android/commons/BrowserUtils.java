@@ -16,8 +16,10 @@
  */
 package com.adguard.android.commons;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.support.v7.app.AlertDialog;
@@ -42,7 +44,7 @@ public class BrowserUtils {
     public static final String YANDEX = "yandex";
     public static final String SAMSUNG = "samsung";
 
-    public static Set<String> getBrowsersAvailable(Context context) {
+    public static Set<String> getBrowsersAvailableByIntent(Context context) {
         Set<String> result = new HashSet<>();
         Intent intent = new Intent();
         intent.setAction("com.samsung.android.sbrowser.contentBlocker.ACTION_SETTING");
@@ -55,6 +57,20 @@ public class BrowserUtils {
                 } else if (info.activityInfo.packageName.contains("com.sec.") || info.activityInfo.packageName.contains(SAMSUNG)) {
                     result.add(SAMSUNG);
                 }
+            }
+        }
+
+        return result;
+    }
+
+    public static Set<String> getBrowsersAvailableByPackage(Context context) {
+        Set<String> result = new HashSet<>();
+        List<PackageInfo> packages = context.getPackageManager().getInstalledPackages(0);
+        for (PackageInfo packageInfo : packages) {
+            if (packageInfo.packageName.startsWith("com.yandex.browser")) {
+                result.add(YANDEX);
+            } else if (packageInfo.packageName.startsWith("com.sec.android.app.sbrowser")) {
+                result.add(SAMSUNG);
             }
         }
 
@@ -197,5 +213,23 @@ public class BrowserUtils {
         });
 
         dialog.show();
+    }
+
+    public static void startYandexBrowser(Context context) {
+        ComponentName component = new ComponentName("com.yandex.browser", "com.yandex.browser.YandexBrowserMainActivity");
+        startBrowser(context, component);
+    }
+
+    public static void startSamsungBrowser(Context context) {
+        ComponentName component = new ComponentName("com.sec.android.app.sbrowser", "com.sec.android.app.sbrowser.SBrowserMainActivity");
+        startBrowser(context, component);
+    }
+
+    public static void startBrowser(Context context, ComponentName component) {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+        intent.setComponent(component);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 }

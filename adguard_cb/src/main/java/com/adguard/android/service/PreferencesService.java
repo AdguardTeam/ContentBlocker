@@ -235,4 +235,8 @@ public interface PreferencesService {
     void setFilterRuleCount(int ruleCount);
 
     int getFilterRuleCount();
+
+    void incBrowserConnectedCount();
+
+    int getBrowserConnectedCount();
 }

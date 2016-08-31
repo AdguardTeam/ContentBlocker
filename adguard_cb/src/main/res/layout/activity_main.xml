@@ -62,8 +62,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="@dimen/cardview_margin"
                         android:layout_marginRight="@dimen/cardview_margin"
-                        android:layout_marginTop="@dimen/cardview_margin"
-                        android:visibility="gone"
+                        android:visibility="visible"
                         app:cardBackgroundColor="@color/white"
                         android:layout_marginBottom="@dimen/cardview_margin">
 
@@ -99,10 +98,18 @@
                                     android:textSize="16sp"/>
                             </LinearLayout>
 
-                            <Button
-                                android:id="@+id/choose_browser_button"
-                                style="@style/Widget.AppCompat.Button.Borderless.CardView"
-                                android:text="@string/choose_browser"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <Button
+                                    android:id="@+id/choose_browser_button"
+                                    style="@style/Widget.AppCompat.Button.Borderless.CardView"
+                                    android:text="@string/choose_browser"/>
+                                <Button
+                                    android:id="@+id/enable_adguard_button"
+                                    style="@style/Widget.AppCompat.Button.Borderless.CardView"
+                                    android:text="@string/enable_adguard"/>
+                            </LinearLayout>
 
                         </LinearLayout>
 

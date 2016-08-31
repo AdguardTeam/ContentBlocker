@@ -18,7 +18,6 @@ package com.adguard.android.contentblocker;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -152,8 +151,8 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         boolean available = false;
         boolean reorder = false;
 
-        boolean samsungBrowserAvailable = BrowserUtils.isSamsungBrowserAvailable(this);
-        boolean yandexBrowserAvailable = BrowserUtils.isYandexBrowserAvailable(this);
+        final boolean samsungBrowserAvailable = BrowserUtils.isSamsungBrowserAvailable(this);
+        final boolean yandexBrowserAvailable = BrowserUtils.isYandexBrowserAvailable(this);
 
         if (samsungBrowserAvailable) {
             available = true;
@@ -166,11 +165,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             findViewById(R.id.start_samsung_browser).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(Intent.ACTION_MAIN);
-                    intent.addCategory(Intent.CATEGORY_LAUNCHER);
-                    intent.setComponent(new ComponentName("com.sec.android.app.sbrowser", "com.sec.android.app.sbrowser.SBrowserMainActivity"));
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
+                    BrowserUtils.startSamsungBrowser(MainActivity.this);
                 }
             });
             findViewById(R.id.start_samsung_settings).setOnClickListener(new View.OnClickListener() {
@@ -199,11 +194,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             findViewById(R.id.start_yandex_browser).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(Intent.ACTION_MAIN);
-                    intent.addCategory(Intent.CATEGORY_LAUNCHER);
-                    intent.setComponent(new ComponentName("com.yandex.browser", "com.yandex.browser.YandexBrowserMainActivity"));
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
+                    BrowserUtils.startYandexBrowser(MainActivity.this);
                 }
             });
             findViewById(R.id.start_yandex_settings).setOnClickListener(new View.OnClickListener() {
@@ -225,7 +216,19 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
 
         if (available) {
-            findViewById(R.id.no_browsers_card).setVisibility(View.GONE);
+            findViewById(R.id.choose_browser_button).setVisibility(View.GONE);
+
+            findViewById(R.id.enable_adguard_button).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (yandexBrowserAvailable) {
+                        BrowserUtils.openYandexBlockingOptions(MainActivity.this);
+                    } else {
+                        BrowserUtils.openSamsungBlockingOptions(MainActivity.this);
+                    }
+                }
+            });
+
             if (reorder) {
                 View yandex = findViewById(R.id.yandex_card);
                 LinearLayout layout = (LinearLayout) findViewById(R.id.cards_layout);
@@ -233,7 +236,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 layout.addView(yandex);
             }
         } else {
-            findViewById(R.id.no_browsers_card).setVisibility(View.VISIBLE);
+            findViewById(R.id.choose_browser_button).setVisibility(View.VISIBLE);
 
             findViewById(R.id.choose_browser_button).setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -241,6 +244,14 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                     BrowserUtils.showBrowserInstallDialog(MainActivity.this);
                 }
             });
+        }
+
+        PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
+        if (preferencesService.getBrowserConnectedCount() > 0) {
+            View noBrowsersCard = findViewById(R.id.no_browsers_card);
+            LinearLayout layout = (LinearLayout) findViewById(R.id.cards_layout);
+            layout.removeView(noBrowsersCard);
+            layout.addView(noBrowsersCard);
         }
 
         refreshStatistics();

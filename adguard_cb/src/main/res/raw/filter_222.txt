@@ -1,10 +1,10 @@
 ! Title: Adblock-Persian list
-! Version: 1.0.0.5
+! Version: 1.0.0.16
 ! Name: Adblock-Persian list
 ! Description: Adblock-Persian list
 ! NameEn: Adblock-Persian list
 ! DescriptionEn: Adblock-Persian list
-! TimeUpdated: 2016-05-23T18:06:25.238+04:00
+! TimeUpdated: 2016-08-13T14:35:53.828+04:00
 .ir/baner
 /banner.js
 images/banner*.gif
@@ -187,7 +187,7 @@ _vps-banner*.gif
 ||gsm.ir/*.swf
 ||hamkaran.in/*
 ||hipersian.com/joingroup_files/*
-digiato.com##.author-banner FIGCAPTION
+||digiato.com##.author-banner FIGCAPTION
 ||digiato.com/wp-content/uploads*.gif
 ||155x155.gif
 ||digiato.com/*bahar-155-155*
@@ -197,6 +197,8 @@ digiato.com##.author-banner FIGCAPTION
 ||google-analytics.com^
 ||iransetup.com/*.swf
 ||shop.ir-dl.com/*
+||sourceable.net/wp-content/plugins/cool-fade-popup/PopUpFad.js
+||sourceable.net/*position-partners*
 ||images.hamshahrionline.ir/system/menus/
 ||images.hamshahrionline.ir/*.swf
 ||img.aksmod.ir/shop/*
@@ -454,9 +456,11 @@ digiato.com##.author-banner FIGCAPTION
 /counter.$domain=~cnbeta.com|~dl.pconline.com.cn|~shooter.cn
 /stat.$~script,domain=~ameba.jp|~ameblo.jp|~zcool.com.cn
 ||melatstat.com^
+||clickyab.com^
 //tracking.$third-party
 ||adpersia.com^$third-party
 ||google-analytics.com^
+||vatanclick.ir^
 ||30forosh.biz^
 @@||psiloc.com/
 @@||modares.ac.ir^
@@ -973,6 +977,7 @@ khabaronline.ir###khsite_left
 ketabeavval.ir###ad-carousel
 ketabeavval.ir##DIV[align="center"]:first-child
 konjkav.com##TD[style="width:140px;"]
+kojaro.com##[data-bind="with: advertisementManagerViewModel"] *
 mahdaviat.org###theLayer
 makki.ir##IMG[src="http://m...content-available-to-author-only...i.ir/pic/1.jpg"]
 mihandownload.com##DIV[style="border: 1px solid rgb(255, 172, 145); padding: 3px; font-size: 8pt; color: rgb(0, 0, 0); font-family: Tahoma; background-color: rgb(251, 234, 234); text-align: right;"]
@@ -1041,11 +1046,16 @@ p30download.com##.widget.pc-games
 p30download.ws###cboxOverlay + * + * + * + * + * + * + * + * + *
 p30download.com##DIV[style="border:1px solid #FF66CC; z-index: 500;color:#333;font-size:11px;line-height:20px;padding:5px;border-top-right-radius:8px;border-top-left-radius:8px;text-align:center;font-size:8pt;position:fixed;left:10px;bottom:10px;background-color:#FFE5F7;background-repeat:repeat; font-family:tahoma"]
 p30download.com##.clearfix.jcarousel-list.jcarousel-list-horizontal
+p30download.com##[style="display: none;"] + * + * + * + * + * + * + * + * + *
+p30download.com##[src="http://p...content-available-to-author-only...d.com/template/js/plusone.js"] + * + * + * + * + * + *
+p30download.com##.text-tabliq
+||p30world.com*.swf
 ##.center-ads-i + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + .bodydivi
 p30world.com##.center-ads-i + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + .bodydivi
 p30world.com###shop_link
 p30world.com##.b_right
 forum.p30world.com##DIV[align="right"]
+p30world.com##.post-ads.hide-box *
 p30world.com##IMG[src="http://w...content-available-to-author-only...d.com/images/link2english/vamp.jpeg"]
 p30world.com##DIV[style="border:1px solid #CC66FF;color:#000000;font-size:11px;line-height:20px;padding:5px;border-top-right-radius:8px;border-top-left-radius:8px;text-align:center;text-shadow:#f1f7f9 -1px 1px 0;font-size:8pt;position:fixed;left:8px;bottom:8px;background-color:#F8D7FF;background-repeat:repeat; font-family:tahoma"]
 p30world.com##DIV[style="padding:3px; float: left; width: 130px; min-height: 250px; text-align:center; direction:rtl"]

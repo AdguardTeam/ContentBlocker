@@ -1,10 +1,10 @@
-! Title: KoreanAdblockList
-! Version: 1.0.0.1
-! Name: KoreanAdblockList
+! Title: Korean Adblock List
+! Version: 1.0.0.2
+! Name: Korean Adblock List
 ! Description: Korean Adblock List
-! NameEn: KoreanAdblockList
+! NameEn: Korean Adblock List
 ! DescriptionEn: Korean Adblock List
-! TimeUpdated: 2016-05-16T14:42:13.732+04:00
+! TimeUpdated: 2016-07-01T14:06:02.420+04:00
 ||ams.rmcnmv.naver.com^
 comic.naver.com##div[id^=ppl]
 avsnoop.de###bottomBanner
@@ -150,6 +150,7 @@ www.chosun.com###sec_health > .sec_sub > .sec_sub_ad
 /neoems/sts/stsInsert.neo^
 /omniture.js
 /omniture/
+@@/omniture/$script,domain=goal.com
 /openads/adjs.php^
 /openads/adx.js
 /overture/
@@ -173,6 +174,7 @@ www.chosun.com###sec_health > .sec_sub > .sec_sub_ad
 /tracker_czn.tsp^
 /urchin.js
 /wcslog.js^
+@@/wcslog.js$script,domain=m.tvcast.naver.com
 /web/count/counter.php
 /weblog.
 /weblog/gtracker.js
@@ -1117,7 +1119,6 @@ _realclick
 ||pcclear.com^$third-party
 ||pdssite.net^
 ||people.incruit.com/g_common/clientscript/ADservice.js
-||performgroup.com^
 ||pg.dacom.net/common/mailReceiveCheck.jsp^
 ||pgdownload.uplus.co.kr/images/mail/new/banner_
 ||phopler.com/InsAdClkAction.xrs^
@@ -1425,7 +1426,6 @@ _realclick
 ||msn.com/c.gif^
 ||news.tf.co.kr/public/js/2012/ss.ad.js
 ||news.tf.co.kr/ad/call^
-||developers.kakao.com/sdk/js/kakao.min.js
 ##.ad250_outter
 ##.adsbygoogle
 ##.google_ad

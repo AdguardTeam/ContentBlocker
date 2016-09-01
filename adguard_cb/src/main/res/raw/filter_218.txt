@@ -1,10 +1,10 @@
 ! Title: Estonian List
-! Version: 1.0.0.26
+! Version: 1.0.0.36
 ! Name: Estonian List
 ! Description: Estonian filtr
 ! NameEn: Estonian List
 ! DescriptionEn: Estonian filtr
-! TimeUpdated: 2016-06-07T18:05:38.542+04:00
+! TimeUpdated: 2016-08-10T14:30:28.481+04:00
 ##A[href*="http://pay4results24.eu"]
 ##iframe[src*="cherrystatic.net"]
 ##iframe[src*="date.elu24.ee"]
@@ -17,8 +17,10 @@
 1182.ee###content-box-right
 ://ads.
 ://ads2.
+@@ado.delfi.ee/files/js/ado.js
 @@http://ads.postimees.ee/ads/list/*telecast*
 @@http://ads.postimees.ee/crossdomain.xml
+@@||delfi.ee*/js/ads.
 @@||emediate.se$third-party,domain=tartupostimees.ee|postimees.ee
 @@||kinnistuportaal.rik.ee/KAEP/Media/img/logos/exchange_banner_idkaart.gif
 ado.delfi.ee
@@ -51,6 +53,7 @@ delfi.ee##DIV.tgames
 delfi.ee##DIV[class$="fb_wall_bg"]
 delfi.ee##DIV[id$="_728"]
 delfi.ee##div[id*="sliding"][style*="width: 192px"]
+delfi.ee##div[id^="ab-notify-bar"]
 delfi.ee,epl.ee##.adblock-notice
 delfi.ee,~tv.delfi.ee###right
 e-autoline.com##OBJECT[width="200"]
@@ -70,6 +73,7 @@ facebook.com##li[class*="uiStreamStoryAttachmentOnly"]
 geenius.ee##a[href*="delivery/ck.php"]
 hinnavaatlus.ee###rek160
 hinnavaatlus.ee###rek728
+hinnavaatlus.ee##.banner-single
 hinnavaatlus.ee##A[href*="delivery/ck.php"]
 hinnavaatlus.ee##div.col-c-1-4
 hinnavaatlus.ee##DIV.rek585
@@ -128,10 +132,13 @@ nagi.ee###FooterAds
 nagi.ee##DIV.aditem
 naistekas.delfi.ee##.banner-slides
 nami-nami.ee##a[class=banner-link]
+neti.ee###fcadcontainer
+neti.ee##.adocean-top
 ohtuleht.ee##div.text-banners
 ohtuleht.ee##div[id^="banner-adoceanohtuleht"]
 okidoki.ee###ad
 okidoki.ee###dealsdeals
+okidoki.ee###top-smartad
 online.le.ee##a[href*="plugins/adrotate"]
 online.le.ee##embed[src*="plugins/adrotate"]
 openx.static.kava.ee
@@ -139,16 +146,20 @@ pay4results.ee$third-party
 perekool.ee###reklaam
 perekool.ee##ins[class="bookingaff"]
 perekool.ee/pkfiles/adjs.php
+piletilevi.ee##.scrollbanners_block
 playforia.com##DIV[style*="img/ads"]
 pmo.ee/*/banners/*
 postimees.ee###gBgAd
 postimees.ee###newsletter-form-popup
+postimees.ee###sisuturundus
 postimees.ee##.fbLikeBoxOverlay
 postimees.ee##.fbOverlay
+postimees.ee##.header-banner
 postimees.ee##.surprise-container
 postimees.ee##DIV.reisiguruBlockContents
 postimees.ee##iframe[src*="cron/ostakvsoov"]
 postimees.ee##section.gameFriik
+postimees.ee##section[id="customAdProjectBlock"]
 postimees.ee,rate.ee##DIV.top_banner
 rate.ee##DIV.ban_bottom
 reporter.postimees.ee##.dfp_ad
@@ -175,6 +186,7 @@ www.ehitusfoorum.com/bannerid/www/delivery/ajs.php
 |http://www.auto24.ee/js/Auto24Popup.js
 ||212.47.219.162/banners
 ||2mdn.net$third-party
+||ad.dumedia.ru$third-party
 ||ad.mylook.ee$third-party
 ||adbrite.com$third-party
 ||adbull.com$third-party
@@ -275,6 +287,7 @@ www.ehitusfoorum.com/bannerid/www/delivery/ajs.php
 ||freeze.com$third-party
 ||fwmrm.net$third-party,domain=~tv3play.ee|~tv3.ee
 ||gemius.pl$third-party
+||getclicky.com$third-party
 ||googleadservices.com$third-party
 ||googlesyndication.com$third-party
 ||harrenmedianetwork.com$third-party

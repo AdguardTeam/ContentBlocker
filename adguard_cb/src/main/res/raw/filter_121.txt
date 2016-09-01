@@ -1,10 +1,10 @@
 ! Title: void.gr
-! Version: 1.0.0.63
+! Version: 1.0.0.71
 ! Name: void.gr
 ! Description: ελληνικά supplement for EasyList
 ! NameEn: void.gr
 ! DescriptionEn: ελληνικά supplement for EasyList
-! TimeUpdated: 2016-06-07T14:09:14.856+04:00
+! TimeUpdated: 2016-07-28T22:33:51.714+04:00
 ||www.diaforetiko.gr/wp-content/uploads/2015/03/droidbanner3.gif
 ||skai.gr/Themes/1/Default/Media/Skins/samsung*
 ||in.gr/Themes/1/Default/Media/senso_pro*
@@ -467,6 +467,16 @@ ad.gr.doubleclick.net
 ||kritikes-aggelies.gr/templates/ka/images/dress-up/BANNER_LEFT.png$image
 ||www.kritikes-aggelies.gr/templates/ka/images/xmoto-moto-new.png.pagespeed.ic.C3FcTY-SPs.png$image
 ||www.kritikes-aggelies.gr/templates/ka/images/xmoto-moto-logo-vertical3.png.pagespeed.ic.TblpkXpo_a.png$image
+||www.candianews.gr/banners/*
+||tvcreta.gr/upload_images/banners/*
+||2810.gr/images/2810photo/pelates1/*
+||www.cretapost.gr/img/ellinair.gif
+||contra.gr/multimedia/article4122214.ece/BINARY/original/stoiximan-euro2016.jpg
+||contra.gr/incoming/article4110736.ece/BINARY/original/stoiximan_contra.png
+||www.trinews.gr/runimg/2016_07_intersport-summersales_150x300.gif$image
+||www.trinews.gr/runimg/2016_04_Saucony.gif$image
+||www.trinews.gr/runimg/2016_05_Ethicsports_150x300.gif$image
+||www.sport24.gr/Paraxena/article4176236.ece/BINARY/original/stoiximan-brand_2016_usps-940x90.jpg
 www.insomnia.gr###ipbwrapper > .bgad[href="http://ads.nativad.net/servlet/click/zone?zid=351&pid=111&lookup=true&position=1&uuid=(email)"]
 www.insomnia.gr###ipbwrapper > .bgad[href="http://www.kotsovolos.gr/site/mobile-phones-gps/mobile-phones/smartphones?v=0&company=Apple&11202=44834&utm_source=insomnia.gr&utm_medium=skin&utm_content=NEWiphone6s-6splus-insomnia-skin-2015&utm_campaign=iphone6s-6splus-insomnia-"]
 antenna.gr###afdiv
@@ -828,11 +838,19 @@ contra.gr###top_story_wrap > .grid_12 > div:nth-of-type(7) > a[href^="http://www
 popaganda.gr##.main-margin.container > .newstrack-content.row > .post-margin-right.col-xs-8.col-md-8 > .waypoints.post-content > .affiliate > .textwidget
 www.sport-fm.gr##.bet-logos
 www.contra.gr###stoiximan-cont > a[href^="http://www.stoiximan.gr"] > img
-www.contra.gr###top_story_wrap > .grid_12 > div:nth-of-type(8) > a[href^="http://www.stoiximan.gr"] > img
 www.lifo.gr###das_out
 www.lifo.gr###das_top > a[href^="/lines/click/"]
 www.lifo.gr###das_r1 > a[href^="/lines/click/"]
 www.sport24.gr###stoiximan-cont > a[href^="http://www.stoiximan.gr"]
+www.candianews.gr###main-content > .content-wrap:nth-of-type(1) > .content > .candiabanners-index
+news247.gr###mainContent > .alpha.grid_12 > .main.default.stories:nth-of-type(4)
+news247.gr###mainContent > .alpha.grid_12 > .bolder.lineborder
+news247.gr###mainContent > .alpha.grid_12 > .main.default.stories:nth-of-type(8)
+news247.gr###mainContent > .alpha.grid_12 > .main.default.stories:nth-of-type(6)
+news247.gr###mainContent > .alpha.grid_12 > .main.default.stories:nth-of-type(5)
+www.trinews.gr##body > table:nth-of-type(2)
+runningnews.gr##body > table:nth-of-type(2)
+www.contra.gr###top_story_wrap > .grid_12 > div:nth-of-type(8) > a[href^="https://www.stoiximan.gr"]
 @@sport-fm.gr/newspapers/$elemhide
 @@resources.sport-fm.gr/sportfm/newspapers/
 @@politis-news.com/banners/entheta/

@@ -1,10 +1,10 @@
 ! Title: Fanboy's Swedish
-! Version: 1.0.0.2
+! Version: 1.0.0.3
 ! Name: Fanboy's Swedish
 ! Description: Fanboy's Swedish
 ! NameEn: Fanboy's Swedish
 ! DescriptionEn: Fanboy's Swedish
-! TimeUpdated: 2016-06-05T06:06:02.183+04:00
+! TimeUpdated: 2016-07-30T10:37:39.532+04:00
 .dt.se/banner/
 .dt.se/img/space.gif?
 .nu/annons/
@@ -62,6 +62,7 @@ existenz.se###slidebox
 ||atemda.com^$third-party
 ||banner.mrgreen.com^$third-party
 ||bettersales.se^$subdocument,third-party
+||blocket.se^$third-party
 ||careerbuilder.se^$third-party
 ||casinotoplists.com^$third-party
 ||de17a.com^$third-party
@@ -101,6 +102,7 @@ existenz.se###slidebox
 ##.nyhet_wrapper_annons
 aftonbladet.se###abExtraColumnOuter
 aftonbladet.se###abHeaderAdStreamer
+aftonbladet.se###abSticky-articleRightCol
 aftonbladet.se##.abTopStreamer
 aftonbladet.se##div[class^="abTeaserImageColumn abBoxTheme"]
 allehanda.se##.mf_banner
@@ -151,6 +153,10 @@ dreamfilmhd.com##div[style="background-color:rgba(0,0,0,0.1);width:750px;height:
 dreamfilmhd.com##div[style="width:750px;clear:both;margin:0 0 10px 0;padding:0;"]
 expo.se,nyteknik.se,svd.se##.ad
 expressen.se##a[href^="http://marketnews.se/"]
+falkenbergtorget.se##.banner
+falkenbergtorget.se##.banner-top
+falkenbergtorget.se##.jobbtipsaren
+falkenbergtorget.se##.sponsored
 flashback.org##.banner_text
 flashback.se###top-banner
 folkbladet.se##[style="border: 1px solid rgb(126, 169, 204); font-family: arial; font-size: 12px; background-color: rgb(255, 255, 255); width: 200px;"]
@@ -184,6 +190,7 @@ ostran.se##.clsImageCenter
 ostran.se##.clsMainAdsHead
 ostran.se##.clsRightAds
 ostran.se##.clsTopJobs
+poporock.com##.ads
 rakaka.se##img[src="content/annons.jpg"]
 realtid.se##p[style="margin: 0pt 0pt 3px; clear: both;"]
 svd.se###in-between-2

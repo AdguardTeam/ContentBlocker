@@ -1,0 +1,131 @@
+! Title: ROList
+! Version: 1.0.0.72
+! Name: ROList
+! Description: românesc supplement for EasyList
+! NameEn: ROList
+! DescriptionEn: românesc supplement for EasyList
+! TimeUpdated: 2016-09-01T10:32:22.266+04:00
+||7w.ro^
+||ad.dc2.adtech.de^
+||admonitoring.bsgroup.ro^
+||adnxs.com^
+||ado.icorp.ro^
+||adocean.pl^
+||ads.tradeads.eu^
+||ads2.evz.ro^
+||adservingfactory.com^
+||adsymptotic.com^
+||app.marketizator.com^
+||apps.thinkdigital.ro^
+||bidswitch.net^
+||block.sw1block.com^
+||brat-online.ro^
+||bride.ru^
+||cdn.teads.tv^
+||content.ad20.net^
+||content.zontera.com^
+||core.ad20.net^
+||core.adservingfactory.com^
+||da.feedsportal.com^
+||data.tradeville.eu^
+||digital4ro.adocean.pl^
+||evensys.ro^$third-party
+||eyeviewads.com^
+||flx1.com^
+||fx.gtop.ro^
+||gemius.pl^
+||go.netbet.ro^
+||ib.adnxs.com^
+||megapopads.com^
+||moatads.com^
+||new.cetrk.com^
+||onlinesupaads.com^
+||profiling.avandor.com^
+||projectagora.s3.amazonaws.com
+||realitatero.adocean.pl^
+||recs.engageya.com^
+||retargeting-data.eu^
+||revsci.net^
+||ro.adocean.pl^
+||ro.search.etargetnet.com
+||rt.awstaticdn.net^
+||s.atemda.com^
+||st.ad.adnow.com^
+||stats.pagefair.com^
+||st-n.ads1-adnow.com^
+||st-n.pc1ads.com^
+||storage.trafic.ro^
+||sync.teads.tv^
+||tags.crwdcntrl.net^
+||tynt.com
+||www4.smartadserver.com^
+||zontera.com^$third-party
+||img.2parale.ro/system/paperclip/banner_pictures
+/ads/*
+/bannere/*
+/reclama/*
+/reclame/*
+##DIV[id*="reclama"]
+ro##[href*="/promo"]
+ro##DIV[class^="banner"]
+ro##DIV[id*="banner"]
+@@||homebank.ro^$~third-party
+@@||hotnews.ro^$generichide
+@@||lumea-luminilor.ro/promotii*
+@@||profitshare.emag.ro/get_ads.php?*
+@@AC_RunActiveContent.js
+~4tuning.ro##.adsbygoogle
+promozone.ro,emag.ro#@#[href*="/promo"]
+revista22.ro##IMG[src*="banner"]
+||b.rcs-rds.ro/assets/2040
+||b.rcs-rds.ro/assets/2079
+||b.rcs-rds.ro/assets/2122
+||b.rcs-rds.ro/assets/2505
+||b.rcs-rds.ro/assets/2506
+||b.rcs-rds.ro/assets/2580
+||b.rcs-rds.ro/assets/2580
+||b.rcs-rds.ro/assets/2606$image
+||b1.ro/media/*$object,image
+||b1.ro/static/caldoprivatsecurity_
+||b1.ro/static/casadecor.swf
+||catavencii.ro/bnr/alexandrion.jpg
+||clujust.ro/wp-content/uploads/2015/11/Banner-300-250-CBP.jpg$image
+||clujust.ro/wp-content/uploads/2016/04/banner-800x100-px-coratim.jpg$image
+||clujust.ro/wp-content/uploads/2016/05/bannere-online-01-cantemir.jpg$image
+||clujust.ro/wp-content/uploads/2016/07/ebs-cluj-just-800x100.jpg$image
+||clujust.ro/wp-content/uploads/2016/08/300x-600-px-clujust.jpg$image
+||http://s1.olx.ro/static/olxro/naspersclassifieds-regional/olxeu-atlas-web/static/js/advertising.js
+||iqads.ro/upcoming/*
+||iqads.ro/upcoming/488.gif
+||iqads.ro/upcoming/488.gif
+||nosteam.ro/js/common.lib.js
+||nosteam.ro/js/jquery.min.25-t1.js
+||nosteam.ro/Themes/*alph21$script
+||profitshare.ro/j/jXY
+||terrapops.com^$popup
+||ziuaconstanta.ro/images/banners/solide_house/solidhouse-2.jpg
+activenews.ro###header > div:nth-of-type(3)
+adevarul.ro###top-video
+adevarul.ro##.categories-bottom
+adevarul.ro##.part.part-left
+adevarul.ro##.tl-content.clearfix
+agrointel.ro##.sidebars
+antena3.ro##.listing-stiri.stiri-atasate
+antena3.ro##DIV.spliter.listing-stiri *
+biziday.ro##.wraper > .left.leftCol > .header_small_pic
+clujust.ro###sidebar > .theiaStickySidebar
+digi24.ro###overlay > .show.overlay-arrows.arrows > .previous-wrap
+digi24.ro###slide_clone_2
+digi24.ro###slide_main > .stiri-digi24-actualitate-stiri.actualitate.content-bar.full:nth-of-type(2)
+gandul.info###bula-ultima-ora
+mariustuca.ro###continut
+nosteam.ro##DIV#stickynote4 > *
+nwradu.ro##[class^="reclama"]
+paginademedia.ro##.video-sticky
+profit.ro##.box-readmore
+republica.ro##.box.box-c2a-login
+stirileprotv.ro###box_400051071d129964 > .primaPaginaPeScurt
+tolo.ro###cookie-notice > .cookie-notice-container
+trafictube.ro#@#.widget-adv
+www.libertatea.ro###floating
+www.zf.ro###bula-ultima-ora

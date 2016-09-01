@@ -1,10 +1,10 @@
 ! Title: Adblock polskie reguły cookies
-! Version: 1.0.1.9
+! Version: 1.0.1.15
 ! Name: Adblock polskie reguły cookies
 ! Description: polski filtr cookies
 ! NameEn: Adblock polskie reguły cookies
 ! DescriptionEn: polski filtr cookies
-! TimeUpdated: 2016-06-02T02:05:16.624+04:00
+! TimeUpdated: 2016-08-28T14:35:39.050+04:00
 1000dni.pl##DIV[style="width: 100%; background-color: rgb(0, 60, 122); padding: 10px 8px; line-height: 20px; left: 0px; position: fixed; margin: 10px auto 0px; bottom: 0px; z-index: 1000; font-size: 13px; font-family: Helvetica,Arial,sans-serif; color: rgb(255, 255, 255);"]
 4hifi.pl##div#myModal
 4hifi.pl##div.reveal-modal-bg
@@ -65,12 +65,14 @@ bstorun.pl##div#comm_info
 buduj.co.uk###SiteAnouncement
 buliba.pl##DIV[style="display: block; position: absolute; z-index: 999; background: rgb(255, 255, 255) none repeat scroll 0% 0%; left: 0px; right: 0px; color: rgb(0, 0, 0); font-family: Arial; font-size: 13px; line-height: 17px; padding: 7px 0px; overflow: hidden; bottom: 0px;"]
 buziak.pl###cffc
+bytzbiorowy.pl###easyNotification
 cabletech.pl##div[style="top:0;position:absolute;width:100%;background:#000;color:#f2f2f2;font-size:10px;text-align:center"]
 canalplus.pl##div#cookes_policy
 carisma.pl##div#ciasteczka
 caritas.pl###cq-scroll-notification
 cartests.pl##div.messi
 cartoonnetwork.pl###header
+ccm.net##.ccmcss_oic
 cda.pl,superfilm.pl##div#box_info
 centrum-bmw.pl##div[style="width: 100%; background-color: rgb(193, 193, 193); margin: 10px auto 0px; padding: 15px 8px; position: fixed; left: 0px; bottom: 0px; z-index: 1000; color: rgb(255, 255, 255); "]
 centrum-psych.pl###evideCookiesNotify
@@ -229,6 +231,7 @@ intymna.pl###wymagania_sklepu_alert
 ip-sa.pl###myModal
 ip-sa.pl##.reveal-modal-bg
 iperfumy.pl##div#gritter-notice-wrapper
+istotne.pl##.notification-info.notification
 irma.pl##DIV[style="clear: both;background-color: #e8e8e8;margin: 0 auto 0 auto;overflow: hidden;width: 100%;z-index: 9999;"]
 itaka.pl##div[style="position: fixed; bottom: 0px; width: 100%; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(187, 187, 187); box-shadow: rgb(238, 238, 238) 0px -10px 20px; padding: 10px; text-align: center; background-color: rgb(252, 252, 252); z-index: 10000; background-position: initial initial; background-repeat: initial initial; "]
 jakipupil.pl##div[style="position: fixed; bottom: 0px; width: 100%; text-align: center; background-color: rgb(238, 238, 238); text-shadow: none; height: 40px; padding-top: 20px; z-index: 100000000; background-position: initial initial; background-repeat: initial initial;"]
@@ -259,7 +262,7 @@ komputerymarkowe.pl##.ui-resizable.ui-draggable.ui-corner-all.ui-widget-content.
 komunikacja.um.bialystok.pl##a[href="/?page=cookies"]
 korpol.pl###myModal
 korpol.pl##.reveal-modal-bg
-korwin-mikke.pl##div[style="padding: 5px 3px; width: 500px; margin: 0px; background-color: rgba(0, 0, 0, 0.85098); -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 10px; box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 10px; position: absolute; top: 0px; left: 254px; font-family: Arial, Helvetica, Garuda, sans-serif; text-align: center; color: rgb(255, 255, 255); z-index: 9999; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; background-position: initial initial; background-repeat: initial initial;"]
+korwin-mikke.pl##DIV[style="padding: 5px 3px; width: 500px; margin: 0px; background: rgba(0, 0, 0, 0.85) none repeat scroll 0% 0%; box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); position: absolute; top: 0px; left: 424.5px; font-family: Arial,Helvetica,Garuda,sans-serif; text-align: center; color: rgb(255, 255, 255); z-index: 9999; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;"]
 korwin-mikke.pl##DIV[style="padding: 5px 3px; width: 500px; margin: 0px; background: rgba(0, 0, 0, 0.85) none repeat scroll 0% 0%; box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); position: absolute; top: 0px; left: 421.5px; font-family: Arial,Helvetica,Garuda,sans-serif; text-align: center; color: rgb(255, 255, 255); z-index: 9999; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;"]
 kreskoweczki.pl##div#gbpl_oba
 krosnocity.pl###polcia
@@ -284,6 +287,7 @@ legolas.pl###kuki
 lg.com##.policyChk
 licytacje.komornik.pl###sign_up
 linuxportal.pl##DIV[style="width: 100%; background: rgb(44, 48, 51) none repeat scroll 0% 0%; padding: 10px 0; color: #fff; border-top: 1px solid rgb(221, 221, 221);  text-align: center; position: fixed; bottom: 0; z-index: 999999999;"]
+lotplay.pl##.ui-corner-all
 lot.com##div#cc
 lotnictwo.net.pl##li#navbar_notice_123
 lovekrakow.pl##div#new-policy
@@ -301,6 +305,7 @@ marketing-news.pl###gbpl_oba
 marykay.pl##.gigyaNotify
 marykay.pl##div[style="background-color: rgba(255, 255, 255, 0.8); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(153, 153, 153); bottom: 0px; color: black; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: 'Arial Narrow', Arial, Helvetica, sans-serif; left: 0px; padding: 10px; position: fixed; right: 0px; text-align: center; z-index: 10000; background-position: initial initial; background-repeat: initial initial;"]
 maybellinetrends.pl##div[style="position: fixed; z-index: 999; bottom: 0px; right: 0px; width: 900px; padding: 18px 0px !important; background-color: rgb(0, 0, 0) !important; color: rgb(255, 255, 255) !important; font-family: arial !important; font-size: 12px !important; border-top-left-radius: 4px !important; border-top-right-radius: 4px !important; border-bottom-right-radius: 4px !important; border-bottom-left-radius: 4px !important; background-position: initial initial !important; background-repeat: initial initial !important;"]
+mediasystems.pl##DIV[style="\a \9 \9 position: relative;\a \9 left: 300px;\a \9 text-align: center;\a \9 font-size: 13px; \a \9 color: #606060; \a \9 background: white; \a \9 border: solid 1px red;\a \9 width: 600px;\a \9 top: -70px;\a \9 "]
 mega-com.eu###footer-information
 mercedes-benz.com,mercedes-benz.pl###emb-cp-dialog
 merixstudio.pl##.message
@@ -560,6 +565,7 @@ www.promise.com.pl##.ui-resizable
 www.promise.com.pl##.ui-front
 www.miplo.pl##.rounded.error
 www.halico.pl##.sqs-announcement-bar-custom-location
+www.maxior.pl###ci-info-box
 wydawca.com.pl##div#kuki
 wydruki-wroclaw.pl##div.activebar-container
 yp.pl##div#jQ_cookiBox
@@ -577,6 +583,18 @@ wiif.nowybip.pl###jGrowl
 stylowi.pl##DIV[style="position: fixed; left:0; right:0; bottom:0; height:120px; background-color:#eee; border-top: 1px solid black; z-index:16; overflow: auto"]
 www.e-petrol.pl###statement
 www.mercedes-benz.pl###emb-cp-overlay
+www.niemartwsie.pl##.notification
+www.hertz.com.pl##[class^="lb-"]
+www.cmcmarkets.com###cmc-tracking-consent-form-step1
+etransport.pl##.active.visible.transition.page.modals.dimmer.ui
+ttv.pl###msgLayer
+hankooktire.com##.top_ep_wrap
+www.continental-opony.pl##.scroll-to-fixed-fixed.privacyhint
+www.feuvert.pl###info
+www.mmtv.pl###policyInfo
+www3.syngenta.com###hideMe
+profitsms.pl###eurociacho
+www.tupperware.pl##.topRibbon
 ||exploder.pl/info_o_cookie.js$script
 ||jak-zablokowac-cookies.pl/cookies_komunikat.js$script
 ||paypass.pl/themes/paypass/js/cookies.js$script
@@ -586,22 +604,23 @@ cookie-law-popup.js$script
 ||www.pianomedia.pl/cookies-on-pianomedia$xmlhttprequest
 ||asus.com/cookienotice.json$xmlhttprequest
 ||pl/wp-content/plugins/eu-cookie-law-wp-cookie-law/$script
-~piekarniaanka.pl,~xboxarcade.pl,~appki.com.pl,~paypal.com,~accounts.google.com##:not(input)[id*="Cookie"]
+~dwkoral.pl,~piekarniaanka.pl,~xboxarcade.pl,~appki.com.pl,~paypal.com,~accounts.google.com##:not(input)[id*="Cookie"]
 ~intel.com,~pkn.pl,~topsecret.pl,~starbucks.pl,~isobar.com,~morizon.pl,~abctygodnik.pl,~wykop.pl,~bt4.pl,~kolba.pl,~tablety.pl,~tesco.pl##div[class*="cookie"]
 ~piekarniaanka.pl,~xboxarcade.pl,~everafterhigh.com,~wmeritum.pl,~microsoft.com,~paypal.com,~reserved.com,~zumi.pl,~komunikacja.bialystok.pl,~nvidia.com##:not(input)[id*="cookie"]
 ##[id*="coockie"]
 ~addons.mozilla.org##.privacy-policy
 ##[class*="coockie"]
 ###AcceptCookie
-~piekarniaanka.pl,~xboxarcade.pl,~appki.com.pl,~mvno-gsm.pl##[id*="cookie-"]
+~linuxiarz.pl,~piekarniaanka.pl,~xboxarcade.pl,~appki.com.pl,~mvno-gsm.pl##[id*="cookie-"]
 ~microsoft.com##[id*="cookie_"]
 ##.cookie-notification
 ###polityka-ciastek
-~futurevoicesystem.pl,~wmeritum.pl,~pl.forum.elvenar.com,~mcdonalds.co.uk,~astroweb.pl,~zadane.pl,~apteka-amica.pl,~naziemna.info,~planeteplus.pl,~abctygodnik.pl,~fundraising.org.pl,~filmydokumentalne.eu,~mvno-gsm.pl,~infoskawina.pl,~pikio.pl,~qt.io,~teleman.pl,~tablety.pl,~com##[class*="cookie-"]
+~niepoddawajsie.pl,~krasnale.pl,~futurevoicesystem.pl,~wmeritum.pl,~pl.forum.elvenar.com,~mcdonalds.co.uk,~astroweb.pl,~zadane.pl,~apteka-amic.pl,~naziemna.info,~planeteplus.pl,~abctygodnik.pl,~fundraising.org.pl,~filmydokumentalne.eu,~mvno-gsm.pl,~infoskawina.pl,~pikio.pl,~qt.io,~teleman.pl,~tablety.pl,~com##[class*="cookie-"]
 ###cookiesEU-box
 ###cookies_info
 ###ciastka_wiadomosc
 ###ciastka
+###informacjaOCiasteczkach
 ###inpl_cp_cnt
 ###sliding-popup
 ###cc-notification
@@ -644,7 +663,7 @@ cookie-law-popup.js$script
 /js/cookieinfo.js
 /js/polityka_cookies.js$script
 /js/info_o_cookie.js
-/js/jquery.cookie.min.js$script
+/js/jquery.cookie.min.js$script,domain=~uplayconnect.ubi.com
 /cookie_msg.js$script
 /savecookie.js$script
 /cookie.js$script
@@ -681,9 +700,12 @@ pl##[id^="polityka-prywatnosci"]
 ##.message--cookie--show
 ##.footerCookieNotice
 ###CPolicy
+/cookiesWidget/widget.js$script
+###privacy_policy_bar
+##.policy-box
 @@||static.wirtualnemedia.pl/new/js/cookie.js$script
 @@/plugins/uk-cookie-consent/assets/js/uk-cookie-consent-js.js$script,domain=escaperooms.pl
-@@||rozklad-pkp.pl/js/$script,domain=rozklad-pkp.pl
+@@||rozklad.pkp.pl/js/$script
 @@||cdaction.pl/views/js1/cookie.js$script
 @@/plugins/uk-cookie-consent/assets/js/uk-cookie-consent-js.js$script,domain=xboxarcade.pl
 telepizza.pl#@#div[class*="cookie"]

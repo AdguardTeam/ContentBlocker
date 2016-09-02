@@ -92,10 +92,19 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginBottom="@dimen/cardview_vertical_padding"
-                                    android:text="@string/adguard_needs_compatible_browser"
+                                    android:text="@string/adguard_conditions_title"
                                     android:textColor="@color/black"
-                                    android:textSize="16sp"/>
+                                    android:textSize="16sp"
+                                    android:layout_marginBottom="4dp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/adguard_conditions_list"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:id="@+id/textView"
+                                    android:layout_marginLeft="8dp"/>
                             </LinearLayout>
 
                             <LinearLayout

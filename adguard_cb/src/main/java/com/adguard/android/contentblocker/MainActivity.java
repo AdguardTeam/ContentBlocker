@@ -217,6 +217,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
         if (available) {
             findViewById(R.id.choose_browser_button).setVisibility(View.GONE);
+            findViewById(R.id.enable_adguard_button).setVisibility(View.VISIBLE);
 
             findViewById(R.id.enable_adguard_button).setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -235,8 +236,17 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 layout.removeView(yandex);
                 layout.addView(yandex);
             }
+
+            PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
+            if (preferencesService.getBrowserConnectedCount() > 0) {
+                View noBrowsersCard = findViewById(R.id.no_browsers_card);
+                LinearLayout layout = (LinearLayout) findViewById(R.id.cards_layout);
+                layout.removeView(noBrowsersCard);
+                layout.addView(noBrowsersCard);
+            }
         } else {
             findViewById(R.id.choose_browser_button).setVisibility(View.VISIBLE);
+            findViewById(R.id.enable_adguard_button).setVisibility(View.GONE);
 
             findViewById(R.id.choose_browser_button).setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -244,14 +254,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                     BrowserUtils.showBrowserInstallDialog(MainActivity.this);
                 }
             });
-        }
-
-        PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
-        if (preferencesService.getBrowserConnectedCount() > 0) {
-            View noBrowsersCard = findViewById(R.id.no_browsers_card);
-            LinearLayout layout = (LinearLayout) findViewById(R.id.cards_layout);
-            layout.removeView(noBrowsersCard);
-            layout.addView(noBrowsersCard);
         }
 
         refreshStatistics();
@@ -309,13 +311,17 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     public void onStart() {
         super.onStart();
         PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
-        refreshMainInfo();
     }
 
     @Override
     public void onStop() {
         super.onStop();
         PreferenceManager.getDefaultSharedPreferences(this).unregisterOnSharedPreferenceChangeListener(this);
+    }
+
+    public void onResume() {
+        super.onResume();
+        refreshMainInfo();
     }
 
     @Override

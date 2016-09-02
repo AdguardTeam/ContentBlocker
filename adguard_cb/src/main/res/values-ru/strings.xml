@@ -78,5 +78,6 @@
     <string name="get_started">Начать</string>
     <string name="main_activity_adguard_info">Adguard блокирует рекламу, интернет-счетчики, ускоряет загрузку страниц и экономит мобильный трафик.</string>
     <string name="enable_adguard">Включить Adguard</string>
-    <string name="adguard_conditions_list">• Вы должны использовать браузер с поддержкой технологии блокирования контента.\n• Adguard должен быть включен в настройках этого браузера.</string>
+    <string name="adguard_conditions_list1">Вы должны использовать браузер с поддержкой технологии блокирования контента.</string>
+    <string name="adguard_conditions_list2">Adguard должен быть включен в настройках этого браузера.</string>
 </resources>

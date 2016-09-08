@@ -1,18 +1,18 @@
 /**
- This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
- Copyright © 2016 Performix LLC. All rights reserved.
-
- Adguard Content Blocker is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by the
- Free Software Foundation, either version 3 of the License, or (at your option)
- any later version.
-
- Adguard Content Blocker is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
- or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
- You should have received a copy of the GNU General Public License along with
- Adguard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
+ * This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
+ * Copyright © 2016 Performix LLC. All rights reserved.
+ * <p/>
+ * Adguard Content Blocker is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or (at your option)
+ * any later version.
+ * <p/>
+ * Adguard Content Blocker is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * <p/>
+ * You should have received a copy of the GNU General Public License along with
+ * Adguard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
 package com.adguard.android.commons;
 
@@ -27,7 +27,6 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-
 import com.adguard.android.contentblocker.MainActivity;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.ui.utils.ActivityUtils;
@@ -50,8 +49,7 @@ public class BrowserUtils {
         intent.setAction("com.samsung.android.sbrowser.contentBlocker.ACTION_SETTING");
         List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
-            for (ResolveInfo info : list)
-            {
+            for (ResolveInfo info : list) {
                 if (info.activityInfo.packageName.contains(YANDEX)) {
                     result.add(YANDEX);
                 } else if (info.activityInfo.packageName.contains("com.sec.") || info.activityInfo.packageName.contains(SAMSUNG)) {
@@ -84,8 +82,7 @@ public class BrowserUtils {
         List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
             boolean found = false;
-            for (ResolveInfo info : list)
-            {
+            for (ResolveInfo info : list) {
                 if (info.activityInfo.packageName.contains("com.sec.") || info.activityInfo.packageName.contains("samsung")) {
                     found = true;
                     intent.setClassName(info.activityInfo.packageName, info.activityInfo.name);
@@ -102,8 +99,7 @@ public class BrowserUtils {
         intent.setAction("com.samsung.android.sbrowser.contentBlocker.ACTION_SETTING");
         List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
-            for (ResolveInfo info : list)
-            {
+            for (ResolveInfo info : list) {
                 if (info.activityInfo.packageName.contains("com.sec.") || info.activityInfo.packageName.contains("samsung")) {
                     return true;
                 }
@@ -145,8 +141,7 @@ public class BrowserUtils {
         intent.setAction("com.yandex.browser.contentBlocker.ACTION_SETTING");
         List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
-            for (ResolveInfo info : list)
-            {
+            for (ResolveInfo info : list) {
                 if (info.activityInfo.packageName.contains(MainActivity.YANDEX)) {
                     return true;
                 }
@@ -157,8 +152,7 @@ public class BrowserUtils {
         intent.setAction("com.samsung.android.sbrowser.contentBlocker.ACTION_SETTING");
         list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
-            for (ResolveInfo info : list)
-            {
+            for (ResolveInfo info : list) {
                 if (info.activityInfo.packageName.contains(MainActivity.YANDEX)) {
                     return true;
                 }
@@ -216,8 +210,15 @@ public class BrowserUtils {
     }
 
     public static void startYandexBrowser(Context context) {
-        ComponentName component = new ComponentName("com.yandex.browser", "com.yandex.browser.YandexBrowserMainActivity");
-        startBrowser(context, component);
+        List<PackageInfo> installedPackages = context.getPackageManager().getInstalledPackages(PackageManager.GET_ACTIVITIES);
+
+        // This is made because of differences in the name of the packages for the Beta and Alpha version
+        for (PackageInfo installedPackage : installedPackages) {
+            if (installedPackage.packageName.contains("yandex.browser")) {
+                ComponentName component = new ComponentName(installedPackage.packageName, "com.yandex.browser.YandexBrowserMainActivity");
+                startBrowser(context, component);
+            }
+        }
     }
 
     public static void startSamsungBrowser(Context context) {

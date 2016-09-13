@@ -2,11 +2,9 @@ package com.adguard.android.contentblocker.onboarding;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
@@ -340,7 +338,6 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
                 case 3:
                     switch (browser) {
                         case 1:
-                            return R.drawable.onboarding_3;
                         case 2:
                             return R.drawable.onboarding_3;
                         default:

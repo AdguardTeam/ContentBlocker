@@ -8,13 +8,13 @@
               android:weightSum="11">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:id="@+id/sectionImage"
-        android:src="@drawable/onboarding_1"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:layout_weight="6"/>
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/sectionImage"
+            android:src="@drawable/onboarding_1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_weight="6" android:layout_marginTop="15dp" android:layout_gravity="center_horizontal"/>
 
     <LinearLayout
         android:orientation="vertical"

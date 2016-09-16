@@ -73,7 +73,7 @@
     <string name="onboarding_title2">Выберите браузер</string>
     <string name="onboarding_title3">Почти готово!</string>
     <string name="start">Запуск</string>
-    <string name="adguard_conditions_title">Для работы Adguard необходимо выполнение двух условий:\n\n* Должен быть установлен браузер, поддерживающий технологию блокировки рекламы\n* Adguard должен быть включен в настройках этого браузера</string>
+    <string name="adguard_conditions_title">Для работы Adguard необходимо выполнение двух условий:</string>
     <string name="choose_browser">Выбрать браузер</string>
     <string name="get_started">Начать</string>
     <string name="main_activity_adguard_info">Adguard блокирует рекламу, интернет-счетчики, ускоряет загрузку страниц и экономит мобильный трафик.</string>

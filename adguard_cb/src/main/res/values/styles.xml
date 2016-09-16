@@ -224,15 +224,11 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="CardViewStyle">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">10dp</item>
-        <item name="android:layout_marginLeft">10dp</item>
-        <item name="android:layout_marginRight">10dp</item>
-        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_marginLeft">@dimen/cardview_margin</item>
+        <item name="android:layout_marginRight">@dimen/cardview_margin</item>
+        <item name="android:layout_marginTop">@dimen/cardview_margin</item>
+
         <item name="android:clickable">true</item>
-        <!--<item name="android:foreground">?android:attr/selectableItemBackground</item>-->
-        <!--<item name="android:foreground">@drawable/cardview_selector</item>-->
     </style>
 
     <style name="Widget.AppCompat.Button.Borderless.CardView">

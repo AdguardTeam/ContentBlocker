@@ -33,6 +33,8 @@ public class ApplyAndRefreshTask extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected void onPostExecute(Void res) {
-        dialog.dismiss();
+        if (dialog != null && dialog.isShowing()) {
+            dialog.dismiss();
+        }
     }
 }

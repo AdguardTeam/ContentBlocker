@@ -126,6 +126,8 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         if (!preferencesService.isOnboardingShown()) {
             startActivity(new Intent(this, OnboardingActivity.class));
         }
+
+        ServiceLocator.getInstance(getApplicationContext()).getFilterService().scheduleFiltersUpdate();
     }
 
     private DrawerListItem[] getDrawerItems() {

@@ -17,11 +17,14 @@
 package com.adguard.android.service;
 
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
+import com.adguard.android.contentblocker.AlarmReceiver;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.ServiceLocator;
 import com.adguard.android.db.FilterListDao;
@@ -60,7 +63,6 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     private final FilterRuleDao filterRuleDao;
     private final PreferencesService preferencesService;
 
-    private static final String FILTERS_UPDATE_JOB_NAME = "filters update job";
     private static final int FILTERS_UPDATE_INITIAL_DELAY = 60 * 60; // 1 hour
     private static final int FILTERS_UPDATE_PERIOD = 60 * 60; // 1 hour
     private static final int UPDATE_INVALIDATE_PERIOD = 4 * 24 * 60 * 60; // 4 days
@@ -126,19 +128,18 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     }
 
     @Override
-    public List<FilterList> checkFilterUpdates() {
-        return checkOutdatedFilterUpdates(true);
+    public List<FilterList> checkFilterUpdates(boolean force) {
+        return checkOutdatedFilterUpdates(force);
     }
 
     @Override
     public void scheduleFiltersUpdate() {
-        ServiceLocator.getInstance(context).getJobService().scheduleAtFixedRate(FILTERS_UPDATE_JOB_NAME,
-                new Runnable() {
-                    @Override
-                    public void run() {
-                        checkOutdatedFilterUpdates(false);
-                    }
-                }, FILTERS_UPDATE_INITIAL_DELAY, FILTERS_UPDATE_PERIOD, TimeUnit.SECONDS);
+        Intent alarmIntent = new Intent(AlarmReceiver.UPDATE_FILTER_ACTION);
+        PendingIntent broadcastIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
+
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+
+        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, AlarmManager.INTERVAL_HOUR, AlarmManager.INTERVAL_HOUR, broadcastIntent);
     }
 
     @Override
@@ -276,9 +277,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
      * @return List of updated filters or null if something gone wrong
      */
     private List<FilterList> checkOutdatedFilterUpdates(boolean force) {
-
         if (!force) {
-
             if (!NetworkUtils.isNetworkAvailable(context) || !InternetUtils.isInternetAvailable()) {
                 LOG.info("checkOutdatedFilterUpdates: internet is not available, doing nothing.");
                 return new ArrayList<>();
@@ -471,7 +470,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
 
         @Override
         protected void processTask() throws Exception {
-            final List<FilterList> filters = ServiceLocator.getInstance(context).getFilterService().checkFilterUpdates();
+            final List<FilterList> filters = ServiceLocator.getInstance(context).getFilterService().checkFilterUpdates(true);
             if (filters == null) {
                 String message = activity.getString(R.string.checkUpdatesErrorResultMessage);
                 showToast(activity, message);

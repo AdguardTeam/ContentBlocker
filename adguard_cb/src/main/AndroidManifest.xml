@@ -55,6 +55,13 @@
             android:label="@string/title_activity_onboarding"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"/>
+
+        <receiver android:name=".AlarmReceiver">
+            <intent-filter>
+                <action android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+                <action android:name="com.adguard.contentblocker.UPDATE_FILTER"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

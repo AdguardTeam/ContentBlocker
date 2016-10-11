@@ -48,7 +48,7 @@ public interface FilterService {
      *
      * @return List of filters that were updated
      */
-    List<FilterList> checkFilterUpdates();
+    List<FilterList> checkFilterUpdates(boolean force);
 
     /**
      * Schedules filters updates periodic job.

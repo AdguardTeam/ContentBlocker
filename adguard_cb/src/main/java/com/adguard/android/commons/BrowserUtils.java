@@ -210,12 +210,15 @@ public class BrowserUtils {
     }
 
     public static void startYandexBrowser(Context context) {
-        List<PackageInfo> installedPackages = context.getPackageManager().getInstalledPackages(PackageManager.GET_ACTIVITIES);
+        Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
+        mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+
+        List<ResolveInfo> installedPackages = context.getPackageManager().queryIntentActivities(mainIntent, 0);
 
         // This is made because of differences in the name of the packages for the Beta and Alpha version
-        for (PackageInfo installedPackage : installedPackages) {
-            if (installedPackage.packageName.contains("yandex.browser")) {
-                ComponentName component = new ComponentName(installedPackage.packageName, "com.yandex.browser.YandexBrowserMainActivity");
+        for (ResolveInfo resolveInfo : installedPackages) {
+            if (resolveInfo.activityInfo.packageName.contains("yandex.browser")) {
+                ComponentName component = new ComponentName(resolveInfo.activityInfo.packageName, resolveInfo.activityInfo.name);
                 startBrowser(context, component);
             }
         }

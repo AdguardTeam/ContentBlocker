@@ -24,6 +24,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
+import android.util.Log;
 import com.adguard.android.contentblocker.AlarmReceiver;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.ServiceLocator;
@@ -135,11 +136,16 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     @Override
     public void scheduleFiltersUpdate() {
         Intent alarmIntent = new Intent(AlarmReceiver.UPDATE_FILTER_ACTION);
-        PendingIntent broadcastIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
 
-        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        boolean isRunning = PendingIntent.getBroadcast(context, 0, alarmIntent, PendingIntent.FLAG_NO_CREATE) != null;
+        if (!isRunning) {
+            PendingIntent broadcastIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
 
-        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, AlarmManager.INTERVAL_HOUR, AlarmManager.INTERVAL_HOUR, broadcastIntent);
+            AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+            alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, AlarmManager.INTERVAL_HOUR, AlarmManager.INTERVAL_HOUR, broadcastIntent);
+        } else {
+            LOG.info("Filters update is running");
+        }
     }
 
     @Override

@@ -40,24 +40,23 @@
         <activity
             android:name=".FiltersActivity"
             android:label="@string/filters"
-            android:screenOrientation="portrait"
             android:parentActivityName=".SettingsActivity"
             android:theme="@style/AppTheme.Toolbar"/>
         <activity
             android:name=".NoBrowsersFoundActivity"
             android:theme="@style/AppTheme.Toolbar"/>
 
+        <activity
+                android:name=".onboarding.OnboardingActivity"
+                android:label="@string/title_activity_onboarding"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme"/>
+
         <provider
             android:name=".FiltersContentProvider"
             android:authorities="com.adguard.android.contentblocker.contentBlocker.contentProvider"
             android:enabled="true"
             android:exported="true"/>
-
-        <activity
-            android:name=".onboarding.OnboardingActivity"
-            android:label="@string/title_activity_onboarding"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
 
         <receiver android:name=".AlarmReceiver">
             <intent-filter>

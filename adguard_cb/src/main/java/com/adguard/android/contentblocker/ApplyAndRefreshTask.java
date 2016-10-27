@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 
 import com.adguard.android.service.FilterService;
+import com.adguard.android.ui.utils.ProgressDialogUtils;
 
 /**
  * Created by Revertron on 09.06.2016.
@@ -22,7 +23,7 @@ public class ApplyAndRefreshTask extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected void onPreExecute() {
-        dialog = ProgressDialog.show(activity, null, activity.getText(R.string.please_wait), true);
+        dialog = ProgressDialogUtils.showProgressDialog(activity, -1, R.string.please_wait);
     }
 
     @Override
@@ -33,8 +34,6 @@ public class ApplyAndRefreshTask extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected void onPostExecute(Void res) {
-        if (dialog != null && dialog.isShowing()) {
-            dialog.dismiss();
-        }
+        ProgressDialogUtils.dismissProgressDialog(dialog);
     }
 }

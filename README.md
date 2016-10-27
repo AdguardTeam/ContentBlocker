@@ -19,7 +19,7 @@ Select 'Adguard Content Blocker' there and choose preferrable filters in apps se
 
 ### Releases
 
-* Latest beta version: [1.2.2](https://github.com/AdguardTeam/ContentBlocker/releases/tag/v1.2.2)
+* Latest beta version: [1.3.0](https://github.com/AdguardTeam/ContentBlocker/releases/tag/v1.3.0)
 
 All releases: 
 https://github.com/AdguardTeam/ContentBlocker/releases

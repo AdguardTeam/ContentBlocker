@@ -30,6 +30,7 @@ import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ui.ClickViewPager;
 import com.adguard.android.service.PreferencesService;
 import com.adguard.commons.concurrent.ExecutorsPool;
+import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.List;
 import java.util.Set;
@@ -205,7 +206,7 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
         FragmentTransaction transaction = fragmentManager.beginTransaction();
 
         List<Fragment> fragments = fragmentManager.getFragments();
-        if (fragments != null) {
+        if (CollectionUtils.isNotEmpty(fragments)) {
             for (Fragment fragment : fragments) {
                 Log.i(TAG, "Removing fragment " + fragment.toString());
                 transaction.remove(fragment);

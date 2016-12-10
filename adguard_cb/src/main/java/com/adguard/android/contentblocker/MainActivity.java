@@ -134,8 +134,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         String[] menuTitles = getResources().getStringArray(R.array.menu_titles);
         int[] images = {
                 R.drawable.ic_settings_black,
-                0,
-                // 0, // Whitelist is unimplemented now
+                R.drawable.ic_filter_black_24dp,
                 R.drawable.ic_sync_black_24dp,
                 R.drawable.ic_stars_black,
                 R.drawable.ic_info_black_24dp,

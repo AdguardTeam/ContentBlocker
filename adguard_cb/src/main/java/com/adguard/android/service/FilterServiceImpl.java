@@ -385,7 +385,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     }
 
     private void updateFilterRules(int filterId) throws IOException {
-        final List<String> rules = ServiceApiClient.downloadFilterRules(context, filterId, null);
+        final List<String> rules = ServiceApiClient.downloadFilterRules(context, filterId);
         filterRuleDao.setFilterRules(filterId, rules);
     }
 

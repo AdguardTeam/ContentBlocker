@@ -1,41 +1,38 @@
 /**
- This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
- Copyright © 2016 Performix LLC. All rights reserved.
-
- Adguard Content Blocker is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by the
- Free Software Foundation, either version 3 of the License, or (at your option)
- any later version.
-
- Adguard Content Blocker is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
- or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
- You should have received a copy of the GNU General Public License along with
- Adguard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
+ * This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
+ * Copyright © 2016 Performix LLC. All rights reserved.
+ * <p/>
+ * Adguard Content Blocker is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or (at your option)
+ * any later version.
+ * <p/>
+ * Adguard Content Blocker is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * <p/>
+ * You should have received a copy of the GNU General Public License along with
+ * Adguard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
 package com.adguard.android.contentblocker;
 
 import android.content.Context;
-
 import com.adguard.android.commons.RawResources;
 import com.adguard.android.filtering.api.HttpServiceClient;
 import com.adguard.android.model.FilterList;
 import com.adguard.commons.web.UrlUtils;
-
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.time.DateUtils;
 import org.codehaus.jackson.annotate.JsonAutoDetect;
 import org.codehaus.jackson.annotate.JsonMethod;
-import org.codehaus.jackson.map.DeserializationConfig;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.type.TypeReference;
 import org.json.JSONException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.text.ParseException;
+import java.util.*;
 
 /**
  * Special client to communicate with out backend
@@ -43,12 +40,10 @@ import java.util.List;
 public class ServiceApiClient extends HttpServiceClient {
 
     private static final Logger LOG = LoggerFactory.getLogger(ServiceApiClient.class);
+
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     static {
-        OBJECT_MAPPER.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        OBJECT_MAPPER.configure(DeserializationConfig.Feature.FAIL_ON_NULL_FOR_PRIMITIVES, false);
-        OBJECT_MAPPER.configure(DeserializationConfig.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
         OBJECT_MAPPER.setVisibility(JsonMethod.FIELD, JsonAutoDetect.Visibility.ANY);
     }
 
@@ -56,16 +51,17 @@ public class ServiceApiClient extends HttpServiceClient {
      * Downloads filter rules
      *
      * @param filterId    Filter id
-     * @param webmasterId Webmaster ID
      * @return List of rules
      * @throws IOException
      */
-    public static List<String> downloadFilterRules(Context context, int filterId, String webmasterId) throws IOException {
+    public static List<String> downloadFilterRules(Context context, int filterId) throws IOException {
         String downloadUrl = RawResources.getFilterUrl(context);
         downloadUrl = downloadUrl.replace("{0}", UrlUtils.urlEncode(Integer.toString(filterId)));
-        downloadUrl = downloadUrl.replace("{1}", UrlUtils.urlEncode(webmasterId != null ? webmasterId : ""));
+
+        LOG.info("Sending request to {}", downloadUrl);
         String response = downloadString(downloadUrl);
 
+        LOG.debug("Response length is {}", response.length());
         String[] rules = StringUtils.split(response, "\r\n");
         List<String> filterRules = new ArrayList<>();
         for (String line : rules) {
@@ -85,32 +81,60 @@ public class ServiceApiClient extends HttpServiceClient {
      * @return filters list with downloaded versions
      */
     public static List<FilterList> downloadFilterVersions(Context context, List<FilterList> filters) throws IOException, JSONException {
-        StringBuilder sb = new StringBuilder();
-        for (FilterList filter : filters) {
-            sb.append(filter.getFilterId());
-            sb.append(",");
-        }
-
-        if (sb.length() > 0) {
-            sb.deleteCharAt(sb.length() - 1);
-        } else {
-            LOG.info("Empty filters list, exiting");
-            return null;
-        }
-
-        String downloadUrl = RawResources.getCheckFilterVersionsUrl(context).replace("{0}", UrlUtils.urlEncode(sb.toString()));
+        String downloadUrl = RawResources.getCheckFilterVersionsUrl(context);
+        LOG.info("Sending request to {}", downloadUrl);
         String response = downloadString(downloadUrl);
-        if (response == null) {
+        if (StringUtils.isBlank(response)) {
             return null;
         }
 
-        LOG.debug("Filters update check response: {}", response);
+        Set<Integer> filterIds = new HashSet<>(filters.size());
+        for (FilterList filter : filters) {
+            filterIds.add(filter.getFilterId());
+        }
 
-        return parseFiltersVersionData(response);
+        Map map = readValue(response, Map.class);
+        if (map == null || !map.containsKey("filters")) {
+            LOG.error("Filters parse error! Response:\n{}", response);
+            return null;
+        }
+
+        ArrayList filterList = (ArrayList) map.get("filters");
+        List<FilterList> result = new ArrayList<>(filters.size());
+        String[] parsePatterns = {"yyyy-MM-dd'T'HH:mm:ssZ"};
+
+        for (Object filterObj : filterList) {
+            Map filter = (Map) filterObj;
+            int filterId = (int) filter.get("filterId");
+            if (!filterIds.contains(filterId)) {
+                continue;
+            }
+            FilterList list = new FilterList();
+            list.setName((String) filter.get("name"));
+            list.setDescription((String) filter.get("description"));
+            list.setFilterId(filterId);
+            list.setVersion((String) filter.get("version"));
+            try {
+                String timeUpdated = (String) filter.get("timeUpdated");
+                list.setTimeUpdated(DateUtils.parseDate(timeUpdated, parsePatterns));
+            } catch (ParseException e) {
+                LOG.error("Unable to parse date from filters:\n", e);
+            }
+            result.add(list);
+        }
+
+        return result;
+
     }
 
-    private static List<FilterList> parseFiltersVersionData(String json) throws IOException {
-        return OBJECT_MAPPER.readValue(json, new TypeReference<List<FilterList>>() {
-        });
+    private static Map readValue(String src, Class<Map> valueType) {
+        try {
+            return OBJECT_MAPPER.readValue(src, valueType);
+        } catch (Exception ex) {
+            if (LOG.isDebugEnabled()) {
+                LOG.warn("Cannot parse URL={}:\r\n", src, ex);
+            }
+            return null;
+        }
     }
 }

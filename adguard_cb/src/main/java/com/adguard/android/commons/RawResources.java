@@ -18,13 +18,11 @@ package com.adguard.android.commons;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.support.v4.util.ArrayMap;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.view.inputmethod.InputMethodSubtype;
 
 import com.adguard.android.contentblocker.R;
-
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -39,15 +37,6 @@ import java.util.*;
  */
 public class RawResources {
 
-    /**
-     * Map with languages supported by application.
-     */
-    public final static Map<String, Integer> SUPPORTED_LANGUAGES;
-    /**
-     * Default language used by application if device locale
-     * is not supported.
-     */
-    public final static String DEFAULT_LANGUAGE = "en";
     private final static Logger LOG = LoggerFactory.getLogger(RawResources.class);
 
     private static Properties properties;
@@ -57,12 +46,6 @@ public class RawResources {
     private static String insertFiltersScript;
     private static String insertFiltersLocalizationScript;
     private static String enableDefaultFiltersScript;
-
-    static {
-        SUPPORTED_LANGUAGES = new ArrayMap<>();
-        SUPPORTED_LANGUAGES.put("en", R.string.app_language_english);
-        SUPPORTED_LANGUAGES.put("ru", R.string.app_language_russian);
-    }
 
     /**
      * Gets check filters versions url
@@ -94,126 +77,6 @@ public class RawResources {
         }
 
         return properties.getProperty("get.filter.url");
-    }
-
-    /**
-     * Gets feedback url
-     *
-     * @param context Context
-     * @return Feedback api url
-     */
-    public static String getFeedbackUrl(Context context) {
-        if (properties == null) {
-            if (loadProperties(context) == null) {
-                return null;
-            }
-        }
-
-        return properties.getProperty("feedback.url");
-    }
-
-    /**
-     * Gets application status url
-     *
-     * @param context Current context
-     * @return Url for getting application status
-     */
-    public static String getApplicationStatusUrl(Context context) {
-        if (properties == null) {
-            if (loadProperties(context) == null) {
-                return null;
-            }
-        }
-
-        return properties.getProperty("status.url");
-    }
-
-    /**
-     * @param context Context
-     * @return check application update info url.
-     */
-    public static String getCheckUpdateUrl(Context context) {
-        if (properties == null) {
-            if (loadProperties(context) == null) {
-                return null;
-            }
-        }
-
-        return properties.getProperty("check.update.url");
-    }
-
-    /**
-     * Gets purchase adguard license key url
-     *
-     * @param context Context
-     * @return Purchase url
-     */
-    public static String getPurchaseAdguardLicenceKeyUrl(Context context) {
-        if (properties == null) {
-            if (loadProperties(context) == null) {
-                return null;
-            }
-        }
-
-        return properties.getProperty("purchase.license.key.url");
-    }
-
-    /**
-     * Gets adguard account url
-     *
-     * @param context Application context
-     * @return Personal account url
-     */
-    public static String getAdguardAccountUrl(Context context) {
-        if (properties == null) {
-            if (loadProperties(context) == null) {
-                return null;
-            }
-        }
-
-        return properties.getProperty("adguard.account.url");
-    }
-
-    /**
-     * @param context Context
-     * @return reset license url
-     */
-    public static String getResetLicenseUrl(Context context) {
-        if (properties == null) {
-            if (loadProperties(context) == null) {
-                return null;
-            }
-        }
-
-        return properties.getProperty("reset.license.url");
-    }
-
-    /**
-     * @param context Context
-     * @return reset license url
-     */
-    public static String getRequestLicenseTrialUrl(Context context) {
-        if (properties == null) {
-            if (loadProperties(context) == null) {
-                return null;
-            }
-        }
-
-        return properties.getProperty("request.trial.url");
-    }
-
-    /**
-     * @param context Context
-     * @return license payment url
-     */
-    public static String getLicensePaymentUrl(Context context) {
-        if (properties == null) {
-            if (loadProperties(context) == null) {
-                return null;
-            }
-        }
-
-        return properties.getProperty("license.payment.url");
     }
 
     /**

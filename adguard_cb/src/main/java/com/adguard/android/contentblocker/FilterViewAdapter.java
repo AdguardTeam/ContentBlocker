@@ -52,7 +52,7 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
         this.context = context;
         this.filterService = filterService;
         this.layoutInflater = LayoutInflater.from(context);
-        needToShowWarningDialog = filterService.getEnabledFilterListCount() < TOO_MANY_FILTERS_THRESHOLD;
+        this.needToShowWarningDialog = filterService.getEnabledFilterListCount() < TOO_MANY_FILTERS_THRESHOLD;
     }
 
     @Override

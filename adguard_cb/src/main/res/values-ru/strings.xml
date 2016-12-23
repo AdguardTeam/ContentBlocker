@@ -80,4 +80,5 @@
     <string name="enable_adguard">Включить Adguard</string>
     <string name="adguard_conditions_list1">Вы должны использовать браузер с поддержкой технологии блокирования контента.</string>
     <string name="adguard_conditions_list2">Adguard должен быть включен в настройках этого браузера.</string>
+    <string name="exit">Выход</string>
 </resources>

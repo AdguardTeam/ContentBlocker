@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="menu_titles">
-        <item>Settings</item>
-        <item>Filters</item>
+        <item>@string/settings</item>
+        <item>@string/stats_enabled_filters</item>
         <!--<item>Whitelist</item> Unimplemented for now -->
-        <item>Check filter updates</item>
-        <item>Rate Adguard</item>
-        <item>About</item>
-        <item>Exit</item>
+        <item>@string/check_filter_updates</item>
+        <item>@string/rateAdguardButtonText</item>
+        <item>@string/about</item>
+        <item>@string/exit</item>
     </string-array>
 </resources>

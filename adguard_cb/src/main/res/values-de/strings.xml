@@ -81,4 +81,5 @@
     <string name="choose_browser">Browser auswählen</string>
     <string name="enable_adguard">Adguard aktivieren</string>
     <string name="main_activity_adguard_info">Adguard blockiert Werbung, schützt Ihre Privatsphäre, beschleunigt die Ladezeiten der Seiten und reduziert Ihre mobile Datennutzung.</string>
+    <string name="exit">Ausgang</string>
 </resources>

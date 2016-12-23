@@ -91,4 +91,5 @@
     <string name="logo" translatable="false">Application logo</string>
     <string name="main_activity_adguard_info">Adguard blocks ads, protects your privacy, boosts page load speed and reduces your mobile data usage.</string>
     <string name="list_bullet" translatable="false">•</string>
+    <string name="exit">Beenden</string>
 </resources>

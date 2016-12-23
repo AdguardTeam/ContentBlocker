@@ -81,4 +81,5 @@
     <string name="choose_browser">Selecteer browser</string>
     <string name="enable_adguard">Activeer Adguard</string>
     <string name="main_activity_adguard_info">Adguard blokkeert advertenties, versnelt opladen van pagina\'s en vermindert gebruik van mobiele data.</string>
+    <string name="exit">Afsluiten</string>
 </resources>

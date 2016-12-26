@@ -81,4 +81,5 @@
     <string name="choose_browser">Tarayıcı seç</string>
     <string name="enable_adguard">Adguard\'ı Etkinleştir</string>
     <string name="main_activity_adguard_info">Adguard reklamları engeller, gizliliğinizi korur, sayfa yükleme hızını artırır ve mobil veri kullanımınızı azaltır.</string>
+    <string name="exit">Çıkış</string>
 </resources>

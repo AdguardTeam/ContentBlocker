@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="refresh">Osvježi</string>
+    <string name="please_wait">Molimo pričekajte...</string>
+    <string name="main_info">Ova aplikacija je dodatak za preglednike koji podržavaju blokiranje elemenata.\n\nTrenutno postoje dva takva preglednika:\n\n1. Samsung Internet browser\n2. Yandex Browser\n\nUz pomoć ove aplikacije možete blokirati sve oglase u tim preglednicima.\n\nTakođer, možete odabrati koje filtere želite koristiti u postavkama.</string>
+    <string name="progressGenericErrorText">Dogodila se neka pogreška!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} filter(a) uvezen(o) uspješno!</string>
+    <string name="importUserRulesErrorResultMessage">Pogreška uvoženja filtera!</string>
+    <string name="importUserRulesProgressDialogTitle">Uvoz u tijeku</string>
+    <string name="importUserRulesProgressDialogMessage">Učitavanje...</string>
+    <string name="checkUpdatesProgressDialogTitle">Provjera ažuriranja</string>
+    <string name="checkUpdatesProgressDialogMessage">Provjera ažuriranja, molimo pričekajte...</string>
+    <string name="checkUpdatesErrorResultMessage">Ažuriranje neuspješno. Molimo pokušajte ponovno kasnije.</string>
+    <string name="checkUpdatesZeroResultMessage">Koristite najnovije verzije filtera.</string>
+    <string name="checkUpdatesOneResultMessage">Jedan filter je ažuriran: {0}</string>
+    <string name="checkUpdatesManyResultMessage">{0} filtera je ažurirano:{1}</string>
+    <string name="action_settings">Postavke</string>
+    <string name="openned_drawer_title">Opcije</string>
+    <string name="about">O</string>
+    <string name="settings">Postavke</string>
+    <string name="pref_autoupdate_filters">Automatsko ažuriranje filtera</string>
+    <string name="pref_summary_autoupdate_filters">Ažurirajte filtere automatski</string>
+    <string name="pref_update_wifi_only">Ažuriranje samo preko Wi-Fija</string>
+    <string name="pref_summary_update_wifi_only">Ne ažuriraj filtere preko mobilne mreže</string>
+    <string name="pref_show_useful_ads">Pokaži korisne oglase</string>
+    <string name="pref_summary_show_useful_ads">Odblokiraj oglase koji bi mogli biti korisni korisniku.</string>
+    <string name="pref_filters_category">Filteri</string>
+    <string name="pref_summary_filters_category">Odaberite koje filtere koristiti</string>
+    <string name="filters">Filteri</string>
+    <string name="stats_enabled_filters">Filteri</string>
+    <string name="stats_enabled_rules">Pravila</string>
+    <string name="stats_update_time">Ažurirano:</string>
+    <string name="start_samsung_browser">Otvorite Samsung Internet postavke</string>
+    <string name="start_yandex_browser">Otvorite Yandex Browser postavke</string>
+    <string name="open_browsers_info">Za omogućivanje blokiranja elemenata koristeći naše filtere možete direktno otvoriti postavke preglednika klikajući ovdje:</string>
+    <string name="filterVersionTemplate">Verzija {0}.</string>
+    <string name="filterUpdatedTemplate">Ažurirano {0} u {1}.</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">Verzija {0}</string>
+    <string name="copyrightInfoTextViewText">© 2008–2016. Performix LLC.\nSva prava pridržana.</string>
+    <string name="rateAdguardButtonText">Ocjeni Adguard</string>
+    <string name="feedbackButtonText">Pošalji povratne informacije</string>
+    <string name="officialSiteLabelText">Službena stranica</string>
+    <string name="forumLabelText">Forum</string>
+    <string name="emailLabelText">E-mail</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Politika privatnosti</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="copyrightMessage">Adguard Content Blocker je besplatan softver: možete ga redistributirati i/ili modificirati pod uvijetima GNU General Public Licence kako je objavljeno od strane Free Software Foundationa, bilo verzije 3 ili licence, ili (po vašoj opciji) bilo kojoj kasnijoj verziji.</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
+    <string name="install_browsers">Nemate instalirane podržane preglednike! Možete ih instalirati s Google Play-a:</string>
+    <string name="install_samsung_browser">Instalirajte Samsung Internet</string>
+    <string name="install_yandex_browser">Instalirajte Yandex Browser</string>
+    <string name="issuesButtonText">Prijavite pogrešku</string>
+    <string name="githubLabelText">Izvorni kod</string>
+    <!--Do not translate.-->
+    <string name="warning">Upozorenje</string>
+    <string name="too_many_filters_warning">Odabrali ste previše filtera. Može Vam se značajno usporiti pregledavanje weba.</string>
+    <string name="pref_whitelist_category">Bijela lista</string>
+    <string name="pref_summary_whitelist_category">Domene na ovoj listi se neće filtrirati</string>
+    <string name="onboarding_title1">Dobro došli!</string>
+    <string name="onboarding_text1">Samo ste nekoliko koraka dalje od brzog i čistog interneta bez oglasa.</string>
+    <string name="onboarding_button_text1">Započnite</string>
+    <string name="onboarding_title2">Odaberite preglednik</string>
+    <string name="onboarding_text2">Za upravljanje, Adguard treba preglednik koji podržava tehnologiju blokiranja oglasa. Trenutno, postoje samo dva takva preglednika.</string>
+    <string name="onboarding_button_text2">Odaberite preglednik</string>
+    <string name="onboarding_title3">Još malo!</string>
+    <string name="onboarding_text3">Podržan preglednik pronađen. Sve što je ostalo jest omogućivanje Adguarda u njegovim postavkama.</string>
+    <string name="onboarding_button_text3">Omogući Adguard</string>
+    <string name="count">Zbroj</string>
+    <string name="check_filter_updates">Provjerite ažuriranja filtera</string>
+    <string name="go_to_filters">Odi do filtera</string>
+    <string name="browser">Preglednik</string>
+    <string name="install">Instalacija</string>
+    <string name="start">Pokretanje</string>
+    <string name="get_started">Započnite</string>
+    <string name="adguard_conditions_title">Dva zahtjeva moraju biti ispunjena da bi Adguard radio:</string>
+    <string name="adguard_conditions_list1">Trebali biste koristiti preglednik koji podržava tehnologiju blokiranja elemenata.</string>
+    <string name="adguard_conditions_list2">Adguard mora biti omogućen u postakama blokiranja elemenata u pregledniku.</string>
+    <string name="choose_browser">Odaberite preglednik</string>
+    <string name="enable_adguard">Omogući Adguard</string>
+    <string name="main_activity_adguard_info">Adguard blokira oglase, štiti vašu privatnost, ubzava učitavanje web stranica i smanjuje potrošnju mobilnih podataka.</string>
+    <string name="exit">Izlaz</string>
+</resources>

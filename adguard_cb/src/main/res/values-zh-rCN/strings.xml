@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="refresh">刷新</string>
+    <string name="please_wait">请稍后...</string>
+    <string name="main_info">此应用为支持内容拦截的浏览器的扩展。 \n\n当前有两种支持内容拦截的浏览器：\n\n1. Samsung Internet browser\n2. Yandex Browser\n\n有此应用的帮助，您可以拦截以上浏览器内的所有广告。\n\n此外，您可在设置内选择要使用的过滤器。</string>
+    <string name="progressGenericErrorText">发生错误！</string>
+    <string name="importUserRulesSuccessResultMessage">{0} 个过滤器成功导入！</string>
+    <string name="importUserRulesErrorResultMessage">导入过滤器错误！</string>
+    <string name="importUserRulesProgressDialogTitle">导入进行中</string>
+    <string name="importUserRulesProgressDialogMessage">加载中...</string>
+    <string name="checkUpdatesProgressDialogTitle">检查更新</string>
+    <string name="checkUpdatesProgressDialogMessage">正在检查更新，请稍后...</string>
+    <string name="checkUpdatesErrorResultMessage">更新失败。请稍后再试。</string>
+    <string name="checkUpdatesZeroResultMessage">您正在使用过滤器的最新版本。</string>
+    <string name="checkUpdatesOneResultMessage">一个过滤器已更新：{0}</string>
+    <string name="checkUpdatesManyResultMessage">{0} 个过滤器已更新：{1}</string>
+    <string name="action_settings">设置</string>
+    <string name="openned_drawer_title">选项</string>
+    <string name="about">关于</string>
+    <string name="settings">设置</string>
+    <string name="pref_autoupdate_filters">自动更新过滤器</string>
+    <string name="pref_summary_autoupdate_filters">自动更新过滤器</string>
+    <string name="pref_update_wifi_only">仅通过 Wi-Fi 更新</string>
+    <string name="pref_summary_update_wifi_only">不通过移动网络更新过滤器</string>
+    <string name="pref_show_useful_ads">显示有用的广告</string>
+    <string name="pref_summary_show_useful_ads">不拦截对用户有用的广告。</string>
+    <string name="pref_filters_category">过滤器</string>
+    <string name="pref_summary_filters_category">选择要使用的过滤器</string>
+    <string name="filters">过滤器</string>
+    <string name="stats_enabled_filters">过滤器</string>
+    <string name="stats_enabled_rules">规则</string>
+    <string name="stats_update_time">更新于</string>
+    <string name="start_samsung_browser">打开 Samsung Internet 选项</string>
+    <string name="start_yandex_browser">打开 Yandex Browser 选项</string>
+    <string name="open_browsers_info">要使用我们的过滤器进行内容拦截，您可点击此处以直接打开浏览器选项：</string>
+    <string name="filterVersionTemplate">版本 {0}。</string>
+    <string name="filterUpdatedTemplate">已更新 {0} 于 {1}。</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">版本 {0}</string>
+    <string name="copyrightInfoTextViewText">© 2008–2016。Performix LLC。\n保留所有版权。</string>
+    <string name="rateAdguardButtonText">评级 Adguard</string>
+    <string name="feedbackButtonText">发送反馈</string>
+    <string name="officialSiteLabelText">官方网站</string>
+    <string name="forumLabelText">论坛</string>
+    <string name="emailLabelText">Email</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">隐私策略</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">最终用户许可协议</a></string>
+    <string name="copyrightMessage">Adguard Content Blocker 为免费软件：您可在遵守由自由软件基金会发布的 GUN 通用公共许可 v3 或更新版本的条款下重新分布或修改它。</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
+    <string name="install_browsers">您未完整受支持的浏览器！您可从 Google Play 安装它们：</string>
+    <string name="install_samsung_browser">安装 Samsung Internet</string>
+    <string name="install_yandex_browser">安装 Yandex Browser</string>
+    <string name="issuesButtonText">报告错误</string>
+    <string name="githubLabelText">源码</string>
+    <!--Do not translate.-->
+    <string name="warning">警告</string>
+    <string name="too_many_filters_warning">您选定的过滤器订阅过多。它会显著降低您的网络浏览速度。</string>
+    <string name="pref_whitelist_category">白名单</string>
+    <string name="pref_summary_whitelist_category">不过滤此列表内的域</string>
+    <string name="onboarding_title1">欢迎！</string>
+    <string name="onboarding_text1">你仅需几步便可远离广告，快速浏览干净的因特网。</string>
+    <string name="onboarding_button_text1">入门</string>
+    <string name="onboarding_title2">选择浏览器</string>
+    <string name="onboarding_text2">Adguard 需要支持广告拦截技术的浏览器以进行操作。当前有两种浏览器可用。</string>
+    <string name="onboarding_button_text2">选择浏览器</string>
+    <string name="onboarding_title3">几乎完成了！</string>
+    <string name="onboarding_text3">找到适当的浏览器。在其设备内仅开启 Adguard。</string>
+    <string name="onboarding_button_text3">开启 Adguard</string>
+    <string name="count">技术</string>
+    <string name="check_filter_updates">检查过滤器更新</string>
+    <string name="go_to_filters">转到过滤器</string>
+    <string name="browser">浏览器</string>
+    <string name="install">安装</string>
+    <string name="start">开始</string>
+    <string name="get_started">入门</string>
+    <string name="adguard_conditions_title">要使 Adguard 工作，需要符合两个条件：</string>
+    <string name="adguard_conditions_list1">使用支持内容拦截技术的浏览器。</string>
+    <string name="adguard_conditions_list2">在此浏览器的内容拦截设置内必须开启 Adguard。</string>
+    <string name="choose_browser">选择浏览器</string>
+    <string name="enable_adguard">开启 Adguard</string>
+    <string name="main_activity_adguard_info">Adguard 可拦截广告，保护您的隐私，提升页面加载速度，降低移动数据使用率。</string>
+    <string name="exit">退出</string>
+</resources>

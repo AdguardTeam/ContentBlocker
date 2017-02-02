@@ -25,7 +25,7 @@
         <item name="android:indeterminateTint">@color/colorPrimary</item>
         <item name="android:indeterminateTintMode">src_in</item>
         <item name="android:textColorPrimaryInverse">#e0e0e0</item>
-        <item name="android:textColorSecondary">@color/secondary_text_material</item>
+        <item name="android:textColorSecondary">@color/white</item>
         <item name="android:textColorPrimary">#202020</item>
         <item name="android:alertDialogTheme">@style/AlertDialog</item>
     </style>
@@ -52,8 +52,5 @@
         <item name="android:layout_marginRight">10dp</item>
         <item name="android:layout_marginBottom">0dp</item>
         <item name="android:clickable">true</item>
-        <!--<item name="android:foreground">?android:attr/selectableItemBackground</item>-->
-        <!--<item name="android:foreground">@drawable/cardview_selector</item>-->
-        <!--<item name="android:colorControlHighlight">#DBDBDB</item>-->
     </style>
 </resources>

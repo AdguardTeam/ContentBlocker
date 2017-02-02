@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
 import android.support.v4.widget.DrawerLayout;
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         drawerLayout.setStatusBarBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
 
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.openned_drawer_title, R.string.closed_drawer_title);
-        drawerToggle.setHomeAsUpIndicator(R.drawable.ic_drawer);
+        //drawerToggle.setHomeAsUpIndicator(R.drawable.ic_drawer);
 
         findViewById(R.id.go_to_filters).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -265,7 +266,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        drawerToggle.setHomeAsUpIndicator(R.drawable.ic_drawer);
+        //drawerToggle.setHomeAsUpIndicator(R.drawable.ic_drawer);
         // Sync the toggle state after onRestoreInstanceState has occurred.
         drawerToggle.syncState();
     }
@@ -274,7 +275,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         drawerToggle.onConfigurationChanged(newConfig);
-        drawerToggle.setHomeAsUpIndicator(R.drawable.ic_drawer);
+       // drawerToggle.setHomeAsUpIndicator(R.drawable.ic_drawer);
     }
 
     @Override

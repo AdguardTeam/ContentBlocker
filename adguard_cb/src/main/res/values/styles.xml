@@ -11,7 +11,7 @@
         <item name="android:colorButtonNormal">#ff0000</item>
         <item name="android:editTextColor">@color/colorPrimary</item>
         <item name="android:textColorPrimaryInverse">#e0e0e0</item>
-        <item name="android:textColorSecondary">@color/secondary_text_material</item>
+        <item name="android:textColorSecondary">@color/white</item>
         <item name="android:colorControlHighlight">@color/colorPrimary</item>
         <item name="android:colorBackground">#e0e0e0</item>
         <!--<item name="android:colorForeground">#202020</item>-->

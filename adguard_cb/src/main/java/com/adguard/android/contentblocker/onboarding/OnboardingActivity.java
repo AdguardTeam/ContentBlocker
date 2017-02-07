@@ -208,8 +208,10 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
         List<Fragment> fragments = fragmentManager.getFragments();
         if (CollectionUtils.isNotEmpty(fragments)) {
             for (Fragment fragment : fragments) {
-                Log.i(TAG, "Removing fragment " + fragment.toString());
-                transaction.remove(fragment);
+                if (fragment != null) {
+                    Log.i(TAG, "Removing fragment " + fragment.toString());
+                    transaction.remove(fragment);
+                }
             }
         }
         transaction.commit();

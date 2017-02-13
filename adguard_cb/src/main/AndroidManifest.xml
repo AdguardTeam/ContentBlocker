@@ -13,6 +13,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <meta-data
             android:name="com.samsung.android.sbrowser.contentBlocker.interfaceVersion"
             android:value="API_1.0"/>
@@ -27,6 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
         <activity
             android:name=".AboutActivity"
             android:label="@string/about"
@@ -42,6 +44,12 @@
             android:label="@string/filters"
             android:parentActivityName=".SettingsActivity"
             android:theme="@style/AppTheme.Toolbar"/>
+        <activity
+            android:name=".UserFilterActivity"
+           android:label="@string/user_filter"
+           android:parentActivityName=".MainActivity"
+           android:theme="@style/AppTheme.Toolbar"/>
+
         <activity
             android:name=".NoBrowsersFoundActivity"
             android:theme="@style/AppTheme.Toolbar"/>

@@ -35,26 +35,22 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new PreferenceFragment()).commit();
         setContentView(R.layout.activity_settings);
         listView = (ListView) findViewById(R.id.listView);
+
         adapter = new PreferenceViewAdapter(this, new PreferenceDb(getApplicationContext()), this);
-        assert listView != null;
         listView.setAdapter(adapter);
+
         setupActionBar();
     }
 
     public void onResume() {
         super.onResume();
-        // Ugly but effective
         adapter = new PreferenceViewAdapter(this, new PreferenceDb(getApplicationContext()), this);
         listView.setAdapter(adapter);
     }
 
-    /**
-     * Set up the {@link android.app.ActionBar}, if the API is available.
-     */
-    private void setupActionBar() {
+   private void setupActionBar() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             // Show the Up button in the action bar.

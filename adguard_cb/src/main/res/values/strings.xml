@@ -92,4 +92,8 @@
     <string name="main_activity_adguard_info">Adguard blocks ads, protects your privacy, boosts page load speed and reduces your mobile data usage.</string>
     <string name="list_bullet" translatable="false">•</string>
     <string name="exit">Exit</string>
+    <string name="user_filter">User Filter</string>
+    <string name="enter_rule_text">Enter rule text</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
 </resources>

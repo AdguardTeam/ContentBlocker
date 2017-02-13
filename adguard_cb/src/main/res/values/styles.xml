@@ -29,9 +29,7 @@
     </style>
 
     <style name="AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog.FixedSize">
-        <item name="android:colorAccent">@color/colorAccent</item>
-        <!--<item name="background">@color/white</item>
-        <item name="android:background">@color/white</item>-->
+        <item name="android:colorAccent">@color/colorPrimary</item>
         <item name="android:textColor">@color/common_text</item>
         <item name="android:colorControlNormal">@color/colorPrimary</item>
         <item name="android:colorControlActivated">@color/colorPrimary</item>

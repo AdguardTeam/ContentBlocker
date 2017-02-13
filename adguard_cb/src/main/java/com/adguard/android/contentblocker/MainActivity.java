@@ -136,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         int[] images = {
                 R.drawable.ic_settings_black,
                 R.drawable.ic_filter_black_24dp,
+                R.drawable.ic_account_black_24dp,
                 R.drawable.ic_sync_black_24dp,
                 R.drawable.ic_stars_black,
                 R.drawable.ic_info_black_24dp,
@@ -409,7 +410,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     @Override
     public void onDrawerSlide(View drawerView, float slideOffset) {
-        // TODO make it better
         if (slideOffset > 0.5f && slideOffset < 0.7f) {
             invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
         }
@@ -449,13 +449,17 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                     break;
                 case 2:
                     drawerLayout.closeDrawers();
-                    refreshStatus();
+                    startActivity(new Intent(MainActivity.this, UserFilterActivity.class));
                     break;
                 case 3:
                     drawerLayout.closeDrawers();
-                    ActivityUtils.startMarket(MainActivity.this, getPackageName(), "rate_menu_item");
+                    refreshStatus();
                     break;
                 case 4:
+                    drawerLayout.closeDrawers();
+                    ActivityUtils.startMarket(MainActivity.this, getPackageName(), "rate_menu_item");
+                    break;
+                case 5:
                     drawerLayout.closeDrawers();
                     startActivity(new Intent(MainActivity.this, AboutActivity.class));
                     break;

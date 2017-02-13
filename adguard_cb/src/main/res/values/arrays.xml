@@ -3,7 +3,7 @@
     <string-array name="menu_titles">
         <item>@string/settings</item>
         <item>@string/stats_enabled_filters</item>
-        <!--<item>Whitelist</item> Unimplemented for now -->
+        <item>@string/user_filter</item>
         <item>@string/check_filter_updates</item>
         <item>@string/rateAdguardButtonText</item>
         <item>@string/about</item>

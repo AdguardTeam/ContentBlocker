@@ -254,13 +254,19 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
 
     @Override
     public void applyNewSettings() {
-        // TODO fix this crutch
         setShowUsefulAds(preferencesService.isShowUsefulAds());
-        List<String> allEnabledRules = getAllEnabledRules(true);
-        cachedFilterRuleCount = allEnabledRules.size();
+
+        List<String> rules = getAllEnabledRules(true);
+        Set<String> userRules = getUserRules();
+        if (!userRules.isEmpty()) {
+            rules.addAll(userRules);
+        }
+
+        cachedFilterRuleCount = rules.size();
+
         try {
             LOG.info("Saving {} filters...", cachedFilterRuleCount);
-            FileUtils.writeLines(new File(context.getFilesDir().getAbsolutePath() + "/filters.txt"), allEnabledRules);
+            FileUtils.writeLines(new File(context.getFilesDir().getAbsolutePath() + "/filters.txt"), rules);
             preferencesService.setFilterRuleCount(cachedFilterRuleCount);
             enableContentBlocker(context);
         } catch (IOException e) {

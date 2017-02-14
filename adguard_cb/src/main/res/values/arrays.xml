@@ -2,7 +2,7 @@
 <resources>
     <string-array name="menu_titles">
         <item>@string/settings</item>
-        <item>@string/stats_enabled_filters</item>
+        <item>@string/filters</item>
         <item>@string/user_filter</item>
         <item>@string/check_filter_updates</item>
         <item>@string/rateAdguardButtonText</item>

@@ -407,10 +407,16 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         private Activity activity;
         private String url;
 
+        private OnImportListener onImportListener;
+
         public ImportUserRulesTask(Activity activity, ProgressDialog progressDialog, String url) {
             super(progressDialog);
             this.activity = activity;
             this.url = url;
+
+            if (activity instanceof OnImportListener) {
+                onImportListener = (OnImportListener) activity;
+            }
         }
 
         @Override
@@ -449,6 +455,10 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
 
             String message = activity.getString(R.string.importUserRulesSuccessResultMessage).replace("{0}", String.valueOf(rulesList.size()));
             showToast(activity, message);
+
+            if (onImportListener != null) {
+                onImportListener.onSuccess();
+            }
         }
 
         private void onError() {
@@ -466,6 +476,10 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
             }
             return null;
         }
+    }
+
+    public interface OnImportListener {
+        void onSuccess();
     }
 
     /**

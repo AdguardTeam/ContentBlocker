@@ -41,7 +41,7 @@
     <string name="filterUpdatedTemplate">Updated {0} at {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Version {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008–2016. Performix LLC.\nAll Rights Reserved.</string>
+    <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nAll Rights Reserved.</string>
     <string name="rateAdguardButtonText">Rate Adguard</string>
     <string name="feedbackButtonText">Send Feedback</string>
     <string name="officialSiteLabelText">Official site</string>
@@ -96,4 +96,12 @@
     <string name="enter_rule_text">Enter rule text</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
+    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">The user filter is empty</string>
+    <string name="addUserRuleButtonText">Add rule</string>
+    <string name="importUserRulesButtonText">Import</string>
+    <string name="importUserRulesDialogTitle">Enter URL or path to file</string>
+    <string name="importUserRulesUrlErrorMessage">The URL is not valid</string>
+    <string name="clearUserRulesButtonText">Remove all</string>
+    <string name="browseButtonText">Browse</string>
 </resources>

@@ -241,6 +241,7 @@ public class BrowserUtils {
         context.startActivity(intent);
     }
 
+    // https://github.com/AdguardTeam/ContentBlocker/issues/53
     private static ComponentName getYandexBrowser(Context context, String action) {
         Intent mainIntent = new Intent();
         mainIntent.setAction(action);

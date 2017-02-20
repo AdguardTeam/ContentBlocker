@@ -24,4 +24,5 @@
     <color name="primaryText">#212121</color>
     <color name="secondaryText">#757575</color>
     <color name="black">#000000</color>
+    <color name="card_view_background_pressed">#FFDBDBDB</color>
 </resources>

@@ -31,9 +31,7 @@ import com.adguard.android.contentblocker.MainActivity;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.ui.utils.ActivityUtils;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Some functions for working with browsers
@@ -43,16 +41,32 @@ public class BrowserUtils {
     public static final String YANDEX = "yandex";
     public static final String SAMSUNG = "samsung";
 
+    public static final String YANDEX_BROWSER_PACKAGE = "com.yandex.browser";
+    public static final String SAMSUNG_BROWSER_PACKAGE = "com.sec.android.app.sbrowser";
+    public static final String SAMSUNG_CONTENT_BLOCKER_ACTION = "com.samsung.android.sbrowser.contentBlocker.ACTION_SETTING";
+    public static final String YANDEX_CONTENT_BLOCKER_ACTION = "com.yandex.browser.contentBlocker.ACTION_SETTING";
+    public static final String SAMSUNG_BROWSER_ACTIVITY = "com.sec.android.app.sbrowser.SBrowserMainActivity";
+    public static final String SAMSUNG_PACKAGE_PREFIX = "com.sec.";
+    public static final String REFERRER = "adguard1";
+
+    private static  final List<String> yandexBrowserPackageList = new ArrayList<>();
+
+    static {
+        yandexBrowserPackageList.add("com.yandex.browser");
+        yandexBrowserPackageList.add("com.yandex.browser.beta");
+        yandexBrowserPackageList.add("com.yandex.browser.alpha");
+    }
+
     public static Set<String> getBrowsersAvailableByIntent(Context context) {
         Set<String> result = new HashSet<>();
         Intent intent = new Intent();
-        intent.setAction("com.samsung.android.sbrowser.contentBlocker.ACTION_SETTING");
+        intent.setAction(SAMSUNG_CONTENT_BLOCKER_ACTION);
         List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
             for (ResolveInfo info : list) {
                 if (info.activityInfo.packageName.contains(YANDEX)) {
                     result.add(YANDEX);
-                } else if (info.activityInfo.packageName.contains("com.sec.") || info.activityInfo.packageName.contains(SAMSUNG)) {
+                } else if (info.activityInfo.packageName.contains(SAMSUNG_PACKAGE_PREFIX) || info.activityInfo.packageName.contains(SAMSUNG)) {
                     result.add(SAMSUNG);
                 }
             }
@@ -65,9 +79,9 @@ public class BrowserUtils {
         Set<String> result = new HashSet<>();
         List<PackageInfo> packages = context.getPackageManager().getInstalledPackages(0);
         for (PackageInfo packageInfo : packages) {
-            if (packageInfo.packageName.startsWith("com.yandex.browser")) {
+            if (packageInfo.packageName.startsWith(YANDEX_BROWSER_PACKAGE)) {
                 result.add(YANDEX);
-            } else if (packageInfo.packageName.startsWith("com.sec.android.app.sbrowser")) {
+            } else if (packageInfo.packageName.startsWith(SAMSUNG_BROWSER_PACKAGE)) {
                 result.add(SAMSUNG);
             }
         }
@@ -77,13 +91,13 @@ public class BrowserUtils {
 
     public static void openSamsungBlockingOptions(Context context) {
         Intent intent = new Intent();
-        intent.setAction("com.samsung.android.sbrowser.contentBlocker.ACTION_SETTING");
+        intent.setAction(SAMSUNG_CONTENT_BLOCKER_ACTION);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
             boolean found = false;
             for (ResolveInfo info : list) {
-                if (info.activityInfo.packageName.contains("com.sec.") || info.activityInfo.packageName.contains("samsung")) {
+                if (info.activityInfo.packageName.contains(SAMSUNG_PACKAGE_PREFIX) || info.activityInfo.packageName.contains(SAMSUNG)) {
                     found = true;
                     intent.setClassName(info.activityInfo.packageName, info.activityInfo.name);
                 }
@@ -96,11 +110,11 @@ public class BrowserUtils {
 
     public static boolean isSamsungBrowserAvailable(Context context) {
         Intent intent = new Intent();
-        intent.setAction("com.samsung.android.sbrowser.contentBlocker.ACTION_SETTING");
+        intent.setAction(SAMSUNG_CONTENT_BLOCKER_ACTION);
         List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
             for (ResolveInfo info : list) {
-                if (info.activityInfo.packageName.contains("com.sec.") || info.activityInfo.packageName.contains("samsung")) {
+                if (info.activityInfo.packageName.contains(SAMSUNG_PACKAGE_PREFIX) || info.activityInfo.packageName.contains(SAMSUNG)) {
                     return true;
                 }
             }
@@ -110,7 +124,7 @@ public class BrowserUtils {
 
     public static void openYandexBlockingOptions(Context context) {
         Intent intent = new Intent();
-        intent.setAction("com.yandex.browser.contentBlocker.ACTION_SETTING");
+        intent.setAction(YANDEX_CONTENT_BLOCKER_ACTION);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
@@ -119,26 +133,22 @@ public class BrowserUtils {
         }
 
         // For samsung-type action in Yandex browser
-        intent.setAction("com.samsung.android.sbrowser.contentBlocker.ACTION_SETTING");
+        intent.setAction(SAMSUNG_CONTENT_BLOCKER_ACTION);
         list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
-            boolean found = false;
-            for (ResolveInfo info : list)
-            {
-                if (info.activityInfo.packageName.contains(MainActivity.YANDEX)) {
-                    found = true;
-                    intent.setClassName(info.activityInfo.packageName, info.activityInfo.name);
-                }
+
+            ComponentName componentName = getYandexBrowser(context, SAMSUNG_CONTENT_BLOCKER_ACTION);
+            if (componentName != null) {
+                intent.setClassName(componentName.getPackageName(), componentName.getClassName());
             }
-            if (found) {
-                context.startActivity(intent);
-            }
+
+            context.startActivity(intent);
         }
     }
 
     public static boolean isYandexBrowserAvailable(Context context) {
         Intent intent = new Intent();
-        intent.setAction("com.yandex.browser.contentBlocker.ACTION_SETTING");
+        intent.setAction(YANDEX_CONTENT_BLOCKER_ACTION);
         List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
             for (ResolveInfo info : list) {
@@ -149,7 +159,7 @@ public class BrowserUtils {
         }
 
         // For samsung-type action in Yandex browser
-        intent.setAction("com.samsung.android.sbrowser.contentBlocker.ACTION_SETTING");
+        intent.setAction(SAMSUNG_CONTENT_BLOCKER_ACTION);
         list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
             for (ResolveInfo info : list) {
@@ -169,11 +179,11 @@ public class BrowserUtils {
                 int action = event.getActionMasked();
                 if (action == MotionEvent.ACTION_DOWN)
                 {
-                    ((CardView)v).setCardBackgroundColor(0xFFdbdbdb);
+                    ((CardView)v).setCardBackgroundColor(R.color.card_view_background_pressed);
                 }
                 else if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL || action == MotionEvent.ACTION_OUTSIDE)
                 {
-                    ((CardView)v).setCardBackgroundColor(0xFFffffff);
+                    ((CardView)v).setCardBackgroundColor(R.color.white);
                 }
                 return false;
             }
@@ -191,7 +201,7 @@ public class BrowserUtils {
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityUtils.startMarket(context, "com.yandex.browser", "adguard1");
+                ActivityUtils.startMarket(context, YANDEX_BROWSER_PACKAGE, REFERRER);
                 dialog.dismiss();
             }
         });
@@ -201,7 +211,7 @@ public class BrowserUtils {
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityUtils.startMarket(context, "com.sec.android.app.sbrowser", null);
+                ActivityUtils.startMarket(context, SAMSUNG_BROWSER_PACKAGE, null);
                 dialog.dismiss();
             }
         });
@@ -210,22 +220,16 @@ public class BrowserUtils {
     }
 
     public static void startYandexBrowser(Context context) {
-        Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
-        mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+        ComponentName componentName = getYandexBrowser(context, Intent.ACTION_MAIN);
 
-        List<ResolveInfo> installedPackages = context.getPackageManager().queryIntentActivities(mainIntent, 0);
-
-        // This is made because of differences in the name of the packages for the Beta and Alpha version
-        for (ResolveInfo resolveInfo : installedPackages) {
-            if (resolveInfo.activityInfo.packageName.contains("yandex.browser")) {
-                ComponentName component = new ComponentName(resolveInfo.activityInfo.packageName, resolveInfo.activityInfo.name);
-                startBrowser(context, component);
-            }
+        if (componentName != null) {
+            startBrowser(context, componentName);
         }
     }
 
     public static void startSamsungBrowser(Context context) {
-        ComponentName component = new ComponentName("com.sec.android.app.sbrowser", "com.sec.android.app.sbrowser.SBrowserMainActivity");
+        ComponentName component = new ComponentName(SAMSUNG_BROWSER_PACKAGE, SAMSUNG_BROWSER_ACTIVITY);
+
         startBrowser(context, component);
     }
 
@@ -235,5 +239,25 @@ public class BrowserUtils {
         intent.setComponent(component);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
+    }
+
+    // https://github.com/AdguardTeam/ContentBlocker/issues/53
+    private static ComponentName getYandexBrowser(Context context, String action) {
+        Intent mainIntent = new Intent();
+        mainIntent.setAction(action);
+
+        for (String packageName : yandexBrowserPackageList) {
+            mainIntent.setPackage(packageName);
+
+            List<ResolveInfo> installedPackages = context.getPackageManager().queryIntentActivities(mainIntent, PackageManager.MATCH_DEFAULT_ONLY);
+
+            if (!installedPackages.isEmpty()) {
+                ResolveInfo resolveInfo = installedPackages.get(0);
+
+                return new ComponentName(resolveInfo.activityInfo.packageName, resolveInfo.activityInfo.name);
+            }
+        }
+
+        return null;
     }
 }

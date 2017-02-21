@@ -268,13 +268,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
             for (String userRule : userRules) {
                 userRule = StringUtils.trim(userRule);
                 
-                if (StringUtils.isNotBlank(userRule) &&
-                        userRule.matches(ASCII_SYMBOL) &&
-                        StringUtils.length(userRule) > MIN_RULE_LENGTH &&
-                        !StringUtils.startsWith(userRule, COMMENT) &&
-                        !StringUtils.startsWith(userRule, ADBLOCK_META_START) &&
-                        !StringUtils.contains(userRule, MASK_OBSOLETE_SCRIPT_INJECTION) &&
-                        !StringUtils.contains(userRule, MASK_OBSOLETE_STYLE_INJECTION)) {
+                if (validateRuleText(userRule)) {
                     rules.add(userRule);
                 }
             }
@@ -298,6 +292,23 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         if (filter != null) {
             updateFilterEnabled(filter, value);
         }
+    }
+
+    /**
+     * Checks the rules of non ascii symbols and control symbols
+     *
+     * @param userRule rule
+     *
+     * @return true if correct rule or false
+     */
+    private boolean validateRuleText(String userRule) {
+        return StringUtils.isNotBlank(userRule) &&
+                userRule.matches(ASCII_SYMBOL) &&
+                StringUtils.length(userRule) > MIN_RULE_LENGTH &&
+                !StringUtils.startsWith(userRule, COMMENT) &&
+                !StringUtils.startsWith(userRule, ADBLOCK_META_START) &&
+                !StringUtils.contains(userRule, MASK_OBSOLETE_SCRIPT_INJECTION) &&
+                !StringUtils.contains(userRule, MASK_OBSOLETE_STYLE_INJECTION);
     }
 
     /**

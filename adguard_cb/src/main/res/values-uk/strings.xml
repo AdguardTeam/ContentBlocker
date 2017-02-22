@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="refresh">Оновити</string>
+    <string name="please_wait">Будь ласка, зачекайте...</string>
+    <string name="main_info">Цей додаток працює як розширення для браузерів, які підтримують блокування небажаного контенту.\n\nНа даний момент це два браузера:\n\n1. Samsung Internet\n2. Yandex Browser\n\nЗа допомогою цього додатка ви зможете заблокувати в цих браузерах всю рекламу.\n\nКрім того, в налаштуваннях ви можете налаштувати використовувані фільтри.</string>
+    <string name="progressGenericErrorText">Виникла помилка!</string>
+    <string name="importUserRulesSuccessResultMessage">Імпортовано {0} фільтрів!</string>
+    <string name="importUserRulesErrorResultMessage">Помилка імпортування фільтрів!</string>
+    <string name="importUserRulesProgressDialogTitle">Імпортування...</string>
+    <string name="importUserRulesProgressDialogMessage">Завантаження...</string>
+    <string name="checkUpdatesProgressDialogTitle">Перевірка оновлень</string>
+    <string name="checkUpdatesProgressDialogMessage">Перевірка оновлень, будь ласка, зачекайте...</string>
+    <string name="checkUpdatesErrorResultMessage">Не вдалося перевірити оновлення. Спробуйте пізніше.</string>
+    <string name="checkUpdatesZeroResultMessage">Ви використовуєте найсвіжіші версії фільтрів.</string>
+    <string name="checkUpdatesOneResultMessage">Оновлено один фільтр:{0}</string>
+    <string name="checkUpdatesManyResultMessage">Оновлено {0} фільтрів:{1}</string>
+    <string name="action_settings">Налаштування</string>
+    <string name="openned_drawer_title">Параметри</string>
+    <string name="about">Про додаток</string>
+    <string name="settings">Налаштування</string>
+    <string name="pref_autoupdate_filters">Автооновлення фільтрів</string>
+    <string name="pref_summary_autoupdate_filters">Оновлювати фільтри автоматично</string>
+    <string name="pref_update_wifi_only">Оновлювати лише через Wi-Fi</string>
+    <string name="pref_summary_update_wifi_only">Не оновлювати фільтри через мобільну мережу</string>
+    <string name="pref_show_useful_ads">Показувати корисну рекламу</string>
+    <string name="pref_summary_show_useful_ads">Розблокує рекламу, яка може бути корисна.</string>
+    <string name="pref_filters_category">Фільтри</string>
+    <string name="pref_summary_filters_category">Виберіть, які фільтри використовувати</string>
+    <string name="filters">Фільтри</string>
+    <string name="stats_enabled_filters">Фільтри</string>
+    <string name="stats_enabled_rules">Правила</string>
+    <string name="stats_update_time">Оновлено:</string>
+    <string name="start_samsung_browser">Запустити параметри Samsung Internet</string>
+    <string name="start_yandex_browser">Запустити параметри Yandex Browser</string>
+    <string name="open_browsers_info">Щоб увімкнути в браузері функцію блокування контенту з використанням фільтрів, натисніть тут:</string>
+    <string name="filterVersionTemplate">Версія {0}.</string>
+    <string name="filterUpdatedTemplate">Оновлено {0} в {1}.</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">Версія {0}</string>
+    <string name="copyrightInfoTextViewText">© 2008-2016. ТОВ \"Перформікс\".\nВсі права захищені.</string>
+    <string name="rateAdguardButtonText">Оцінити Adguard</string>
+    <string name="feedbackButtonText">Надіслати відгук</string>
+    <string name="officialSiteLabelText">Офіційний сайт</string>
+    <string name="forumLabelText">Форум</string>
+    <string name="emailLabelText">Email</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Конфіденційність</a></string>
+    <string name="eulaLinkText">&lt;а href=\"https://adguard.com/ru/eula.html\"&gt;Угода&lt;/а&gt;</string>
+    <string name="copyrightMessage">Adguard Content Blocker є вільним програмним забезпеченням: ви можете вільно поширювати та/або змінювати його відповідно до GNU General Public License, що опубліковано Free Software Foundation, або версією 3 цієї ліцензії, або (за вашим бажанням) більш пізньої версії.</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
+    <string name="install_browsers">У вас не встановлено жодного підтримуваного браузера! Встановіть їх з Google Play:</string>
+    <string name="install_samsung_browser">Встановити Samsung Internet</string>
+    <string name="install_yandex_browser">Встановити Yandex Browser</string>
+    <string name="issuesButtonText">Повідомити про помилку</string>
+    <string name="githubLabelText">Вихідний код</string>
+    <!--Do not translate.-->
+    <string name="warning">Увага</string>
+    <string name="too_many_filters_warning">Ви вибрали занадто багато фільтрів. Це може значно уповільнити швидкість завантаження сайтів.</string>
+    <string name="pref_whitelist_category">Білий список</string>
+    <string name="pref_summary_whitelist_category">Домени з цього списку не будуть фільтруватися</string>
+    <string name="onboarding_title1">Ласкаво просимо!</string>
+    <string name="onboarding_text1">Ви всього в парі кроків від швидкого і чистого Інтернету без реклами.</string>
+    <string name="onboarding_button_text1">Почати</string>
+    <string name="onboarding_title2">Виберіть браузер</string>
+    <string name="onboarding_text2">Для роботи Adguard необхідний браузер, який підтримує технологію блокування реклами. Зараз існує два таких браузера.</string>
+    <string name="onboarding_button_text2">Виберіть браузер</string>
+    <string name="onboarding_title3">Майже готово!</string>
+    <string name="onboarding_text3">Відповідний браузер знайдений. Залишилося тільки включити використання Adguard в його налаштуваннях.</string>
+    <string name="onboarding_button_text3">ВКЛЮЧИТИ ADGUARD</string>
+    <string name="count">Число</string>
+    <string name="check_filter_updates">Перевірити оновлення фільтрів</string>
+    <string name="go_to_filters">Перейти до фільтрів</string>
+    <string name="browser">Браузер</string>
+    <string name="install">Встановити</string>
+    <string name="start">Запустити</string>
+    <string name="get_started">Почати</string>
+    <string name="adguard_conditions_title">Для роботи Adguard повинні бути виконані дві умови:</string>
+    <string name="adguard_conditions_list1">Ви маєте використовувати браузер, який підтримує технологію блокування контенту.</string>
+    <string name="adguard_conditions_list2">В налаштуваннях блокування контенту цього браузеру необхідно включити Adguard.</string>
+    <string name="choose_browser">Виберіть браузер</string>
+    <string name="enable_adguard">ВКЛЮЧИТИ ADGUARD</string>
+    <string name="main_activity_adguard_info">Adguard блокує рекламу, захищає вашу конфіденційність, підвищує швидкість завантаження сторінок і знижує використання мобільних даних.</string>
+    <string name="exit">Вихід</string>
+    <string name="user_filter">Фільтр користувача</string>
+    <string name="enter_rule_text">Введіть текст правила</string>
+    <string name="cancel">Скасувати</string>
+    <string name="ok">OK</string>
+</resources>

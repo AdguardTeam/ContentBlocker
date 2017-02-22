@@ -15,6 +15,5 @@
         android:choiceMode="singleChoice"
         android:layout_marginTop="8dp"
         android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"
-        android:entries="@array/menu_titles"/>
+        android:dividerHeight="0dp"/>
 </LinearLayout>

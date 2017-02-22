@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+
+    <ListView android:id="@+id/user_filter_list"
+              android:layout_height="match_parent"
+              android:layout_width="match_parent" android:visibility="gone">
+
+    </ListView>
+
+    <LinearLayout
+            android:id="@+id/userfilterEmptyWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="visible">
+
+        <TextView
+                style="@style/settingsListEmptyLabel"
+                android:text="@string/emptyUserfilterTextViewText"/>
+
+        <ImageView
+                style="@style/settingsEmptyListImageStyle"
+                android:contentDescription="@string/empty"/>
+
+        <Button
+                android:id="@+id/user_filter_add"
+                android:text="@string/addUserRuleButtonText"
+                android:drawableLeft="@drawable/ic_action_new"
+                style="@style/smallGreenButton"
+                android:paddingLeft="11dp"
+                android:paddingRight="18dp"/>
+
+        <Button
+                android:id="@+id/user_filter_import"
+                android:text="@string/importUserRulesButtonText"
+                android:drawableLeft="@drawable/ic_action_add_to_queue"
+                style="@style/smallGreenButton"
+                android:paddingLeft="11dp"
+                android:paddingRight="17dp"/>
+
+    </LinearLayout>
+</LinearLayout>

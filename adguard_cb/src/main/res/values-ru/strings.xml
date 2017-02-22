@@ -81,4 +81,8 @@
     <string name="adguard_conditions_list1">Вы должны использовать браузер с поддержкой технологии блокирования контента.</string>
     <string name="adguard_conditions_list2">Adguard должен быть включен в настройках этого браузера.</string>
     <string name="exit">Выход</string>
+    <string name="user_filter">Собственные фильтры</string>
+    <string name="enter_rule_text">Введите правило</string>
+    <string name="cancel">Отмена</string>
+    <string name="ok">OK</string>
 </resources>

@@ -29,9 +29,7 @@
     </style>
 
     <style name="AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog.FixedSize">
-        <item name="android:colorAccent">@color/colorAccent</item>
-        <!--<item name="background">@color/white</item>
-        <item name="android:background">@color/white</item>-->
+        <item name="android:colorAccent">@color/colorPrimary</item>
         <item name="android:textColor">@color/common_text</item>
         <item name="android:colorControlNormal">@color/colorPrimary</item>
         <item name="android:colorControlActivated">@color/colorPrimary</item>
@@ -240,5 +238,28 @@
         <item name="android:layout_marginTop">@dimen/cardview_button_margin</item>
         <item name="android:layout_marginBottom">@dimen/cardview_button_margin</item>
         <item name="android:minWidth">@dimen/cardview_button_minwidth</item>
+    </style>
+
+    <style name="settingsListEmptyLabel" parent="textViewCommonStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/light_gray_text</item>
+        <item name="android:textSize">@dimen/labelTextSize</item>
+    </style>
+
+    <style name="settingEmptyImage">
+        <item name="android:src">@drawable/owl</item>
+    </style>
+
+    <style name="settingsEmptyListImageStyle" parent="settingEmptyImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/settingsEmptyListImageMarginTop</item>
+        <item name="android:layout_marginBottom">@dimen/settingsEmptyListImageMarginBottom</item>
+        <item name="android:contentDescription">@string/empty</item>
+    </style>
+
+    <style name="smallGreenButton" parent="parentButtonStyle">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:drawablePadding">1dp</item>
     </style>
 </resources>

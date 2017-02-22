@@ -24,7 +24,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
-import android.util.Log;
 import com.adguard.android.contentblocker.AlarmReceiver;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.ServiceLocator;
@@ -51,7 +50,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.*;
-import java.util.concurrent.TimeUnit;
+import java.util.regex.Pattern;
 
 /**
  * Filter service implementation.
@@ -59,20 +58,27 @@ import java.util.concurrent.TimeUnit;
 public class FilterServiceImpl extends BaseUiService implements FilterService {
     private static final Logger LOG = LoggerFactory.getLogger(FilterServiceImpl.class);
 
+    public static final int SHOW_USEFUL_ADS_FILTER_ID = 10;
+
+    private static final int MIN_RULE_LENGTH = 4;
+    private static final String ASCII_SYMBOL = "\\p{ASCII}+";
+    private static final String COMMENT = "!";
+    private static final String ADBLOCK_META_START = "[Adblock";
+    private static final String MASK_OBSOLETE_SCRIPT_INJECTION = "###adg_start_script_inject";
+    private static final String MASK_OBSOLETE_STYLE_INJECTION = "###adg_start_style_inject";
+
+    private static final int SOCIAL_MEDIA_WIDGETS_FILTER_ID = 4;
+    private static final int SPYWARE_FILTER_ID = 3;
+
+    private static final int UPDATE_INVALIDATE_PERIOD = 4 * 24 * 60 * 60; // 4 days
+
+    private static final String FILTERS_UPDATE_QUEUE = "filters-update-queue";
+
     private final Context context;
     private final FilterListDao filterListDao;
     private final FilterRuleDao filterRuleDao;
     private final PreferencesService preferencesService;
 
-    private static final int FILTERS_UPDATE_INITIAL_DELAY = 60 * 60; // 1 hour
-    private static final int FILTERS_UPDATE_PERIOD = 60 * 60; // 1 hour
-    private static final int UPDATE_INVALIDATE_PERIOD = 4 * 24 * 60 * 60; // 4 days
-
-    public static final int SHOW_USEFUL_ADS_FILTER_ID = 10;
-    private static final int SOCIAL_MEDIA_WIDGETS_FILTER_ID = 4;
-    private static final int SPYWARE_FILTER_ID = 3;
-
-    private static final String FILTERS_UPDATE_QUEUE = "filters-update-queue";
     private int cachedFilterRuleCount = 0;
 
     /**
@@ -254,13 +260,25 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
 
     @Override
     public void applyNewSettings() {
-        // TODO fix this crutch
         setShowUsefulAds(preferencesService.isShowUsefulAds());
-        List<String> allEnabledRules = getAllEnabledRules(true);
-        cachedFilterRuleCount = allEnabledRules.size();
+
+        List<String> rules = getAllEnabledRules(true);
+        Set<String> userRules = getUserRules();
+        if (!userRules.isEmpty()) {
+            for (String userRule : userRules) {
+                userRule = StringUtils.trim(userRule);
+                
+                if (validateRuleText(userRule)) {
+                    rules.add(userRule);
+                }
+            }
+        }
+
+        cachedFilterRuleCount = rules.size();
+
         try {
             LOG.info("Saving {} filters...", cachedFilterRuleCount);
-            FileUtils.writeLines(new File(context.getFilesDir().getAbsolutePath() + "/filters.txt"), allEnabledRules);
+            FileUtils.writeLines(new File(context.getFilesDir().getAbsolutePath() + "/filters.txt"), rules);
             preferencesService.setFilterRuleCount(cachedFilterRuleCount);
             enableContentBlocker(context);
         } catch (IOException e) {
@@ -274,6 +292,23 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         if (filter != null) {
             updateFilterEnabled(filter, value);
         }
+    }
+
+    /**
+     * Checks the rules of non ascii symbols and control symbols
+     *
+     * @param userRule rule
+     *
+     * @return true if correct rule or false
+     */
+    private boolean validateRuleText(String userRule) {
+        return StringUtils.isNotBlank(userRule) &&
+                userRule.matches(ASCII_SYMBOL) &&
+                StringUtils.length(userRule) > MIN_RULE_LENGTH &&
+                !StringUtils.startsWith(userRule, COMMENT) &&
+                !StringUtils.startsWith(userRule, ADBLOCK_META_START) &&
+                !StringUtils.contains(userRule, MASK_OBSOLETE_SCRIPT_INJECTION) &&
+                !StringUtils.contains(userRule, MASK_OBSOLETE_STYLE_INJECTION);
     }
 
     /**
@@ -401,10 +436,16 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         private Activity activity;
         private String url;
 
+        private OnImportListener onImportListener;
+
         public ImportUserRulesTask(Activity activity, ProgressDialog progressDialog, String url) {
             super(progressDialog);
             this.activity = activity;
             this.url = url;
+
+            if (activity instanceof OnImportListener) {
+                onImportListener = (OnImportListener) activity;
+            }
         }
 
         @Override
@@ -443,6 +484,10 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
 
             String message = activity.getString(R.string.importUserRulesSuccessResultMessage).replace("{0}", String.valueOf(rulesList.size()));
             showToast(activity, message);
+
+            if (onImportListener != null) {
+                onImportListener.onSuccess();
+            }
         }
 
         private void onError() {
@@ -460,6 +505,10 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
             }
             return null;
         }
+    }
+
+    public interface OnImportListener {
+        void onSuccess();
     }
 
     /**

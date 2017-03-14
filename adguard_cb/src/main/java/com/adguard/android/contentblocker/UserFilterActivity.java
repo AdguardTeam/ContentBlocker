@@ -284,7 +284,10 @@ public class UserFilterActivity extends AppCompatActivity implements FilterServi
         }
 
         private void refreshAdapter() {
-            ruleList.clear();
+            if (!ruleList.isEmpty()) {
+                ruleList.clear();
+            }
+
             ruleList.addAll(preferencesService.getUserRules());
 
             notifyDataSetChanged();

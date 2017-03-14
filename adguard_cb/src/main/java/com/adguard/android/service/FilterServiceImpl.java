@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.ProgressDialog;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -49,6 +50,8 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.*;
 import java.util.regex.Pattern;
 
@@ -451,8 +454,25 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         @Override
         protected void processTask() throws Exception {
             LOG.info("Downloading user rules from {}", url);
+            if (url.startsWith("content://")) {
+                InputStream inputStream = null;
+                try {
+                    ContentResolver contentResolver = activity.getContentResolver();
+                    inputStream = contentResolver.openInputStream(Uri.parse(url));
+                    String buf = org.apache.commons.io.IOUtils.toString(inputStream);
+                    importRules(buf);
+                } finally {
+                    IOUtils.closeQuietly(inputStream);
+                }
+                return;
+            }
+
             String file = loadFromFile(url);
             final String download = file != null ? file : UrlUtils.downloadString(url);
+            importRules(download);
+        }
+
+        private void importRules(String download) {
             final String[] rules = StringUtils.split(download, "\n");
 
             if (rules == null || rules.length < 1) {
@@ -486,7 +506,12 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
             showToast(activity, message);
 
             if (onImportListener != null) {
-                onImportListener.onSuccess();
+                activity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        onImportListener.onSuccess();
+                    }
+                });
             }
         }
 

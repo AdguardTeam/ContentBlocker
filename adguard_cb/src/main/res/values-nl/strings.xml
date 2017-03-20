@@ -82,4 +82,16 @@
     <string name="enable_adguard">Activeer Adguard</string>
     <string name="main_activity_adguard_info">Adguard blokkeert advertenties, versnelt opladen van pagina\'s en vermindert gebruik van mobiele data.</string>
     <string name="exit">Afsluiten</string>
+    <string name="user_filter">Gebruikersfilter</string>
+    <string name="enter_rule_text">Regel invoeren</string>
+    <string name="cancel">Annuleren</string>
+    <string name="ok">OK</string>
+    <string name="userRuleNewItemDialogHint">||voorbeeld.com^$derde-partij</string>
+    <string name="emptyUserfilterTextViewText">Gebruikersfilter is leeg</string>
+    <string name="addUserRuleButtonText">Regel toevoegen</string>
+    <string name="importUserRulesButtonText">Importeren</string>
+    <string name="importUserRulesDialogTitle">URL of bestandslocatie invoeren</string>
+    <string name="importUserRulesUrlErrorMessage">URL niet geldig</string>
+    <string name="clearUserRulesButtonText">Alles verwijderen</string>
+    <string name="browseButtonText">Bladeren</string>
 </resources>

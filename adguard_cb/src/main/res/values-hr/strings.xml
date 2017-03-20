@@ -82,4 +82,16 @@
     <string name="enable_adguard">Omogući Adguard</string>
     <string name="main_activity_adguard_info">Adguard blokira oglase, štiti vašu privatnost, ubzava učitavanje web stranica i smanjuje potrošnju mobilnih podataka.</string>
     <string name="exit">Izlaz</string>
+    <string name="user_filter">Korisnički filter</string>
+    <string name="enter_rule_text">Unesite tekst pravila</string>
+    <string name="cancel">Prekid</string>
+    <string name="ok">U redu</string>
+    <string name="userRuleNewItemDialogHint">||primjer.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">Korisnički filter je prazan</string>
+    <string name="addUserRuleButtonText">Dodaj pravilo</string>
+    <string name="importUserRulesButtonText">Uvoz</string>
+    <string name="importUserRulesDialogTitle">Unesite URL ili putanju do datoteke</string>
+    <string name="importUserRulesUrlErrorMessage">URL nije važeći</string>
+    <string name="clearUserRulesButtonText">Ukloni sve</string>
+    <string name="browseButtonText">Pregledaj</string>
 </resources>

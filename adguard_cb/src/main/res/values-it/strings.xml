@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">Aggiornato {0} il {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Versione {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008–2016. Performix LLC.\nTutti i diritti sono riservati.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2017. Performix LLC.\nTutti i diritti sono riservati.</string>
     <string name="rateAdguardButtonText">Valuta Adguard</string>
     <string name="feedbackButtonText">Invia Feedback</string>
     <string name="officialSiteLabelText">Sito ufficiale</string>
@@ -82,4 +82,16 @@
     <string name="enable_adguard">Abilita Adguard</string>
     <string name="main_activity_adguard_info">Adguard blocca gli annunci, protegge la tua privacy, velocizza il caricamento delle pagine e riduce l\'utilizzo dei dati.</string>
     <string name="exit">Esci</string>
+    <string name="user_filter">Filtro Utente</string>
+    <string name="enter_rule_text">Inserisci il testo della regola</string>
+    <string name="cancel">Annulla</string>
+    <string name="ok">OK</string>
+    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">Il filtro utente è vuoto</string>
+    <string name="addUserRuleButtonText">Aggiungi regola</string>
+    <string name="importUserRulesButtonText">Importa</string>
+    <string name="importUserRulesDialogTitle">Inserisci URL o percorso al file</string>
+    <string name="importUserRulesUrlErrorMessage">L\'URL non è valido</string>
+    <string name="clearUserRulesButtonText">Rimuovi tutti</string>
+    <string name="browseButtonText">Scegli</string>
 </resources>

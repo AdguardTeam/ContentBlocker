@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">Güncellendi {0} {1}</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Sürüm {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008–2016. Performix LLC.\nTüm Hakları Saklıdır.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2017. Performix LLC.\nTüm Hakları Saklıdır.</string>
     <string name="rateAdguardButtonText">Adguard\'ı Oyla</string>
     <string name="feedbackButtonText">Geribildirim Gönder</string>
     <string name="officialSiteLabelText">Resmi site</string>
@@ -82,4 +82,16 @@
     <string name="enable_adguard">Adguard\'ı Etkinleştir</string>
     <string name="main_activity_adguard_info">Adguard reklamları engeller, gizliliğinizi korur, sayfa yükleme hızını artırır ve mobil veri kullanımınızı azaltır.</string>
     <string name="exit">Çıkış</string>
+    <string name="user_filter">Kullanıcı Filtresi</string>
+    <string name="enter_rule_text">Kural metni girin</string>
+    <string name="cancel">İptal</string>
+    <string name="ok">Tamam</string>
+    <string name="userRuleNewItemDialogHint">||örnek.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">Kullanıcı filtresi boş</string>
+    <string name="addUserRuleButtonText">Kural ekle</string>
+    <string name="importUserRulesButtonText">İçe Aktar</string>
+    <string name="importUserRulesDialogTitle">Dosya yolu veya URL girin</string>
+    <string name="importUserRulesUrlErrorMessage">Bu URL geçerli değil</string>
+    <string name="clearUserRulesButtonText">Tümünü sil</string>
+    <string name="browseButtonText">Gözat</string>
 </resources>

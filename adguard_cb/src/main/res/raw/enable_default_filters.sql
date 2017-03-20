@@ -25,5 +25,5 @@ UPDATE filter_lists
    OR (filter_list_id = 216 AND '{0}' LIKE '%pl%')
    OR (filter_list_id = 218 AND '{0}' LIKE '%et%')
    OR (filter_list_id = 223 AND '{0}' LIKE '%sv%')
-   OR (filter_list_id = 224 AND '{0}' LIKE '%ko%')
+   OR (filter_list_id = 227 AND '{0}' LIKE '%ko%')
    OR (filter_list_id = 226 AND '{0}' LIKE '%vi%');

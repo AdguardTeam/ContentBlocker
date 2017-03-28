@@ -19,6 +19,7 @@ package com.adguard.android.commons;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -30,6 +31,7 @@ import android.view.View;
 import com.adguard.android.contentblocker.MainActivity;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.ui.utils.ActivityUtils;
+import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.*;
 
@@ -228,7 +230,7 @@ public class BrowserUtils {
     }
 
     public static void startSamsungBrowser(Context context) {
-        ComponentName component = new ComponentName(SAMSUNG_BROWSER_PACKAGE, SAMSUNG_BROWSER_ACTIVITY);
+        ComponentName component = getSamsungBrowser(context);
 
         startBrowser(context, component);
     }
@@ -239,6 +241,36 @@ public class BrowserUtils {
         intent.setComponent(component);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
+    }
+
+    // https://github.com/AdguardTeam/ContentBlocker/issues/56
+    private static ComponentName getSamsungBrowser(Context context) {
+        Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
+        mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+
+        List<ResolveInfo> installedPackages = context.getPackageManager().queryIntentActivities(mainIntent, 0);
+
+        ArrayList<ActivityInfo> samsungActivities = new ArrayList<>();
+        for (ResolveInfo installedPackage : installedPackages) {
+            if (installedPackage.activityInfo.packageName.startsWith(SAMSUNG_BROWSER_PACKAGE)) {
+                samsungActivities.add(installedPackage.activityInfo);
+            }
+        }
+
+        if (CollectionUtils.isNotEmpty(samsungActivities)) {
+            Collections.sort(samsungActivities, new Comparator<ActivityInfo>() {
+                @Override
+                public int compare(ActivityInfo lhs, ActivityInfo rhs) {
+                    return lhs.packageName.compareTo(rhs.packageName);
+                }
+            });
+
+            ActivityInfo activityInfo = samsungActivities.get(0);
+            return new ComponentName(activityInfo.packageName, activityInfo.name);
+
+        }
+
+        return null;
     }
 
     // https://github.com/AdguardTeam/ContentBlocker/issues/53

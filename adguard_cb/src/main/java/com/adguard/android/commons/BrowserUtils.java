@@ -243,7 +243,7 @@ public class BrowserUtils {
         context.startActivity(intent);
     }
 
-
+    // https://github.com/AdguardTeam/ContentBlocker/issues/56
     private static ComponentName getSamsungBrowser(Context context) {
         Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
         mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);

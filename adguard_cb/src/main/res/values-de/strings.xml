@@ -82,4 +82,16 @@
     <string name="enable_adguard">Adguard aktivieren</string>
     <string name="main_activity_adguard_info">Adguard blockiert Werbung, schützt Ihre Privatsphäre, beschleunigt die Ladezeiten der Seiten und reduziert Ihre mobile Datennutzung.</string>
     <string name="exit">Ausgang</string>
+    <string name="user_filter">Benutzer-Filter</string>
+    <string name="enter_rule_text">Regeltext eingeben</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="ok">OK</string>
+    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">Benutzerfilter ist leer</string>
+    <string name="addUserRuleButtonText">Regel hinzufügen</string>
+    <string name="importUserRulesButtonText">Import</string>
+    <string name="importUserRulesDialogTitle">Geben Sie die URL oder den Dateipfad ein</string>
+    <string name="importUserRulesUrlErrorMessage">Die URL ist nicht gültig</string>
+    <string name="clearUserRulesButtonText">Alle entfernen</string>
+    <string name="browseButtonText">Durchsuchen</string>
 </resources>

@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">Оновлено {0} в {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Версія {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008-2016. ТОВ \"Перформікс\".\nВсі права захищені.</string>
+    <string name="copyrightInfoTextViewText">© 2008-2017. ТОВ \"Перформікс\".\nВсі права захищені.</string>
     <string name="rateAdguardButtonText">Оцінити Adguard</string>
     <string name="feedbackButtonText">Надіслати відгук</string>
     <string name="officialSiteLabelText">Офіційний сайт</string>
@@ -86,4 +86,12 @@
     <string name="enter_rule_text">Введіть текст правила</string>
     <string name="cancel">Скасувати</string>
     <string name="ok">OK</string>
+    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">Фільтр користувача порожній</string>
+    <string name="addUserRuleButtonText">Додати правило</string>
+    <string name="importUserRulesButtonText">Імпорт</string>
+    <string name="importUserRulesDialogTitle">Введіть URL або шлях до файлу</string>
+    <string name="importUserRulesUrlErrorMessage">URL не є дійсним</string>
+    <string name="clearUserRulesButtonText">Видалити все</string>
+    <string name="browseButtonText">Огляд</string>
 </resources>

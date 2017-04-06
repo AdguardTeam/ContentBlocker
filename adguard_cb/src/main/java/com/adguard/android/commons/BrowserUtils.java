@@ -1,16 +1,16 @@
 /**
  * This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
  * Copyright © 2016 Performix LLC. All rights reserved.
- * <p/>
+ * <p>
  * Adguard Content Blocker is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by the
  * Free Software Foundation, either version 3 of the License, or (at your option)
  * any later version.
- * <p/>
+ * <p>
  * Adguard Content Blocker is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
  * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- * <p/>
+ * <p>
  * You should have received a copy of the GNU General Public License along with
  * Adguard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -47,11 +47,12 @@ public class BrowserUtils {
     public static final String SAMSUNG_BROWSER_PACKAGE = "com.sec.android.app.sbrowser";
     public static final String SAMSUNG_CONTENT_BLOCKER_ACTION = "com.samsung.android.sbrowser.contentBlocker.ACTION_SETTING";
     public static final String YANDEX_CONTENT_BLOCKER_ACTION = "com.yandex.browser.contentBlocker.ACTION_SETTING";
-    public static final String SAMSUNG_BROWSER_ACTIVITY = "com.sec.android.app.sbrowser.SBrowserMainActivity";
+
     public static final String SAMSUNG_PACKAGE_PREFIX = "com.sec.";
+
     public static final String REFERRER = "adguard1";
 
-    private static  final List<String> yandexBrowserPackageList = new ArrayList<>();
+    private static final List<String> yandexBrowserPackageList = new ArrayList<>();
 
     static {
         yandexBrowserPackageList.add("com.yandex.browser");
@@ -179,13 +180,10 @@ public class BrowserUtils {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 int action = event.getActionMasked();
-                if (action == MotionEvent.ACTION_DOWN)
-                {
-                    ((CardView)v).setCardBackgroundColor(R.color.card_view_background_pressed);
-                }
-                else if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL || action == MotionEvent.ACTION_OUTSIDE)
-                {
-                    ((CardView)v).setCardBackgroundColor(R.color.white);
+                if (action == MotionEvent.ACTION_DOWN) {
+                    ((CardView) v).setCardBackgroundColor(R.color.card_view_background_pressed);
+                } else if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL || action == MotionEvent.ACTION_OUTSIDE) {
+                    ((CardView) v).setCardBackgroundColor(R.color.white);
                 }
                 return false;
             }
@@ -230,9 +228,11 @@ public class BrowserUtils {
     }
 
     public static void startSamsungBrowser(Context context) {
-        ComponentName component = getSamsungBrowser(context);
+        ComponentName componentName = getSamsungBrowser(context);
 
-        startBrowser(context, component);
+        if (componentName != null) {
+            startBrowser(context, componentName);
+        }
     }
 
     public static void startBrowser(Context context, ComponentName component) {

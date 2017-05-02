@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="refresh">새로고침</string>
+    <string name="please_wait">잠시 기다려주세요...</string>
+    <string name="main_info">본 앱은 콘텐츠 차단을 지원하는 브라우저를 위한 확장 앱입니다.\n\n현재 두 가지 브라우저가 콘텐츠 차단 기능을 지원합니다:\n\n1. 삼성 인터넷 브라우저\n2. 얀덱스 브라우저\n\n본 앱을 통해 이 브라우저에서 모든 광고를 차단할 수 있습니다.\n\n설정 메뉴에서 어떤 필터를 사용할지 고를 수 있습니다.</string>
+    <string name="progressGenericErrorText">오류가 발생했습니다!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} 개의 필터를 성공적으로 가져왔습니다!</string>
+    <string name="importUserRulesErrorResultMessage">필터 가져오기 오류!</string>
+    <string name="importUserRulesProgressDialogTitle">가져오는 중</string>
+    <string name="importUserRulesProgressDialogMessage">로딩 중...</string>
+    <string name="checkUpdatesProgressDialogTitle">업데이트 확인 중</string>
+    <string name="checkUpdatesProgressDialogMessage">업데이트 확인 중입니다. 잠시 기다려주세요...</string>
+    <string name="checkUpdatesErrorResultMessage">업데이트에 실패했습니다. 잠시 뒤 다시 시도해주세요.</string>
+    <string name="checkUpdatesZeroResultMessage">모든 필터가 최신 버전입니다.</string>
+    <string name="checkUpdatesOneResultMessage">필터 1개가 업데이트 되었습니다: {0}</string>
+    <string name="checkUpdatesManyResultMessage">필터 {0}개가 업데이트 되었습니다: {1}</string>
+    <string name="action_settings">브라우저 설정</string>
+    <string name="openned_drawer_title">옵션</string>
+    <string name="about">정보</string>
+    <string name="settings">일반 설정</string>
+    <string name="pref_autoupdate_filters">필터 자동 업데이트</string>
+    <string name="pref_summary_autoupdate_filters">필터를 자동으로 업데이트합니다.</string>
+    <string name="pref_update_wifi_only">Wi-Fi 사용 시 업데이트</string>
+    <string name="pref_summary_update_wifi_only">Wi-Fi를 통해서만 필터를 업데이트 합니다.</string>
+    <string name="pref_show_useful_ads">유용한 광고 보이기</string>
+    <string name="pref_summary_show_useful_ads">검색 광고 등 사용자에게 유용할 수 있는 광고를 차단 해제합니다.</string>
+    <string name="pref_filters_category">필터</string>
+    <string name="pref_summary_filters_category">사용할 필터를 선택하세요</string>
+    <string name="filters">필터</string>
+    <string name="stats_enabled_filters">필터</string>
+    <string name="stats_enabled_rules">필터 규칙</string>
+    <string name="stats_update_time">마지막 업데이트:</string>
+    <string name="start_samsung_browser">삼성 인터넷 설정으로</string>
+    <string name="start_yandex_browser">얀덱스 브라우저 설정으로</string>
+    <string name="open_browsers_info">컨텐츠 차단을 사용하시려면 이곳을 클릭하여 브라우저 설정 페이지를 여십시오</string>
+    <string name="filterVersionTemplate">버전 {0}.</string>
+    <string name="filterUpdatedTemplate">{1} 의 {0} 을 업데이트 하였습니다.</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">{0} 버전</string>
+    <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nAll Rights Reserved.</string>
+    <string name="rateAdguardButtonText">Adguard 후기 남기기</string>
+    <string name="feedbackButtonText">피드백 보내기</string>
+    <string name="officialSiteLabelText">공식 홈페이지</string>
+    <string name="forumLabelText">포험</string>
+    <string name="emailLabelText">이메일</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">개인정보취급방침</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">이용약관</a></string>
+    <string name="copyrightMessage">Adguard 컨텐츠 차단기는 자유 소프트웨어입니다. 귀하는 자유 소프트웨어 재단에서 발행한 GPL 버전 3 또는 그 이후 라이센스에 의거하여 이를 재배포 및/또는 수정할 수 있습니다.</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
+    <string name="install_browsers">지원되는 브라우저가 설치되어 있지 않습니다! 플레이 스토어에서 설치할 수 있습니다:</string>
+    <string name="install_samsung_browser">삼성 인터넷 설치</string>
+    <string name="install_yandex_browser">얀덱스 브라우저 설치</string>
+    <string name="issuesButtonText">버그 제보하기</string>
+    <string name="githubLabelText">소스 코드</string>
+    <!--Do not translate.-->
+    <string name="warning">주의</string>
+    <string name="too_many_filters_warning">너무 많은 필터를 구독하고 있습니다. 웹 브라우징 속도가 저하될 수 있습니다.</string>
+    <string name="pref_whitelist_category">화이트리스트</string>
+    <string name="pref_summary_whitelist_category">이곳의 도메인은 필터링 되지 않습니다.</string>
+    <string name="onboarding_title1">환영합니다!</string>
+    <string name="onboarding_text1">빠르고 깨끗한, 광고 없는 인터넷이 당신을 기다리고 있습니다.</string>
+    <string name="onboarding_button_text1">시작하기</string>
+    <string name="onboarding_title2">브라우저를 선택하세요</string>
+    <string name="onboarding_text2">Adguard가 광고를 차단하기 위해서는 컨텐츠 차단을 지원하는 브라우저가 필요합니다. 현재 그러한 브라우저가 2 가지 있습니다.</string>
+    <string name="onboarding_button_text2">브라우저를 선택하세요</string>
+    <string name="onboarding_title3">거의 다 됐습니다!</string>
+    <string name="onboarding_text3">적합한 브라우저가 설치되어 있습니다. 이제 브라우저 설정에서 Adguard를 활성화하기만 하면 됩니다.</string>
+    <string name="onboarding_button_text3">Adguard 활성화</string>
+    <string name="count">갯수</string>
+    <string name="check_filter_updates">필터 업데이트 체크</string>
+    <string name="go_to_filters">필터 설정으로..</string>
+    <string name="browser">브라우저</string>
+    <string name="install">설치</string>
+    <string name="start">실행</string>
+    <string name="get_started">시작하기</string>
+    <string name="adguard_conditions_title">Adguard가 동작하기 위해 두 가지 조건이 충족되어야 합니다.</string>
+    <string name="adguard_conditions_list1">컨텐츠 차단 기능을 지원하는 브라우저를 사용해야 합니다.</string>
+    <string name="adguard_conditions_list2">그 브라우저의 컨텐츠 차단 설정에서 Adguard가 사용 설정 되어 있어야 합니다.</string>
+    <string name="choose_browser">브라우저 선택</string>
+    <string name="enable_adguard">Adguard 활성화</string>
+    <string name="main_activity_adguard_info">Adguard는 당신의 브라우저의 광고를 차단하고, 프라이버시를 보호하며, 페이지 로딩 속도를 향상시키고, 데이터를 절약합니다.</string>
+    <string name="exit">종료</string>
+    <string name="user_filter">사용자 필터</string>
+    <string name="enter_rule_text">규칙을 입력하세요</string>
+    <string name="cancel">취소</string>
+    <string name="ok">확인</string>
+    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">사용자 필터 비어있음</string>
+    <string name="addUserRuleButtonText">규칙 추가</string>
+    <string name="importUserRulesButtonText">가져오기</string>
+    <string name="importUserRulesDialogTitle">파일 주소나 경로를 입력하세요</string>
+    <string name="importUserRulesUrlErrorMessage">유효한 주소를 입력하세요</string>
+    <string name="clearUserRulesButtonText">모두 제거</string>
+    <string name="browseButtonText">찾아보기</string>
+</resources>

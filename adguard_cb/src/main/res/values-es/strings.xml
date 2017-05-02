@@ -69,7 +69,7 @@
     <string name="onboarding_text3">Se ha encontrado un navegador compatible. Solo queda habilitar Adguard en su configuración.</string>
     <string name="onboarding_button_text3">Habilitar Adguard</string>
     <string name="count">Cantidad</string>
-    <string name="check_filter_updates">"Verificar las actualizaciones de los filtros "</string>
+    <string name="check_filter_updates">Comprobar actualizaciones</string>
     <string name="go_to_filters">Ir a los filtros</string>
     <string name="browser">"Navegador "</string>
     <string name="install">Instalar</string>
@@ -82,13 +82,12 @@
     <string name="enable_adguard">"Habilitar Adguard en su navegador "</string>
     <string name="main_activity_adguard_info">Adguard bloquea anuncios, protege su privacidad, aumenta la velocidad de carga de las páginas y reduce el uso de datos móviles.</string>
     <string name="exit">Salir</string>
-    <string name="user_filter">Usar filtros</string>
+    <string name="user_filter">Filtros de usuario</string>
     <string name="enter_rule_text">Ingrese la nueva regla</string>
     <string name="cancel">Cancelar</string>
     <string name="ok">OK</string>
     <string name="userRuleNewItemDialogHint">||ejemplo.com^$third-party</string>
-    <string name="emptyUserfilterTextViewText">"El filtro de usuario está vacío
-"</string>
+    <string name="emptyUserfilterTextViewText">"El filtro de usuario está vacío"</string>
     <string name="addUserRuleButtonText">Agregar regla</string>
     <string name="importUserRulesButtonText">Importar</string>
     <string name="importUserRulesDialogTitle">Introduzca la URL o la ruta del archivo</string>

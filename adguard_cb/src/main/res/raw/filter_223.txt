@@ -1,10 +1,9 @@
+! Checksum: u6wr7VjURxZUhpgUBUsxKA
 ! Title: Fanboy's Swedish
-! Version: 1.0.0.3
-! Name: Fanboy's Swedish
 ! Description: Fanboy's Swedish
-! NameEn: Fanboy's Swedish
-! DescriptionEn: Fanboy's Swedish
-! TimeUpdated: 2016-07-30T10:37:39.532+04:00
+! Version: 1.0.0.5
+! TimeUpdated: 2017-02-19T09:36:20.873+04:00
+! Expires: 2 days (update frequency)
 .dt.se/banner/
 .dt.se/img/space.gif?
 .nu/annons/
@@ -44,6 +43,11 @@
 ||viastream.viasat.tv/Commercials/
 ||videofy.me/preroll?
 ||videoplaza.tv/creatives/
+@@||ajax.googleapis.com^$domain=dreamfilmhd.bz
+@@||vkpass.com^$third-party,script,domain=dreamfilmhd.bz
+|blob:$script,domain=dreamfilmhd.bz
+|http://$script,xmlhttprequest,third-party,domain=dreamfilmhd.bz
+$websocket,domain=dreamfilmhd.bz
 ||adtlgc.com^
 ||bilsalongen.kkuriren.se^
 ||eas.blocket.se^
@@ -146,6 +150,8 @@ dn.se##.box.box-html.box-first
 dn.se##.lp_logobox
 dreamfilmhd.bz##.hidden-sm
 dreamfilmhd.bz##A[href="http://byggboss.se"]
+dreamfilmhd.bz##A[href="http://dreamfilmhd.bz/go-small.html"]
+dreamfilmhd.bz##A[href="http://dreamfilmhd.bz/go.html"]
 dreamfilmhd.bz##A[href="http://www.hagopro.se"]
 dreamfilmhd.bz##A[href^="http://bit.ly/"]
 dreamfilmhd.bz##A[rel="dofollow"] > IMG[style="width:100%"]

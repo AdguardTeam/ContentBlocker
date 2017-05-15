@@ -1,10 +1,9 @@
+! Checksum: 2JXy5cdGXWLAYL0jHKjevw
 ! Title: Adblock-Persian list
-! Version: 1.0.0.16
-! Name: Adblock-Persian list
 ! Description: Adblock-Persian list
-! NameEn: Adblock-Persian list
-! DescriptionEn: Adblock-Persian list
-! TimeUpdated: 2016-08-13T14:35:53.828+04:00
+! Version: 1.0.0.23
+! TimeUpdated: 2016-10-28T09:36:01.219+04:00
+! Expires: 2 days (update frequency)
 .ir/baner
 /banner.js
 images/banner*.gif
@@ -265,6 +264,8 @@ _vps-banner*.gif
 ||multi-download.com/wp-content/pic/banner/*
 ||narenji.ir/*.swf
 ||nardebaan.ir/sites/default/files/images/b/*
+||www.noandishaan.com/*.gif
+@@http://w...content-available-to-author-only...n.com/forums/
 ||narenji.ir/sites/default/files/images/b/*
 ||naghdnews.ir/uploadcenter/*.swf
 ||naghola.com/tabligh*/
@@ -354,6 +355,7 @@ _vps-banner*.gif
 ||webgozar.com*.swf
 ||yekmobile.com/banner/*
 ||yasdl.com/image/*
+||uploadboy.com/banner*
 ||adweb.ir^$third-party
 ||alborzdownload.com^$third-party
 ||avaserver.com^$third-party
@@ -432,6 +434,7 @@ _vps-banner*.gif
 ||nextag.com^$domain=head-fi.org
 ||vbfarsi.net^$domain=mobilestan.net
 ||dropboxusercontent.com^$domain=ieclub.ir
+||ad.adtube.ir^
 ||eshopcomp.com^
 ||irna.ir/Counter.aspx
 ||stats.mehrnews.com^
@@ -535,6 +538,7 @@ saveinter.net##HTML
 ||shareaza.com^
 ||stats.jzip.com^
 ||shop.yaftabad.com^
+||sabavision.com^
 ||update.jzip.com^
 ||winkscomical.com^
 ||winkslaughable.com^
@@ -724,6 +728,8 @@ saveinter.net##HTML
 ||takshop91.in$popup
 ||takshop91.biz$popup
 ||bebinin.com$popup
+-----Restrict to domain------
+||takhfifan.com$domain=fararu.com
 ###divAgahi
 ##.hometabligh
 ##.adsBar
@@ -923,6 +929,8 @@ forum.ubuntu.ir##.news.normaltext
 forum.persiantools.com##DIV[id="bazarcheh"][class="body_wrapper collapse"]
 forum.persiantools.com##DIV[id="tahlildadeh"][class="body_wrapper"]
 forum.persiantools.com##DIV[class="bmptfooter"]
+##.row.social_network_chanel_news + * + * + * + * + * + * + *
+fararu.com##.row.mg_b_2 + * + * + * + * + * + * + .row
 gtalk.ir###topbar
 generaleshop.com##DIV[align="center"]
 generaleshop.com###reklam01

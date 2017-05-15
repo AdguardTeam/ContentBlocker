@@ -1,15 +1,16 @@
+! Checksum: guitFNPSKXtbcCVqyn9ohA
 ! Title: Adblock polskie reguły cookies
-! Version: 1.0.1.15
-! Name: Adblock polskie reguły cookies
 ! Description: polski filtr cookies
-! NameEn: Adblock polskie reguły cookies
-! DescriptionEn: polski filtr cookies
-! TimeUpdated: 2016-08-28T14:35:39.050+04:00
+! Version: 1.0.1.37
+! TimeUpdated: 2017-05-04T17:35:38.066+04:00
+! Expires: 2 days (update frequency)
+intel.de#@#div[class*="cookie"]
 1000dni.pl##DIV[style="width: 100%; background-color: rgb(0, 60, 122); padding: 10px 8px; line-height: 20px; left: 0px; position: fixed; margin: 10px auto 0px; bottom: 0px; z-index: 1000; font-size: 13px; font-family: Helvetica,Arial,sans-serif; color: rgb(255, 255, 255);"]
 4hifi.pl##div#myModal
 4hifi.pl##div.reveal-modal-bg
 a4-klub.pl###document_modal
 acmilan24.com##div#top_oko2
+adobe.com##.message
 agatahome.pl##[id^="jbar"]
 akademia-piwa.pl##div#polityka_tekst
 am.gdynia.pl##div#infoCiasteczek
@@ -19,7 +20,6 @@ androidmagazine.pl##DIV[style="position: fixed; bottom: 0px; padding: 10px 30px;
 animeon.pl##div#cookis-bg
 animesub.info##div#aOverlay
 animesub.info##div.appriseOuter
-antyradio.pl##.fadeInUp.animated.giodoContainer
 apdmarket.pl###popup
 aptekadyzurna.pl##div[style="padding: 10px 70px 10px 50px; font-family: arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 9px; line-height: normal; background-color: rgb(153, 153, 153); display: block; position: relative; color: white; width: 99%; "]
 aptekagemini.pl##div#kukiz
@@ -32,14 +32,15 @@ asd.pl##div[style="width: 100%;float: left;background: #fff;padding: 15px 0;posi
 audiostereo.pl###cookiebanner
 auschwitzmemento.pl##div.activebar-container
 autokult.pl##div#cop
-automapa.pl##div[style="position: absolute; z-index: 32000; font-size: 11px; font-family: Arial, sans-serif; left: 50%; top: 3px; width: 600px; height: 130px; margin-left: -300px; margin-top: 0px; border: 1px solid rgb(219, 219, 219); color: rgb(85, 85, 85);"]
 automapa.pl##DIV[style="position: fixed; left: 0; bottom: 0; right: 0; padding: 12px 0; z-index: 99999; background: #3a3a3a;"]
+automapa.pl##div[style="position: absolute; z-index: 32000; font-size: 11px; font-family: Arial, sans-serif; left: 50%; top: 3px; width: 600px; height: 130px; margin-left: -300px; margin-top: 0px; border: 1px solid rgb(219, 219, 219); color: rgb(85, 85, 85);"]
 autosklep24.pl##div#box_alert
 autowrzuta.pl###hideMe
-babki.poznan.lasy.gov.pl##div.popup-alert-notice
 bankier.pl###cookiepolicydiv
-bankmillennium.pl#@#.cookies-info
+bankmillennium.pl,zus.pl#@#.cookies-info
 bartix.pl###menusDiv
+bcc.com.pl###info
+beskidzkapilka.pl##.messageinfo
 betsson.com###MsgAreaBottom
 biegambolubie.com.pl##div[style="position: fixed; top: 0px; left: 0px; right: 0px; z-index: 9999; background-color: rgb(119, 119, 119); color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, sans-serif; border-bottom-width: 2px; border-bottom-style: ridge; border-bottom-color: rgb(204, 204, 204); padding: 3px 40px; line-height: 16px; cursor: pointer; background-position: initial initial; background-repeat: initial initial; "]
 bik.pl###cmsg
@@ -58,88 +59,126 @@ bold.net.pl###u12344
 bold.net.pl###u12365
 bookiatryk.pl##div[style="position: fixed; z-index: 9999; top: 0px; width: 100%; margin: 0px; padding: 5px 20px; text-align: center; line-height: 1.3em; background-color: rgb(255, 255, 255); font-size: 15px; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: rgb(255, 0, 0); background-position: initial initial; background-repeat: initial initial;"]
 bose.pl###privacy-message-bar
+bravekingdoms.com##DIV[style="position: absolute; margin-top: 30px; margin-left: 550px;"]
 bricomarche.pl##div#content-head-information
 browar.biz##DIV[style="color: gray; background-color: white; border-bottom: 1px dotted gray; padding:2px; font-size: 0.75em;"]
 browarlubicz.pl###u22791
 bstorun.pl##div#comm_info
+bskrasnosielc.pl###cookiewarning > div
 buduj.co.uk###SiteAnouncement
 buliba.pl##DIV[style="display: block; position: absolute; z-index: 999; background: rgb(255, 255, 255) none repeat scroll 0% 0%; left: 0px; right: 0px; color: rgb(0, 0, 0); font-family: Arial; font-size: 13px; line-height: 17px; padding: 7px 0px; overflow: hidden; bottom: 0px;"]
 buziak.pl###cffc
 bytzbiorowy.pl###easyNotification
 cabletech.pl##div[style="top:0;position:absolute;width:100%;background:#000;color:#f2f2f2;font-size:10px;text-align:center"]
 canalplus.pl##div#cookes_policy
-carisma.pl##div#ciasteczka
 caritas.pl###cq-scroll-notification
-cartests.pl##div.messi
 cartoonnetwork.pl###header
 ccm.net##.ccmcss_oic
 cda.pl,superfilm.pl##div#box_info
 centrum-bmw.pl##div[style="width: 100%; background-color: rgb(193, 193, 193); margin: 10px auto 0px; padding: 15px 8px; position: fixed; left: 0px; bottom: 0px; z-index: 1000; color: rgb(255, 255, 255); "]
 centrum-psych.pl###evideCookiesNotify
 centrumpilkarskie.pl##div.jqibox
+chamsko.eu###dymek:not(body):not(html)
 chip.pl###polityka-cookies
+ciam.pl###privacy-info
 ciasteczka.org.pl###ciasteczka\.org\.pl
+cinema-city.pl##.policy, #policy, .cpolicy
 cinema-city.pl##div#layer_2_0_0
 cke.edu.pl##div[style="top:0;left:0;right:0;width:100%;margin:0px auto;background:#fff;height:50px;"]
+codziennikfeministyczny.pl###bazinga-muffin-container
 cookielaw.org##div.optanon-alert-box-wrapper
+costacoffee.pl##.notification-global
 cs-puchatek.pl##.oregulaminie
 curvefever.pl##div.ccc-widget
-cyanmod.pl##.cm-show.cm-message
+cyanmod.pl##.cm-message, .ipsfocus_globalMessage
 cyberbajt.pl##div#message0
+cyryl.poznan.pl###cooPInfo
 czasdzieci.pl##DIV[style="width:100%;position:fixed;bottom:0;background-color:#f5f5f5;padding:13px 25px 20px;font-size:13px;z-index:200;box-shadow:0 0 10px rgba(0,0,0,0.3);"]
+czasdzieci.pl##body > div:not([id]):not([class])
+czasdzieci.net##DIV[style="width:100%;position:fixed;bottom:0;background-color:#f5f5f5;padding:13px 25px 20px;font-size:13px;z-index:200;box-shadow:0 0 10px rgba(0,0,0,0.3);"]
+czescidobmw.pl###container > div[onclick]
 czescidobmw.pl##div[style="position:fixed;left:0;top:0;width:100%;height:100%;background:#000;background:rgba(0,0,0,0.5);z-index:99999;cursor:pointer"]
+dacter.pl###topbar, #topBar, .topbarBox, .topBarMessage, #__topBar, #top_bar
 darksiders.pl###callout
 dealertata.pl##div[style="margin: auto auto; padding:10px 0; width:100%; z-index:1000; background:#333; position: fixed; left: auto; bottom: 0%; right: auto;"]
 decathlon.pl###tc_privacy
 deichmann.com##.open.clearfix.module.newsflash
 delicjapolska.pl###cooboo
+demotywatory.pl##DIV[style="position: fixed; width: 750px; margin-left: -375px; bottom: 0; height: 68px; background-color: #ccc; border-top: 1px solid black; z-index: 1000; overflow: hidden; left: 50%; padding: 15px 30px; color: #666; font-family: arial; font-size: 12px; line-height:150%;"]
 devilpage.pl##div[style="background:#2A2A2A; left:0px; top:0px; right:0px;"]
+dlink.com###\35 7ced7ae-0d31-440d-8036-058e73d02026
 dobrekosmetyki.co.uk###DIVwelcome
 dodrukarki.pl##div[style="background:#FFFADE; padding:6px 0px;"]
 domena.pl##div[style="width: 950px; display: block; margin: 0px auto; background-color: rgb(255, 250, 222); padding: 15px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; border: 1px solid rgb(238, 238, 238); font-size: 11px; position: relative; z-index: 1999; "]
 domkibieszczady.pl###cookiesDiv
 dpd.com.pl##div[style="width:940px; border:#CCCCCC 1px solid; padding:10px; z-index:100; position: fixed; left:auto; bottom:10px; background-color: #CCCCCC; font-size:10px;"]
-bravekingdoms.com##DIV[style="position: absolute; margin-top: 30px; margin-left: 550px;"]
 drony.net##div#cop
 drukuj24.pl##div#politykacooki
 dvbsklep.pl,naturo.pl##[id^="simple-modal"]
 dvdmax.pl##div#alertTop
 dzis.tv##div#regulaminWrap
+e-fajek.pl##body > div:not([id]):not([class])
 e-fajek.pl##div[style="position: fixed; top: 0; left: 0; z-index: 10000; width: 100%; height: 30px; border-bottom: 1px solid rgba(186,186,186,.5); background-color: #000000; background-color: rgba(0,0,0,.9); color: #cccccc; font-family: Arial,Helvetica,Garuda,sans-serif; line-height: normal; font-size: 10px;"]
+e-legnickie.pl##body > div[style*="left:0px"]
 e-metalzbyt.pl###popupContact
+e-petrol.pl###statement
 e-podatnik.pl##DIV[style="margin: 0 auto; padding: 10px; width: 900px; background-color: #eaeaea"]
+e-podatnik.pl##body > div:not([id]):not([class])
 e-podroznik.pl##.biscuits-usage
+e-promar.pl###cInfo
 e-swietokrzyskie.kielce.eu##div#belka_dolna
 e24cloud.com##div#FullBox
 ebay.pl##.gh-banner-active.gh-banner
+ebok.jmdi.pl##.ui-notificationbar.top
 ebok.vectra.pl##div.jqmAlertContent
 eco.atman.pl##div#gbpl_oba
 economist.com##div#ec-message-1
+edarling.pl###infobarDiv, #infobar, .infobar, #info-bar, #info_c_box, .info-message
+eena.pl###whole_page_loader
 egospodarka.pl###js_popup_cookies
+ekko.com.pl###messagePo
+ekosalus.pl##.welcomebar
 ekosalus.pl##div#DIVwelcome
+ekoserwis.poznan.pl##.content-head-information
 eldom.eu##div[style="width: 100%; background-color: rgb(29, 29, 29); background: none repeat scroll 0 0 rgba(29, 29, 29, 0.94); color: #F5F5F5; border-bottom: solid 1px #cecece; border-top: solid 1px #fafafa; position: fixed; bottom: 0; z-index: 999;"]
 elektroda.pl##div#top2
 elektroonline.pl###ccc-state
 elektrotop.pl##[style="position: fixed; left:0; right:0; bottom:0; height:110px; background-color:#eee; border-top: 1px solid black; z-index:2000; overflow: auto"]
+elektrotop.pl##body > div:not([id]):not([class])
+elektrozysk.pl##body > div:not([id]):not([class])
 eliza.pl##div#comm_info
 elopol.pl##div#black2
 elopol.pl##div.ciacho-wrap-container
-epiotrkow.pl##div.cookskom
+epuap.gov.pl###specialbox-info
 epuap.gov.pl##.footer-info
+erboristeriamagentina.it###blultpdfbanner
+ergokantor.pl##.alert-warning.alert
 eserial.pl##[class^="skryptcookies-pl-"]
-eteacher.pl##div#info_container
+eservice.pl###zwcc
+esklep-sbs.pl###cibMessage
+eteacher.pl###info_container
 eternityproject.pl##div.newsbar
+etransport.pl##.active.visible.transition.page.modals.dimmer.ui
 everhome.pl##div.shotimoo
+expozdrowie.pl###alert_popup
 expozdrowie.pl,fzz.pl##div#alert_popup
 extraserv.pl##div#uwaga
 ezakupy.tesco.pl###privacyInnerContainer
+fabrykamemow.pl##body>div:not([id]):not([class])
+facebook.com##.pam.fbPageBanner._3d9x.uiBoxGray.bottomborder
 fajka24.pl##DIV[style="background: #fafafa; border: 1px solid #ccc; text-align: center; font-size: 1em; padding: 20px; width: 960px; height: 20px; left: 50%; bottom: 60px; margin-left: -480px; position: fixed; z-index:130 "]
+fajka24.pl##body > div:not([id]):not([class])
+fakt.pl,komputerswiat.pl###cookies
+faktopedia.pl##body > div:not([id]):not([class])
+familie.pl##body > div:not([id]):not([class])
+fandemonium.pl##body > div:not([id]):not([class])
 fandemonium.pl##div[style="; color: #999; position: absolute; top: 0; right: 40px; text-align: center; background: #333; padding: 4px 0; margin-bottom: 5px; -webkit-border-bottom-right-radius: 8px; -webkit-border-bottom-left-radius: 8px; -moz-border-radius-bottomright: 8px; -moz-border-radius-bottomleft: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; font-size: 12px; -webkit-box-shadow: 2px 2px 3px 0px rgba(127, 127, 127, 0.4); box-shadow: 2px 2px 3px 0px rgba(127, 127, 127, 0.4);"]
 fansubs.pl##div[style="border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; padding: 10px; top: 0px; right: 0%; width: 94%; opacity: 1; margin-left: 2%; display: block; "]
 fantastyka.pl##div[style="text-align: center; padding: 15px; border-bottom: 2px solid #cc3300; background: url(obrazki/kwadrat-monit.png); font-size: 9pt;"]
 feb.net.pl##div#eurociastko
+feuvert.pl###info
+fiatklubpolska.pl###navbar_notice_1.restore
 fiatklubpolska.pl##li#navbar_notice_1
-fightsports.pl##.ciasteczka-info
 fileshark.pl###div_cookis
 filmaniak.tv##.top_info
 filmweb.pl##div.topBarCont
@@ -152,30 +191,47 @@ florexpol.eu##div#fancybox-wrap
 flyordie.pl###eucc
 fogo.pl##.bottom.shadow.foobar-wrapper.small-white-arrow
 fora.pl##DIV[style="position:relative;display:block;margin:0 auto;visibility:visible;overflow:hidden;font-size:0.8em;color:#232000;background-color:#fcfc9a;-moz-box-shadow:0 2px 4px #bbb;-webkit-box-shadow:0 2px 4px #bbb;-khtml-box-shadow:0 2px 4px #bbb;box-shadow:0 2px 4px #bbb;filter:progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=145, Strength=4);"]
-ford-esklep.pl##div#box_alert
+forbot.pl###ForbotCookies
+ford-esklep.pl###box_alert
 forgeworld.co.uk##div#overlayMask
 forum.benchmark.pl##div#document_modal
 forum.dziennikwschodni.pl###cookiePolicyPopup > div > p
 forum.mcwiki.pl,forum.minepedia.pl##div#notice
-forum.olympusclub.pl###navbar_notice_192
 forum.vwgolf.pl##iframe[src="cookie.html"]
 forum.zarabianie24.net##div[style="font-family: Tahoma; margin-bottom: 6px; padding: 5px; font-size: 10px; color: rgb(0, 0, 0); background-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-color: black; border-bottom-style: solid; "]
+forumlekarza.pl###cpolicy_wrap
+forumplay.pl###notices
 forumplay.pl##li#navbar_notice_6
-foto4u.pl##div#info-bar
+forumwodne.pl##body > div[id] > div[style*="fixed"]
+forum-kredytowe.pl###navbar_notice_6
+forum.radioparty.pl###document_modal
+foto4u.pl###infobarDiv, #infobar, .infobar, #info-bar, #info_c_box, .info-message
 fotoblogia.pl,gadzetomania.pl##div#cop
 fotojoker.pl##div#floatDiv
+futu.pl###my-alert
+gadu-gadu.pl##body > div:not([id]):not([class])
+galeriakrakowska.pl###claw
+galerialimonka.pl###cop
+galeriamalta.pl###info
 gameplay.pl##div#CP_box
+gardinia.pl##body > div[id*="cookie"]
 garwolin-starostwo.pl##.activebar-container
 gbritain.net,eastbook.eu##div#permission-bar
+gda.pl##.shotimoo
 gdziewpolsce.pl##DIV[style="width: 100%; height: 85px; position: fixed; bottom: 0px; background: url(\"http://theateam.pl/cookie-alert/low_contrast_linen.png\") repeat scroll 0px 0px transparent; box-shadow: 0px 0px 10px rgb(0, 0, 0) inset; border-top: 1px solid rgb(71, 71, 71); border-bottom: 1px solid rgb(71, 71, 71); display: block;"]
 generali.pl##div#cLayer
-getem.pl##div#polityka
+getagift.pl###header > div[style]
+getem.pl###polityka
 gg.pl##[style="position:absolute;right:0;top:0;display:block;width:22px;height:30px;font-family:Verdana, Tahoma, Arial;font-weight:bold;font-size:10px;color:#aaa;text-align:center;line-height:25px;cursor:pointer;cursor:hand;"] + DIV
 gg.pl##div[style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: auto; z-index: 6660; visibility: hidden; font-family: Arial, Tahoma, Verdana; font-size: 16px; line-height: 1em; color: rgb(34, 34, 34);"]
-giercownia.pl##div#ci-info-box
+giercownia.pl###ci-info-box
 gimpex.pl##div#cs_gimpex
+ginekolog-darlowo.pl###zgoda
 gkn.pl##div#gora0
 glos24.pl##DIV[style="border: 1px solid #fcce00; background: #fcfc9a; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 0 2px 4px #bbb; -webkit-box-shadow:0 2px 4px #bbb; -khtml-box-shadow: 0 2px 4px #bbb; box-shadow:0 2px 4px #bbb; width: 700px; font: normal 12px/1.6em verdana; color: #505050;"]
+glos24.pl##body > div[style*="z-index: 999"]
+glucholazy.pl###layer9
+gmsystem.pl##body > form
 gniezno24.com##div.activebar-container
 goclever.com##div#cp-wrap
 goclever.pl##div#cp-wrap
@@ -189,203 +245,355 @@ google.pl#@#div[class*="cookie"]
 google.pl,google.com###gb > .gb_g.gb_ac.gb_bc
 google.pl,google.com##.vk_c._Udi
 google.pl,google.com##div#epbar
+gosc.pl##body > div:not([id]):not([class])
+gosc.pl###l-overlay
+gov.pl##.informationBar, .JSWrapper
+gowork.pl###header_top > p
 gowork.pl##div#header_top
 gpwinfostrefa.pl##div#divcook
+grafoteka.pl###info-container
 grawipol.pl,kopland.pl###message-bar
 greenlux.pl###pawelix_banner
+gregorio.pl##.ciacho-wrap-container, .black_overlay
 groj.pl###gbpl_oba
 groupon.pl##div#jOftLayer
+grupazywiec.pl###apollo-bar
 grx.pl###flash-msg
 gry-online.pl##div#CP_box
+gsbk.pl###ci
 gsm-grodzisk.pl##div#_mo
+gsmonline.pl###jGrowl
 gsmonline.pl##div[id*="jGrowl"][class*="bottom-right"]
 guardian.co.uk##.identity-noticebar-content
 hachette.com.pl##div[style="position:fixed;bottom:0;z-index:1000;width:100%;text-align:center;background:#EEE;padding:15px 0;border-top:1px solid #333;"]
+hankooktire.com##.top_ep_wrap
 hattrick.interia.pl##div.alert
+hbo.pl###overlay
 hebe.pl##.legal-info
-hemp.pl##table[border="0"][cellspacing="0"][cellpadding="0"][width="1166"][height=""][align="center"][valign="top"][bgcolor="gray"]
+hemp.pl##table[width="1166"][bgcolor="gray"]
 herbaciani.pl##DIV[style="float:right; padding-top:20px; padding-bottom:20px; width:100%; font-size:12px; background:#ddd; color:#333; text-align:center; margin-bottom:10px;"]
+herbaciani.pl##body > div:not([id]):not([class])
 hi-tec.com.pl##DIV[style="width: 882px; padding: 10px; margin: 3px auto; text-align: center; color: #BABABA"]
 hillsvet.pl##[class*="ui-widget"]
+himountain.pl###infobarDiv, #infobar, .infobar, #info-bar, #info_c_box, .info-message
+hoga.pl###warning
 home.pl###box_policies
-hosting.onet.pl##div.policy-box
 hotelbrda.com.pl##div#examplediv
+hotmag.pl###wysuwane
+hss.pl##body > div:not([id]):not([class])
 hss.pl##div[style="position: fixed; width: 280px; height: 112px; bottom: 15px; right: 15px; color: white; font-size: 12px; text-align: center; padding: 4px 10px; line-height: 15px; font-family: Verdana; background-image: url(http://www.xn--kope-ota.pl/cookiesWidget/minBg.png); z-index: 9999; background-position: initial initial; background-repeat: initial initial; "]
+hurtowniateleinformatyczna.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
 iab.org.pl,iabpolska.pl###wpca-wrapper
 ibm.com##div[style="background-color: rgb(0, 0, 0); opacity: 0.4; position: fixed; z-index: 1000000; width: 100%; height: 100%; top: 0px; left: 0px; overflow: hidden; "]
 ibm.com##div[style="position: absolute; z-index: 2000000; top: 150px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; padding: 10px; background-image: url(http://consent.truste.com/get?name=trans.png); left: 50%; margin-left: -420px; background-position: initial initial; background-repeat: initial initial; ]
+ideanord.com.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
 idream.pl##.notification-container.cm-notification-container
 ign.org.pl##div#closeCookeiInfo
+ihrzeszow.ires.pl##.PopupOverlay, .Popup
 ikea.com###cookieMsgBlock
 imagazine.pl###footer_wrap
 imagazine.pl###secondary
-imagazine.pl##div[style="position: fixed; bottom: 0px; padding: 10px 30px; z-index: 10000; background-color: rgb(255, 255, 255); box-shadow: rgb(102, 102, 102) 0px 0px 10px; width: 100%; box-sizing: border-box; background-position: initial initial; background-repeat: initial initial;"]
 imagazine.pl##DIV[style="position: fixed; bottom: 0px; padding: 10px 30px; z-index: 10000; background: none repeat scroll 0% 0% rgb(255, 255, 255); box-shadow: 0px 0px 10px rgb(102, 102, 102); width: 100%; box-sizing: border-box;"]
+imagazine.pl##body > div:not([id]):not([class])
+imagazine.pl##div[style="position: fixed; bottom: 0px; padding: 10px 30px; z-index: 10000; background-color: rgb(255, 255, 255); box-shadow: rgb(102, 102, 102) 0px 0px 10px; width: 100%; box-sizing: border-box; background-position: initial initial; background-repeat: initial initial;"]
 in4.pl##div.subheader
+info-polska.com.pl##body > div:not([id]):not([class])
 info.wiara.pl##div[style="border: 10px solid rgb(138, 138, 138); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; box-shadow: rgba(0, 0, 0, 0.901961) 0px 0px 15px 0px; background-color: rgb(255, 255, 255); padding: 8px 8px 10px; position: fixed; z-index: 99999; right: 20px; left: 20px; bottom: 20px; width: 700px; max-width: 90%;"]
 infoludek.pl##div.infcook
+info24.rzeszow.pl##.ja-box-right.column.ja-box-wrap
 ingservicespolska.pl###privacy
-instalki.pl##div#ciasteczka
+instytutksiazki.pl###popup
+instytutlogopedyczny.pl###flash-msg
 interhandler.pl##div#comm_info
+interhotel.pl##[style="width:1200px; margin:5px auto; padding:10px;background-color:#fff;color:#666; text-align:justify;font-size:13px;border:solid 1px #666;"]
+interprojekt.pl###myModal, .modal-backdrop, .reveal-modal-bg
+intimiti.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+intymna.pl###sb_bottom_float
 intymna.pl###wymagania_sklepu_alert
+iom.pl###cooker
 ip-sa.pl###myModal
 ip-sa.pl##.reveal-modal-bg
+ipartworld.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
 iperfumy.pl##div#gritter-notice-wrapper
-istotne.pl##.notification-info.notification
 irma.pl##DIV[style="clear: both;background-color: #e8e8e8;margin: 0 auto 0 auto;overflow: hidden;width: 100%;z-index: 9999;"]
+irma.pl##body > div:not([id]):not([class])
+istotne.pl##.notification-info.notification
+istotne.pl##header.top
+istotne.pl##.in.fade.modal
+istotne.pl##.in.fade.modal-backdrop
+ists.pl##.polityka
 itaka.pl##div[style="position: fixed; bottom: 0px; width: 100%; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(187, 187, 187); box-shadow: rgb(238, 238, 238) 0px -10px 20px; padding: 10px; text-align: center; background-color: rgb(252, 252, 252); z-index: 10000; background-position: initial initial; background-repeat: initial initial; "]
+itpromo.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+izone.pl##.mm-page > div[style*="height: 80px"]
+jajco.pl##div[id*="n-cookies-notification"]
+jak-ksiegowac.pl###message_wrap
+jakipupil.pl##body > div:not([id]):not([class])
 jakipupil.pl##div[style="position: fixed; bottom: 0px; width: 100%; text-align: center; background-color: rgb(238, 238, 238); text-shadow: none; height: 40px; padding-top: 20px; z-index: 100000000; background-position: initial initial; background-repeat: initial initial;"]
+januszebiznesu.pl###komunikat
 jarocin.poznan.lasy.gov.pl##div#aui_3_2_0_1203
 jazzfestiwal.kck.com.pl###system-message > .fade.message.notice > ul > li
 jazzsoul.pl###globalMessage
+jednoslad.pl###arvlbdata > p
 job-profi.pl##.activebar-container
 joemonster.org##DIV[style="position: fixed; bottom: 0; width: 1020px; height: 100px; background-color: #eee; border: 1px solid black; z-index: 1000; overflow: auto; left: 50%; margin-left: -510px; border-bottom: 0;"]
 joemonster.org,mistrzowie.org,komixxy.pl,demotywatory.pl,faktopedia.pl,fabrykamemow.pl,motokiller.pl,kotburger.pl,piekielni.pl,atakklonow.pl,rebelianci.org,wspaniali.pl,tenajlepsze.pl,wezsietato.pl,stylowi.pl,wszechpolska.pl,gifowisko.pl,filmixxy.pl,popkorn.pl,dawniejdzisiaj.pl,studentpotrafi.pl,superbobas.tv,wykresy.pl,machinaczasu.pl,wyciagamykarteczki.pl##div[style="position: fixed; left:0; right:0; bottom:0; height:120px; background-color:#eee; border-top: 1px solid black; z-index:1000; overflow: auto"]
 k-ex.pl##div[style="position: fixed; bottom: 0px; width: 100%; background-color: rgb(204, 204, 204); z-index: 1; box-shadow: rgb(102, 102, 102) 0px 0px 5px;"]
 kabam.com##div#eu_privacy
+kabar.pl##body > .blockMsg
 kacperkowalski.pl##DIV[style="position: relative; top: 0px; left: 0px; right: 0px; z-index: 9999; background: rgb(119, 119, 119) none repeat scroll 0% 0%; color: rgb(255, 255, 255); font-size: 12px; font-family: Arial,sans-serif; border-bottom: 2px ridge rgb(204, 204, 204); padding: 3px 40px; line-height: 16px; cursor: pointer;"]
+kacperkowalski.pl##body > div:not([id]):not([class])
+kalendarzswiat.pl###consent, #consent-container, #consent-disclaimer, #consentContainer, #consentWrapper, #consent_box_wrapper, #ConsentLayerWrapper
+kalisz.pl###showHideDiv
 kamilianie.eu##div[style="position: fixed; top: 50px; left: 0px; right: 0px; bottom: auto; z-index: 5; visibility: hidden; font-family: Arial, Verdana, Tahoma; font-size: 14px; line-height: 1em; color: rgb(34, 34, 34); "]
 kappahl.com##.warning
 karmimypsiaki.pl##div#ciasteczkaInfoContainer
-karmy.com.pl##div#privacy
+karmy.com.pl###privacy, .privacy, #mainPrivacyDiv, .privacyTop, #privacy-info, .privacy-top, .privacy-overlay, .privacypolicy, #privacy-notification, #inf_privacy, #privacypolicycontainer
 kartamultisport.pl##div[style=" width: 780px; background:#f0f0f0; text-align:center;  margin:0px auto 0px auto;  border:1px solid #cccccc; position:relative;"]
+kartuzy.pl###rstbox_1
+kartonwork.pl##body > div > div[style*="position: fixed"]
 kartuzy.info##div#page_top_topbar2
 katowice-airport.com##div[style="border: 5px solid rgb(51, 179, 238); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px 0px; -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px 0px; background-color: rgb(255, 255, 255); padding: 8px 8px 10px; position: fixed; z-index: 10000; left: 25px; bottom: 25px; width: 700px; max-width: 90%; font-size: 12px;"]
 kentype.pl##div#ciasteczka-box
+kfc.pl##body > div:not([id]):not([class])
+kierunekspozywczy.pl###cook, .cook
+kinofilmyonline.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+kinonh.pl###div_ac
 kinoteka.pl##DIV[style="font-size: 13px; color: rgb(221, 221, 221); font-family: Tahoma,Geneva,sans-serif; z-index: 10000; position: fixed; bottom: 0px; left: 0px; right: 0px; height: 60px; padding: 0px 20px; background: rgb(70, 70, 70) none repeat scroll 0% 0%; border-top: 1px solid rgb(204, 204, 204);"]
+kinoteka.pl##body > div:not([id]):not([class])[style*="position"][style*="fixed"], body > div:not([id]):not([class])[style*="position"][style*="absolute"]
 kkm.krakow.pl##div#poityka-ciastek
 klockolandia.pl##DIV[style="position:fixed;top:0;z-index:1000;width:100%;text-align:center;background:#EEE;padding:15px 0;border-bottom:1px solid #333;"]
+klockolandia.pl##body > div:not([id]):not([class])
 klopsztanga.eu##div[style="background:#2A2A2A; left:0px; bottom:0px; right:0px; position:fixed; z-index:10000;"]
+klublifestyle.pl###fancybox-wrap, #fancybox-overlay, #fancybox-loading, #fancybox-tmp, .fancybox-wrap, .fancybox-overlay
+kobieta.byc.pl###kontener1
 kolejeslaskie.com##div#c_m
+komfort.pl###intro_row, #kt-cookies
+komixxy.pl##body > div:not([id]):not([class])
 komorkomania.pl##div#cop
-komputerymarkowe.pl##.ui-resizable.ui-draggable.ui-corner-all.ui-widget-content.ui-widget.ui-dialog
+komputerymarkowe.pl##.ui-dialog.ui-widget
+komputerswiat.pl###cewe-accept-cookies
 komunikacja.um.bialystok.pl##a[href="/?page=cookies"]
+konserwatyzm.pl###toast-container
+kontakt-simon.com.pl##body > div:not([id]):not([class])[style*="position"][style*="fixed"], body > div:not([id]):not([class])[style*="position"][style*="absolute"]
 korpol.pl###myModal
 korpol.pl##.reveal-modal-bg
-korwin-mikke.pl##DIV[style="padding: 5px 3px; width: 500px; margin: 0px; background: rgba(0, 0, 0, 0.85) none repeat scroll 0% 0%; box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); position: absolute; top: 0px; left: 424.5px; font-family: Arial,Helvetica,Garuda,sans-serif; text-align: center; color: rgb(255, 255, 255); z-index: 9999; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;"]
 korwin-mikke.pl##DIV[style="padding: 5px 3px; width: 500px; margin: 0px; background: rgba(0, 0, 0, 0.85) none repeat scroll 0% 0%; box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); position: absolute; top: 0px; left: 421.5px; font-family: Arial,Helvetica,Garuda,sans-serif; text-align: center; color: rgb(255, 255, 255); z-index: 9999; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;"]
-kreskoweczki.pl##div#gbpl_oba
+korwin-mikke.pl##DIV[style="padding: 5px 3px; width: 500px; margin: 0px; background: rgba(0, 0, 0, 0.85) none repeat scroll 0% 0%; box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); position: absolute; top: 0px; left: 424.5px; font-family: Arial,Helvetica,Garuda,sans-serif; text-align: center; color: rgb(255, 255, 255); z-index: 9999; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;"]
+korwin-mikke.pl##body > div:not([id]):not([class])
+kotburger.pl##body > div:not([id]):not([class])
+kozy.pl###claw
+kpim.pl##.coologo7
+kraksport.pl###notice_bar
+kreskoweczki.pl###gbpl_oba
 krosnocity.pl###polcia
-krsystem.pl##div#cook
+krsystem.pl###cook, .cook
 krytykapolityczna.pl,estore-pl.pandora.net##div#cccwr
-ksu.parp.gov.pl##div#howdydo-wrapper
 kuchniapelnanagrod.pl##div#claw-prompt
 kula.gov.pl###pa
 kulki.info###welcome-box
 kulturalnysklep.pl###ctl00_cq_divText
+kupbilet.pl##.alert-dismissible, .alert-dismissable, .alert--dismissable, .pmd-alert-dismissible
 kupbilet.pl##div#t3393f
-kwejk.pl###cookies-politics
+kupbilet.onet.pl##.alert-dismissible
 kzkgop.com.pl##.container.in.fade
-labottegatoscana.pl##div#disclaimer
-lampy.pl##.position-top.dnt-dialog > .wrapper
+kzkgop.pl###container > div:not([id]):not([class])
+labottegatoscana.pl###disclaimer, .disclaimer, .disclaimerContainer, .disclaimer-box, .disclaimer--info, #disclaimerC, #disclaimer-container, #disclaimer-box, .disclaimer-wrapper
+lampy.pl##.dnt-dialog
 lancia.pl###cl-banner
+laskonline.pl###cookiewarning > div:nth-of-type(1)
+laskonline.pl#@##cookiewarning
+lasy.gov.pl##.popup-alert-notice
 laznianowa.pl##DIV[style="background: #E9E9E9; color: #777; font-size: 9px; position: fixed; bottom: 0; width: 100%; z-index: 9999; padding: 2px; text-align: center; -webkit-border-top-right-radius: 8px; -webkit-border-top-left-radius: 8px; -moz-border-radius-topright: 8px; -moz-border-radius-topleft: 8px; border-top-right-radius: 8px; border-top-left-radius: 8px; font-size: 12px; -webkit-box-shadow: 2px 2px 3px 0px rgba(127, 127, 127, 0.4); box-shadow: 2px -2px 3px 0px rgba(127, 127, 127, 0.4);"]
-lca.pl##div#popupDiv
+laznianowa.pl##body > div:not([id]):not([class])
+lca.pl###popupDiv
 leclerc.com.pl##div#tekst
+legalsite.pl###message-1
+legnica.pl###popupDiv
 lego.com###GFSticky
-legolas.pl###kuki
+lek-med.pl###zgoda
+leo.pl,4fstore.com##.modal-backdrop
 lg.com##.policyChk
-licytacje.komornik.pl###sign_up
+licytacje.komornik.pl###sign_up, body > div[style*="margin-top: 100px"]
+limango.pl##.floating_notification
 linuxportal.pl##DIV[style="width: 100%; background: rgb(44, 48, 51) none repeat scroll 0% 0%; padding: 10px 0; color: #fff; border-top: 1px solid rgb(221, 221, 221);  text-align: center; position: fixed; bottom: 0; z-index: 999999999;"]
-lotplay.pl##.ui-corner-all
+linuxportal.pl##body > div:not([id]):not([class])
+livesmarter.pl###co15ie87a
+loktech.com.pl###comm_info
 lot.com##div#cc
-lotnictwo.net.pl##li#navbar_notice_123
-lovekrakow.pl##div#new-policy
-lubelska.pl##SECTION.cookies
+lotnictwo.net.pl###navbar_notice_123
+lotplay.pl##.ui-corner-all
+lovekrakow.pl###new-policy
+lovela.pl##body > div:not([id]):not([class])
+lstsoft.com.pl##body > div:not([id]):not([class])
+lukasfinanse.pl###strap
+lunamarket.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
 luszczyce.pl###co15ie87a
+luszczyce.pl##body > div > div[style*="position: fixed"]
+mactronic.pl##body > div[id*="cookie"]
+madreklama.com##.style2
 magazynpracy.pl##DIV[style="width: 100%; text-align: center; background-color: rgb(255, 255, 255); box-shadow: 0px 0px 8px rgb(85, 85, 85); padding: 10px 0px; z-index: 100; position: fixed; bottom: 0px;"]
-mall.pl##.con-large.cpr-bar
+magazynpracy.pl##body > div:not([id]):not([class])
+mall.pl##.cpr-bar
+malygosc.pl##body > div:not([id]):not([class])[style*="position"][style*="fixed"], body > div:not([id]):not([class])[style*="position"][style*="absolute"]
 mammografia.elblag.pl###co15ie87a
+mammografia.elblag.pl##body > div[id]
 mamnewsa.pl##div[style="z-index: 100000; font-family:Arial; position: fixed; bottom: 0px; left: 0; background-color: #F4EFB4; color: #000000; text-align: center; font-weight: bold; padding: 20px 0px; width:100%;"]
 mania4x4.pl##div.activebar-container
 manusite.pl##div[style="width:960px;height:100px;background:#0F0F0F;font-size:15px;text-align:center;padding:10px auto;"]
 maratony24.pl##div#privacyPolicy
 marbo-sport.pl##div#topbar
+marekjuraszek.pl###ml_wrapper
 marketing-news.pl###gbpl_oba
+markgum.com.pl##body > div[id=""]
 marykay.pl##.gigyaNotify
 marykay.pl##div[style="background-color: rgba(255, 255, 255, 0.8); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(153, 153, 153); bottom: 0px; color: black; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: 'Arial Narrow', Arial, Helvetica, sans-serif; left: 0px; padding: 10px; position: fixed; right: 0px; text-align: center; z-index: 10000; background-position: initial initial; background-repeat: initial initial;"]
+matoga.com.pl##body > div:not([id]):not([class])
+maxior.pl###ci-info-box
 maybellinetrends.pl##div[style="position: fixed; z-index: 999; bottom: 0px; right: 0px; width: 900px; padding: 18px 0px !important; background-color: rgb(0, 0, 0) !important; color: rgb(255, 255, 255) !important; font-family: arial !important; font-size: 12px !important; border-top-left-radius: 4px !important; border-top-right-radius: 4px !important; border-bottom-right-radius: 4px !important; border-bottom-left-radius: 4px !important; background-position: initial initial !important; background-repeat: initial initial !important;"]
+mazowia.eu###co15ie87a
+mazury.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+mediamarkt.pl###site_container > .clearfix
 mediasystems.pl##DIV[style="\a \9 \9 position: relative;\a \9 left: 300px;\a \9 text-align: center;\a \9 font-size: 13px; \a \9 color: #606060; \a \9 background: white; \a \9 border: solid 1px red;\a \9 width: 600px;\a \9 top: -70px;\a \9 "]
 mega-com.eu###footer-information
+megawrzuta.pl##.notification, .Notification, .js-notification, .notifications-container, #notifications, #notification_1, #notification, #notification_area, .notifications, .notif-bar, .notificationBox
+memoinfo.pl##body > div:nth-of-type(6)
+memorialhenrykapuzonia.pl###sc
 mercedes-benz.com,mercedes-benz.pl###emb-cp-dialog
-merixstudio.pl##.message
+merixstudio.pl###message, .message
 merlin.pl##.merlin-legal-note
+metro2033.pl##body > div:not([id]):not([class])
 mggp.com.pl##.navbar-inverse
-mini-itx.com.pl##div#ciastka
-miplo.pl##div[style="zoom: 1; border: none; position: relative; "][class="error rounded"]
+mggp.com.pl##.navbar.navbar-fixed-bottom
+miastograf.pl##.ui-widget, .ui-widget-overlay
+mikos.com.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+mini-itx.com.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+ministerstworeklamy.pl###messagePopup
+miniminiplus.pl##.cookies
+miplo.pl##.error.rounded
 mixmedia.pl##div#cook_info
+mjm.com.pl##body > div:not([id]):not([class])
+mkidn.gov.pl###pa
 mklr.pl##DIV[style="position: fixed; left:0; right:0; bottom:0; height:40px; background-color:#eee; border-top: 1px solid black; z-index:1000; overflow: auto"]
-mocnopomocni.pl##div[style="width: 100%; background-color: rgb(242, 242, 242); margin: 10px auto 0px; padding: 15px 8px; position: fixed; left: 0px; bottom: 0px; z-index: 1000; color: rgb(40, 40, 40); "]
+mklr.pl##body > div:not([id]):not([class])[style*="position"][style*="fixed"], body > div:not([id]):not([class])[style*="position"][style*="absolute"]
+mmtv.pl###policyInfo
 mocnopomocni.pl##DIV[style="width: 100%; background-color: rgb(242, 242, 242); margin: 10px auto 0px; padding: 15px 8px; position: fixed; left: 0px; bottom: 0px; z-index: 1000; color: rgb(40, 40, 40);"]
+mocnopomocni.pl##body > div:not([id]):not([class])
+mocnopomocni.pl##div[style="width: 100%; background-color: rgb(242, 242, 242); margin: 10px auto 0px; padding: 15px 8px; position: fixed; left: 0px; bottom: 0px; z-index: 1000; color: rgb(40, 40, 40); "]
+modecom.pl###mc_top_bar
+mojapogoda.com###IR
 moje-filmy.tk##.ggu-bot-snapped-launcher
-mokate.com.pl##div#ciasteczka
 mol.pl##DIV[style="position: fixed; bottom: 0px; z-index: 10000; box-sizing: border-box; width: 100%; font: 8pt Verdana,sans-serif; margin: 0px; padding: 1px 1em 1em; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-top: 1px solid rgb(153, 153, 153);"]
+mol.pl##body > div:not([id]):not([class])
 mondeoklubpolska.pl##li#navbar_notice_12
-monsterpolska.pl###interMsgsW
+monsterpolska.pl###interMsgsW, #m-popup-softgate, .browserAlertHolder
 morizon.pl##.cookiesNotificationOuter
 mos.gov.pl##div#textcook
 mosina.pl##div#politykaprywatnosci
 motocaina.pl###cookieBanner
+motokiller.pl##body > div:not([id]):not([class])[style*="position"][style*="fixed"], body > div:not([id]):not([class])[style*="position"][style*="absolute"]
 motomoto.pl###itlbox
+motonotes.pl##body > div:not([id]):not([class])
 motonotes.pl##div[style="background-color:black; width=100%; height:25px; color:white; position:absolute"]
 motostat.pl##div#messages
+mp.pl###toptop
 mpk.krakow.pl##div#poityka-ciastek
-mpk.lodz.pl##div#stpdueckmsg
+mpk.lodz.pl###stpdueckmsg
+mpolska24.pl##.infoBox
 mpolska24.pl##div[class^="infoBox"]
+mtech.pl###content_jquery_bottom
 mtm-info.pl###etisoA
 multikino.pl###CookielawBanner
 multiplay.pl##.inform
-muzeum-kaszubskie.gda.pl##div.shotimoo
+muzyczneradio.com.pl###legalLayer
+mybank.pl##body > div:nth-of-type(2)
+myfilmyonline.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+myob.pl###warning-popup
 nacydr.pl##div#pasek
+nadzwyczajne.com.pl###ultimate-modal, #ultimate-modal-content
 nakanapie.pl##div.sticker
+nano-carbon.pl##body > div:not([id]):not([class])
 naszamlawa.pl###fancybox-overlay
-net-speak.pl##div.uwaga
+naturo.pl###simple-modal, #simple-modal-overlay
+nauka.gov.pl##.ui-notificationbar.top
+ncplus.pl##.js-messages
+ncplusgo.pl##.js-messages
 nespresso.com###consent_blackbar
+net-speak.pl##div.uwaga
 net4car.pl###notice_messages
 nettg.pl##.fade
+nfz-lodz.pl##.mfp-ready
 niezalezna.pl##div[style="border: 2px solid #900; margin-left: auto; margin-right: auto; padding: 3px; width: 984px"]
-nik.gov.pl##div.informationBar
 niniwateam.pl##div[style="background-color: rgb(255, 230, 173); color: rgb(0, 0, 102); position: fixed; top: 0px; width: 100%; padding: 10px; font-size: 12px; "]
+nokiablog.pl###cop
 nomi.pl##div#Messenger-Special
+novatech.com.pl###cooki
+nowaostroleka.pl###cffc
+nowapapiernia.pl##body > div:not([id]):not([class])[style*="position"][style*="fixed"], body > div:not([id]):not([class])[style*="position"][style*="absolute"]
 nowehoryzonty.pl##div#div_ac
+noweprzetargi.pl###dcach
 noweprzetargi.pl###txt
 nowezyciepabianic.pl##div#PopupDiv
 nuorder.pl##.___ncn-container
 nvidia.com#@#[id*="cookie_"]
 nyanyan.pl##div[style="font-size:10px; background: #666; color:#000"]
-o2.pl##.zyHor
+o2.pl##.zyHor, #app-inner ._1Arb2
 obi.pl###cookiesText
 ociasteczkach.pl###ociasteczkach
+odjechani.com.pl###akceptacja-odjechani
 odjechani.com.pl##.guest_warn
 oferia.pl##DIV[style="position:fixed;z-index:9999999999;bottom:0;left:0;width:100%;background:#eedd27 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAA3CAIAAACkfXwqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIBJREFUeNrckUEKwlAMRDNJGuoRPJgHLp7BA7gtdCGuTKHTIHykCzeiFMwmJJnHhATj5SgtwBxexe16euaAmN+ncwTUvDre9wp0FGamC4ycSZrC8zGXIKKErssi7qi5CL/AaGPstz7vGYp3qD3qUH/hs2EOe/x0w2Rj7COfVYABAL665UDFkHW5AAAAAElFTkSuQmCC) repeat-x;"]
+oferia.pl##body > div:not([id]):not([class])
 off-road.pl###popslide
+offsklep.pl##body > div:not([id]):not([class])
+ogllo.pl##DIV[style="opacity: 0.9;-moz-opacity:0.9;z-index:999;position:fixed;bottom:0;left:0;right:0;text-align:center;padding:6px;color:#eee;background-color:#666;border-bottom:1px solid gray;"]
 ogloszenia.e-gratka.info##div#pojemnik
+ogradzamy.pl##body > div[id*="cookie"]
 okulary.szkla.com##div#polityka_prywatnosci
-old.wykopoczta.pl###noty_top_layout_container
 olimpiasport.pl##div#sek_cstk_inf
 olimpijski.pl###privacy
+olsztyn.pl##body > div:not([id]):not([class])
+olympusclub.pl###navbar_notice_192
+omegasoft.pl##.ui-dialog
 omnibussimulator.pl##[id^="co15"]
+omnibussimulator.pl##body > div > div[style*="position: fixed"]
 opac.wimbp.zgora.pl##div#alertboxsec_c
 opac.wimbp.zgora.pl##div#alertboxsec_mask
 open.fm##body > div:nth-of-type(7) > div
 openpli.org##div[style="height:20px;background-color:#FAFFDC;color:#222;padding:10px;font-size:1.1em !important;"]
 opineo.pl##div#uclaInfo
+opinie.wp.pl##._14gug ~ span
+opteam.pl###infobarDiv, #infobar, .infobar, #info-bar, #info_c_box, .info-message
 oracle.com##div[style="background-color: rgb(0, 0, 0); opacity: 0.4; position: fixed; z-index: 1000000; width: 100%; height: 100%; top: 0px; left: 0px; overflow: hidden; "]
 oracle.com##div[style="position: absolute; z-index: 2000000; top: 150px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; padding: 10px; background-image: url(http://consent.truste.com/get?name=trans.png); left: 50%; margin-left: -425px; background-position: initial initial; background-repeat: initial initial; "]
+orange.pl##.background
 origin.com###truste-banner
+orliman.pl##.c-info
+oskolaf.pl###modal-info, .modal-backdrop
+ostry-sklep.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+oswiecimskie24.pl##body > div:not([id]):not([class])
 oswiecimskie24.pl##div[style="z-index: 100000; font-family:Arial; position: fixed; bottom: 0px; left: 0; background-color: #F4EFB4; color: #000000; text-align: center; font-weight: bold; padding: 20px 0px; width:100%;"]
 otabletach.pl###cop
 pajerosport.pl##div#ci-info-box
 panasonic.pl##div#CP_Layer
 pandora.net##[class*="ui-"]
 pap.pl##div#divcook
+parkhotel.bydgoszcz.pl###alert_container_id
+parp.gov.pl###howdydo-wrapper
 pbg-sa.pl###info
 pccentre.pl##div[style="display: block; position: relative; width: 96%; border: 1px solid rgb(204, 204, 204); padding: 5px; height: 58px; margin-left: 2%; margin-right: 2%; margin-top: 1%;"]
+pcoutlet.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+peb.pl###jqibox
 pebx.pl###Notices
+pecetowiec.pl##.messagesWrapper
 pekao.com.pl##div#box-layer
 pekao.com.pl##div[id="popup"][style="width: 400px;height: 400px; position: absolute; z-index:999999; top:50px; left:50%; margin-left:-480px; background: url('/res/layerPopup/policy_popup_PL.jpg') no-repeat;"]
 penguingamers.eu##div#RACKWrapper
-personnelsolutions.pl##DIV[style="background: rgb(0, 0, 0) none repeat scroll 0% 0%; opacity: 0.8; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 100001;"]
+pepper.pl###softMessages-list
+personnelsolutions.pl,lekkoatletykadlakazdego.pl##DIV[style="background: rgb(0, 0, 0) none repeat scroll 0% 0%; opacity: 0.8; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 100001;"]
+personnelsolutions.pl##body > div:not([id]):not([class])
+pianomedia.pl###fancybox-wrap, #fancybox-overlay, #fancybox-loading, #fancybox-tmp, .fancybox-wrap, .fancybox-overlay
+piekielni.pl##body > div:not([id]):not([class])
+pis.org.pl##body > div:not([id]):not([class])
 pk.benefitsystems.pl##.ui-itbs-effect-border.bg-color-gray-light.center.oneCol.aPad
 pks.zary.pl##div#infobar
 pl###ciastkodivf
@@ -401,213 +609,332 @@ pl.chili.tv###_evh-ric
 pl.tripadvisor.com###COOKIE_BANNER > .inner
 pl.twich.tv##div#noty_bottomCenter_layout_container
 pl.yahoo.com##div#mediafpwave3-wshade
+plandomu.pl##body > div:not([id]):not([class])
+playtube.pl##.alert-success
 plotowanie.com##div#howdydo-wrapper
 pobieralnia.org##div[style="text-align: center; height: 40px; width: 100%; left: 0; position: fixed; top: 0; z-index: 2001; background: rgb(165, 62, 4); -webkit-box-shadow: 0px -4px 4px -4px rgba(0, 0, 0, 0.75) inset; box-shadow: 0px -4px 4px -4px rgba(0, 0, 0, 0.75) inset"]
-pochlaniaczwilgoci.com.pl##div[style="display: block; position: fixed; bottom: 0px; z-index: 10000; width: 100%; padding: 10px 0px; border-top-style: solid; border-top-width: 2px; border-top-color: rgb(140, 140, 140); background-color: rgb(250, 250, 250); overflow: hidden; opacity: 0.95; "]
+pochlaniaczwilgoci.com.pl,wielkopolska.travel##div[style="display: block; position: fixed; bottom: 0px; z-index: 10000; width: 100%; padding: 10px 0px; border-top-style: solid; border-top-width: 2px; border-top-color: rgb(140, 140, 140); background-color: rgb(250, 250, 250); overflow: hidden; opacity: 0.95; "]
 poczesna.com.pl##div#PolitykaBlok
-pogodynka.pl##div#ciastka
-policja.pl##div.informationBar
+podlogi-kopp.pl###cooPInfo
+polandtrade.pl###cb
+policja.pl##.informationBar, .JSWrapper
+polomarket.pl##body > div:not([id]):not([class])
 polskapress.pl###cookies-policy
-polskawoda.pl##DIV[style="width: 100%;float: left;background: #fff;padding: 15px 0;position: fixed;bottom: 0px;left: 0px;text-align: center;color: #000;border-top: 1px #000 solid;z-index: 100;"]
+polskawoda.pl,dourody.pl##[style="width: 100%;float: left;background: #fff;padding: 15px 0;position: fixed;bottom: 0px;left: 0px;text-align: center;color: #000;border-top: 1px #000 solid;z-index: 100;"]
 polskielng.pl##.ccc-widget
+polskiprawnik.pl##.reveal-modal-bg, #popup3
+popkiller.pl##.ccc-widget
+popkorn.pl##body > div:not([id]):not([class])
 popoznaniu.pl##div#divcook
 portalgorski.pl###aToolTip
 portalspozywczy.pl###axbg
 portel.pl##div[style="font-size:10px;text-align:left;background-color: #EAF6B4;padding: 2px 7px;width:906px;margin: 0 auto;"]
+postrabbit.pl##.alert-info, .alert-warning, .alert-box
+powerflex.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
 powiat-miedzyrzecki.pl###eKPC_Container
+poxilina.com.pl###capa
 poznaj-swiat.pl##div#popup
 poznan.lasy.gov.pl##div#aui_3_2_0_1243
+pozegnania.net###pozeg_billboard
 pracuj.pl###cookieWarning
+praktiker.pl###infobarDiv, #infobar, .infobar, #info-bar, #info_c_box, .info-message
 praktiker.pl##div.info_c_box
+prideshop.pl##body > div:nth-of-type(1)
 preorder.pl##.message_cookie.info
+profitsms.pl###eurociacho
+prohibita.pl##.ciachbtm-wrap-container
+promib.pl###cInfo
+promocodius.com###reminder
 przeczytamwszystkich.pl##div#ctl00_ctl17_ctl00
 przeploty.pl##div[style="font-size:15px;padding-top:20px;padding-bottom:20px;width:950px;text-align:left;margin:auto;"]
-przygodymisiabu.pl##div[style="display: block; position: relative; z-index: 999; background-color: rgb(255, 255, 255); left: 0px; right: 0px; color: rgb(0, 0, 0); font-family: Arial; font-size: 13px; line-height: 17px; padding: 7px 0px; overflow: hidden; top: 0px; background-position: initial initial; background-repeat: initial initial; "]
+przygarnijkrolika.pl###sl-container
 przygodymisiabu.pl##DIV[style="display: block; position: relative; z-index: 999; background: rgb(255, 255, 255) none repeat scroll 0% 0%; left: 0px; right: 0px; color: rgb(0, 0, 0); font-family: Arial; font-size: 13px; line-height: 17px; padding: 7px 0px; overflow: hidden; top: 0px;"]
+przygodymisiabu.pl##body > div:not([id]):not([class])
+przygodymisiabu.pl##div[style="display: block; position: relative; z-index: 999; background-color: rgb(255, 255, 255); left: 0px; right: 0px; color: rgb(0, 0, 0); font-family: Arial; font-size: 13px; line-height: 17px; padding: 7px 0px; overflow: hidden; top: 0px; background-position: initial initial; background-repeat: initial initial; "]
+przyspiesz.pl###container_vsm
 przyspiesz.pl##div#info_container
 ps4life.pl###copy_area
+pupilexpert.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+pw.edu.pl##.lb-overlay, .lb-wrapper
 pwm.com.pl##div#fancybox-outer
 pwm.com.pl##div#fancybox-overlay
-pwsz.kalisz.pl###showHideDiv
 pzm.bydgoszcz.pl##div[tyle="position: fixed; left:0; right:0; bottom:0; height:70px; background-color:#eee; border: 1px solid red; z-index:1000; overflow: auto"]
 qkiz.pl###permission-bar
 quer.pl##DIV[style="top:0;width:100%;background:#0a0e10;color:#f2f2f2;font-size:10px;text-align:center"]
-racjonalista.pl##div#_ci
+quer.pl##body > div:not([id]):not([class])
+racjonalista.pl###_ci
 radio.bialystok.pl##DIV[style="float: left; border: 1px solid #424242; width: 990px; height: 100px; margin:5px 0px;"]
 radio81.pl##iframe[src="http://www.radio818v.nazwa.pl/cookies.php"]
 radioem.pl##DIV[style="border: 10px solid rgb(138, 138, 138); border-radius: 10px; box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.898); background-color: rgb(255, 255, 255); padding: 8px 8px 10px; position: fixed; z-index: 99999; right: 20px; left: 20px; bottom: 20px; width: 700px; max-width: 90%;"]
-radioer.pl##body > div:nth-of-type(1) > div
+radioem.pl##body > div:not([id]):not([class])[style*="position"][style*="fixed"], body > div:not([id]):not([class])[style*="position"][style*="absolute"]
+radioer.pl##body > div:not([id]):not([class])
+radiofama.com.pl##body > div:not([id]):not([class])
 radiohit.net.pl##div[style="width:880px; padding:10px; margin:3px; background-color:#EFEFEF; color:#000000; text-align:center; margin-bottom:10px; font-weight:normal; display:block; font-size:11px; opacity:1.0; filter:alpha(opacity=100);"]
 radiomerkury.pl##div#privacyPolicyBox
 radiopik.pl##div#hmonit
 radom24.pl##div#ciasteczka-info
 ramboll.pl##.infoboxHolder
+rankomat.pl###rankomat-cookies-div
+raraavis.krakow.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+ravanson.pl##body > div[style*="cookies"]
 rckik.poznan.pl##DIV[style="display: block; position: fixed; bottom: 0px; z-index: 500; width: 100%; padding: 10px 0px; border-top: 2px solid rgb(140, 140, 140); background-color: rgb(250, 250, 250); overflow: hidden; opacity: 0.95;"]
+rckik.poznan.pl##body > div:not([id]):not([class])
 reactor.pl###einfo
 recepcja.visionexpress.pl##div[style="background-color: rgb(217, 217, 217); margin: 0px auto; padding: 25px 8px 15px; position: fixed; right: 0px; width: 400px; bottom: 0px; z-index: 1000; color: rgb(0, 0, 0); border: 3px solid rgb(102, 102, 102); "]
-redbullmobile.pl##div#more1
+redbullmobile.pl###more1
 relpol.pl###powiadomiony
-repostuj.pl##.welcome.jumbotron
+renault.pl##.ccpane
+repostuj.pl##.jumbotron
+restauracjabiesiada.com##body > div:nth-of-type(2) > div:nth-of-type(1) > table > tbody > tr > td
 rewolucjawoc.pl##.copy
 rockpapershotgun.com##div#ecd_opt_in_banner
+rosja.pl###cookframe
 rozklady.kzkgop.pl##div[style="position: relative; border: solid 2px gray; margin: 10px; padding: 10px; color: gray; font-weight: bold;"]
 ruchwig.pl##DIV[style="padding:8px;"]
+ruchwig.pl##body > div:not([id]):not([class])
 rynekinfrastruktury.pl##div#cooki_accept
 rys.wwf.pl##div[style="font-family: tahoma, arial, helvetica, sans-serif; min-width: 960px; width: 100%; margin: 0 auto; padding: 8px 0 18px 0; text-align: center; font-size: 10px;"]
 rzeszotary.malopolska.pl###cookieMessageContainer
+sadowocowy.pl###container > div:nth-of-type(1)
+salon404.pl###jqmAlert
 salonroman.pl##DIV[style="background-color: rgb(203, 169, 92); color: rgb(255, 255, 255); font-size: 13px; margin: 0px auto; padding: 6px 0px; position: relative; text-align: center; top: 0px; width: 100%; z-index: 9000;"]
+salonroman.pl##body > div:not([id]):not([class])
+samba.com.pl###ciastoWarstwa
+santander24.pl###pageUpperInfo
 santanderconsumer.pl##div#pageUpperInfo
+saturn.pl###site_container > section:not([id])
 schroniskotczew.pl##div.activebar-container
 seans24.pl##.Messages
 seansik.top##.coi.container
+serialefilmyonline.pl##.alert-dismissible, .alert-dismissable, .alert--dismissable, .pmd-alert-dismissible
 seszele.com.pl##iframe#cookfr
 shazam.com##div.policy-label
 shippuuden.pl##div#cookis-bg
 shop-dent.pl##div.black_overlay
 shop-dent.pl##div.ciacho-wrap-container
 showtv.pl##DIV[style="left: 0; bottom: 0; width: 100%; position: fixed; z-index: 9999999; background: #FFF; border-bottom: 1px solid #CCC;"]
+showtv.pl##body > div:not([id]):not([class])
 siemens.com###c-info
-simba.com.pl##div#cContainer
+siemens.pl##.PopupDiv
+sieradz.com.pl,zdunskawola24.pl###polityka-2
+simba.com.pl###cContainer
 skapiec.pl##div#uclaInfo
-sklep-wadima.pl###topbar
+sklep-muzyczny.com.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+sklep-wadima.pl###topbar, #topBar, .topbarBox, .topBarMessage, #__topBar, #top_bar
 sklep.vistula.pl##div[style="text-align: center; position: fixed; bottom: 0px; left: 0px; right: 0px; background: none repeat scroll 0% 0% rgb(240, 240, 240); border-top: 2px solid rgb(204, 204, 204);"]
 skm.warszawa.pl##div[style="width: 600px; padding: 40px 30px 30px; position: fixed; margin-left: -300px; border: 1px solid rgb(34, 34, 34); line-height: 18px; font-size: 14px; background-color: rgb(255, 255, 255); -webkit-box-shadow: rgba(50, 50, 50, 0.74902) 3px 3px 9px; box-shadow: rgba(50, 50, 50, 0.74902) 3px 3px 9px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; right: 40px; bottom: 40px; z-index: 9999; color: rgb(40, 40, 40); overflow: hidden;"]
 slubowisko.pl###eurociastko
+slupsk.pl###easyNotification
+smakizycia.pl###infobarDiv, #infobar, .infobar, #info-bar, #info_c_box, .info-message
 smakizycia.pl,edarling.pl###info-bar
 solidarni2010.pl##div#kom
-speedtest.com.pl,speedtest.pl##div#info_container
+sosnowiec.pl###topBar_MainCover
+sosulski.pl##body > form
+specshop.pl##.blockUI
+speedtest.com.pl##div#info_container
+speedtest.pl###container_vsm, #info_container
+speedtest.net##.notification-container
+sporto.com.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+sportowysklep.pl##body > div:not([id]):not([class])
 sportowysklep.pl##div[style="background-color: rgb(73, 73, 73); color: rgb(255, 255, 255); font-size: 12px; font-family: sans-serif; position: fixed; bottom: 0px; left: 0px; padding: 10px 15%; opacity: 0.9; z-index: 9999; line-height: 18px; background-position: initial initial; background-repeat: initial initial;"]
 spsk2-szczecin.pl###spsk2ct
+srebrnystyl.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+starbucks.pl###allow_message
+starmann.pl###info_container
 stat.gov.pl##div#divcook
 steplowski.net##div#cop
-strefa.fm##div.cookskom
+stodola.pl##.toast-container
+stopwariatom.pl##body > div:not([id]):not([class])
+storm24.pl###popup
+strefabajek.vod.pl###cookie-bar
 strefaczasu.pl##.Cooker
-studiokopiowania.pl##div#cooPInfo
-studniowka.legnica.pl##div#popupDiv
+strefawalut.pl###polityka
+studentpotrafi.pl##body > div:not([id]):not([class])
+studiokopiowania.pl###cooPInfo
+studiorolety.pl##.content-head-information
+stylowi.pl##DIV[style="position: fixed; left:0; right:0; bottom:0; height:120px; background-color:#eee; border-top: 1px solid black; z-index:16; overflow: auto"]
+stylowi.pl##body > div:not([id]):not([class])
+superfilm.pl###box_info
+swiat-agd.com.pl##body > div:not([id]):not([class])
+swiat-laptopow.pl##body > div:not([id]):not([class])[style*="position"][style*="fixed"], body > div:not([id]):not([class])[style*="position"][style*="absolute"]
 swiatnauki.pl###menu
 swidnica24.pl##div#policyBox
-swietnafirma.pl##div#cMess
-szczecinek.lasy.gov.pl##div.popup-alert-notice
+swietnafirma.pl###cMess
+synektik.pl###mc_top_bar
+szarakomorka.pl###DIVwelcome
+szkoleniabhp-partner.pl###messagePopup
 szkoleniapartner.pl##div#messagePopup
+szkolkikornickie.pl###content-head-information
 szostygracz.pl##div#cw_statusbar
+szpital-chrzanow.pl##.warp_top_message
+szukacz.pl###routerBox1
+szybko.pl##.toast
+szyj.pl##body > div:not([id]):not([class])
+tan.io###panel_11 .widget.plgText
 taniaksiazka.pl##div[style="position: fixed; z-index: 9999; width: 100%; margin: 0px; padding: 5px 20px; text-align: center; line-height: 1.3em; top: 0px; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: rgb(131, 132, 132); background-color: rgb(244, 244, 244); font-size: 12px; background-position: initial initial; background-repeat: initial initial; "]
 taniestruny.pl##p[class*="message_cookie"]
+targeo.pl##body > div:not([id]):not([class])
 targeo.pl##div[style="position: absolute; z-index: 32000; font-size: 11px; font-family: Arial, sans-serif; left: 50%; top: 3px; width: 600px; height: 130px; margin-left: -300px; margin-top: 0px; border: 1px solid rgb(219, 219, 219); color: rgb(85, 85, 85);"]
 tchibo.pl##[class^="euCookieLayer"]
 teatrateneum.pl##div#ecd_opt_in_banner
-tekstowo.pl##div#ci-info-box
+wp.pl##._2PL-mL0.kBUqizx
+teb-akademia.pl###ciasteczkowy_potwor
+tekstowo.pl###ci-info-box
+teltab.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+termokubki.com.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
 tesco.pl###privacyOuterContainer
 tesco.pl##.cies
+tesco.pl##.infoBarClosable
 testigo.pl###cp_wrap
+tge.com.pl##body > div:not([id]):not([class])
 theregister.co.uk##div#RegCCO
-tluszczak.pl##div#ml_wrapper
+thebestmp3.pl##DIV[style="background: #000;position: fixed; left: 0; right: 0; bottom: 0; min-height: 30px; border-top: 2px dashed #fff"]
+tluszczak.pl###ml_wrapper
 torkusa.com,tork.pl##.headerMessage
-torun.lasy.gov.pl##div.popup-alert-notice
+torun.pl###comm_info
 totaaltv.nl##div#sanoma-consent-bar
 totalmoney.pl##div#right_widget
-tp-link.com.pl##div#noticeBox
+tp-link.com.pl###noticeBox
+travelist.pl###mwFormBlackout, #mwFormContainer
 trovit.pl###welcomebar-wrapper
+tspodbeskidzie.pl##div:nth-of-type(7)
+ttv.pl,kontakt24.tvn24.pl###msgLayer
 tubalecznej.pl###socialBar
 tugazeta.pl##div#komunikat_ciastka
-tvasta.pl###beta_layer > div:nth-of-type(2)
+tv-zakupy.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
+tvasta.pl###beta_layer
 tvasta.pl###cboxOverlay2
 tvgry.pl##div#CP_box
+tvn24.pl###msgLayer
 tvp.info,tvp.pl###cookieControl
+tylkotorebki.pl###topbar, #topBar, .topbarBox, .topBarMessage, #__topBar, #top_bar
+tysiagotuje.pl##body > div > div:not([id]):not([class])[style*="fixed"]
 ubuntu.pl##div[class="navbar"][style="font-size: 12px; margin: 0px 20px 10px; padding: 15px;"]
 uk.ign.com##div#policyNotice
+uni-tech.pl###topbar, #topBar, .topbarBox, .topBarMessage, #__topBar, #top_bar
 unitour.pl##ul#noty_top_layout_container
 upc.pl##DIV[style="position: fixed; width: 100%; left: 0px; bottom: 0px; padding-top: 1em; background: rgb(232, 232, 232) none repeat scroll 0% 0%; opacity: 0.9; z-index: 2147483640; font: 14px/1.4em sans-serif; border: medium none; clear: none; color: rgb(102, 102, 102); cursor: default; display: block; float: none; letter-spacing: normal; overflow: hidden; visibility: visible; white-space: normal;"]
+upc.pl##body > div:not([id]):not([class])
+uzdrowisko-wieniec.pl###statement
+vas.com.pl##body > div:not([id]):not([class])
 viatoll.pl##dl#system-message
-virginmobile.pl##div.topPanelBlock
+vinted.pl##.notification, .Notification, .js-notification, .notifications-container, #notifications, #notification_1, #notification, #notification_area, .notifications, .notif-bar, .notificationBox
+virginmobile.pl##.topPanelBlock
+visionexpress.pl##body > div:not([id]):not([class])
 visionexpress.pl##div[style="background-color: rgb(234, 234, 234); margin: 0px auto; padding: 25px 8px 15px; position: fixed; right: 0px; width: 400px; bottom: 0px; z-index: 1000; color: rgb(0, 0, 0); border: 3px solid rgb(102, 102, 102); "]
+visvitalis.com.pl###simple-modal, #simple-modal-overlay
+yoy.tv##.notice
 vwgolf.pl##div.sticker
 w9investment.pl##[style="display: block; margin: 0 auto;"]
+wapteka.pl##.coo
 warszawa-pragapoludnie.sr.gov.pl##div#divcook
-wawel.krakow.pl###kuki
+waw.pl##.alert-warning, .komunikat
 webcam.peregrinus.pl##div.activebar-container
 webd.pl###cffc
-webelite.pl##div#infobar
+webd.pl###topbar, #topBar, .topbarBox, .topBarMessage, #__topBar, #top_bar
+webelite.pl###infobarDiv, #infobar, .infobar, #info-bar, #info_c_box, .info-message
+wegetarianie.pl##td[align="center"][height="22"]
+westgate.com.pl##body > div:not([id]):not([class])
+whichwatch.pl###top_messagebar
 wiara.pl##div[style="border: 10px solid rgb(138, 138, 138); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; box-shadow: rgba(0, 0, 0, 0.898438) 0px 0px 15px 0px; background-color: rgb(255, 255, 255); padding: 8px 8px 10px; position: fixed; right: 20px; bottom: 20px; width: 700px; max-width: 90%; "]
-windows7.pl##div#ciasteczka
+wiif.nowybip.pl###jGrowl
+wios.gov.pl##.a-footer
+wirtualis.pl###info_container
 wirtualis.pl###info_content
+wislaportal.pl###cook, .cook
 wisport.com.pl###DIVnasz
-wiz.pl##div#menu
+wiz.pl###menu
 wkd.com.pl##div#_mo
+wodna-kraina.pl###topInfoContainer0, #topInfoContainer1, #topInfoContainer1Mask, #top_info, .top_info
 word.waw.pl##div#eKPC_Container
 wp.pl##div#messageID_user_info_cookiePolicy
 wrota.lubuskie.pl##div#eKPC_Container
-wrzucacz.pl###logo > .info
+wrzucacz.pl###logo .info
 wsb.pl##div#ciasteczkowy_potwor
+wsse-poznan.pl##.visiblebox
 wtk.com.pl##div#TB_overlay
 wtk.com.pl##div#TB_window
 wtkanwil.com.pl##div#ciastoWarstwa
 wu.swps.edu.pl##div#Iagree
-www.aksjomat.com###kuki
 www.bi-polska.pl###cooboo
 www.biomedical.pl###mcpc
 www.biurozplusem.pl##.top-left.sticky-queue
+www.cefarm24.pl###notice_bar
+www.cmcmarkets.com###cmc-tracking-consent-form-step1
+www.continental-opony.pl##.scroll-to-fixed-fixed.privacyhint
 www.daftrucks.pl##.page-overlay
+www.ea.com##ea-truste-consent-bar
 www.firmamtm.pl###notice_bar
-www.ginekolog-darlowo.pl###zgoda
+www.halico.pl##.sqs-announcement-bar-custom-location
+www.hays.pl###header-msg
+www.hertz.com.pl##[class^="lb-"]
 www.insp.waw.pl###divbox
-www.lukasfinanse.pl###strap
+www.joe.pl###j_all > div:nth-of-type(3)
+www.legendyboksu.pl##.topbarBox
+www.lifescan.pl###simplemodal-overlay
+www.lifescan.pl##.simplemodal-wrap
+www.mercedes-benz.pl###emb-cp-overlay
 www.msd.pl###banner
 www.multimedia-energia.pl###layer
+www.nfz-zielonagora.pl###statementWrapper
+www.niemartwsie.pl##.notification
+www.o2.pl##._2_S1s
 www.obozytenisowe.pl###gbpl_oba
 www.oleole.pl###notifyCookie.notifyCookie > .wrapper
+www.pro-tech.bydgoszcz.pl###easyNotification
+www.promise.com.pl##.ui-front
+www.promise.com.pl##.ui-resizable
 www.rmf24.pl###pl_cookies.pl-cookies
 www.swierkowaaleja.pl###div_ciastka_info
 www.tanie-leczenie.pl,e-zikoapteka.pl###notice_bar
-www.wapteka.pl##.coo
+www.tupperware.pl##.topRibbon
 www.wiedzakontrowersyjna.pl###ad-bg-transparent
 www.youtube.com##.clearfix.yt-consent-banner.yt-consent
-www.promise.com.pl##.ui-resizable
-www.promise.com.pl##.ui-front
-www.miplo.pl##.rounded.error
-www.halico.pl##.sqs-announcement-bar-custom-location
-www.maxior.pl###ci-info-box
-wydawca.com.pl##div#kuki
+www.agrosklad.com.pl###pro-popup-box
+www.agrosklad.com.pl##[id^="daily"]
+www3.syngenta.com###hideMe
+wiem-to.pl###notice_visitor
 wydruki-wroclaw.pl##div.activebar-container
+wykopoczta.pl###noty_top_layout_container
+xaa.pl###ic
+yogenfruz.pl##.shotimoo
 yp.pl##div#jQ_cookiBox
 zalukaj.top##.container.coi
-zdm.poznan.pl##div#cContainer
-zdrowemiasto.pl##div#_mo
+zarmen.pl###komunikat
+zblogowani.pl###ci-info-box
+zdgtor.pl##body > div:not([id]):not([class])
+zdm.poznan.pl###cContainer
+zdrowemiasto.pl###_mo
 zelaznalogika.net###popmake-4977
+zgierz.pl##.ui-widget, .ui-widget-overlay
 zgnwola.waw.pl##div[style="display: block; z-index: 1002; outline: 0px; position: absolute; height: auto; width: 300px; top: 207px; left: 346px; "]
-zielonagora.lasy.gov.pl##.popup-alert-notice
 zkmgdynia.pl##div.kom_polityka_prywatnosci
-zmienimyswiat.pl##.group.polityka
-zosiaikevin.pl##div#novem-slot
-www.cefarm24.pl###notice_bar
-wiif.nowybip.pl###jGrowl
-stylowi.pl##DIV[style="position: fixed; left:0; right:0; bottom:0; height:120px; background-color:#eee; border-top: 1px solid black; z-index:16; overflow: auto"]
-www.e-petrol.pl###statement
-www.mercedes-benz.pl###emb-cp-overlay
-www.niemartwsie.pl##.notification
-www.hertz.com.pl##[class^="lb-"]
-www.cmcmarkets.com###cmc-tracking-consent-form-step1
-etransport.pl##.active.visible.transition.page.modals.dimmer.ui
-ttv.pl###msgLayer
-hankooktire.com##.top_ep_wrap
-www.continental-opony.pl##.scroll-to-fixed-fixed.privacyhint
-www.feuvert.pl###info
-www.mmtv.pl###policyInfo
-www3.syngenta.com###hideMe
-profitsms.pl###eurociacho
-www.tupperware.pl##.topRibbon
+zmienimyswiat.pl##.polityka
+zmm-maxpol.pl###hideMe
+zoover.pl###infobarDiv, #infobar, .infobar, #info-bar, #info_c_box, .info-message
+zosiaikevin.pl###novem-slot
+zs1mm.edu.pl##body > div:not([id]):not([class])
+zyciekalisza.pl###cdiv
+zysk.com.pl###pageUpperInfo
+zywiec-zdroj.pl##DIV[style="width: 100%; background-color: rgb(16, 69, 119); padding: 10px 8px; left: 0px; position: fixed; margin: 10px auto 0px; bottom: 0px; z-index: 1000; font-size: 12px; font-family: Helvetica,Arial,sans-serif; color: rgb(255, 255, 255);"]
+zfp.org.pl###yui_3_17_2_1_1487497946012_1570
 ||exploder.pl/info_o_cookie.js$script
 ||jak-zablokowac-cookies.pl/cookies_komunikat.js$script
 ||paypass.pl/themes/paypass/js/cookies.js$script
 cookie-law-popup.js$script
 ||asus.com/pl/cookienotice.json$xmlhttprequest
-||pl/*/cookie.js$script
 ||www.pianomedia.pl/cookies-on-pianomedia$xmlhttprequest
 ||asus.com/cookienotice.json$xmlhttprequest
 ||pl/wp-content/plugins/eu-cookie-law-wp-cookie-law/$script
-~dwkoral.pl,~piekarniaanka.pl,~xboxarcade.pl,~appki.com.pl,~paypal.com,~accounts.google.com##:not(input)[id*="Cookie"]
-~intel.com,~pkn.pl,~topsecret.pl,~starbucks.pl,~isobar.com,~morizon.pl,~abctygodnik.pl,~wykop.pl,~bt4.pl,~kolba.pl,~tablety.pl,~tesco.pl##div[class*="cookie"]
-~piekarniaanka.pl,~xboxarcade.pl,~everafterhigh.com,~wmeritum.pl,~microsoft.com,~paypal.com,~reserved.com,~zumi.pl,~komunikacja.bialystok.pl,~nvidia.com##:not(input)[id*="cookie"]
+||cdn.inaudium.com/js/adtctr.js
+||cookies.komputerswiat.pl/checkCookie$script
+||nike.com/*/script.js?assets=nike.gadget.CookieSettingsManager&loaded=nike.exp.global.Ad*nike.ScriptLoade$script
+||nike.com/*CookieSettingsManager$xmlhttprequest
+~filterlists.com,~yamaha-motor.eu,~dwkoral.pl,~piekarniaanka.pl,~xboxarcade.pl,~appki.com.pl,~paypal.com,~accounts.google.com##:not(input)[id*="Cookie"]
+~autocentrum.pl,~ideabank.pl,~intel.com,~pkn.pl,~topsecret.pl,~starbucks.pl,~isobar.com,~morizon.pl,~abctygodnik.pl,~wykop.pl,~bt4.pl,~kolba.pl,~tablety.pl,~tesco.pl##div[class*="cookie"]
+~fd.nl,~piekarniaanka.pl,~xboxarcade.pl,~everafterhigh.com,~wmeritum.pl,~microsoft.com,~paypal.com,~reserved.com,~zumi.pl,~komunikacja.bialystok.pl,~nvidia.com##:not(input)[id*="cookie"]
 ##[id*="coockie"]
+###blockPopupInformation
 ~addons.mozilla.org##.privacy-policy
 ##[class*="coockie"]
 ###AcceptCookie
@@ -615,20 +942,30 @@ cookie-law-popup.js$script
 ~microsoft.com##[id*="cookie_"]
 ##.cookie-notification
 ###polityka-ciastek
-~niepoddawajsie.pl,~krasnale.pl,~futurevoicesystem.pl,~wmeritum.pl,~pl.forum.elvenar.com,~mcdonalds.co.uk,~astroweb.pl,~zadane.pl,~apteka-amic.pl,~naziemna.info,~planeteplus.pl,~abctygodnik.pl,~fundraising.org.pl,~filmydokumentalne.eu,~mvno-gsm.pl,~infoskawina.pl,~pikio.pl,~qt.io,~teleman.pl,~tablety.pl,~com##[class*="cookie-"]
 ###cookiesEU-box
 ###cookies_info
+###cookieView
+##.cookie-alert
 ###ciastka_wiadomosc
+###ciasteczka
+##.ciasteczka-info
 ###ciastka
+###ciacho
+##.ciacho
+##.cookie-law
+###icc_message
 ###informacjaOCiasteczkach
 ###inpl_cp_cnt
 ###sliding-popup
 ###cc-notification
 ###policy-box
+##.messi
+##.giodoContainer
+~lycos.com,~freaktab.com,~csmonitor.com##.cookies:not(body):not(html)
 ##aside[class*="Cookie"]
 ##aside[class*="cookie"]
 ##co15ie87a
-###PolitykaPrywatnosciCookie
+##[id^="PolitykaPrywatnosci"]
 ###acceptCookies
 ###cookies_policy_box
 ##[class^="box-cookie"]
@@ -636,13 +973,14 @@ cookie-law-popup.js$script
 ###cookieBox
 ###cookieContent
 ###cookieInfo
+sympatia.onet.pl###cookieInfo
 ###cookies
 ###cookies-info
 ##div[id^="cookemessage"]
 ##[id^="cookies-message"]
 ###cookies-politics
 ###cookiesdirective
-~piekarniaanka.pl###cookiewarning
+~bskrasnosielc.pl,~interhotel.pl,~piekarniaanka.pl###cookiewarning
 ###popup-cookies
 ###showCookieInfo
 ~zadane.pl##[class*="cookie-policy"]
@@ -663,7 +1001,7 @@ cookie-law-popup.js$script
 /js/cookieinfo.js
 /js/polityka_cookies.js$script
 /js/info_o_cookie.js
-/js/jquery.cookie.min.js$script,domain=~uplayconnect.ubi.com
+/js/jquery.cookie.min.js$script,domain=~uplayconnect.ubi.com,~rozklad-pkp.pl
 /cookie_msg.js$script
 /savecookie.js$script
 /cookie.js$script
@@ -703,9 +1041,46 @@ pl##[id^="polityka-prywatnosci"]
 /cookiesWidget/widget.js$script
 ###privacy_policy_bar
 ##.policy-box
+###privacy-notice
+/javascript/cookieser.js$script
+/cookie_notify/*
+##.cookies-info
+###ciasteczka-komunikat
+##[id$="cookie-bar"]
+/js/jquery.cookie.min.js$script,domain=~rozklad-pkp.pl|~telepizza.pl
+##.politykaprywatnosci
+##.ciasteczka
+###kuki
+pl##.plg_system_eprivacy_module:not(body):not(html)
+###showCookie:not(body):not(html)
+###showCookie:not(body):not(html) ~ br
+###Qookie
+###politosci
+##.cookskom
+###divCiacho
+##.ciasteczko
+###politykaprywatnosci
+##.cookwarning
+##.cookies-container.container
+###wc
 @@||static.wirtualnemedia.pl/new/js/cookie.js$script
-@@/plugins/uk-cookie-consent/assets/js/uk-cookie-consent-js.js$script,domain=escaperooms.pl
+@@/plugins/uk-cookie-consent/assets/js/uk-cookie-consent-js.js$script,domain=escaperooms.pl|xboxarcade.pl|naziemna.info
 @@||rozklad.pkp.pl/js/$script
 @@||cdaction.pl/views/js1/cookie.js$script
-@@/plugins/uk-cookie-consent/assets/js/uk-cookie-consent-js.js$script,domain=xboxarcade.pl
-telepizza.pl#@#div[class*="cookie"]
+letsplej.pl,telepizza.pl#@#div[class*="cookie"]
+@@||www.nba.com/themes/custom/membership/js/lib/cookie.js$script
+orange.pl#@##cookies-info
+orange.pl#@#div[class*="cookie"]
+orange.pl#@#:not(input)[id*="Cookie"]
+orange.pl,taat.pl,bskrasnosielc.pl#@#:not(input)[id*="cookie"]
+redbullmobilecollect.pl#@#[id^="polityka-prywatnosci"]
+iculture.nl#@#[id*="cookie_"]
+iculture.nl#@#:not(input)[id*="cookie"]
+@@||static2.cdn.ubi.com/uplay-connect/v2/live/default/js/jquery.cookie.min.js
+topics.nl#@#div[class*="cookie"]
+lycos.de,lycos.com#@#.cookies
+tychy.geminipark.pl#@#.privacy-policy
+pokemon.com#@#.cookies
+tchibo.de#@#.cookies
+pclab.pl,onet.pl,businessinsider.com.pl,noizz.pl,komputerswiat.pl,plejada.pl###cookieView
+kwejk.pl###cookies-politics

@@ -73,7 +73,8 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     private static final int SOCIAL_MEDIA_WIDGETS_FILTER_ID = 4;
     private static final int SPYWARE_FILTER_ID = 3;
 
-    private static final int UPDATE_INVALIDATE_PERIOD = 4 * 24 * 60 * 60; // 4 days
+    private static final int UPDATE_INVALIDATE_PERIOD = 24 * 60 * 60 * 1000; // 24 hours
+    private static final int UPDATE_INITIAL_PERIOD = 5 * 60 * 1000; // 5 minutes
 
     private static final String FILTERS_UPDATE_QUEUE = "filters-update-queue";
 
@@ -148,10 +149,11 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
 
         boolean isRunning = PendingIntent.getBroadcast(context, 0, alarmIntent, PendingIntent.FLAG_NO_CREATE) != null;
         if (!isRunning) {
+            LOG.info("Starting scheduler of filters updating");
             PendingIntent broadcastIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
 
             AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-            alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, AlarmManager.INTERVAL_HOUR, AlarmManager.INTERVAL_HOUR, broadcastIntent);
+            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, UPDATE_INITIAL_PERIOD, AlarmManager.INTERVAL_HOUR, broadcastIntent);
         } else {
             LOG.info("Filters update is running");
         }
@@ -340,7 +342,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         }
 
         List<FilterList> filtersToUpdate = new ArrayList<>();
-        long timeFromUpdate = new Date().getTime() - UPDATE_INVALIDATE_PERIOD;
+        long timeFromUpdate = System.currentTimeMillis() - UPDATE_INVALIDATE_PERIOD;
         for (FilterList filter : getEnabledFilters()) {
 
             if (force || (filter.getLastTimeDownloaded() == null) || (filter.getLastTimeDownloaded().getTime() - timeFromUpdate < 0)) {
@@ -376,6 +378,8 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
             for (FilterList current : filters) {
                 final int filterId = current.getFilterId();
                 if (!map.containsKey(filterId)) {
+                    current.setLastTimeDownloaded(new Date());
+                    updateFilter(current);
                     continue;
                 }
 
@@ -392,6 +396,8 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
                     updateFilterRules(filterId);
                 } else {
                     map.remove(filterId);
+                    current.setLastTimeDownloaded(new Date());
+                    updateFilter(current);
                 }
             }
 

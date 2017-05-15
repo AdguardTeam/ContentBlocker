@@ -1,10 +1,9 @@
+! Checksum: Ic8UMN2IR+6mLahVXpmirQ
 ! Title: void.gr
-! Version: 1.0.0.71
-! Name: void.gr
 ! Description: ελληνικά supplement for EasyList
-! NameEn: void.gr
-! DescriptionEn: ελληνικά supplement for EasyList
-! TimeUpdated: 2016-07-28T22:33:51.714+04:00
+! Version: 1.0.0.93
+! TimeUpdated: 2017-04-09T13:33:17.822+04:00
+! Expires: 2 days (update frequency)
 ||www.diaforetiko.gr/wp-content/uploads/2015/03/droidbanner3.gif
 ||skai.gr/Themes/1/Default/Media/Skins/samsung*
 ||in.gr/Themes/1/Default/Media/senso_pro*
@@ -25,8 +24,6 @@ scdn.gr/images/helmet/promo_material/*
 ||oneman.gr/antikeimena/article1635665.ece/BINARY/oneman.jpg
 ||oneman.gr/antikeimena/article1635795.ece/BINARY/original/oneman_fasa.png
 ||oneman.gr/keimena/style/article1659136.ece/BINARY/oneman.jpg
-||24h.gr/sites/default/files/users/headerpiraeus.jpg
-||24h.gr/sites/default/files/users/learnmorepiraeus2.png
 ||thepressproject.gr/ad/*
 ||dealin.gr/iframes/5/*
 ||sport24.gr/genika/article1951216.ece/BINARY/original/mc_tab.png
@@ -97,7 +94,6 @@ plaisio.gr/BannerImages/0910/*
 stercinemas.gr/SterCinemas/SterImagesLive/Banners/Right%20Banners/emporiki*
 stercinemas.gr/SterCinemas/SterImagesLive/NESCAFE*
 villagecinemas.gr/media/Banners/*
-webtv.antenna.gr/webtv/images/banners/*
 ||alfavita.gr/sites/www.alfavita.gr/themes/mixon/images/bannernew.swf
 ||alfavita.gr/sites/default/files/efsyn_4.png
 kathimerini.gr/webadmin/Glife/Chartis/*
@@ -117,18 +113,12 @@ meteo.gr/AddsCust/*
 astrack.mediacdn.com/ipquery?siteorigin=sportfm
 cosmo.gr/XML/sponsors/wind/*
 cosmo.gr/XML/sponsors/sonybraviaplaisio/*
-kourdistoportocali.com/UsersFiles/admin/flash/lm_banner_300.swf
-kourdistoportocali.com/UsersFiles/admin/images/banners/right/T3_ONLINE_White.gif
-kourdistoportocali.com/UsersFiles/admin/flash/drive_hellas.swf
 insomnia.gr/templates/insomnia/images/battleleft.jpg
 insomnia.gr/templates/insomnia/images/cartoonbattle.jpg
-sport-fm.gr/resrc/banners/footballbet-99x22.png
-sport-fm.gr/resrc/banners/england365-77x22.png
 cacheserve.williamhill.com/*
 static01.aek365.gr/ads/*
 sporarena.eu/banneraff/aek365/*
 partypartners.com/images/marketing-materials/partycasino/greek/*
-static01.aek365.gr/js/swfobject/swfobject.js
 connextra.com/VistaBet/*
 cacheserve.williamhillcasino.com/*
 agronews.gr/images/banners/*
@@ -137,9 +127,6 @@ avopolis.gr/images/backskin5.gif
 avopolis.gr/banners/*.swf
 michanikos.gr/images/banner/*
 cosmo.gr/XML/sponsors/matiadis/*
-webtv.antenna.gr/webtv/images/starwars/pure/live/Site_BG__PURE.jpg
-webtv.antenna.gr/webtv/images/starwars/pure/live/PureRushLive_300.swf
-webtv.antenna.gr/webtv/images/starwars/pure/live/PureRushLive_728.swf
 e-cannibals.gr/blog/wp-content/uploads/sm_kanivaloiAD.jpg
 e-cannibals.gr/blog/wp-content/uploads/somafusion_adsb.jpg
 e-cannibals.gr/blog/wp-content/uploads/kanivaloiAD.jpg
@@ -156,8 +143,6 @@ laptopblog.gr/sites/default/files/MPU_alpha_STD_GR.jpg
 axiabanners.exodus.gr
 files.capital.gr/banners/
 files.capital.gr/images/dowjones/dowjones_home_logo_small.jpg
-webtv.antenna.gr/webtv/images/talento_voting.jpg
-webtv.antenna.gr/webtv/images/HBH/*
 cdn1.telemetryverification.net/tv2n/presenter/deploys/inbanner/*
 sport-fm.gr/resrc/images/layout/campaigns/europa/*
 scoreline.gr/Rugby/pizzacopy.jpg
@@ -183,7 +168,6 @@ promo.gpoint.com.gr
 ax-easy.com/banners/
 flights.gr/tromaktikos/
 in.gr/files/1/sponsors/
-webtv.antenna.gr/webtv/images/pepsi/
 geoloc12.geovisite.com:82/private/geocounter.js
 r2d2.adman.gr/gbanner/
 hbnews.gr/files/banners/
@@ -313,7 +297,7 @@ ad.gr.doubleclick.net
 ||comedylab.gr/ad/*
 ||skai.gr/Themes/1/Default/Media/Skins/ethiniki-trapeza*
 ||bold.adman.gr/*
-||focuswebtv.gr/banners/*
+||focuswebtv.gr/images/banners/*$image
 ||efsyn.gr/ads/*
 ||efsyn.gr/wp-content/uploads/2014/05/housebanner300x250d.jpg
 ||athinorama.gr/lmnts/skins/*
@@ -444,39 +428,33 @@ ad.gr.doubleclick.net
 ||lifo.gr/icache/940/337/1/983904_GOT_970.jpg
 ||travelstyle.gr/portal/files/banners/*$image
 ||sport-fm.gr/resrc/images/customBanners/novi_438x75_paysafe.jpg
-||kritikes.ka-web.gr/www/images/05ae36c9444d919dd6e3823af59d952a.gif$image
-||kritikes.ka-web.gr/www/images/27b4e974322605438a5673f6bc7391e6.gif$image
-||kritikes.ka-web.gr/www/images/stefanakis.jpg$image
-||kritikes.ka-web.gr/www/images/affcda2fcc00d8b70add300fbfbd0706.jpg$image
-||kritikes.ka-web.gr/www/images/3dfccc2726af1d37f04476627e01bc46.jpg$image
-||kritikes.ka-web.gr/www/images/c3ec4bdc5f3ed5a99af63c483488943e.gif$image
-||kritikes.ka-web.gr/www/images/20b5f22dfd476ef5e484407d351b0ffa.gif$image
-||kritikes.ka-web.gr/www/images/Xrisominoiki2.jpg$image
-||kritikes.ka-web.gr/www/images/8de4019dc3e5bfe49f9f8db88f60bd3b.jpg$image
-||kritikes.ka-web.gr/www/images/d321c031a1ba49705722b25a37c0191a.gif$image
-||kritikes.ka-web.gr/www/images/7b6416ddec2a849e6701961e001b3a31.jpg$image
-||kritikes.ka-web.gr/www/images/koufetouli.gif$image
-||kritikes.ka-web.gr/www/images/65cb57bd93f9c058f0b98273c0a41ebf.jpg$image
-||kritikes.ka-web.gr/www/images/mathimatikos.gif$image
-||kritikes.ka-web.gr/www/images/5b67330c9296dac72f1790299e8fcf44.gif$image
-||kritikes.ka-web.gr/www/images/01baadcb61149d7fbce556b666a032a3.gif$image
-||kritikes.ka-web.gr/www/images/grivaki.gif$image
-||kritikes.ka-web.gr/www/images/3dac34b96c53fa1b31004f7f79da0bf9.png$image
-||kritikes-aggelies.gr/templates/ka/images/cicrete_voutcher__vertical_2016.gif$image
-||kritikes-aggelies.gr/templates/ka/images/dress-up/BANNER_RIGHT.png$image
-||kritikes-aggelies.gr/templates/ka/images/dress-up/BANNER_LEFT.png$image
-||www.kritikes-aggelies.gr/templates/ka/images/xmoto-moto-new.png.pagespeed.ic.C3FcTY-SPs.png$image
-||www.kritikes-aggelies.gr/templates/ka/images/xmoto-moto-logo-vertical3.png.pagespeed.ic.TblpkXpo_a.png$image
 ||www.candianews.gr/banners/*
 ||tvcreta.gr/upload_images/banners/*
 ||2810.gr/images/2810photo/pelates1/*
-||www.cretapost.gr/img/ellinair.gif
 ||contra.gr/multimedia/article4122214.ece/BINARY/original/stoiximan-euro2016.jpg
 ||contra.gr/incoming/article4110736.ece/BINARY/original/stoiximan_contra.png
 ||www.trinews.gr/runimg/2016_07_intersport-summersales_150x300.gif$image
 ||www.trinews.gr/runimg/2016_04_Saucony.gif$image
 ||www.trinews.gr/runimg/2016_05_Ethicsports_150x300.gif$image
 ||www.sport24.gr/Paraxena/article4176236.ece/BINARY/original/stoiximan-brand_2016_usps-940x90.jpg
+||rockinathens.gr/wp-content/uploads/2016/08/ritual-banner.gif$image
+||tvxs.gr/sites/all/themes/xsonethree/skins/jobby_skinv3.jpg$image
+||cdn1.bbend.net/media/com_news/ads/*
+||marketnews.gr/banners/delonghi.gif$image
+||gossip-tv.gr/media/com_news/ads/*$image
+||queen.gr/media/com_news/ads/*$image
+||cdn.cnngreece.gr/media/com_news/ads/*$image
+||athensmagazine.gr/files/banners/*$image
+||techgear.gr/wp-content/themes/tg3/images/dressme/mls_techgear_dec_2016.jpg$image
+||www.dwrean.net##iframe[src="http://kratisinow.digitup.eu/widget/widget-artists"]
+||www.dwrean.net##a[href="http://www.kratisinow.gr"]
+||educate.theowl.gr/Image/6232/contra$subdocument,domain=www.contra.gr
+||www.taxheaven.gr/public/banners/*$image
+||www.taxheaven.gr/public/banners/*$object
+||www.e-food.gr/site-assets/img/coca/*$image
+||www.techgear.gr/wp-content/themes/tg3/images/itrend_techgear_v2.jpg$image
+||luben.tv/wp-content/uploads/2017/01/voyager.jpg
+||sport24.gr/multimedia/article4482885.ece/BINARY/original/stoiximan-usps-mobile-apps.940x90.jpg
 www.insomnia.gr###ipbwrapper > .bgad[href="http://ads.nativad.net/servlet/click/zone?zid=351&pid=111&lookup=true&position=1&uuid=(email)"]
 www.insomnia.gr###ipbwrapper > .bgad[href="http://www.kotsovolos.gr/site/mobile-phones-gps/mobile-phones/smartphones?v=0&company=Apple&11202=44834&utm_source=insomnia.gr&utm_medium=skin&utm_content=NEWiphone6s-6splus-insomnia-skin-2015&utm_campaign=iphone6s-6splus-insomnia-"]
 antenna.gr###afdiv
@@ -553,6 +531,10 @@ sday.gr##DIV.banners
 contra.gr##DIV.proan
 sport-fm.gr##A[href*="/specials/williamhill?"]
 sday.gr##IMG[src*="http://betsson.hs.llnwd.net/"]
+www.kritikes-aggelies.gr##.banner-side-collection
+www.kritikes-aggelies.gr##.categories2:nth-of-type(3)
+www.kritikes-aggelies.gr###banner-top-container
+www.kritikes-aggelies.gr###left-dress2
 enet.gr##DIV#b25
 enet.gr##DIV#b42
 enet.gr##DIV#b41
@@ -573,7 +555,6 @@ skai.gr##SPAN#jwlogo
 skai.gr##DIV#jw_wwg
 sport-fm.gr##LI.blue.poker
 sport-fm.gr##LI.blue.casino
-webtv.antenna.gr##DIV.banner728
 in.gr##A[href*="http://www.clickman.gr/"]
 in.gr##DIV.admessage
 in.gr##DIV#CenterRectangleBanner.adverticement
@@ -644,10 +625,6 @@ milaraki.com##A[href="http://www.mp4converter.net/dvd-ripper-mac.html"]
 milaraki.com##A[href="http://www.verizoniphone4accessories.com/"]
 e-go.gr##.deal
 tvxs.gr##DIV[id="sb-container"]
-sportena.com##A[href*="http://adserver.itsfogo.com"]
-sportena.com##A[href*="http://www.bet365.com"]
-sportena.com##A[href*="http://www.incasino.gr"]
-sportena.com##A[href*="http://www.poker.gr"]
 skroutz.gr###new_contract_online_overlay
 skroutz.gr###banner_160_filters
 skroutz.gr###banner_160_home
@@ -687,7 +664,6 @@ hiphop.gr##iframe[src="*"]
 techteam.gr##A[href*=spinpalace]
 womenonly.gr##.connxtvscroll
 oneman.gr##.topClickable
-24h.gr###wsbanner
 athinorama.gr###right-adv
 athinorama.gr###left-adv
 sport24.gr##div.ad
@@ -740,8 +716,6 @@ contra.gr###editor_link[style*="background:transparent url(http://www.sport24.gr
 gazzetta.gr##A[href*="http://adserving.unibet.com/"]
 kathimerini.gr##A[href*="http://adman.kathimerini.gr/"]
 gr##A[href*="http://bold.adman.gr/"]
-focuswebtv.gr###leftskin
-focuswebtv.gr###rightskin
 iefimerida.gr###full-width-ad
 iefimerida.gr###full-width-ad-inner
 adslgr.com###mainBanner
@@ -851,6 +825,20 @@ news247.gr###mainContent > .alpha.grid_12 > .main.default.stories:nth-of-type(5)
 www.trinews.gr##body > table:nth-of-type(2)
 runningnews.gr##body > table:nth-of-type(2)
 www.contra.gr###top_story_wrap > .grid_12 > div:nth-of-type(8) > a[href^="https://www.stoiximan.gr"]
+katohika.gr###text-12
+tvxs.gr###wholesite1 > a[href^="http://jobby.gr"]
+www.lifo.gr##.textads-wrapper
+autotriti.gr##strong > a[href^="http://autotriti.adman.gr/click"]
+cnn.gr##div[class="story-textlinks row"]
+onmed.gr##div[class="story-textlinks"]
+onsports.gr###textlinks
+contra.gr##A[href*="http://el.betclic.com/"]
+www.lifo.gr##a[href*="/lines/click/"]
+www.taxheaven.gr###main > .ads
+www.taxheaven.gr##.aside
+www.e-food.gr###coca-cola-btn
+www.eklogika.gr##.left_fixed
+www.eklogika.gr##.right_fixed
 @@sport-fm.gr/newspapers/$elemhide
 @@resources.sport-fm.gr/sportfm/newspapers/
 @@politis-news.com/banners/entheta/
@@ -869,9 +857,9 @@ www.contra.gr###top_story_wrap > .grid_12 > div:nth-of-type(8) > a[href^="https:
 @@||athinorama.gr/adv/lmnts/disimata/*
 @@||skaihd-f.akamaihd.net/z/advert/*
 @@||xe.gr/property/recent_ads?*
-@@||focuswebtv.gr/banners/ekpompes.swf?*
 @@||ads.patris.gr/_banners/1421748421.gif
 @@||www.antenna.gr/js/adman-video*.js$script,domain=www.antenna.gr
 ~agelioforos.gr##.side-ad
 ~athensmagazine.gr##.ad_wrapper
 ~aggeliestanea.gr##.adResult
+~rockinathens.gr##.share-container

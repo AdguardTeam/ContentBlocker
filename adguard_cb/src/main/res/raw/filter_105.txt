@@ -1,10 +1,9 @@
+! Checksum: WjXs4iOQnwga+V+WCNmc1A
 ! Title: EasyList Czech and Slovak
-! Version: 1.0.1.26
-! Name: EasyList Czech and Slovak
 ! Description: čeština, slovenčina supplement for EasyList
-! NameEn: EasyList Czech and Slovak
-! DescriptionEn: čeština, slovenčina supplement for EasyList
-! TimeUpdated: 2016-08-31T18:31:04.057+04:00
+! Version: 1.0.1.99
+! TimeUpdated: 2017-04-26T01:31:01.821+04:00
+! Expires: 2 days (update frequency)
 .com/bannery/
 .cz/BAN/
 .cz/banners/$domain=~web.volny.cz
@@ -17,7 +16,7 @@
 .lt/banner/
 .sk/img/banner
 /a_adv.dat?
-/advantage.$domain=~dama.cz
+/advantage.$domain=~dama.cz|~kentico.com
 /ad_supermedia.php?
 /banner-system/banners/*
 /cron.php?rand=
@@ -45,7 +44,6 @@
 _clickthru.swf?
 ^rd.php^$domain=pcforum.sk
 exashare.com###player_img
-||alza.cz/$image,third-party,domain=zive.cz
 ||*.lagardere.cz/europa2/img/u/branding*.jpg
 ||*.s12.cdn.szn.cz/vod/*
 ||*.war-forum.net/images/sh/
@@ -69,16 +67,23 @@ exashare.com###player_img
 ||adx.fotoaparat.cz/www/images/
 ||alfa.cz/images/branding*.jpg
 ||alkoholik.cz/zavislost/images/banners/
+||alza.cz/$image,third-party,domain=zive.cz
 ||archiv.roumen.cz/roumingRLeader.html
 ||autoesa.cz/files/bannery/
+||auto.cz/*/showit$script
+||autoforum.cz/autoforum/tmp/reklama$image
+||autorevue.cz/*/showit$script
 ||avony.cz/mp3splocha.php
 ||bannery.ccb.cz^
 ||bcastgw.livebox.cz/TA3_VOD_COM/
 ||blbosti.cz/sites/www.blbosti.cz/files/banner/
+||img.blesk.cz/static/data/blesk/bannery/*$image
 ||blisty.cz/ad/
 ||centrum.cz/design/akt3/o/ads/
+||centrum.cz/*=wallpaper*
 ||cn130.com/wp-content/uploads/an-temp/
 ||count.flashx.tv:81/
+@@||img.csfd.cz/assets/*/modules/web/scripts/scripts.js
 ||cviceni-doma.cz/images/*banner*
 ||cztorrent.net/images/bannery/
 ||d.lookit.cz/vv.js
@@ -93,6 +98,7 @@ exashare.com###player_img
 ||eserial.cz/liftago2.jpg
 ||eserial.cz/trikator/
 ||espoluprace.cz/affiliate/
+||extra.cz/*//please$script
 ||fdb.cz/ad/
 ||filmporno.cz/media/banners/
 ||filmy.kinotip.cz/pop.php
@@ -132,7 +138,11 @@ exashare.com###player_img
 ||in-pocasi.cz/img/zahlavi*.jpg
 ||itnetwork.cz/images/banners/
 ||itnetwork.cz/script/abc/
+||jiskra-benesov.cz/images/branding/
+||jiskra-benesov.cz/webloader/jsloader-*.js
 ||jpg.assets-finance-media.cz/newsimg/brand/
+||kaloricketabulky.cz/images/branding/
+||kaloricketabulky.cz/styles4/bigscreen2.css
 ||kecy.roumen.cz/roumingBannerator.php
 ||kurzy.cz/e/adv?
 ||lamer.cz/images/bg*.jpg
@@ -143,11 +153,14 @@ exashare.com###player_img
 ||logobox.cz/images/banners/
 ||lphard.cz/images/banners/
 ||lui-magazine.cz/images/banners/nove/brand/
+||lupa.cz/*/please/showit/$script
+||lupa.cz/*one2n1$script
 ||luxusnirekreacnidomy.cz/adds/
 ||majnuj.cz/wp-content/uploads/*/ulozto_button.png
 ||mamincinyrecepty.cz/images/banner*
 ||matematika.cz/content/files/*/background*.jpg
 ||matematika.cz/content/files/snapbacks/
+||media.grunex.com/disk_1/sda/*$image
 ||mf*ad*.advantage.as
 ||mluveneslovo.chaves.cz/images/banners/castor_745x150.jpg
 ||mluveneslovo.chaves.cz/images/banners/palace.gif
@@ -162,7 +175,9 @@ exashare.com###player_img
 ||navratdoreality.cz/static/branding$image
 ||navratdoreality.cz/static/takeover$image
 ||novinky.cz/static/css/xmas.css
+||obchodnirejstrik.cz/*/please/showit/$script
 ||old.disk.cz/disk/Lib.adv.Server.cls
+||onetv.cz/*//please$script
 ||online-filmy-zdarma.cz/upload/Banner/
 ||parabola.cz/img_inzerent/
 ||parabola.cz/img_menu/s125_01.gif
@@ -210,10 +225,12 @@ exashare.com###player_img
 ||uloz.to/bannery/
 ||uloz.to/img/bannery/
 ||uloz.to/staticadvert/branding/
+||advert.uloz.to/ads/*$subdocument
 ||uschovna.cz/dt-dancer-234x60.swf
 ||videacesky.cz/img/*.swf
 ||videacesky.server.zcom.cz/redirector/redir.php
 ||videoad.cz^
+||video.aktualne.cz/adpod.php
 ||view.flashx.tv:81$script
 ||war-city.eu/bannery/
 ||war-net.cz/300x200.gif
@@ -227,6 +244,7 @@ exashare.com###player_img
 ||warcenter.cz/jennys.gif
 ||warcenter.eu/images/bannery/
 ||warez.azbase.net/images/azbase.gif
+||warforum.cz/ads/*$image
 ||warforum.cz/flyweb/
 ||warforum.cz/inau/
 ||warforum.cz/rotator*.php
@@ -241,46 +259,100 @@ exashare.com###player_img
 ||zkouknito.cz/js/js.htmlad.js
 ||zvraceny.cz/data/upload/
 ||zvukarina.cz/forum/images/ostatni/
-||games.tiscali.cz/$script,~third-party
-@@||games.tiscali.cz/img/bg/
-@@||games.tiscali.cz/img/special/
-@@||games.tiscali.cz/img/socials.png
-@@||games.tiscali.cz/img/logo-games.png
-@@||games.tiscali.cz/img/fav/
-@@||games.tiscali.cz/img/adblock_on.gif
-@@||games.tiscali.cz/js/
-||idnes.cz$script,~third-party
-@@||servix.idnes.cz/media$script,~third-party
-@@||mapy.idnes.cz$script,~third-party
-@@||jizdnirady.idnes.cz$script,~third-party
-@@||idnes.cz/cms$script,~third-party
-@@||idnes.cz/js$script,~third-party
-@@||idnes.cz/foto.aspx$script,~third-party
-@@||static.akcniceny.cz$image,third-party
-@@||data.idnes.cz$script,~third-party
-@@||dc.idnes.cz$script,~third-party
-@@||servis.idnes.cz$script,~third-party
-||zive.cz$script,~third-party
-||assets.adobedtm.com$script,domain=zive.cz
-@@||zive.cz/Client.Scripts$script,~third-party
-@@||zive.cz/Client.Gallery$script,~third-party
-@@||zive.cz/_rev2015/js$script,~third-party
-@@||zive.cz/WebResource.axd$script,~third-party
-@@||zive.cz/ScriptResource.axd$script,~third-party
-@@||forum.zive.cz/styles$script,~third-party
-@@||speedtest2.zive.cz/js/script.js$script
-||zive.cz/_rev2015/css/layout-branding.css$stylesheet,~third-party
-||zive.cz/*velky-vyprodej*/swf$object,~third-party
-||zive.cz/*/|$image,~third-party
-||mobilmania.cz$script,~third-party
+||aktualne.cz/*/*fireplace$image
+||aktualne.cz/*/bbx-desktop.js
+||aktualne.cz/*=wallpaper*
+||aktualne.cz/*fullbanner$script
+||aktualne.cz/*viewid$script
+||aktualne.cz/*/*/*=leader$script
+||aktualne.cz/*/*/*leaderboard$script
+||aktualne.cz/*/*&ad_slot$script
+||aktualne.cz/*//*adfscript$script
+||aktualne.cz/*loader.js?v=1.2$script
+||aktualne.cz/*abcampaign.js
+||aktualne.cz/*/ads/$script
+||aktualne.cz/*/*banner$image
+||aktualne.cz/*/adfscript$script
+||i0.cz/abcampaign/
+/\baktualne\.cz\/[\w./-]{70,110}\?_=\d{7}$/
+/(?:\baktualne\.cz\/)(?=(?:[\w+]+\/[\w+]+)+)(?:[\w.+/]{400,}$)/$script
+/(?:\baktualne\.cz\/)(?=(?:[\w]+)+)(?:[\w.+/]{40,50}$)/$script
+/(?:\baktualne\.cz\/)(?:.{200,300}$)/$script
+||autorevue.cz/*one2n2$script
+||autorevue.cz/*ad_slot$script
+||autorevue.cz/*//*//*3.1.1*/*/$script
+||extra.cz/js/fuckadblock.js
+||extra.cz/*banner$script
+extra.cz##iframe[src*="performax"]
+/(?:(?:\bextra\.cz\/)|(?:\bonetv\.cz\/))(?:(?:.{100,200}$)|(?:.{400,}$)|(?:.{40,48}$))/$script
+/(?:(?:\bextra\.cz\/)|(?:\bonetv\.cz\/))(?:[^.]{80,130}$)/$script
+||games.tiscali.cz/js/*Ad$script,~third-party
+||games.tiscali.cz/js/*BBID$script
+||games.tiscali.cz/js/*one2n$script
+||games.tiscali.cz/js/*please$script,~third-party
+||games.tiscali.cz/js/*target$script,~third-party
+||games.tiscali.cz/js/*0.19$script
+||games.tiscali.cz/*/*1.8.3.min.js
+||games.tiscali.cz/*/JSAdserving$script
+||games.tiscali.cz/*/*&clbk=sklik$script
+||games.tiscali.cz/*rand*&hostname$xmlhttprequest
+||games.tiscali.cz/*/*&ad_slot$script
+||games.tiscali.cz/*/*&uje$script
+||games.tiscali.cz/*//please/$script
+||games.tiscali.cz/*/*/*=/$script
+||games.tiscali.cz/*/*/sh?2.0.199
+||games.tiscali.cz/*/*siteid$script
+||games.tiscali.cz/*?typkodu=$script
+||games.tiscali.cz/*?2.0.200$script
+||games.tiscali.cz/*sklik$script
+||games.tiscali.cz/*;click=$script
+||games.tiscali.cz/*ad.js
+||games.tiscali.cz/*/$image,~third-party
+@@||games.tiscali.cz/img/$image
+@@||foto.games.tiscali.cz^$image
+/\bgames\.tiscali\.cz\/[\w+-]{43,83}$/$script
+/\bgames\.tiscali\.cz\/.{170,}$/$script
+||idnes.cz/*/please/showit/$script
+/(?=.*(?:\/\*)+.*$)(?:\bidnes.cz\/)(?:.{120,}$)/$script
+/(?:\bidnes.cz\/)(?:[^.]{120,}$)/$script
+/(?:\bidnes\.cz\/)(?:.{250,}$)/$script
+/(?:\bidnes\.cz\/)(?:.{40,48}$)/$script
+||isport.blesk.cz/*/ad-list
+||isport.blesk.cz/*&target$script
+||isport.blesk.cz/*/*$image,~third-party
+||isport.blesk.cz/*//*uaw$script
+||isport.blesk.cz/*//*//*1.1.3*/*/$script
+||isport.blesk.cz/*1.8.3.min.js$script
+||mobilmania.cz/*_-*-_*$image
+||mobilmania.cz/Client.Scripts/*/showit$script
+||mobilmania.cz/Client.Scripts/*one2n2$script
+||mobilmania.cz/Client.Scripts/*BBID$script
+||mobilmania.cz/Client.Scripts/*//*uaw$script
+||mobilmania.cz/Client.Scripts/*//*//*3.1.1*/*/$script
 ||assets.adobedtm.com$script,domain=mobilmania.cz
-@@||mobilmania.cz/Client.Scripts$script,~third-party
 @@||mobilmania.cz/Client.Gallery$script,~third-party
 @@||mobilmania.cz/_rev2015/js$script,~third-party
 @@||mobilmania.cz/WebResource.axd$script,~third-party
 @@||mobilmania.cz/ScriptResource.axd$script,~third-party
 @@||forum.mobilmania.cz/styles$script,~third-party
 ||mobilmania.cz/_rev2015/css/layout-branding.css$stylesheet,~third-party
+||assets.adobedtm.com$script,domain=zive.cz
+||zive.cz/Client.Scripts/*zive?format=js
+||zive.cz/Client.Scripts/*please$script
+||zive.cz/*one2n2$script
+||zive.cz/*BBID$script
+||zive.cz/*//*uaw$script
+||zive.cz/_rev2015/js/*=/$script
+||zive.cz/_rev2015/css/layout-branding.css$stylesheet,~third-party
+||zive.cz/*velky-vyprodej*/swf$object,~third-party
+||zive.cz/_rev2015/js/*1.8.3.min.js$script
+||zive.cz/_rev2015/js/*?bn=$script
+||zive.cz/*sklik$script
+||zive.cz/*JSAdserving$script
+/(?:(?:\bmobilmania\.cz\/Client\.Scripts\/)|(?:\bzive\.cz\/)|(?:\bautorevue\.cz\/)|(?:\bsportrevue\.cz\/)|(?:\bisport\.blesk\.cz\/))(?:[^.]{400,}$)/$script
+/(?:(?:\bmobilmania\.cz\/Client\.Scripts\/)|(?:\bzive\.cz\/)|(?:\bautorevue\.cz\/)|(?:\bsportrevue\.cz\/)|(?:\bisport\.blesk\.cz\/))(?:[^\/]{400,}$)/$script
+/(?:\breflex\.cz\/)(?:.{400,}$)/$script
+/(?:\breflex\.cz\/)(?:.{40,48}$)/$script
 ||81.89.48.147/if.html
 ||adb.azet.sk
 ||autobazar.eu/__branding/
@@ -323,6 +395,8 @@ exashare.com###player_img
 ||pricemania.sk/pictures/banners/
 ||pricemania.sk/pictures/campaigns/
 ||recycle-static.zoznam.sk/*/*branding*.jpg
+||recycle-static.zoznam.sk/*.mp4
+||recycle-static.zoznam.sk/*.html
 ||spartak.sk/pics-new2/reklamy/
 ||sport.aktuality.sk/css/skins/
 ||static.itnews.sk/branding/
@@ -563,6 +637,7 @@ ulozisko.sk#@##reklama_big
 ##.advert-square
 ##.article-adtip-box
 ##.bazar-box
+##.bx-leaderboard
 ##.etarget
 ##.hp-advert
 ##.ic0.vendor-list
@@ -604,25 +679,47 @@ ulozisko.sk#@##reklama_big
 abecedazahrady.dama.cz##.banneraltext
 abtou.cz##DIV[id^="simplemodal"]
 adfox.cz###vse
+aktualne.cz##[id$="leader"]
+aktualne.cz##[id^="reklama"]
+aktualne.cz##A[href*="size=leader"]
 aktualne.cz###reklama-halfpage
 aktualne.cz###reklama-megaboard
 aktualne.cz###reklama-wallpaper
+aktualne.cz###sas-leader
+aktualne.cz###sas-jobbox-300
+aktualne.cz##.adWrapperFlight
+aktualne.cz##.job_box_hp
+aktualne.cz##.job_box_300
+aktualne.cz##.leaderboard-obal
+aktualne.cz##.reklama-vpravo-obal
 alfa.cz##.rtxtbannerh4
 alfacomp.cz###leftouterbanner
 alfacomp.cz###middlebanner
 alfacomp.cz##.rtxtbannerh4
 amk.to###header
 andreashop.cz##.field.field-type-image.field-label-hidden
+appliste.cz##.banner-header
+auto.cz##.adv
 auto.cz##.novinka_out
 autobazar.cz###biglink
 autoesa.cz###bannerPopup
+autoforum.cz###content-right > div[style]:first-of-type
+autoforum.cz###header-banner
 autohit.cz###leva-reklama
 autorevue.cz###adblock-leaderboard-clip
+autorevue.cz##[id*="3.1."]
 autorevue.cz##.banner
 autorevue.cz##.bx-bb
+autosport.cz###header-reklama
+autosport.cz##.side-bann-l
+autosport.cz##.side-bann-r
 autotube.cz##.rklh
 autotube.cz##.rklv
 autoweb.cz##.rklh
+autozine.cz##.banner
+autozine.cz##.banner2
+autozine.cz##.wrap + DIV:not(#footer)
+avmania.e15.cz###content-lead
 befun.cz##.ad
 blesk.cz##[class*="adform"]
 blesk.cz##[class*="banheight"]
@@ -638,6 +735,7 @@ blisty.cz##.midadv
 blisty.cz##.topadv
 blog.cz###mainBanner
 bohemians.cz###reklama_uvod
+brnenskadrbna.cz###banner-top
 budejckadrbna.cz##A[href^="http://www.budejckadrbna.cz/proclick.html"]
 businessworld.cz###skyscraper
 businessworld.cz##.banner
@@ -647,7 +745,6 @@ busportal.cz##.banner
 busportal.cz##DIV[id*="Banner"]
 bydlimekvalitne.cz###block-block-1
 cdr.cz##.not4bbtext
-centrum.cz###top-banner
 centrum.cz##[id^="widget_23"]
 centrum.cz###widget_195
 centrum.cz###widget_135
@@ -656,11 +753,12 @@ centrum.cz###widget_271
 centrum.cz###widget_264
 centrum.cz###widget_208
 centrum.cz###widget_209 > .widget-content
+centrum.cz###widget_240
 centrum.cz##.container-adfox
 centrum.cz##.najisto
+centrum.cz##.top-banner
 centrum.cz##.widget.widgetType-amplionwidgets_advancedamplionwidget.widgetSlug-amplion
 centrum.cz##.widget.widgetType-rsswidgets_rsswidget.widgetSlug-dovolena-rss
-centrum.cz###widget_240
 centrum.cz##.widget.widgetType-carswidgets_carswidget.widgetSlug-cars
 cervenykostelec.cz##.sliderbubble-right
 ceskatelevize.cz###commercialBox
@@ -672,10 +770,14 @@ cesky-jazyk.cz###splayamo
 cesky-jazyk.cz##.cornerbox
 cesky-jazyk.cz##.heurekaIframeHeader
 cestovani.tiscali.cz###zone-tiscali-cestovani-wide
+cestujlevne.com##a[href^="http://track.adform.net/"]
+cestujlevne.com##.adsbygoogle
 computerworld.cz###skyscraper
 computerworld.cz##.ad-obal
 computerworld.cz##.banner
 computerworld.cz##.square_banner
+cnews.cz##.adsbygoogle
+csfd.cz##A[href*="/log?type=ads"]
 csfd.cz###csfd-ad-wrapper
 csfd.cz##.ad-samsung
 csfd.cz##.branding.bottom
@@ -700,21 +802,18 @@ diit.cz##.footer_links
 diit.cz##.leftbox-main
 doktorka.cz###zone-doktorka-box
 doktorka.cz###zone-doktorka-sky
+doktorka.cz##.ad_code_box
 doktorka.cz##.ban1
 doupe.zive.cz###adframe-shell
 dpp.cz###top-banner
 drumandbass.cz##.banner
 e15.cz##.bx-bb
 e15.cz##.hp-page-card.hp-page-card-zive-firmy
+edna.cz##.adsense
 edna.cz##.banner
+edna.cz##.leaderboard
 echo24.cz##.relama-caption
 ekonomika.idnes.cz##DIV#space-c-add
-ekonomika.idnes.cz##.ahead + DIV:not(.m-bg-1)
-ekonomika.idnes.cz##.ahead + DIV + DIV:not(.m-bg-1)
-ekonomika.idnes.cz##.authors + DIV
-ekonomika.idnes.cz##.authors + DIV + DIV[style]
-ekonomika.idnes.cz##.m-bg-4 > DIV:not(#portal):not(#topeject):not(#content):not(#najdete)
-ekonomika.idnes.cz##.text:not(#art-text)
 ekonomika.idnes.cz###art-tags DIV[style]
 ekonomika.idnes.cz###art-tags DIV[class]
 ekonomika.idnes.cz###art-tags[class]:not(.art-tags)
@@ -727,6 +826,12 @@ ekonomika.idnes.cz###main DIV[style~="font-size:"]
 ekonomika.idnes.cz###main > DIV#foot2[style]
 ekonomika.idnes.cz###main > DIV#foot2[class]
 ekonomika.idnes.cz###najdete + SCRIPT + DIV + DIV
+ekonomika.idnes.cz##.ahead + DIV:not(.m-bg-1)
+ekonomika.idnes.cz##.ahead + DIV + DIV:not(.m-bg-1)
+ekonomika.idnes.cz##.authors + DIV
+ekonomika.idnes.cz##.authors + DIV + DIV[style]
+ekonomika.idnes.cz##.m-bg-4 > DIV:not(#portal):not(#topeject):not(#content):not(#najdete)
+ekonomika.idnes.cz##.text:not(#art-text)
 elektrocvn.estranky.cz###shifter_wrap
 esemes.cz###fancybox-overlay
 esemes.cz###h_part_right
@@ -734,6 +839,9 @@ esemes.cz###t-content
 euro.cz##.adv
 euro.cz##.float-ad-wrapper
 evysledky.com###box-over-content-a
+ewrc.cz###invelt
+ewrc.cz##.banner
+extra.cz##.ad
 extrawindows.cnews.cz###block-block-1
 extrawindows.cnews.cz###block-block-2
 extrawindows.cnews.cz###block-block-5
@@ -758,8 +866,8 @@ fotoaparat.cz##[style="position: absolute; top: 610px; left: 770px; width: 155px
 fotoaparat.cz##[style="width:628px; height:60px"]
 fotoradce.cz###reklamad-vlevo
 fotoradce.cz###reklamavlevo
-g.cz##.advert-fallback
 g.cz###block-g-advert-d-leaderboard
+g.cz##.advert-fallback
 gamepark.cz###bmenu
 gamepark.cz###supersize
 gamepark.cz##.banner
@@ -767,30 +875,14 @@ gamepark.cz##.headerpicture
 games.tiscali.cz##A[href*="CREFURL"]
 games.tiscali.cz##A[href*="utm_campaign"]
 games.tiscali.cz##A[href*="mmotraffic.com"]
+games.tiscali.cz##A[href*="youronlinechoices"] + IFRAME
+games.tiscali.cz##A.tracked-event[href*="ibb"]
 games.tiscali.cz##BODY>DIV>DIV[class^="r"]:first-of-type
-games.tiscali.cz##DIV[-abp-properties="min-height: 200px;"]
-games.tiscali.cz##DIV[-abp-properties="padding-top: 12px;"]
-games.tiscali.cz##DIV[-abp-properties="padding-top: 1*.*px;"]
-games.tiscali.cz##DIV[-abp-properties="height: 20*.*px"]
-games.tiscali.cz##DIV[-abp-properties="height: 19*.*px"]
+games.tiscali.cz##BODY > DIV > DIV[class*="-main"]
 games.tiscali.cz##DIV[inittop]
+games.tiscali.cz##DIV[id*="1.1."]
+games.tiscali.cz##DIV[id*="2.1."]
 games.tiscali.cz##DIV[style*="z-index:9999"]
-games.tiscali.cz##DIV[style*="height: 200px; position: relative;"]
-games.tiscali.cz##.adtext
-games.tiscali.cz##.article-offer
-games.tiscali.cz##.b-300x250
-games.tiscali.cz##.bbtitle
-games.tiscali.cz##.box-offer
-games.tiscali.cz##.box-article-detail ~ DIV
-games.tiscali.cz##.col-side > DIV:not(.box-std)
-games.tiscali.cz##.col:nth-of-type(2) > DIV:not([class*=" "])
-games.tiscali.cz##.page-bg > DIV:first-of-type
-games.tiscali.cz##.page-homepage > DIV > DIV[class*="-main"]
-games.tiscali.cz##.pe-banner
-games.tiscali.cz##.sklik-ads
-games.tiscali.cz##.sklik-ad
-games.tiscali.cz##.top.row-main
-games.tiscali.cz##.wide
 games.tiscali.cz###alzadiv
 games.tiscali.cz###aw0
 games.tiscali.cz###banner
@@ -801,9 +893,27 @@ games.tiscali.cz###intAds
 games.tiscali.cz###menu-accessibility + DIV:not(#header)
 games.tiscali.cz###sticky-top.sticky
 games.tiscali.cz##[class*="adform"]
+games.tiscali.cz##[class^="bb-brand"]
 games.tiscali.cz##[class*="ld-top"]
+games.tiscali.cz##[class^=" "]
+games.tiscali.cz##[src*="creativecdn"]
+games.tiscali.cz##.adtext
+games.tiscali.cz##.article-offer
+games.tiscali.cz##.b-300x250
+games.tiscali.cz##.bbtitle
+games.tiscali.cz##.box-offer
+games.tiscali.cz##.box-article-detail ~ DIV
+games.tiscali.cz##.pe-banner
+games.tiscali.cz##.sklik-ads
+games.tiscali.cz##.sklik-ad
+games.tiscali.cz##.top.row-main
+games.tiscali.cz##.wide
 google.cz,google.com###mbEnd
 google.cz,google.com###tads
+grunex.com##.banner-nbg-page
+grunex.com##.bg-linkA
+grunex.com##.bg-linkB
+grunex.com##.sda-system
 hcplzen.cz###ads_top_box
 heureka.cz###banner-leaderboard
 heureka.cz###bottom
@@ -813,10 +923,11 @@ hokej.cz##.ban1
 hokej.cz##.dolni_reklama
 hokej.cz##.top_banner
 hokej.cz##.top_banner_second
+hrej.cz##.inzerce
+hybrid.cz##.TopFullBanner
 hyperinzerce.cz###banners
 hyperinzerce.cz###ilayerr
 hyperinzerce.cz###skyscraper
-idnes.cz##[class^="AdTrack"]
 idnes.cz##A[href~="bbelements"]
 idnes.cz##A[href^="http://cz.search.etargetnet.com/generic/broad/go.php?"]
 idnes.cz##DIV[id~="adform"]
@@ -836,12 +947,12 @@ idnes.cz###space-c + DIV
 idnes.cz###topkontakt-ahead
 idnes.cz###topkontakt-sph
 idnes.cz###wbox-dovolena
+idnes.cz##[class^="AdTrack"]
 idnes.cz##.adbox-regiobox
 idnes.cz##.AdTrack-CSS-Link
 idnes.cz##.aheadegiobox
 idnes.cz##.ahead
 idnes.cz##.catchbox-dual-l
-idnes.cz##.col-r
 idnes.cz##.fix-m11
 idnes.cz##.m54
 idnes.cz##.r-art.art
@@ -856,22 +967,34 @@ ihned.cz###r-big-ozn
 ihned.cz###r-drazby
 ihned.cz###r-nes
 ihned.cz###rbannery-items
+ihned.cz##.jobs
 ihned.cz##.jobs09
 ihned.cz##.jobs09-label
 ihned.cz##.karieraweb-box
 ihned.cz##.karieraweb-label
 iprima.cz###banner-wrapper
 iprima.cz###reklamicka-inform
+iprima.cz###work-my-reklamicka
+isport.blesk.cz##A[href*="ibb"]
+isport.blesk.cz###ads-widesquare
+isport.blesk.cz##[id*=".1.2"]
+isport.blesk.cz##[id*=".1.1"]
 isport.blesk.cz##.ads
+isport.blesk.cz##.promo-bar + DIV[id]:not(.wrapper)
 itnetwork.cz##div.ad-730
 i-navody.cz###slider
 jizdnirady.idnes.cz##.advert
 kalkulacka-hypoteka.cz##IMG[src="/images/neomezene-banner-left.jpeg"]
 kalkulacka-hypoteka.cz##IMG[src="/images/ebook-banner-left.jpeg"]
+kaloricketabulky.cz##.bannLead
 karaoketexty.cz###branding_link
 karaoketexty.cz###peelback
 kecy.roumen.cz##.roumingLista
+kladenskelisty.cz##.rleft
+kladenskelisty.cz##.rright
+kladenskelisty.cz##.tree
 kniha.cz##DIV[id^="banner"]
+kurzy.cz##DIV[style="border: 1px silver solid; float: left;"]
 kurzy.cz###adv_300adsense
 kurzy.cz###adv_doublesky
 kurzy.cz###adv_fullhead
@@ -885,10 +1008,11 @@ kurzy.cz##.box2
 kurzy.cz##.box4
 kurzy.cz##.box9
 kurzy.cz##.textovka
-kurzy.cz##DIV[style="border: 1px silver solid; float: left;"]
 lamer.cz##.square
+letemsvetemapplem.eu###brandingconts
 letemsvetemapplem.eu###headervelka
 letemsvetemapplem.eu###pravy_uzky
+letemsvetemapplem.eu###tallbanner1
 libise.eu###aa1
 lidovky.cz###reality-idnes
 lidovky.cz###self-box
@@ -899,7 +1023,14 @@ lidovky.cz##.authors + DIV:not(.related)
 lidovky.cz##.widesquare
 livesport.cz###box-over-content-a
 lui-magazine.cz##.bannergroup
+lupa.cz###jobs
+lupa.cz###jobs-prace
+lupa.cz###jobs-kurzy
 lupa.cz###speed-promo
+lupa.cz##[class*="advert"]
+lupa.cz##[data-adp="leaderboard"]
+lupa.cz##[data-adp^="side-"]
+lupa.cz##[id*="Adform"]
 mapy.in-pocasi.cz###topbanner
 mapy.in-pocasi.cz##.devicewidth
 maminka.cz###adframe-shell
@@ -910,27 +1041,38 @@ matematika.cz###rbackground-link
 matematika.cz##DIV[id*="reklama"]
 mediafax.cz##.bannercauta
 mediafax.cz##.casetaright
+mediar.cz##.banns-group
 medop.cz###block-nodesinblock-0
 menu.olomouc.cz##.adTopBox
-mesec.cz##.ad.ad-stickyboard
+mesec.cz###jobs
+mesec.cz##.ad
+mesec.cz##.CAN_ad
 minecrafak.cz###poutak
 minecrafak.cz###sidebar
+mladypodnikatel.cz##.banner
 mladypodnikatel.cz##.scroll_banner
-mobilmania.cz##TABLE#prolinkhdr-v3+DIV:not(.cs-cnt-wrapper)
+mobilizujeme.cz###leaderbanner_space
+mobilizujeme.cz##.fullbanner
+mobilmania.cz###leadBrand
+mobilmania.cz##TABLE#prolinkhdr-v3+DIV:not(.cs-cnt-wrapper):not(#mainwrap)
+mobilmania.cz##IFRAME[src*="alza"]
 mobilmania.cz##.bx-bb
 mobilmania.cz##.bx-billboard
 mobilmania.cz##.bx-scroller
+mobilmania.cz##.not4bbtext + A
 mobilmania.cz##[id*="3.1.1"]
-moda.cz##.square
+mobilmania.cz##noscript + script + div
 moda.cz##DIV[style="clear:both; padding-top:30px; width:540px;"]
-mobilizujeme.cz###leaderbanner_space
-mobilizujeme.cz##.fullbanner
+moda.cz##.square
+motoforum.cz###ahead
 mp3s.nadruhou.net###lista
 mp3s.nadruhou.net##DIV[style*="padding: 0px; height: 270px;"]
 mp3s.nadruhou.net##DIV[style*="padding: 0px; height: 275px;"]
 mp3s.nadruhou.net##DIV[style*="width: 380px; min-height: 30px;"]
 mp3s.nadruhou.net##DIV[style*="width: 202px; height: 60px;"]
 mp3stahuj.cz###leaderboard-cover
+mrk.cz###banner-top
+mrk.cz##.banner-commercial
 naakup.cz###ad-selfpromo
 naakup.cz###footer-link
 naseadresa.cz###bannersPanel
@@ -972,6 +1114,12 @@ pcworld.cz###skyscraper
 pcworld.cz##.banner
 penize.tiscali.cz###zone-tiscali-penize-wide
 pestujemeweb.cz###lista
+playzone.cz###block-block-128
+playzone.cz###block-block-132
+playzone.cz###block-block-143
+playzone.cz###top-banner
+playzone.cz##.no-extlink-icon
+podnikatel.cz##.ad
 pravidla.cz##.advtick
 primat.cz##A[class^="levakolejroku"]
 primat.cz##A[class^="pravakolejroku"]
@@ -980,6 +1128,9 @@ programujte.com##.jobs
 prozeny.blesk.cz##.pinkHeader.sportnanetuIco
 prozeny.blesk.cz##.sportnanetu
 recepty.vareni.cz##.banner
+reflex.cz###ads-leader-board
+reflex.cz###adsenceX
+reflex.cz###banner_iframe2
 rejstrik.finance.cz##.right > IFRAME
 rejstrik.finance.cz##.toScroll
 restaurace.cz##.banner-120-600
@@ -1014,10 +1165,12 @@ securityworld.cz##.banner
 serialkeys.svetu.cz###menu_rozdel_mene
 serialzone.cz###hpbglink-watch
 serialzone.cz###top-banner
+seznam.cz##.ogm-advert-vendor-sizer
 simpsonovi-tv.cz###a92
 simpsonovi-tv.cz###ideckoo
 simpsonovi-tv.cz###odkazy
 sledujserialy.sk##[name='iframe'] + div
+sledujufilmy.cz##.bottom-advert
 smartmania.cz###tely-top
 smartmania.cz##.bAdvert
 smartmania.cz##.heureka3-content
@@ -1042,14 +1195,20 @@ stesti.cz##.mabo.faa
 stesti.cz##[style="width:960px;margin:0 auto;text-align:left"]
 stream.cz###img_link
 stream.cz###user_head
+superapple.cz##A[href*="banner"]
+superapple.cz##.widget-header
 superhry.cz##.video-doporucujeme
+synonymus.cz##[style="width:550px"]
 synotliga.isport.blesk.cz##.leaderboard
 t-mobile.cz##.advttl
 tipcars.com###loading
 tipcars.com##IFRAME[id*="TC"]
+tiscali.cz##.box-offer
+titulky.com###bnx300x300
 tn.nova.cz##.right_box_promo_articles
 toplist.cz###toplist_cz_tipy_hp
 toplist.cz###wedos
+topserialy.sk##A[class^="banner"]
 topzine.cz###vyjizdeciBoxikDiv
 tryhard.cz##.banneritem
 tv.seznam.cz##.o2Box
@@ -1058,6 +1217,9 @@ tvfreak.cz##.sidebar-banner
 tvfreak.cz##.skyscrapper-right
 tvt-online.cz###a3f
 tvt-online.cz###ideckoo
+uloz.to##.adDetail > .adFull
+uloz.to##.adTitle
+uloz.to##.banner
 uloz.to##.banner300x300
 uschovna.cz###tiscali-bar
 uschovna.cz##.bottom_banner
@@ -1101,12 +1263,15 @@ zeny.cz##.commerce
 zeny.cz##.commercehead
 zeny.cz##.partner
 zeny.tiscali.cz###zone-tiscali-zeny-wide
-zive.cz##DIV[style="display: block;"]
-zive.cz##TABLE#prolinkhdr-v3+DIV:not(.cs-cnt-wrapper)
 zing.cz###background
 zing.cz###bgSpaceArea
+zive.cz##BODY > FORM:first-of-type > TABLE:first-of-type + DIV
+zive.cz##FORM > DIV > DIV[id*="3.1.2"]
+zive.cz##TABLE#prolinkhdr-v3+DIV:not(.cs-cnt-wrapper)
+zive.cz###bx-cnt-full > div > div
 zive.cz###content-lead
 zive.cz###ctl01_jobs
+zive.cz###leadBrand
 zive.cz###mainFORM > DIV > DIV[class*="3.1.2"]
 zive.cz###mainFORM > DIV > DIV[id*="3.1.2"]
 zive.cz###page-hub-wrapper
@@ -1114,9 +1279,12 @@ zive.cz##.banner
 zive.cz##.banner-box
 zive.cz##.bx-bb
 zive.cz##.bx-billboard
+zive.cz##.bx-commercial ~ DIV
 zive.cz##.bx-ext-rss
+zive.cz##.bx-fullbanner ~ DIV
 zive.cz##.bx-livecompanies
 zive.cz##.bx-scroller
+zive.cz##.not4bbtext + DIV
 zive.cz##.prolinkhdr-content
 zive.cz##[class*="banheight"]
 zpravy.tiscali.cz###zone-tiscali-zpravy-wide
@@ -1174,6 +1342,9 @@ milujemefilmy.eu##div[style^="z-index: 1000"]
 mojevideo.sk###brnd
 mojevideo.sk###video_ad
 narodnablockovaloteria.tipos.sk###banners
+nitralive.sk###bannertop
+nitralive.sk###reklama02
+nitralive.sk##.bannergroup
 onlinefilmy.tv###bg_left
 onlinefilmy.tv###bg_right
 onlinefilmy.tv##.ads
@@ -1197,6 +1368,7 @@ techbox.sk##.inzercia
 teevee.sk##A[href^="https://www.tipsport.sk/PartnerRedirectAction.do?"]
 teevee.sk###colorbox
 teevee.sk###cboxOverlay
+titulky.com##[id^="bannery"]
 topky.sk##.ad
 topky.sk##.addbox.avizo
 topky.sk##.box_advertisment.addbox.recycle
@@ -1220,14 +1392,39 @@ warmacher.com##.tmask
 webnode.sk###f3l9j1708q
 webnode.sk###fStrip150815823
 zmeskanyhovor.com###offerio
+zoznam.sk###branding_wrapper2
+zoznam.sk###branding
 zoznam.sk###rajknih
 zoznam.sk###tipy
-zoznam.sk##P.left
 zoznam.sk##.adbox-genertel
 zoznam.sk##[id*="BUTTON_ZOZNAM"]
+zoznam.sk##P.left
+@@||iprima.cz^$generichide
+@@||play.iprima.cz/ad/banner/_adsense_/_adserver/_adview_.ad.json?adzone
+@@||api.play-backend.iprima.cz/ad/banner/_adsense_/_adserver/*
+mazdaclub.cz#@#.reklama
+games.tiscali.cz#@##ads-test
+games.tiscali.cz#@#.afs_ads
+games.tiscali.cz#@#.tracked-event
+@@||go.cz.bbelements.com/bb/bb_one2n$domain=games.tiscali.cz
+@@||games.tiscali.cz/img/adblock_on.gif$image
+@@||games.tiscali.cz^$generichide
+@@||topserialy.sk/*fuck-adblock$script
+@@||topserialy.sk$generichide
+@@||topserialy.sk/js/adsbygoogle.js
+@@||h.imedia.cz^$domain=seznam.cz
+idnes.cz##DIV[id*="adb-box"]
+@@||i0.cz/js/advert.
+@@||i0.cz/*.js|
+jaguar-club.net#@#.reklama
+||echo24.cz/templateAssets/js/inlog.js
+@@||bbelements.com/bb/bb_one$domain=hrej.cz
+@@||i.imedia.cz/json*seznam.clanky.zpravy$script,domain=stream.cz
+||onetv.cz/js/fuckadblock.js
+||manmagazin.sk/wp-content/uploads/*/*.js?ver=2.0.11
+skrblik.cz#@##adsense
 titulky.com#@##reklama
 titulky.com#@#.pub_728x90
-@@||titulky.com/bannery/$image
 @@||bbelements.com/bb/bb_one2n.js$domain=titulky.com
 poradte.cz#@#.text-ad-links
 poradte.cz#@#.text-ads
@@ -1239,19 +1436,3 @@ poradte.cz#@#.pub_728x90
 poradte.cz#@#.pub_300x250m
 poradte.cz#@#.pub_300x250
 @@||poradte.cz/js/ads.js
-@@||iprima.cz^$generichide
-@@||play.iprima.cz/ad/banner/_adsense_/_adserver/_adview_.ad.json?adzone
-@@||api.play-backend.iprima.cz/ad/banner/_adsense_/_adserver/*
-mazdaclub.cz#@#.reklama
-games.tiscali.cz#@##ads-test
-games.tiscali.cz#@#.afs_ads
-games.tiscali.cz#@#.tracked-event
-@@||go.cz.bbelements.com/bb/bb_one2n$domain=games.tiscali.cz
-@@||games.tiscali.cz/img/adblock_on.gif
-@@||games.tiscali.cz^$generichide
-@@||topserialy.sk/*fuck-adblock$script
-@@||topserialy.sk$generichide
-idnes.cz##DIV[id*="adb-box"]
-@@||i0.cz/js/advert.
-@@||i0.cz/*.js|
-jaguar-club.net#@#.reklama

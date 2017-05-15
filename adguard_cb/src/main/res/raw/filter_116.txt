@@ -1,10 +1,9 @@
+! Checksum: Ecmza72r/+JutfFzoMVndA
 ! Title: Wiltteri
-! Version: 1.0.1.69
-! Name: Wiltteri
 ! Description: Finnish supplement list for EasyList
-! NameEn: Wiltteri
-! DescriptionEn: Finnish supplement list for EasyList
-! TimeUpdated: 2016-05-27T18:11:21.971+04:00
+! Version: 1.0.1.70
+! TimeUpdated: 2016-12-02T20:06:37.863+04:00
+! Expires: 2 days (update frequency)
 /mainokset.
 /mainokset/*
 /mainokset_

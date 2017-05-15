@@ -1,12 +1,12 @@
+! Checksum: NWRD7vKcJt+Bsogr34x+Ow
 ! Title: Korean Adblock List
-! Version: 1.0.0.2
-! Name: Korean Adblock List
 ! Description: Korean Adblock List
-! NameEn: Korean Adblock List
-! DescriptionEn: Korean Adblock List
-! TimeUpdated: 2016-07-01T14:06:02.420+04:00
+! Version: 1.0.0.4
+! TimeUpdated: 2017-04-08T17:37:52.747+04:00
+! Expires: 2 days (update frequency)
 ||ams.rmcnmv.naver.com^
 comic.naver.com##div[id^=ppl]
+naver.com##div[id^=promotion]
 avsnoop.de###bottomBanner
 avsnoop.de###adArea
 avsnoop.de###side > .inner > .banner:nth-of-type(3)
@@ -256,6 +256,7 @@ _realclick
 ||ad.metanetwork.com/st^
 ||ad.naver.com/admobile^
 ||ad.naver.com/adshow^
+||ad.naver.com/fxshow
 ||ad.newsen.com/banner/
 ||ad.ohmynews.com/adhtmllist/adtv_
 ||ad.pickple.com/widget/
@@ -1451,7 +1452,6 @@ hankyung.com##.articleAD_L
 heraldcorp.com##DIV.subpg_news_body > DIV[style="float:right; margin-left:10px;border:1px solid #DED7D7;width:200px;height:200px;"]:first-child
 heraldcorp.com##[class^="subtop_"]
 huffingtonpost.kr##.ad_wrapper
-joins.com##[class^="ad_"]
 joins.com##[id^="div_biz_link"]
 joins.com,joinsmsn.com###\5f _inline_ms_da_ad__
 kookje.co.kr###news_textArea > DIV[style="clear:both;position:relative;width:468px;height:60px;background:#FFF;border:1px solid #999999;margin:10px auto;z-index:0"]
@@ -1488,3 +1488,5 @@ ygosu.com##.ad700
 inven.co.kr###dhoAdTop
 inven.co.kr###webzineAdTop
 ||img.etnews.com/*/banner/
+www.naver.com###veta_top
+www.naver.com###veta_branding

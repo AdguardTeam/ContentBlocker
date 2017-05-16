@@ -31,11 +31,9 @@ public class AlarmReceiver extends BroadcastReceiver {
                     FilterService filterService = ServiceLocator.getInstance(context).getFilterService();
                     PreferencesService preferencesService = ServiceLocator.getInstance(context).getPreferencesService();
 
-                    List<FilterList> filterLists = filterService.checkFilterUpdates(false);
-                    if (!CollectionUtils.isEmpty(filterLists)) {
-                        preferencesService.setLastUpdateCheck(System.currentTimeMillis());
-                        filterService.applyNewSettings();
-                    }
+                    filterService.checkFilterUpdates(false);
+                    filterService.applyNewSettings();
+                    preferencesService.setLastUpdateCheck(System.currentTimeMillis());
                 }
             });
         }

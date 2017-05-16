@@ -19,7 +19,7 @@ Select 'Adguard Content Blocker' there and choose preferrable filters in apps se
 
 ### Releases
 
-* Latest version: [1.6.6](https://github.com/AdguardTeam/ContentBlocker/releases/tag/v1.6.6)
+* Latest version: [1.6.8](https://github.com/AdguardTeam/ContentBlocker/releases/tag/v1.6.8)
 
 All releases: 
 https://github.com/AdguardTeam/ContentBlocker/releases

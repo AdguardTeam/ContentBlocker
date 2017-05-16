@@ -74,7 +74,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     private static final int SPYWARE_FILTER_ID = 3;
 
     private static final int UPDATE_INVALIDATE_PERIOD = 24 * 60 * 60 * 1000; // 24 hours
-    private static final int UPDATE_INITIAL_PERIOD = 5 * 60 * 1000; // 5 minutes
+    private static final int UPDATE_INITIAL_PERIOD = 60 * 1000; // 1 minutes
 
     private static final String FILTERS_UPDATE_QUEUE = "filters-update-queue";
 

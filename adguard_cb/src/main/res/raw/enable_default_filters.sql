@@ -9,6 +9,7 @@ UPDATE filter_lists
    OR (filter_list_id = 8 AND '{0}' LIKE '%nl%')
    OR (filter_list_id = 9 AND ('{0}' LIKE '%es%' OR '{0}' LIKE '%pt%'))
    OR (filter_list_id = 11)
+   OR (filter_list_id = 12)
    OR (filter_list_id = 13 AND '{0}' LIKE '%tr%')
    OR (filter_list_id = 102 AND '{0}' LIKE '%id%')
    OR (filter_list_id = 103 AND '{0}' LIKE '%bg%')

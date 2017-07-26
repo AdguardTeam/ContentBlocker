@@ -139,6 +139,8 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 R.drawable.ic_account_black_24dp,
                 R.drawable.ic_sync_black_24dp,
                 R.drawable.ic_stars_black,
+                R.drawable.ic_support,
+                R.drawable.ic_github,
                 R.drawable.ic_info_black_24dp,
                 R.drawable.ic_exit
         };
@@ -460,6 +462,14 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                     ActivityUtils.startMarket(MainActivity.this, getPackageName(), "rate_menu_item");
                     break;
                 case 5:
+                    drawerLayout.closeDrawers();
+                    AboutActivity.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker/issues/new");
+                    break;
+                case 6:
+                    drawerLayout.closeDrawers();
+                    AboutActivity.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker");
+                    break;
+                case 7:
                     drawerLayout.closeDrawers();
                     startActivity(new Intent(MainActivity.this, AboutActivity.class));
                     break;

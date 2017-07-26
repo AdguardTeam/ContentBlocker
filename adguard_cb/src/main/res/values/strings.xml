@@ -104,4 +104,6 @@
     <string name="importUserRulesUrlErrorMessage">The URL is not valid</string>
     <string name="clearUserRulesButtonText">Remove all</string>
     <string name="browseButtonText">Browse</string>
+    <string name="github">Github</string>
+    <string name="reportBug">Report a bug</string>
 </resources>

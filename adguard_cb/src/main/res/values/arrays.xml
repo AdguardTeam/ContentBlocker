@@ -6,6 +6,8 @@
         <item>@string/user_filter</item>
         <item>@string/check_filter_updates</item>
         <item>@string/rateAdguardButtonText</item>
+        <item>@string/reportBug</item>
+        <item>@string/github</item>
         <item>@string/about</item>
         <item>@string/exit</item>
     </string-array>

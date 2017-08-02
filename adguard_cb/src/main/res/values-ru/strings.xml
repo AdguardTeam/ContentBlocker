@@ -94,4 +94,6 @@
     <string name="importUserRulesUrlErrorMessage">Неверный URL</string>
     <string name="clearUserRulesButtonText">Удалить все</string>
     <string name="browseButtonText">Обзор</string>
+    <string name="github">Github</string>
+    <string name="reportBug">Сообщить о проблеме</string>
 </resources>

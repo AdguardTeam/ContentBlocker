@@ -1,25 +1,27 @@
-# Adguard Content Blocker
+# AdGuard Content Blocker
+> ### Disclaimer
+> * AdGuard Content Blocker is a free app. We believe that all free products should be open source, and AdGuard Content Blocker is not an exception. Its code can be found in this repository.
+> * Privacy policy: https://adguard.com/privacy/content-blocker.html (Briefly: AdGuard sends only necessary, limited information, e.g. information required for filter updates).
 
-Adguard Content Blocker can be used only in browsers that support content blocking technology. Currently these browsers are Samsung Internet and Yandex Browser.
+Adguard Content Blocker is a tool to block ads in browsers that support content blocking technology. Currently, these browsers are Samsung Internet and Yandex Browser.
+
+To get more information and to download AdGuard Content Blocker, visit our website [https://adguard.com/](https://adguard.com/adguard-content-blocker/overview.html).
 
 ![menu-en-github](https://cloud.githubusercontent.com/assets/8577533/18669011/84b0868c-7f41-11e6-8206-29328f06c3a8.jpg)
 ![main-en-github](https://cloud.githubusercontent.com/assets/8577533/18669037/a4540de2-7f41-11e6-8b12-99940484c889.jpg)
 
-### How to get Adguard Content Blocker?  
-Adguard Content Blocker can be downloaded from Google Play:
-https://play.google.com/apps/testing/com.adguard.android.contentblocker,
+### How to report an issue?
 
-from Galaxy Apps store, or directly from GitHub: 
-https://github.com/AdguardTeam/ContentBlocker/releases
+GitHub can be used to report a bug or to submit a feature request. To do so, go to [this page](https://github.com/AdguardTeam/ContentBlocker/issues) and click the *New issue* button.
 
-### How to install
+>**Note:** for the filter-related issues (missed ads, false positives etc.) use the [dedicated repository](https://github.com/AdguardTeam/AdguardFilters). 
 
-Just open Adguard Content Blocker, and in the main window scroll down to the bottom. Tap on the button with the required browser's name and you will be taken to that browsers settings.
-Select 'Adguard Content Blocker' there and choose preferrable filters in apps settings.
+### Our plans
+
+To see the 'big picture', to watch current progress and to get an idea of approximate dates for upcoming AdGuard Content Blocker releases, see this page: https://github.com/AdguardTeam/ContentBlocker/milestones
 
 ### Releases
 
-* Latest version: [1.7.0](https://github.com/AdguardTeam/ContentBlocker/releases/tag/v1.7.0)
+ * Latest version: [1.7.0](https://github.com/AdguardTeam/ContentBlocker/releases/tag/v1.7.0)
 
-All releases: 
-https://github.com/AdguardTeam/ContentBlocker/releases
+You can find all AdGuard Content Blocker releases here: https://github.com/AdguardTeam/ContentBlocker/releases

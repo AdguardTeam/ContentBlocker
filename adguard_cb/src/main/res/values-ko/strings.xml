@@ -34,7 +34,7 @@
     <string name="start_yandex_browser">얀덱스 브라우저 설정으로</string>
     <string name="open_browsers_info">컨텐츠 차단을 사용하시려면 이곳을 클릭하여 브라우저 설정 페이지를 여십시오</string>
     <string name="filterVersionTemplate">버전 {0}.</string>
-    <string name="filterUpdatedTemplate">{1} 의 {0} 을 업데이트 하였습니다.</string>
+    <string name="filterUpdatedTemplate">마지막 업데이트 {0} {1}</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">{0} 버전</string>
     <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nAll Rights Reserved.</string>
@@ -94,4 +94,5 @@
     <string name="importUserRulesUrlErrorMessage">유효한 주소를 입력하세요</string>
     <string name="clearUserRulesButtonText">모두 제거</string>
     <string name="browseButtonText">찾아보기</string>
+    <string name="reportBug">버그 제보하기</string>
 </resources>

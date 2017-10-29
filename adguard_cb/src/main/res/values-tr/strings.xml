@@ -2,7 +2,7 @@
 <resources>
     <string name="refresh">Yenile</string>
     <string name="please_wait">Lütfen bekleyin...</string>
-    <string name="main_info">Bu uygulama içerik engellemeyi destekleyen tarayıcılar için bir eklentidir.\n\nŞu anda bu şekilde iki tarayıcı vardır:\n\n1. Samsung Internet browser\n2. Yandex Browser\n\nBu uygulamanın desteği ile bu tarayıcılarda tüm reklamları engelleyebilirsiniz.\n\nAyrıca, Ayarlardan hangi filtreleri kullanacağınızı seçebilirsiniz.</string>
+    <string name="main_info">Bu uygulama içerik engellemeyi destekleyen tarayıcılar için bir eklentidir.\n\nŞu anda bu şekilde iki tarayıcı vardır:\n\n1. Samsung Internet Browser\n2. Yandex Browser\n\nBu uygulamanın desteği ile bu tarayıcılarda tüm reklamları engelleyebilirsiniz.\n\nAyrıca, Ayarlardan hangi filtreleri kullanacağınızı seçebilirsiniz.</string>
     <string name="progressGenericErrorText">Bazı hatalar oluştu!</string>
     <string name="importUserRulesSuccessResultMessage">{0} filtre(leri) başarıyla içe aktarıldı!</string>
     <string name="importUserRulesErrorResultMessage">Filtreleri aktarırken hata oluştu!</string>
@@ -18,10 +18,10 @@
     <string name="openned_drawer_title">Seçenekler</string>
     <string name="about">Hakkında</string>
     <string name="settings">Ayarlar</string>
-    <string name="pref_autoupdate_filters">Filtreleri otomatik güncelleştir</string>
+    <string name="pref_autoupdate_filters">Filtreleri otomatik güncelle</string>
     <string name="pref_summary_autoupdate_filters">Filtreleri otomatik güncelle</string>
     <string name="pref_update_wifi_only">Sadece Wi-Fi üzerinden güncelle</string>
-    <string name="pref_summary_update_wifi_only">Mobil veri üzerinden filtreleri güncelleme</string>
+    <string name="pref_summary_update_wifi_only">AdGuard filtre güncellemelerini yalnızca Wi-Fi üzerinden alacak.</string>
     <string name="pref_show_useful_ads">Yararlı reklamları göster</string>
     <string name="pref_summary_show_useful_ads">Kullanıcı için yararlı olabilecek reklamları engellemez</string>
     <string name="pref_filters_category">Filtreler</string>
@@ -30,7 +30,7 @@
     <string name="stats_enabled_filters">Filtreler</string>
     <string name="stats_enabled_rules">Kurallar</string>
     <string name="stats_update_time">Güncellendi:</string>
-    <string name="start_samsung_browser">Samsung Internet ayarlarını aç</string>
+    <string name="start_samsung_browser">Samsung Internet Browser ayarlarını aç</string>
     <string name="start_yandex_browser">Yandex Tarayıcı ayarlarını aç</string>
     <string name="open_browsers_info">Filtrelerimizi kullanarak içerik engellemeyi etkinleştirmek için buraya tıklayarak tarayıcı seçeneklerini doğrudan açabilirsiniz:</string>
     <string name="filterVersionTemplate">Sürüm {0}.</string>
@@ -50,13 +50,13 @@
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
     <string name="install_browsers">Desteklenen tarayıcılar yüklü değil! Bunları Google Play\'den yükleyebilirsiniz:</string>
-    <string name="install_samsung_browser">Samsung Internet Yükle</string>
+    <string name="install_samsung_browser">Samsung Internet Browser\'ı Yükle</string>
     <string name="install_yandex_browser">Yandex Browser Yükle</string>
     <string name="issuesButtonText">Hata Bildir</string>
     <string name="githubLabelText">Kaynak kod</string>
     <!--Do not translate.-->
     <string name="warning">Uyarı</string>
-    <string name="too_many_filters_warning">Çok fazla filtre seçtiniz. Gezinme hızınızı önemli derecede yavaşlatabilir.</string>
+    <string name="too_many_filters_warning">Çok fazla filtre seçtiniz. Çok fazla filtre seçmek gezinme hızınızı önemli derecede yavaşlatabilir.</string>
     <string name="pref_whitelist_category">Beyazliste</string>
     <string name="pref_summary_whitelist_category">Bu listedeki alanlar filtrelenmeyecektir</string>
     <string name="onboarding_title1">Hoşgeldiniz!</string>
@@ -66,7 +66,7 @@
     <string name="onboarding_text2">Çalıştırmak için Adguard\'ın reklam engelleme teknolojisini destekleyen bir tarayıcıya ihtiyacınız var. Hali hazırda böyle iki tarayıcı var.</string>
     <string name="onboarding_button_text2">Tarayıcı seç</string>
     <string name="onboarding_title3">Neredeyse hazır!</string>
-    <string name="onboarding_text3">Uygun bir tarayıcı bulundu. Geriye sadece Adguard\'ın ayarlarından etkinleştirmek kaldı.</string>
+    <string name="onboarding_text3">Uygun bir tarayıcı bulundu. Geriye sadece tarayıcı ayarlarından Adguard\'ı etkinleştirmek kaldı.</string>
     <string name="onboarding_button_text3">Adguard\'ı Etkinleştir</string>
     <string name="count">Sayaç</string>
     <string name="check_filter_updates">Filtreleri güncelle</string>
@@ -94,4 +94,5 @@
     <string name="importUserRulesUrlErrorMessage">Bu URL geçerli değil</string>
     <string name="clearUserRulesButtonText">Tümünü sil</string>
     <string name="browseButtonText">Gözat</string>
+    <string name="reportBug">Hata Bildir</string>
 </resources>

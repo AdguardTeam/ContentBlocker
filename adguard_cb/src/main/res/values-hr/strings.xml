@@ -94,4 +94,5 @@
     <string name="importUserRulesUrlErrorMessage">URL nije važeći</string>
     <string name="clearUserRulesButtonText">Ukloni sve</string>
     <string name="browseButtonText">Pregledaj</string>
+    <string name="reportBug">Prijavite pogrešku</string>
 </resources>

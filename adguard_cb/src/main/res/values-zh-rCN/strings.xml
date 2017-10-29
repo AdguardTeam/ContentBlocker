@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <resources>
     <string name="refresh">刷新</string>
-    <string name="please_wait">请稍后...</string>
+    <string name="please_wait">请稍候...</string>
     <string name="main_info">此应用为支持内容拦截的浏览器的扩展。 \n\n当前有两种支持内容拦截的浏览器：\n\n1. Samsung Internet browser\n2. Yandex Browser\n\n有此应用的帮助，您可以拦截以上浏览器内的所有广告。\n\n此外，您可在设置内选择要使用的过滤器。</string>
     <string name="progressGenericErrorText">发生错误！</string>
     <string name="importUserRulesSuccessResultMessage">{0} 个过滤器成功导入！</string>
@@ -94,4 +94,5 @@
     <string name="importUserRulesUrlErrorMessage">URL 无效</string>
     <string name="clearUserRulesButtonText">移除全部</string>
     <string name="browseButtonText">浏览</string>
+    <string name="reportBug">报告错误</string>
 </resources>

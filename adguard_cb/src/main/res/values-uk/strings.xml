@@ -94,4 +94,5 @@
     <string name="importUserRulesUrlErrorMessage">URL не є дійсним</string>
     <string name="clearUserRulesButtonText">Видалити все</string>
     <string name="browseButtonText">Огляд</string>
+    <string name="reportBug">Повідомити про помилку</string>
 </resources>

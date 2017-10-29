@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="refresh">تازه سازی</string>
+    <string name="please_wait">منتظر بمانید...</string>
+    <string name="main_info">این برنامه یک افزونه برای مرورگرهایی است که از مسدودسازی محتوا پشتیبانی می کنند.\n\nاکنون دو مرورگر چنین قابلیتی دارند:\n\n1. مرورگر اینترنت سامسونگ\n2. مرورگر یاندکس\n\nبا کمک این برنامه شما میتوانید همه تبلیغات در این مرورگرها را مسدود کنید.\n\nهمچنین در تنظیمات میتوانید انتخاب کنید کدام فیلترها استفاده شود.</string>
+    <string name="progressGenericErrorText">تعدادی خطا رخ داد!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} فیلتر با موفقیت وارد شد!</string>
+    <string name="importUserRulesErrorResultMessage">خطای وارد کردن دستورات!</string>
+    <string name="importUserRulesProgressDialogTitle">وارد کردن در پیشرفت است</string>
+    <string name="importUserRulesProgressDialogMessage">در حال بارگیری...</string>
+    <string name="checkUpdatesProgressDialogTitle">بررسی بروز رسانی</string>
+    <string name="checkUpdatesProgressDialogMessage">بررسی بروز رسانی،منتظر بمانید..</string>
+    <string name="checkUpdatesErrorResultMessage">موفق به بروزرسانی نشد.لطفا مجدد سعی نمایید</string>
+    <string name="checkUpdatesZeroResultMessage">شما از جدیدترین نسخه فیلتر ها استفاده میکنید</string>
+    <string name="checkUpdatesOneResultMessage">یک فیلتر بروزرسانی شد:{0}</string>
+    <string name="checkUpdatesManyResultMessage">{0} فیلتر بروز رسانی شده است:{1}</string>
+    <string name="action_settings">تنظیمات</string>
+    <string name="openned_drawer_title">گزینه ها</string>
+    <string name="about">درباره</string>
+    <string name="settings">تنظیمات</string>
+    <string name="pref_autoupdate_filters">بروز رسانی خودکار فیلتر ها</string>
+    <string name="pref_summary_autoupdate_filters">بروز رسانی خودکار فیلترها</string>
+    <string name="pref_update_wifi_only">بروز رسانی فقط بر روی وای فای</string>
+    <string name="pref_summary_update_wifi_only">فیلترها را تحت شبکه موبایل بروز رسانی نکن</string>
+    <string name="pref_show_useful_ads">نمایش تبلیغات سودمند</string>
+    <string name="pref_summary_show_useful_ads">تبلیغات سودمندی که برای کاربر میتواند مفید باشد را فیلتر نکن.</string>
+    <string name="pref_filters_category">فیلتر</string>
+    <string name="pref_summary_filters_category">کدام فیلترها استفاده شود را انتخاب کنید</string>
+    <string name="filters">فیلترها</string>
+    <string name="stats_enabled_filters">فیلترها</string>
+    <string name="stats_enabled_rules">دستورات</string>
+    <string name="stats_update_time">بروز رسانی شده:</string>
+    <string name="start_samsung_browser">گزینه های اینترنت سامسونگ را باز کن</string>
+    <string name="start_yandex_browser">گزینه های مرورگر یاندکس را باز کن</string>
+    <string name="open_browsers_info">برای فعالسازی مسدودسازی محتوا توسط فیلترهای ما،میتوانید مستقیماً گزینه های مرورگر را با کلیک در اینجا باز کنید:</string>
+    <string name="filterVersionTemplate">نسخه {0}.</string>
+    <string name="filterUpdatedTemplate">بروز رسانی شده {0} در {1}.</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">نسخه {0}</string>
+    <string name="copyrightInfoTextViewText">© 2008–2017. پرفورمیکس اِل اِل سی.\nهمه حقوق محفوظ است.</string>
+    <string name="rateAdguardButtonText">امتیاز به AdGuard</string>
+    <string name="feedbackButtonText">ارسال بازخورد</string>
+    <string name="officialSiteLabelText">سایت رسمی</string>
+    <string name="forumLabelText">انجمن</string>
+    <string name="emailLabelText">ایمیل</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">سیاست حریم خصوصی</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">توافق نامه مجوز کاربر-نهایی</a></string>
+    <string name="copyrightMessage">مسدودساز محتوای AdGuard یک نرم افزار رایگان است:شما میتوانید تحت مجوز عمومی همگانی گنو بر مبنای نرم افزار رایگان  چه نسخه 3 مجوز(به گزینش خود) یا هر نسخه بعدی، آن را منتشر وتوزیع مجدد/یا ویرایش کنید.</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
+    <string name="install_browsers">شما مرورگر پشتیبانی شده ای نصب نکرده اید!میتوانید آنها را از گوگل پلی نصب کنید:</string>
+    <string name="install_samsung_browser">نصب اینترنت سامسونگ</string>
+    <string name="install_yandex_browser">نصب مرورگر یاندکس</string>
+    <string name="issuesButtonText">گزارش مشکل</string>
+    <string name="githubLabelText">کُد منبع</string>
+    <!--Do not translate.-->
+    <string name="warning">هشدار</string>
+    <string name="too_many_filters_warning">شما اشتراک های بسیاری را انتخاب کرده اید.این میتواند بطور اثرگذاری وبگردی شما را آهسته کند.</string>
+    <string name="pref_whitelist_category">لیست سفید</string>
+    <string name="pref_summary_whitelist_category">دامنه های موجود در این لیست فیلتر نمی شوند</string>
+    <string name="onboarding_title1">خوش آمدید!</string>
+    <string name="onboarding_text1">شما چند مرحله از اینترنت سریع و بدون تبلیغات فاصله دارید.</string>
+    <string name="onboarding_button_text1">شروع به کار</string>
+    <string name="onboarding_title2">یک مرورگر انتخاب کنید</string>
+    <string name="onboarding_text2">برای کارکرد،AdGuard به مرورگری که از مسدودسازی محتوا پشتیبانی کند نیاز دارید.اکنون،دو مرورگر پشتیبانی می کنند.</string>
+    <string name="onboarding_button_text2">یک مرورگر انتخاب کنید</string>
+    <string name="onboarding_title3">تقریبا انجام شد!</string>
+    <string name="onboarding_text3">یک مرورگر مناسب یافت شد.فقط باید AdGuard در تنظیمات آن فعال شود.</string>
+    <string name="onboarding_button_text3">فعالسازی AdGuard</string>
+    <string name="count">شمردن</string>
+    <string name="check_filter_updates">بررسی بروز رسانی فیلترها</string>
+    <string name="go_to_filters">برو به فیلترها</string>
+    <string name="browser">مرورگر</string>
+    <string name="install">نصب</string>
+    <string name="start">شروع</string>
+    <string name="get_started">شروع به کار</string>
+    <string name="adguard_conditions_title">برای کارکرد AdGuard دو شرایط  نیاز است:</string>
+    <string name="adguard_conditions_list1">شما باید از مرورگری استفاده کنید که از تکنولوژی مسدودسازی محتوا پشتیبانی کند.</string>
+    <string name="adguard_conditions_list2">AdGuard باید در تنظیمات مسدودسازی محتوای این مرورگرها فعال شود.</string>
+    <string name="choose_browser">مرورگر را انتخاب کنید</string>
+    <string name="enable_adguard">فعالسازی AdGuard</string>
+    <string name="main_activity_adguard_info">AdGuard تبلیغات را مسدود می کند،حریم خصوصی شما را حفاظت می کند،سرعت بارگیری صفحه را افزایش داده و مصرف داده موبایل را کاهش می دهد.</string>
+    <string name="exit">خروج</string>
+    <string name="user_filter">فیلتر کاربر</string>
+    <string name="enter_rule_text">متن دستور را وارد کنید</string>
+    <string name="cancel">لغو</string>
+    <string name="ok">تأیید</string>
+    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">فیلتر کاربر خالی هست</string>
+    <string name="addUserRuleButtonText">افزودن دستور</string>
+    <string name="importUserRulesButtonText">وارد کردن</string>
+    <string name="importUserRulesDialogTitle">آدرس یا مسیر فایل را وارد کنید</string>
+    <string name="importUserRulesUrlErrorMessage">آدرس معتبر نیست</string>
+    <string name="clearUserRulesButtonText">حذف همه</string>
+    <string name="browseButtonText">مرور</string>
+    <string name="reportBug">گزارش مشکل</string>
+</resources>

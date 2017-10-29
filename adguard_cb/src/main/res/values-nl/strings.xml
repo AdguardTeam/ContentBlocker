@@ -38,14 +38,14 @@
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Versie {0}</string>
     <string name="copyrightInfoTextViewText">© 2008–2016. Performix LLC.\nAlle rechten voorbehouden.</string>
-    <string name="rateAdguardButtonText">Evalueer Adguard</string>
+    <string name="rateAdguardButtonText">Evalueer AdGuard</string>
     <string name="feedbackButtonText">Feedback geven</string>
     <string name="officialSiteLabelText">Officiële website</string>
     <string name="forumLabelText">Forum</string>
     <string name="emailLabelText">Email</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="copyrightMessage">Adguard Content Blocker is vrije software: je kan ze verdelen en/of wijzigen onder de regels van de GNU General Public License zoals gepubliceerd door The Free Software Foundation, ofwel versie 3 van de Licentie, of elke latere versie.</string>
+    <string name="copyrightMessage">AdGuard Content Blocker is vrije software: je kan ze verdelen en/of wijzigen onder de regels van de GNU General Public License zoals gepubliceerd door The Free Software Foundation, ofwel versie 3 van de Licentie, of elke latere versie.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
@@ -63,11 +63,11 @@
     <string name="onboarding_text1">Je bent slechts enkele stappen verwijderd van een snel internet zonder advertenties.</string>
     <string name="onboarding_button_text1">Aan de slag</string>
     <string name="onboarding_title2">Selecteer een browser</string>
-    <string name="onboarding_text2">Adguard werkt enkel met een browser die ad-block-technologie ondersteunt. Op dit moment zijn er enkel 2 dergelijke browsers.</string>
+    <string name="onboarding_text2">AdGuard werkt enkel met een browser die ad-block-technologie ondersteunt. Op dit moment zijn er enkel 2 dergelijke browsers.</string>
     <string name="onboarding_button_text2">Selecteer een browser</string>
     <string name="onboarding_title3">Bijna klaar !</string>
-    <string name="onboarding_text3">Compatibele browser aanwezig : je hoeft enkel nog Adguard te activeren in de instellingen.</string>
-    <string name="onboarding_button_text3">Activeer Adguard</string>
+    <string name="onboarding_text3">An appropriate browser found. It is only left to enable AdGuard in its settings.</string>
+    <string name="onboarding_button_text3">Activeer AdGuard</string>
     <string name="count">Teller</string>
     <string name="check_filter_updates">Controleer filter updates</string>
     <string name="go_to_filters">Ga naar filters</string>
@@ -75,12 +75,12 @@
     <string name="install">Installeer</string>
     <string name="start">Start</string>
     <string name="get_started">Aan de slag</string>
-    <string name="adguard_conditions_title">Twee voorwaarden dienen voldaan om Adguard te laten werken :</string>
+    <string name="adguard_conditions_title">Twee voorwaarden dienen voldaan om AdGuard te laten werken :</string>
     <string name="adguard_conditions_list1">Je moet een browser gebruiken die blokkeren van inhoud ondersteunt.</string>
     <string name="adguard_conditions_list2">Adguard moet geactiveerd worden in de instellingen van de browser.</string>
     <string name="choose_browser">Selecteer browser</string>
     <string name="enable_adguard">Activeer Adguard</string>
-    <string name="main_activity_adguard_info">Adguard blokkeert advertenties, versnelt opladen van pagina\'s en vermindert gebruik van mobiele data.</string>
+    <string name="main_activity_adguard_info">AdGuard blokkeert advertenties, versnelt opladen van pagina\'s en vermindert gebruik van mobiele data.</string>
     <string name="exit">Afsluiten</string>
     <string name="user_filter">Gebruikersfilter</string>
     <string name="enter_rule_text">Regel invoeren</string>
@@ -94,4 +94,5 @@
     <string name="importUserRulesUrlErrorMessage">URL niet geldig</string>
     <string name="clearUserRulesButtonText">Alles verwijderen</string>
     <string name="browseButtonText">Bladeren</string>
+    <string name="reportBug">Bug signaleren</string>
 </resources>

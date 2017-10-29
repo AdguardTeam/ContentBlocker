@@ -38,14 +38,14 @@
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Versione {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2017. Performix LLC.\nTutti i diritti sono riservati.</string>
-    <string name="rateAdguardButtonText">Valuta Adguard</string>
+    <string name="rateAdguardButtonText">Valuta AdGuard</string>
     <string name="feedbackButtonText">Invia Feedback</string>
     <string name="officialSiteLabelText">Sito ufficiale</string>
     <string name="forumLabelText">Forum</string>
     <string name="emailLabelText">Email</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="copyrightMessage">Adguard Content Blocker è un software gratuito: puoi ridistribuirlo e/o modificarlo nei termini della GNU General Public License come pubblicato dalla Free Software Foundation nella versione 3 della Licenza o (a tua discrezione) in qualsiasi versione successiva.</string>
+    <string name="copyrightMessage">AdGuard Content Blocker è un software gratuito: puoi ridistribuirlo e/o modificarlo nei termini della GNU General Public License come pubblicato dalla Free Software Foundation nella versione 3 della Licenza o (a tua discrezione) in qualsiasi versione successiva.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
@@ -63,11 +63,11 @@
     <string name="onboarding_text1">Sei solo a pochi passi da internet veloce e libero da annunci.</string>
     <string name="onboarding_button_text1">Per iniziare</string>
     <string name="onboarding_title2">Seleziona un browser</string>
-    <string name="onboarding_text2">Per operare, Adguard necessita di un browser che supporta la tecnologia di blocco annunci. Attualmente, ci sono due tali browser.</string>
+    <string name="onboarding_text2">Per operare, AdGuard necessita di un browser che supporta la tecnologia di blocco annunci. Attualmente, ci sono due tali browser.</string>
     <string name="onboarding_button_text2">Seleziona browser</string>
     <string name="onboarding_title3">Quasi fatto!</string>
-    <string name="onboarding_text3">Trovato un browser appropriato. È rimasto solo da attivarlo nelle impostazioni di Adguard.</string>
-    <string name="onboarding_button_text3">Abilita Adguard</string>
+    <string name="onboarding_text3">Trovato un browser appropriato. È rimasto solo da attivarlo nelle impostazioni di AdGuard.</string>
+    <string name="onboarding_button_text3">Abilita AdGuard</string>
     <string name="count">Conteggio</string>
     <string name="check_filter_updates">Controlla per aggiornamenti filtro</string>
     <string name="go_to_filters">Vai ai filtri</string>
@@ -75,12 +75,12 @@
     <string name="install">Installa</string>
     <string name="start">Avvia</string>
     <string name="get_started">Per iniziare</string>
-    <string name="adguard_conditions_title">Due condizioni devono essere soddisfatte per far funzionare Adguard:</string>
+    <string name="adguard_conditions_title">Due condizioni devono essere soddisfatte per far funzionare AdGuard:</string>
     <string name="adguard_conditions_list1">Devi utilizzare un browser che supporta la tecnologia di blocco annunci.</string>
-    <string name="adguard_conditions_list2">Adguard deve essere abilitato nelle impostazioni di blocco contenuti in questo browser.</string>
+    <string name="adguard_conditions_list2">AdGuard deve essere abilitato nelle impostazioni di blocco contenuti in questo browser.</string>
     <string name="choose_browser">Scegli browser</string>
-    <string name="enable_adguard">Abilita Adguard</string>
-    <string name="main_activity_adguard_info">Adguard blocca gli annunci, protegge la tua privacy, velocizza il caricamento delle pagine e riduce l\'utilizzo dei dati.</string>
+    <string name="enable_adguard">Abilita AdGuard</string>
+    <string name="main_activity_adguard_info">AdGuard blocca gli annunci, protegge la tua privacy, velocizza il caricamento delle pagine e riduce l\'utilizzo dei dati.</string>
     <string name="exit">Esci</string>
     <string name="user_filter">Filtro Utente</string>
     <string name="enter_rule_text">Inserisci il testo della regola</string>
@@ -94,4 +94,5 @@
     <string name="importUserRulesUrlErrorMessage">L\'URL non è valido</string>
     <string name="clearUserRulesButtonText">Rimuovi tutti</string>
     <string name="browseButtonText">Scegli</string>
+    <string name="reportBug">Segnala Bug</string>
 </resources>

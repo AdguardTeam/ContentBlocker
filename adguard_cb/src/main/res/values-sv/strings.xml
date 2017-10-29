@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="refresh">Uppdatera</string>
+    <string name="please_wait">V.g vänta...</string>
+    <string name="main_info">Den här applikationen är ett tillägg för webbläsare som stöder innehållsblockering (content-blocking).\n\nDet finns för närvarande två sådana läsare:\n\n1. Samsung Internet Browser\n2. Yandex Browser\n\nTillsammans med det här webbläsartillägget kan du blockera alla reklam i de webbläsarna.\n\nI Inställningar kan du dessutom bestämma vilka filter som skall användas.</string>
+    <string name="progressGenericErrorText">Något fel inträffade!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} filter importerades!</string>
+    <string name="importUserRulesErrorResultMessage">Fel uppstod vid filterimporten!</string>
+    <string name="importUserRulesProgressDialogTitle">Importering pågår</string>
+    <string name="importUserRulesProgressDialogMessage">Läser in…</string>
+    <string name="checkUpdatesProgressDialogTitle">Kontrollerar uppdateringar</string>
+    <string name="checkUpdatesProgressDialogMessage">Kontrollerar uppdateringar. V.g. vänta...</string>
+    <string name="checkUpdatesErrorResultMessage">Uppdateringen misslyckades. Försök igen senare.</string>
+    <string name="checkUpdatesZeroResultMessage">Du använder de senaste filteruppsättningarna.</string>
+    <string name="checkUpdatesOneResultMessage">Ett filter har uppdaterats:{0}</string>
+    <string name="checkUpdatesManyResultMessage">{0} filter har uppdaterats:{1}</string>
+    <string name="action_settings">Inställningar</string>
+    <string name="openned_drawer_title">Alternativ</string>
+    <string name="about">Om</string>
+    <string name="settings">Inställningar</string>
+    <string name="pref_autoupdate_filters">Autouppdatering av filter</string>
+    <string name="pref_summary_autoupdate_filters">Uppdatera filtren autmatiskt</string>
+    <string name="pref_update_wifi_only">Uppdatera endast via wifi</string>
+    <string name="pref_summary_update_wifi_only">AdGuard kommer endast att få uppdateringar via wifi.</string>
+    <string name="pref_show_useful_ads">Visa befogad reklam</string>
+    <string name="pref_summary_show_useful_ads">Avblockerar befogad reklam.</string>
+    <string name="pref_filters_category">Filter</string>
+    <string name="pref_summary_filters_category">Välj de filter som skall användas</string>
+    <string name="filters">Filter</string>
+    <string name="stats_enabled_filters">Filter:</string>
+    <string name="stats_enabled_rules">Filtreringsregler:</string>
+    <string name="stats_update_time">Uppdaterad:</string>
+    <string name="start_samsung_browser">Öppna Inställningar i Samsungs webbläsare</string>
+    <string name="start_yandex_browser">Öppna Inställningar i Yandex webbläsare</string>
+    <string name="open_browsers_info">För att koppla in blockering tillsammans med våra filter kan du öppna webbläsarinställningar genom att klicka här:</string>
+    <string name="filterVersionTemplate">Version {0}.</string>
+    <string name="filterUpdatedTemplate">Uppdaterade {0} at {1}.</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">Version {0}</string>
+    <string name="copyrightInfoTextViewText">Alla rättigheter förbehållna.</string>
+    <string name="rateAdguardButtonText">Betygsätt AdGuard</string>
+    <string name="feedbackButtonText">Skicka feedback</string>
+    <string name="officialSiteLabelText">Officiell webbplats</string>
+    <string name="forumLabelText">Forum</string>
+    <string name="emailLabelText">E-post</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Sekretesspolicy</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="copyrightMessage">AdGuard Content Blocker är en kostnadsfri mjukvara : du kan vidaredistribuera den och/eller ändra den i enlighet med GNU General Public License som den är publicerad av Free Software Foundation, antingen Licensversion 3 eller, om du så vill, en senare version.</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
+    <string name="install_browsers">Du har ingen webbläsare installerad som stöds! Du kan installera en via Googles Playbutik.</string>
+    <string name="install_samsung_browser">Installera Samsungs webbläsare</string>
+    <string name="install_yandex_browser">Installera Yandex webbläsare</string>
+    <string name="issuesButtonText">Rapportera bugg</string>
+    <string name="githubLabelText">Källkod</string>
+    <!--Do not translate.-->
+    <string name="warning">Varning</string>
+    <string name="too_many_filters_warning">Du har markerat för många filterabonnemang. Det kan göra ditt webbläsande påtagligt långsammare,</string>
+    <string name="pref_whitelist_category">Vita listan</string>
+    <string name="pref_summary_whitelist_category">Domännamn i denna lista kommer inte att fitreras</string>
+    <string name="onboarding_title1">Välkommen!</string>
+    <string name="onboarding_text1">Du är bara några  steg från ett snabbare och renare internet utan reklam.</string>
+    <string name="onboarding_button_text1">Kom igång</string>
+    <string name="onboarding_title2">Välj en webbläsare</string>
+    <string name="onboarding_text2">För att AdGuard skall fungera behöver krävs en webbläsare installerad som har stöd för ad-blockingteknik. För närvarande finns endast två sådana webbläsare.</string>
+    <string name="onboarding_button_text2">Välj webbläsare</string>
+    <string name="onboarding_title3">Nästan klar!</string>
+    <string name="onboarding_text3">En lämplig webbläsare har hittats. Det enda som är kvar är att du i Inställningar skall koppla på AdGuard.</string>
+    <string name="onboarding_button_text3">Koppa på AdGuard.</string>
+    <string name="count">Antal</string>
+    <string name="check_filter_updates">Kontrollera filteruppdateringar</string>
+    <string name="go_to_filters">Gå till filter</string>
+    <string name="browser">Webbläsare</string>
+    <string name="install">Installera</string>
+    <string name="start">Sätt igång</string>
+    <string name="get_started">Kom igång</string>
+    <string name="adguard_conditions_title">Två krav måste uppfyllas för att AdGuard skall fungera:</string>
+    <string name="adguard_conditions_list1">Du måste använda en webbläsare som stöder teknik för innehållsblockering (content-blocking).</string>
+    <string name="adguard_conditions_list2">AdGuard måste kopplas in i webbläsaren Inställningar för innehållsblockering.</string>
+    <string name="choose_browser">Välj webbläsare</string>
+    <string name="enable_adguard">Koppla på AdGuard</string>
+    <string name="main_activity_adguard_info">AdGuard blockerar reklam, skyddar din integritet, förbättrar sidinläsningstider och minskar din mobildataförbrukning.</string>
+    <string name="exit">Avsluta</string>
+    <string name="user_filter">Eget filter</string>
+    <string name="enter_rule_text">Skriv in text för filtreringsregeln</string>
+    <string name="cancel">Avbryt</string>
+    <string name="ok">OK</string>
+    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">Det egna filtret är tomt</string>
+    <string name="addUserRuleButtonText">Lägg till en filtreringsregel</string>
+    <string name="importUserRulesButtonText">Importera</string>
+    <string name="importUserRulesDialogTitle">Skriv in webbadress eller sökväg till fil</string>
+    <string name="importUserRulesUrlErrorMessage">Webbadressen är inte giltig</string>
+    <string name="clearUserRulesButtonText">Ta bort allt</string>
+    <string name="browseButtonText">Sök</string>
+    <string name="reportBug">Rapportera bugg</string>
+</resources>

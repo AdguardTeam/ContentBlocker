@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="refresh">انعاش</string>
+    <string name="please_wait">الرجاء الانتظار...</string>
+    <string name="main_info">هذا التطبيق هو ملحق للمستعرضات التي تدعم حظر المحتوي.\n\nحاليا هناك اثنين من هذه المتصفحات:\n\n1. متصفح الإنترنت سامسونج\n2. المتصفح ياندكس\n\nبمساعده هذا التطبيق يمكنك حظر كافة الإعلانات في هذه المستعرضات.\n\nأيضا ، يمكنك تحديد عوامل التصفية التي سيتم استخدامها في الإعدادات.</string>
+    <string name="progressGenericErrorText">حدث خطا ما!</string>
+    <string name="importUserRulesSuccessResultMessage">تم استيراد {0} عامل تصفيه الفلتر بنجاح!</string>
+    <string name="importUserRulesErrorResultMessage">خطا في استيراد الفلاتر!</string>
+    <string name="importUserRulesProgressDialogTitle">الاستيراد قيد التقدم</string>
+    <string name="importUserRulesProgressDialogMessage">يتم الآن تحميل...</string>
+    <string name="checkUpdatesProgressDialogTitle">التحقق من التحديثات</string>
+    <string name="checkUpdatesProgressDialogMessage">التحقق من التحديثات ، الرجاء الانتظار...</string>
+    <string name="checkUpdatesErrorResultMessage">فشل التحديث. الرجاء المحاولة مره أخرى لاحقا.</string>
+    <string name="checkUpdatesZeroResultMessage">انك تستخدم أحدث الإصدارات من عوامل تصفية الفلاتر.</string>
+    <string name="checkUpdatesOneResultMessage">تم تحديث فلتر واحد: {0}</string>
+    <string name="checkUpdatesManyResultMessage">تم تحديث الفلاتر {0}: {1}</string>
+    <string name="action_settings">الإعدادات</string>
+    <string name="openned_drawer_title">الخيارات</string>
+    <string name="about">حول. تعريب أحمد مبهي</string>
+    <string name="settings">الإعدادات</string>
+    <string name="pref_autoupdate_filters">تحديث تلقائي للفلاتر</string>
+    <string name="pref_summary_autoupdate_filters">تحديث اتوماتيكي للفلاتر</string>
+    <string name="pref_update_wifi_only">التحديث عبر واي فاي فقط</string>
+    <string name="pref_summary_update_wifi_only">عدم تحديث الفلاتر عبر شبكة الجوال</string>
+    <string name="pref_show_useful_ads">عرض الإعلانات المفيدة</string>
+    <string name="pref_summary_show_useful_ads">إلغاء حجب الإعلانات التي قد تكون مفيدة للمستخدمين.</string>
+    <string name="pref_filters_category">المرشحات</string>
+    <string name="pref_summary_filters_category">تحديد الفلاترالتي سيتم استخدامها</string>
+    <string name="filters">المرشحات</string>
+    <string name="stats_enabled_filters">المرشحات</string>
+    <string name="stats_enabled_rules">القواعد</string>
+    <string name="stats_update_time">محدث:</string>
+    <string name="start_samsung_browser">فتح خيارات الإنترنت سامسونج</string>
+    <string name="start_yandex_browser">افتح خيارات متصفح ياندكس</string>
+    <string name="open_browsers_info">لتمكين حظر المحتوى باستخدام الفلاتر، يمكنك فتح خيارات المتصفح مباشرة بالنقر هنا:</string>
+    <string name="filterVersionTemplate">الإصدار {0}.</string>
+    <string name="filterUpdatedTemplate">تم تحديث {0} في {1}.</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">الإصدار {0}</string>
+    <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nجميع الحقوق محفوظه.</string>
+    <string name="rateAdguardButtonText">Adguardقيم تطبيق</string>
+    <string name="feedbackButtonText">إرسال ملاحظاتك</string>
+    <string name="officialSiteLabelText">الموقع الرسمي</string>
+    <string name="forumLabelText">منتدى للنقاش</string>
+    <string name="emailLabelText">البريد الإلكتروني</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html"> سياسة الخصوصية </a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html"> اتفاقية ترخيص المستخدم النهائي </a></string>
+    <string name="copyrightMessage">Adguard Content Blocker هو برنامج مجاني: يمكنك إعادة توزيعه و / أو تعديله بموجب شروط رخصة جنو العمومية كما نشرتها مؤسسة البرمجيات الحرة، إما الإصدار 3 من الترخيص، أو (في الخيار الخاص بك) أي إصدار لاحق.</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">منتدى.adguard.com </a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com"> الدعم الفني@adguard.com </a></string>
+    <string name="install_browsers">ليس لديك متصفحات معتمدة مثبتة! يمكنك تثبيتها من قوقل بلاي:</string>
+    <string name="install_samsung_browser">تثبيت على انترنت سامسونج</string>
+    <string name="install_yandex_browser">تثبيت المتصفح ياندكس</string>
+    <string name="issuesButtonText">تقرير الشوائب</string>
+    <string name="githubLabelText">الكود المصدري</string>
+    <!--Do not translate.-->
+    <string name="warning">تحذير</string>
+    <string name="too_many_filters_warning">لقد حددت عددا كبيرا جدا من اشتراكات الفلتر. قد يؤدي ذلك إلى إبطاء تصفح الويب بشكل ملحوظ.</string>
+    <string name="pref_whitelist_category">تحذير</string>
+    <string name="pref_summary_whitelist_category">لن تتم تصفية النطاقات الموجودة في هذه القائمة</string>
+    <string name="onboarding_title1">مرحبا بكم</string>
+    <string name="onboarding_text1">أنت غلى بعد  بضع خطوات عن الإنترنت السريع والنظيف دون إعلانات.</string>
+    <string name="onboarding_button_text1">احصل على جولة سريعة</string>
+    <string name="onboarding_title2">تحديدالمتصفح</string>
+    <string name="onboarding_text2">للعمل ، يحتاج \"ادجارد\" إلى مستعرض يدعم تقنيه حظر الإعلانات. حاليا ، هناك اثنين من هذه المتصفحات.</string>
+    <string name="onboarding_button_text2">حدد المتصفح</string>
+    <string name="onboarding_title3">اوشكت على الوصول!</string>
+    <string name="onboarding_text3">تم العثور على متصفح مناسب. كل ما تبقى هو تمكينAdGuard في إعداداته.</string>
+    <string name="onboarding_button_text3">"تمكين ادجارد "</string>
+    <string name="count">العدد</string>
+    <string name="check_filter_updates">التحقق من تحديثات عامل التصفية</string>
+    <string name="go_to_filters">انتقل إلى الفلاتر</string>
+    <string name="browser">المتصفح</string>
+    <string name="install">التثبت</string>
+    <string name="start">بدء</string>
+    <string name="get_started">احصل على جولة سريعة</string>
+    <string name="adguard_conditions_title">Adguardيجب استيفاء شرطين لكي يعمل</string>
+    <string name="adguard_conditions_list1">يجب استخدام مستعرض يدعم تقنيه حظر المحتوي.</string>
+    <string name="adguard_conditions_list2">يجب تمكين \"Adguard\" في إعدادات حظر محتويات هذا المستعرض.</string>
+    <string name="choose_browser">اختر المستعرض</string>
+    <string name="enable_adguard">Adguardتمكين</string>
+    <string name="main_activity_adguard_info">Adguardيمنع الكتل الاعلانيه ، ويحمي خصوصيتك ، ويعزز سرعه تحميل الصفحة ويقلل من استخدام بينات الجوال الخاصة بك.</string>
+    <string name="exit">خروج</string>
+    <string name="user_filter">فلتر المستخدم</string>
+    <string name="enter_rule_text">إدخال نص القاعدة</string>
+    <string name="cancel">الغاء</string>
+    <string name="ok">موافق</string>
+    <string name="userRuleNewItemDialogHint">|| example.com ^ $ الطرف الثالث</string>
+    <string name="emptyUserfilterTextViewText">فلتر المستخدم فارغ</string>
+    <string name="addUserRuleButtonText">أضافه قاعده</string>
+    <string name="importUserRulesButtonText">استيراد</string>
+    <string name="importUserRulesDialogTitle">أدخل عنوانURL أو مسار الملف</string>
+    <string name="importUserRulesUrlErrorMessage">عنوان URL غير صالح</string>
+    <string name="clearUserRulesButtonText">ازالة الكل</string>
+    <string name="browseButtonText">المتصفح</string>
+    <string name="reportBug">تقرير الشوائب</string>
+</resources>

@@ -39,9 +39,5 @@ public class AlarmReceiver extends BroadcastReceiver {
                 }
             });
         }
-
-        if (Intent.ACTION_BOOT_COMPLETED.equals(action)) {
-            ServiceLocator.getInstance(context).getFilterService().scheduleFiltersUpdate();
-        }
     }
 }

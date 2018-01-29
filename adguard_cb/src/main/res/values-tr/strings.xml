@@ -2,7 +2,7 @@
 <resources>
     <string name="refresh">Yenile</string>
     <string name="please_wait">Lütfen bekleyin...</string>
-    <string name="main_info">Bu uygulama içerik engellemeyi destekleyen tarayıcılar için bir eklentidir.\n\nŞu anda bu şekilde iki tarayıcı vardır:\n\n1. Samsung Internet Browser\n2. Yandex Browser\n\nBu uygulamanın desteği ile bu tarayıcılarda tüm reklamları engelleyebilirsiniz.\n\nAyrıca, Ayarlardan hangi filtreleri kullanacağınızı seçebilirsiniz.</string>
+    <string name="main_info">Bu uygulama, içerik engellemeyi destekleyen tarayıcılar için bir eklentidir.\n\nŞu anda içerik engelleme teknolojisine sahip iki tarayıcı var:\n\n1. Samsung Internet Browser\n2. Yandex Browser\n\nBu uygulamanın desteği ile bu tarayıcılarda tüm reklamları engelleyebilirsiniz.\n\nAyrıca, Ayarlardan hangi filtreleri kullanacağınızı seçebilirsiniz.</string>
     <string name="progressGenericErrorText">Bazı hatalar oluştu!</string>
     <string name="importUserRulesSuccessResultMessage">{0} filtre(leri) başarıyla içe aktarıldı!</string>
     <string name="importUserRulesErrorResultMessage">Filtreleri aktarırken hata oluştu!</string>
@@ -13,13 +13,13 @@
     <string name="checkUpdatesErrorResultMessage">Güncelleme başarısız. Lütfen sonra tekrar deneyin.</string>
     <string name="checkUpdatesZeroResultMessage">Filtrelerin en son sürümlerini kullanıyorsunuz.</string>
     <string name="checkUpdatesOneResultMessage">Bir filtre güncellendi:{0}</string>
-    <string name="checkUpdatesManyResultMessage">{0} filtreleri güncellendi:{1}</string>
+    <string name="checkUpdatesManyResultMessage">{0} filtre güncellendi:{1}</string>
     <string name="action_settings">Ayarlar</string>
     <string name="openned_drawer_title">Seçenekler</string>
     <string name="about">Hakkında</string>
     <string name="settings">Ayarlar</string>
     <string name="pref_autoupdate_filters">Filtreleri otomatik güncelle</string>
-    <string name="pref_summary_autoupdate_filters">Filtreleri otomatik güncelle</string>
+    <string name="pref_summary_autoupdate_filters">Filtreleri otomatik günceller</string>
     <string name="pref_update_wifi_only">Sadece Wi-Fi üzerinden güncelle</string>
     <string name="pref_summary_update_wifi_only">AdGuard filtre güncellemelerini yalnızca Wi-Fi üzerinden alacak.</string>
     <string name="pref_show_useful_ads">Yararlı reklamları göster</string>
@@ -32,20 +32,20 @@
     <string name="stats_update_time">Güncellendi:</string>
     <string name="start_samsung_browser">Samsung Internet Browser ayarlarını aç</string>
     <string name="start_yandex_browser">Yandex Tarayıcı ayarlarını aç</string>
-    <string name="open_browsers_info">Filtrelerimizi kullanarak içerik engellemeyi etkinleştirmek için buraya tıklayarak tarayıcı seçeneklerini doğrudan açabilirsiniz:</string>
+    <string name="open_browsers_info">Filtrelerimizi kullanarak içerik engellemeyi etkinleştirmek için buraya tıklayarak tarayıcı ayarlarını doğrudan açabilirsiniz:</string>
     <string name="filterVersionTemplate">Sürüm {0}.</string>
     <string name="filterUpdatedTemplate">Güncellendi {0} {1}</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Sürüm {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2017. Performix LLC.\nTüm Hakları Saklıdır.</string>
-    <string name="rateAdguardButtonText">Adguard\'ı Oyla</string>
+    <string name="rateAdguardButtonText">AdGuard\'ı Oyla</string>
     <string name="feedbackButtonText">Geribildirim Gönder</string>
     <string name="officialSiteLabelText">Resmi site</string>
     <string name="forumLabelText">Forum</string>
-    <string name="emailLabelText">Email</string>
+    <string name="emailLabelText">Eposta</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Gizlilik Sözleşmesi</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="copyrightMessage">Adguard İçerik Engelleyicisi ücretsiz bir yazılımdır: GNU Genel Kamu Lisansı\'nın Lisansını sürüm 3 veya (isteğe bağlı olarak) herhangi bir sonraki sürümde yayımlanan GNU Genel Kamu Lisansı koşulları altında yeniden dağıtabilir ve / veya değiştirebilirsiniz.</string>
+    <string name="copyrightMessage">AdGuard İçerik Engelleyicisi ücretsiz bir yazılımdır: GNU Genel Kamu Lisansı\'nın sürüm 3 veya (isteğe bağlı olarak) herhangi bir sonraki sürümde yayımlanan GNU Genel Kamu Lisansı koşulları altında yeniden dağıtabilir ve / veya değiştirebilirsiniz.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
@@ -63,11 +63,11 @@
     <string name="onboarding_text1">Reklamsız, hızlı ve temiz internetten sadece birkaç adım uzaklıktasınız.</string>
     <string name="onboarding_button_text1">Başlangıç</string>
     <string name="onboarding_title2">Bir tarayıcı seçin</string>
-    <string name="onboarding_text2">Çalıştırmak için Adguard\'ın reklam engelleme teknolojisini destekleyen bir tarayıcıya ihtiyacınız var. Hali hazırda böyle iki tarayıcı var.</string>
+    <string name="onboarding_text2">AdGuard\'ı kullanabilmek için içerik engelleme teknolojisini destekleyen bir tarayıcıya ihtiyacınız var. Hali hazırda böyle iki tarayıcı var.</string>
     <string name="onboarding_button_text2">Tarayıcı seç</string>
     <string name="onboarding_title3">Neredeyse hazır!</string>
-    <string name="onboarding_text3">Uygun bir tarayıcı bulundu. Geriye sadece tarayıcı ayarlarından Adguard\'ı etkinleştirmek kaldı.</string>
-    <string name="onboarding_button_text3">Adguard\'ı Etkinleştir</string>
+    <string name="onboarding_text3">Uygun bir tarayıcı bulundu. Geriye sadece tarayıcı ayarlarından AdGuard\'ı etkinleştirmek kaldı.</string>
+    <string name="onboarding_button_text3">AdGuard\'ı Etkinleştir</string>
     <string name="count">Sayaç</string>
     <string name="check_filter_updates">Filtreleri güncelle</string>
     <string name="go_to_filters">Filtrelere git</string>
@@ -75,12 +75,12 @@
     <string name="install">Yükle</string>
     <string name="start">Başla</string>
     <string name="get_started">Başlangıç</string>
-    <string name="adguard_conditions_title">Adguard\'ın çalışması için iki şartın sağlanması gerekiyor:</string>
+    <string name="adguard_conditions_title">AdGuard\'ın çalışabilmesi için iki şartın sağlanması gerekiyor:</string>
     <string name="adguard_conditions_list1">İçerik engelleme teknolojisini destekleyen bir tarayıcı kullanmalısınız.</string>
-    <string name="adguard_conditions_list2">Bu tarayıcının içerik engelleme ayarlarında Adguard\'ın etkinleştirilmesi gerekir.</string>
+    <string name="adguard_conditions_list2">Bu tarayıcının içerik engelleme ayarlarında AdGuard\'ın etkinleştirilmesi gerekiyor.</string>
     <string name="choose_browser">Tarayıcı seç</string>
-    <string name="enable_adguard">Adguard\'ı Etkinleştir</string>
-    <string name="main_activity_adguard_info">Adguard reklamları engeller, gizliliğinizi korur, sayfa yükleme hızını artırır ve mobil veri kullanımınızı azaltır.</string>
+    <string name="enable_adguard">AdGuard\'ı Etkinleştir</string>
+    <string name="main_activity_adguard_info">AdGuard reklamları engeller, gizliliğinizi korur, sayfa yükleme hızını artırır ve mobil veri kullanımınızı azaltır.</string>
     <string name="exit">Çıkış</string>
     <string name="user_filter">Kullanıcı Filtresi</string>
     <string name="enter_rule_text">Kural metni girin</string>

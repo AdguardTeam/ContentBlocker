@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="refresh">Odśwież</string>
+    <string name="please_wait">Proszę czekać...</string>
+    <string name="main_info">Aplikacja ta jest rozszerzeniem dla przeglądarek, które wspierają blokowanie zawartości.\n\nObecnie istnieją dwie takie przeglądarki:\n\n 1. Samsung Internet Browser\n2. Yandex Browser\n\nZa pomocą tej aplikacji możesz zablokować wszystkie reklamy w tych przeglądarkach.\n\nMożesz też wybrać filtry, które mają być użyte w Ustawieniach.</string>
+    <string name="progressGenericErrorText">Wystąpił błąd!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} filtr(ów) importowano z powodzeniem!</string>
+    <string name="importUserRulesErrorResultMessage">Wystąpił błąd podczas importowania filtrów!</string>
+    <string name="importUserRulesProgressDialogTitle">Import w toku</string>
+    <string name="importUserRulesProgressDialogMessage">Wczytuję...</string>
+    <string name="checkUpdatesProgressDialogTitle">Sprawdzanie aktualizacji</string>
+    <string name="checkUpdatesProgressDialogMessage">Sprawdzanie aktualizacji. Proszę czekać...</string>
+    <string name="checkUpdatesErrorResultMessage">Aktualizacja nie powiodła się. Spróbuj ponownie później.</string>
+    <string name="checkUpdatesZeroResultMessage">Używasz najnowszej wersji filtrów.</string>
+    <string name="checkUpdatesOneResultMessage">Jeden filtr został zaktualizowany:{0}</string>
+    <string name="checkUpdatesManyResultMessage">{0} filtrów zostało zaktualizowanych:{1}</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="openned_drawer_title">Opcje</string>
+    <string name="about">O aplikacji</string>
+    <string name="settings">Ustawienia</string>
+    <string name="pref_autoupdate_filters">Automatycznie aktualizuj filtry</string>
+    <string name="pref_summary_autoupdate_filters">Aktualizuj filtry automatycznie</string>
+    <string name="pref_update_wifi_only">Aktualizuj tylko przez Wi-Fi</string>
+    <string name="pref_summary_update_wifi_only">AdGuard otrzyma aktualizacje filtrów tylko przez Wi-Fi.</string>
+    <string name="pref_show_useful_ads">Pokaż użyteczne reklamy</string>
+    <string name="pref_summary_show_useful_ads">Odblokowuje reklamy, które mogą być pożyteczne dla użytkowników.</string>
+    <string name="pref_filters_category">Filtry</string>
+    <string name="pref_summary_filters_category">Wybierz jakich filtrów użyć</string>
+    <string name="filters">Filtry</string>
+    <string name="stats_enabled_filters">Filtry</string>
+    <string name="stats_enabled_rules">Reguły</string>
+    <string name="stats_update_time">Zaktualizowano:</string>
+    <string name="start_samsung_browser">Otwórz opcje Samsung Internet Browser</string>
+    <string name="start_yandex_browser">Otwórz opcje Yandex Browser</string>
+    <string name="open_browsers_info">Aby włączyć blokowanie zawartości przy użyciu naszych filtrów, możesz bezpośrednio otworzyć opcje przeglądarki klikając tutaj:</string>
+    <string name="filterVersionTemplate">Wersja {0}.</string>
+    <string name="filterUpdatedTemplate">Zaktualizowano {0} o {1}.</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">Wersja {0}</string>
+    <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nWszelkie prawa zastrzeżone.</string>
+    <string name="rateAdguardButtonText">Oceń AdGuard</string>
+    <string name="feedbackButtonText">Wyślij wsparcie</string>
+    <string name="officialSiteLabelText">Oficjalna strona</string>
+    <string name="forumLabelText">Forum</string>
+    <string name="emailLabelText">Email</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Polityka Prywatności</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="copyrightMessage">AdGuard Bloker Zawartości jest darmowym oprogramowaniem: możesz go rozpowszechniać lub modyfikować zgodnie z warunkami GNU General Public License opublikowane przez Free Software Foundation, dowolnej wersji 3 Licencji lub (Twoim zdaniem) dowolnej późniejszej wersji.</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
+    <string name="install_browsers">Nie masz zainstalowanych obsługiwanych przeglądarek! Możesz je zainstalować z Google Play:</string>
+    <string name="install_samsung_browser">Zainstaluj Samsung Internet Browser</string>
+    <string name="install_yandex_browser">Zainstaluj Yandex Browser</string>
+    <string name="issuesButtonText">Raportuj błąd</string>
+    <string name="githubLabelText">Kod źródłowy</string>
+    <!--Do not translate.-->
+    <string name="warning">Ostrzeżenie</string>
+    <string name="too_many_filters_warning">Wybrałeś za dużo subskrypcji filtrów. Może to skutkować znaczącym spowolnieniem przeglądania sieci.</string>
+    <string name="pref_whitelist_category">Biała lista</string>
+    <string name="pref_summary_whitelist_category">Domeny na tej liście nie będą filtrowane</string>
+    <string name="onboarding_title1">Witaj!</string>
+    <string name="onboarding_text1">Jesteś tylko kilka kroków od szybkiego i czystego internetu, bez reklam.</string>
+    <string name="onboarding_button_text1">Zaczynamy</string>
+    <string name="onboarding_title2">Wybierz przeglądarkę</string>
+    <string name="onboarding_text2">By działać, AdGuard potrzebuje przeglądarki, która wspiera technologię blokowania reklam. Obecnie istnieją dwie takie przeglądarki.</string>
+    <string name="onboarding_button_text2">Wybierz przeglądarkę</string>
+    <string name="onboarding_title3">Prawie skończone!</string>
+    <string name="onboarding_text3">Znaleziona została odpowiednia przeglądarka. Pozostaje tylko włączyć AdGuarda w jej ustawieniach.</string>
+    <string name="onboarding_button_text3">Włącz AdGuarda</string>
+    <string name="count">Licznik</string>
+    <string name="check_filter_updates">Sprawdź aktualizacje filtra</string>
+    <string name="go_to_filters">Przejdź do filtrów</string>
+    <string name="browser">Przeglądarka</string>
+    <string name="install">Instaluj</string>
+    <string name="start">Start</string>
+    <string name="get_started">Zacznijmy</string>
+    <string name="adguard_conditions_title">Dwa warunki muszą zostać spełnione by AdGuard mógł działać:</string>
+    <string name="adguard_conditions_list1">Musisz używać przeglądarki, która wspiera technologię blokowania zawartości.</string>
+    <string name="adguard_conditions_list2">AdGuard musi być włączony w ustawieniach blokowania zawartości przeglądarki.</string>
+    <string name="choose_browser">Wybierz przeglądarkę</string>
+    <string name="enable_adguard">Włącz AdGuarda</string>
+    <string name="main_activity_adguard_info">AdGuard blokuje reklamy, chroni Twoją prywatność, zwiększa szybkość ładowania stron i zmniejsza zużycie danych mobilnych.</string>
+    <string name="exit">Wyjdź</string>
+    <string name="user_filter">Filtr użytkownika</string>
+    <string name="enter_rule_text">Podaj tekst reguły</string>
+    <string name="cancel">Anuluj</string>
+    <string name="ok">OK</string>
+    <string name="userRuleNewItemDialogHint">||przykład.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">Filtr użytkownika jest pusty</string>
+    <string name="addUserRuleButtonText">Dodaj regułę</string>
+    <string name="importUserRulesButtonText">Importuj</string>
+    <string name="importUserRulesDialogTitle">Podaj URL lub ścieżkę do pliku</string>
+    <string name="importUserRulesUrlErrorMessage">URL jest nieprawidłowy</string>
+    <string name="clearUserRulesButtonText">Usuń wszystko</string>
+    <string name="browseButtonText">Przeglądaj</string>
+    <string name="reportBug">Raportuj błąd</string>
+</resources>

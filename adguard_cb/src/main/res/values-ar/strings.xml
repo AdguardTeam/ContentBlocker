@@ -21,7 +21,7 @@
     <string name="pref_autoupdate_filters">تحديث تلقائي للفلاتر</string>
     <string name="pref_summary_autoupdate_filters">تحديث اتوماتيكي للفلاتر</string>
     <string name="pref_update_wifi_only">التحديث عبر واي فاي فقط</string>
-    <string name="pref_summary_update_wifi_only">عدم تحديث الفلاتر عبر شبكة الجوال</string>
+    <string name="pref_summary_update_wifi_only">سيحصل أدغوارد على تحديثات الفلاتر فقط عبر واي-فاي.</string>
     <string name="pref_show_useful_ads">عرض الإعلانات المفيدة</string>
     <string name="pref_summary_show_useful_ads">إلغاء حجب الإعلانات التي قد تكون مفيدة للمستخدمين.</string>
     <string name="pref_filters_category">المرشحات</string>
@@ -38,14 +38,14 @@
     <!--About Adguard-->
     <string name="versionInfoTextViewText">الإصدار {0}</string>
     <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nجميع الحقوق محفوظه.</string>
-    <string name="rateAdguardButtonText">Adguardقيم تطبيق</string>
+    <string name="rateAdguardButtonText">AdGuardقيم تطبيق</string>
     <string name="feedbackButtonText">إرسال ملاحظاتك</string>
     <string name="officialSiteLabelText">الموقع الرسمي</string>
     <string name="forumLabelText">منتدى للنقاش</string>
     <string name="emailLabelText">البريد الإلكتروني</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html"> سياسة الخصوصية </a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html"> اتفاقية ترخيص المستخدم النهائي </a></string>
-    <string name="copyrightMessage">Adguard Content Blocker هو برنامج مجاني: يمكنك إعادة توزيعه و / أو تعديله بموجب شروط رخصة جنو العمومية كما نشرتها مؤسسة البرمجيات الحرة، إما الإصدار 3 من الترخيص، أو (في الخيار الخاص بك) أي إصدار لاحق.</string>
+    <string name="copyrightMessage">AdGuard Content Blocker هو برنامج مجاني: يمكنك إعادة توزيعه و / أو تعديله بموجب شروط رخصة جنو العمومية كما نشرتها مؤسسة البرمجيات الحرة، إما الإصدار 3 من الترخيص، أو (في الخيار الخاص بك) أي إصدار لاحق.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">منتدى.adguard.com </a></string>
     <string name="emailSupportLink"><a href="mailto:support@adguard.com"> الدعم الفني@adguard.com </a></string>
@@ -75,12 +75,12 @@
     <string name="install">التثبت</string>
     <string name="start">بدء</string>
     <string name="get_started">احصل على جولة سريعة</string>
-    <string name="adguard_conditions_title">Adguardيجب استيفاء شرطين لكي يعمل</string>
+    <string name="adguard_conditions_title">AdGuardيجب استيفاء شرطين لكي يعمل</string>
     <string name="adguard_conditions_list1">يجب استخدام مستعرض يدعم تقنيه حظر المحتوي.</string>
-    <string name="adguard_conditions_list2">يجب تمكين \"Adguard\" في إعدادات حظر محتويات هذا المستعرض.</string>
+    <string name="adguard_conditions_list2">يجب تمكين \"AdGuard\" في إعدادات حظر محتويات هذا المستعرض.</string>
     <string name="choose_browser">اختر المستعرض</string>
-    <string name="enable_adguard">Adguardتمكين</string>
-    <string name="main_activity_adguard_info">Adguardيمنع الكتل الاعلانيه ، ويحمي خصوصيتك ، ويعزز سرعه تحميل الصفحة ويقلل من استخدام بينات الجوال الخاصة بك.</string>
+    <string name="enable_adguard">AdGuardتمكين</string>
+    <string name="main_activity_adguard_info">AdGuardيمنع الكتل الاعلانيه ، ويحمي خصوصيتك ، ويعزز سرعه تحميل الصفحة ويقلل من استخدام بينات الجوال الخاصة بك.</string>
     <string name="exit">خروج</string>
     <string name="user_filter">فلتر المستخدم</string>
     <string name="enter_rule_text">إدخال نص القاعدة</string>

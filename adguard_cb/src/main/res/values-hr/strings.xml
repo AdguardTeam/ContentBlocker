@@ -38,14 +38,14 @@
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Verzija {0}</string>
     <string name="copyrightInfoTextViewText">© 2008–2016. Performix LLC.\nSva prava pridržana.</string>
-    <string name="rateAdguardButtonText">Ocjeni Adguard</string>
+    <string name="rateAdguardButtonText">Ocjeni AdGuard</string>
     <string name="feedbackButtonText">Pošalji povratne informacije</string>
     <string name="officialSiteLabelText">Službena stranica</string>
     <string name="forumLabelText">Forum</string>
     <string name="emailLabelText">E-mail</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Politika privatnosti</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="copyrightMessage">Adguard Content Blocker je besplatan softver: možete ga redistributirati i/ili modificirati pod uvijetima GNU General Public Licence kako je objavljeno od strane Free Software Foundationa, bilo verzije 3 ili licence, ili (po vašoj opciji) bilo kojoj kasnijoj verziji.</string>
+    <string name="copyrightMessage">AdGuard Content Blocker je besplatan softver: možete ga redistributirati i/ili modificirati pod uvijetima GNU General Public Licence kako je objavljeno od strane Free Software Foundationa, bilo verzije 3 ili licence, ili (po vašoj opciji) bilo kojoj kasnijoj verziji.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
@@ -63,11 +63,11 @@
     <string name="onboarding_text1">Samo ste nekoliko koraka dalje od brzog i čistog interneta bez oglasa.</string>
     <string name="onboarding_button_text1">Započnite</string>
     <string name="onboarding_title2">Odaberite preglednik</string>
-    <string name="onboarding_text2">Za upravljanje, Adguard treba preglednik koji podržava tehnologiju blokiranja oglasa. Trenutno, postoje samo dva takva preglednika.</string>
+    <string name="onboarding_text2">Za upravljanje, AdGuard treba preglednik koji podržava tehnologiju blokiranja oglasa. Trenutno, postoje samo dva takva preglednika.</string>
     <string name="onboarding_button_text2">Odaberite preglednik</string>
     <string name="onboarding_title3">Još malo!</string>
-    <string name="onboarding_text3">Podržan preglednik pronađen. Sve što je ostalo jest omogućivanje Adguarda u njegovim postavkama.</string>
-    <string name="onboarding_button_text3">Omogući Adguard</string>
+    <string name="onboarding_text3">Podržan preglednik pronađen. Sve što je ostalo jest omogućivanje AdGuarda u njegovim postavkama.</string>
+    <string name="onboarding_button_text3">Omogući AdGuard</string>
     <string name="count">Zbroj</string>
     <string name="check_filter_updates">Provjerite ažuriranja filtera</string>
     <string name="go_to_filters">Odi do filtera</string>
@@ -75,12 +75,12 @@
     <string name="install">Instalacija</string>
     <string name="start">Pokretanje</string>
     <string name="get_started">Započnite</string>
-    <string name="adguard_conditions_title">Dva zahtjeva moraju biti ispunjena da bi Adguard radio:</string>
+    <string name="adguard_conditions_title">Dva zahtjeva moraju biti ispunjena da bi AdGuard radio:</string>
     <string name="adguard_conditions_list1">Trebali biste koristiti preglednik koji podržava tehnologiju blokiranja elemenata.</string>
-    <string name="adguard_conditions_list2">Adguard mora biti omogućen u postakama blokiranja elemenata u pregledniku.</string>
+    <string name="adguard_conditions_list2">AdGuard mora biti omogućen u postakama blokiranja elemenata u pregledniku.</string>
     <string name="choose_browser">Odaberite preglednik</string>
-    <string name="enable_adguard">Omogući Adguard</string>
-    <string name="main_activity_adguard_info">Adguard blokira oglase, štiti vašu privatnost, ubzava učitavanje web stranica i smanjuje potrošnju mobilnih podataka.</string>
+    <string name="enable_adguard">Omogući AdGuard</string>
+    <string name="main_activity_adguard_info">AdGuard blokira oglase, štiti vašu privatnost, ubzava učitavanje web stranica i smanjuje potrošnju mobilnih podataka.</string>
     <string name="exit">Izlaz</string>
     <string name="user_filter">Korisnički filter</string>
     <string name="enter_rule_text">Unesite tekst pravila</string>

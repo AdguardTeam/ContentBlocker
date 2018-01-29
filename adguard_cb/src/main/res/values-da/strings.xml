@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="refresh">Opdater</string>
+    <string name="please_wait">Vent venligst...</string>
+    <string name="main_info">Dette program er en udvidelse til browsere som understøtter indholdsblokering.\n\nDer er i øjeblikket således to browsere:\n\n1. Samsung Internet Browser\n2. Yandex Browser\n\nMed hjælp af dette program kan du blokere alle reklamer i disse browsere.\n\nDu kan også vælge i Indstillinger, hvilke filtre der skal bruges.</string>
+    <string name="progressGenericErrorText">Nogle fejl opstod!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} filter(filtre) importeret succesfuldt!</string>
+    <string name="importUserRulesErrorResultMessage">Fejl ved importering af filtre!</string>
+    <string name="importUserRulesProgressDialogTitle">Fremskridt af importering</string>
+    <string name="importUserRulesProgressDialogMessage">Indlæser...</string>
+    <string name="checkUpdatesProgressDialogTitle">Søger efter opdateringer</string>
+    <string name="checkUpdatesProgressDialogMessage">Søger efter opdateringer. Vent venligst...</string>
+    <string name="checkUpdatesErrorResultMessage">Opdatering mislykkedes. Prøv venligst igen senere.</string>
+    <string name="checkUpdatesZeroResultMessage">Du bruger den seneste version af filtrene.</string>
+    <string name="checkUpdatesOneResultMessage">Et filter er blevet opdateret:{0}</string>
+    <string name="checkUpdatesManyResultMessage">{0} filtre er blevet opdateret:{1}</string>
+    <string name="action_settings">Indstillinger</string>
+    <string name="openned_drawer_title">Valgmuligheder</string>
+    <string name="about">Om</string>
+    <string name="settings">Indstillinger</string>
+    <string name="pref_autoupdate_filters">Auto-opdater filtrene</string>
+    <string name="pref_summary_autoupdate_filters">Opdater filtrene automatisk</string>
+    <string name="pref_update_wifi_only">Opdater kun via Wi-Fi</string>
+    <string name="pref_summary_update_wifi_only">AdGuard vil kun få filteropdateringer via Wi-Fi.</string>
+    <string name="pref_show_useful_ads">Vis nyttige annoncer</string>
+    <string name="pref_summary_show_useful_ads">Fjern blokering af annoncer der kan være nyttige for brugerne.</string>
+    <string name="pref_filters_category">Filtre</string>
+    <string name="pref_summary_filters_category">Vælg hvilke filtre der skal bruges</string>
+    <string name="filters">Filtre</string>
+    <string name="stats_enabled_filters">Filtre</string>
+    <string name="stats_enabled_rules">Regler</string>
+    <string name="stats_update_time">Opdateret:</string>
+    <string name="start_samsung_browser">Åben valgmuligheder i Samsung Internet Browser</string>
+    <string name="start_yandex_browser">Åben valgmuligheder i Yandex Browser</string>
+    <string name="open_browsers_info">For at aktivere indholdsblokering ved hjælp af vores filtre kan du  åbne browserindstillingerne direkte ved at klikke her:</string>
+    <string name="filterVersionTemplate">Version {0}.</string>
+    <string name="filterUpdatedTemplate">Opdateret {0} klokken {1}.</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">Version {0}</string>
+    <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nAlle Rettigheder Forbeholdt.</string>
+    <string name="rateAdguardButtonText">Vurder AdGuard</string>
+    <string name="feedbackButtonText">Send Feedback</string>
+    <string name="officialSiteLabelText">Officiel side</string>
+    <string name="forumLabelText">Forum</string>
+    <string name="emailLabelText">E-mail</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privatlivspolitik</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="copyrightMessage">AdGuard Indholdsblokker er et gratis program: du kan omfordele det og/eller ændre det under betingelserne af GNU General Public License som er udgivet af Free Software Foundation, enten version 3 af Licensen eller (efter dit valg) enhver senere version.</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
+    <string name="install_browsers">Du har ingen understøttet browsere installeret! Du kan installere dem fra Google Play:</string>
+    <string name="install_samsung_browser">Installer Samsung Internet Browser</string>
+    <string name="install_yandex_browser">Installer Yandex Browser</string>
+    <string name="issuesButtonText">Rapporter Fejl</string>
+    <string name="githubLabelText">Kildekode</string>
+    <!--Do not translate.-->
+    <string name="warning">Advarsel</string>
+    <string name="too_many_filters_warning">Du har valgt for mange filterabonnenter. Dette vil muligvis sænke din internetsøgning betydeligt.</string>
+    <string name="pref_whitelist_category">Whitelist</string>
+    <string name="pref_summary_whitelist_category">Domænerne på denne liste vil ikke blive filtreret</string>
+    <string name="onboarding_title1">Velkommen!</string>
+    <string name="onboarding_text1">Du er kun et par skridt væk fra et hurtigt og rent internet uden annoncer.</string>
+    <string name="onboarding_button_text1">Kom i gang</string>
+    <string name="onboarding_title2">Vælg en browser</string>
+    <string name="onboarding_text2">For at fungere, har AdGuard brug for en browser som understøtter teknologien bag annonceblokering. Der er i øjeblikket to browsere.</string>
+    <string name="onboarding_button_text2">Vælg browser</string>
+    <string name="onboarding_title3">Næsten færdig!</string>
+    <string name="onboarding_text3">En passende browser blev fundet. Alt der er tilbage er, at aktivere AdGuard i dens indstillinger.</string>
+    <string name="onboarding_button_text3">Aktiver AdGuard</string>
+    <string name="count">Tæl</string>
+    <string name="check_filter_updates">Søg efter opdateringer til filtrene</string>
+    <string name="go_to_filters">Gå til filtre</string>
+    <string name="browser">Browser</string>
+    <string name="install">Installer</string>
+    <string name="start">Start</string>
+    <string name="get_started">Kom i gang</string>
+    <string name="adguard_conditions_title">To betingelser skal være opfyldt for, at AdGuard kan fungere:</string>
+    <string name="adguard_conditions_list1">Du skal bruge en browser som understøtter teknologien bag indholdsblokering.</string>
+    <string name="adguard_conditions_list2">AdGuard skal være aktiveret i browserens indstillinger for indholdsblokering</string>
+    <string name="choose_browser">Vælg browser</string>
+    <string name="enable_adguard">Aktiver AdGuard</string>
+    <string name="main_activity_adguard_info">AdGuard blokerer annoncer, beskytter dit privatliv, øger indlæsningstiden for sider, og reducerer dit forbrug af mobildata.</string>
+    <string name="exit">Afslut</string>
+    <string name="user_filter">Brugerfilter</string>
+    <string name="enter_rule_text">Indtast regeltekst</string>
+    <string name="cancel">Annuller</string>
+    <string name="ok">OK</string>
+    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">Brugerfilteret er tomt</string>
+    <string name="addUserRuleButtonText">Tilføj regel</string>
+    <string name="importUserRulesButtonText">Importer</string>
+    <string name="importUserRulesDialogTitle">Indtast URL eller stien til filen</string>
+    <string name="importUserRulesUrlErrorMessage">URL\'en er ikke gyldig</string>
+    <string name="clearUserRulesButtonText">Fjern alt</string>
+    <string name="browseButtonText">Gennemse</string>
+    <string name="reportBug">Rapporter en fejl</string>
+</resources>

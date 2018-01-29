@@ -30,7 +30,7 @@
     <string name="stats_enabled_filters">过滤器</string>
     <string name="stats_enabled_rules">规则</string>
     <string name="stats_update_time">更新于</string>
-    <string name="start_samsung_browser">打开 Samsung Internet 选项</string>
+    <string name="start_samsung_browser">打开 Samsung Internet 浏览器选项</string>
     <string name="start_yandex_browser">打开 Yandex Browser 选项</string>
     <string name="open_browsers_info">要使用我们的过滤器进行内容拦截，您可点击此处以直接打开浏览器选项：</string>
     <string name="filterVersionTemplate">版本 {0}。</string>
@@ -38,14 +38,14 @@
     <!--About Adguard-->
     <string name="versionInfoTextViewText">版本 {0}</string>
     <string name="copyrightInfoTextViewText">© 2008–2016。Performix LLC。\n保留所有版权。</string>
-    <string name="rateAdguardButtonText">评级 Adguard</string>
+    <string name="rateAdguardButtonText">评级 AdGuard</string>
     <string name="feedbackButtonText">发送反馈</string>
     <string name="officialSiteLabelText">官方网站</string>
     <string name="forumLabelText">论坛</string>
     <string name="emailLabelText">Email</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">隐私策略</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">最终用户许可协议</a></string>
-    <string name="copyrightMessage">Adguard Content Blocker 为免费软件：您可在遵守由自由软件基金会发布的 GUN 通用公共许可 v3 或更新版本的条款下重新分布或修改它。</string>
+    <string name="copyrightMessage">AdGuard Content Blocker 为免费软件：您可在遵守由自由软件基金会发布的 GUN 通用公共许可 v3 或更新版本的条款下重新分布或修改它。</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
@@ -63,11 +63,11 @@
     <string name="onboarding_text1">你仅需几步便可远离广告，快速浏览干净的因特网。</string>
     <string name="onboarding_button_text1">入门</string>
     <string name="onboarding_title2">选择浏览器</string>
-    <string name="onboarding_text2">Adguard 需要支持广告拦截技术的浏览器以进行操作。当前有两种浏览器可用。</string>
+    <string name="onboarding_text2">AdGuard 需要支持广告拦截技术的浏览器以进行操作。当前有两种浏览器可用。</string>
     <string name="onboarding_button_text2">选择浏览器</string>
     <string name="onboarding_title3">几乎完成了！</string>
-    <string name="onboarding_text3">找到适当的浏览器。在其设备内仅开启 Adguard。</string>
-    <string name="onboarding_button_text3">开启 Adguard</string>
+    <string name="onboarding_text3">找到适当的浏览器。在其设备内仅开启 AdGuard。</string>
+    <string name="onboarding_button_text3">开启 AdGuard</string>
     <string name="count">技术</string>
     <string name="check_filter_updates">检查过滤器更新</string>
     <string name="go_to_filters">转到过滤器</string>
@@ -75,12 +75,12 @@
     <string name="install">安装</string>
     <string name="start">开始</string>
     <string name="get_started">入门</string>
-    <string name="adguard_conditions_title">要使 Adguard 工作，需要符合两个条件：</string>
+    <string name="adguard_conditions_title">要使 AdGuard 工作，需要符合两个条件：</string>
     <string name="adguard_conditions_list1">使用支持内容拦截技术的浏览器。</string>
-    <string name="adguard_conditions_list2">在此浏览器的内容拦截设置内必须开启 Adguard。</string>
+    <string name="adguard_conditions_list2">在此浏览器的内容拦截设置内必须开启 AdGuard。</string>
     <string name="choose_browser">选择浏览器</string>
-    <string name="enable_adguard">开启 Adguard</string>
-    <string name="main_activity_adguard_info">Adguard 可拦截广告，保护您的隐私，提升页面加载速度，降低移动数据使用率。</string>
+    <string name="enable_adguard">开启 AdGuard</string>
+    <string name="main_activity_adguard_info">AdGuard 可拦截广告，保护您的隐私，提升页面加载速度，降低移动数据使用率。</string>
     <string name="exit">退出</string>
     <string name="user_filter">用户过滤器</string>
     <string name="enter_rule_text">输入规则文本</string>

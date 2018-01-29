@@ -50,7 +50,7 @@
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">Forum</a></string>
     <string name="emailSupportLink"><a href="mailto:support@adguard.com">Kontakt-E-Mail</a></string>
     <string name="install_browsers">Sie haben keinen unterstützen Browser installiert! Sie können diese aus Google Play installieren:</string>
-    <string name="install_samsung_browser">Samsung Internet Browser installieren</string>
+    <string name="install_samsung_browser">In Samsung Internet Browser installieren</string>
     <string name="install_yandex_browser">Yandex Browser installieren</string>
     <string name="issuesButtonText">Fehler melden</string>
     <string name="githubLabelText">Quellcode</string>

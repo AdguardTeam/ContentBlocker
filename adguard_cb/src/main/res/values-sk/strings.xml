@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="refresh">Obnoviť</string>
+    <string name="please_wait">Čakajte prosím...</string>
+    <string name="main_info">Táto aplikácia je rozšírením pre prehliadače, ktoré podporujú blokovanie obsahu.\n\nAktuálne sú podporované tieto dva prehliadače:\n\n1. Samsung internetový prehliadač\n2. Yandex prehliadač\n\nS pomocou tejto aplikácie môžete blokovať všetky reklamy v týchto prehliadačoch.\n\nTiež môžete v Nastaveniach zvoliť, ktoré filtre sa majú používať.</string>
+    <string name="progressGenericErrorText">Objavila sa nejaká chyba!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} filter (filtre) bol úspešne importovaný!</string>
+    <string name="importUserRulesErrorResultMessage">Chyba pri importe filtrov!</string>
+    <string name="importUserRulesProgressDialogTitle">Import prebieha</string>
+    <string name="importUserRulesProgressDialogMessage">Zavádza sa...</string>
+    <string name="checkUpdatesProgressDialogTitle">Kontrola aktualizácií</string>
+    <string name="checkUpdatesProgressDialogMessage">Kontrola aktualizácií, čakajte prosím...</string>
+    <string name="checkUpdatesErrorResultMessage">Aktualizácia zlyhala. Skúste prosím neskôr znova.</string>
+    <string name="checkUpdatesZeroResultMessage">Používate najnovšie verzie filtrov.</string>
+    <string name="checkUpdatesOneResultMessage">Bol aktualizovaný jeden filter:{0}</string>
+    <string name="checkUpdatesManyResultMessage">Počet aktualizovaných filtrov - {0}:{1}</string>
+    <string name="action_settings">Nastavenia</string>
+    <string name="openned_drawer_title">Voľby</string>
+    <string name="about">O programe</string>
+    <string name="settings">Nastavenia</string>
+    <string name="pref_autoupdate_filters">Automatická aktualizácia filtrov</string>
+    <string name="pref_summary_autoupdate_filters">Aktualizovať filtre automaticky</string>
+    <string name="pref_update_wifi_only">Aktualizovať len cez Wi-Fi</string>
+    <string name="pref_summary_update_wifi_only">Neaktualizovať filtre cez mobilnú sieť</string>
+    <string name="pref_show_useful_ads">Zobrazovať užitočné reklamy</string>
+    <string name="pref_summary_show_useful_ads">Odblokovať reklamy, ktoré môžu byť pre používateľov užitočné.</string>
+    <string name="pref_filters_category">Filtre</string>
+    <string name="pref_summary_filters_category">Zvoliť, ktoré filtre sa majú používať</string>
+    <string name="filters">Filtre</string>
+    <string name="stats_enabled_filters">Filtre</string>
+    <string name="stats_enabled_rules">Pravidlá</string>
+    <string name="stats_update_time">Aktualizované:</string>
+    <string name="start_samsung_browser">Otvoriť nastavenia Samsung internetového prehliadača</string>
+    <string name="start_yandex_browser">Otvoriť nastavenia Yandex prehliadača</string>
+    <string name="open_browsers_info">Pre povolenie obsahu blokovaného našimi filtrami môžete priamo otvoriť nastavenia prehliadača kliknutím sem:</string>
+    <string name="filterVersionTemplate">Verzia {0}.</string>
+    <string name="filterUpdatedTemplate">Aktualizované {0} o {1}.</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">Verzia {0}</string>
+    <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nVšetky práva vyhradené.</string>
+    <string name="rateAdguardButtonText">Ohodnoťte AdGuard</string>
+    <string name="feedbackButtonText">Poslať spätnú väzbu</string>
+    <string name="officialSiteLabelText">Oficiálna stránka</string>
+    <string name="forumLabelText">Fórum</string>
+    <string name="emailLabelText">E-mail</string>
+    <string name="privacyPolicyLinkText">"<a href="http://www.adguard.com/privacy.html">Pravidlá ochrany súkromia</a>
+ "</string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="copyrightMessage">AdGuard blokovač obsahu je bezplatný softvér: môžete ho redistribuovať a/alebo modifikovať pri dodržaní podmienok GNU General Public License publikovanej Free Software Foundation vo verzii 3 alebo novšej.</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
+    <string name="install_browsers">Nemáte nainštalovaný žiaden z podporovaných prehliadačov. Môžete ich inštalovať z Google Play:</string>
+    <string name="install_samsung_browser">Inštalovať Samsung internetový prehliadač</string>
+    <string name="install_yandex_browser">Inštalovať prehliadač Yandex</string>
+    <string name="issuesButtonText">Nahlásiť chybu</string>
+    <string name="githubLabelText">Zdrojový kód</string>
+    <!--Do not translate.-->
+    <string name="warning">Varovanie</string>
+    <string name="too_many_filters_warning">Zvolili ste príliš veľa filtrov. To môže výrazne spomaliť Vaše prehliadanie internetových stránok.</string>
+    <string name="pref_whitelist_category">Biela listina</string>
+    <string name="pref_summary_whitelist_category">Domény v tomto zozname nebudú filtrované</string>
+    <string name="onboarding_title1">Vitajte!</string>
+    <string name="onboarding_text1">Ste len pár krokov od rýchleho a čistého internetu bez reklám.</string>
+    <string name="onboarding_button_text1">Začíname.</string>
+    <string name="onboarding_title2">Zvoľte si prehliadač</string>
+    <string name="onboarding_text2">Pre svoju činnosť, AdGuard potrebuje prehliadač, ktorý podporuje technológiu blokovania reklám. Aktuálne ide o nasledovné dva prehliadače.</string>
+    <string name="onboarding_button_text2">Zvoľte prehliadač</string>
+    <string name="onboarding_title3">Sme takmer v cieli!</string>
+    <string name="onboarding_text3">Našiel sa vhodný prehliadač. Zostáva už len povoliť AdGuard v jeho nastaveniach.</string>
+    <string name="onboarding_button_text3">Povoliť AdGuard</string>
+    <string name="count">Počet</string>
+    <string name="check_filter_updates">Skontrolovať aktualizácie filtrov</string>
+    <string name="go_to_filters">Ísť do sekcie filtrov</string>
+    <string name="browser">Prehliadač</string>
+    <string name="install">Inštalovať</string>
+    <string name="start">Spustiť</string>
+    <string name="get_started">Začíname</string>
+    <string name="adguard_conditions_title">Pre prácu AdGuard musia byť splnené dve podmienky:</string>
+    <string name="adguard_conditions_list1">Musíte mať prehliadač, ktorý podporuje technológiu blokovania reklám.</string>
+    <string name="adguard_conditions_list2">AdGuard musí byť povolený pre blokovanie obsahu v nastaveniach prehliadača.</string>
+    <string name="choose_browser">Zvoľte prehliadač</string>
+    <string name="enable_adguard">Povoliť AdGuard</string>
+    <string name="main_activity_adguard_info">AdGuard blokuje reklamy, chráni Vaše súkromie, urýchľuje načítanie internetových stránok a redukuje spotrebu mobilných dát.</string>
+    <string name="exit">Ukončenie</string>
+    <string name="user_filter">Používateľský filter</string>
+    <string name="enter_rule_text">Vložiť text pravidla</string>
+    <string name="cancel">Zrušiť</string>
+    <string name="ok">OK</string>
+    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">Používateľský filter je prázdny</string>
+    <string name="addUserRuleButtonText">Pridať pravidlo</string>
+    <string name="importUserRulesButtonText">Import</string>
+    <string name="importUserRulesDialogTitle">Vložte URL alebo cestu k súboru</string>
+    <string name="importUserRulesUrlErrorMessage">URL adresa nie je platná</string>
+    <string name="clearUserRulesButtonText">Odstrániť všetko</string>
+    <string name="browseButtonText">Prechádzať</string>
+    <string name="reportBug">Nahlásiť chybu</string>
+</resources>

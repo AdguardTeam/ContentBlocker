@@ -11,7 +11,7 @@
     <string name="checkUpdatesProgressDialogTitle">"Comprobar actualizaciones "</string>
     <string name="checkUpdatesProgressDialogMessage">Comprobando actualizaciones, por favor espere...</string>
     <string name="checkUpdatesErrorResultMessage">Error en la actualización. Por favor, inténtelo de nuevo más tarde.</string>
-    <string name="checkUpdatesZeroResultMessage">"Los filtros están actualizados a la versión mas resiente. "</string>
+    <string name="checkUpdatesZeroResultMessage">Los filtros están actualizados a la versión mas reciente.</string>
     <string name="checkUpdatesOneResultMessage">Se han actualizado {0} filtros</string>
     <string name="checkUpdatesManyResultMessage">Se han actualizado {0} filtros de {1}</string>
     <string name="action_settings">Ajustes</string>

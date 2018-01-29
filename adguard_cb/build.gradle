@@ -9,10 +9,10 @@ android {
             storePassword 'adguard'
         }
     }
-    compileSdkVersion 23
+    compileSdkVersion 26
     buildToolsVersion "25.0.2"
     defaultConfig {
-        targetSdkVersion 23
+        targetSdkVersion 26
         applicationId 'com.adguard.android.contentblocker'
         versionName "1.8.0"
         signingConfig signingConfigs.config

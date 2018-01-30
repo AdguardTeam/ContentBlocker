@@ -3,18 +3,12 @@
 > * AdGuard Content Blocker is a free app. We believe that all free products should be open source, and AdGuard Content Blocker is not an exception. Its code can be found in this repository.
 > * Privacy policy: https://adguard.com/privacy/content-blocker.html (Briefly: AdGuard sends only necessary, limited information, e.g. information required for filter updates).
 
-Adguard Content Blocker is a tool to block ads in browsers that support content blocking technology. Currently, these browsers are Samsung Internet and Yandex Browser.
+AdGuard Content Blocker is a tool to block ads in browsers that support content blocking technology. Currently, these browsers are Samsung Internet and Yandex Browser.
 
 To get more information and to download AdGuard Content Blocker, visit our website [https://adguard.com/](https://adguard.com/adguard-content-blocker/overview.html).
 
 ![menu-en-github](https://cloud.githubusercontent.com/assets/8577533/18669011/84b0868c-7f41-11e6-8206-29328f06c3a8.jpg)
 ![main-en-github](https://cloud.githubusercontent.com/assets/8577533/18669037/a4540de2-7f41-11e6-8b12-99940484c889.jpg)
-
-### How to report an issue?
-
-GitHub can be used to report a bug or to submit a feature request. To do so, go to [this page](https://github.com/AdguardTeam/ContentBlocker/issues) and click the *New issue* button.
-
->**Note:** for the filter-related issues (missed ads, false positives etc.) use the [dedicated repository](https://github.com/AdguardTeam/AdguardFilters). 
 
 ### Our plans
 
@@ -25,3 +19,13 @@ To see the 'big picture', to watch current progress and to get an idea of approx
  * Latest version: [1.8.0](https://github.com/AdguardTeam/ContentBlocker/releases/tag/v1.8.0)
 
 You can find all AdGuard Content Blocker releases here: https://github.com/AdguardTeam/ContentBlocker/releases
+
+### How to report an issue?
+
+GitHub can be used to report a bug or to submit a feature request. To do so, go to [this page](https://github.com/AdguardTeam/ContentBlocker/issues) and click the *New issue* button. Please, try to use the template that will be provided for you to report bugs (unless your issue is unique enough to justify deviating from the template).
+
+>**Note:** for the filter-related issues (missed ads, false positives etc.) use the [online reporting tool](https://reports.adguard.com/new_issue.html). 
+
+### Translating into other languages
+
+You can help us translate the Content Blocker into other languages. Everything you need to know to start translating is gathered in this [KB article](https://kb.adguard.com/general/adguard-translations). Once you are ready, head to [this website](https://adguard.oneskyapp.com/collaboration/) and scroll down to "Content Blocker" project — even if the translation exists already, you can always suggest a better variant.

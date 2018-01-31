@@ -27,6 +27,8 @@ import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
+import com.adguard.android.ui.utils.NavigationHelper;
+
 public class AboutActivity extends AppCompatActivity {
 
     @Override
@@ -49,7 +51,7 @@ public class AboutActivity extends AppCompatActivity {
         rateAppButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectToWebSite(AboutActivity.this, getApplicationMarketLink(getApplicationContext()));
+                NavigationHelper.redirectToWebSite(AboutActivity.this, getApplicationMarketLink(getApplicationContext()));
             }
         });
 
@@ -57,7 +59,7 @@ public class AboutActivity extends AppCompatActivity {
         issuesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectToWebSite(AboutActivity.this, "https://github.com/AdguardTeam/ContentBlocker/issues");
+                NavigationHelper.redirectToWebSite(AboutActivity.this,"https://github.com/AdguardTeam/ContentBlocker/issues");
             }
         });
 
@@ -100,17 +102,5 @@ public class AboutActivity extends AppCompatActivity {
      */
     public static String getApplicationMarketLink(Context context) {
         return "https://play.google.com/store/apps/details?id=" + context.getPackageName();
-    }
-
-    /**
-     * Opens web browser at specified url
-     *
-     * @param from Context
-     * @param url  Url to open
-     */
-    public static void redirectToWebSite(Context from, String url) {
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url));
-        from.startActivity(i);
     }
 }

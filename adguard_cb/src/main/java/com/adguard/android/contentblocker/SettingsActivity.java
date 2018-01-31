@@ -29,6 +29,7 @@ import android.widget.CompoundButton;
 import com.adguard.android.ServiceLocator;
 import com.adguard.android.service.FilterService;
 import com.adguard.android.service.PreferencesService;
+import com.adguard.android.ui.utils.NavigationHelper;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -97,7 +98,7 @@ public class SettingsActivity extends AppCompatActivity {
         findViewById(R.id.filter_list_wrapper).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), FiltersActivity.class));
+                NavigationHelper.redirectToActivity(SettingsActivity.this, FiltersActivity.class);
             }
         });
     }

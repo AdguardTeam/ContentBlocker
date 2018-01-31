@@ -107,18 +107,14 @@ public class ActivityUtils {
         return Math.min(point.x, point.y);
     }
 
-    public static void startMarket(Context context, String packageName, String referrer)
-    {
+    public static void startMarket(Context context, String packageName, String referrer) {
         String referrerParam = referrer != null ? "&referrer=" + referrer : "";
-        try
-        {
+        try {
             Uri uri = Uri.parse("market://details?id=" + packageName + referrerParam);
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
-        }
-        catch (ActivityNotFoundException anfe)
-        {
+        } catch (ActivityNotFoundException anfe) {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + packageName + referrerParam));
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);

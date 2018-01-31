@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">{0}を{1}に更新しました。</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">バージョン {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nAll Rights Reserved.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAll Rights Reserved.</string>
     <string name="rateAdguardButtonText">AdGuard を評価</string>
     <string name="feedbackButtonText">フィードバックを送信</string>
     <string name="officialSiteLabelText">公式サイト</string>

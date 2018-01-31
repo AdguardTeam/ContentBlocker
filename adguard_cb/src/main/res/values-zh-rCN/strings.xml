@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">已更新 {0} 于 {1}。</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">版本 {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008–2016。Performix LLC。\n保留所有版权。</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd。\n保留所有版权。</string>
     <string name="rateAdguardButtonText">评级 AdGuard</string>
     <string name="feedbackButtonText">发送反馈</string>
     <string name="officialSiteLabelText">官方网站</string>

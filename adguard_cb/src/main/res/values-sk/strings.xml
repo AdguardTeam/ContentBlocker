@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">Aktualizované {0} o {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Verzia {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nVšetky práva vyhradené.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nVšetky práva vyhradené.</string>
     <string name="rateAdguardButtonText">Ohodnoťte AdGuard</string>
     <string name="feedbackButtonText">Poslať spätnú väzbu</string>
     <string name="officialSiteLabelText">Oficiálna stránka</string>

@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">{0} frissítve {1} kor.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Verzió {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008–2016. Performix LLC.\nMinden jog fenntartva.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nMinden jog fenntartva.</string>
     <string name="rateAdguardButtonText">AdGuard Értékelése</string>
     <string name="feedbackButtonText">Visszajelzés Küldése</string>
     <string name="officialSiteLabelText">Hivatalos Oldal</string>

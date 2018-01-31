@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">Opdateret {0} klokken {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Version {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nAlle Rettigheder Forbeholdt.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAlle Rettigheder Forbeholdt.</string>
     <string name="rateAdguardButtonText">Vurder AdGuard</string>
     <string name="feedbackButtonText">Send Feedback</string>
     <string name="officialSiteLabelText">Officiel side</string>

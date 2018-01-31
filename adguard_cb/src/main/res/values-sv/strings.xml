@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">Uppdaterade {0} at {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Version {0}</string>
-    <string name="copyrightInfoTextViewText">Alla rättigheter förbehållna.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAlla rättigheter förbehållna.</string>
     <string name="rateAdguardButtonText">Betygsätt AdGuard</string>
     <string name="feedbackButtonText">Skicka feedback</string>
     <string name="officialSiteLabelText">Officiell webbplats</string>

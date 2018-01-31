@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">Ažurirano {0} u {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Verzija {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008–2016. Performix LLC.\nSva prava pridržana.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nSva prava pridržana.</string>
     <string name="rateAdguardButtonText">Ocjeni AdGuard</string>
     <string name="feedbackButtonText">Pošalji povratne informacije</string>
     <string name="officialSiteLabelText">Službena stranica</string>

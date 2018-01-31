@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">Оновлено {0} в {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Версія {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008-2017. ТОВ \"Перформікс\".\nВсі права захищені.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nВсі права захищені.</string>
     <string name="rateAdguardButtonText">Оцінити AdGuard</string>
     <string name="feedbackButtonText">Надіслати відгук</string>
     <string name="officialSiteLabelText">Офіційний сайт</string>

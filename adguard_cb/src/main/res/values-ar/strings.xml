@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">تم تحديث {0} في {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">الإصدار {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nجميع الحقوق محفوظه.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nجميع الحقوق محفوظه.</string>
     <string name="rateAdguardButtonText">AdGuardقيم تطبيق</string>
     <string name="feedbackButtonText">إرسال ملاحظاتك</string>
     <string name="officialSiteLabelText">الموقع الرسمي</string>

@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">Обновлен {0} в {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Версия {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008–2017. ООО \"Перформикс\".\nВсе права защищены.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nВсе права защищены.</string>
     <string name="rateAdguardButtonText">Оценить AdGuard</string>
     <string name="feedbackButtonText">Сообщение в поддержку</string>
     <string name="officialSiteLabelText">Официальный сайт</string>
@@ -96,4 +96,7 @@
     <string name="browseButtonText">Обзор</string>
     <string name="github">Github</string>
     <string name="reportBug">Сообщить об ошибке</string>
+    <string name="description_about_other_adguard_product">Знаете ли вы, что вы можете использовать AdGuard на любом устройстве, компьютере и ОС? Узнайте больше на нашем сайте.</string>
+    <string name="no_thanks">Нет, спасибо</string>
+    <string name="learn_more">Узнать больше</string>
 </resources>

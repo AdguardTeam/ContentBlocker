@@ -23,8 +23,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -123,9 +125,32 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             actionBar.setHomeButtonEnabled(true);
         }
 
-        PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
+        final PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
         if (!preferencesService.isOnboardingShown()) {
             startActivity(new Intent(this, OnboardingActivity.class));
+        }
+
+
+        if (!preferencesService.isShowAboutOtherProduct()) {
+            final View bottomBarView = findViewById(R.id.bottom_bar);
+            bottomBarView.setVisibility(View.VISIBLE);
+
+            bottomBarView.findViewById(R.id.no_thanks).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    preferencesService.setShowAboutOtherProduct(true);
+                    bottomBarView.setVisibility(View.GONE);
+                }
+            });
+
+            bottomBarView.findViewById(R.id.learn_more).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    preferencesService.setShowAboutOtherProduct(true);
+                    bottomBarView.setVisibility(View.GONE);
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://agrd.io/cb_adguard_products")));
+                }
+            });
         }
 
         ServiceLocator.getInstance(getApplicationContext()).getFilterService().scheduleFiltersUpdate();

@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">Güncellendi {0} {1}</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Sürüm {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2017. Performix LLC.\nTüm Hakları Saklıdır.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nTüm Hakları Saklıdır.</string>
     <string name="rateAdguardButtonText">AdGuard\'ı Oyla</string>
     <string name="feedbackButtonText">Geribildirim Gönder</string>
     <string name="officialSiteLabelText">Resmi site</string>

@@ -21,9 +21,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import com.adguard.android.contentblocker.preferences.PreferenceDb;
-import com.adguard.filter.WorkaroundUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,13 +38,12 @@ public class PreferencesServiceImpl implements PreferencesService {
 
     private final static Logger LOG = LoggerFactory.getLogger(PreferencesServiceImpl.class);
 
+    private static final String PREF_SHOW_USEFUL_ADS = "pref_show_useful_ads";
     private final static String KEY_AUTOUPDATE_FILTERS = "auto_update_filters";
     private final static String KEY_UPDATE_OVER_WIFI = "update_over_wifi";
     private final static String KEY_LAST_UPDATE_CHECK_DATE = "last_update_check_date";
-    private final static String KEY_REFERRER = "referrer";
     private final static String KEY_WHITELIST = "whitelist";
     private final static String KEY_USER_RULES = "user_rules";
-    private final static String KEY_DEVICE_SPEED_RANK = "device_speed_rank";
     private final static String KEY_LAST_IMPORT_URL = "key_last_import_rule";
     private final static String KEY_FILTER_RULE_COUNT = "key_filter_rule_count";
     private final static String KEY_BROWSER_CONNECTED_COUNT = "key_browser_connected_count";
@@ -55,7 +51,6 @@ public class PreferencesServiceImpl implements PreferencesService {
     private final static String KEY_ABOUT_OTHER_PRODUCT_SHOWN = "key_about_other_product_shown";
 
     private final SharedPreferences sharedPreferences;
-    private final Context context;
 
     /**
      * Creates an instance of PreferencesService
@@ -65,7 +60,6 @@ public class PreferencesServiceImpl implements PreferencesService {
     public PreferencesServiceImpl(Context context) {
         LOG.info("Creating PreferencesService instance for {}", context);
         this.sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        this.context = context;
     }
 
     /**
@@ -86,6 +80,13 @@ public class PreferencesServiceImpl implements PreferencesService {
     @Override
     public boolean isUpdateOverWifiOnly() {
         return sharedPreferences.getBoolean(KEY_UPDATE_OVER_WIFI, false);
+    }
+
+    @Override
+    public void setUpdateOverWifiOnly(boolean value) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(KEY_UPDATE_OVER_WIFI, value);
+        editor.apply();
     }
 
     @Override
@@ -224,31 +225,6 @@ public class PreferencesServiceImpl implements PreferencesService {
     }
 
     @Override
-    public void setReferrer(String referrerString) {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(KEY_REFERRER, referrerString);
-        editor.apply();
-    }
-
-    @Override
-    public String getReferrer() {
-        return sharedPreferences.getString(KEY_REFERRER, null);
-    }
-
-    @Override
-    public int getDeviceSpeedRank() {
-        if (!sharedPreferences.contains(KEY_DEVICE_SPEED_RANK)) {
-            int deviceSpeedRank = WorkaroundUtils.calculateDeviceSpeedRank(context);
-
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putInt(KEY_DEVICE_SPEED_RANK, deviceSpeedRank);
-            editor.apply();
-        }
-
-        return sharedPreferences.getInt(KEY_DEVICE_SPEED_RANK, 400);
-    }
-
-    @Override
     public String getLastImportUrl() {
         return sharedPreferences.getString(KEY_LAST_IMPORT_URL, null);
     }
@@ -263,13 +239,13 @@ public class PreferencesServiceImpl implements PreferencesService {
     @Override
     public void setShowUsefulAds(boolean value) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean(PreferenceDb.PREF_SHOW_USEFUL_ADS, value);
+        editor.putBoolean(PREF_SHOW_USEFUL_ADS, value);
         editor.apply();
     }
 
     @Override
     public boolean isShowUsefulAds() {
-        return sharedPreferences.getBoolean(PreferenceDb.PREF_SHOW_USEFUL_ADS, true);
+        return sharedPreferences.getBoolean(PREF_SHOW_USEFUL_ADS, true);
     }
 
     @Override
@@ -295,12 +271,12 @@ public class PreferencesServiceImpl implements PreferencesService {
     }
 
     @Override
-    public boolean isShowAboutOtherProduct() {
+    public boolean isWelcomeMessage() {
         return sharedPreferences.getBoolean(KEY_ABOUT_OTHER_PRODUCT_SHOWN, false);
     }
 
     @Override
-    public void setShowAboutOtherProduct(boolean value) {
+    public void setWelcomeMessage(boolean value) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(KEY_ABOUT_OTHER_PRODUCT_SHOWN, value);
         editor.apply();

@@ -1,9 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/listView"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.adguard.android.contentblocker.SettingsActivity">
+    android:layout_height="match_parent">
 
-</ListView>
+    <LinearLayout
+        android:id="@+id/auto_update_wrapper"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/selectable_background">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pref_autoupdate_filters"
+                android:textSize="@dimen/settingsTitleTextSize"
+                android:textColor="@color/common_text_selector"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pref_summary_autoupdate_filters"
+                android:textSize="@dimen/settingsDescriptionTextSize"
+                android:textColor="@color/summary_text_selector"/>
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/auto_update_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/update_wifi_only_wrapper"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/selectable_background">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pref_update_wifi_only"
+                android:textSize="@dimen/settingsTitleTextSize"
+                android:textColor="@color/common_text_selector"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pref_summary_update_wifi_only"
+                android:textSize="@dimen/settingsDescriptionTextSize"
+                android:textColor="@color/summary_text_selector"/>
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/update_wifi_only_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show_useful_ads_wrapper"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/selectable_background">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pref_show_useful_ads"
+                android:textSize="@dimen/settingsTitleTextSize"
+                android:textColor="@color/common_text_selector"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pref_summary_show_useful_ads"
+                android:textSize="@dimen/settingsDescriptionTextSize"
+                android:textColor="@color/summary_text_selector"/>
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/show_useful_ads_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/filter_list_wrapper"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/selectable_background_marker_right">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pref_filters_category"
+            android:textSize="@dimen/settingsTitleTextSize"
+            android:textColor="@color/common_text_selector"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pref_summary_filters_category"
+            android:textSize="@dimen/settingsDescriptionTextSize"
+            android:textColor="@color/summary_text_selector"/>
+    </LinearLayout>
+</LinearLayout>

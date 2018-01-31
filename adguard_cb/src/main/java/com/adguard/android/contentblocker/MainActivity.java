@@ -22,11 +22,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
-import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -64,8 +62,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements DrawerLayout.DrawerListener, SharedPreferences.OnSharedPreferenceChangeListener {
 
-    public static final String YANDEX = "yandex";
     private static Logger LOG = LoggerFactory.getLogger(MainActivity.class);
+
     private DrawerLayout drawerLayout;
     private ListView drawerList;
     private LinearLayout leftDrawer;
@@ -131,14 +129,14 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
 
 
-        if (!preferencesService.isShowAboutOtherProduct()) {
+        if (!preferencesService.isWelcomeMessage()) {
             final View bottomBarView = findViewById(R.id.bottom_bar);
             bottomBarView.setVisibility(View.VISIBLE);
 
             bottomBarView.findViewById(R.id.no_thanks).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    preferencesService.setShowAboutOtherProduct(true);
+                    preferencesService.setWelcomeMessage(true);
                     bottomBarView.setVisibility(View.GONE);
                 }
             });
@@ -146,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             bottomBarView.findViewById(R.id.learn_more).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    preferencesService.setShowAboutOtherProduct(true);
+                    preferencesService.setWelcomeMessage(true);
                     bottomBarView.setVisibility(View.GONE);
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://agrd.io/cb_adguard_products")));
                 }

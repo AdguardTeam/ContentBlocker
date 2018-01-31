@@ -14,20 +14,11 @@
  You should have received a copy of the GNU General Public License along with
  Adguard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.commons;
+package com.adguard.android.commons.network;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import com.adguard.commons.concurrent.ExecutorsPool;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.lang.reflect.Method;
-import java.net.*;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.List;
 
 /**
  * Helper methods for working with the network
@@ -48,6 +39,16 @@ public class NetworkUtils {
 
     /**
      * @param context Current context
+     * @return is current connection wifi
+     */
+    public static boolean isConnectionWifi(Context context) {
+        final Integer connectionType = NetworkUtils.getConnectionType(context);
+        //noinspection Annotator
+        return connectionType != null && (connectionType == ConnectivityManager.TYPE_WIFI || connectionType == ConnectivityManager.TYPE_ETHERNET);
+    }
+
+    /**
+     * @param context Current context
      * @return current connection type
      */
     public static Integer getConnectionType(Context context) {
@@ -61,13 +62,4 @@ public class NetworkUtils {
         return null;
     }
 
-    /**
-     * @param context Current context
-     * @return is current connection wifi
-     */
-    public static boolean isConnectionWifi(Context context) {
-        final Integer connectionType = NetworkUtils.getConnectionType(context);
-        //noinspection Annotator
-        return connectionType != null && (connectionType == ConnectivityManager.TYPE_WIFI || connectionType == ConnectivityManager.TYPE_ETHERNET);
-    }
 }

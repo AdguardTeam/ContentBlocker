@@ -14,7 +14,7 @@
  You should have received a copy of the GNU General Public License along with
  Adguard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.commons.concurrent;
+package com.adguard.android.commons.concurrent;
 
 /**
  * Class that is used to

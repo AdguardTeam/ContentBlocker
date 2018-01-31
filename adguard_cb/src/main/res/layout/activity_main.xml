@@ -7,14 +7,7 @@
 
     <!-- We use a Toolbar so that our drawer can be displayed
              in front of the action bar -->
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:elevation="16dp"
-        android:theme="@style/AppTheme.Toolbar"
-        app:logo="@drawable/logo_white"/>
+    <include layout="@layout/toolbar"/>
 
     <!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
     <android.support.v4.widget.DrawerLayout android:id="@+id/drawer_layout"

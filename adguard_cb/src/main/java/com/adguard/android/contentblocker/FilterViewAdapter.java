@@ -27,7 +27,6 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.adguard.android.ServiceLocator;
-import com.adguard.android.contentblocker.preferences.PreferenceDb;
 import com.adguard.android.model.FilterList;
 import com.adguard.android.service.FilterService;
 import com.adguard.android.service.FilterServiceImpl;
@@ -79,7 +78,7 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
         FilterList filterList = filterService.getFilters().get(position);
         View view;
         if (convertView == null) {
-            view = inflater.inflate(R.layout.preference_item_checkbox, parent, false);
+            view = inflater.inflate(R.layout.filter_list_item, parent, false);
         } else {
             view = convertView;
         }

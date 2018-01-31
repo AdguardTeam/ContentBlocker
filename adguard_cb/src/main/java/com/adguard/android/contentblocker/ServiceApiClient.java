@@ -20,7 +20,7 @@ import android.content.Context;
 import com.adguard.android.commons.RawResources;
 import com.adguard.android.filtering.api.HttpServiceClient;
 import com.adguard.android.model.FilterList;
-import com.adguard.commons.web.UrlUtils;
+import com.adguard.android.commons.web.UrlUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 import org.codehaus.jackson.annotate.JsonAutoDetect;

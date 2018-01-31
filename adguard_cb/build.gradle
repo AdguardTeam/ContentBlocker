@@ -57,6 +57,7 @@ dependencies {
     compile files('libs/commons-collections4-4.1.jar')
     compile 'com.android.support:appcompat-v7:24.0.0'
     compile 'com.android.support:cardview-v7:24.0.0'
+    compile 'com.android.support:customtabs:24.0.0'
     compile 'com.android.support:recyclerview-v7:24.0.0'
     compile 'org.slf4j:slf4j-android:1.7.7'
     compile 'org.codehaus.jackson:jackson-core-lgpl:1.9.13'

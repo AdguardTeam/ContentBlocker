@@ -7,8 +7,8 @@ import com.adguard.android.ServiceLocator;
 import com.adguard.android.model.FilterList;
 import com.adguard.android.service.FilterService;
 import com.adguard.android.service.PreferencesService;
-import com.adguard.commons.concurrent.DispatcherTask;
-import com.adguard.commons.concurrent.DispatcherThreadPool;
+import com.adguard.android.commons.concurrent.DispatcherTask;
+import com.adguard.android.commons.concurrent.DispatcherThreadPool;
 
 import org.apache.commons.collections4.CollectionUtils;
 

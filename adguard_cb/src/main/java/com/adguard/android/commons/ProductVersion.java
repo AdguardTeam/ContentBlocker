@@ -14,7 +14,7 @@
  You should have received a copy of the GNU General Public License along with
  Adguard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.commons.utils;
+package com.adguard.android.commons;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;

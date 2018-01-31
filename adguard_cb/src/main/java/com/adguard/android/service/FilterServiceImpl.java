@@ -34,11 +34,11 @@ import com.adguard.android.db.FilterRuleDao;
 import com.adguard.android.db.FilterRuleDaoImpl;
 import com.adguard.android.contentblocker.ServiceApiClient;
 import com.adguard.android.model.FilterList;
-import com.adguard.commons.NetworkUtils;
-import com.adguard.commons.concurrent.DispatcherThreadPool;
-import com.adguard.commons.io.IoUtils;
-import com.adguard.commons.InternetUtils;
-import com.adguard.commons.web.UrlUtils;
+import com.adguard.android.commons.network.NetworkUtils;
+import com.adguard.android.commons.concurrent.DispatcherThreadPool;
+import com.adguard.android.commons.io.IoUtils;
+import com.adguard.android.commons.network.InternetUtils;
+import com.adguard.android.commons.web.UrlUtils;
 
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.io.FileUtils;
@@ -51,9 +51,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 import java.util.*;
-import java.util.regex.Pattern;
 
 /**
  * Filter service implementation.
@@ -165,45 +163,6 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         filterListDao.updateFilterEnabled(filter, enabled);
     }
 
-    @Override
-    public Set<String> getWhiteList() {
-        return preferencesService.getWhiteList();
-    }
-
-    @Override
-    public void addToWhitelist(String item) {
-        preferencesService.addToWhitelist(item);
-    }
-
-    @Override
-    public void clearWhiteList() {
-        preferencesService.clearWhiteList();
-    }
-
-    @Override
-    public void removeWhiteListItem(String item) {
-        preferencesService.removeWhiteListItem(item);
-    }
-
-    @Override
-    public Set<String> getUserRules() {
-        return preferencesService.getUserRules();
-    }
-
-    @Override
-    public void addUserRuleItem(String item) {
-        preferencesService.addUserRuleItem(item);
-    }
-
-    @Override
-    public void removeUserRuleItem(String item) {
-        preferencesService.removeUserRuleItem(item);
-    }
-
-    @Override
-    public void clearUserRules() {
-        preferencesService.clearUserRules();
-    }
 
     @Override
     public void importUserRulesFromUrl(Activity activity, String url) {
@@ -244,31 +203,11 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     }
 
     @Override
-    public boolean isSocialMediaWidgetsFilterEnabled() {
-        final FilterList filter = filterListDao.selectFilterList(SOCIAL_MEDIA_WIDGETS_FILTER_ID);
-        return filter != null && filter.isEnabled();
-    }
-
-    @Override
-    public void setSocialMediaWidgetsFilterEnabled(boolean value) {
-        final FilterList filter = filterListDao.selectFilterList(SOCIAL_MEDIA_WIDGETS_FILTER_ID);
-        if (filter != null) {
-            updateFilterEnabled(filter, value);
-        }
-    }
-
-    @Override
-    public boolean isSpywareFilterEnabled() {
-        final FilterList filter = filterListDao.selectFilterList(SPYWARE_FILTER_ID);
-        return filter != null && filter.isEnabled();
-    }
-
-    @Override
     public void applyNewSettings() {
         setShowUsefulAds(preferencesService.isShowUsefulAds());
 
         List<String> rules = getAllEnabledRules(true);
-        Set<String> userRules = getUserRules();
+        Set<String> userRules = preferencesService.getUserRules();
         if (!userRules.isEmpty()) {
             for (String userRule : userRules) {
                 userRule = StringUtils.trim(userRule);
@@ -288,14 +227,6 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
             enableContentBlocker(context);
         } catch (IOException e) {
             LOG.warn("Unable to save filters to file!!!", e);
-        }
-    }
-
-    @Override
-    public void setSpywareFilterEnabled(boolean value) {
-        final FilterList filter = filterListDao.selectFilterList(SPYWARE_FILTER_ID);
-        if (filter != null) {
-            updateFilterEnabled(filter, value);
         }
     }
 

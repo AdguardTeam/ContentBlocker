@@ -39,8 +39,14 @@ public interface FilterService {
      */
     int getFilterListCount();
 
+    /**
+     * @return Enabled filter count
+     */
     int getEnabledFilterListCount();
 
+    /**
+     * @return Filter rules count
+     */
     int getFilterRuleCount();
 
     /**
@@ -62,52 +68,6 @@ public interface FilterService {
      * @param enabled true if filter should be enabled
      */
     void updateFilterEnabled(FilterList filter, boolean enabled);
-
-    /**
-     * @return Whitelist
-     */
-    Set<String> getWhiteList();
-
-    /**
-     * @param item Adds item to whitelist
-     */
-    void addToWhitelist(String item);
-
-    /**
-     * Clears whitelist
-     */
-    void clearWhiteList();
-
-    /**
-     * Removes item from the whitelist
-     *
-     * @param item Item to remove
-     */
-    void removeWhiteListItem(String item);
-
-    /**
-     * @return User filter rules
-     */
-    Set<String> getUserRules();
-
-    /**
-     * Adds rule to the user filter
-     *
-     * @param item Item to add
-     */
-    void addUserRuleItem(String item);
-
-    /**
-     * Removes rule from the user filter
-     *
-     * @param item Item to remove
-     */
-    void removeUserRuleItem(String item);
-
-    /**
-     * Clears user filter
-     */
-    void clearUserRules();
 
 	/**
 	 * Downloads and adds batch of user rules from specified url.
@@ -139,26 +99,6 @@ public interface FilterService {
      * @return list of enabled filter ids
      */
     List<Integer> getEnabledFilterIds();
-
-	/**
-	 * Is social media widgets filter enabled
-	 */
-	boolean isSocialMediaWidgetsFilterEnabled();
-
-	/**
-	 * Sets social media widgets filter enabled
-	 */
-	void setSocialMediaWidgetsFilterEnabled(boolean value);
-
-	/**
-	 * Sets spyware filter enabled
-	 */
-	void setSpywareFilterEnabled(boolean value);
-
-	/**
-	 * Is spyware filter enabled
-	 */
-	boolean isSpywareFilterEnabled();
 
     /**
      * Applies new settings and filters

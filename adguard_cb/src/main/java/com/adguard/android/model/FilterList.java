@@ -16,7 +16,7 @@
  */
 package com.adguard.android.model;
 
-import com.adguard.commons.utils.ProductVersion;
+import com.adguard.android.commons.ProductVersion;
 
 import java.util.Date;
 

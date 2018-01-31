@@ -16,7 +16,6 @@
  */
 package com.adguard.android.service;
 
-import com.adguard.commons.enums.FilteringQuality;
 
 import java.util.Collection;
 import java.util.Date;
@@ -41,6 +40,11 @@ public interface PreferencesService {
      * @return true if update over wifi only is enabled
      */
     boolean isUpdateOverWifiOnly();
+
+    /**
+     * @param value true if update over wifi only is enabled
+     */
+    void setUpdateOverWifiOnly(boolean value);
 
     /**
      * @return True if we have shown the onboarding screen
@@ -119,21 +123,6 @@ public interface PreferencesService {
     Date getLastUpdateCheck();
 
     /**
-     * @param referrerString Referrer value (got from INSTALL_REFERRER receiver)
-     */
-    void setReferrer(String referrerString);
-
-    /**
-     * @return Referrer value (got from INSTALL_REFERRER receiver)
-     */
-    String getReferrer();
-
-    /**
-     * @return Device speed rank
-     */
-    int getDeviceSpeedRank();
-
-    /**
      * Gets url from which user imported his rules
      *
      * @return last imported url
@@ -156,15 +145,35 @@ public interface PreferencesService {
      */
     boolean isShowUsefulAds();
 
+    /**
+     * Sets filter rules count
+     * @param ruleCount Filter rules count
+     */
     void setFilterRuleCount(int ruleCount);
 
+    /**
+     * @return Filter rules count
+     */
     int getFilterRuleCount();
 
+    /**
+     * Increments browser connected count
+     */
     void incBrowserConnectedCount();
 
+    /**
+     * @return Browser connected count
+     */
     int getBrowserConnectedCount();
 
-    boolean isShowAboutOtherProduct();
+    /**
+     * @return @return True if we have shown the welcome message
+     */
+    boolean isWelcomeMessage();
 
-    void setShowAboutOtherProduct(boolean value);
+    /**
+     * Save the flag determining that we have shown welcome message
+     * @param value True if shown
+     */
+    void setWelcomeMessage(boolean value);
 }

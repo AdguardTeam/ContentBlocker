@@ -32,7 +32,6 @@ public class ServiceLocator {
     private static WeakHashMap<Context, ServiceLocator> locators = new WeakHashMap<>();
     private FilterService filterService;
     private PreferencesService preferencesService;
-    private JobService jobService;
 
     /**
      * Creates an instance of the ServiceLocator
@@ -81,16 +80,5 @@ public class ServiceLocator {
         }
 
         return preferencesService;
-    }
-
-    /**
-     * @return Job service singleton
-     */
-    public JobService getJobService() {
-        if (jobService == null) {
-            jobService = new JobServiceImpl();
-        }
-
-        return jobService;
     }
 }

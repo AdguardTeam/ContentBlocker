@@ -107,12 +107,6 @@ public class ActivityUtils {
         return Math.min(point.x, point.y);
     }
 
-    public static void setPortraitOnly(Activity activity) {
-        if (activity.getResources().getBoolean(R.bool.portraitOnly) || getSmallestScreenSize(activity) <= 320) {
-            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        }
-    }
-
     public static void startMarket(Context context, String packageName, String referrer)
     {
         String referrerParam = referrer != null ? "&referrer=" + referrer : "";

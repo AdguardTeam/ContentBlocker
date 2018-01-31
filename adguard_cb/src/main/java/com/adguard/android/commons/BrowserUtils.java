@@ -155,7 +155,7 @@ public class BrowserUtils {
         List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
             for (ResolveInfo info : list) {
-                if (info.activityInfo.packageName.contains(MainActivity.YANDEX)) {
+                if (info.activityInfo.packageName.contains(BrowserUtils.YANDEX)) {
                     return true;
                 }
             }
@@ -166,7 +166,7 @@ public class BrowserUtils {
         list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
             for (ResolveInfo info : list) {
-                if (info.activityInfo.packageName.contains(MainActivity.YANDEX)) {
+                if (info.activityInfo.packageName.contains(BrowserUtils.YANDEX)) {
                     return true;
                 }
             }

@@ -95,4 +95,7 @@
     <string name="clearUserRulesButtonText">Видалити все</string>
     <string name="browseButtonText">Огляд</string>
     <string name="reportBug">Повідомити про помилку</string>
+    <string name="description_about_other_adguard_product">Ви знаєте, що ви можете використовувати AdGuard на будь-якому пристрої, комп\'ютері та ОС? Дізнайтеся більше на нашому сайті.</string>
+    <string name="no_thanks">Ні, дякую</string>
+    <string name="learn_more">Дізнатися більше</string>
 </resources>

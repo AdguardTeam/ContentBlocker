@@ -95,4 +95,7 @@
     <string name="clearUserRulesButtonText">Alle entfernen</string>
     <string name="browseButtonText">Durchsuchen</string>
     <string name="reportBug">Fehler melden</string>
+    <string name="description_about_other_adguard_product">Wissen Sie, dass Sie AdGuard auf jedem Gerät, Computer und iOS verwenden können? Erfahren Sie mehr auf unserer Website.</string>
+    <string name="no_thanks">Nein, Danke</string>
+    <string name="learn_more">Mehr erfahren</string>
 </resources>

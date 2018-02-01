@@ -95,4 +95,7 @@
     <string name="clearUserRulesButtonText">Fjern alt</string>
     <string name="browseButtonText">Gennemse</string>
     <string name="reportBug">Rapporter en fejl</string>
+    <string name="description_about_other_adguard_product">Vidste du, at du kan bruge AdGuard på en hvilken som helst enhed, computer og OS? Lær mere på vores hjemmeside.</string>
+    <string name="no_thanks">Nej Tak</string>
+    <string name="learn_more">Lær Mere</string>
 </resources>

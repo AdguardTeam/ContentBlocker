@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="refresh">Oppdater</string>
+    <string name="please_wait">Vennligst vent...</string>
+    <string name="main_info">Denne applikasjonen er en utvidelse for nettlesere som støtter innholdsblokkering.\n\nFor øyeblikket er det kun to slike nettlesere:\n\n1. Samsung Internet Browser\n2. Yandex Browser\n\nVed hjelp av denne applikasjonen kan du blokkere alle annonser i disse nettleserne.\n\nDu kan også velge hvilke filtre som skal brukes i innstillingene.</string>
+    <string name="progressGenericErrorText">En feil oppstod!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} filtre importert!</string>
+    <string name="importUserRulesErrorResultMessage">En feil oppstod under importeringen av filtrene!</string>
+    <string name="importUserRulesProgressDialogTitle">Importering pågår</string>
+    <string name="importUserRulesProgressDialogMessage">Laster...</string>
+    <string name="checkUpdatesProgressDialogTitle">Ser etter oppdateringer</string>
+    <string name="checkUpdatesProgressDialogMessage">Ser etter oppdateringer. Vennligst vent...</string>
+    <string name="checkUpdatesErrorResultMessage">Oppdatering feilet. Prøv igjen senere.</string>
+    <string name="checkUpdatesZeroResultMessage">Du bruker den nyeste versjonen av filtrene.</string>
+    <string name="checkUpdatesOneResultMessage">Ett filter har blitt oppdatert:{0}</string>
+    <string name="checkUpdatesManyResultMessage">{0} filtre har blitt oppdatert:{1}</string>
+    <string name="action_settings">Innstillinger</string>
+    <string name="openned_drawer_title">Alternativer</string>
+    <string name="about">Om</string>
+    <string name="settings">Innstillinger</string>
+    <string name="pref_autoupdate_filters">Autooppdater filtre</string>
+    <string name="pref_summary_autoupdate_filters">Oppdater filtre automatisk</string>
+    <string name="pref_update_wifi_only">Oppdater kun over Wi-Fi</string>
+    <string name="pref_summary_update_wifi_only">AdGuard vil oppdatere filtre kun over Wi-Fi.</string>
+    <string name="pref_show_useful_ads">Vis nyttige annonser</string>
+    <string name="pref_summary_show_useful_ads">Blokkerer ikke annonser som kan være nyttige for brukeren.</string>
+    <string name="pref_filters_category">Filtre</string>
+    <string name="pref_summary_filters_category">Velg hvilke filtre som skal brukes</string>
+    <string name="filters">Filtre</string>
+    <string name="stats_enabled_filters">Filtre</string>
+    <string name="stats_enabled_rules">Regler</string>
+    <string name="stats_update_time">Oppdatert:</string>
+    <string name="start_samsung_browser">Åpne alternativer for Samsung Internet Browser</string>
+    <string name="start_yandex_browser">Åpne alternativer for Yandex Browser</string>
+    <string name="open_browsers_info">For å aktivere innholdsblokkering ved å bruke våre filtre, kan du åpne nettleseralternativene direkte ved å klikke her:</string>
+    <string name="filterVersionTemplate">Versjon {0}.</string>
+    <string name="filterUpdatedTemplate">Oppdatert {0}, {1}.</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">Versjon {0}</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAlle rettigheter reservert.</string>
+    <string name="rateAdguardButtonText">Ranger AdGuard</string>
+    <string name="feedbackButtonText">Send tilbakemelding</string>
+    <string name="officialSiteLabelText">Offisiell side</string>
+    <string name="forumLabelText">Forum</string>
+    <string name="emailLabelText">E-post</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Rettningslinjer angående personvern</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">Sluttbrukerlisens</a></string>
+    <string name="copyrightMessage">AdGuard-innholdsblokkerer er gratis programvare: du kan redistribuere den og/eller endre den i henhold til vilkårene i GNU General Public License som publisert av Free Software Foundation, enten versjon 3 av lisensen, eller (etter eget valg) en senere versjon.</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
+    <string name="install_browsers">Du har ingen kompatible nettlesere installert! Du kan installere dem fra Google Play:</string>
+    <string name="install_samsung_browser">Installer Samsung Internet Browser</string>
+    <string name="install_yandex_browser">Installer Yandex Browser</string>
+    <string name="issuesButtonText">Rapporter en feil</string>
+    <string name="githubLabelText">Kildekode</string>
+    <!--Do not translate.-->
+    <string name="warning">Advarsel</string>
+    <string name="too_many_filters_warning">Du har valgt alt for mange filterabonnementer. Dette kan redusere nettsurfingen din betydelig.</string>
+    <string name="pref_whitelist_category">Hviteliste</string>
+    <string name="pref_summary_whitelist_category">Domener i hvitelisten vil ikke filtreres</string>
+    <string name="onboarding_title1">Velkommen!</string>
+    <string name="onboarding_text1">Du er bare et par steg unna et raskt og rent Internett, uten annonser.</string>
+    <string name="onboarding_button_text1">Kom i gang</string>
+    <string name="onboarding_title2">Velg en nettleser</string>
+    <string name="onboarding_text2">For å fungere trenger AdGuard en nettleser som støtter annonseblokkeringsteknologi. For øyeblikket er det to slike nettlesere.</string>
+    <string name="onboarding_button_text2">Velg nettleser</string>
+    <string name="onboarding_title3">Nesten der!</string>
+    <string name="onboarding_text3">En kompatibel nettleser ble funnet. Alt som er gjenstår er å aktivere  AdGuard i innstillingene til nettleseren.</string>
+    <string name="onboarding_button_text3">Aktiver AdGuard</string>
+    <string name="count">Tell</string>
+    <string name="check_filter_updates">Se etter filteroppdateringer</string>
+    <string name="go_to_filters">Gå til filtrene</string>
+    <string name="browser">Nettleser</string>
+    <string name="install">Installer</string>
+    <string name="start">Start</string>
+    <string name="get_started">Kom i gang</string>
+    <string name="adguard_conditions_title">To betingelser må oppfylles for at AdGuard skal fungere:</string>
+    <string name="adguard_conditions_list1">Du må bruke en nettleser som støtter innholdsblokkeringsteknologi.</string>
+    <string name="adguard_conditions_list2">AdGuard må være aktivert i nettleserens innholdsblokkeringsinnstillinger.</string>
+    <string name="choose_browser">Velg nettleser</string>
+    <string name="enable_adguard">Aktiver AdGuard</string>
+    <string name="main_activity_adguard_info">AdGuard blokkerer annonser, beskytter personvernet ditt, øker hastigheten på sider og reduserer mobildatabruken din.</string>
+    <string name="exit">Avslutt</string>
+    <string name="user_filter">Brukerfilter</string>
+    <string name="enter_rule_text">Angi regeltekst</string>
+    <string name="cancel">Avbryt</string>
+    <string name="ok">OK</string>
+    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">Brukerfilteret er tomt</string>
+    <string name="addUserRuleButtonText">Legg til regel</string>
+    <string name="importUserRulesButtonText">Importer</string>
+    <string name="importUserRulesDialogTitle">Angi nettadresse eller banen til filen</string>
+    <string name="importUserRulesUrlErrorMessage">Nettadressen er ugyldig</string>
+    <string name="clearUserRulesButtonText">Fjern alle</string>
+    <string name="browseButtonText">Utforsk</string>
+    <string name="reportBug">Rapporter en feil</string>
+</resources>

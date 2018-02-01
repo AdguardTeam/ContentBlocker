@@ -29,7 +29,9 @@ import com.adguard.android.commons.BrowserUtils;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ui.ClickViewPager;
 import com.adguard.android.service.PreferencesService;
-import com.adguard.commons.concurrent.ExecutorsPool;
+import com.adguard.android.commons.concurrent.ExecutorsPool;
+import com.adguard.android.ui.utils.NavigationHelper;
+
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 /**
  This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
- Copyright © 2016 Performix LLC. All rights reserved.
+ Copyright © 2018 Adguard Software Ltd. All rights reserved.
 
  Adguard Content Blocker is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by the
@@ -107,24 +107,14 @@ public class ActivityUtils {
         return Math.min(point.x, point.y);
     }
 
-    public static void setPortraitOnly(Activity activity) {
-        if (activity.getResources().getBoolean(R.bool.portraitOnly) || getSmallestScreenSize(activity) <= 320) {
-            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        }
-    }
-
-    public static void startMarket(Context context, String packageName, String referrer)
-    {
+    public static void startMarket(Context context, String packageName, String referrer) {
         String referrerParam = referrer != null ? "&referrer=" + referrer : "";
-        try
-        {
+        try {
             Uri uri = Uri.parse("market://details?id=" + packageName + referrerParam);
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
-        }
-        catch (ActivityNotFoundException anfe)
-        {
+        } catch (ActivityNotFoundException anfe) {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + packageName + referrerParam));
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);

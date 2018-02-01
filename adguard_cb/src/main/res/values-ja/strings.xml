@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <resources>
-    <string name="refresh">リフレッシュ</string>
+    <string name="refresh">更新</string>
     <string name="please_wait">しばらくお待ちください...</string>
-    <string name="main_info">このアプリケーションは、コンテンツ・ブロッキングをサポートするブラウザ用の拡張機能です。\n\n現在、2つのブラウザに対応しています:\n\n1.サムスンのインターネットブラウザ\n2. Yandexのブラウザ\n\nこのアプリケーションによって、ブラウザ内のすべての広告をブロックすることができます。\n\nまた、設定で使用するフィルタを選択することもできます。</string>
+    <string name="main_info">このアプリケーションは、コンテンツ・ブロッキングをサポートするブラウザ用の拡張機能です。\n\n現在、2つのブラウザに対応しています:\n\n1.サムスンインターネットブラウザ\n2. Yandexのブラウザ\n\nこのアプリケーションによって、ブラウザ内のすべての広告をブロックすることができます。\n\nまた、設定で使用するフィルタを選択することもできます。</string>
     <string name="progressGenericErrorText">エラーが発生しました!</string>
     <string name="importUserRulesSuccessResultMessage">{0} 個のフィルターをインポートしました!</string>
     <string name="importUserRulesErrorResultMessage">フィルタをインポート中にエラーが発生しました!</string>
@@ -16,7 +16,7 @@
     <string name="checkUpdatesManyResultMessage">{0}個のフィルタ更新に成功しました：{1}</string>
     <string name="action_settings">設定</string>
     <string name="openned_drawer_title">オプション</string>
-    <string name="about">Adguardについて</string>
+    <string name="about">AdGuardについて</string>
     <string name="settings">設定</string>
     <string name="pref_autoupdate_filters">フィルタの自動更新</string>
     <string name="pref_summary_autoupdate_filters">フィルタを自動更新する</string>
@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">{0}を{1}に更新しました。</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">バージョン {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nAll Rights Reserved.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAll Rights Reserved.</string>
     <string name="rateAdguardButtonText">AdGuard を評価</string>
     <string name="feedbackButtonText">フィードバックを送信</string>
     <string name="officialSiteLabelText">公式サイト</string>

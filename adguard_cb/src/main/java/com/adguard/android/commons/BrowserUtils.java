@@ -1,6 +1,6 @@
 /**
  * This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
- * Copyright © 2016 Performix LLC. All rights reserved.
+ * Copyright © 2018 Adguard Software Ltd. All rights reserved.
  * <p>
  * Adguard Content Blocker is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by the
@@ -155,7 +155,7 @@ public class BrowserUtils {
         List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
             for (ResolveInfo info : list) {
-                if (info.activityInfo.packageName.contains(MainActivity.YANDEX)) {
+                if (info.activityInfo.packageName.contains(BrowserUtils.YANDEX)) {
                     return true;
                 }
             }
@@ -166,7 +166,7 @@ public class BrowserUtils {
         list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
             for (ResolveInfo info : list) {
-                if (info.activityInfo.packageName.contains(MainActivity.YANDEX)) {
+                if (info.activityInfo.packageName.contains(BrowserUtils.YANDEX)) {
                     return true;
                 }
             }

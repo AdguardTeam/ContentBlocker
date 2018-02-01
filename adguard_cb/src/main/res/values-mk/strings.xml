@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="refresh">Освежи</string>
+    <string name="please_wait">Ве молиме почекајте...</string>
+    <string name="main_info">Оваа апликација е екстензија за прелистувачи кои поддржуваат блокирање на содржината.\n\nМоментално има два такви прелистувачи:\n\n1. Samsung Интернет Прелистувач\n2. Yandex Прелистувач\n\nСо помош на оваа апликација, вие можете да ги блокирате сите огласи во овие прелистувачи.\n\nИсто така, вие можите да изберете кои филтри да ги користите во Поставки.</string>
+    <string name="progressGenericErrorText">Се случи некоја грешка!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} филтер(и) внесени успешно!</string>
+    <string name="importUserRulesErrorResultMessage">Грешка при внесувањето на филтрите!</string>
+    <string name="importUserRulesProgressDialogTitle">Внесувањето е во напредок</string>
+    <string name="importUserRulesProgressDialogMessage">Вчитување...</string>
+    <string name="checkUpdatesProgressDialogTitle">Проверка за ажурирања</string>
+    <string name="checkUpdatesProgressDialogMessage">Проверка за ажурирања. Ве молиме почекајте...</string>
+    <string name="checkUpdatesErrorResultMessage">Ажурирањето не беше успешно. Ве молиме обидете се повторно.</string>
+    <string name="checkUpdatesZeroResultMessage">Вие ја користите најновата верзија на филтрите.</string>
+    <string name="checkUpdatesOneResultMessage">Еден филтер беше ажуриран:{0}</string>
+    <string name="checkUpdatesManyResultMessage">{0} филтри беа ажурирани:{1}</string>
+    <string name="action_settings">Поставки</string>
+    <string name="openned_drawer_title">Опции</string>
+    <string name="about">За програмата</string>
+    <string name="settings">Поставки</string>
+    <string name="pref_autoupdate_filters">Автоматски ажурирај ги филтрите</string>
+    <string name="pref_summary_autoupdate_filters">Ажурирај ги филтрите автоматски</string>
+    <string name="pref_update_wifi_only">Ажурирај само преку Wi-Fi</string>
+    <string name="pref_summary_update_wifi_only">AdGuard ќе добива ажурирања на филтрите само преку Wi-Fi.</string>
+    <string name="pref_show_useful_ads">Прикажувај корисни реклами</string>
+    <string name="pref_summary_show_useful_ads">Ги одблокира рекламите коишто можат да бидат корисни за корисниците.</string>
+    <string name="pref_filters_category">Филтри</string>
+    <string name="pref_summary_filters_category">Изберете кои филтри да ги користите</string>
+    <string name="filters">Филтри</string>
+    <string name="stats_enabled_filters">Филтри</string>
+    <string name="stats_enabled_rules">Правила</string>
+    <string name="stats_update_time">Ажурирани:</string>
+    <string name="start_samsung_browser">Отвори ги опциите на Samsung Интернет Прелистувачот</string>
+    <string name="start_yandex_browser">Отвори ги опциите на Yandex Прелистувачот</string>
+    <string name="open_browsers_info">За да го вклучите блокирањето на содржината користејќи ги нашите филтри, вие можите директно да ги отворите опциите на прелистувачот притискајќи тука:</string>
+    <string name="filterVersionTemplate">Верзија {0}.</string>
+    <string name="filterUpdatedTemplate">Ажурирано на {0} во {1}.</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">Верзија {0}</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAll Rights Reserved.</string>
+    <string name="rateAdguardButtonText">Оцени го AdGuard</string>
+    <string name="feedbackButtonText">Испрати Повратен Одговор</string>
+    <string name="officialSiteLabelText">Официјална страница</string>
+    <string name="forumLabelText">Форум</string>
+    <string name="emailLabelText">Е-маил</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Политика на Приватност</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="copyrightMessage">AdGuard Блокатор на Содржина е бесплатен софтвер: вие можите да го редистрибутирате и/или да го изменувате под условите на GNU Општата Јавна Лиценца како што е издадена од Слободната Фондација за Софтвер, или верзијата 3 на Лиценцата, или (како ваша опција) било која покасна верзија.</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
+    <string name="install_browsers">Вие немате поддржани прелистувачи инсталирано! Вие можете да ги инсталирате од Google Play:</string>
+    <string name="install_samsung_browser">Инсталирајте го Samsung Интернет Прелистувачот</string>
+    <string name="install_yandex_browser">Инсталирајте го Yandex Прелистувачот</string>
+    <string name="issuesButtonText">Пријавете Грешка</string>
+    <string name="githubLabelText">Изворен код</string>
+    <!--Do not translate.-->
+    <string name="warning">Предупредување</string>
+    <string name="too_many_filters_warning">Вие избравте премногу претплати за филтри. Ова може да го намали вашето веб прелистување значајно.</string>
+    <string name="pref_whitelist_category">Бела Листа</string>
+    <string name="pref_summary_whitelist_category">Домените во оваа листа нема да бидат филтрирани</string>
+    <string name="onboarding_title1">Добредојдовте!</string>
+    <string name="onboarding_text1">Вие сте само неколку чекори од брз и чист интернет, без реклами.</string>
+    <string name="onboarding_button_text1">Започнете</string>
+    <string name="onboarding_title2">Изберете прелистувач</string>
+    <string name="onboarding_text2">За да дејствува, AdGuard треба прелистувач кој поддржува технологија на блокирање на реклами. Моментално, има два такви прелистувачи.</string>
+    <string name="onboarding_button_text2">Изберете прелистувач</string>
+    <string name="onboarding_title3">Скоро сте таму!</string>
+    <string name="onboarding_text3">Соодветен прелистувач беше пронајден. Се што преостанува е вкучување на AdGuard во неговите поставки.</string>
+    <string name="onboarding_button_text3">Вклучи го AdGuard</string>
+    <string name="count">Избројани</string>
+    <string name="check_filter_updates">Провери за ажурирања на филтрите</string>
+    <string name="go_to_filters">Оди во филтри</string>
+    <string name="browser">Прелистувач</string>
+    <string name="install">Инсталирај</string>
+    <string name="start">Стартувај</string>
+    <string name="get_started">Започнете</string>
+    <string name="adguard_conditions_title">Два услови треба да бидат исполнети за AdGuard да работи:</string>
+    <string name="adguard_conditions_list1">Вие треба да користите прелистувач кој поддржува технологија на блокирање на реклами.</string>
+    <string name="adguard_conditions_list2">AdGuard мора да биде вклучен во поставките на овај прелистувач за блокирање на содржината.</string>
+    <string name="choose_browser">Изберете прелистувач</string>
+    <string name="enable_adguard">Вклучи го AdGuard</string>
+    <string name="main_activity_adguard_info">AdGuard блокира реклами, ја заштитува вашата приватност, ги зголемува брзините на вчитување на страниците, и ја намалува употребата на мобилни податоци.</string>
+    <string name="exit">Излез</string>
+    <string name="user_filter">Кориснички Филтер</string>
+    <string name="enter_rule_text">Внесете текст на правилото</string>
+    <string name="cancel">Откажи</string>
+    <string name="ok">Во Ред</string>
+    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">Корисничкиот филтер е празен</string>
+    <string name="addUserRuleButtonText">Додај правило</string>
+    <string name="importUserRulesButtonText">Внеси</string>
+    <string name="importUserRulesDialogTitle">Внесте УРЛ или патека до датотеката</string>
+    <string name="importUserRulesUrlErrorMessage">URL-то не е валидно</string>
+    <string name="clearUserRulesButtonText">Отстрани ги сите</string>
+    <string name="browseButtonText">Прелистај</string>
+    <string name="reportBug">Пријавете грешка</string>
+</resources>

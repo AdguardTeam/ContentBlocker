@@ -1,6 +1,6 @@
 /**
  This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
- Copyright © 2016 Performix LLC. All rights reserved.
+ Copyright © 2018 Adguard Software Ltd. All rights reserved.
 
  Adguard Content Blocker is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by the
@@ -171,44 +171,6 @@ public class RawResources {
      */
     public static String getSelectFiltersScript(Context context) {
         return getResourceAsString(context, R.raw.select_filters).replace("{0}", Locale.getDefault().getLanguage());
-    }
-
-    /**
-     * @param context Current context
-     * @return application environment name
-     */
-    public static String getApplicationEnvironment(Context context) {
-        if (properties == null) {
-            if (loadProperties(context) == null) {
-                return null;
-            }
-        }
-
-        return properties.getProperty("application.environment");
-    }
-
-    /**
-     * @param context Context
-     * @return is application production environment
-     */
-    public static boolean isProductionEnvironment(Context context) {
-        return "prod".equals(getApplicationEnvironment(context)) || isGoogleEnvironment(context);
-    }
-
-    /**
-     * @param context Context
-     * @return is application google environment
-     */
-    public static boolean isGoogleEnvironment(Context context) {
-        return "google".equals(getApplicationEnvironment(context));
-    }
-
-    /**
-     * @param context Context
-     * @return is application amazon environment
-     */
-    public static boolean isAmazonEnvironment(Context context) {
-        return "amazon".equals(getApplicationEnvironment(context));
     }
 
     /**

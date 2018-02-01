@@ -41,7 +41,7 @@
     <string name="filterUpdatedTemplate">Updated {0} at {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Version {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nAll Rights Reserved.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAll Rights Reserved.</string>
     <string name="rateAdguardButtonText">Rate AdGuard</string>
     <string name="feedbackButtonText">Send Feedback</string>
     <string name="officialSiteLabelText">Official site</string>
@@ -106,4 +106,14 @@
     <string name="browseButtonText">Browse</string>
     <string name="github">Github</string>
     <string name="reportBug">Report a bug</string>
+    <string name="yandex_browser_name" translatable="false">Yandex Browser</string>
+    <string name="yandex_developer" translatable="false">Yandex</string>
+    <string name="yandex_browser_rating" translatable="false">4,5</string>
+    <string name="samsung_browser_name" translatable="false">Samsung Internet</string>
+    <string name="samsung_developer" translatable="false">Samsung Electronics Co., Ltd.</string>
+    <string name="samsung_browser_rating" translatable="false">4,4</string>
+    <string name="empty" translatable="false"></string>
+    <string name="description_about_other_adguard_product">Do you know that you can use AdGuard on any device, computer, and OS? Learn more on our website.</string>
+    <string name="no_thanks">No Thanks</string>
+    <string name="learn_more">Learn More</string>
 </resources>

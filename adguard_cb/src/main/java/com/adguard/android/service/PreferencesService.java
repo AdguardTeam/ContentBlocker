@@ -1,6 +1,6 @@
 /**
  This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
- Copyright © 2016 Performix LLC. All rights reserved.
+ Copyright © 2018 Adguard Software Ltd. All rights reserved.
 
  Adguard Content Blocker is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by the
@@ -16,7 +16,6 @@
  */
 package com.adguard.android.service;
 
-import com.adguard.commons.enums.FilteringQuality;
 
 import java.util.Collection;
 import java.util.Date;
@@ -46,16 +45,6 @@ public interface PreferencesService {
      * @param value true if update over wifi only is enabled
      */
     void setUpdateOverWifiOnly(boolean value);
-
-    /**
-     * @return true if user will send anonymous security-related statistics
-     */
-    boolean isSendAnonymousStatistics();
-
-    /**
-     * @param value true if user will send anonymous security-related statistics
-     */
-    void setSendAnonymousStatistics(boolean value);
 
     /**
      * @return True if we have shown the onboarding screen
@@ -124,20 +113,6 @@ public interface PreferencesService {
     void addUserRuleItems(Collection<String> items);
 
     /**
-     * Gets last version found
-     *
-     * @return Last version found
-     */
-    String getLastVersionFound();
-
-    /**
-     * Sets last version found
-     *
-     * @param value Last version found
-     */
-    void setLastVersionFound(String value);
-
-    /**
      * @param time Last time updates where checked
      */
     void setLastUpdateCheck(long time);
@@ -146,51 +121,6 @@ public interface PreferencesService {
      * @return Last time updates where checked
      */
     Date getLastUpdateCheck();
-
-    /**
-     * @param code Logging level
-     */
-    void setLogLevel(int code);
-
-    /**
-     * @return Current logging level
-     */
-    int getLogLevel();
-
-    /**
-     * @param referrerString Referrer value (got from INSTALL_REFERRER receiver)
-     */
-    void setReferrer(String referrerString);
-
-    /**
-     * @return Referrer value (got from INSTALL_REFERRER receiver)
-     */
-    String getReferrer();
-
-    /**
-     * @return Current application language
-     */
-    String getAppLanguage();
-
-    /**
-     * @param languageCode Current application language
-     */
-    void setAppLanguage(String languageCode);
-
-    /**
-     * @return Current filtering quality mode.
-     */
-    FilteringQuality getFilteringQuality();
-
-    /**
-     * @return Device speed rank
-     */
-    int getDeviceSpeedRank();
-
-    /**
-     * @param quality Filtering quality mode.
-     */
-    void setFilteringQuality(FilteringQuality quality);
 
     /**
      * Gets url from which user imported his rules
@@ -206,23 +136,6 @@ public interface PreferencesService {
      */
     void setLastImportUrl(String url);
 
-    boolean isFirstStartTutorialNeeded();
-
-    /**
-     * Gets current update channel
-     *
-     * @return current update channel: 0 - release, 1 - beta.
-     */
-    int getUpdateChannel();
-
-    /**
-     * Saves new update channel
-     * 0 - release, 1 - beta
-     *
-     * @param selectedChannel new update channel
-     */
-    void setUpdateChannel(int selectedChannel);
-
     /**
      * Set whether we should show useful ads
      */
@@ -232,11 +145,35 @@ public interface PreferencesService {
      */
     boolean isShowUsefulAds();
 
+    /**
+     * Sets filter rules count
+     * @param ruleCount Filter rules count
+     */
     void setFilterRuleCount(int ruleCount);
 
+    /**
+     * @return Filter rules count
+     */
     int getFilterRuleCount();
 
+    /**
+     * Increments browser connected count
+     */
     void incBrowserConnectedCount();
 
+    /**
+     * @return Browser connected count
+     */
     int getBrowserConnectedCount();
+
+    /**
+     * @return @return True if we have shown the welcome message
+     */
+    boolean isWelcomeMessage();
+
+    /**
+     * Save the flag determining that we have shown welcome message
+     * @param value True if shown
+     */
+    void setWelcomeMessage(boolean value);
 }

@@ -215,8 +215,6 @@
         <item name="android:layout_marginLeft">@dimen/aboutViewLinkButtonMarginLeft</item>
     </style>
 
-    <string name="empty" translatable="false" />
-
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
@@ -261,5 +259,10 @@
     <style name="smallGreenButton" parent="parentButtonStyle">
         <item name="android:textAllCaps">true</item>
         <item name="android:drawablePadding">1dp</item>
+    </style>
+
+    <style name="transparentButton" parent="parentButtonStyle">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/common_text</item>
     </style>
 </resources>

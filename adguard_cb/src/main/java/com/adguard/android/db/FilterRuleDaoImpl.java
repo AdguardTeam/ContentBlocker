@@ -1,6 +1,6 @@
 /**
  This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
- Copyright © 2016 Performix LLC. All rights reserved.
+ Copyright © 2018 Adguard Software Ltd. All rights reserved.
 
  Adguard Content Blocker is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by the
@@ -17,10 +17,10 @@
 package com.adguard.android.db;
 
 import android.content.Context;
-import com.adguard.filter.rules.FilterRule;
 import org.apache.commons.collections4.list.SetUniqueList;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,6 +38,13 @@ public class FilterRuleDaoImpl implements FilterRuleDao {
 
     private final Logger log = LoggerFactory.getLogger(FilterRuleDaoImpl.class);
     private final Context context;
+
+    private static final String MASK_CSS_RULE = "##";
+    private static final String MASK_CSS_EXCEPTION_RULE = "#@#";
+    private static final String MASK_CSS_INJECT_RULE = "#$#";
+    private static final String MASK_CSS_INJECT_EXCEPTION_RULE = "#@$#";
+    private static final String MASK_SCRIPT_RULE = "#%#";
+    private static final String MASK_CONTENT_RULE = "$$";
 
     /**
      * Creates an instance of the filter rules internal storage
@@ -109,7 +116,7 @@ public class FilterRuleDaoImpl implements FilterRuleDao {
 
             String line = reader.readLine();
             while (line != null) {
-                if (useCosmetics || !FilterRule.isCosmeticRule(line)) {
+                if (useCosmetics || !isCosmeticRule(line)) {
                     rules.add(line);
                 }
                 line = reader.readLine();
@@ -124,6 +131,22 @@ public class FilterRuleDaoImpl implements FilterRuleDao {
             IOUtils.closeQuietly(inputStreamReader);
             IOUtils.closeQuietly(reader);
         }
+    }
+
+    /**
+     * Returns true if rule is CSS, JS or Content
+     *
+     * @param ruleText Rule text
+     * @return true if rule is CSS, JS or Content
+     */
+    private static boolean isCosmeticRule(String ruleText) {
+        return StringUtils.isEmpty(ruleText) ||
+                ruleText.contains(MASK_CSS_RULE) ||
+                ruleText.contains(MASK_CSS_EXCEPTION_RULE) ||
+                ruleText.contains(MASK_CSS_INJECT_RULE) ||
+                ruleText.contains(MASK_CSS_INJECT_EXCEPTION_RULE) ||
+                ruleText.contains(MASK_SCRIPT_RULE) ||
+                ruleText.contains(MASK_CONTENT_RULE);
     }
 
     /**

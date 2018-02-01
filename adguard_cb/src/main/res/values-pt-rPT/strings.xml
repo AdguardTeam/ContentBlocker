@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="refresh">Actualizar</string>
+    <string name="please_wait">Por favor, aguarde...</string>
+    <string name="main_info">Esta aplicação é uma extensão para navegadores que suportam bloqueio de conteúdo.\n\nActualmente, existem dois desses navegadores:\n\n1. Navegador de Internet da Samsung\n2. Navegador Yandex \n\nCom a ajuda desta aplicação, pode bloquear todos os anúncios nesses navegadores.\n\nAlém disso, pode seleccionar que filtros usar em Configurações.</string>
+    <string name="progressGenericErrorText">Ocorreu um erro!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} filtro(s) importados com sucesso!</string>
+    <string name="importUserRulesErrorResultMessage">Ocorreu um erro ao importar os filtros!</string>
+    <string name="importUserRulesProgressDialogTitle">Importação em execução</string>
+    <string name="importUserRulesProgressDialogMessage">A carregar...</string>
+    <string name="checkUpdatesProgressDialogTitle">A verificar se existem actualizações</string>
+    <string name="checkUpdatesProgressDialogMessage">A verificar se existem actualizações, por favor aguarde...</string>
+    <string name="checkUpdatesErrorResultMessage">A actualização falhou. Por favor tente mais tarde.</string>
+    <string name="checkUpdatesZeroResultMessage">Está a usar a versão mais recente dos filtros.</string>
+    <string name="checkUpdatesOneResultMessage">Um filtro foi actualizado:{0}</string>
+    <string name="checkUpdatesManyResultMessage">{0} filtros foram actualizados:{1}</string>
+    <string name="action_settings">Definições</string>
+    <string name="openned_drawer_title">Opções</string>
+    <string name="about">Sobre</string>
+    <string name="settings">Definições</string>
+    <string name="pref_autoupdate_filters">Actualização automática dos filtros</string>
+    <string name="pref_summary_autoupdate_filters">Actualizar automaticamente os filtros</string>
+    <string name="pref_update_wifi_only">Actualizar apenas por Wi-Fi</string>
+    <string name="pref_summary_update_wifi_only">O AdGuard obterá actualizações dos filtros somente por Wi-Fi.</string>
+    <string name="pref_show_useful_ads">Mostrar anúncios úteis</string>
+    <string name="pref_summary_show_useful_ads">Desbloqueia anúncios que podem ser úteis aos utilizadores.</string>
+    <string name="pref_filters_category">Filtros</string>
+    <string name="pref_summary_filters_category">Seleccione os filtros a serem usados</string>
+    <string name="filters">Filtros</string>
+    <string name="stats_enabled_filters">Filtros</string>
+    <string name="stats_enabled_rules">Regras</string>
+    <string name="stats_update_time">Actualizados:</string>
+    <string name="start_samsung_browser">Abrir as opções do navegador da Internet Samsung</string>
+    <string name="start_yandex_browser">Abrir as opções do navegador Yandex</string>
+    <string name="open_browsers_info">Para activar o bloqueio de conteúdo usando os nossos filtros, pode abrir directamente as opções do navegador ao clicar aqui:</string>
+    <string name="filterVersionTemplate">Versão {0}.</string>
+    <string name="filterUpdatedTemplate">Actualizados {0} em {1}.</string>
+    <!--About Adguard-->
+    <string name="versionInfoTextViewText">Versão {0}</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nTodos os Direitos Reservados.</string>
+    <string name="rateAdguardButtonText">Avalie o AdGuard</string>
+    <string name="feedbackButtonText">Enviar Feedback</string>
+    <string name="officialSiteLabelText">Site Oficial</string>
+    <string name="forumLabelText">Fórum</string>
+    <string name="emailLabelText">Email</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Política de Privacidade</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="copyrightMessage">O Bloqueado de Conteúdo AdGuard  é um software livre: pode redistribuí-lo e / ou modificá-lo de acordo com os termos da GNU General Public License, conforme publicado pela Free Software Foundation, seja a versão 3 da Licença, ou (à sua escolha) qualquer versão posterior.</string>
+    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
+    <string name="install_browsers">Não possui navegadores suportados instalados! Pode instalá-los no Google Play:</string>
+    <string name="install_samsung_browser">Instalar o navegador da Internet da Samsung</string>
+    <string name="install_yandex_browser">Instale o Navegador Yandex</string>
+    <string name="issuesButtonText">Comunicar bug</string>
+    <string name="githubLabelText">Código fonte</string>
+    <!--Do not translate.-->
+    <string name="warning">Cuidado</string>
+    <string name="too_many_filters_warning">Seleccionou muitas assinaturas de filtros. Isso pode diminuir significativamente a velocidade da navegação na web.</string>
+    <string name="pref_whitelist_category">Lista Branca</string>
+    <string name="pref_summary_whitelist_category">Os domínios constantes nesta lista não serão filtrados</string>
+    <string name="onboarding_title1">Bem-vindo!</string>
+    <string name="onboarding_text1">Está a poucos passos de distância de uma internet rápida e limpa, sem publicidade.</string>
+    <string name="onboarding_button_text1">Vamos começar</string>
+    <string name="onboarding_title2">Seleccione um navegador</string>
+    <string name="onboarding_text2">Para ser executado, o AdGuard precisa de um navegador que suporte a tecnologia de bloqueio de publicidade. Actualmente, existem dois desses navegadores.</string>
+    <string name="onboarding_button_text2">Seleccionar navegador</string>
+    <string name="onboarding_title3">Estamos quase!</string>
+    <string name="onboarding_text3">Foi encontrado um navegador apropriado. Tudo o que falta é activar o AdGuard nas suas definições.</string>
+    <string name="onboarding_button_text3">Activar o AdGuard</string>
+    <string name="count">Contagem</string>
+    <string name="check_filter_updates">Verifique a actualização dos filtros</string>
+    <string name="go_to_filters">Ir para os filtros</string>
+    <string name="browser">Navegador</string>
+    <string name="install">Instalar</string>
+    <string name="start">Iniciar</string>
+    <string name="get_started">Vamos começar</string>
+    <string name="adguard_conditions_title">Duas condições devem ser atendidas para que o AdGuard funcione:</string>
+    <string name="adguard_conditions_list1">Precisa de usar um navegador que suporte a tecnologia de bloqueio de conteúdo.</string>
+    <string name="adguard_conditions_list2">O AdGuard deve ser activado nas configurações de bloqueio de conteúdo desse navegador.</string>
+    <string name="choose_browser">Seleccionar navegador</string>
+    <string name="enable_adguard">Activar o AdGuard</string>
+    <string name="main_activity_adguard_info">O AdGuard bloqueia anúncios, protege a sua privacidade, aumenta a velocidade de carregamento da página e reduz o uso de dados móveis.</string>
+    <string name="exit">Sair</string>
+    <string name="user_filter">Filtro do Utilizador</string>
+    <string name="enter_rule_text">Insira o texto da regra</string>
+    <string name="cancel">Cancelar</string>
+    <string name="ok">OK</string>
+    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
+    <string name="emptyUserfilterTextViewText">O filtro do utilizador está vazio</string>
+    <string name="addUserRuleButtonText">Adicionar regra</string>
+    <string name="importUserRulesButtonText">Importar</string>
+    <string name="importUserRulesDialogTitle">Insira o URL ou o caminho para o arquivo</string>
+    <string name="importUserRulesUrlErrorMessage">O URL não é válido</string>
+    <string name="clearUserRulesButtonText">Apagar tudo</string>
+    <string name="browseButtonText">Navegador</string>
+    <string name="reportBug">Comunicar bug</string>
+</resources>

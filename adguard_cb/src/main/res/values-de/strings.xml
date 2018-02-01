@@ -37,7 +37,7 @@
     <string name="filterUpdatedTemplate">Aktualisiert {0} auf {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Version {0}</string>
-    <string name="copyrightInfoTextViewText">© 2008–2017. Performix LLC.\nAlle Rechte vorbehalten.</string>
+    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAlle Rechte vorbehalten.</string>
     <string name="rateAdguardButtonText">AdGuard bewerten</string>
     <string name="feedbackButtonText">Feedback senden</string>
     <string name="officialSiteLabelText">Offizielle Webseite</string>
@@ -50,7 +50,7 @@
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">Forum</a></string>
     <string name="emailSupportLink"><a href="mailto:support@adguard.com">Kontakt-E-Mail</a></string>
     <string name="install_browsers">Sie haben keinen unterstützen Browser installiert! Sie können diese aus Google Play installieren:</string>
-    <string name="install_samsung_browser">Samsung Internet Browser installieren</string>
+    <string name="install_samsung_browser">In Samsung Internet Browser installieren</string>
     <string name="install_yandex_browser">Yandex Browser installieren</string>
     <string name="issuesButtonText">Fehler melden</string>
     <string name="githubLabelText">Quellcode</string>
@@ -95,4 +95,7 @@
     <string name="clearUserRulesButtonText">Alle entfernen</string>
     <string name="browseButtonText">Durchsuchen</string>
     <string name="reportBug">Fehler melden</string>
+    <string name="description_about_other_adguard_product">Wissen Sie, dass Sie AdGuard auf jedem Gerät, Computer und iOS verwenden können? Erfahren Sie mehr auf unserer Website.</string>
+    <string name="no_thanks">Nein, Danke</string>
+    <string name="learn_more">Mehr erfahren</string>
 </resources>

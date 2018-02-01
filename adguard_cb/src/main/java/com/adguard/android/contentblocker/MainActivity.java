@@ -1,6 +1,6 @@
 /**
  This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
- Copyright © 2016 Performix LLC. All rights reserved.
+ Copyright © 2018 Adguard Software Ltd. All rights reserved.
 
  Adguard Content Blocker is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by the
@@ -22,9 +22,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.graphics.Color;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
+import android.support.customtabs.CustomTabsIntent;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -53,6 +55,7 @@ import com.adguard.android.service.FilterService;
 import com.adguard.android.service.FilterServiceImpl;
 import com.adguard.android.service.PreferencesService;
 import com.adguard.android.ui.utils.ActivityUtils;
+import com.adguard.android.ui.utils.NavigationHelper;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -62,8 +65,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements DrawerLayout.DrawerListener, SharedPreferences.OnSharedPreferenceChangeListener {
 
-    public static final String YANDEX = "yandex";
     private static Logger LOG = LoggerFactory.getLogger(MainActivity.class);
+
     private DrawerLayout drawerLayout;
     private ListView drawerList;
     private LinearLayout leftDrawer;
@@ -123,9 +126,33 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             actionBar.setHomeButtonEnabled(true);
         }
 
-        PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
+        final PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
         if (!preferencesService.isOnboardingShown()) {
-            startActivity(new Intent(this, OnboardingActivity.class));
+            NavigationHelper.redirectToActivity(this, OnboardingActivity.class);
+        }
+
+
+        if (!preferencesService.isWelcomeMessage()) {
+            final View bottomBarView = findViewById(R.id.bottom_bar);
+            bottomBarView.setVisibility(View.VISIBLE);
+
+            bottomBarView.findViewById(R.id.no_thanks).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    preferencesService.setWelcomeMessage(true);
+                    bottomBarView.setVisibility(View.GONE);
+                }
+            });
+
+            bottomBarView.findViewById(R.id.learn_more).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    preferencesService.setWelcomeMessage(true);
+                    bottomBarView.setVisibility(View.GONE);
+
+                    NavigationHelper.redirectToWebSite(MainActivity.this, "http://agrd.io/cb_adguard_products");
+                }
+            });
         }
 
         ServiceLocator.getInstance(getApplicationContext()).getFilterService().scheduleFiltersUpdate();
@@ -383,8 +410,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     }
 
     private void openFiltersSettings() {
-        Intent intent = new Intent(MainActivity.this, FiltersActivity.class);
-        startActivity(intent);
+        NavigationHelper.redirectToActivity(MainActivity.this, FiltersActivity.class);
     }
 
     public static class ApplyAndRefreshTask extends AsyncTask<Void, Void, Integer> {
@@ -443,15 +469,15 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             switch (position) {
                 case 0:
                     drawerLayout.closeDrawers();
-                    startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+                    NavigationHelper.redirectToActivity(MainActivity.this, SettingsActivity.class);
                     break;
                 case 1:
                     drawerLayout.closeDrawers();
-                    startActivity(new Intent(MainActivity.this, FiltersActivity.class));
+                    NavigationHelper.redirectToActivity(MainActivity.this, FiltersActivity.class);
                     break;
                 case 2:
                     drawerLayout.closeDrawers();
-                    startActivity(new Intent(MainActivity.this, UserFilterActivity.class));
+                    NavigationHelper.redirectToActivity(MainActivity.this, UserFilterActivity.class);
                     break;
                 case 3:
                     drawerLayout.closeDrawers();
@@ -463,15 +489,15 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                     break;
                 case 5:
                     drawerLayout.closeDrawers();
-                    AboutActivity.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker/issues/new");
+                    NavigationHelper.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker/issues/new");
                     break;
                 case 6:
                     drawerLayout.closeDrawers();
-                    AboutActivity.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker");
+                    NavigationHelper.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker");
                     break;
                 case 7:
                     drawerLayout.closeDrawers();
-                    startActivity(new Intent(MainActivity.this, AboutActivity.class));
+                    NavigationHelper.redirectToActivity(MainActivity.this, AboutActivity.class);
                     break;
                 default:
                     finish();

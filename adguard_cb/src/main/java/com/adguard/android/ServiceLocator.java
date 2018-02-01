@@ -1,6 +1,6 @@
 /**
  This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
- Copyright © 2016 Performix LLC. All rights reserved.
+ Copyright © 2018 Adguard Software Ltd. All rights reserved.
 
  Adguard Content Blocker is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by the
@@ -32,7 +32,6 @@ public class ServiceLocator {
     private static WeakHashMap<Context, ServiceLocator> locators = new WeakHashMap<>();
     private FilterService filterService;
     private PreferencesService preferencesService;
-    private JobService jobService;
 
     /**
      * Creates an instance of the ServiceLocator
@@ -81,16 +80,5 @@ public class ServiceLocator {
         }
 
         return preferencesService;
-    }
-
-    /**
-     * @return Job service singleton
-     */
-    public JobService getJobService() {
-        if (jobService == null) {
-            jobService = new JobServiceImpl();
-        }
-
-        return jobService;
     }
 }

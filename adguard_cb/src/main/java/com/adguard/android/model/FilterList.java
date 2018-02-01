@@ -1,6 +1,6 @@
 /**
  This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
- Copyright © 2016 Performix LLC. All rights reserved.
+ Copyright © 2018 Adguard Software Ltd. All rights reserved.
 
  Adguard Content Blocker is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by the
@@ -16,7 +16,7 @@
  */
 package com.adguard.android.model;
 
-import com.adguard.commons.utils.ProductVersion;
+import com.adguard.android.commons.ProductVersion;
 
 import java.util.Date;
 

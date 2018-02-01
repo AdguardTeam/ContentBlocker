@@ -1,6 +1,6 @@
 /**
  This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
- Copyright © 2016 Performix LLC. All rights reserved.
+ Copyright © 2018 Adguard Software Ltd. All rights reserved.
 
  Adguard Content Blocker is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by the
@@ -27,6 +27,8 @@ import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
+import com.adguard.android.ui.utils.NavigationHelper;
+
 public class AboutActivity extends AppCompatActivity {
 
     @Override
@@ -49,7 +51,7 @@ public class AboutActivity extends AppCompatActivity {
         rateAppButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectToWebSite(AboutActivity.this, getApplicationMarketLink(getApplicationContext()));
+                NavigationHelper.redirectToWebSite(AboutActivity.this, getApplicationMarketLink(getApplicationContext()));
             }
         });
 
@@ -57,7 +59,7 @@ public class AboutActivity extends AppCompatActivity {
         issuesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectToWebSite(AboutActivity.this, "https://github.com/AdguardTeam/ContentBlocker/issues");
+                NavigationHelper.redirectToWebSite(AboutActivity.this,"https://github.com/AdguardTeam/ContentBlocker/issues");
             }
         });
 
@@ -100,17 +102,5 @@ public class AboutActivity extends AppCompatActivity {
      */
     public static String getApplicationMarketLink(Context context) {
         return "https://play.google.com/store/apps/details?id=" + context.getPackageName();
-    }
-
-    /**
-     * Opens web browser at specified url
-     *
-     * @param from Context
-     * @param url  Url to open
-     */
-    public static void redirectToWebSite(Context from, String url) {
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url));
-        from.startActivity(i);
     }
 }

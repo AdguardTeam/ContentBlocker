@@ -26,6 +26,10 @@ GitHub can be used to report a bug or to submit a feature request. To do so, go 
 
 >**Note:** for the filter-related issues (missed ads, false positives etc.) use the [online reporting tool](https://reports.adguard.com/new_issue.html). 
 
+### Becoming a beta tester
+
+To become a beta tester, go to Content Blocker's [Google Play page](https://play.google.com/store/apps/details?id=com.adguard.android.contentblocker) and scroll down to the "Become a beta tester" block. Tap the "I'm in" button to switch to beta channel. You will have an option to leave the beta test at any time the same way.
+
 ### Translating into other languages
 
 You can help us translate the Content Blocker into other languages. Everything you need to know to start translating is gathered in this [KB article](https://kb.adguard.com/general/adguard-translations). Once you are ready, head to [this website](https://adguard.oneskyapp.com/collaboration/) and scroll down to "Content Blocker" project — even if the translation exists already, you can always suggest a better variant.

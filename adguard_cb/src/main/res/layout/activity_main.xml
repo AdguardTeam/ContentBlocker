@@ -509,7 +509,7 @@
 
             </ScrollView>
 
-           <include layout="@layout/botton_bar"/>
+           <include layout="@layout/welcome_message_layout"/>
         </LinearLayout>
 
         <!-- The drawer is given a fixed width in dp and extends the full height of the container. -->

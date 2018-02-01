@@ -27,7 +27,7 @@ android {
     productFlavors {
         yandex_api16 {
             minSdkVersion 16
-            versionCode 26002000
+            versionCode 16002000
         }
         samsung_api21 {
             minSdkVersion 21

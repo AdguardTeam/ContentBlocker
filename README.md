@@ -16,7 +16,7 @@ To see the 'big picture', to watch current progress and to get an idea of approx
 
 ### Releases
 
- * Latest version: [1.8.0](https://github.com/AdguardTeam/ContentBlocker/releases/tag/v1.8.0)
+ * Latest version: [2.0.0](https://github.com/AdguardTeam/ContentBlocker/releases/tag/v2.0.0)
 
 You can find all AdGuard Content Blocker releases here: https://github.com/AdguardTeam/ContentBlocker/releases
 
@@ -25,6 +25,10 @@ You can find all AdGuard Content Blocker releases here: https://github.com/Adgua
 GitHub can be used to report a bug or to submit a feature request. To do so, go to [this page](https://github.com/AdguardTeam/ContentBlocker/issues) and click the *New issue* button. Please, try to use the template that will be provided for you to report bugs (unless your issue is unique enough to justify deviating from the template).
 
 >**Note:** for the filter-related issues (missed ads, false positives etc.) use the [online reporting tool](https://reports.adguard.com/new_issue.html). 
+
+### Becoming a beta tester
+
+To become a beta tester, go to Content Blocker's [Google Play page](https://play.google.com/store/apps/details?id=com.adguard.android.contentblocker) and scroll down to the "Become a beta tester" block. Tap the "I'm in" button to switch to beta channel. You will have an option to leave the beta test at any time the same way.
 
 ### Translating into other languages
 

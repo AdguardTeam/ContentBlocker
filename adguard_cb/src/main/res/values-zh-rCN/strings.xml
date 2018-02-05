@@ -50,7 +50,7 @@
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
     <string name="install_browsers">您未完整受支持的浏览器！您可从 Google Play 安装它们：</string>
-    <string name="install_samsung_browser">安装 Samsung Internet</string>
+    <string name="install_samsung_browser">安装 Samsung Internet Browser</string>
     <string name="install_yandex_browser">安装 Yandex Browser</string>
     <string name="issuesButtonText">报告错误</string>
     <string name="githubLabelText">源码</string>
@@ -95,4 +95,7 @@
     <string name="clearUserRulesButtonText">移除全部</string>
     <string name="browseButtonText">浏览</string>
     <string name="reportBug">报告错误</string>
+    <string name="description_about_other_adguard_product">您知道您可在任何设备，计算机和操作系统上使用 AdGuard 吗？请转到我们的网站以了解更多信息。</string>
+    <string name="no_thanks">不，谢谢</string>
+    <string name="learn_more">了解更多</string>
 </resources>

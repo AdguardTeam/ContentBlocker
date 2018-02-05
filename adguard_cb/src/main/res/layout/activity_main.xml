@@ -345,7 +345,7 @@
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Yandex"
+                                            android:text="@string/yandex_developer"
                                             android:textColor="@color/secondaryText"
                                             android:textSize="14sp"/>
 
@@ -364,7 +364,7 @@
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="4,4"
+                                            android:text="@string/yandex_browser_rating"
                                             android:textColor="@color/primaryText"
                                             android:textSize="12sp"/>
 
@@ -447,7 +447,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="4dp"
-                                        android:text="Samsung Electronics Co., Ltd."
+                                        android:text="@string/samsung_developer"
                                         android:textColor="@color/secondaryText"
                                         android:textSize="14sp"/>
 
@@ -459,7 +459,7 @@
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="3,9"
+                                            android:text="@string/samsung_browser_rating"
                                             android:textColor="@color/primaryText"
                                             android:textSize="12sp"/>
 

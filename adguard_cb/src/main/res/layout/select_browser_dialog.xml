@@ -43,7 +43,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/yandex_browser_name"
+                    android:text="@string/yandex_browser"
                     android:textColor="#212121"
                     android:textSize="16sp"/>
 
@@ -114,7 +114,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/samsung_browser_name"
+                    android:text="@string/samsung_browser"
                     android:textColor="#212121"
                     android:textSize="16sp"/>
                 <TextView

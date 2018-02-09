@@ -17,7 +17,6 @@
     <string name="checkUpdatesManyResultMessage">{0} filters have been updated:{1}</string>
     <string name="action_settings">Settings</string>
     <string name="openned_drawer_title">Options</string>
-    <string name="closed_drawer_title" translatable="false">AdGuard Content Blocker</string>
     <string name="about">About</string>
     <string name="settings">Settings</string>
     <string name="pref_autoupdate_filters">Auto-update filters</string>
@@ -40,21 +39,15 @@
     <string name="rateAdguardButtonText">Rate AdGuard</string>
     <string name="officialSiteLabelText">Official site</string>
     <string name="forumLabelText">Forum</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="copyrightMessage">AdGuard Content Blocker is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">You have no supported browsers installed! You can install them from Google Play:</string>
     <string name="install_samsung_browser">Install Samsung Internet Browser</string>
     <string name="install_yandex_browser">Install Yandex Browser</string>
     <string name="issuesButtonText">Report Bug</string>
     <string name="githubLabelText">Source code</string>
+    <string name="copyrightMessage">AdGuard Content Blocker is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</string>
     <!--Do not translate.-->
-    <string name="githubLink" translatable="false"><a href="https://github.com/AdGuardTeam/ContentBlocker">github.com</a></string>
     <string name="warning">Warning</string>
     <string name="too_many_filters_warning">You have selected too many filter subscriptions. This might slow down your web browsing significantly.</string>
-    <string name="title_activity_onboarding" translatable="false">Welcome!</string>
     <string name="onboarding_title1">Welcome!</string>
     <string name="onboarding_text1">You are only a couple steps away from a fast and clean internet, without ads.</string>
     <string name="onboarding_button_text1">Get started</string>
@@ -67,10 +60,8 @@
     <string name="count">Count</string>
     <string name="check_filter_updates">Check for filter updates</string>
     <string name="go_to_filters">Go to filters</string>
-    <string name="yandex_browser" translatable="false">Yandex Browser</string>
     <string name="install">Install</string>
     <string name="start">Start</string>
-    <string name="samsung_browser" translatable="false">Samsung Internet Browser</string>
     <string name="get_started">Get started</string>
     <string name="adguard_conditions_title">Two conditions have to be met for AdGuard to work:</string>
     <string name="adguard_conditions_list1">You need to use a browser that supports content-blocking technology.</string>
@@ -94,14 +85,24 @@
     <string name="browseButtonText">Browse</string>
     <string name="github">Github</string>
     <string name="reportBug">Report a bug</string>
-    <string name="yandex_browser_name" translatable="false">Yandex Browser</string>
-    <string name="yandex_developer" translatable="false">Yandex</string>
-    <string name="yandex_browser_rating" translatable="false">4,5</string>
-    <string name="samsung_browser_name" translatable="false">Samsung Internet</string>
-    <string name="samsung_developer" translatable="false">Samsung Electronics Co., Ltd.</string>
-    <string name="samsung_browser_rating" translatable="false">4,4</string>
-    <string name="empty" translatable="false"></string>
     <string name="description_about_other_adguard_product">Do you know that you can use AdGuard on any device, computer, and OS? Learn more on our website.</string>
     <string name="no_thanks">No Thanks</string>
     <string name="learn_more">Learn More</string>
+
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+
+    <string name="title_activity_onboarding" translatable="false">Welcome!</string>
+    <string name="yandex_browser" translatable="false">Yandex Browser</string>
+    <string name="yandex_developer" translatable="false">Yandex</string>
+    <string name="yandex_browser_rating" translatable="false">4,5</string>
+    <string name="samsung_browser" translatable="false">Samsung Internet Browser</string>
+    <string name="samsung_developer" translatable="false">Samsung Electronics Co., Ltd.</string>
+    <string name="samsung_browser_rating" translatable="false">4,4</string>
+    <string name="closed_drawer_title" translatable="false">AdGuard Content Blocker</string>
+    <string name="empty" translatable="false"/>
+
+    <string name="githubLink" translatable="false"><a href="https://github.com/AdGuardTeam/ContentBlocker">github.com</a></string>
+    <string name="adguardComLink" translatable="false"><a href="https://adguard.com">adguard.com</a></string>
+    <string name="forumAdguardComLink" translatable="false"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
 </resources>

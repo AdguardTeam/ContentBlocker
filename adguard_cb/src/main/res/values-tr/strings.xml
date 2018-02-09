@@ -30,25 +30,19 @@
     <string name="stats_enabled_filters">Filtreler</string>
     <string name="stats_enabled_rules">Kurallar</string>
     <string name="stats_update_time">Güncellendi:</string>
-    <string name="start_samsung_browser">Samsung Internet Browser ayarlarını aç</string>
-    <string name="start_yandex_browser">Yandex Tarayıcı ayarlarını aç</string>
-    <string name="open_browsers_info">Filtrelerimizi kullanarak içerik engellemeyi etkinleştirmek için buraya tıklayarak tarayıcı ayarlarını doğrudan açabilirsiniz:</string>
     <string name="filterVersionTemplate">Sürüm {0}.</string>
     <string name="filterUpdatedTemplate">Güncellendi {0} {1}</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Sürüm {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nTüm Hakları Saklıdır.</string>
     <string name="rateAdguardButtonText">AdGuard\'ı Oyla</string>
-    <string name="feedbackButtonText">Geribildirim Gönder</string>
     <string name="officialSiteLabelText">Resmi site</string>
     <string name="forumLabelText">Forum</string>
-    <string name="emailLabelText">Eposta</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Gizlilik Sözleşmesi</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
     <string name="copyrightMessage">AdGuard İçerik Engelleyicisi ücretsiz bir yazılımdır: GNU Genel Kamu Lisansı\'nın sürüm 3 veya (isteğe bağlı olarak) herhangi bir sonraki sürümde yayımlanan GNU Genel Kamu Lisansı koşulları altında yeniden dağıtabilir ve / veya değiştirebilirsiniz.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
-    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
     <string name="install_browsers">Desteklenen tarayıcılar yüklü değil! Bunları Google Play\'den yükleyebilirsiniz:</string>
     <string name="install_samsung_browser">Samsung Internet Browser\'ı Yükle</string>
     <string name="install_yandex_browser">Yandex Browser Yükle</string>
@@ -57,8 +51,6 @@
     <!--Do not translate.-->
     <string name="warning">Uyarı</string>
     <string name="too_many_filters_warning">Çok fazla filtre seçtiniz. Çok fazla filtre seçmek gezinme hızınızı önemli derecede yavaşlatabilir.</string>
-    <string name="pref_whitelist_category">Beyazliste</string>
-    <string name="pref_summary_whitelist_category">Bu listedeki alanlar filtrelenmeyecektir</string>
     <string name="onboarding_title1">Hoşgeldiniz!</string>
     <string name="onboarding_text1">Reklamsız, hızlı ve temiz internetten sadece birkaç adım uzaklıktasınız.</string>
     <string name="onboarding_button_text1">Başlangıç</string>
@@ -71,7 +63,6 @@
     <string name="count">Sayaç</string>
     <string name="check_filter_updates">Filtreleri güncelle</string>
     <string name="go_to_filters">Filtrelere git</string>
-    <string name="browser">Tarayıcı</string>
     <string name="install">Yükle</string>
     <string name="start">Başla</string>
     <string name="get_started">Başlangıç</string>

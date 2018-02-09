@@ -30,25 +30,19 @@
     <string name="stats_enabled_filters">Filters:</string>
     <string name="stats_enabled_rules">Regels:</string>
     <string name="stats_update_time">Bijgewerkt:</string>
-    <string name="start_samsung_browser">Open Samsung Internet Browser opties</string>
-    <string name="start_yandex_browser">Open Yandex Browser opties</string>
-    <string name="open_browsers_info">Om advertentie-blokkering via onze filters op te starten kan je direct je browser-opties openen door hier te klikken:</string>
     <string name="filterVersionTemplate">Versie {0}.</string>
     <string name="filterUpdatedTemplate">Bigewerkt {0} op {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Versie {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAlle rechten voorbehouden.</string>
     <string name="rateAdguardButtonText">Beoordeer AdGuard</string>
-    <string name="feedbackButtonText">Feedback geven</string>
     <string name="officialSiteLabelText">Officiële website</string>
     <string name="forumLabelText">Forum</string>
-    <string name="emailLabelText">Email</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
     <string name="copyrightMessage">AdGuard Content Blocker is vrije software: je kan ze verdelen en/of wijzigen onder de regels van de GNU General Public License zoals gepubliceerd door The Free Software Foundation, ofwel versie 3 van de Licentie, of elke latere versie.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
-    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
     <string name="install_browsers">Je hebt geen ondersteunde browsers geïnstalleerd ! Je kan ze installeren via Google Play:</string>
     <string name="install_samsung_browser">Installeer Samsung Internet Browser</string>
     <string name="install_yandex_browser">Installeer Yandex Browser</string>
@@ -57,8 +51,6 @@
     <!--Do not translate.-->
     <string name="warning">Waarschuwing</string>
     <string name="too_many_filters_warning">Je hebt te veel filters geselecteerd. Dit kan je internetverkeer merkbaar vertragen.</string>
-    <string name="pref_whitelist_category">Toestemmingslijst</string>
-    <string name="pref_summary_whitelist_category">Domeinen in deze lijst worden niet gefilterd</string>
     <string name="onboarding_title1">Welkom !</string>
     <string name="onboarding_text1">Je bent slechts enkele stappen verwijderd van een snel internet zonder advertenties.</string>
     <string name="onboarding_button_text1">Aan de slag</string>
@@ -71,7 +63,6 @@
     <string name="count">Teller</string>
     <string name="check_filter_updates">Controleer op filter updates</string>
     <string name="go_to_filters">Ga naar filters</string>
-    <string name="browser">Browser</string>
     <string name="install">Installeer</string>
     <string name="start">Start</string>
     <string name="get_started">Aan de slag</string>

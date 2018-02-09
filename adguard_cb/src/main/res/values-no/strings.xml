@@ -30,25 +30,19 @@
     <string name="stats_enabled_filters">Filtre</string>
     <string name="stats_enabled_rules">Regler</string>
     <string name="stats_update_time">Oppdatert:</string>
-    <string name="start_samsung_browser">Åpne alternativer for Samsung Internet Browser</string>
-    <string name="start_yandex_browser">Åpne alternativer for Yandex Browser</string>
-    <string name="open_browsers_info">For å aktivere innholdsblokkering ved å bruke våre filtre, kan du åpne nettleseralternativene direkte ved å klikke her:</string>
     <string name="filterVersionTemplate">Versjon {0}.</string>
     <string name="filterUpdatedTemplate">Oppdatert {0}, {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Versjon {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAlle rettigheter reservert.</string>
     <string name="rateAdguardButtonText">Ranger AdGuard</string>
-    <string name="feedbackButtonText">Send tilbakemelding</string>
     <string name="officialSiteLabelText">Offisiell side</string>
     <string name="forumLabelText">Forum</string>
-    <string name="emailLabelText">E-post</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Rettningslinjer angående personvern</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">Sluttbrukerlisens</a></string>
     <string name="copyrightMessage">AdGuard-innholdsblokkerer er gratis programvare: du kan redistribuere den og/eller endre den i henhold til vilkårene i GNU General Public License som publisert av Free Software Foundation, enten versjon 3 av lisensen, eller (etter eget valg) en senere versjon.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
-    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
     <string name="install_browsers">Du har ingen kompatible nettlesere installert! Du kan installere dem fra Google Play:</string>
     <string name="install_samsung_browser">Installer Samsung Internet Browser</string>
     <string name="install_yandex_browser">Installer Yandex Browser</string>
@@ -57,8 +51,6 @@
     <!--Do not translate.-->
     <string name="warning">Advarsel</string>
     <string name="too_many_filters_warning">Du har valgt alt for mange filterabonnementer. Dette kan redusere nettsurfingen din betydelig.</string>
-    <string name="pref_whitelist_category">Hviteliste</string>
-    <string name="pref_summary_whitelist_category">Domener i hvitelisten vil ikke filtreres</string>
     <string name="onboarding_title1">Velkommen!</string>
     <string name="onboarding_text1">Du er bare et par steg unna et raskt og rent Internett, uten annonser.</string>
     <string name="onboarding_button_text1">Kom i gang</string>
@@ -71,7 +63,6 @@
     <string name="count">Tell</string>
     <string name="check_filter_updates">Se etter filteroppdateringer</string>
     <string name="go_to_filters">Gå til filtrene</string>
-    <string name="browser">Nettleser</string>
     <string name="install">Installer</string>
     <string name="start">Start</string>
     <string name="get_started">Kom i gang</string>

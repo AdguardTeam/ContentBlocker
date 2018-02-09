@@ -30,25 +30,19 @@
     <string name="stats_enabled_filters">Филтри</string>
     <string name="stats_enabled_rules">Правила</string>
     <string name="stats_update_time">Ажурирани:</string>
-    <string name="start_samsung_browser">Отвори ги опциите на Samsung Интернет Прелистувачот</string>
-    <string name="start_yandex_browser">Отвори ги опциите на Yandex Прелистувачот</string>
-    <string name="open_browsers_info">За да го вклучите блокирањето на содржината користејќи ги нашите филтри, вие можите директно да ги отворите опциите на прелистувачот притискајќи тука:</string>
     <string name="filterVersionTemplate">Верзија {0}.</string>
     <string name="filterUpdatedTemplate">Ажурирано на {0} во {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Верзија {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAll Rights Reserved.</string>
     <string name="rateAdguardButtonText">Оцени го AdGuard</string>
-    <string name="feedbackButtonText">Испрати Повратен Одговор</string>
     <string name="officialSiteLabelText">Официјална страница</string>
     <string name="forumLabelText">Форум</string>
-    <string name="emailLabelText">Е-маил</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Политика на Приватност</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
     <string name="copyrightMessage">AdGuard Блокатор на Содржина е бесплатен софтвер: вие можите да го редистрибутирате и/или да го изменувате под условите на GNU Општата Јавна Лиценца како што е издадена од Слободната Фондација за Софтвер, или верзијата 3 на Лиценцата, или (како ваша опција) било која покасна верзија.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
-    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
     <string name="install_browsers">Вие немате поддржани прелистувачи инсталирано! Вие можете да ги инсталирате од Google Play:</string>
     <string name="install_samsung_browser">Инсталирајте го Samsung Интернет Прелистувачот</string>
     <string name="install_yandex_browser">Инсталирајте го Yandex Прелистувачот</string>
@@ -57,8 +51,6 @@
     <!--Do not translate.-->
     <string name="warning">Предупредување</string>
     <string name="too_many_filters_warning">Вие избравте премногу претплати за филтри. Ова може да го намали вашето веб прелистување значајно.</string>
-    <string name="pref_whitelist_category">Бела Листа</string>
-    <string name="pref_summary_whitelist_category">Домените во оваа листа нема да бидат филтрирани</string>
     <string name="onboarding_title1">Добредојдовте!</string>
     <string name="onboarding_text1">Вие сте само неколку чекори од брз и чист интернет, без реклами.</string>
     <string name="onboarding_button_text1">Започнете</string>
@@ -71,7 +63,6 @@
     <string name="count">Избројани</string>
     <string name="check_filter_updates">Провери за ажурирања на филтрите</string>
     <string name="go_to_filters">Оди во филтри</string>
-    <string name="browser">Прелистувач</string>
     <string name="install">Инсталирај</string>
     <string name="start">Стартувај</string>
     <string name="get_started">Започнете</string>

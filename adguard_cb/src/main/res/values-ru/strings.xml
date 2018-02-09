@@ -30,25 +30,19 @@
     <string name="stats_enabled_filters">Фильтров:</string>
     <string name="stats_enabled_rules">Правил:</string>
     <string name="stats_update_time">Обновлено:</string>
-    <string name="start_samsung_browser">Запустить настройки Samsung Internet</string>
-    <string name="start_yandex_browser">Запустить настройки Yandex Browser</string>
-    <string name="open_browsers_info">Чтобы включить в браузере функцию блокировки контента с использованием наших фильтров, нажмите здесь:</string>
     <string name="filterVersionTemplate">Версия {0}.</string>
     <string name="filterUpdatedTemplate">Обновлен {0} в {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Версия {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nВсе права защищены.</string>
     <string name="rateAdguardButtonText">Оценить AdGuard</string>
-    <string name="feedbackButtonText">Сообщение в поддержку</string>
     <string name="officialSiteLabelText">Официальный сайт</string>
     <string name="forumLabelText">Форум</string>
-    <string name="emailLabelText">Email</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Конфиденциальность</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/ru/eula.html">Соглашение</a></string>
     <string name="copyrightMessage">AdGuard Content Blocker является свободным программным обеспечением: вы можете распространять и/или изменять его в соответствии с GNU General Public License, опубликованной Free Software Foundation, либо версией 3 данной лицензии, либо (по вашему желанию) более поздней версии.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
-    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
     <string name="install_browsers">У вас не установлено ни одного поддерживаемого браузера! Установите их из Google Play:</string>
     <string name="install_samsung_browser">Установить Samsung Internet</string>
     <string name="install_yandex_browser">Установить Yandex Browser</string>
@@ -57,8 +51,6 @@
     <!--Do not translate.-->
     <string name="warning">Внимание</string>
     <string name="too_many_filters_warning">Вы выбрали слишком много фильтров. Это может значительно замедлить скорость загрузки сайтов.</string>
-    <string name="pref_whitelist_category">Белый список</string>
-    <string name="pref_summary_whitelist_category">Сайты в этом списке не будут фильтроваться</string>
     <string name="onboarding_title1">Добро пожаловать!</string>
     <string name="onboarding_text1">Вы всего в паре шагов от быстрого и чистого Интернета без рекламы.</string>
     <string name="onboarding_button_text1">Начать</string>
@@ -71,7 +63,6 @@
     <string name="count">Число</string>
     <string name="check_filter_updates">Проверить обновления</string>
     <string name="go_to_filters">Открыть фильтры</string>
-    <string name="browser">Браузер</string>
     <string name="install">Установить</string>
     <string name="start">Запуск</string>
     <string name="get_started">Начать</string>

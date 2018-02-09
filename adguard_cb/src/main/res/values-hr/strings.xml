@@ -30,25 +30,19 @@
     <string name="stats_enabled_filters">Filteri</string>
     <string name="stats_enabled_rules">Pravila</string>
     <string name="stats_update_time">Ažurirano:</string>
-    <string name="start_samsung_browser">Otvorite Samsung Internet postavke</string>
-    <string name="start_yandex_browser">Otvorite Yandex Browser postavke</string>
-    <string name="open_browsers_info">Za omogućivanje blokiranja elemenata koristeći naše filtere možete direktno otvoriti postavke preglednika klikajući ovdje:</string>
     <string name="filterVersionTemplate">Verzija {0}.</string>
     <string name="filterUpdatedTemplate">Ažurirano {0} u {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Verzija {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nSva prava pridržana.</string>
     <string name="rateAdguardButtonText">Ocjeni AdGuard</string>
-    <string name="feedbackButtonText">Pošalji povratne informacije</string>
     <string name="officialSiteLabelText">Službena stranica</string>
     <string name="forumLabelText">Forum</string>
-    <string name="emailLabelText">E-mail</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Politika privatnosti</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
     <string name="copyrightMessage">AdGuard Content Blocker je besplatan softver: možete ga redistributirati i/ili modificirati pod uvijetima GNU General Public Licence kako je objavljeno od strane Free Software Foundationa, bilo verzije 3 ili licence, ili (po vašoj opciji) bilo kojoj kasnijoj verziji.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
-    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
     <string name="install_browsers">Nemate instalirane podržane preglednike! Možete ih instalirati s Google Play-a:</string>
     <string name="install_samsung_browser">Instalirajte Samsung Internet</string>
     <string name="install_yandex_browser">Instalirajte Yandex Browser</string>
@@ -57,8 +51,6 @@
     <!--Do not translate.-->
     <string name="warning">Upozorenje</string>
     <string name="too_many_filters_warning">Odabrali ste previše filtera. Može Vam se značajno usporiti pregledavanje weba.</string>
-    <string name="pref_whitelist_category">Bijela lista</string>
-    <string name="pref_summary_whitelist_category">Domene na ovoj listi se neće filtrirati</string>
     <string name="onboarding_title1">Dobro došli!</string>
     <string name="onboarding_text1">Samo ste nekoliko koraka dalje od brzog i čistog interneta bez oglasa.</string>
     <string name="onboarding_button_text1">Započnite</string>
@@ -71,7 +63,6 @@
     <string name="count">Zbroj</string>
     <string name="check_filter_updates">Provjerite ažuriranja filtera</string>
     <string name="go_to_filters">Odi do filtera</string>
-    <string name="browser">Preglednik</string>
     <string name="install">Instalacija</string>
     <string name="start">Pokretanje</string>
     <string name="get_started">Započnite</string>

@@ -30,25 +30,19 @@
     <string name="stats_enabled_filters">المرشحات</string>
     <string name="stats_enabled_rules">القواعد</string>
     <string name="stats_update_time">محدث:</string>
-    <string name="start_samsung_browser">فتح خيارات الإنترنت سامسونج</string>
-    <string name="start_yandex_browser">افتح خيارات متصفح ياندكس</string>
-    <string name="open_browsers_info">لتمكين حظر المحتوى باستخدام الفلاتر، يمكنك فتح خيارات المتصفح مباشرة بالنقر هنا:</string>
     <string name="filterVersionTemplate">الإصدار {0}.</string>
     <string name="filterUpdatedTemplate">تم تحديث {0} في {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">الإصدار {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nجميع الحقوق محفوظه.</string>
     <string name="rateAdguardButtonText">AdGuardقيم تطبيق</string>
-    <string name="feedbackButtonText">إرسال ملاحظاتك</string>
     <string name="officialSiteLabelText">الموقع الرسمي</string>
     <string name="forumLabelText">منتدى للنقاش</string>
-    <string name="emailLabelText">البريد الإلكتروني</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html"> سياسة الخصوصية </a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html"> اتفاقية ترخيص المستخدم النهائي </a></string>
     <string name="copyrightMessage">AdGuard Content Blocker هو برنامج مجاني: يمكنك إعادة توزيعه و / أو تعديله بموجب شروط رخصة جنو العمومية كما نشرتها مؤسسة البرمجيات الحرة، إما الإصدار 3 من الترخيص، أو (في الخيار الخاص بك) أي إصدار لاحق.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">منتدى.adguard.com </a></string>
-    <string name="emailSupportLink"><a href="mailto:support@adguard.com"> الدعم الفني@adguard.com </a></string>
     <string name="install_browsers">ليس لديك متصفحات معتمدة مثبتة! يمكنك تثبيتها من قوقل بلاي:</string>
     <string name="install_samsung_browser">تثبيت على انترنت سامسونج</string>
     <string name="install_yandex_browser">تثبيت المتصفح ياندكس</string>
@@ -57,8 +51,6 @@
     <!--Do not translate.-->
     <string name="warning">تحذير</string>
     <string name="too_many_filters_warning">لقد حددت عددا كبيرا جدا من اشتراكات الفلتر. قد يؤدي ذلك إلى إبطاء تصفح الويب بشكل ملحوظ.</string>
-    <string name="pref_whitelist_category">تحذير</string>
-    <string name="pref_summary_whitelist_category">لن تتم تصفية النطاقات الموجودة في هذه القائمة</string>
     <string name="onboarding_title1">مرحبا بكم</string>
     <string name="onboarding_text1">أنت غلى بعد  بضع خطوات عن الإنترنت السريع والنظيف دون إعلانات.</string>
     <string name="onboarding_button_text1">احصل على جولة سريعة</string>
@@ -71,7 +63,6 @@
     <string name="count">العدد</string>
     <string name="check_filter_updates">التحقق من تحديثات عامل التصفية</string>
     <string name="go_to_filters">انتقل إلى الفلاتر</string>
-    <string name="browser">المتصفح</string>
     <string name="install">التثبت</string>
     <string name="start">بدء</string>
     <string name="get_started">احصل على جولة سريعة</string>

@@ -30,25 +30,19 @@
     <string name="stats_enabled_filters">Filter:</string>
     <string name="stats_enabled_rules">Filtreringsregler:</string>
     <string name="stats_update_time">Uppdaterad:</string>
-    <string name="start_samsung_browser">Öppna Inställningar i Samsungs webbläsare</string>
-    <string name="start_yandex_browser">Öppna Inställningar i Yandex webbläsare</string>
-    <string name="open_browsers_info">För att koppla in blockering tillsammans med våra filter kan du öppna webbläsarinställningar genom att klicka här:</string>
     <string name="filterVersionTemplate">Version {0}.</string>
     <string name="filterUpdatedTemplate">Uppdaterade {0} at {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Version {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAlla rättigheter förbehållna.</string>
     <string name="rateAdguardButtonText">Betygsätt AdGuard</string>
-    <string name="feedbackButtonText">Skicka feedback</string>
     <string name="officialSiteLabelText">Officiell webbplats</string>
     <string name="forumLabelText">Forum</string>
-    <string name="emailLabelText">E-post</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Sekretesspolicy</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
     <string name="copyrightMessage">AdGuard Content Blocker är en kostnadsfri mjukvara : du kan vidaredistribuera den och/eller ändra den i enlighet med GNU General Public License som den är publicerad av Free Software Foundation, antingen Licensversion 3 eller, om du så vill, en senare version.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
-    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
     <string name="install_browsers">Du har ingen webbläsare installerad som stöds! Du kan installera en via Googles Playbutik.</string>
     <string name="install_samsung_browser">Installera Samsungs webbläsare</string>
     <string name="install_yandex_browser">Installera Yandex webbläsare</string>
@@ -57,8 +51,6 @@
     <!--Do not translate.-->
     <string name="warning">Varning</string>
     <string name="too_many_filters_warning">Du har markerat för många filterabonnemang. Det kan göra ditt webbläsande påtagligt långsammare,</string>
-    <string name="pref_whitelist_category">Vita listan</string>
-    <string name="pref_summary_whitelist_category">Domännamn i denna lista kommer inte att fitreras</string>
     <string name="onboarding_title1">Välkommen!</string>
     <string name="onboarding_text1">Du är bara några  steg från ett snabbare och renare internet utan reklam.</string>
     <string name="onboarding_button_text1">Kom igång</string>
@@ -71,7 +63,6 @@
     <string name="count">Antal</string>
     <string name="check_filter_updates">Kontrollera filteruppdateringar</string>
     <string name="go_to_filters">Gå till filter</string>
-    <string name="browser">Webbläsare</string>
     <string name="install">Installera</string>
     <string name="start">Sätt igång</string>
     <string name="get_started">Kom igång</string>

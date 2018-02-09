@@ -30,25 +30,19 @@
     <string name="stats_enabled_filters">Filtros</string>
     <string name="stats_enabled_rules">Reglas</string>
     <string name="stats_update_time">Ultima Actualización:</string>
-    <string name="start_samsung_browser">"Abrir los ajustes de Internet Samsung "</string>
-    <string name="start_yandex_browser">Abrir los ajustes de Yandex</string>
-    <string name="open_browsers_info">Para habilitar el bloqueo de contenido con AdGuard , puede abrir directamente las opciones del navegador haciendo clic aquí:</string>
     <string name="filterVersionTemplate">Versión {0}</string>
     <string name="filterUpdatedTemplate">Actualizado {0} en {1}</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Versión {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nTodos los derechos reservados</string>
     <string name="rateAdguardButtonText">"Danos tu opinión "</string>
-    <string name="feedbackButtonText">Envíanos un mensaje</string>
     <string name="officialSiteLabelText">Sitio Oficial:</string>
     <string name="forumLabelText">Foro:</string>
-    <string name="emailLabelText">Correo:</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Política de Privacidad</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">Acuerdo de Licencia</a></string>
     <string name="copyrightMessage">AdGuard Content Blocker es un software libre: puede redistribuirlo y / o codificarlo bajo los términos de la Licencia Pública General GNU publicada por la Free Software Foundation, ya sea la versión 3 de la Licencia, o (a su elección) cualquier versión posterior.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
-    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
     <string name="install_browsers">No tienes navegadores compatibles instalados. Puedes instalarlos desde Google Play:</string>
     <string name="install_samsung_browser">Instalar Internet Samsung</string>
     <string name="install_yandex_browser">Instalar Yandex Browser</string>
@@ -57,8 +51,6 @@
     <!--Do not translate.-->
     <string name="warning">Advertencia</string>
     <string name="too_many_filters_warning">Seleccionar demasiadas suscripciones de filtros puede ralentizar su navegación web significativamente.</string>
-    <string name="pref_whitelist_category">Lista Blanca</string>
-    <string name="pref_summary_whitelist_category">No se aplicaran filtros para los dominios en esta lista</string>
     <string name="onboarding_title1">Bienvenido</string>
     <string name="onboarding_text1">Usted está a sólo un par de pasos de una navegación rápida, limpia y sin anuncios.</string>
     <string name="onboarding_button_text1">"Comenzar "</string>
@@ -71,7 +63,6 @@
     <string name="count">Cantidad</string>
     <string name="check_filter_updates">Comprobar actualizaciones</string>
     <string name="go_to_filters">Ir a los filtros</string>
-    <string name="browser">"Navegador "</string>
     <string name="install">Instalar</string>
     <string name="start">Iniciar</string>
     <string name="get_started">Requisitos para usar AdGuard</string>

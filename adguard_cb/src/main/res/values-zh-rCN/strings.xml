@@ -30,25 +30,19 @@
     <string name="stats_enabled_filters">过滤器</string>
     <string name="stats_enabled_rules">规则</string>
     <string name="stats_update_time">更新于</string>
-    <string name="start_samsung_browser">打开 Samsung Internet 浏览器选项</string>
-    <string name="start_yandex_browser">打开 Yandex Browser 选项</string>
-    <string name="open_browsers_info">要使用我们的过滤器进行内容拦截，您可点击此处以直接打开浏览器选项：</string>
     <string name="filterVersionTemplate">版本 {0}。</string>
     <string name="filterUpdatedTemplate">已更新 {0} 于 {1}。</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">版本 {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd。\n保留所有版权。</string>
     <string name="rateAdguardButtonText">评级 AdGuard</string>
-    <string name="feedbackButtonText">发送反馈</string>
     <string name="officialSiteLabelText">官方网站</string>
     <string name="forumLabelText">论坛</string>
-    <string name="emailLabelText">Email</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">隐私策略</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">最终用户许可协议</a></string>
     <string name="copyrightMessage">AdGuard Content Blocker 为免费软件：您可在遵守由自由软件基金会发布的 GUN 通用公共许可 v3 或更新版本的条款下重新分布或修改它。</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
-    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
     <string name="install_browsers">您未完整受支持的浏览器！您可从 Google Play 安装它们：</string>
     <string name="install_samsung_browser">安装 Samsung Internet Browser</string>
     <string name="install_yandex_browser">安装 Yandex Browser</string>
@@ -57,8 +51,6 @@
     <!--Do not translate.-->
     <string name="warning">警告</string>
     <string name="too_many_filters_warning">您选定的过滤器订阅过多。它会显著降低您的网络浏览速度。</string>
-    <string name="pref_whitelist_category">白名单</string>
-    <string name="pref_summary_whitelist_category">不过滤此列表内的域</string>
     <string name="onboarding_title1">欢迎！</string>
     <string name="onboarding_text1">你仅需几步便可远离广告，快速浏览干净的因特网。</string>
     <string name="onboarding_button_text1">入门</string>
@@ -71,7 +63,6 @@
     <string name="count">技术</string>
     <string name="check_filter_updates">检查过滤器更新</string>
     <string name="go_to_filters">转到过滤器</string>
-    <string name="browser">浏览器</string>
     <string name="install">安装</string>
     <string name="start">开始</string>
     <string name="get_started">入门</string>

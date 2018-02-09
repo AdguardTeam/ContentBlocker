@@ -38,12 +38,6 @@
         <item name="windowNoTitle">false</item>
     </style>
 
-    <style name="grayBigButton" parent="commonBigButton">
-        <item name="android:colorButtonNormal">@color/button_gray</item>
-        <item name="colorButtonNormal">@color/button_gray</item>
-        <item name="android:colorBackground">@color/button_gray</item>
-    </style>
-
     <style name="CardViewStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

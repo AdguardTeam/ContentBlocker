@@ -2,14 +2,10 @@
 <resources>
     <color name="colorPrimary">#4caf50</color>
     <color name="colorPrimaryDark">#388E3C</color>
-    <color name="colorSecondary">#388E3C</color>
     <color name="colorAccent">#ff5722</color>
-    <color name="secondary_text_material">#141414</color>
-    <color name="primary_text_material">#ffffff</color>
 
     <color name="adguard_green">#39B54A</color>
     <color name="adguard_green_pressed">@color/colorPrimary</color>
-    <color name="adguard_green_border">#33A343</color>
     <color name="adguard_green_light">#DFF7E2</color>
     <color name="common_text">#333333</color>
     <color name="text_disabled">#C7C7C7</color>
@@ -17,7 +13,6 @@
     <color name="gray">#D8D8D8</color>
     <color name="white">#ffffff</color>
     <color name="background_common">#ffffffff</color>
-    <color name="button_gray">#808080</color>
     <color name="light_gray">#F0F0F0</color>
     <color name="indicator_unselected">#388E3C</color>
     <color name="indicator_selected">#ffffff</color>

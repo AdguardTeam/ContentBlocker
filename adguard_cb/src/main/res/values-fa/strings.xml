@@ -30,25 +30,19 @@
     <string name="stats_enabled_filters">فیلترها</string>
     <string name="stats_enabled_rules">دستورات</string>
     <string name="stats_update_time">بروز رسانی شده:</string>
-    <string name="start_samsung_browser">گزینه های اینترنت سامسونگ را باز کن</string>
-    <string name="start_yandex_browser">گزینه های مرورگر یاندکس را باز کن</string>
-    <string name="open_browsers_info">برای فعالسازی مسدودسازی محتوا توسط فیلترهای ما،میتوانید مستقیماً گزینه های مرورگر را با کلیک در اینجا باز کنید:</string>
     <string name="filterVersionTemplate">نسخه {0}.</string>
     <string name="filterUpdatedTemplate">بروز رسانی شده {0} در {1}.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">نسخه {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nهمه حقوق محفوظ است.</string>
     <string name="rateAdguardButtonText">امتیاز به AdGuard</string>
-    <string name="feedbackButtonText">ارسال بازخورد</string>
     <string name="officialSiteLabelText">سایت رسمی</string>
     <string name="forumLabelText">انجمن</string>
-    <string name="emailLabelText">ایمیل</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">سیاست حریم خصوصی</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">توافق نامه مجوز کاربر-نهایی</a></string>
     <string name="copyrightMessage">مسدودساز محتوای AdGuard یک نرم افزار رایگان است:شما میتوانید تحت مجوز عمومی همگانی گنو بر مبنای نرم افزار رایگان  چه نسخه 3 مجوز(به گزینش خود) یا هر نسخه بعدی، آن را منتشر وتوزیع مجدد/یا ویرایش کنید.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
-    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
     <string name="install_browsers">شما مرورگر پشتیبانی شده ای نصب نکرده اید!میتوانید آنها را از گوگل پلی نصب کنید:</string>
     <string name="install_samsung_browser">نصب اینترنت سامسونگ</string>
     <string name="install_yandex_browser">نصب مرورگر یاندکس</string>
@@ -57,8 +51,6 @@
     <!--Do not translate.-->
     <string name="warning">هشدار</string>
     <string name="too_many_filters_warning">شما اشتراک های بسیاری را انتخاب کرده اید.این میتواند بطور اثرگذاری وبگردی شما را آهسته کند.</string>
-    <string name="pref_whitelist_category">لیست سفید</string>
-    <string name="pref_summary_whitelist_category">دامنه های موجود در این لیست فیلتر نمی شوند</string>
     <string name="onboarding_title1">خوش آمدید!</string>
     <string name="onboarding_text1">شما چند مرحله از اینترنت سریع و بدون تبلیغات فاصله دارید.</string>
     <string name="onboarding_button_text1">شروع به کار</string>
@@ -71,7 +63,6 @@
     <string name="count">شمردن</string>
     <string name="check_filter_updates">بررسی بروز رسانی فیلترها</string>
     <string name="go_to_filters">برو به فیلترها</string>
-    <string name="browser">مرورگر</string>
     <string name="install">نصب</string>
     <string name="start">شروع</string>
     <string name="get_started">شروع به کار</string>

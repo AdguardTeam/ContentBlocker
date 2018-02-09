@@ -30,25 +30,19 @@
     <string name="stats_enabled_filters">Szűrők:</string>
     <string name="stats_enabled_rules">Szabályok:</string>
     <string name="stats_update_time">Frissítés:</string>
-    <string name="start_samsung_browser">Samsung Internet Beállítások megnyitása</string>
-    <string name="start_yandex_browser">Yandex Böngésző beállításainak megnyitása</string>
-    <string name="open_browsers_info">A mi tartalom szűrőink használatához innen közvetlen megnyithatod a böngésző beállításait.</string>
     <string name="filterVersionTemplate">Verzió {0}.</string>
     <string name="filterUpdatedTemplate">{0} frissítve {1} kor.</string>
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Verzió {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nMinden jog fenntartva.</string>
     <string name="rateAdguardButtonText">AdGuard Értékelése</string>
-    <string name="feedbackButtonText">Visszajelzés Küldése</string>
     <string name="officialSiteLabelText">Hivatalos Oldal</string>
     <string name="forumLabelText">Fórum</string>
-    <string name="emailLabelText">Email</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Adatvédelmi Irányelvek</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
     <string name="copyrightMessage">AdGuard Tartalom Szűrő ingyenes szoftver. Újra kiadása vagy módosítása a GNU a Free Software Foundation által kiadott irányelvek határozzak meg, 3 vagy bármelyik későbbi verziók.</string>
     <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
-    <string name="emailSupportLink"><a href="mailto:support@adguard.com">support@adguard.com</a></string>
     <string name="install_browsers">Nem támogatott böngésző! Google Playről telepíthet:</string>
     <string name="install_samsung_browser">Samsung Internet Telepítése</string>
     <string name="install_yandex_browser">Yandex Böngésző Telepítése</string>
@@ -57,8 +51,6 @@
     <!--Do not translate.-->
     <string name="warning">Figyelmeztetés</string>
     <string name="too_many_filters_warning">Túl sok szűrőt választottál ki. Érezhetően ronthatja a böngészési sebességet.</string>
-    <string name="pref_whitelist_category">Fehér lista</string>
-    <string name="pref_summary_whitelist_category">Az ebben a listában szereplő domainek nem lesznek szűrve</string>
     <string name="onboarding_title1">Üdvözlöm!</string>
     <string name="onboarding_text1">Csak néhány lépésre van a gyors és hirdetésektől mentes Internettől.</string>
     <string name="onboarding_button_text1">Kezdjük</string>
@@ -71,7 +63,6 @@
     <string name="count">Számláló</string>
     <string name="check_filter_updates">Szűrő frissítések ellenrőzése</string>
     <string name="go_to_filters">Menj a szűrőkhöz</string>
-    <string name="browser">Böngésző</string>
     <string name="install">Telepítés</string>
     <string name="start">Indítás</string>
     <string name="get_started">Kezdjük</string>

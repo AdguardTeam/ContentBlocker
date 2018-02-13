@@ -1,31 +1,37 @@
-/**
- This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
- Copyright © 2018 Adguard Software Ltd. All rights reserved.
+/*
+ This file is part of AdGuard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
+ Copyright © 2018 AdGuard Content Blocker. All rights reserved.
 
- Adguard Content Blocker is free software: you can redistribute it and/or modify
+ AdGuard Content Blocker is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by the
  Free Software Foundation, either version 3 of the License, or (at your option)
  any later version.
 
- Adguard Content Blocker is distributed in the hope that it will be useful,
+ AdGuard Content Blocker is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
  or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
  You should have received a copy of the GNU General Public License along with
- Adguard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
+ AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
 package com.adguard.android.service;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.ProgressDialog;
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
+import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 
-import com.adguard.android.contentblocker.AlarmReceiver;
+import com.adguard.android.contentblocker.receiver.AlarmReceiver;
+import com.adguard.android.contentblocker.FilterUpdateJobService;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.ServiceLocator;
 import com.adguard.android.db.FilterListDao;
@@ -41,6 +47,8 @@ import com.adguard.android.commons.network.InternetUtils;
 import com.adguard.android.commons.web.UrlUtils;
 
 import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.collections4.IterableUtils;
+import org.apache.commons.collections4.Predicate;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -51,6 +59,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 /**
@@ -68,13 +77,12 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     private static final String MASK_OBSOLETE_SCRIPT_INJECTION = "###adg_start_script_inject";
     private static final String MASK_OBSOLETE_STYLE_INJECTION = "###adg_start_style_inject";
 
-    private static final int SOCIAL_MEDIA_WIDGETS_FILTER_ID = 4;
-    private static final int SPYWARE_FILTER_ID = 3;
-
     private static final int UPDATE_INVALIDATE_PERIOD = 24 * 60 * 60 * 1000; // 24 hours
-    private static final int UPDATE_INITIAL_PERIOD = 60 * 1000; // 1 minutes
+    private static final int UPDATE_INTERVAL_PERIOD = 60 * 60 * 1000; // 1 hours
+    private static final int UPDATE_INITIAL_PERIOD = 60 * 1000; // 1 minute
 
     private static final String FILTERS_UPDATE_QUEUE = "filters-update-queue";
+    private static final int JOB_ID = 322;
 
     private final Context context;
     private final FilterListDao filterListDao;
@@ -143,18 +151,50 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
 
     @Override
     public void scheduleFiltersUpdate() {
-        Intent alarmIntent = new Intent(AlarmReceiver.UPDATE_FILTER_ACTION);
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
+            JobScheduler jobScheduler = (JobScheduler) context.getSystemService(Context.JOB_SCHEDULER_SERVICE);
+            if (jobScheduler != null) {
+                if (!isJobCreated(jobScheduler, JOB_ID)) {
+                    JobInfo.Builder builder = new JobInfo.Builder(JOB_ID, new ComponentName(context, FilterUpdateJobService.class))
+                            .setPeriodic(UPDATE_INTERVAL_PERIOD)
+                            .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
+                            .setPersisted(true);
 
-        boolean isRunning = PendingIntent.getBroadcast(context, 0, alarmIntent, PendingIntent.FLAG_NO_CREATE) != null;
-        if (!isRunning) {
-            LOG.info("Starting scheduler of filters updating");
-            PendingIntent broadcastIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
-
-            AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, UPDATE_INITIAL_PERIOD, AlarmManager.INTERVAL_HOUR, broadcastIntent);
+                    if (jobScheduler.schedule(builder.build()) != JobScheduler.RESULT_SUCCESS) {
+                        LOG.error("Error while create the filter update job!");
+                    }
+                } else {
+                    LOG.info("Filters update is running");
+                }
+            }
         } else {
-            LOG.info("Filters update is running");
+            Intent alarmIntent = new Intent(AlarmReceiver.UPDATE_FILTER_ACTION);
+            boolean isRunning = PendingIntent.getBroadcast(context, 0, alarmIntent, PendingIntent.FLAG_NO_CREATE) != null;
+            if (!isRunning) {
+                LOG.info("Starting scheduler of filters updating");
+                PendingIntent broadcastIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
+
+                AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+                if (alarmManager != null) {
+                    alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, UPDATE_INITIAL_PERIOD, UPDATE_INTERVAL_PERIOD, broadcastIntent);
+                }
+            } else {
+                LOG.info("Filters update is running");
+            }
         }
+    }
+
+    @Override
+    public void tryUpdateFilters() {
+        FilterService filterService = ServiceLocator.getInstance(context).getFilterService();
+        PreferencesService preferencesService = ServiceLocator.getInstance(context).getPreferencesService();
+
+        List<FilterList> filterLists = filterService.checkFilterUpdates(false);
+        if (!CollectionUtils.isEmpty(filterLists)) {
+            filterService.applyNewSettings();
+        }
+
+        preferencesService.setLastUpdateCheck(System.currentTimeMillis());
     }
 
     @Override
@@ -162,7 +202,6 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         filter.setEnabled(enabled);
         filterListDao.updateFilterEnabled(filter, enabled);
     }
-
 
     @Override
     public void importUserRulesFromUrl(Activity activity, String url) {
@@ -174,9 +213,9 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     }
 
     @Override
-    public List<String> getAllEnabledRules(boolean useCosmetics) {
+    public List<String> getAllEnabledRules() {
         List<Integer> filterIds = getEnabledFilterIds();
-        return filterRuleDao.selectRuleTexts(filterIds, useCosmetics);
+        return filterRuleDao.selectRuleTexts(filterIds, true);
     }
 
     @Override
@@ -206,7 +245,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     public void applyNewSettings() {
         setShowUsefulAds(preferencesService.isShowUsefulAds());
 
-        List<String> rules = getAllEnabledRules(true);
+        List<String> rules = getAllEnabledRules();
         Set<String> userRules = preferencesService.getUserRules();
         if (!userRules.isEmpty()) {
             for (String userRule : userRules) {
@@ -284,6 +323,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         return checkFilterUpdates(filtersToUpdate, force);
     }
 
+    @SuppressLint("UseSparseArrays")
     private List<FilterList> checkFilterUpdates(List<FilterList> filters, boolean force) {
         LOG.info("Start checking filters updates for {} outdated filters. Forced={}", filters.size(), force);
 
@@ -368,6 +408,21 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         filterListDao.updateFilter(current);
     }
 
+    private boolean isJobCreated(JobScheduler jobScheduler, final int jobId) {
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
+            return jobScheduler.getPendingJob(jobId) != null;
+        }
+
+        JobInfo jobInfo = IterableUtils.find(jobScheduler.getAllPendingJobs(), new Predicate<JobInfo>() {
+            @Override
+            public boolean evaluate(JobInfo jobInfo) {
+                return jobInfo != null && jobId == jobInfo.getId();
+            }
+        });
+
+        return jobInfo != null;
+    }
+
     /**
      * Task for importing user rules
      */
@@ -378,7 +433,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
 
         private OnImportListener onImportListener;
 
-        public ImportUserRulesTask(Activity activity, ProgressDialog progressDialog, String url) {
+        ImportUserRulesTask(Activity activity, ProgressDialog progressDialog, String url) {
             super(progressDialog);
             this.activity = activity;
             this.url = url;
@@ -396,7 +451,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
                 try {
                     ContentResolver contentResolver = activity.getContentResolver();
                     inputStream = contentResolver.openInputStream(Uri.parse(url));
-                    String buf = org.apache.commons.io.IOUtils.toString(inputStream);
+                    String buf = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
                     importRules(buf);
                 } finally {
                     IOUtils.closeQuietly(inputStream);
@@ -480,7 +535,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
 
         private Activity activity;
 
-        public CheckUpdatesTask(Activity activity, ProgressDialog progressDialog) {
+        CheckUpdatesTask(Activity activity, ProgressDialog progressDialog) {
             super(progressDialog);
             this.activity = activity;
         }

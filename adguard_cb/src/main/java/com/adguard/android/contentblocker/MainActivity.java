@@ -1,37 +1,34 @@
-/**
- This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
- Copyright © 2018 Adguard Software Ltd. All rights reserved.
+/*
+ This file is part of AdGuard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
+ Copyright © 2018 AdGuard Content Blocker. All rights reserved.
 
- Adguard Content Blocker is free software: you can redistribute it and/or modify
+ AdGuard Content Blocker is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by the
  Free Software Foundation, either version 3 of the License, or (at your option)
  any later version.
 
- Adguard Content Blocker is distributed in the hope that it will be useful,
+ AdGuard Content Blocker is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
  or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
  You should have received a copy of the GNU General Public License along with
- Adguard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
+ AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
 package com.adguard.android.contentblocker;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.customtabs.CustomTabsIntent;
-import android.support.v4.content.ContextCompat;
+import android.support.annotation.NonNull;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateUtils;
@@ -68,7 +65,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     private static Logger LOG = LoggerFactory.getLogger(MainActivity.class);
 
     private DrawerLayout drawerLayout;
-    private ListView drawerList;
     private LinearLayout leftDrawer;
     private ActionBarDrawerToggle drawerToggle;
 
@@ -84,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         setSupportActionBar(toolbar);
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawerList = (ListView) findViewById(R.id.drawer_list);
+        ListView drawerList = (ListView) findViewById(R.id.drawer_list);
         leftDrawer = (LinearLayout) findViewById(R.id.left_drawer);
 
         // Set the adapter for the list view
@@ -92,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         drawerList.setAdapter(adapter);
         // Set the list's click listener
         drawerList.setOnItemClickListener(new DrawerItemClickListener());
-        drawerLayout.setDrawerListener(this);
+        drawerLayout.addDrawerListener(this);
         drawerLayout.setStatusBarBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
 
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.openned_drawer_title, R.string.closed_drawer_title);
@@ -305,7 +301,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         drawerToggle.onConfigurationChanged(newConfig);
-       // drawerToggle.setHomeAsUpIndicator(R.drawable.ic_drawer);
+        // drawerToggle.setHomeAsUpIndicator(R.drawable.ic_drawer);
     }
 
     @Override
@@ -369,6 +365,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         ServiceLocator.getInstance(getApplicationContext()).getFilterService().checkFiltersUpdates(this);
     }
 
+    @SuppressLint("DefaultLocale")
     private void refreshStatistics() {
         PreferencesService preferencesService = ServiceLocator.getInstance(this).getPreferencesService();
         final FilterService filterService = ServiceLocator.getInstance(this).getFilterService();
@@ -413,29 +410,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         NavigationHelper.redirectToActivity(MainActivity.this, FiltersActivity.class);
     }
 
-    public static class ApplyAndRefreshTask extends AsyncTask<Void, Void, Integer> {
-
-        private final FilterService service;
-        private final Activity activity;
-
-        public ApplyAndRefreshTask(FilterService service, Activity activity) {
-            this.service = service;
-            this.activity = activity;
-        }
-
-        @Override
-        protected Integer doInBackground(Void... params) {
-            service.applyNewSettings();
-            return service.getFilterRuleCount();
-        }
-
-        @SuppressLint("DefaultLocale")
-        @Override
-        protected void onPostExecute(Integer filterRuleCount) {
-            ((TextView) activity.findViewById(R.id.rulesCountTextView)).setText(String.format("%d", filterRuleCount));
-        }
-    }
-
     @Override
     public void onDrawerSlide(View drawerView, float slideOffset) {
         if (slideOffset > 0.5f && slideOffset < 0.7f) {
@@ -461,6 +435,30 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         refreshStatistics();
+    }
+
+    public static class ApplyAndRefreshTask extends AsyncTask<Void, Void, Integer> {
+
+        private final FilterService service;
+        @SuppressLint("StaticFieldLeak")
+        private final Activity activity;
+
+        ApplyAndRefreshTask(FilterService service, Activity activity) {
+            this.service = service;
+            this.activity = activity;
+        }
+
+        @Override
+        protected Integer doInBackground(Void... params) {
+            service.applyNewSettings();
+            return service.getFilterRuleCount();
+        }
+
+        @SuppressLint("DefaultLocale")
+        @Override
+        protected void onPostExecute(Integer filterRuleCount) {
+            ((TextView) activity.findViewById(R.id.rulesCountTextView)).setText(String.format("%d", filterRuleCount));
+        }
     }
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
@@ -526,7 +524,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         String text;
         int imageResourceId;
 
-        public DrawerListItem(String text, int imageResourceId) {
+        DrawerListItem(String text, int imageResourceId) {
             this.text = text;
             this.imageResourceId = imageResourceId;
         }
@@ -541,44 +539,20 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
         private int imageFieldId = 0;
 
-        public DrawerArrayAdapter(Context context, int resource) {
-            super(context, resource);
-        }
-
-        public DrawerArrayAdapter(Context context, int resource, int textViewResourceId, int imageFieldId) {
-            super(context, resource, textViewResourceId);
-            this.imageFieldId = imageFieldId;
-        }
-
-        public DrawerArrayAdapter(Context context, int resource, T[] objects) {
-            super(context, resource, objects);
-        }
-
-        public DrawerArrayAdapter(Context context, int resource, int textViewResourceId, int imageFieldId, T[] objects) {
+        DrawerArrayAdapter(Context context, int resource, int textViewResourceId, int imageFieldId, T[] objects) {
             super(context, resource, textViewResourceId, objects);
             this.imageFieldId = imageFieldId;
         }
 
-        public DrawerArrayAdapter(Context context, int resource, List<T> objects) {
-            super(context, resource, objects);
-        }
-
-        public DrawerArrayAdapter(Context context, int resource, int textViewResourceId, int imageFieldId, List<T> objects) {
-            super(context, resource, textViewResourceId, objects);
-            this.imageFieldId = imageFieldId;
-        }
-
-        /**
-         * {@inheritDoc}
-         */
-        public View getView(int position, View convertView, ViewGroup parent) {
+        @NonNull
+        public View getView(int position, View convertView, @NonNull ViewGroup parent) {
             View view = super.getView(position, convertView, parent);
 
             if (imageFieldId != 0) {
-                ImageView imageView = (ImageView) view.findViewById(imageFieldId);
+                ImageView imageView = view.findViewById(imageFieldId);
                 T item = getItem(position);
                 if (item instanceof DrawerListItem) {
-                    imageView.setImageResource(((DrawerListItem)item).imageResourceId);
+                    imageView.setImageResource(((DrawerListItem) item).imageResourceId);
                 }
             }
 

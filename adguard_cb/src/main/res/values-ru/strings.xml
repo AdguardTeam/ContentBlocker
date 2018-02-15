@@ -38,16 +38,12 @@
     <string name="rateAdguardButtonText">Оценить AdGuard</string>
     <string name="officialSiteLabelText">Официальный сайт</string>
     <string name="forumLabelText">Форум</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Конфиденциальность</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/ru/eula.html">Соглашение</a></string>
-    <string name="copyrightMessage">AdGuard Content Blocker является свободным программным обеспечением: вы можете распространять и/или изменять его в соответствии с GNU General Public License, опубликованной Free Software Foundation, либо версией 3 данной лицензии, либо (по вашему желанию) более поздней версии.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">У вас не установлено ни одного поддерживаемого браузера! Установите их из Google Play:</string>
     <string name="install_samsung_browser">Установить Samsung Internet</string>
     <string name="install_yandex_browser">Установить Yandex Browser</string>
     <string name="issuesButtonText">Нашли ошибку?</string>
     <string name="githubLabelText">Исходный код</string>
+    <string name="copyrightMessage">AdGuard Content Blocker является свободным программным обеспечением: вы можете распространять и/или изменять его в соответствии с GNU General Public License, опубликованной Free Software Foundation, либо версией 3 данной лицензии, либо (по вашему желанию) более поздней версии.</string>
     <!--Do not translate.-->
     <string name="warning">Внимание</string>
     <string name="too_many_filters_warning">Вы выбрали слишком много фильтров. Это может значительно замедлить скорость загрузки сайтов.</string>
@@ -90,4 +86,6 @@
     <string name="description_about_other_adguard_product">Знаете ли вы, что вы можете использовать AdGuard на любом устройстве, компьютере и ОС? Узнайте больше на нашем сайте.</string>
     <string name="no_thanks">Нет, спасибо</string>
     <string name="learn_more">Узнать больше</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Конфиденциальность</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/ru/eula.html">Соглашение</a></string>
 </resources>

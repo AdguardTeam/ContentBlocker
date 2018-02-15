@@ -3,7 +3,7 @@
     <string name="refresh">Atualizar</string>
     <string name="please_wait">Por favor, aguarde...</string>
     <string name="main_info">Este aplicativo é uma extensão para navegadores que suportam bloqueio de conteúdo.\n\nAtualmente, existem dois desses navegadores:\n\n1. Samsung Internet browser\n2. Yandex Browser\n\nCom a ajuda deste aplicativo você pode bloquear todos os anúncios nesses navegadores.\n\nAlém disso, você pode selecionar quais filtros usar nas Configurações.</string>
-    <string name="progressGenericErrorText">Ocorreu algum erro!</string>
+    <string name="progressGenericErrorText">Ocorreu um erro!</string>
     <string name="importUserRulesSuccessResultMessage">{0} filtro(s) importado(s) com sucesso!</string>
     <string name="importUserRulesErrorResultMessage">Erro ao importar os filtros</string>
     <string name="importUserRulesProgressDialogTitle">Importação em progresso</string>
@@ -38,16 +38,12 @@
     <string name="rateAdguardButtonText">Avalie AdGuard</string>
     <string name="officialSiteLabelText">Site oficial</string>
     <string name="forumLabelText">Fórum</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Política de Privacidade</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">Contrato</a></string>
-    <string name="copyrightMessage">O AdGuard Bloqueador de Conteúdo é um aplicativo gratuito: você pode redistribuir ou modificá-lo de acordo com os termos do GNU General Public License, conforme publicado pela Free Software Foundation, seja na versão 3 da Licença, ou posterior.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">Você não possui navegadores suportados instalados! Você pode instalá-los no Google Play:</string>
     <string name="install_samsung_browser">Instalar Samsung Internet</string>
     <string name="install_yandex_browser">Instalar Yandex Browser</string>
     <string name="issuesButtonText">Reportar Erro</string>
     <string name="githubLabelText">Código-fonte</string>
+    <string name="copyrightMessage">O AdGuard Bloqueador de Conteúdo é um aplicativo gratuito: você pode redistribuir ou modificá-lo de acordo com os termos do GNU General Public License, conforme publicado pela Free Software Foundation, seja na versão 3 da Licença, ou posterior.</string>
     <!--Do not translate.-->
     <string name="warning">Aviso</string>
     <string name="too_many_filters_warning">Você selecionou muitos filtros. Isso pode diminuir  significativamente a sua navegação na internet.</string>
@@ -55,11 +51,11 @@
     <string name="onboarding_text1">Você está a poucos passos de uma internet rápida e sem anúncios.</string>
     <string name="onboarding_button_text1">Iniciar</string>
     <string name="onboarding_title2">Selecione um navegador</string>
-    <string name="onboarding_text2">Para o funcionar o AdGuard precisa de um navegador que tenha suporte a tecnologia de bloqueio de anúncios. Atualmente, existem dois desses navegadores.</string>
+    <string name="onboarding_text2">Para funcionar o AdGuard precisa de um navegador que tenha suporte a tecnologia de bloqueio de anúncios. Atualmente, existem dois desses navegadores.</string>
     <string name="onboarding_button_text2">Selecione um navegador</string>
-    <string name="onboarding_title3">Quase lá!</string>
-    <string name="onboarding_text3">Um navegador compatível encontrado. Só é permitido ativar o AdGuard nas suas configurações.</string>
-    <string name="onboarding_button_text3">Ativar AdGuard</string>
+    <string name="onboarding_title3">Estamos quase lá!</string>
+    <string name="onboarding_text3">Um navegador compatível foi encontrado. Só é permitido ativar o AdGuard nas suas configurações.</string>
+    <string name="onboarding_button_text3">Ativar o AdGuard</string>
     <string name="count">Contagem</string>
     <string name="check_filter_updates">Verificar atualizações de filtro</string>
     <string name="go_to_filters">Ir para filtros</string>
@@ -71,7 +67,6 @@
     <string name="adguard_conditions_list2">O AdGuard deve ser ativado nas configurações de bloqueio de conteúdo deste navegador.</string>
     <string name="choose_browser">Escolha o navegador</string>
     <string name="enable_adguard">Ativar AdGuard</string>
-    <string name="main_activity_adguard_info">O AdGuard bloqueia anúncios, protege sua privacidade, aumenta a velocidade de carregamento da página e economiza o uso de dados móveis.</string>
     <string name="exit">Sair</string>
     <string name="user_filter">Filtro de Usuário</string>
     <string name="enter_rule_text">Digite o texto da regra</string>
@@ -85,5 +80,11 @@
     <string name="importUserRulesUrlErrorMessage">A URL não é válida</string>
     <string name="clearUserRulesButtonText">Remover todos</string>
     <string name="browseButtonText">Navegador</string>
+    <string name="github">GitHub</string>
     <string name="reportBug">Reportar um problema</string>
+    <string name="description_about_other_adguard_product">Você sabia que pode usar o AdGuard em qualquer dispositivo, computador e sistema operacional? Saiba mais em nosso site.</string>
+    <string name="no_thanks">Não Obrigado</string>
+    <string name="learn_more">Saber Mais</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Política de Privacidade</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">Contrato</a></string>
 </resources>

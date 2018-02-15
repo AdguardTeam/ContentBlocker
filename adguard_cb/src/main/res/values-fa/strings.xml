@@ -38,16 +38,12 @@
     <string name="rateAdguardButtonText">امتیاز به AdGuard</string>
     <string name="officialSiteLabelText">سایت رسمی</string>
     <string name="forumLabelText">انجمن</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">سیاست حریم خصوصی</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">توافق نامه مجوز کاربر-نهایی</a></string>
-    <string name="copyrightMessage">مسدودساز محتوای AdGuard یک نرم افزار رایگان است:شما میتوانید تحت مجوز عمومی همگانی گنو بر مبنای نرم افزار رایگان  چه نسخه 3 مجوز(به گزینش خود) یا هر نسخه بعدی، آن را منتشر وتوزیع مجدد/یا ویرایش کنید.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">شما مرورگر پشتیبانی شده ای نصب نکرده اید!میتوانید آنها را از گوگل پلی نصب کنید:</string>
     <string name="install_samsung_browser">نصب اینترنت سامسونگ</string>
     <string name="install_yandex_browser">نصب مرورگر یاندکس</string>
     <string name="issuesButtonText">گزارش مشکل</string>
     <string name="githubLabelText">کُد منبع</string>
+    <string name="copyrightMessage">مسدودساز محتوای AdGuard یک نرم افزار رایگان است:شما میتوانید تحت مجوز عمومی همگانی گنو بر مبنای نرم افزار رایگان  چه نسخه 3 مجوز(به گزینش خود) یا هر نسخه بعدی، آن را منتشر وتوزیع مجدد/یا ویرایش کنید.</string>
     <!--Do not translate.-->
     <string name="warning">هشدار</string>
     <string name="too_many_filters_warning">شما اشتراک های بسیاری را انتخاب کرده اید.این میتواند بطور اثرگذاری وبگردی شما را آهسته کند.</string>
@@ -86,4 +82,6 @@
     <string name="clearUserRulesButtonText">حذف همه</string>
     <string name="browseButtonText">مرور</string>
     <string name="reportBug">گزارش مشکل</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">سیاست حریم خصوصی</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">توافق نامه مجوز کاربر-نهایی</a></string>
 </resources>

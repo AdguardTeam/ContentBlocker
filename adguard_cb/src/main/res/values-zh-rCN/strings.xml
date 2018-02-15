@@ -38,16 +38,12 @@
     <string name="rateAdguardButtonText">评级 AdGuard</string>
     <string name="officialSiteLabelText">官方网站</string>
     <string name="forumLabelText">论坛</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">隐私策略</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">最终用户许可协议</a></string>
-    <string name="copyrightMessage">AdGuard Content Blocker 为免费软件：您可在遵守由自由软件基金会发布的 GUN 通用公共许可 v3 或更新版本的条款下重新分布或修改它。</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">您未完整受支持的浏览器！您可从 Google Play 安装它们：</string>
     <string name="install_samsung_browser">安装 Samsung Internet Browser</string>
     <string name="install_yandex_browser">安装 Yandex Browser</string>
     <string name="issuesButtonText">报告错误</string>
     <string name="githubLabelText">源码</string>
+    <string name="copyrightMessage">AdGuard Content Blocker 为免费软件：您可在遵守由自由软件基金会发布的 GUN 通用公共许可 v3 或更新版本的条款下重新分布或修改它。</string>
     <!--Do not translate.-->
     <string name="warning">警告</string>
     <string name="too_many_filters_warning">您选定的过滤器订阅过多。它会显著降低您的网络浏览速度。</string>
@@ -85,8 +81,11 @@
     <string name="importUserRulesUrlErrorMessage">URL 无效</string>
     <string name="clearUserRulesButtonText">移除全部</string>
     <string name="browseButtonText">浏览</string>
+    <string name="github">Github</string>
     <string name="reportBug">报告错误</string>
     <string name="description_about_other_adguard_product">您知道您可在任何设备，计算机和操作系统上使用 AdGuard 吗？请转到我们的网站以了解更多信息。</string>
     <string name="no_thanks">不，谢谢</string>
     <string name="learn_more">了解更多</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">隐私策略</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">最终用户许可协议</a></string>
 </resources>

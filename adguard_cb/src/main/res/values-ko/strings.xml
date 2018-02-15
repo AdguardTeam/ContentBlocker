@@ -38,16 +38,12 @@
     <string name="rateAdguardButtonText">AdGuard 후기 남기기</string>
     <string name="officialSiteLabelText">공식 홈페이지</string>
     <string name="forumLabelText">포험</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">개인정보취급방침</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">이용약관</a></string>
-    <string name="copyrightMessage">AdGuard 컨텐츠 차단기는 자유 소프트웨어입니다. 귀하는 자유 소프트웨어 재단에서 발행한 GPL 버전 3 또는 그 이후 라이센스에 의거하여 이를 재배포 및/또는 수정할 수 있습니다.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">지원되는 브라우저가 설치되어 있지 않습니다! 플레이 스토어에서 설치할 수 있습니다:</string>
     <string name="install_samsung_browser">삼성 인터넷 설치</string>
     <string name="install_yandex_browser">얀덱스 브라우저 설치</string>
     <string name="issuesButtonText">버그 제보하기</string>
     <string name="githubLabelText">소스 코드</string>
+    <string name="copyrightMessage">AdGuard 컨텐츠 차단기는 자유 소프트웨어입니다. 귀하는 자유 소프트웨어 재단에서 발행한 GPL 버전 3 또는 그 이후 라이센스에 의거하여 이를 재배포 및/또는 수정할 수 있습니다.</string>
     <!--Do not translate.-->
     <string name="warning">주의</string>
     <string name="too_many_filters_warning">너무 많은 필터를 구독하고 있습니다. 웹 브라우징 속도가 저하될 수 있습니다.</string>
@@ -86,4 +82,6 @@
     <string name="clearUserRulesButtonText">모두 제거</string>
     <string name="browseButtonText">찾아보기</string>
     <string name="reportBug">버그 제보하기</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">개인정보취급방침</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">이용약관</a></string>
 </resources>

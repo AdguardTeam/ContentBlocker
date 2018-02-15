@@ -38,16 +38,12 @@
     <string name="rateAdguardButtonText">Оцінити AdGuard</string>
     <string name="officialSiteLabelText">Офіційний сайт</string>
     <string name="forumLabelText">Форум</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Конфіденційність</a></string>
-    <string name="eulaLinkText">&lt;а href=\"https://adguard.com/ru/eula.html\"&gt;Угода&lt;/а&gt;</string>
-    <string name="copyrightMessage">AdGuard Content Blocker є бескоштовним програмним забезпеченням: ви можете вільно поширювати та/або змінювати його відповідно до GNU General Public License, що опубліковано Free Software Foundation, або версією 3 цієї Ліцензії, або (за вашим бажанням) більш пізньої версії.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">У вас не встановлено жодного підтримуваного браузера! Встановіть їх з Google Play:</string>
     <string name="install_samsung_browser">Встановити Samsung Internet Browser</string>
     <string name="install_yandex_browser">Встановити Yandex Browser</string>
     <string name="issuesButtonText">Повідомити про помилку</string>
     <string name="githubLabelText">Вихідний код</string>
+    <string name="copyrightMessage">AdGuard Content Blocker є бескоштовним програмним забезпеченням: ви можете вільно поширювати та/або змінювати його відповідно до GNU General Public License, що опубліковано Free Software Foundation, або версією 3 цієї Ліцензії, або (за вашим бажанням) більш пізньої версії.</string>
     <!--Do not translate.-->
     <string name="warning">Увага</string>
     <string name="too_many_filters_warning">Ви вибрали занадто багато фільтрів. Це може значно уповільнити швидкість завантаження сайтів.</string>
@@ -85,8 +81,11 @@
     <string name="importUserRulesUrlErrorMessage">URL не є дійсним</string>
     <string name="clearUserRulesButtonText">Видалити все</string>
     <string name="browseButtonText">Огляд</string>
+    <string name="github">Github</string>
     <string name="reportBug">Повідомити про помилку</string>
     <string name="description_about_other_adguard_product">Ви знаєте, що ви можете використовувати AdGuard на будь-якому пристрої, комп\'ютері та ОС? Дізнайтеся більше на нашому сайті.</string>
     <string name="no_thanks">Ні, дякую</string>
     <string name="learn_more">Дізнатися більше</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Конфіденційність</a></string>
+    <string name="eulaLinkText">&lt;а href=\"https://adguard.com/ru/eula.html\"&gt;Угода&lt;/а&gt;</string>
 </resources>

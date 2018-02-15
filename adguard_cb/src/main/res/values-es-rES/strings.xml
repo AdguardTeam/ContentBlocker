@@ -38,16 +38,12 @@
     <string name="rateAdguardButtonText">"Danos tu opinión "</string>
     <string name="officialSiteLabelText">Sitio Oficial:</string>
     <string name="forumLabelText">Foro:</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Política de Privacidad</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">Acuerdo de Licencia</a></string>
-    <string name="copyrightMessage">AdGuard Content Blocker es un software libre: puede redistribuirlo y / o codificarlo bajo los términos de la Licencia Pública General GNU publicada por la Free Software Foundation, ya sea la versión 3 de la Licencia, o (a su elección) cualquier versión posterior.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">No tienes navegadores compatibles instalados. Puedes instalarlos desde Google Play:</string>
     <string name="install_samsung_browser">Instalar Internet Samsung</string>
     <string name="install_yandex_browser">Instalar Yandex Browser</string>
     <string name="issuesButtonText">Reportar un error</string>
     <string name="githubLabelText">Código Fuente:</string>
+    <string name="copyrightMessage">AdGuard Content Blocker es un software libre: puede redistribuirlo y / o codificarlo bajo los términos de la Licencia Pública General GNU publicada por la Free Software Foundation, ya sea la versión 3 de la Licencia, o (a su elección) cualquier versión posterior.</string>
     <!--Do not translate.-->
     <string name="warning">Advertencia</string>
     <string name="too_many_filters_warning">Seleccionar demasiadas suscripciones de filtros puede ralentizar su navegación web significativamente.</string>
@@ -87,4 +83,6 @@
     <string name="clearUserRulesButtonText">Eliminar todo</string>
     <string name="browseButtonText">Dar un vistazo</string>
     <string name="reportBug">Reportar un error</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Política de Privacidad</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">Acuerdo de Licencia</a></string>
 </resources>

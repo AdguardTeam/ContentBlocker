@@ -38,16 +38,12 @@
     <string name="rateAdguardButtonText">AdGuard\'ı Oyla</string>
     <string name="officialSiteLabelText">Resmi site</string>
     <string name="forumLabelText">Forum</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Gizlilik Sözleşmesi</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="copyrightMessage">AdGuard İçerik Engelleyicisi ücretsiz bir yazılımdır: GNU Genel Kamu Lisansı\'nın sürüm 3 veya (isteğe bağlı olarak) herhangi bir sonraki sürümde yayımlanan GNU Genel Kamu Lisansı koşulları altında yeniden dağıtabilir ve / veya değiştirebilirsiniz.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">Desteklenen tarayıcılar yüklü değil! Bunları Google Play\'den yükleyebilirsiniz:</string>
     <string name="install_samsung_browser">Samsung Internet Browser\'ı Yükle</string>
     <string name="install_yandex_browser">Yandex Browser Yükle</string>
     <string name="issuesButtonText">Hata Bildir</string>
     <string name="githubLabelText">Kaynak kod</string>
+    <string name="copyrightMessage">AdGuard İçerik Engelleyicisi ücretsiz bir yazılımdır: GNU Genel Kamu Lisansı\'nın sürüm 3 veya (isteğe bağlı olarak) herhangi bir sonraki sürümde yayımlanan GNU Genel Kamu Lisansı koşulları altında yeniden dağıtabilir ve / veya değiştirebilirsiniz.</string>
     <!--Do not translate.-->
     <string name="warning">Uyarı</string>
     <string name="too_many_filters_warning">Çok fazla filtre seçtiniz. Çok fazla filtre seçmek gezinme hızınızı önemli derecede yavaşlatabilir.</string>
@@ -86,4 +82,6 @@
     <string name="clearUserRulesButtonText">Tümünü sil</string>
     <string name="browseButtonText">Gözat</string>
     <string name="reportBug">Hata Bildir</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Gizlilik Sözleşmesi</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
 </resources>

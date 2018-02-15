@@ -83,15 +83,13 @@
     <string name="importUserRulesUrlErrorMessage">The URL is not valid</string>
     <string name="clearUserRulesButtonText">Remove all</string>
     <string name="browseButtonText">Browse</string>
-    <string name="github">Github</string>
+    <string name="github">GitHub</string>
     <string name="reportBug">Report a bug</string>
     <string name="description_about_other_adguard_product">Do you know that you can use AdGuard on any device, computer, and OS? Learn more on our website.</string>
     <string name="no_thanks">No Thanks</string>
     <string name="learn_more">Learn More</string>
-
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-
     <string name="title_activity_onboarding" translatable="false">Welcome!</string>
     <string name="yandex_browser" translatable="false">Yandex Browser</string>
     <string name="yandex_developer" translatable="false">Yandex</string>
@@ -100,8 +98,7 @@
     <string name="samsung_developer" translatable="false">Samsung Electronics Co., Ltd.</string>
     <string name="samsung_browser_rating" translatable="false">4,4</string>
     <string name="closed_drawer_title" translatable="false">AdGuard Content Blocker</string>
-    <string name="empty" translatable="false"/>
-
+    <string name="empty" translatable="false"></string>
     <string name="githubLink" translatable="false"><a href="https://github.com/AdGuardTeam/ContentBlocker">github.com</a></string>
     <string name="adguardComLink" translatable="false"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink" translatable="false"><a href="https://forum.adguard.com">forum.adguard.com</a></string>

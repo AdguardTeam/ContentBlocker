@@ -38,17 +38,12 @@
     <string name="rateAdguardButtonText">Ohodnoťte AdGuard</string>
     <string name="officialSiteLabelText">Oficiálna stránka</string>
     <string name="forumLabelText">Fórum</string>
-    <string name="privacyPolicyLinkText">"<a href="http://www.adguard.com/privacy.html">Pravidlá ochrany súkromia</a>
- "</string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="copyrightMessage">AdGuard blokovač obsahu je bezplatný softvér: môžete ho redistribuovať a/alebo modifikovať pri dodržaní podmienok GNU General Public License publikovanej Free Software Foundation vo verzii 3 alebo novšej.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">Nemáte nainštalovaný žiaden z podporovaných prehliadačov. Môžete ich inštalovať z Google Play:</string>
     <string name="install_samsung_browser">Inštalovať Samsung internetový prehliadač</string>
     <string name="install_yandex_browser">Inštalovať prehliadač Yandex</string>
     <string name="issuesButtonText">Nahlásiť chybu</string>
     <string name="githubLabelText">Zdrojový kód</string>
+    <string name="copyrightMessage">AdGuard blokovač obsahu je bezplatný softvér: môžete ho redistribuovať a/alebo modifikovať pri dodržaní podmienok GNU General Public License publikovanej Free Software Foundation vo verzii 3 alebo novšej.</string>
     <!--Do not translate.-->
     <string name="warning">Varovanie</string>
     <string name="too_many_filters_warning">Zvolili ste príliš veľa filtrov. To môže výrazne spomaliť Vaše prehliadanie internetových stránok.</string>
@@ -86,5 +81,12 @@
     <string name="importUserRulesUrlErrorMessage">URL adresa nie je platná</string>
     <string name="clearUserRulesButtonText">Odstrániť všetko</string>
     <string name="browseButtonText">Prechádzať</string>
+    <string name="github">Github</string>
     <string name="reportBug">Nahlásiť chybu</string>
+    <string name="description_about_other_adguard_product">Vedeli ste, že AdGuard môžete používať na ľubovoľnom zariadení, počítači a operačnom systéme? Viac o tom na našej webovej stránke.</string>
+    <string name="no_thanks">Nie, ďakujem</string>
+    <string name="learn_more">Dozvedieť sa viac</string>
+    <string name="privacyPolicyLinkText">"<a href="http://www.adguard.com/privacy.html">Pravidlá ochrany súkromia</a>
+ "</string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
 </resources>

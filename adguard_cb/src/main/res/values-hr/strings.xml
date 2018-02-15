@@ -38,16 +38,12 @@
     <string name="rateAdguardButtonText">Ocjeni AdGuard</string>
     <string name="officialSiteLabelText">Službena stranica</string>
     <string name="forumLabelText">Forum</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Politika privatnosti</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="copyrightMessage">AdGuard Content Blocker je besplatan softver: možete ga redistributirati i/ili modificirati pod uvijetima GNU General Public Licence kako je objavljeno od strane Free Software Foundationa, bilo verzije 3 ili licence, ili (po vašoj opciji) bilo kojoj kasnijoj verziji.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">Nemate instalirane podržane preglednike! Možete ih instalirati s Google Play-a:</string>
     <string name="install_samsung_browser">Instalirajte Samsung Internet</string>
     <string name="install_yandex_browser">Instalirajte Yandex Browser</string>
     <string name="issuesButtonText">Prijavite pogrešku</string>
     <string name="githubLabelText">Izvorni kod</string>
+    <string name="copyrightMessage">AdGuard Content Blocker je besplatan softver: možete ga redistributirati i/ili modificirati pod uvijetima GNU General Public Licence kako je objavljeno od strane Free Software Foundationa, bilo verzije 3 ili licence, ili (po vašoj opciji) bilo kojoj kasnijoj verziji.</string>
     <!--Do not translate.-->
     <string name="warning">Upozorenje</string>
     <string name="too_many_filters_warning">Odabrali ste previše filtera. Može Vam se značajno usporiti pregledavanje weba.</string>
@@ -86,4 +82,6 @@
     <string name="clearUserRulesButtonText">Ukloni sve</string>
     <string name="browseButtonText">Pregledaj</string>
     <string name="reportBug">Prijavite pogrešku</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Politika privatnosti</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
 </resources>

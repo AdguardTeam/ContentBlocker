@@ -38,16 +38,12 @@
     <string name="rateAdguardButtonText">Оцени го AdGuard</string>
     <string name="officialSiteLabelText">Официјална страница</string>
     <string name="forumLabelText">Форум</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Политика на Приватност</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="copyrightMessage">AdGuard Блокатор на Содржина е бесплатен софтвер: вие можите да го редистрибутирате и/или да го изменувате под условите на GNU Општата Јавна Лиценца како што е издадена од Слободната Фондација за Софтвер, или верзијата 3 на Лиценцата, или (како ваша опција) било која покасна верзија.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">Вие немате поддржани прелистувачи инсталирано! Вие можете да ги инсталирате од Google Play:</string>
     <string name="install_samsung_browser">Инсталирајте го Samsung Интернет Прелистувачот</string>
     <string name="install_yandex_browser">Инсталирајте го Yandex Прелистувачот</string>
     <string name="issuesButtonText">Пријавете Грешка</string>
     <string name="githubLabelText">Изворен код</string>
+    <string name="copyrightMessage">AdGuard Блокатор на Содржина е бесплатен софтвер: вие можите да го редистрибутирате и/или да го изменувате под условите на GNU Општата Јавна Лиценца како што е издадена од Слободната Фондација за Софтвер, или верзијата 3 на Лиценцата, или (како ваша опција) било која покасна верзија.</string>
     <!--Do not translate.-->
     <string name="warning">Предупредување</string>
     <string name="too_many_filters_warning">Вие избравте премногу претплати за филтри. Ова може да го намали вашето веб прелистување значајно.</string>
@@ -86,4 +82,6 @@
     <string name="clearUserRulesButtonText">Отстрани ги сите</string>
     <string name="browseButtonText">Прелистај</string>
     <string name="reportBug">Пријавете грешка</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Политика на Приватност</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
 </resources>

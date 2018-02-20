@@ -38,16 +38,12 @@
     <string name="rateAdguardButtonText">Avalie o AdGuard</string>
     <string name="officialSiteLabelText">Site Oficial</string>
     <string name="forumLabelText">Fórum</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Política de Privacidade</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="copyrightMessage">O Bloqueado de Conteúdo AdGuard  é um software livre: pode redistribuí-lo e / ou modificá-lo de acordo com os termos da GNU General Public License, conforme publicado pela Free Software Foundation, seja a versão 3 da Licença, ou (à sua escolha) qualquer versão posterior.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">Não possui navegadores suportados instalados! Pode instalá-los no Google Play:</string>
     <string name="install_samsung_browser">Instalar o navegador da Internet da Samsung</string>
     <string name="install_yandex_browser">Instale o Navegador Yandex</string>
     <string name="issuesButtonText">Comunicar bug</string>
     <string name="githubLabelText">Código fonte</string>
+    <string name="copyrightMessage">O Bloqueado de Conteúdo AdGuard  é um software livre: pode redistribuí-lo e / ou modificá-lo de acordo com os termos da GNU General Public License, conforme publicado pela Free Software Foundation, seja a versão 3 da Licença, ou (à sua escolha) qualquer versão posterior.</string>
     <!--Do not translate.-->
     <string name="warning">Cuidado</string>
     <string name="too_many_filters_warning">Seleccionou muitas assinaturas de filtros. Isso pode diminuir significativamente a velocidade da navegação na web.</string>
@@ -85,5 +81,11 @@
     <string name="importUserRulesUrlErrorMessage">O URL não é válido</string>
     <string name="clearUserRulesButtonText">Apagar tudo</string>
     <string name="browseButtonText">Navegador</string>
+    <string name="github">Github</string>
     <string name="reportBug">Comunicar bug</string>
+    <string name="description_about_other_adguard_product">Sabe que pode usar o AdGuard em qualquer dispositivo, computador e sistema operacional OS? Saiba mais no nosso site.</string>
+    <string name="no_thanks">Não, Obrigado</string>
+    <string name="learn_more">Saber Mais</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Política de Privacidade</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
 </resources>

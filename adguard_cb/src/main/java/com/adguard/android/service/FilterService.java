@@ -1,18 +1,18 @@
-/**
- This file is part of Adguard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
- Copyright © 2018 Adguard Software Ltd. All rights reserved.
+/*
+ This file is part of AdGuard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
+ Copyright © 2018 AdGuard Content Blocker. All rights reserved.
 
- Adguard Content Blocker is free software: you can redistribute it and/or modify
+ AdGuard Content Blocker is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by the
  Free Software Foundation, either version 3 of the License, or (at your option)
  any later version.
 
- Adguard Content Blocker is distributed in the hope that it will be useful,
+ AdGuard Content Blocker is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
  or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
  You should have received a copy of the GNU General Public License along with
- Adguard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
+ AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
 package com.adguard.android.service;
 
@@ -20,13 +20,24 @@ import android.app.Activity;
 import com.adguard.android.model.FilterList;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * Service that manages ad filters
  */
 public interface FilterService {
 
+    /**
+     * Try to update the filters.
+     *
+     * The method is not asynchronous!
+     */
+    void tryUpdateFilters();
+
+    /**
+     * Checks for filter updates and shows waiting dialog on UI
+     *
+     * @param activity Activity
+     */
     void checkFiltersUpdates(Activity activity);
 
     /**
@@ -79,7 +90,7 @@ public interface FilterService {
     /**
      * @return list of all enabled rules
      */
-    List<String> getAllEnabledRules(boolean useCosmetics);
+    List<String> getAllEnabledRules();
 
     /**
      * Is show useful ads filter enabled

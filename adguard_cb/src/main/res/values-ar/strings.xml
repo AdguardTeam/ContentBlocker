@@ -38,16 +38,12 @@
     <string name="rateAdguardButtonText">AdGuardقيم تطبيق</string>
     <string name="officialSiteLabelText">الموقع الرسمي</string>
     <string name="forumLabelText">منتدى للنقاش</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html"> سياسة الخصوصية </a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html"> اتفاقية ترخيص المستخدم النهائي </a></string>
-    <string name="copyrightMessage">AdGuard Content Blocker هو برنامج مجاني: يمكنك إعادة توزيعه و / أو تعديله بموجب شروط رخصة جنو العمومية كما نشرتها مؤسسة البرمجيات الحرة، إما الإصدار 3 من الترخيص، أو (في الخيار الخاص بك) أي إصدار لاحق.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">منتدى.adguard.com </a></string>
     <string name="install_browsers">ليس لديك متصفحات معتمدة مثبتة! يمكنك تثبيتها من قوقل بلاي:</string>
     <string name="install_samsung_browser">تثبيت على انترنت سامسونج</string>
     <string name="install_yandex_browser">تثبيت المتصفح ياندكس</string>
     <string name="issuesButtonText">تقرير الشوائب</string>
     <string name="githubLabelText">الكود المصدري</string>
+    <string name="copyrightMessage">AdGuard Content Blocker هو برنامج مجاني: يمكنك إعادة توزيعه و / أو تعديله بموجب شروط رخصة جنو العمومية كما نشرتها مؤسسة البرمجيات الحرة، إما الإصدار 3 من الترخيص، أو (في الخيار الخاص بك) أي إصدار لاحق.</string>
     <!--Do not translate.-->
     <string name="warning">تحذير</string>
     <string name="too_many_filters_warning">لقد حددت عددا كبيرا جدا من اشتراكات الفلتر. قد يؤدي ذلك إلى إبطاء تصفح الويب بشكل ملحوظ.</string>
@@ -85,5 +81,11 @@
     <string name="importUserRulesUrlErrorMessage">عنوان URL غير صالح</string>
     <string name="clearUserRulesButtonText">ازالة الكل</string>
     <string name="browseButtonText">المتصفح</string>
+    <string name="github">Github</string>
     <string name="reportBug">تقرير الشوائب</string>
+    <string name="description_about_other_adguard_product">هل تعلم أنه يمكنك استخدام أدجارد على أي جهاز. جهاز كمبيوتر أو نظام تشغيل أوس؟ معرفة المزيد على موقعنا.</string>
+    <string name="no_thanks">لا، شكراً</string>
+    <string name="learn_more">التعرف على المزيد</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html"> سياسة الخصوصية </a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html"> اتفاقية ترخيص المستخدم النهائي </a></string>
 </resources>

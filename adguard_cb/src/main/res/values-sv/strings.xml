@@ -38,16 +38,12 @@
     <string name="rateAdguardButtonText">Betygsätt AdGuard</string>
     <string name="officialSiteLabelText">Officiell webbplats</string>
     <string name="forumLabelText">Forum</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Sekretesspolicy</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="copyrightMessage">AdGuard Content Blocker är en kostnadsfri mjukvara : du kan vidaredistribuera den och/eller ändra den i enlighet med GNU General Public License som den är publicerad av Free Software Foundation, antingen Licensversion 3 eller, om du så vill, en senare version.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">Du har ingen webbläsare installerad som stöds! Du kan installera en via Googles Playbutik.</string>
     <string name="install_samsung_browser">Installera Samsungs webbläsare</string>
     <string name="install_yandex_browser">Installera Yandex webbläsare</string>
     <string name="issuesButtonText">Rapportera bugg</string>
     <string name="githubLabelText">Källkod</string>
+    <string name="copyrightMessage">AdGuard Content Blocker är en kostnadsfri mjukvara : du kan vidaredistribuera den och/eller ändra den i enlighet med GNU General Public License som den är publicerad av Free Software Foundation, antingen Licensversion 3 eller, om du så vill, en senare version.</string>
     <!--Do not translate.-->
     <string name="warning">Varning</string>
     <string name="too_many_filters_warning">Du har markerat för många filterabonnemang. Det kan göra ditt webbläsande påtagligt långsammare,</string>
@@ -86,4 +82,6 @@
     <string name="clearUserRulesButtonText">Ta bort allt</string>
     <string name="browseButtonText">Sök</string>
     <string name="reportBug">Rapportera bugg</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Sekretesspolicy</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
 </resources>

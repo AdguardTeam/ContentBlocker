@@ -68,14 +68,16 @@
             android:enabled="true"
             android:exported="true"/>
 
-        <receiver android:name=".AlarmReceiver"
-            android:enabled="true">
+        <receiver
+            android:name=".receiver.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.adguard.contentblocker.UPDATE_FILTER"/>
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".BootUpReceiver"
+        <receiver android:name=".receiver.BootUpReceiver"
             android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
@@ -83,6 +85,11 @@
                 <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
             </intent-filter>
         </receiver>
+
+        <service
+            android:exported="true"
+            android:name=".FilterUpdateJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
 
 </manifest>

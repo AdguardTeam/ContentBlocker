@@ -14,33 +14,29 @@
  * You should have received a copy of the GNU General Public License along with
  * AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.contentblocker.ui;
+package com.adguard.android.contentblocker.receiver;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.support.v4.view.ViewPager;
-import android.util.AttributeSet;
-import android.view.MotionEvent;
+import android.content.Intent;
 
-public class ClickViewPager extends ViewPager {
+import com.adguard.android.ServiceLocator;
 
-    private boolean enabled;
+import java.util.concurrent.Executors;
 
-    public ClickViewPager(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        this.enabled = true;
-    }
+public class AlarmReceiver extends BroadcastReceiver {
+    public static final String UPDATE_FILTER_ACTION = "com.adguard.contentblocker.UPDATE_FILTER";
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        return this.enabled && super.onTouchEvent(event);
-    }
-
-    @Override
-    public boolean onInterceptTouchEvent(MotionEvent event) {
-        return this.enabled && super.onInterceptTouchEvent(event);
-    }
-
-    public void setPagingEnabled(boolean enabled) {
-        this.enabled = enabled;
+    public void onReceive(final Context context, final Intent intent) {
+        String action = intent.getAction();
+        if (UPDATE_FILTER_ACTION.equals(action)) {
+            Executors.newSingleThreadExecutor().execute(new Runnable() {
+                @Override
+                public void run() {
+                    ServiceLocator.getInstance(context).getFilterService().tryUpdateFilters();
+                }
+            });
+        }
     }
 }

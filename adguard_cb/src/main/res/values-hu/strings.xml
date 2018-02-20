@@ -38,16 +38,12 @@
     <string name="rateAdguardButtonText">AdGuard Értékelése</string>
     <string name="officialSiteLabelText">Hivatalos Oldal</string>
     <string name="forumLabelText">Fórum</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Adatvédelmi Irányelvek</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="copyrightMessage">AdGuard Tartalom Szűrő ingyenes szoftver. Újra kiadása vagy módosítása a GNU a Free Software Foundation által kiadott irányelvek határozzak meg, 3 vagy bármelyik későbbi verziók.</string>
-    <string name="adguardComLink"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
     <string name="install_browsers">Nem támogatott böngésző! Google Playről telepíthet:</string>
     <string name="install_samsung_browser">Samsung Internet Telepítése</string>
     <string name="install_yandex_browser">Yandex Böngésző Telepítése</string>
     <string name="issuesButtonText">Hiba Jelentése</string>
     <string name="githubLabelText">Forráskód</string>
+    <string name="copyrightMessage">AdGuard Tartalom Szűrő ingyenes szoftver. Újra kiadása vagy módosítása a GNU a Free Software Foundation által kiadott irányelvek határozzak meg, 3 vagy bármelyik későbbi verziók.</string>
     <!--Do not translate.-->
     <string name="warning">Figyelmeztetés</string>
     <string name="too_many_filters_warning">Túl sok szűrőt választottál ki. Érezhetően ronthatja a böngészési sebességet.</string>
@@ -86,4 +82,6 @@
     <string name="clearUserRulesButtonText">Mind eltávolítása</string>
     <string name="browseButtonText">Böngészés</string>
     <string name="reportBug">Hibajelentés</string>
+    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Adatvédelmi Irányelvek</a></string>
+    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
 </resources>

@@ -1,6 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
+    lintOptions {
+        abortOnError false
+    }
+
     signingConfigs {
         config {
             keyAlias 'adguard'
@@ -14,7 +18,7 @@ android {
     defaultConfig {
         targetSdkVersion 26
         applicationId 'com.adguard.android.contentblocker'
-        versionName "2.1.1"
+        versionName "2.1.2"
         signingConfig signingConfigs.config
     }
     buildTypes {
@@ -27,11 +31,11 @@ android {
     productFlavors {
         yandex_api16 {
             minSdkVersion 16
-            versionCode 16002101
+            versionCode 16002102
         }
         samsung_api21 {
             minSdkVersion 21
-            versionCode 21002101
+            versionCode 21002102
         }
     }
     compileOptions {

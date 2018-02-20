@@ -81,7 +81,11 @@
     <string name="importUserRulesUrlErrorMessage">Bu URL geçerli değil</string>
     <string name="clearUserRulesButtonText">Tümünü sil</string>
     <string name="browseButtonText">Gözat</string>
+    <string name="github">GitHub</string>
     <string name="reportBug">Hata Bildir</string>
+    <string name="description_about_other_adguard_product">AdGuard\'ı tüm cihazlarda, bilgisayar ve diğer işletim sistemlerinde kullanabileceğinizi biliyor musunuz? Sitemizden daha fazla bilgi edinin.</string>
+    <string name="no_thanks">Hayır teşekkürler</string>
+    <string name="learn_more">Göster bakalım!</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Gizlilik Sözleşmesi</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
 </resources>

@@ -81,7 +81,11 @@
     <string name="importUserRulesUrlErrorMessage">Webbadressen är inte giltig</string>
     <string name="clearUserRulesButtonText">Ta bort allt</string>
     <string name="browseButtonText">Sök</string>
+    <string name="github">GitHub</string>
     <string name="reportBug">Rapportera bugg</string>
+    <string name="description_about_other_adguard_product">Känner du till att du kan använda AdGuard på alla sorts enheter, datorer och operativsystem? Läs mer på vår hemsida.</string>
+    <string name="no_thanks">Nej tack</string>
+    <string name="learn_more">Läs mer</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Sekretesspolicy</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
 </resources>

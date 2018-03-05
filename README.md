@@ -16,7 +16,7 @@ To see the 'big picture', to watch current progress and to get an idea of approx
 
 ### Releases
 
- * Latest version: [2.0.1](https://github.com/AdguardTeam/ContentBlocker/releases/tag/v2.0.1)
+ * Latest version: [2.1.2](https://github.com/AdguardTeam/ContentBlocker/releases/tag/v2.1.2)
 
 You can find all AdGuard Content Blocker releases here: https://github.com/AdguardTeam/ContentBlocker/releases
 

@@ -18,7 +18,14 @@ To see the 'big picture', to watch current progress and to get an idea of approx
 
  * Latest version: [2.1.2](https://github.com/AdguardTeam/ContentBlocker/releases/tag/v2.1.2)
 
-You can find all AdGuard Content Blocker releases here: https://github.com/AdguardTeam/ContentBlocker/releases
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+      alt="Get it on Google Play"
+      height="90">](https://play.google.com/store/apps/details?id=com.adguard.android.contentblocker)
+[<img src="https://f-droid.org/badge/get-it-on.png"
+      alt="Get it on F-Droid"
+      height="90">](https://f-droid.org/packages/com.adguard.android.contentblocker/)
+
+You can also find all AdGuard Content Blocker releases here: https://github.com/AdguardTeam/ContentBlocker/releases
 
 ### How to report an issue?
 

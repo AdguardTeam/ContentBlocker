@@ -4,7 +4,7 @@
     <string name="please_wait">Пожалуйста, подождите...</string>
     <string name="main_info">Данное приложение является расширением для браузеров, поддерживающих блокировку контента.\n\nВ настоящее время существует два таких браузера: \n\n1. Samsung интернет-браузер \n2. Yandex браузер \n\nС помощью данного приложения вы можете блокировать все рекламные объявления в этих браузерах.\n\nКроме того, в Настройках вы можете выбрать, какие фильтры использовать.</string>
     <string name="progressGenericErrorText">Произошла ошибка!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} фильтр(ы) успешно импортированы!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} пользовательских правил успешно импортировано</string>
     <string name="importUserRulesErrorResultMessage">Ошибка импорта фильтров!</string>
     <string name="importUserRulesProgressDialogTitle">Выполняется импорт</string>
     <string name="importUserRulesProgressDialogMessage">Загрузка...</string>
@@ -13,7 +13,7 @@
     <string name="checkUpdatesErrorResultMessage">Ошибка обновления. Повторите попытку позже.</string>
     <string name="checkUpdatesZeroResultMessage">Вы используете самую последнюю версию фильтров.</string>
     <string name="checkUpdatesOneResultMessage">Обновлен один фильтр: {0}</string>
-    <string name="checkUpdatesManyResultMessage">{0} фильтра(ов) обновлены: {1}</string>
+    <string name="checkUpdatesManyResultMessage">Обновлено фильтров {0}: {1}.</string>
     <string name="action_settings">Настройки</string>
     <string name="openned_drawer_title">Опции</string>
     <string name="about">О программе AdGuard</string>

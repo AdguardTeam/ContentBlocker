@@ -44,7 +44,6 @@
     <string name="issuesButtonText">Rapportera bugg</string>
     <string name="githubLabelText">Källkod</string>
     <string name="copyrightMessage">AdGuard Content Blocker är en kostnadsfri mjukvara : du kan vidaredistribuera den och/eller ändra den i enlighet med GNU General Public License som den är publicerad av Free Software Foundation, antingen Licensversion 3 eller, om du så vill, en senare version.</string>
-    <!--Do not translate.-->
     <string name="warning">Varning</string>
     <string name="too_many_filters_warning">Du har markerat för många filterabonnemang. Det kan göra ditt webbläsande påtagligt långsammare,</string>
     <string name="onboarding_title1">Välkommen!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Skriv in text för filtreringsregeln</string>
     <string name="cancel">Avbryt</string>
     <string name="ok">OK</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">Det egna filtret är tomt</string>
     <string name="addUserRuleButtonText">Lägg till en filtreringsregel</string>
     <string name="importUserRulesButtonText">Importera</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">Webbadressen är inte giltig</string>
     <string name="clearUserRulesButtonText">Ta bort allt</string>
     <string name="browseButtonText">Sök</string>
-    <string name="github">GitHub</string>
     <string name="reportBug">Rapportera bugg</string>
     <string name="description_about_other_adguard_product">Känner du till att du kan använda AdGuard på alla sorts enheter, datorer och operativsystem? Läs mer på vår hemsida.</string>
     <string name="no_thanks">Nej tack</string>

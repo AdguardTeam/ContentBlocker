@@ -44,7 +44,6 @@
     <string name="issuesButtonText">버그 제보하기</string>
     <string name="githubLabelText">소스 코드</string>
     <string name="copyrightMessage">AdGuard 컨텐츠 차단기는 자유 소프트웨어입니다. 귀하는 자유 소프트웨어 재단에서 발행한 GPL 버전 3 또는 그 이후 라이센스에 의거하여 이를 재배포 및/또는 수정할 수 있습니다.</string>
-    <!--Do not translate.-->
     <string name="warning">주의</string>
     <string name="too_many_filters_warning">너무 많은 필터를 구독하고 있습니다. 웹 브라우징 속도가 저하될 수 있습니다.</string>
     <string name="onboarding_title1">환영합니다!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">규칙을 입력하세요</string>
     <string name="cancel">취소</string>
     <string name="ok">확인</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">사용자 필터 비어있음</string>
     <string name="addUserRuleButtonText">규칙 추가</string>
     <string name="importUserRulesButtonText">가져오기</string>

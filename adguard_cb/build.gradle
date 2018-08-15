@@ -13,14 +13,15 @@ android {
             storePassword 'adguard'
         }
     }
-    compileSdkVersion 26
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
     defaultConfig {
-        targetSdkVersion 26
+        targetSdkVersion 27
         applicationId 'com.adguard.android.contentblocker'
         versionName "2.1.3"
         signingConfig signingConfigs.config
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -28,20 +29,26 @@ android {
             zipAlignEnabled true
         }
     }
+
+    flavorDimensions 'api'
     productFlavors {
         yandex_api16 {
             minSdkVersion 16
             versionCode 16002103
+            dimension "api"
         }
         samsung_api21 {
             minSdkVersion 21
             versionCode 21002103
+            dimension "api"
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
+
     packagingOptions {
         exclude 'META-INF/LICENSE.txt'
         exclude 'META-INF/LICENSE'
@@ -54,27 +61,28 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     // Apache commons
-    compile 'org.apache.commons:commons-lang3:3.6'
-    compile 'org.apache.commons:commons-collections4:4.1'
-    compile 'commons-io:commons-io:2.5'
-
+    //noinspection GradleDependency
+    implementation 'org.apache.commons:commons-lang3:3.5'
+    implementation 'org.apache.commons:commons-collections4:4.1'
+    implementation 'commons-io:commons-io:2.5'
 
     // Android library
-    compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.android.support:cardview-v7:24.0.0'
-    compile 'com.android.support:customtabs:24.0.0'
-    compile 'com.android.support:recyclerview-v7:24.0.0'
-    compile 'com.android.support:support-v4:24.0.0'
-    compile 'com.android.support:design:24.0.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:customtabs:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
 
     // Logger
-    compile 'org.slf4j:slf4j-android:1.7.7'
+    implementation 'org.slf4j:slf4j-android:1.7.7'
 
     // Json
-    compile 'org.codehaus.jackson:jackson-core-lgpl:1.9.13'
-    compile 'org.codehaus.jackson:jackson-mapper-lgpl:1.9.13'
+    implementation 'org.codehaus.jackson:jackson-core-lgpl:1.9.13'
+    implementation 'org.codehaus.jackson:jackson-mapper-lgpl:1.9.13'
+
+    testImplementation 'junit:junit:4.12'
 }

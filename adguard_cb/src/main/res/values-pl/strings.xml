@@ -44,7 +44,6 @@
     <string name="issuesButtonText">Raportuj błąd</string>
     <string name="githubLabelText">Kod źródłowy</string>
     <string name="copyrightMessage">AdGuard Bloker Zawartości jest darmowym oprogramowaniem: możesz go rozpowszechniać lub modyfikować zgodnie z warunkami GNU General Public License opublikowane przez Free Software Foundation, dowolnej wersji 3 Licencji lub (Twoim zdaniem) dowolnej późniejszej wersji.</string>
-    <!--Do not translate.-->
     <string name="warning">Ostrzeżenie</string>
     <string name="too_many_filters_warning">Wybrałeś za dużo subskrypcji filtrów. Może to skutkować znaczącym spowolnieniem przeglądania sieci.</string>
     <string name="onboarding_title1">Witaj!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Podaj tekst reguły</string>
     <string name="cancel">Anuluj</string>
     <string name="ok">OK</string>
-    <string name="userRuleNewItemDialogHint">||przykład.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">Filtr użytkownika jest pusty</string>
     <string name="addUserRuleButtonText">Dodaj regułę</string>
     <string name="importUserRulesButtonText">Importuj</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">URL jest nieprawidłowy</string>
     <string name="clearUserRulesButtonText">Usuń wszystko</string>
     <string name="browseButtonText">Przeglądaj</string>
-    <string name="github">Github</string>
     <string name="reportBug">Raportuj błąd</string>
     <string name="description_about_other_adguard_product">Czy wiesz, że możesz używać AdGuard na dowolnym urządzeniu, komputerze i systemie operacyjnym? Dowiedz się więcej na naszej stronie internetowej.</string>
     <string name="no_thanks">Nie, dziękuję</string>

@@ -44,7 +44,6 @@
     <string name="issuesButtonText">Reportar un error</string>
     <string name="githubLabelText">Código Fuente</string>
     <string name="copyrightMessage">AdGuard Content Blocker es un software libre: puede redistribuirlo y / o codificarlo bajo los términos de la Licencia Pública General GNU publicada por la Free Software Foundation, ya sea la versión 3 de la Licencia, o (a su elección) cualquier versión posterior.</string>
-    <!--Do not translate.-->
     <string name="warning">Advertencia</string>
     <string name="too_many_filters_warning">Seleccionar demasiadas suscripciones de filtros puede ralentizar su navegación web significativamente.</string>
     <string name="onboarding_title1">Bienvenido</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Ingrese la nueva regla</string>
     <string name="cancel">Cancelar</string>
     <string name="ok">OK</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">El filtro de usuario está vacío</string>
     <string name="addUserRuleButtonText">Agregar regla</string>
     <string name="importUserRulesButtonText">Importar</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">La URL no es válida</string>
     <string name="clearUserRulesButtonText">Eliminar todo</string>
     <string name="browseButtonText">Dar un vistazo</string>
-    <string name="github">GitHub</string>
     <string name="reportBug">Reportar un error</string>
     <string name="description_about_other_adguard_product">¿Sabía usted que puede usar AdGuard en cualquier dispositivo, ordenador o sistema operativo? Aprenda más en nuestro sitio web.</string>
     <string name="no_thanks">No gracias</string>

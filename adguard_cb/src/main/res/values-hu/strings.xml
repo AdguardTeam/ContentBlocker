@@ -44,7 +44,6 @@
     <string name="issuesButtonText">Hiba Jelentése</string>
     <string name="githubLabelText">Forráskód</string>
     <string name="copyrightMessage">AdGuard Tartalom Szűrő ingyenes szoftver. Újra kiadása vagy módosítása a GNU a Free Software Foundation által kiadott irányelvek határozzak meg, 3 vagy bármelyik későbbi verziók.</string>
-    <!--Do not translate.-->
     <string name="warning">Figyelmeztetés</string>
     <string name="too_many_filters_warning">Túl sok szűrőt választottál ki. Érezhetően ronthatja a böngészési sebességet.</string>
     <string name="onboarding_title1">Üdvözlöm!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Adja meg a szabály szövegét</string>
     <string name="cancel">Mégse</string>
     <string name="ok">Ok</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">Nincs egyéni szűrő</string>
     <string name="addUserRuleButtonText">Szabály hozzáadása</string>
     <string name="importUserRulesButtonText">Importálás</string>
@@ -82,6 +80,9 @@
     <string name="clearUserRulesButtonText">Mind eltávolítása</string>
     <string name="browseButtonText">Böngészés</string>
     <string name="reportBug">Hibajelentés</string>
+    <string name="description_about_other_adguard_product">Tudja, hogy bármilyen eszközön használhatja az AdGuard-ot? Tudjon meg többet weboldalunkon.</string>
+    <string name="no_thanks">Nem, köszönöm.</string>
+    <string name="learn_more">További Információk</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Adatvédelmi Irányelvek</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
 </resources>

@@ -44,7 +44,6 @@
     <string name="issuesButtonText">Hata Bildir</string>
     <string name="githubLabelText">Kaynak kod</string>
     <string name="copyrightMessage">AdGuard İçerik Engelleyicisi ücretsiz bir yazılımdır: GNU Genel Kamu Lisansı\'nın sürüm 3 veya (isteğe bağlı olarak) herhangi bir sonraki sürümde yayımlanan GNU Genel Kamu Lisansı koşulları altında yeniden dağıtabilir ve / veya değiştirebilirsiniz.</string>
-    <!--Do not translate.-->
     <string name="warning">Uyarı</string>
     <string name="too_many_filters_warning">Çok fazla filtre seçtiniz. Çok fazla filtre seçmek gezinme hızınızı önemli derecede yavaşlatabilir.</string>
     <string name="onboarding_title1">Hoşgeldiniz!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Kural metni girin</string>
     <string name="cancel">İptal</string>
     <string name="ok">Tamam</string>
-    <string name="userRuleNewItemDialogHint">||örnek.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">Kullanıcı filtresi boş</string>
     <string name="addUserRuleButtonText">Kural ekle</string>
     <string name="importUserRulesButtonText">İçe Aktar</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">Bu URL geçerli değil</string>
     <string name="clearUserRulesButtonText">Tümünü sil</string>
     <string name="browseButtonText">Gözat</string>
-    <string name="github">GitHub</string>
     <string name="reportBug">Hata Bildir</string>
     <string name="description_about_other_adguard_product">AdGuard\'ı tüm cihazlarda, bilgisayar ve diğer işletim sistemlerinde kullanabileceğinizi biliyor musunuz? Sitemizden daha fazla bilgi edinin.</string>
     <string name="no_thanks">Hayır teşekkürler</string>

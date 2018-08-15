@@ -81,7 +81,11 @@
     <string name="importUserRulesUrlErrorMessage">このURLは利用できません。</string>
     <string name="clearUserRulesButtonText">すべて削除</string>
     <string name="browseButtonText">参照</string>
+    <string name="github">GitHub</string>
     <string name="reportBug">バグを報告</string>
+    <string name="description_about_other_adguard_product">AdGuardはどんなデバイス、OSでも利用できます。詳しくはAdGuardウェブサイトで。</string>
+    <string name="no_thanks">いえ、結構です</string>
+    <string name="learn_more">もっと知る</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">プライバシーポリシー</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">利用許諾契約(EULA)</a></string>
 </resources>

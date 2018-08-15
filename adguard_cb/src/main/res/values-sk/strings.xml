@@ -81,7 +81,7 @@
     <string name="importUserRulesUrlErrorMessage">URL adresa nie je platná</string>
     <string name="clearUserRulesButtonText">Odstrániť všetko</string>
     <string name="browseButtonText">Prechádzať</string>
-    <string name="github">Github</string>
+    <string name="github">GitHub</string>
     <string name="reportBug">Nahlásiť chybu</string>
     <string name="description_about_other_adguard_product">Vedeli ste, že AdGuard môžete používať na ľubovoľnom zariadení, počítači a operačnom systéme? Viac o tom na našej webovej stránke.</string>
     <string name="no_thanks">Nie, ďakujem</string>

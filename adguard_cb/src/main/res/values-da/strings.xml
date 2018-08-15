@@ -23,7 +23,7 @@
     <string name="pref_update_wifi_only">Opdater kun via Wi-Fi</string>
     <string name="pref_summary_update_wifi_only">AdGuard vil kun få filteropdateringer via Wi-Fi.</string>
     <string name="pref_show_useful_ads">Vis nyttige annoncer</string>
-    <string name="pref_summary_show_useful_ads">Fjern blokering af annoncer der kan være nyttige for brugerne.</string>
+    <string name="pref_summary_show_useful_ads">Fjern blokering af annoncer der kan være nyttige for brugeren.</string>
     <string name="pref_filters_category">Filtre</string>
     <string name="pref_summary_filters_category">Vælg hvilke filtre der skal bruges</string>
     <string name="filters">Filtre</string>
@@ -35,7 +35,7 @@
     <!--About Adguard-->
     <string name="versionInfoTextViewText">Version {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAlle Rettigheder Forbeholdt.</string>
-    <string name="rateAdguardButtonText">Vurder AdGuard</string>
+    <string name="rateAdguardButtonText">Bedøm AdGuard</string>
     <string name="officialSiteLabelText">Officiel side</string>
     <string name="forumLabelText">Forum</string>
     <string name="install_browsers">Du har ingen understøttet browsere installeret! Du kan installere dem fra Google Play:</string>
@@ -56,7 +56,7 @@
     <string name="onboarding_title3">Næsten færdig!</string>
     <string name="onboarding_text3">En passende browser blev fundet. Alt der er tilbage er, at aktivere AdGuard i dens indstillinger.</string>
     <string name="onboarding_button_text3">Aktiver AdGuard</string>
-    <string name="count">Tæl</string>
+    <string name="count">Antal</string>
     <string name="check_filter_updates">Søg efter opdateringer til filtrene</string>
     <string name="go_to_filters">Gå til filtre</string>
     <string name="install">Installer</string>

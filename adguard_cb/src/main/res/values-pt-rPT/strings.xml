@@ -2,7 +2,7 @@
 <resources>
     <string name="refresh">Actualizar</string>
     <string name="please_wait">Por favor, aguarde...</string>
-    <string name="main_info">Esta aplicação é uma extensão para navegadores que suportam bloqueio de conteúdo.\n\nActualmente, existem dois desses navegadores:\n\n1. Navegador de Internet da Samsung\n2. Navegador Yandex \n\nCom a ajuda desta aplicação, pode bloquear todos os anúncios nesses navegadores.\n\nAlém disso, pode seleccionar que filtros usar em Configurações.</string>
+    <string name="main_info">Esta aplicação é uma extensão para navegadores que suportam bloqueio de conteúdo.\n\nActualmente, existem dois desses navegadores:\n\n1. Navegador de Internet da Samsung\n2. Navegador Yandex \n\nCom a ajuda desta aplicação, pode bloquear todos os anúncios nesses navegadores.\n\nAlém disso, pode seleccionar que filtros usar em Definições.</string>
     <string name="progressGenericErrorText">Ocorreu um erro!</string>
     <string name="importUserRulesSuccessResultMessage">{0} filtro(s) importados com sucesso!</string>
     <string name="importUserRulesErrorResultMessage">Ocorreu um erro ao importar os filtros!</string>
@@ -64,7 +64,7 @@
     <string name="get_started">Vamos começar</string>
     <string name="adguard_conditions_title">Duas condições devem ser atendidas para que o AdGuard funcione:</string>
     <string name="adguard_conditions_list1">Precisa de usar um navegador que suporte a tecnologia de bloqueio de conteúdo.</string>
-    <string name="adguard_conditions_list2">O AdGuard deve ser activado nas configurações de bloqueio de conteúdo desse navegador.</string>
+    <string name="adguard_conditions_list2">O AdGuard deve ser activado nas definições de bloqueio de conteúdo desse navegador.</string>
     <string name="choose_browser">Seleccionar navegador</string>
     <string name="enable_adguard">Activar o AdGuard</string>
     <string name="main_activity_adguard_info">O AdGuard bloqueia anúncios, protege a sua privacidade, aumenta a velocidade de carregamento da página e reduz o uso de dados móveis.</string>

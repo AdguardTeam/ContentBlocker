@@ -21,7 +21,7 @@
     <string name="pref_autoupdate_filters">Atualização automática de filtros</string>
     <string name="pref_summary_autoupdate_filters">Atualize filtros automaticamente</string>
     <string name="pref_update_wifi_only">Atualize apenas usando Wi-Fi</string>
-    <string name="pref_summary_update_wifi_only">Não atualize filtros usando dados móveis</string>
+    <string name="pref_summary_update_wifi_only">O AdGuard receberá atualizações de filtro somente por Wi-Fi.</string>
     <string name="pref_show_useful_ads">Mostrar anúncios úteis</string>
     <string name="pref_summary_show_useful_ads">Desbloqueia anúncios que podem ser úteis aos usuários.</string>
     <string name="pref_filters_category">Filtros</string>
@@ -39,7 +39,7 @@
     <string name="officialSiteLabelText">Site oficial</string>
     <string name="forumLabelText">Fórum</string>
     <string name="install_browsers">Você não possui navegadores suportados instalados! Você pode instalá-los no Google Play:</string>
-    <string name="install_samsung_browser">Instalar Samsung Internet</string>
+    <string name="install_samsung_browser">Instalar Samsung Internet Browser</string>
     <string name="install_yandex_browser">Instalar Yandex Browser</string>
     <string name="issuesButtonText">Reportar Erro</string>
     <string name="githubLabelText">Código-fonte</string>
@@ -47,7 +47,7 @@
     <!--Do not translate.-->
     <string name="warning">Aviso</string>
     <string name="too_many_filters_warning">Você selecionou muitos filtros. Isso pode diminuir  significativamente a sua navegação na internet.</string>
-    <string name="onboarding_title1">Bem-vindo!</string>
+    <string name="onboarding_title1">Bem-vindo(a)!</string>
     <string name="onboarding_text1">Você está a poucos passos de uma internet rápida e sem anúncios.</string>
     <string name="onboarding_button_text1">Iniciar</string>
     <string name="onboarding_title2">Selecione um navegador</string>
@@ -62,11 +62,12 @@
     <string name="install">Instalar</string>
     <string name="start">Abrir</string>
     <string name="get_started">Iniciar</string>
-    <string name="adguard_conditions_title">Duas condições devem ser atendidas para que o AdGuard funcione:</string>
+    <string name="adguard_conditions_title">Duas condições devem ser cumpridas para que o AdGuard funcione:</string>
     <string name="adguard_conditions_list1">Você deve usar um navegador que suporte a tecnologia de bloqueio de conteúdo.</string>
     <string name="adguard_conditions_list2">O AdGuard deve ser ativado nas configurações de bloqueio de conteúdo deste navegador.</string>
     <string name="choose_browser">Escolha o navegador</string>
     <string name="enable_adguard">Ativar AdGuard</string>
+    <string name="main_activity_adguard_info">O AdGuard bloqueia anúncios, protege sua privacidade, aumenta a velocidade de carregamento da página e reduz o uso de dados móveis.</string>
     <string name="exit">Sair</string>
     <string name="user_filter">Filtro de Usuário</string>
     <string name="enter_rule_text">Digite o texto da regra</string>
@@ -79,7 +80,7 @@
     <string name="importUserRulesDialogTitle">Digite a URL ou caminho para o arquivo</string>
     <string name="importUserRulesUrlErrorMessage">A URL não é válida</string>
     <string name="clearUserRulesButtonText">Remover todos</string>
-    <string name="browseButtonText">Navegador</string>
+    <string name="browseButtonText">Procurar</string>
     <string name="github">GitHub</string>
     <string name="reportBug">Reportar um problema</string>
     <string name="description_about_other_adguard_product">Você sabia que pode usar o AdGuard em qualquer dispositivo, computador e sistema operacional? Saiba mais em nosso site.</string>

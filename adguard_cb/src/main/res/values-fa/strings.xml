@@ -81,7 +81,11 @@
     <string name="importUserRulesUrlErrorMessage">آدرس معتبر نیست</string>
     <string name="clearUserRulesButtonText">حذف همه</string>
     <string name="browseButtonText">مرور</string>
+    <string name="github">سایت GitHub</string>
     <string name="reportBug">گزارش مشکل</string>
+    <string name="description_about_other_adguard_product">آیا میدانستید که میتوانید از AdGuard روی هرگونه وسیله ای، کامپیوتر و سیستم عاملی استفاده کنید؟ برای اطلاعات بیشتر به وبسایت ما مراجعه کنید.</string>
+    <string name="no_thanks">نه،متشکرم</string>
+    <string name="learn_more">بیشتر بدانید</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">سیاست حریم خصوصی</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">توافق نامه مجوز کاربر-نهایی</a></string>
 </resources>

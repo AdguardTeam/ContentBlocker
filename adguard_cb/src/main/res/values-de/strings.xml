@@ -8,8 +8,8 @@
     <string name="importUserRulesErrorResultMessage">Fehler beim Importieren der Filter!</string>
     <string name="importUserRulesProgressDialogTitle">Importvorgang läuft</string>
     <string name="importUserRulesProgressDialogMessage">Laden...</string>
-    <string name="checkUpdatesProgressDialogTitle">Nach Updates suchen</string>
-    <string name="checkUpdatesProgressDialogMessage">Nach Updates wird gesucht, bitte warten...</string>
+    <string name="checkUpdatesProgressDialogTitle">Auf Updates prüfen</string>
+    <string name="checkUpdatesProgressDialogMessage">Auf Updates wird geprüft, bitte warten...</string>
     <string name="checkUpdatesErrorResultMessage">Update fehlgeschlagen. Bitte versuchen Sie es später noch einmal.</string>
     <string name="checkUpdatesZeroResultMessage">Sie nutzen bereits die aktuellste Version der Filter.</string>
     <string name="checkUpdatesOneResultMessage">Ein Filter wurde aktualisiert: {0}</string>
@@ -43,7 +43,7 @@
     <string name="install_yandex_browser">Yandex Browser installieren</string>
     <string name="issuesButtonText">Fehler melden</string>
     <string name="githubLabelText">Quellcode</string>
-    <string name="copyrightMessage">AdGuard Inhaltsblocker ist freie Software: Sie können es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 3 der Lizenz oder (nach Ihrem Wunsch) jeder späteren Version.</string>
+    <string name="copyrightMessage">AdGuard-Inhaltsblocker ist freie Software: Sie können es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 3 der Lizenz oder (nach Ihrem Wunsch) jeder späteren Version.</string>
     <!--Do not translate.-->
     <string name="warning">Warnung</string>
     <string name="too_many_filters_warning">Sie haben zu viele Filter-Abonnements ausgewählt. Dies kann das Surfen im Internet deutlich verlangsamen.</string>

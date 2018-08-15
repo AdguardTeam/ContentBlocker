@@ -81,7 +81,10 @@
     <string name="importUserRulesUrlErrorMessage">Nettadressen er ugyldig</string>
     <string name="clearUserRulesButtonText">Fjern alle</string>
     <string name="browseButtonText">Utforsk</string>
+    <string name="github">GitHub</string>
     <string name="reportBug">Rapporter en feil</string>
+    <string name="description_about_other_adguard_product">Visste du at du kan bruke AdGuard på hvilken som helst enhet, datamaskin, og operativsystem? Finn ut mer på nettsiden vår.</string>
+    <string name="no_thanks">Nei takk</string>
     <string name="learn_more">Finn ut mer</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Rettningslinjer angående personvern</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">Sluttbrukerlisens</a></string>

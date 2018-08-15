@@ -44,7 +44,6 @@
     <string name="issuesButtonText">ত্রুটি রিপোর্ট করুন</string>
     <string name="githubLabelText">সোর্স কোড</string>
     <string name="copyrightMessage">AdGuard Content Blocker একটি ফ্রি সফটওয়্যার। আপনি মুক্ত সফ্টওয়্যার ফাউন্ডেশন, লাইসেন্সের সংস্করণ ৩, অথবা (বিকল্প) যে কোনও পরের সংস্করণ দ্বারা, GNU সাধারণ পাবলিক লাইসেন্সের শর্তাবলীর অধীনে এটি পুনঃবিন্যস্ত করতে এবং / বা পরিবর্তন করতে পারেন।</string>
-    <!--Do not translate.-->
     <string name="warning">সতর্কতা</string>
     <string name="too_many_filters_warning">আপনি অনেকগুলি ফিল্টার সাবস্ক্রিপশনগুলি নির্বাচন করেছেন। এই কারনে সম্ভবত আপনার ওয়েব ব্রাউজিং ধীরগতি হতে পারে।</string>
     <string name="onboarding_title1">স্বাগতম!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">নিয়ম লিখুন</string>
     <string name="cancel">বাতিল</string>
     <string name="ok">ঠিক আছে</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">ব্যবহারকারীর ফিল্টারটি খালি</string>
     <string name="addUserRuleButtonText">নিয়ম যোগ করুন</string>
     <string name="importUserRulesButtonText">ইমপোর্ট</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">URL টি সঠিক নয়</string>
     <string name="clearUserRulesButtonText">সব মুছে ফেলুন</string>
     <string name="browseButtonText">ব্রাউজ</string>
-    <string name="github">GitHub</string>
     <string name="reportBug">ত্রুটি রিপোর্ট করুন</string>
     <string name="description_about_other_adguard_product">আপনি কি জানেন যে আপনি যে কোন ডিভাইস, কম্পিউটার এবং অপারেটিং সিস্টেমে AdGuard ব্যবহার করতে পারেন? এই সম্পর্কে আমাদের ওয়েবসাইটে আরও জানুন।</string>
     <string name="no_thanks">ধন্যবাদ নয়</string>

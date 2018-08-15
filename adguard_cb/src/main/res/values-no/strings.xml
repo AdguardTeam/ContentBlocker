@@ -44,7 +44,6 @@
     <string name="issuesButtonText">Rapporter en feil</string>
     <string name="githubLabelText">Kildekode</string>
     <string name="copyrightMessage">AdGuard-innholdsblokkerer er gratis programvare: du kan redistribuere den og/eller endre den i henhold til vilkårene i GNU General Public License som publisert av Free Software Foundation, enten versjon 3 av lisensen, eller (etter eget valg) en senere versjon.</string>
-    <!--Do not translate.-->
     <string name="warning">Advarsel</string>
     <string name="too_many_filters_warning">Du har valgt alt for mange filterabonnementer. Dette kan redusere nettsurfingen din betydelig.</string>
     <string name="onboarding_title1">Velkommen!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Angi regeltekst</string>
     <string name="cancel">Avbryt</string>
     <string name="ok">OK</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">Brukerfilteret er tomt</string>
     <string name="addUserRuleButtonText">Legg til regel</string>
     <string name="importUserRulesButtonText">Importer</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">Nettadressen er ugyldig</string>
     <string name="clearUserRulesButtonText">Fjern alle</string>
     <string name="browseButtonText">Utforsk</string>
-    <string name="github">GitHub</string>
     <string name="reportBug">Rapporter en feil</string>
     <string name="description_about_other_adguard_product">Visste du at du kan bruke AdGuard på hvilken som helst enhet, datamaskin, og operativsystem? Finn ut mer på nettsiden vår.</string>
     <string name="no_thanks">Nei takk</string>

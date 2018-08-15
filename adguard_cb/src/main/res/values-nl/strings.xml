@@ -44,7 +44,6 @@
     <string name="issuesButtonText">Bug signaleren</string>
     <string name="githubLabelText">Broncode</string>
     <string name="copyrightMessage">AdGuard Content Blocker is vrije software: je kan ze verdelen en/of wijzigen onder de regels van de GNU General Public License zoals gepubliceerd door The Free Software Foundation, ofwel versie 3 van de Licentie, of elke latere versie.</string>
-    <!--Do not translate.-->
     <string name="warning">Waarschuwing</string>
     <string name="too_many_filters_warning">Je hebt te veel filters geselecteerd. Dit kan je internetverkeer merkbaar vertragen.</string>
     <string name="onboarding_title1">Welkom !</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Regel invoeren</string>
     <string name="cancel">Annuleren</string>
     <string name="ok">OK</string>
-    <string name="userRuleNewItemDialogHint">||voorbeeld.com^$derde-partij</string>
     <string name="emptyUserfilterTextViewText">Gebruikersfilter is leeg</string>
     <string name="addUserRuleButtonText">Regel toevoegen</string>
     <string name="importUserRulesButtonText">Importeren</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">URL niet geldig</string>
     <string name="clearUserRulesButtonText">Alles verwijderen</string>
     <string name="browseButtonText">Bladeren</string>
-    <string name="github">GitHub</string>
     <string name="reportBug">Bug signaleren</string>
     <string name="description_about_other_adguard_product">Wist je dat je AdGuard kunt gebruiken op elk apparaat, computer en operating systeem? Zie voor meer info op onze website.</string>
     <string name="no_thanks">Nee. bedankt</string>

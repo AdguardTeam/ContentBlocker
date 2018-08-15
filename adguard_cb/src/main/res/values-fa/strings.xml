@@ -44,7 +44,6 @@
     <string name="issuesButtonText">گزارش مشکل</string>
     <string name="githubLabelText">کُد منبع</string>
     <string name="copyrightMessage">مسدودساز محتوای AdGuard یک نرم افزار رایگان است:شما میتوانید تحت مجوز عمومی همگانی گنو بر مبنای نرم افزار رایگان  چه نسخه 3 مجوز(به گزینش خود) یا هر نسخه بعدی، آن را منتشر وتوزیع مجدد/یا ویرایش کنید.</string>
-    <!--Do not translate.-->
     <string name="warning">هشدار</string>
     <string name="too_many_filters_warning">شما اشتراک های بسیاری را انتخاب کرده اید.این میتواند بطور اثرگذاری وبگردی شما را آهسته کند.</string>
     <string name="onboarding_title1">خوش آمدید!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">متن دستور را وارد کنید</string>
     <string name="cancel">لغو</string>
     <string name="ok">تأیید</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">فیلتر کاربر خالی هست</string>
     <string name="addUserRuleButtonText">افزودن دستور</string>
     <string name="importUserRulesButtonText">وارد کردن</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">آدرس معتبر نیست</string>
     <string name="clearUserRulesButtonText">حذف همه</string>
     <string name="browseButtonText">مرور</string>
-    <string name="github">سایت GitHub</string>
     <string name="reportBug">گزارش مشکل</string>
     <string name="description_about_other_adguard_product">آیا میدانستید که میتوانید از AdGuard روی هرگونه وسیله ای، کامپیوتر و سیستم عاملی استفاده کنید؟ برای اطلاعات بیشتر به وبسایت ما مراجعه کنید.</string>
     <string name="no_thanks">نه،متشکرم</string>

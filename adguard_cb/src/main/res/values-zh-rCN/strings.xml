@@ -44,7 +44,6 @@
     <string name="issuesButtonText">报告错误</string>
     <string name="githubLabelText">源码</string>
     <string name="copyrightMessage">AdGuard Content Blocker 为免费软件：您可在遵守由自由软件基金会发布的 GUN 通用公共许可 v3 或更新版本的条款下重新分布或修改它。</string>
-    <!--Do not translate.-->
     <string name="warning">警告</string>
     <string name="too_many_filters_warning">您选定的过滤器订阅过多。它会显著降低您的网络浏览速度。</string>
     <string name="onboarding_title1">欢迎！</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">输入规则文本</string>
     <string name="cancel">取消</string>
     <string name="ok">确定</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">用户过滤器为空</string>
     <string name="addUserRuleButtonText">添加规则</string>
     <string name="importUserRulesButtonText">导入</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">URL 无效</string>
     <string name="clearUserRulesButtonText">移除全部</string>
     <string name="browseButtonText">浏览</string>
-    <string name="github">Github</string>
     <string name="reportBug">报告错误</string>
     <string name="description_about_other_adguard_product">您知道您可在任何设备，计算机和操作系统上使用 AdGuard 吗？请转到我们的网站以了解更多信息。</string>
     <string name="no_thanks">不，谢谢</string>

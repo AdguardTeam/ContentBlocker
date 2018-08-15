@@ -44,7 +44,6 @@
     <string name="issuesButtonText">Nahlásiť chybu</string>
     <string name="githubLabelText">Zdrojový kód</string>
     <string name="copyrightMessage">AdGuard blokovač obsahu je bezplatný softvér: môžete ho redistribuovať a/alebo modifikovať pri dodržaní podmienok GNU General Public License publikovanej Free Software Foundation vo verzii 3 alebo novšej.</string>
-    <!--Do not translate.-->
     <string name="warning">Varovanie</string>
     <string name="too_many_filters_warning">Zvolili ste príliš veľa filtrov. To môže výrazne spomaliť Vaše prehliadanie internetových stránok.</string>
     <string name="onboarding_title1">Vitajte!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Vložiť text pravidla</string>
     <string name="cancel">Zrušiť</string>
     <string name="ok">OK</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">Používateľský filter je prázdny</string>
     <string name="addUserRuleButtonText">Pridať pravidlo</string>
     <string name="importUserRulesButtonText">Import</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">URL adresa nie je platná</string>
     <string name="clearUserRulesButtonText">Odstrániť všetko</string>
     <string name="browseButtonText">Prechádzať</string>
-    <string name="github">GitHub</string>
     <string name="reportBug">Nahlásiť chybu</string>
     <string name="description_about_other_adguard_product">Vedeli ste, že AdGuard môžete používať na ľubovoľnom zariadení, počítači a operačnom systéme? Viac o tom na našej webovej stránke.</string>
     <string name="no_thanks">Nie, ďakujem</string>

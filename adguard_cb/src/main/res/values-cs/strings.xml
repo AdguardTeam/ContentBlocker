@@ -44,7 +44,6 @@
     <string name="issuesButtonText">Nahlásit chybu</string>
     <string name="githubLabelText">Zdrojový kód</string>
     <string name="copyrightMessage">AdGuard Content Blocker je volný software: je možná ho redistribuovat a/nebo upravovat pod podmínkami GNU General Public License, tak, jak bylo zveřejněno organizací Free Software Foundation a to pod verzí licence číslo 3 a novější.</string>
-    <!--Do not translate.-->
     <string name="warning">Upozornění</string>
     <string name="too_many_filters_warning">Vybrali jste příliš mnoho filtrů. To může výrazně zpomalit prohlížení webů.</string>
     <string name="onboarding_title1">Vítejte!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Zadej text pravidla</string>
     <string name="cancel">Zrušit</string>
     <string name="ok">OK</string>
-    <string name="userRuleNewItemDialogHint">||příklad.cz^$třetí-strana</string>
     <string name="emptyUserfilterTextViewText">Uživatelský filtr je prázdný</string>
     <string name="addUserRuleButtonText">Přidat pravidlo</string>
     <string name="importUserRulesButtonText">Import</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">Zadaná URL není platná</string>
     <string name="clearUserRulesButtonText">Odstranit vše</string>
     <string name="browseButtonText">Procházet</string>
-    <string name="github">GitHub</string>
     <string name="reportBug">Nahlásit chybu</string>
     <string name="description_about_other_adguard_product">Víte, že AdGuard můžete používat na kterémkoli zařízení, počítači nebo operačním systému ? Více se dozvíte na našich webových stránkách.</string>
     <string name="no_thanks">Ne děkuji</string>

@@ -44,7 +44,6 @@
     <string name="issuesButtonText">Паведаміць пра памылку</string>
     <string name="githubLabelText">Зыходны код</string>
     <string name="copyrightMessage">AdGuard Content Blocker - бясплатнае праграмнае забеспячэнне: вы можаце распаўсюджваць яго і/ці змяняць яго ў адпаведнасці з агульнадаступнай ліцэнзіяй GNU, апублікаванай Free Software Foundation, або версіяй 3 ліцэнзіі, або (па вашым выбары) ўсякай пазнейшай версіі.</string>
-    <!--Do not translate.-->
     <string name="warning">Warning</string>
     <string name="too_many_filters_warning">Вы абралі зашмат падпісак на фільтры. Гэта можа значна запаволіць працу вашага вэб-браўзара.</string>
     <string name="onboarding_title1">Сардэчна запрашаем!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Увядзіце тэкст правіла</string>
     <string name="cancel">Скасаваць</string>
     <string name="ok">Добра</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">Карыстальніцкі фільтр пусты</string>
     <string name="addUserRuleButtonText">Дадаць правіла</string>
     <string name="importUserRulesButtonText">Імпартаваць</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">URL-адрас несапраўдны</string>
     <string name="clearUserRulesButtonText">Выдаліць усё</string>
     <string name="browseButtonText">Агляд</string>
-    <string name="github">GitHub</string>
     <string name="reportBug">Паведаміць пра памылку</string>
     <string name="description_about_other_adguard_product">Ці ведаеце вы, што вы можаце выкарыстоўваць AdGuard на хоць якой прыладзе, кампутары і АС? Даведайцеся больш на нашым сайце.</string>
     <string name="no_thanks">Не, дзякуй</string>

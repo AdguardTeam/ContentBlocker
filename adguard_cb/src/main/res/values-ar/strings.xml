@@ -44,7 +44,6 @@
     <string name="issuesButtonText">تقرير الشوائب</string>
     <string name="githubLabelText">الكود المصدري</string>
     <string name="copyrightMessage">AdGuard Content Blocker هو برنامج مجاني: يمكنك إعادة توزيعه و / أو تعديله بموجب شروط رخصة جنو العمومية كما نشرتها مؤسسة البرمجيات الحرة، إما الإصدار 3 من الترخيص، أو (في الخيار الخاص بك) أي إصدار لاحق.</string>
-    <!--Do not translate.-->
     <string name="warning">تحذير</string>
     <string name="too_many_filters_warning">لقد حددت عددا كبيرا جدا من اشتراكات الفلتر. قد يؤدي ذلك إلى إبطاء تصفح الويب بشكل ملحوظ.</string>
     <string name="onboarding_title1">مرحبا بكم</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">إدخال نص القاعدة</string>
     <string name="cancel">الغاء</string>
     <string name="ok">موافق</string>
-    <string name="userRuleNewItemDialogHint">|| example.com ^ $ الطرف الثالث</string>
     <string name="emptyUserfilterTextViewText">فلتر المستخدم فارغ</string>
     <string name="addUserRuleButtonText">أضافه قاعده</string>
     <string name="importUserRulesButtonText">استيراد</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">عنوان URL غير صالح</string>
     <string name="clearUserRulesButtonText">ازالة الكل</string>
     <string name="browseButtonText">المتصفح</string>
-    <string name="github">Github</string>
     <string name="reportBug">تقرير الشوائب</string>
     <string name="description_about_other_adguard_product">هل تعلم أنه يمكنك استخدام أدجارد على أي جهاز. جهاز كمبيوتر أو نظام تشغيل أوس؟ معرفة المزيد على موقعنا.</string>
     <string name="no_thanks">لا، شكراً</string>

@@ -44,7 +44,6 @@
     <string name="issuesButtonText">バグを報告</string>
     <string name="githubLabelText">ソースコード</string>
     <string name="copyrightMessage">AdGuard コンテンツブロッカーはフリーソフトウェアです：本ソフトウエアは再配布を許可しており、また最新バージョンを含む3バージョン以内の AdGuard は GNU General Public License 下でソフトウエアの改変が許可されています。</string>
-    <!--Do not translate.-->
     <string name="warning">警告</string>
     <string name="too_many_filters_warning">有効にされているフィルタが多すぎます。フィルタの数を多くすると、ブラウザの表示速度が低下する可能性があります。</string>
     <string name="onboarding_title1">ようこそ!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">ルールを追加</string>
     <string name="cancel">キャンセル</string>
     <string name="ok">OK</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">ユーザーフィルターが定義されていません。</string>
     <string name="addUserRuleButtonText">ルールを追加</string>
     <string name="importUserRulesButtonText">インポート</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">このURLは利用できません。</string>
     <string name="clearUserRulesButtonText">すべて削除</string>
     <string name="browseButtonText">参照</string>
-    <string name="github">GitHub</string>
     <string name="reportBug">バグを報告</string>
     <string name="description_about_other_adguard_product">AdGuardはどんなデバイス、OSでも利用できます。詳しくはAdGuardウェブサイトで。</string>
     <string name="no_thanks">いえ、結構です</string>

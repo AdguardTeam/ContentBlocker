@@ -45,7 +45,6 @@
     <string name="issuesButtonText">Report Bug</string>
     <string name="githubLabelText">Source code</string>
     <string name="copyrightMessage">AdGuard Content Blocker is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</string>
-    <!--Do not translate.-->
     <string name="warning">Warning</string>
     <string name="too_many_filters_warning">You have selected too many filter subscriptions. This might slow down your web browsing significantly.</string>
     <string name="onboarding_title1">Welcome!</string>
@@ -69,13 +68,11 @@
     <string name="choose_browser">Choose browser</string>
     <string name="enable_adguard">Enable AdGuard</string>
     <string name="main_activity_adguard_info">AdGuard blocks ads, protects your privacy, boosts page loading speeds, and reduces your mobile data usage.</string>
-    <string name="list_bullet" translatable="false">•</string>
     <string name="exit">Exit</string>
     <string name="user_filter">User Filter</string>
     <string name="enter_rule_text">Enter rule text</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">The user filter is empty</string>
     <string name="addUserRuleButtonText">Add rule</string>
     <string name="importUserRulesButtonText">Import</string>
@@ -83,13 +80,15 @@
     <string name="importUserRulesUrlErrorMessage">The URL is not valid</string>
     <string name="clearUserRulesButtonText">Remove all</string>
     <string name="browseButtonText">Browse</string>
-    <string name="github">GitHub</string>
     <string name="reportBug">Report a bug</string>
     <string name="description_about_other_adguard_product">Do you know that you can use AdGuard on any device, computer, and OS? Learn more on our website.</string>
     <string name="no_thanks">No Thanks</string>
     <string name="learn_more">Learn More</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="list_bullet" translatable="false">•</string>
+    <string name="userRuleNewItemDialogHint" translatable="false">||example.com^$third-party</string>
+    <string name="github" translatable="false">GitHub</string>
     <string name="title_activity_onboarding" translatable="false">Welcome!</string>
     <string name="yandex_browser" translatable="false">Yandex Browser</string>
     <string name="yandex_developer" translatable="false">Yandex</string>

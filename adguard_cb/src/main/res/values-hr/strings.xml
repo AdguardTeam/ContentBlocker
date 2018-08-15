@@ -44,7 +44,6 @@
     <string name="issuesButtonText">Prijavite pogrešku</string>
     <string name="githubLabelText">Izvorni kod</string>
     <string name="copyrightMessage">AdGuard Content Blocker je besplatan softver: možete ga redistributirati i/ili modificirati pod uvijetima GNU General Public Licence kako je objavljeno od strane Free Software Foundationa, bilo verzije 3 ili licence, ili (po vašoj opciji) bilo kojoj kasnijoj verziji.</string>
-    <!--Do not translate.-->
     <string name="warning">Upozorenje</string>
     <string name="too_many_filters_warning">Odabrali ste previše filtera. Može Vam se značajno usporiti pregledavanje weba.</string>
     <string name="onboarding_title1">Dobro došli!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Unesite tekst pravila</string>
     <string name="cancel">Prekid</string>
     <string name="ok">U redu</string>
-    <string name="userRuleNewItemDialogHint">||primjer.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">Korisnički filter je prazan</string>
     <string name="addUserRuleButtonText">Dodaj pravilo</string>
     <string name="importUserRulesButtonText">Uvoz</string>

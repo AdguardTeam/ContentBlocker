@@ -44,7 +44,6 @@
     <string name="issuesButtonText">Reportar Erro</string>
     <string name="githubLabelText">Código-fonte</string>
     <string name="copyrightMessage">O AdGuard Bloqueador de Conteúdo é um aplicativo gratuito: você pode redistribuir ou modificá-lo de acordo com os termos do GNU General Public License, conforme publicado pela Free Software Foundation, seja na versão 3 da Licença, ou posterior.</string>
-    <!--Do not translate.-->
     <string name="warning">Aviso</string>
     <string name="too_many_filters_warning">Você selecionou muitos filtros. Isso pode diminuir  significativamente a sua navegação na internet.</string>
     <string name="onboarding_title1">Bem-vindo(a)!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Digite o texto da regra</string>
     <string name="cancel">Cancelar</string>
     <string name="ok">OK</string>
-    <string name="userRuleNewItemDialogHint">||exemplo.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">O filtro de usuário está vazio</string>
     <string name="addUserRuleButtonText">Adicionar regra</string>
     <string name="importUserRulesButtonText">Importar</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">A URL não é válida</string>
     <string name="clearUserRulesButtonText">Remover todos</string>
     <string name="browseButtonText">Procurar</string>
-    <string name="github">GitHub</string>
     <string name="reportBug">Reportar um problema</string>
     <string name="description_about_other_adguard_product">Você sabia que pode usar o AdGuard em qualquer dispositivo, computador e sistema operacional? Saiba mais em nosso site.</string>
     <string name="no_thanks">Não Obrigado</string>

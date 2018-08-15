@@ -44,8 +44,7 @@
     <string name="issuesButtonText">Сообщить об ошибке</string>
     <string name="githubLabelText">Исходный код</string>
     <string name="copyrightMessage">AdGuard Content Blocker - свободное программное обеспечение: вы можете распространять и/или изменять его в соответствии с условиями GNU General Public License, опубликованной Free Software Foundation, либо версии 3 лицензии, либо (по вашему выбору) любой более поздней версии.</string>
-    <!--Do not translate.-->
-    <string name="warning">Warning</string>
+    <string name="warning">Внимание</string>
     <string name="too_many_filters_warning">Вы выбрали слишком много подписок на фильтры. Это может значительно замедлить работу браузера.</string>
     <string name="onboarding_title1">Добро пожаловать!</string>
     <string name="onboarding_text1">Вы всего в нескольких шагах от быстрого и чистого интернета без рекламы!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Введите текст правила</string>
     <string name="cancel">Отмена</string>
     <string name="ok">OK</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">Пользовательский фильтр пуст</string>
     <string name="addUserRuleButtonText">Добавить правило</string>
     <string name="importUserRulesButtonText">Импортировать</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">Недопустимый URL-адрес</string>
     <string name="clearUserRulesButtonText">Удалить все</string>
     <string name="browseButtonText">Просмотреть</string>
-    <string name="github">GitHub</string>
     <string name="reportBug">Сообщить об ошибке</string>
     <string name="description_about_other_adguard_product">Вы знаете, что Вы можете использовать AdGuard на любом устройстве, компьютере и операционной системе? Узнайте больше на нашем вебсайте.</string>
     <string name="no_thanks">Нет, спасибо</string>

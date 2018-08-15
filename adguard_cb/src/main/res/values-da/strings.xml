@@ -44,7 +44,6 @@
     <string name="issuesButtonText">Rapporter Fejl</string>
     <string name="githubLabelText">Kildekode</string>
     <string name="copyrightMessage">AdGuard Indholdsblokker er et gratis program: du kan omfordele det og/eller ændre det under betingelserne af GNU General Public License som er udgivet af Free Software Foundation, enten version 3 af Licensen eller (efter dit valg) enhver senere version.</string>
-    <!--Do not translate.-->
     <string name="warning">Advarsel</string>
     <string name="too_many_filters_warning">Du har valgt for mange filterabonnenter. Dette vil muligvis sænke din internetsøgning betydeligt.</string>
     <string name="onboarding_title1">Velkommen!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Indtast regeltekst</string>
     <string name="cancel">Annuller</string>
     <string name="ok">OK</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">Brugerfilteret er tomt</string>
     <string name="addUserRuleButtonText">Tilføj regel</string>
     <string name="importUserRulesButtonText">Importer</string>
@@ -81,7 +79,6 @@
     <string name="importUserRulesUrlErrorMessage">URL\'en er ikke gyldig</string>
     <string name="clearUserRulesButtonText">Fjern alt</string>
     <string name="browseButtonText">Gennemse</string>
-    <string name="github">GitHub</string>
     <string name="reportBug">Rapporter en fejl</string>
     <string name="description_about_other_adguard_product">Vidste du, at du kan bruge AdGuard på en hvilken som helst enhed, computer og OS? Lær mere på vores hjemmeside.</string>
     <string name="no_thanks">Nej Tak</string>

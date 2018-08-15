@@ -44,7 +44,6 @@
     <string name="issuesButtonText">Пријавете Грешка</string>
     <string name="githubLabelText">Изворен код</string>
     <string name="copyrightMessage">AdGuard Блокатор на Содржина е бесплатен софтвер: вие можите да го редистрибутирате и/или да го изменувате под условите на GNU Општата Јавна Лиценца како што е издадена од Слободната Фондација за Софтвер, или верзијата 3 на Лиценцата, или (како ваша опција) било која покасна верзија.</string>
-    <!--Do not translate.-->
     <string name="warning">Предупредување</string>
     <string name="too_many_filters_warning">Вие избравте премногу претплати за филтри. Ова може да го намали вашето веб прелистување значајно.</string>
     <string name="onboarding_title1">Добредојдовте!</string>
@@ -73,7 +72,6 @@
     <string name="enter_rule_text">Внесете текст на правилото</string>
     <string name="cancel">Откажи</string>
     <string name="ok">Во Ред</string>
-    <string name="userRuleNewItemDialogHint">||example.com^$third-party</string>
     <string name="emptyUserfilterTextViewText">Корисничкиот филтер е празен</string>
     <string name="addUserRuleButtonText">Додај правило</string>
     <string name="importUserRulesButtonText">Внеси</string>

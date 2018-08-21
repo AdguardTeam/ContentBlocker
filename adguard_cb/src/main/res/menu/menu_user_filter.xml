@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-            android:id="@+id/user_filter_add"
-            android:title="@string/addUserRuleButtonText"
-            app:showAsAction="always"
-            android:icon="@drawable/ic_action_new"/>
+        android:id="@+id/user_filter_add"
+        android:icon="@drawable/ic_action_new"
+        android:title="@string/addUserRuleButtonText"
+        app:showAsAction="never" />
 
     <item
-            android:id="@+id/user_filter_import"
-            android:title="@string/importUserRulesButtonText"
-            app:showAsAction="always"
-            android:icon="@drawable/ic_action_add_to_queue"/>
+        android:id="@+id/user_filter_import"
+        android:icon="@drawable/ic_action_add_to_queue"
+        android:title="@string/importUserRulesButtonText"
+        app:showAsAction="never" />
 
     <item
-            android:id="@+id/user_filter_clear"
-            android:title="@string/clearUserRulesButtonText"
-            app:showAsAction="always"
-            android:icon="@drawable/ic_action_discard"/>
+        android:id="@+id/user_filter_clear"
+        android:icon="@drawable/ic_action_discard"
+        android:title="@string/clearUserRulesButtonText"
+        app:showAsAction="never" />
 </menu>

@@ -16,6 +16,7 @@
  */
 package com.adguard.android.contentblocker.ui;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
@@ -31,6 +32,7 @@ public class ClickViewPager extends ViewPager {
     }
 
     @Override
+    @SuppressLint("ClickableViewAccessibility")
     public boolean onTouchEvent(MotionEvent event) {
         return this.enabled && super.onTouchEvent(event);
     }

@@ -16,8 +16,6 @@
  */
 package com.adguard.android.service;
 
-
-import java.util.Collection;
 import java.util.Date;
 import java.util.Set;
 
@@ -84,33 +82,24 @@ public interface PreferencesService {
     /**
      * @return User filter rules
      */
-    Set<String> getUserRules();
+    String getUserRules();
 
     /**
-     * Adds new rule to user filter
+     * Set user filter text
      *
-     * @param item Rule to add
+     * @param userRules user rules
      */
-    void addUserRuleItem(String item);
+    void setUserRuleItems(String userRules);
 
     /**
-     * Removes rule from the user filter
-     *
-     * @param item Rule to remove
+     * @return Set with disabled user rules
      */
-    void removeUserRuleItem(String item);
+    Set<String> getDisabledUserRules();
 
     /**
-     * Clears user filter
+     * @param disabledUserRules Set with disabled user rules
      */
-    void clearUserRules();
-
-    /**
-     * Add batch of user rules.
-     *
-     * @param items collection of rules
-     */
-    void addUserRuleItems(Collection<String> items);
+    void setDisabledUserRules(Set<String> disabledUserRules);
 
     /**
      * @param time Last time updates where checked

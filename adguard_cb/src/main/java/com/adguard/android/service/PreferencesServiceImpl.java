@@ -21,10 +21,10 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -49,6 +49,8 @@ public class PreferencesServiceImpl implements PreferencesService {
     private final static String KEY_BROWSER_CONNECTED_COUNT = "key_browser_connected_count";
     private final static String KEY_ONBOARDING_SHOWN = "key_onboarding_shown";
     private final static String KEY_ABOUT_OTHER_PRODUCT_SHOWN = "key_about_other_product_shown";
+    private final static String KEY_USER_RULES_STRING = "key_user_rules_string";
+    private final static String KEY_DISABLED_USER_RULES = "key_disabled_user_rules";
 
     private final SharedPreferences sharedPreferences;
 
@@ -148,66 +150,28 @@ public class PreferencesServiceImpl implements PreferencesService {
         editor.apply();
     }
 
-    /**
-     * User rules list
-     *
-     * @return List of user rules
-     */
     @Override
-    public Set<String> getUserRules() {
-        return sharedPreferences.getStringSet(KEY_USER_RULES, new HashSet<String>());
+    public String getUserRules() {
+        return sharedPreferences.getString(KEY_USER_RULES_STRING, StringUtils.EMPTY);
     }
 
-    /**
-     * Adds user rule
-     *
-     * @param item User rule
-     */
     @Override
-    public void addUserRuleItem(String item) {
-        final Set<String> stringSet = sharedPreferences.getStringSet(KEY_USER_RULES, new HashSet<String>());
-        stringSet.add(item);
-
+    public void setUserRuleItems(String userRules) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.remove(KEY_USER_RULES);
-        editor.putStringSet(KEY_USER_RULES, stringSet);
-        editor.apply();
-    }
-
-    /**
-     * Removes user rule
-     *
-     * @param item Item to remove
-     */
-    @Override
-    public void removeUserRuleItem(String item) {
-        final Set<String> stringSet = sharedPreferences.getStringSet(KEY_USER_RULES, new HashSet<String>());
-        stringSet.remove(item);
-
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.remove(KEY_USER_RULES);
-        editor.putStringSet(KEY_USER_RULES, stringSet);
-        editor.apply();
-    }
-
-    /**
-     * Clears user rules list
-     */
-    @Override
-    public void clearUserRules() {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.remove(KEY_USER_RULES);
+        editor.putString(KEY_USER_RULES_STRING, userRules);
         editor.apply();
     }
 
     @Override
-    public void addUserRuleItems(Collection<String> items) {
-        final Set<String> stringSet = sharedPreferences.getStringSet(KEY_USER_RULES, new HashSet<String>());
-        stringSet.addAll(items);
+    public Set<String> getDisabledUserRules() {
+        Set<String> valueSet = sharedPreferences.getStringSet(KEY_DISABLED_USER_RULES, null);
+        return valueSet != null ? new HashSet<>(valueSet) : new HashSet<String>();
+    }
 
+    @Override
+    public void setDisabledUserRules(Set<String> disabledUserRules) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.remove(KEY_USER_RULES);
-        editor.putStringSet(KEY_USER_RULES, stringSet);
+        editor.putStringSet(KEY_DISABLED_USER_RULES, disabledUserRules);
         editor.apply();
     }
 

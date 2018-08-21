@@ -1,29 +1,20 @@
 <resources>
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
-        <!--   theme UI controls like checkboxes and text fields -->
-        <item name="colorButtonNormal">#ff0000</item>
-        <item name="android:colorButtonNormal">#ff0000</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="android:colorButtonNormal">@color/colorAccent</item>
         <item name="android:editTextColor">@color/colorPrimary</item>
         <item name="android:textColorPrimaryInverse">#e0e0e0</item>
         <item name="android:textColorSecondary">@color/white</item>
         <item name="android:colorControlHighlight">@color/colorPrimary</item>
         <item name="android:colorBackground">#e0e0e0</item>
-        <!--<item name="android:colorForeground">#202020</item>-->
-        <!--<item name="android:textColorPrimary">#202020</item>-->
-        <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
         <item name="android:alertDialogTheme">@style/AlertDialog</item>
     </style>
 
     <style name="AppTheme.Toolbar" parent="AppTheme">
-        <!--<item name="windowDrawsSystemBarBackgrounds">true</item>
-        <item name="statusBarColor">@color/colorPrimaryDark</item>
-        <item name="windowTranslucentStatus">false</item>-->
         <item name="windowActionBar">true</item>
         <item name="windowNoTitle">false</item>
     </style>
@@ -210,6 +201,17 @@
         <item name="android:layout_marginTop">@dimen/cardview_button_margin</item>
         <item name="android:layout_marginBottom">@dimen/cardview_button_margin</item>
         <item name="android:minWidth">@dimen/cardview_button_minwidth</item>
+    </style>
+
+    <!-- User Filter, Whitelist -->
+    <style name="settingsListItemStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:textSize">@dimen/settingsTitleTextSize</item>
+        <item name="android:textColor">@color/common_text</item>
+        <item name="android:paddingLeft">@dimen/settingsEditableListItemPaddingLeft</item>
+        <item name="android:paddingRight">@dimen/settingsEditableListItemPaddingRight</item>
     </style>
 
     <style name="settingsListEmptyLabel" parent="textViewCommonStyle">

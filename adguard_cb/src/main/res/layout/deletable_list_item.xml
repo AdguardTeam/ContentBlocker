@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selectable_background"
+                android:layoutDirection="ltr"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp">
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:focusable="false"/>
+
+    <TextView
+        android:id="@+id/itemTextView"
+        style="@style/settingsListItemStyle"
+        android:layout_alignParentLeft="false"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/checkBox"
+        android:layout_toRightOf="@id/checkBox"
+        android:ellipsize="end"
+        android:fontFamily="serif-monospace"
+        android:maxLines="1"
+        android:paddingLeft="8dp"
+        android:paddingRight="16dp"
+        android:text="||example.org^$third-party"/>
+
+</RelativeLayout>

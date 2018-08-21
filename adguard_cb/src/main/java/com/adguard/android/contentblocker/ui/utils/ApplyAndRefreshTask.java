@@ -14,15 +14,16 @@
  * You should have received a copy of the GNU General Public License along with
  * AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.contentblocker;
+package com.adguard.android.contentblocker.ui.utils;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 
+import com.adguard.android.contentblocker.R;
 import com.adguard.android.service.FilterService;
-import com.adguard.android.ui.utils.ProgressDialogUtils;
+import com.adguard.android.contentblocker.ui.utils.ProgressDialogUtils;
 
 public class ApplyAndRefreshTask extends AsyncTask<Void, Void, Void> {
 
@@ -31,7 +32,7 @@ public class ApplyAndRefreshTask extends AsyncTask<Void, Void, Void> {
     private final Activity activity;
     private ProgressDialog dialog;
 
-    ApplyAndRefreshTask(FilterService service, Activity activity) {
+    public ApplyAndRefreshTask(FilterService service, Activity activity) {
         this.service = service;
         this.activity = activity;
     }

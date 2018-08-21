@@ -14,22 +14,21 @@
  * You should have received a copy of the GNU General Public License along with
  * AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.contentblocker;
+package com.adguard.android.contentblocker.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
 import com.adguard.android.ServiceLocator;
+import com.adguard.android.contentblocker.R;
 import com.adguard.android.service.FilterService;
 import com.adguard.android.service.PreferencesService;
-import com.adguard.android.ui.utils.NavigationHelper;
+import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -47,7 +46,7 @@ public class SettingsActivity extends AppCompatActivity {
         final PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
         final FilterService filterService = ServiceLocator.getInstance(getApplicationContext()).getFilterService();
 
-        final CheckBox autoUpdateView = (CheckBox) findViewById(R.id.auto_update_checkbox);
+        final CheckBox autoUpdateView = findViewById(R.id.auto_update_checkbox);
         autoUpdateView.setChecked(preferencesService.isAutoUpdateFilters());
         autoUpdateView.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -63,7 +62,7 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-        final CheckBox updateWifiOnlyView = (CheckBox) findViewById(R.id.update_wifi_only_checkbox);
+        final CheckBox updateWifiOnlyView = findViewById(R.id.update_wifi_only_checkbox);
         updateWifiOnlyView.setChecked(preferencesService.isUpdateOverWifiOnly());
         updateWifiOnlyView.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -79,7 +78,7 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-        final CheckBox showUsefulAdsView = (CheckBox) findViewById(R.id.show_useful_ads_checkbox);
+        final CheckBox showUsefulAdsView = findViewById(R.id.show_useful_ads_checkbox);
         showUsefulAdsView.setChecked(filterService.isShowUsefulAds());
         showUsefulAdsView.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

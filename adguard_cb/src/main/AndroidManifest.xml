@@ -21,7 +21,7 @@
             android:value="API_1.0"/>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -32,28 +32,28 @@
         </activity>
 
         <activity
-            android:name=".AboutActivity"
+            android:name=".ui.AboutActivity"
             android:label="@string/about"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".ui.MainActivity"
             android:theme="@style/AppTheme.Toolbar"/>
         <activity
-            android:name=".SettingsActivity"
+            android:name=".ui.SettingsActivity"
             android:label="@string/settings"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".ui.MainActivity"
             android:theme="@style/AppTheme.Toolbar"/>
         <activity
-            android:name=".FiltersActivity"
+            android:name=".ui.FiltersActivity"
             android:label="@string/filters"
-            android:parentActivityName=".SettingsActivity"
+            android:parentActivityName=".ui.SettingsActivity"
             android:theme="@style/AppTheme.Toolbar"/>
         <activity
-            android:name=".UserFilterActivity"
+            android:name=".ui.UserFilterActivity"
            android:label="@string/user_filter"
-           android:parentActivityName=".MainActivity"
+           android:parentActivityName=".ui.MainActivity"
            android:theme="@style/AppTheme.Toolbar"/>
 
         <activity
-            android:name=".NoBrowsersFoundActivity"
+            android:name=".ui.NoBrowsersFoundActivity"
             android:theme="@style/AppTheme.Toolbar"/>
 
         <activity

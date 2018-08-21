@@ -24,7 +24,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.adguard.android.contentblocker.R;
-import com.adguard.android.ui.utils.ProgressDialogUtils;
+import com.adguard.android.contentblocker.ui.utils.ProgressDialogUtils;
 
 /**
  * Base service class.

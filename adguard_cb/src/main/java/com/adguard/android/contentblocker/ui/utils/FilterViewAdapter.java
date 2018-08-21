@@ -14,11 +14,10 @@
  You should have received a copy of the GNU General Public License along with
  AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.contentblocker;
+package com.adguard.android.contentblocker.ui.utils;
 
 import android.app.Activity;
-import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,11 +26,11 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.adguard.android.ServiceLocator;
+import com.adguard.android.contentblocker.R;
 import com.adguard.android.model.FilterList;
 import com.adguard.android.service.FilterService;
 import com.adguard.android.service.FilterServiceImpl;
 import com.adguard.android.service.PreferencesService;
-import com.adguard.android.ui.utils.ActivityUtils;
 
 import java.util.Date;
 import java.util.Locale;
@@ -44,14 +43,11 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
     private final Activity context;
     private final LayoutInflater layoutInflater;
     private final FilterService filterService;
-    private final int TOO_MANY_FILTERS_THRESHOLD = 10;
-    private boolean needToShowWarningDialog = false;
 
     public FilterViewAdapter(Activity context, FilterService filterService) {
         this.context = context;
         this.filterService = filterService;
         this.layoutInflater = LayoutInflater.from(context);
-        this.needToShowWarningDialog = filterService.getEnabledFilterListCount() < TOO_MANY_FILTERS_THRESHOLD;
     }
 
     @Override
@@ -106,19 +102,16 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        FilterList list = (FilterList) v.getTag();
-        filterService.updateFilterEnabled(list, !list.isEnabled());
-        ((CheckBox)v.findViewById(R.id.checkbox)).setChecked(list.isEnabled());
-        if (list.getFilterId() == FilterServiceImpl.SHOW_USEFUL_ADS_FILTER_ID) {
+        FilterList filterList = (FilterList) v.getTag();
+        filterService.updateFilterEnabled(filterList, !filterList.isEnabled());
+        ((CheckBox)v.findViewById(R.id.checkbox)).setChecked(filterList.isEnabled());
+
+        if (filterList.getFilterId() == FilterServiceImpl.SHOW_USEFUL_ADS_FILTER_ID) {
             PreferencesService preferencesService = ServiceLocator.getInstance(context.getApplicationContext()).getPreferencesService();
-            preferencesService.setShowUsefulAds(list.isEnabled());
+            preferencesService.setShowUsefulAds(filterList.isEnabled());
         }
-        if (needToShowWarningDialog && filterService.getEnabledFilterListCount() >= TOO_MANY_FILTERS_THRESHOLD) {
-            showTooManyFiltersWarning();
-            needToShowWarningDialog = false;
-        } else {
-            new ApplyAndRefreshTask(filterService, context).execute();
-        }
+
+        new ApplyAndRefreshTask(filterService, context).execute();
     }
 
     private CharSequence getFilterSummaryText(FilterList filter) {
@@ -142,20 +135,5 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
         }
 
         return sb.toString();
-    }
-
-    private void showTooManyFiltersWarning() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setCancelable(false);
-        builder.setTitle(R.string.warning);
-        builder.setMessage(R.string.too_many_filters_warning);
-        builder.setNeutralButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-                new ApplyAndRefreshTask(filterService, context).execute();
-            }
-        });
-        builder.show();
     }
 }

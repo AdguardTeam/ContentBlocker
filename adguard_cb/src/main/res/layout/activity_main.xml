@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <!-- We use a Toolbar so that our drawer can be displayed
-             in front of the action bar -->
-    <include layout="@layout/toolbar"/>
+    <include layout="@layout/toolbar" />
 
-    <!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
-    <android.support.v4.widget.DrawerLayout android:id="@+id/drawer_layout"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent">
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <!-- As the main content view, the view below consumes the entire
-             space available using match_parent in both dimensions. -->
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                      xmlns:tools="http://schemas.android.com/tools"
-                      android:layout_width="match_parent"
-                      android:layout_height="match_parent"
-                      android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -43,16 +38,16 @@
                         android:padding="@dimen/cardview_margin"
                         android:text="@string/main_activity_adguard_info"
                         android:textColor="@color/primaryText"
-                        android:textSize="14sp"/>
+                        android:textSize="14sp" />
 
                     <android.support.v7.widget.CardView
-                            android:id="@+id/no_browsers_card"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:visibility="visible"
-                            style="@style/CardViewStyle"
-                            app:cardBackgroundColor="@color/white">
+                        android:id="@+id/no_browsers_card"
+                        style="@style/CardViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="visible"
+                        app:cardBackgroundColor="@color/white">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -74,7 +69,7 @@
                                     android:text="@string/get_started"
                                     android:textAppearance="?android:attr/textAppearanceLarge"
                                     android:textColor="@color/black"
-                                    android:textSize="20sp"/>
+                                    android:textSize="20sp" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -82,13 +77,13 @@
                                     android:layout_marginBottom="8dp"
                                     android:text="@string/adguard_conditions_title"
                                     android:textColor="@color/black"
-                                    android:textSize="16sp"/>
+                                    android:textSize="16sp" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:orientation="vertical"
-                                    android:layout_marginBottom="@dimen/cardview_vertical_padding">
+                                    android:layout_marginBottom="@dimen/cardview_vertical_padding"
+                                    android:orientation="vertical">
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
@@ -100,16 +95,16 @@
                                             android:layout_marginLeft="8dp"
                                             android:layout_marginRight="4dp"
                                             android:text="@string/list_bullet"
-                                            android:textSize="16sp"
-                                            android:textColor="@color/black"/>
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
+                                            android:layout_marginBottom="8dp"
                                             android:text="@string/adguard_conditions_list1"
-                                            android:textSize="16sp"
                                             android:textColor="@color/black"
-                                            android:layout_marginBottom="8dp"/>
+                                            android:textSize="16sp" />
                                     </LinearLayout>
 
                                     <LinearLayout
@@ -122,15 +117,15 @@
                                             android:layout_marginLeft="8dp"
                                             android:layout_marginRight="4dp"
                                             android:text="•"
-                                            android:textSize="16sp"
-                                            android:textColor="@color/black"/>
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text="@string/adguard_conditions_list2"
-                                            android:textSize="16sp"
-                                            android:textColor="@color/black"/>
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp" />
                                     </LinearLayout>
 
                                 </LinearLayout>
@@ -144,12 +139,12 @@
                                 <Button
                                     android:id="@+id/choose_browser_button"
                                     style="@style/Widget.AppCompat.Button.Borderless.CardView"
-                                    android:text="@string/choose_browser"/>
+                                    android:text="@string/choose_browser" />
 
                                 <Button
                                     android:id="@+id/enable_adguard_button"
                                     style="@style/Widget.AppCompat.Button.Borderless.CardView"
-                                    android:text="@string/enable_adguard"/>
+                                    android:text="@string/enable_adguard" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -158,11 +153,11 @@
 
                     <android.support.v7.widget.CardView
                         android:id="@+id/info_card"
+                        style="@style/CardViewStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        app:cardBackgroundColor="@color/white"
-                        style="@style/CardViewStyle">
+                        app:cardBackgroundColor="@color/white">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -185,7 +180,7 @@
                                     android:text="@string/filters"
                                     android:textAppearance="?android:attr/textAppearanceLarge"
                                     android:textColor="@color/primaryText"
-                                    android:textSize="20sp"/>
+                                    android:textSize="20sp" />
 
                                 <ImageView
                                     android:id="@+id/menuImageView"
@@ -193,7 +188,7 @@
                                     android:layout_height="32dp"
                                     android:paddingBottom="5dp"
                                     android:paddingTop="5dp"
-                                    android:src="@drawable/ic_more_vert_black_24dp"/>
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
 
                             </LinearLayout>
 
@@ -210,7 +205,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="@string/stats_update_time"
                                     android:textColor="@color/secondaryText"
-                                    android:textSize="14sp"/>
+                                    android:textSize="14sp" />
 
                                 <TextView
                                     android:id="@+id/updateTimeTextView"
@@ -219,7 +214,7 @@
                                     android:layout_marginLeft="4dp"
                                     android:text="28 Mar 13:07"
                                     android:textColor="@color/secondaryText"
-                                    android:textSize="14sp"/>
+                                    android:textSize="14sp" />
                             </LinearLayout>
 
                             <TextView
@@ -230,9 +225,9 @@
                                 android:text="@string/count"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="@color/secondaryText"
-                                android:textSize="14sp"/>
+                                android:textSize="14sp" />
 
-                            <View style="@style/divLine"/>
+                            <View style="@style/divLine" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -248,7 +243,7 @@
                                     android:text="@string/stats_enabled_filters"
                                     android:textAppearance="?android:attr/textAppearanceLarge"
                                     android:textColor="@color/secondaryText"
-                                    android:textSize="14sp"/>
+                                    android:textSize="14sp" />
 
                                 <TextView
                                     android:id="@+id/filtersCountTextView"
@@ -257,10 +252,10 @@
                                     android:text="12"
                                     android:textAppearance="?android:attr/textAppearanceLarge"
                                     android:textColor="@color/secondaryText"
-                                    android:textSize="14sp"/>
+                                    android:textSize="14sp" />
                             </LinearLayout>
 
-                            <View style="@style/divLine"/>
+                            <View style="@style/divLine" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -276,7 +271,7 @@
                                     android:text="@string/stats_enabled_rules"
                                     android:textAppearance="?android:attr/textAppearanceLarge"
                                     android:textColor="@color/secondaryText"
-                                    android:textSize="14sp"/>
+                                    android:textSize="14sp" />
 
                                 <TextView
                                     android:id="@+id/rulesCountTextView"
@@ -285,29 +280,30 @@
                                     android:text="28999"
                                     android:textAppearance="?android:attr/textAppearanceLarge"
                                     android:textColor="@color/secondaryText"
-                                    android:textSize="14sp"/>
+                                    android:textSize="14sp" />
                             </LinearLayout>
 
                             <View
                                 style="@style/divLine"
-                                android:layout_marginBottom="@dimen/cardview_vertical_padding"/>
+                                android:layout_marginBottom="@dimen/cardview_vertical_padding" />
 
                             <Button
                                 android:id="@+id/go_to_filters"
                                 style="@style/Widget.AppCompat.Button.Borderless.CardView"
                                 android:text="@string/go_to_filters"
-                                android:textColor="@color/primaryText"/>
+                                android:textColor="@color/primaryText" />
 
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
-                            android:id="@+id/yandex_card"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            app:cardBackgroundColor="@color/white" style="@style/CardViewStyle">
+                        android:id="@+id/yandex_card"
+                        style="@style/CardViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:cardBackgroundColor="@color/white">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -333,7 +329,7 @@
                                         android:text="@string/yandex_browser"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:textColor="@color/primaryText"
-                                        android:textSize="20sp"/>
+                                        android:textSize="20sp" />
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
@@ -347,13 +343,13 @@
                                             android:layout_height="wrap_content"
                                             android:text="@string/yandex_developer"
                                             android:textColor="@color/secondaryText"
-                                            android:textSize="14sp"/>
+                                            android:textSize="14sp" />
 
                                         <ImageView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="2dp"
-                                            android:src="@drawable/ic_best_developer"/>
+                                            android:src="@drawable/ic_best_developer" />
                                     </LinearLayout>
 
                                     <LinearLayout
@@ -366,7 +362,7 @@
                                             android:layout_height="wrap_content"
                                             android:text="@string/yandex_browser_rating"
                                             android:textColor="@color/primaryText"
-                                            android:textSize="12sp"/>
+                                            android:textSize="12sp" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -374,14 +370,14 @@
                                             android:paddingLeft="2dp"
                                             android:text="&#9733;"
                                             android:textColor="@color/primaryText"
-                                            android:textSize="12sp"/>
+                                            android:textSize="12sp" />
                                     </LinearLayout>
                                 </LinearLayout>
 
                                 <ImageView
                                     android:layout_width="64dp"
                                     android:layout_height="64dp"
-                                    android:src="@drawable/ic_browser_yandex"/>
+                                    android:src="@drawable/ic_browser_yandex" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -392,30 +388,31 @@
                                     android:id="@+id/install_yandex_browser"
                                     style="@style/Widget.AppCompat.Button.Borderless.CardView"
                                     android:text="@string/install"
-                                    android:textColor="@color/primaryText"/>
+                                    android:textColor="@color/primaryText" />
 
                                 <Button
                                     android:id="@+id/start_yandex_settings"
                                     style="@style/Widget.AppCompat.Button.Borderless.CardView"
                                     android:text="@string/settings"
-                                    android:textColor="@color/primaryText"/>
+                                    android:textColor="@color/primaryText" />
 
                                 <Button
                                     android:id="@+id/start_yandex_browser"
                                     style="@style/Widget.AppCompat.Button.Borderless.CardView"
                                     android:text="@string/start"
-                                    android:textColor="@color/primaryText"/>
+                                    android:textColor="@color/primaryText" />
                             </LinearLayout>
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
-                            android:id="@+id/samsung_card"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            app:cardBackgroundColor="@color/white" style="@style/CardViewStyle">
+                        android:id="@+id/samsung_card"
+                        style="@style/CardViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:cardBackgroundColor="@color/white">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -441,7 +438,7 @@
                                         android:text="@string/samsung_browser"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:textColor="@color/primaryText"
-                                        android:textSize="20sp"/>
+                                        android:textSize="20sp" />
 
                                     <TextView
                                         android:layout_width="match_parent"
@@ -449,7 +446,7 @@
                                         android:layout_marginTop="4dp"
                                         android:text="@string/samsung_developer"
                                         android:textColor="@color/secondaryText"
-                                        android:textSize="14sp"/>
+                                        android:textSize="14sp" />
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
@@ -461,7 +458,7 @@
                                             android:layout_height="wrap_content"
                                             android:text="@string/samsung_browser_rating"
                                             android:textColor="@color/primaryText"
-                                            android:textSize="12sp"/>
+                                            android:textSize="12sp" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -469,14 +466,14 @@
                                             android:paddingLeft="2dp"
                                             android:text="&#9733;"
                                             android:textColor="@color/primaryText"
-                                            android:textSize="14sp"/>
+                                            android:textSize="14sp" />
                                     </LinearLayout>
                                 </LinearLayout>
 
                                 <ImageView
                                     android:layout_width="64dp"
                                     android:layout_height="64dp"
-                                    android:src="@drawable/ic_browser_samsung"/>
+                                    android:src="@drawable/ic_browser_samsung" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -487,19 +484,19 @@
                                     android:id="@+id/install_samsung_browser"
                                     style="@style/Widget.AppCompat.Button.Borderless.CardView"
                                     android:text="@string/install"
-                                    android:textColor="@color/primaryText"/>
+                                    android:textColor="@color/primaryText" />
 
                                 <Button
                                     android:id="@+id/start_samsung_settings"
                                     style="@style/Widget.AppCompat.Button.Borderless.CardView"
                                     android:text="@string/settings"
-                                    android:textColor="@color/primaryText"/>
+                                    android:textColor="@color/primaryText" />
 
                                 <Button
                                     android:id="@+id/start_samsung_browser"
                                     style="@style/Widget.AppCompat.Button.Borderless.CardView"
                                     android:text="@string/start"
-                                    android:textColor="@color/primaryText"/>
+                                    android:textColor="@color/primaryText" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -509,11 +506,11 @@
 
             </ScrollView>
 
-           <include layout="@layout/welcome_message_layout"/>
+            <include layout="@layout/welcome_message_layout" />
         </LinearLayout>
 
         <!-- The drawer is given a fixed width in dp and extends the full height of the container. -->
-        <include layout="@layout/drawer_layout"/>
+        <include layout="@layout/drawer_layout" />
 
     </android.support.v4.widget.DrawerLayout>
 </LinearLayout>

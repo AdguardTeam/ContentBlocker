@@ -18,6 +18,8 @@ package com.adguard.android.contentblocker.ui.utils;
 
 import android.app.Activity;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,11 +45,14 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
     private final Activity context;
     private final LayoutInflater layoutInflater;
     private final FilterService filterService;
+    private final int TOO_MANY_FILTERS_THRESHOLD = 10;
+    private boolean needToShowWarningDialog;
 
     public FilterViewAdapter(Activity context, FilterService filterService) {
         this.context = context;
         this.filterService = filterService;
         this.layoutInflater = LayoutInflater.from(context);
+        this.needToShowWarningDialog = filterService.getEnabledFilterListCount() < TOO_MANY_FILTERS_THRESHOLD;
     }
 
     @Override
@@ -102,16 +107,19 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        FilterList filterList = (FilterList) v.getTag();
-        filterService.updateFilterEnabled(filterList, !filterList.isEnabled());
-        ((CheckBox)v.findViewById(R.id.checkbox)).setChecked(filterList.isEnabled());
-
-        if (filterList.getFilterId() == FilterServiceImpl.SHOW_USEFUL_ADS_FILTER_ID) {
+        FilterList list = (FilterList) v.getTag();
+        filterService.updateFilterEnabled(list, !list.isEnabled());
+        ((CheckBox)v.findViewById(R.id.checkbox)).setChecked(list.isEnabled());
+        if (list.getFilterId() == FilterServiceImpl.SHOW_USEFUL_ADS_FILTER_ID) {
             PreferencesService preferencesService = ServiceLocator.getInstance(context.getApplicationContext()).getPreferencesService();
-            preferencesService.setShowUsefulAds(filterList.isEnabled());
+            preferencesService.setShowUsefulAds(list.isEnabled());
         }
-
-        new ApplyAndRefreshTask(filterService, context).execute();
+        if (needToShowWarningDialog && filterService.getEnabledFilterListCount() >= TOO_MANY_FILTERS_THRESHOLD) {
+            showTooManyFiltersWarning();
+            needToShowWarningDialog = false;
+        } else {
+            new ApplyAndRefreshTask(filterService, context).execute();
+        }
     }
 
     private CharSequence getFilterSummaryText(FilterList filter) {
@@ -135,5 +143,20 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
         }
 
         return sb.toString();
+    }
+
+    private void showTooManyFiltersWarning() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setCancelable(false);
+        builder.setTitle(R.string.warning);
+        builder.setMessage(R.string.too_many_filters_warning);
+        builder.setNeutralButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                new ApplyAndRefreshTask(filterService, context).execute();
+            }
+        });
+        builder.show();
     }
 }

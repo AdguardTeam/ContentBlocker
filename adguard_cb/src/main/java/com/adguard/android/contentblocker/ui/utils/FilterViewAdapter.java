@@ -107,12 +107,12 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        FilterList list = (FilterList) v.getTag();
-        filterService.updateFilterEnabled(list, !list.isEnabled());
-        ((CheckBox)v.findViewById(R.id.checkbox)).setChecked(list.isEnabled());
-        if (list.getFilterId() == FilterServiceImpl.SHOW_USEFUL_ADS_FILTER_ID) {
+        FilterList filterList = (FilterList) v.getTag();
+        filterService.updateFilterEnabled(filterList, !filterList.isEnabled());
+        ((CheckBox)v.findViewById(R.id.checkbox)).setChecked(filterList.isEnabled());
+        if (filterList.getFilterId() == FilterServiceImpl.SHOW_USEFUL_ADS_FILTER_ID) {
             PreferencesService preferencesService = ServiceLocator.getInstance(context.getApplicationContext()).getPreferencesService();
-            preferencesService.setShowUsefulAds(list.isEnabled());
+            preferencesService.setShowUsefulAds(filterList.isEnabled());
         }
         if (needToShowWarningDialog && filterService.getEnabledFilterListCount() >= TOO_MANY_FILTERS_THRESHOLD) {
             showTooManyFiltersWarning();

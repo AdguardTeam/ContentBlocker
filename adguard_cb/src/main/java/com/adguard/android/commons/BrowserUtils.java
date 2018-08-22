@@ -28,9 +28,9 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import com.adguard.android.contentblocker.MainActivity;
+
 import com.adguard.android.contentblocker.R;
-import com.adguard.android.ui.utils.ActivityUtils;
+import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.*;

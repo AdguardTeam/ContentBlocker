@@ -17,9 +17,10 @@
 package com.adguard.android.service;
 
 import android.app.Activity;
-import com.adguard.android.model.FilterList;
+import com.adguard.android.contentblocker.model.FilterList;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Service that manages ad filters
@@ -115,4 +116,45 @@ public interface FilterService {
      * Applies new settings and filters
      */
     void applyNewSettings();
+
+    /**
+     * @return User filter rules
+     */
+    String getUserRules();
+
+    /**
+     * @return User rules items list
+     */
+    List<String> getUserRulesItems();
+
+    /**
+     * Adds rule to the user filter
+     *
+     * @param ruleText Item to add
+     */
+    void addUserRuleItem(String ruleText);
+
+    /**
+     * Sets user rules
+     *
+     * @param userRuleItems User rules
+     */
+    void setUserRules(String userRuleItems);
+
+    /**
+     * Clears user filter
+     */
+    void clearUserRules();
+
+    /**
+     * @return Set with disabled user filter rules
+     */
+    Set<String> getDisabledUserRules();
+
+    /**
+     * Enables specified rule
+     *
+     * @param ruleText Rule to enable
+     */
+    void enableUserRule(String ruleText, boolean enabled);
 }

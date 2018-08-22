@@ -20,4 +20,12 @@
     <color name="secondaryText">#757575</color>
     <color name="black">#000000</color>
     <color name="card_view_background_pressed">#FFDBDBDB</color>
+
+    <color name="ruleColorCommentLight">#FF808080</color>
+    <color name="ruleColorWhitelistLight">#FF336666</color>
+    <color name="ruleColorJavaScriptLight">#FF999933</color>
+    <color name="ruleColorCssInjectLight">#FF4477aa</color>
+    <color name="ruleColorCssLight">#FF6699cc</color>
+    <color name="ruleColorContentLight">#FFa176a2</color>
+    <color name="ruleColorDefaultLight">#FF333333</color>
 </resources>

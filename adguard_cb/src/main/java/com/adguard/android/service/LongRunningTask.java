@@ -19,7 +19,7 @@ package com.adguard.android.service;
 import android.app.ProgressDialog;
 
 import com.adguard.android.contentblocker.R;
-import com.adguard.android.ui.utils.ProgressDialogUtils;
+import com.adguard.android.contentblocker.ui.utils.ProgressDialogUtils;
 import com.adguard.android.commons.concurrent.DispatcherTask;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

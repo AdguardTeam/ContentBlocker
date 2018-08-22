@@ -14,7 +14,7 @@
  You should have received a copy of the GNU General Public License along with
  AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.ui.utils;
+package com.adguard.android.contentblocker.ui.utils;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;

@@ -34,12 +34,12 @@ import com.adguard.android.contentblocker.receiver.AlarmReceiver;
 import com.adguard.android.contentblocker.FilterUpdateJobService;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.ServiceLocator;
-import com.adguard.android.db.FilterListDao;
-import com.adguard.android.db.FilterListDaoImpl;
-import com.adguard.android.db.FilterRuleDao;
-import com.adguard.android.db.FilterRuleDaoImpl;
+import com.adguard.android.contentblocker.db.FilterListDao;
+import com.adguard.android.contentblocker.db.FilterListDaoImpl;
+import com.adguard.android.contentblocker.db.FilterRuleDao;
+import com.adguard.android.contentblocker.db.FilterRuleDaoImpl;
 import com.adguard.android.contentblocker.ServiceApiClient;
-import com.adguard.android.model.FilterList;
+import com.adguard.android.contentblocker.model.FilterList;
 import com.adguard.android.commons.network.NetworkUtils;
 import com.adguard.android.commons.concurrent.DispatcherThreadPool;
 import com.adguard.android.commons.io.IoUtils;
@@ -51,6 +51,7 @@ import org.apache.commons.collections4.IterableUtils;
 import org.apache.commons.collections4.Predicate;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -89,6 +90,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     private final FilterRuleDao filterRuleDao;
     private final PreferencesService preferencesService;
 
+    private boolean reloadBrowserChache = false;
     private int cachedFilterRuleCount = 0;
 
     /**
@@ -242,16 +244,80 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     }
 
     @Override
+    public String getUserRules() {
+        return preferencesService.getUserRules();
+    }
+
+    @Override
+    public List<String> getUserRulesItems() {
+        String[] userRules = StringUtils.split(getUserRules(), "\n");
+
+        ArrayList<String> result = new ArrayList<>();
+        for (String rule : userRules) {
+            rule = StringUtils.trim(rule);
+            if (StringUtils.isNotBlank(rule)) {
+                result.add(rule);
+            }
+        }
+
+        return result;
+    }
+
+    @Override
+    public void addUserRuleItem(String ruleText) {
+        String userRules = getUserRules();
+        if (userRules.isEmpty()) {
+            userRules = ruleText;
+        } else {
+            userRules += "\n" + ruleText;
+        }
+
+        setUserRules(userRules);
+    }
+
+    @Override
+    public void setUserRules(String userRules) {
+        preferencesService.setUserRuleItems(userRules);
+    }
+
+    @Override
+    public void clearUserRules() {
+        setUserRules(StringUtils.EMPTY);
+        preferencesService.setDisabledUserRules(new HashSet<String>());
+    }
+
+    @Override
+    public Set<String> getDisabledUserRules() {
+        return preferencesService.getDisabledUserRules();
+    }
+
+    @Override
+    public void enableUserRule(String ruleText, boolean enabled) {
+        Set<String> disabledRules = preferencesService.getDisabledUserRules();
+        if (!enabled) {
+            if (disabledRules.add(ruleText)) {
+                preferencesService.setDisabledUserRules(disabledRules);
+            }
+        } else {
+            if (disabledRules.remove(ruleText)) {
+                preferencesService.setDisabledUserRules(disabledRules);
+            }
+        }
+    }
+
+    @Override
     public void applyNewSettings() {
         setShowUsefulAds(preferencesService.isShowUsefulAds());
 
         List<String> rules = getAllEnabledRules();
-        Set<String> userRules = preferencesService.getUserRules();
-        if (!userRules.isEmpty()) {
+        String[] userRules = StringUtils.split(preferencesService.getUserRules(), "\n");
+        Set<String> disabledUserRules = preferencesService.getDisabledUserRules();
+        if (!ArrayUtils.isEmpty(userRules)) {
             for (String userRule : userRules) {
                 userRule = StringUtils.trim(userRule);
                 
-                if (validateRuleText(userRule)) {
+                if (validateRuleText(userRule)
+                        && !disabledUserRules.contains(userRule)) {
                     rules.add(userRule);
                 }
             }
@@ -489,7 +555,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
                 return;
             }
 
-            preferencesService.addUserRuleItems(rulesList);
+            preferencesService.setUserRuleItems(StringUtils.join(rulesList, "\n"));
             LOG.info("User rules added successfully.");
 
             ServiceLocator.getInstance(activity.getApplicationContext()).getFilterService().applyNewSettings();

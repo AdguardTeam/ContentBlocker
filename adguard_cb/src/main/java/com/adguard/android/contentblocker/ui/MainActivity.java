@@ -14,7 +14,7 @@
  You should have received a copy of the GNU General Public License along with
  AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.contentblocker;
+package com.adguard.android.contentblocker.ui;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -46,14 +46,16 @@ import android.widget.TextView;
 
 import com.adguard.android.ServiceLocator;
 import com.adguard.android.commons.BrowserUtils;
+import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.onboarding.OnboardingActivity;
-import com.adguard.android.model.FilterList;
+import com.adguard.android.contentblocker.model.FilterList;
 import com.adguard.android.service.FilterService;
 import com.adguard.android.service.FilterServiceImpl;
 import com.adguard.android.service.PreferencesService;
-import com.adguard.android.ui.utils.ActivityUtils;
-import com.adguard.android.ui.utils.NavigationHelper;
+import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
+import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
 
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -75,13 +77,13 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         setContentView(R.layout.activity_main);
 
         // As we're using a Toolbar, we should retrieve it and set it to be our ActionBar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ListView drawerList = (ListView) findViewById(R.id.drawer_list);
-        leftDrawer = (LinearLayout) findViewById(R.id.left_drawer);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        ListView drawerList = findViewById(R.id.drawer_list);
+        leftDrawer = findViewById(R.id.left_drawer);
 
         // Set the adapter for the list view
         DrawerArrayAdapter<DrawerListItem> adapter = new DrawerArrayAdapter<>(this, R.layout.drawer_list_item, R.id.text_view, R.id.image_view, getDrawerItems());
@@ -260,7 +262,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
             if (reorder) {
                 View yandex = findViewById(R.id.yandex_card);
-                LinearLayout layout = (LinearLayout) findViewById(R.id.cards_layout);
+                LinearLayout layout = findViewById(R.id.cards_layout);
                 layout.removeView(yandex);
                 layout.addView(yandex);
             }
@@ -268,7 +270,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
             if (preferencesService.getBrowserConnectedCount() > 0) {
                 View noBrowsersCard = findViewById(R.id.no_browsers_card);
-                LinearLayout layout = (LinearLayout) findViewById(R.id.cards_layout);
+                LinearLayout layout = findViewById(R.id.cards_layout);
                 layout.removeView(noBrowsersCard);
                 layout.addView(noBrowsersCard);
             }
@@ -411,19 +413,19 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     }
 
     @Override
-    public void onDrawerSlide(View drawerView, float slideOffset) {
+    public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
         if (slideOffset > 0.5f && slideOffset < 0.7f) {
             invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
         }
     }
 
     @Override
-    public void onDrawerOpened(View drawerView) {
+    public void onDrawerOpened(@NonNull View drawerView) {
         invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
     }
 
     @Override
-    public void onDrawerClosed(View drawerView) {
+    public void onDrawerClosed(@NonNull View drawerView) {
         invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
     }
 
@@ -434,10 +436,12 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        refreshStatistics();
+        if (StringUtils.equalsIgnoreCase(key, PreferencesService.KEY_LAST_UPDATE_CHECK_DATE)) {
+            refreshStatistics();
+        }
     }
 
-    public static class ApplyAndRefreshTask extends AsyncTask<Void, Void, Integer> {
+    private static class ApplyAndRefreshTask extends AsyncTask<Void, Void, Integer> {
 
         private final FilterService service;
         @SuppressLint("StaticFieldLeak")
@@ -537,7 +541,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     private class DrawerArrayAdapter<T> extends ArrayAdapter<T> {
 
-        private int imageFieldId = 0;
+        private int imageFieldId;
 
         DrawerArrayAdapter(Context context, int resource, int textViewResourceId, int imageFieldId, T[] objects) {
             super(context, resource, textViewResourceId, objects);

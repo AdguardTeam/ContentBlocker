@@ -16,8 +16,6 @@
  */
 package com.adguard.android.service;
 
-
-import java.util.Collection;
 import java.util.Date;
 import java.util.Set;
 
@@ -25,6 +23,19 @@ import java.util.Set;
  * Service that stores application preferences
  */
 public interface PreferencesService {
+
+    final static String PREF_SHOW_USEFUL_ADS = "pref_show_useful_ads";
+    final static String KEY_AUTOUPDATE_FILTERS = "auto_update_filters";
+    final static String KEY_UPDATE_OVER_WIFI = "update_over_wifi";
+    final static String KEY_LAST_UPDATE_CHECK_DATE = "last_update_check_date";
+    final static String KEY_WHITELIST = "whitelist";
+    final static String KEY_LAST_IMPORT_URL = "key_last_import_rule";
+    final static String KEY_FILTER_RULE_COUNT = "key_filter_rule_count";
+    final static String KEY_BROWSER_CONNECTED_COUNT = "key_browser_connected_count";
+    final static String KEY_ONBOARDING_SHOWN = "key_onboarding_shown";
+    final static String KEY_ABOUT_OTHER_PRODUCT_SHOWN = "key_about_other_product_shown";
+    final static String KEY_USER_RULES_STRING = "key_user_rules_string";
+    final static String KEY_DISABLED_USER_RULES = "key_disabled_user_rules";
 
     /**
      * @return true if filters autoupdate is enabled
@@ -53,6 +64,7 @@ public interface PreferencesService {
 
     /**
      * Save the flag determining that we have shown onboarding screen
+     *
      * @param value True if shown
      */
     void setOnboardingShown(boolean value);
@@ -84,33 +96,24 @@ public interface PreferencesService {
     /**
      * @return User filter rules
      */
-    Set<String> getUserRules();
+    String getUserRules();
 
     /**
-     * Adds new rule to user filter
+     * Set user filter text
      *
-     * @param item Rule to add
+     * @param userRules user rules
      */
-    void addUserRuleItem(String item);
+    void setUserRuleItems(String userRules);
 
     /**
-     * Removes rule from the user filter
-     *
-     * @param item Rule to remove
+     * @return Set with disabled user rules
      */
-    void removeUserRuleItem(String item);
+    Set<String> getDisabledUserRules();
 
     /**
-     * Clears user filter
+     * @param disabledUserRules Set with disabled user rules
      */
-    void clearUserRules();
-
-    /**
-     * Add batch of user rules.
-     *
-     * @param items collection of rules
-     */
-    void addUserRuleItems(Collection<String> items);
+    void setDisabledUserRules(Set<String> disabledUserRules);
 
     /**
      * @param time Last time updates where checked
@@ -140,6 +143,7 @@ public interface PreferencesService {
      * Set whether we should show useful ads
      */
     void setShowUsefulAds(boolean value);
+
     /**
      * Whether we should show useful ads
      */
@@ -147,6 +151,7 @@ public interface PreferencesService {
 
     /**
      * Sets filter rules count
+     *
      * @param ruleCount Filter rules count
      */
     void setFilterRuleCount(int ruleCount);
@@ -173,6 +178,7 @@ public interface PreferencesService {
 
     /**
      * Save the flag determining that we have shown welcome message
+     *
      * @param value True if shown
      */
     void setWelcomeMessage(boolean value);

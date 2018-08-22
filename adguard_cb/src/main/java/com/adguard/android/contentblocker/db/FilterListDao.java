@@ -14,9 +14,10 @@
  You should have received a copy of the GNU General Public License along with
  AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.db;
+package com.adguard.android.contentblocker.db;
 
-import com.adguard.android.model.FilterList;
+
+import com.adguard.android.contentblocker.model.FilterList;
 
 import java.util.List;
 
@@ -24,13 +25,6 @@ import java.util.List;
  * Data access object for filter lists
  */
 public interface FilterListDao {
-
-    /**
-     * Inserts new filter
-     *
-     * @param filterList Filter list to insert
-     */
-    void insertFilterList(FilterList filterList);
 
     /**
      * Selects all filter lists
@@ -54,6 +48,11 @@ public interface FilterListDao {
      */
     int getFilterListCount();
 
+    /**
+     * Get count of the the filter rules enabled
+     *
+     * @return count of the the filter rules enabled
+     */
     int getEnabledFilterListCount();
 
     /**

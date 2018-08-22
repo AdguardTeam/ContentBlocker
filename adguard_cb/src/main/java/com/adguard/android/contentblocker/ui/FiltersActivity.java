@@ -14,35 +14,26 @@
  You should have received a copy of the GNU General Public License along with
  AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.contentblocker;
+package com.adguard.android.contentblocker.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.ListView;
 
-import com.adguard.android.ui.utils.ActivityUtils;
+import com.adguard.android.ServiceLocator;
+import com.adguard.android.contentblocker.ui.utils.FilterViewAdapter;
+import com.adguard.android.contentblocker.R;
+import com.adguard.android.service.FilterService;
 
-public class NoBrowsersFoundActivity extends AppCompatActivity {
+public class FiltersActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_no_browsers_found);
-
-        findViewById(R.id.install_samsung_browser).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ActivityUtils.startMarket(NoBrowsersFoundActivity.this, "com.sec.android.app.sbrowser", null);
-                finish();
-            }
-        });
-
-        findViewById(R.id.install_yandex_browser).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ActivityUtils.startMarket(NoBrowsersFoundActivity.this, "com.yandex.browser", "adguard1");
-                finish();
-            }
-        });
+        setContentView(R.layout.activity_filters);
+        ListView listView = findViewById(R.id.listView);
+        FilterService filterService = ServiceLocator.getInstance(getApplicationContext()).getFilterService();
+        FilterViewAdapter adapter = new FilterViewAdapter(this, filterService);
+        listView.setAdapter(adapter);
     }
 }

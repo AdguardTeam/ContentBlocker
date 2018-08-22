@@ -86,6 +86,11 @@
     <string name="learn_more">Learn More</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+
+    <string name="delete">Delete</string>
+    <string name="confirmClearUserFilterMessage">Are you sure you want to clear the user filter? This operation cannot be undone.</string>
+    <string name="confirmRemoveUserRuleMessage">Are you sure you want to delete this rule? This operation cannot be undone.</string>
+
     <string name="list_bullet" translatable="false">•</string>
     <string name="userRuleNewItemDialogHint" translatable="false">||example.com^$third-party</string>
     <string name="github" translatable="false">GitHub</string>

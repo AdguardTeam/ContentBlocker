@@ -14,20 +14,19 @@
  You should have received a copy of the GNU General Public License along with
  AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.contentblocker;
+package com.adguard.android.contentblocker.ui;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
-import com.adguard.android.ui.utils.NavigationHelper;
+import com.adguard.android.contentblocker.R;
+import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
 
 public class AboutActivity extends AppCompatActivity {
 
@@ -36,15 +35,15 @@ public class AboutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        final TextView versionInfoTextView = (TextView) findViewById(R.id.versionInfoTextView);
+        final TextView versionInfoTextView = findViewById(R.id.versionInfoTextView);
         String versionName = getVersionName();
         versionInfoTextView.setText(versionInfoTextView.getText().toString().replace("{0}", versionName));
 
-        final TextView adguardComLinkTextView = (TextView) findViewById(R.id.adguardComLinkTextView);
+        final TextView adguardComLinkTextView = findViewById(R.id.adguardComLinkTextView);
         adguardComLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
-        final TextView forumAdguardComLinkTextView = (TextView) findViewById(R.id.forumAdguardComLinkTextView);
+        final TextView forumAdguardComLinkTextView = findViewById(R.id.forumAdguardComLinkTextView);
         forumAdguardComLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
-        final TextView githubLinkTextView = (TextView) findViewById(R.id.githubLinkTextView);
+        final TextView githubLinkTextView = findViewById(R.id.githubLinkTextView);
         githubLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
         final View rateAppButton = findViewById(R.id.rateAppButton);
@@ -63,9 +62,9 @@ public class AboutActivity extends AppCompatActivity {
             }
         });
 
-        final TextView eulaLinkTextView = (TextView) findViewById(R.id.eulaLinkTextView);
+        final TextView eulaLinkTextView = findViewById(R.id.eulaLinkTextView);
         eulaLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
-        final TextView privacyPolicyLinkTextView = (TextView) findViewById(R.id.privacyPolicyLinkTextView);
+        final TextView privacyPolicyLinkTextView = findViewById(R.id.privacyPolicyLinkTextView);
         privacyPolicyLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 

@@ -34,5 +34,7 @@
     <dimen name="settingsCheckBoxMarginLeft">25dp</dimen>
     <dimen name="settingsEmptyListImageMarginTop">40dp</dimen>
     <dimen name="settingsEmptyListImageMarginBottom">40dp</dimen>
+    <dimen name="settingsEditableListItemPaddingLeft">15dp</dimen>
+    <dimen name="settingsEditableListItemPaddingRight">35dp</dimen>
 
 </resources>

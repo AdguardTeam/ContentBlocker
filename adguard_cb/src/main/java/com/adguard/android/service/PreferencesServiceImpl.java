@@ -43,7 +43,6 @@ public class PreferencesServiceImpl implements PreferencesService {
     private final static String KEY_UPDATE_OVER_WIFI = "update_over_wifi";
     private final static String KEY_LAST_UPDATE_CHECK_DATE = "last_update_check_date";
     private final static String KEY_WHITELIST = "whitelist";
-    private final static String KEY_USER_RULES = "user_rules";
     private final static String KEY_LAST_IMPORT_URL = "key_last_import_rule";
     private final static String KEY_FILTER_RULE_COUNT = "key_filter_rule_count";
     private final static String KEY_BROWSER_CONNECTED_COUNT = "key_browser_connected_count";

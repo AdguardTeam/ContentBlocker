@@ -22,13 +22,7 @@ import android.app.job.JobService;
 import android.os.AsyncTask;
 
 import com.adguard.android.ServiceLocator;
-import com.adguard.android.model.FilterList;
-import com.adguard.android.service.FilterService;
-import com.adguard.android.service.PreferencesService;
-
-import org.apache.commons.collections4.CollectionUtils;
-
-import java.util.List;
+import com.adguard.android.contentblocker.model.FilterList;
 
 public class FilterUpdateJobService extends JobService {
     private FilterUpdateTask filterUpdateTask;

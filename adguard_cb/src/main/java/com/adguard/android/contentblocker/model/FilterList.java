@@ -14,7 +14,7 @@
  You should have received a copy of the GNU General Public License along with
  AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.model;
+package com.adguard.android.contentblocker.model;
 
 import com.adguard.android.commons.ProductVersion;
 

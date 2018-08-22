@@ -17,7 +17,7 @@
 package com.adguard.android.service;
 
 import android.app.Activity;
-import com.adguard.android.model.FilterList;
+import com.adguard.android.contentblocker.model.FilterList;
 
 import java.util.List;
 import java.util.Set;

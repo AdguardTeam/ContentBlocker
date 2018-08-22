@@ -34,12 +34,12 @@ import com.adguard.android.contentblocker.receiver.AlarmReceiver;
 import com.adguard.android.contentblocker.FilterUpdateJobService;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.ServiceLocator;
-import com.adguard.android.db.FilterListDao;
-import com.adguard.android.db.FilterListDaoImpl;
-import com.adguard.android.db.FilterRuleDao;
-import com.adguard.android.db.FilterRuleDaoImpl;
+import com.adguard.android.contentblocker.db.FilterListDao;
+import com.adguard.android.contentblocker.db.FilterListDaoImpl;
+import com.adguard.android.contentblocker.db.FilterRuleDao;
+import com.adguard.android.contentblocker.db.FilterRuleDaoImpl;
 import com.adguard.android.contentblocker.ServiceApiClient;
-import com.adguard.android.model.FilterList;
+import com.adguard.android.contentblocker.model.FilterList;
 import com.adguard.android.commons.network.NetworkUtils;
 import com.adguard.android.commons.concurrent.DispatcherThreadPool;
 import com.adguard.android.commons.io.IoUtils;
@@ -62,7 +62,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
 
 /**
  * Filter service implementation.

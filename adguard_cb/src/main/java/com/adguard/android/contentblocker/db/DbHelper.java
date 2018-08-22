@@ -14,15 +14,24 @@
  You should have received a copy of the GNU General Public License along with
  AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.db;
+package com.adguard.android.contentblocker.db;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.preference.PreferenceManager;
+
+import com.adguard.android.ServiceLocator;
 import com.adguard.android.commons.RawResources;
+import com.adguard.android.service.PreferencesService;
+
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Helper class working with local database
@@ -31,23 +40,17 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private static final Logger LOG = LoggerFactory.getLogger(DbHelper.class);
 
-    private static final int DB_VERSION = 20;
+    private static final int DB_VERSION = 21;
     private static final String DB_NAME = "adguard.db";
 
-    public static final String FILTER_LISTS_TABLE = "filter_lists";
-    public static final String FILTER_LIST_ID = "filter_list_id";
-    public static final String FILTER_LIST_NAME = "filter_name";
-    public static final String FILTER_LIST_DESCRIPTION = "filter_description";
-    public static final String FILTER_LIST_ENABLED = "enabled";
-    public static final String FILTER_LIST_VERSION = "version";
-    public static final String FILTER_LIST_TIME_UPDATED = "time_updated";
-    public static final String FILTER_LIST_TIME_LAST_DOWNLOADED = "time_last_downloaded";
-    public static final String FILTER_LIST_DISPLAY_ORDER = "display_order";
-    private final Context context;
 
-    public DbHelper(Context context) {
+    private final Context context;
+    private final PreferenceUpgrade preferenceUpgrade;
+
+    DbHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
         this.context = context;
+        this.preferenceUpgrade = new PreferenceUpgrade(context);
     }
 
     @Override
@@ -73,7 +76,6 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         LOG.info("Performing database upgrade {}=>{}.", oldVersion, newVersion);
 
-
         for (int i = 0; i < (newVersion - oldVersion); i++) {
             int prevDbVersion = oldVersion + i;
             int newDbVersion = oldVersion + i + 1;
@@ -89,6 +91,8 @@ public class DbHelper extends SQLiteOpenHelper {
                 return;
             }
         }
+
+        preferenceUpgrade.onUpgrade(oldVersion, newVersion);
 
         LOG.info("Performing database upgrade...success");
     }
@@ -126,5 +130,45 @@ public class DbHelper extends SQLiteOpenHelper {
         LOG.info("Creating database tables...");
 
         executeSql(db, RawResources.getCreateTablesScript(context));
+    }
+
+    private static class PreferenceUpgrade {
+        private final Context context;
+
+        PreferenceUpgrade(Context context) {
+            this.context = context;
+        }
+
+        void onUpgrade(int oldVersion, int newVersion) {
+            if (oldVersion < newVersion) {
+                for (int version = oldVersion + 1; version <= newVersion; version++) {
+                    upgradeUserFilter(version);
+                }
+            }
+        }
+
+        private void upgradeUserFilter(int version) {
+            if (version == 21) {
+                LOG.info("v2.2 upgrade: user filter conversion");
+
+                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+                ServiceLocator serviceLocator = ServiceLocator.getInstance(context);
+                PreferencesService preferencesService = serviceLocator.getPreferencesService();
+
+                String oldUserRulesKey = "user_rules";
+                if (sharedPreferences.contains(oldUserRulesKey)) {
+                    Set<String> oldUserRules = sharedPreferences.getStringSet(oldUserRulesKey, new HashSet<String>());
+                    if (!oldUserRules.isEmpty()) {
+                        String rules = StringUtils.join(oldUserRules, "\n");
+                        preferencesService.setUserRuleItems(rules);
+                        LOG.info("{} user rules converted", oldUserRules.size());
+                    }
+                }
+
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.remove(oldUserRulesKey);
+                editor.apply();
+            }
+        }
     }
 }

@@ -14,7 +14,7 @@
  You should have received a copy of the GNU General Public License along with
  AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.db;
+package com.adguard.android.contentblocker.db;
 
 import android.content.Context;
 import org.apache.commons.collections4.list.SetUniqueList;

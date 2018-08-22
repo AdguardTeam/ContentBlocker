@@ -27,7 +27,7 @@ import android.widget.TextView;
 
 import com.adguard.android.ServiceLocator;
 import com.adguard.android.contentblocker.R;
-import com.adguard.android.model.FilterList;
+import com.adguard.android.contentblocker.model.FilterList;
 import com.adguard.android.service.FilterService;
 import com.adguard.android.service.FilterServiceImpl;
 import com.adguard.android.service.PreferencesService;

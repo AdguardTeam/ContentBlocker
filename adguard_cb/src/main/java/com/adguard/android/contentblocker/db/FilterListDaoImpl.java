@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License along with
  * AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.db;
+package com.adguard.android.contentblocker.db;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -22,10 +22,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.adguard.android.commons.RawResources;
-import com.adguard.android.model.FilterList;
+import com.adguard.android.contentblocker.model.FilterList;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -33,16 +32,25 @@ import java.util.List;
  * Filter list dao implementation (using db)
  */
 public class FilterListDaoImpl implements FilterListDao {
+    private static final String FILTER_LISTS_TABLE = "filter_lists";
+    private static final String FILTER_LIST_ID = "filter_list_id";
+    private static final String FILTER_LIST_NAME = "filter_name";
+    private static final String FILTER_LIST_DESCRIPTION = "filter_description";
+    private static final String FILTER_LIST_ENABLED = "enabled";
+    private static final String FILTER_LIST_VERSION = "version";
+    private static final String FILTER_LIST_TIME_UPDATED = "time_updated";
+    private static final String FILTER_LIST_TIME_LAST_DOWNLOADED = "time_last_downloaded";
+    private static final String FILTER_LIST_DISPLAY_ORDER = "display_order";
 
     private static final String[] COLUMNS = {
-            DbHelper.FILTER_LIST_ID,
-            DbHelper.FILTER_LIST_NAME,
-            DbHelper.FILTER_LIST_DESCRIPTION,
-            DbHelper.FILTER_LIST_ENABLED,
-            DbHelper.FILTER_LIST_VERSION,
-            DbHelper.FILTER_LIST_TIME_UPDATED,
-            DbHelper.FILTER_LIST_TIME_LAST_DOWNLOADED,
-            DbHelper.FILTER_LIST_DISPLAY_ORDER
+            FILTER_LIST_ID,
+            FILTER_LIST_NAME,
+            FILTER_LIST_DESCRIPTION,
+            FILTER_LIST_ENABLED,
+            FILTER_LIST_VERSION,
+            FILTER_LIST_TIME_UPDATED,
+            FILTER_LIST_TIME_LAST_DOWNLOADED,
+            FILTER_LIST_DISPLAY_ORDER
     };
     private final Context context;
     private int cachedFilterCount = 0;
@@ -52,30 +60,6 @@ public class FilterListDaoImpl implements FilterListDao {
     public FilterListDaoImpl(Context context) {
         this.context = context;
         this.dbHelper = new DbHelper(context);
-    }
-
-    @Override
-    public void insertFilterList(FilterList filterList) {
-        ContentValues values = new ContentValues();
-
-        values.put(DbHelper.FILTER_LIST_ID, filterList.getFilterId());
-        values.put(DbHelper.FILTER_LIST_NAME, filterList.getName());
-        values.put(DbHelper.FILTER_LIST_DESCRIPTION, filterList.getDescription());
-        values.put(DbHelper.FILTER_LIST_ENABLED, filterList.isEnabled());
-        values.put(DbHelper.FILTER_LIST_VERSION, filterList.getVersion().toString());
-        values.put(DbHelper.FILTER_LIST_TIME_UPDATED, filterList.getTimeUpdated().getTime());
-        values.put(DbHelper.FILTER_LIST_TIME_LAST_DOWNLOADED, filterList.getLastTimeDownloaded().getTime());
-        values.put(DbHelper.FILTER_LIST_DISPLAY_ORDER, filterList.getDisplayOrder());
-
-        SQLiteDatabase database = dbHelper.getWritableDatabase();
-        try {
-            database.beginTransaction();
-            database.insert(DbHelper.FILTER_LISTS_TABLE, DbHelper.FILTER_LIST_TIME_UPDATED, values);
-            database.setTransactionSuccessful();
-        } finally {
-            database.endTransaction();
-        }
-        cachedFilterCount = 0;
     }
 
     @Override
@@ -104,9 +88,9 @@ public class FilterListDaoImpl implements FilterListDao {
         Cursor cursor = null;
         try {
             SQLiteDatabase db = dbHelper.getReadableDatabase();
-            cursor = db.query(DbHelper.FILTER_LISTS_TABLE,
+            cursor = db.query(FILTER_LISTS_TABLE,
                     COLUMNS,
-                    DbHelper.FILTER_LIST_ID + "=?",
+                    FILTER_LIST_ID + "=?",
                     new String[]{String.valueOf(filterListId)},
                     null,
                     null,
@@ -156,10 +140,10 @@ public class FilterListDaoImpl implements FilterListDao {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(DbHelper.FILTER_LIST_ENABLED, enabled ? 1 : 0);
+        values.put(FILTER_LIST_ENABLED, enabled ? 1 : 0);
         try {
             db.beginTransaction();
-            db.update(DbHelper.FILTER_LISTS_TABLE, values, DbHelper.FILTER_LIST_ID + "=?", new String[]{Integer.toString(filter.getFilterId())});
+            db.update(FILTER_LISTS_TABLE, values, FILTER_LIST_ID + "=?", new String[]{Integer.toString(filter.getFilterId())});
             db.setTransactionSuccessful();
         } finally {
             db.endTransaction();
@@ -173,13 +157,13 @@ public class FilterListDaoImpl implements FilterListDao {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(DbHelper.FILTER_LIST_VERSION, filter.getVersion().getLongVersionString());
-        values.put(DbHelper.FILTER_LIST_TIME_UPDATED, filter.getTimeUpdated().getTime());
-        values.put(DbHelper.FILTER_LIST_TIME_LAST_DOWNLOADED, filter.getLastTimeDownloaded().getTime());
+        values.put(FILTER_LIST_VERSION, filter.getVersion().getLongVersionString());
+        values.put(FILTER_LIST_TIME_UPDATED, filter.getTimeUpdated().getTime());
+        values.put(FILTER_LIST_TIME_LAST_DOWNLOADED, filter.getLastTimeDownloaded().getTime());
 
         try {
             db.beginTransaction();
-            db.update(DbHelper.FILTER_LISTS_TABLE, values, DbHelper.FILTER_LIST_ID + "=?", new String[]{Integer.toString(filter.getFilterId())});
+            db.update(FILTER_LISTS_TABLE, values, FILTER_LIST_ID + "=?", new String[]{Integer.toString(filter.getFilterId())});
             db.setTransactionSuccessful();
         } finally {
             db.endTransaction();

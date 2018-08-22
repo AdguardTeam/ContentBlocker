@@ -38,19 +38,6 @@ public class PreferencesServiceImpl implements PreferencesService {
 
     private final static Logger LOG = LoggerFactory.getLogger(PreferencesServiceImpl.class);
 
-    private static final String PREF_SHOW_USEFUL_ADS = "pref_show_useful_ads";
-    private final static String KEY_AUTOUPDATE_FILTERS = "auto_update_filters";
-    private final static String KEY_UPDATE_OVER_WIFI = "update_over_wifi";
-    private final static String KEY_LAST_UPDATE_CHECK_DATE = "last_update_check_date";
-    private final static String KEY_WHITELIST = "whitelist";
-    private final static String KEY_LAST_IMPORT_URL = "key_last_import_rule";
-    private final static String KEY_FILTER_RULE_COUNT = "key_filter_rule_count";
-    private final static String KEY_BROWSER_CONNECTED_COUNT = "key_browser_connected_count";
-    private final static String KEY_ONBOARDING_SHOWN = "key_onboarding_shown";
-    private final static String KEY_ABOUT_OTHER_PRODUCT_SHOWN = "key_about_other_product_shown";
-    private final static String KEY_USER_RULES_STRING = "key_user_rules_string";
-    private final static String KEY_DISABLED_USER_RULES = "key_disabled_user_rules";
-
     private final SharedPreferences sharedPreferences;
 
     /**

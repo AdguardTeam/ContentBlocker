@@ -55,6 +55,7 @@ import com.adguard.android.service.PreferencesService;
 import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
 
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -435,7 +436,9 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        refreshStatistics();
+        if (StringUtils.equalsIgnoreCase(key, PreferencesService.KEY_LAST_UPDATE_CHECK_DATE)) {
+            refreshStatistics();
+        }
     }
 
     private static class ApplyAndRefreshTask extends AsyncTask<Void, Void, Integer> {

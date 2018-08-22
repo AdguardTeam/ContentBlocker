@@ -85,10 +85,7 @@ public class DbHelper extends SQLiteOpenHelper {
                 LOG.info("Found an update script {}=>{}. Applying it.", prevDbVersion, newDbVersion);
                 executeSql(db, updateScript);
             } else {
-                LOG.warn("Update script not found for {}=>{}, recreating DB.", prevDbVersion, newDbVersion);
-                executeSql(db, RawResources.getDropTablesScript(context));
-                onCreate(db);
-                return;
+                LOG.info("Update script not found for {}=>{}, recreating DB.", prevDbVersion, newDbVersion);
             }
         }
 
@@ -152,22 +149,22 @@ public class DbHelper extends SQLiteOpenHelper {
                 LOG.info("v2.2 upgrade: user filter conversion");
 
                 SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-                ServiceLocator serviceLocator = ServiceLocator.getInstance(context);
-                PreferencesService preferencesService = serviceLocator.getPreferencesService();
 
                 String oldUserRulesKey = "user_rules";
                 if (sharedPreferences.contains(oldUserRulesKey)) {
                     Set<String> oldUserRules = sharedPreferences.getStringSet(oldUserRulesKey, new HashSet<String>());
                     if (!oldUserRules.isEmpty()) {
                         String rules = StringUtils.join(oldUserRules, "\n");
-                        preferencesService.setUserRuleItems(rules);
+
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.remove(oldUserRulesKey);
+                        editor.putString(PreferencesService.KEY_USER_RULES_STRING, rules);
+                        editor.apply();
+
                         LOG.info("{} user rules converted", oldUserRules.size());
                     }
                 }
 
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.remove(oldUserRulesKey);
-                editor.apply();
             }
         }
     }

@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#4caf50</color>
     <color name="colorPrimaryDark">#388E3C</color>
-    <color name="colorAccent">#388E3C</color>
+    <color name="colorAccent">#ff5722</color>
 
     <color name="adguard_green">#39B54A</color>
     <color name="adguard_green_pressed">@color/colorPrimary</color>

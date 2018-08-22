@@ -264,7 +264,7 @@ public class FilterRulesAdapter extends BaseAdapter implements Filterable {
             }
 
             if (prefix == null || prefix.length() == 0) {
-                final ArrayList<String> list;
+                final List<String> list;
                 synchronized (lock) {
                     list = new ArrayList<>(originalValues);
                 }
@@ -273,13 +273,13 @@ public class FilterRulesAdapter extends BaseAdapter implements Filterable {
             } else {
                 final String prefixString = prefix.toString().toLowerCase();
 
-                final ArrayList<String> values;
+                final List<String> values;
                 synchronized (lock) {
                     values = new ArrayList<>(originalValues);
                 }
 
                 final int count = values.size();
-                final ArrayList<String> newValues = new ArrayList<>();
+                final List<String> newValues = new ArrayList<>();
 
                 for (int i = 0; i < count; i++) {
                     final String value = values.get(i).toLowerCase();

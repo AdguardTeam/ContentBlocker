@@ -106,4 +106,6 @@
     <string name="githubLink" translatable="false"><a href="https://github.com/AdGuardTeam/ContentBlocker">github.com</a></string>
     <string name="adguardComLink" translatable="false"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink" translatable="false"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="clear_filters_cache_title">Clear filters cache</string>
+    <string name="clear_filters_cache_summary">Removes the filters cache and updates filters again</string>
 </resources>

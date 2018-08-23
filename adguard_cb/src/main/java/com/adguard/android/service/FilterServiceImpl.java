@@ -335,6 +335,16 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         }
     }
 
+    @Override
+    public void clearFiltersCache() {
+        Collection<File> files = FileUtils.listFiles(context.getCacheDir(), null, false);
+        for (File file : files) {
+            if (StringUtils.startsWith(file.getName(), "filter_")) {
+                FileUtils.deleteQuietly(file);
+            }
+        }
+    }
+
     /**
      * Checks the rules of non ascii symbols and control symbols
      *

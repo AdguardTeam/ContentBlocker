@@ -157,4 +157,9 @@ public interface FilterService {
      * @param ruleText Rule to enable
      */
     void enableUserRule(String ruleText, boolean enabled);
+
+    /**
+     * Clears the filters cache
+     */
+    void clearFiltersCache();
 }

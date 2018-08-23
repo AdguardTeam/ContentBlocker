@@ -12,6 +12,8 @@
         <item name="android:colorControlHighlight">@color/colorPrimary</item>
         <item name="android:colorBackground">#e0e0e0</item>
         <item name="android:alertDialogTheme">@style/AlertDialog</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="android:popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
     </style>
 
     <style name="AppTheme.Toolbar" parent="AppTheme">

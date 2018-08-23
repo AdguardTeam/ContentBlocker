@@ -18,7 +18,6 @@ package com.adguard.android.contentblocker.ui;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
@@ -36,22 +35,17 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import com.adguard.android.ServiceLocator;
-import com.adguard.android.commons.BrowserUtils;
 import com.adguard.android.contentblocker.R;
-import com.adguard.android.contentblocker.onboarding.OnboardingActivity;
+import com.adguard.android.contentblocker.ServiceLocator;
+import com.adguard.android.contentblocker.commons.BrowserUtils;
 import com.adguard.android.contentblocker.model.FilterList;
-import com.adguard.android.service.FilterService;
-import com.adguard.android.service.FilterServiceImpl;
-import com.adguard.android.service.PreferencesService;
+import com.adguard.android.contentblocker.onboarding.OnboardingActivity;
+import com.adguard.android.contentblocker.service.FilterService;
+import com.adguard.android.contentblocker.service.FilterServiceImpl;
+import com.adguard.android.contentblocker.service.PreferencesService;
 import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
 
@@ -62,7 +56,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Date;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements DrawerLayout.DrawerListener, SharedPreferences.OnSharedPreferenceChangeListener {
+public class MainActivity extends AppCompatActivity implements DrawerLayout.DrawerListener, SharedPreferences.OnSharedPreferenceChangeListener, View.OnClickListener {
 
     private static Logger LOG = LoggerFactory.getLogger(MainActivity.class);
 
@@ -82,14 +76,19 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         setSupportActionBar(toolbar);
 
         drawerLayout = findViewById(R.id.drawer_layout);
-        ListView drawerList = findViewById(R.id.drawer_list);
         leftDrawer = findViewById(R.id.left_drawer);
 
-        // Set the adapter for the list view
-        DrawerArrayAdapter<DrawerListItem> adapter = new DrawerArrayAdapter<>(this, R.layout.drawer_list_item, R.id.text_view, R.id.image_view, getDrawerItems());
-        drawerList.setAdapter(adapter);
-        // Set the list's click listener
-        drawerList.setOnItemClickListener(new DrawerItemClickListener());
+        findViewById(R.id.nav_filters).setOnClickListener(this);
+        findViewById(R.id.nav_user_filter).setOnClickListener(this);
+        findViewById(R.id.nav_whitelist).setOnClickListener(this);
+        findViewById(R.id.nav_settings).setOnClickListener(this);
+        findViewById(R.id.nav_check_filter_updates).setOnClickListener(this);
+        findViewById(R.id.nav_report_bug).setOnClickListener(this);
+        findViewById(R.id.nav_github).setOnClickListener(this);
+        findViewById(R.id.nav_rate_app).setOnClickListener(this);
+        findViewById(R.id.nav_about).setOnClickListener(this);
+        findViewById(R.id.nav_exit).setOnClickListener(this);
+
         drawerLayout.addDrawerListener(this);
         drawerLayout.setStatusBarBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
 
@@ -129,7 +128,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             NavigationHelper.redirectToActivity(this, OnboardingActivity.class);
         }
 
-
         if (!preferencesService.isWelcomeMessage()) {
             final View bottomBarView = findViewById(R.id.bottom_bar);
             bottomBarView.setVisibility(View.VISIBLE);
@@ -154,26 +152,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
 
         ServiceLocator.getInstance(getApplicationContext()).getFilterService().scheduleFiltersUpdate();
-    }
-
-    private DrawerListItem[] getDrawerItems() {
-        String[] menuTitles = getResources().getStringArray(R.array.menu_titles);
-        int[] images = {
-                R.drawable.ic_settings_black,
-                R.drawable.ic_filter_black_24dp,
-                R.drawable.ic_account_black_24dp,
-                R.drawable.ic_sync_black_24dp,
-                R.drawable.ic_stars_black,
-                R.drawable.ic_support,
-                R.drawable.ic_github,
-                R.drawable.ic_info_black_24dp,
-                R.drawable.ic_exit
-        };
-        DrawerListItem[] items = new DrawerListItem[menuTitles.length];
-        for (int i = 0; i < menuTitles.length; i++) {
-            items[i] = new DrawerListItem(menuTitles[i], images[i]);
-        }
-        return items;
     }
 
     @SuppressWarnings("ConstantConditions")
@@ -329,7 +307,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
         switch (item.getItemId()) {
             case R.id.refresh:
-                refreshStatus();
+                updateFilters();
                 return true;
             default:
                 LOG.warn("ItemId = {}", item.getItemId());
@@ -363,7 +341,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
     }
 
-    private void refreshStatus() {
+    private void updateFilters() {
         ServiceLocator.getInstance(getApplicationContext()).getFilterService().checkFiltersUpdates(this);
     }
 
@@ -441,6 +419,51 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.nav_settings:
+                drawerLayout.closeDrawers();
+                NavigationHelper.redirectToActivity(MainActivity.this, SettingsActivity.class);
+                break;
+            case R.id.nav_filters:
+                drawerLayout.closeDrawers();
+                NavigationHelper.redirectToActivity(MainActivity.this, FiltersActivity.class);
+                break;
+            case R.id.nav_user_filter:
+                drawerLayout.closeDrawers();
+                NavigationHelper.redirectToActivity(MainActivity.this, UserFilterActivity.class);
+                break;
+            case R.id.nav_whitelist:
+                drawerLayout.closeDrawers();
+                NavigationHelper.redirectToActivity(MainActivity.this, WhitelistActivity.class);
+                break;
+            case R.id.nav_check_filter_updates:
+                drawerLayout.closeDrawers();
+                updateFilters();
+                break;
+            case R.id.nav_rate_app:
+                drawerLayout.closeDrawers();
+                ActivityUtils.startMarket(MainActivity.this, getPackageName(), "rate_menu_item");
+                break;
+            case R.id.nav_report_bug:
+                drawerLayout.closeDrawers();
+                NavigationHelper.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker/issues/new");
+                break;
+            case R.id.nav_github:
+                drawerLayout.closeDrawers();
+                NavigationHelper.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker");
+                break;
+            case R.id.nav_about:
+                drawerLayout.closeDrawers();
+                NavigationHelper.redirectToActivity(MainActivity.this, AboutActivity.class);
+                break;
+            default:
+                finish();
+                break;
+        }
+    }
+
     private static class ApplyAndRefreshTask extends AsyncTask<Void, Void, Integer> {
 
         private final FilterService service;
@@ -465,49 +488,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
     }
 
-    private class DrawerItemClickListener implements ListView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView parent, View view, int position, long id) {
-            switch (position) {
-                case 0:
-                    drawerLayout.closeDrawers();
-                    NavigationHelper.redirectToActivity(MainActivity.this, SettingsActivity.class);
-                    break;
-                case 1:
-                    drawerLayout.closeDrawers();
-                    NavigationHelper.redirectToActivity(MainActivity.this, FiltersActivity.class);
-                    break;
-                case 2:
-                    drawerLayout.closeDrawers();
-                    NavigationHelper.redirectToActivity(MainActivity.this, UserFilterActivity.class);
-                    break;
-                case 3:
-                    drawerLayout.closeDrawers();
-                    refreshStatus();
-                    break;
-                case 4:
-                    drawerLayout.closeDrawers();
-                    ActivityUtils.startMarket(MainActivity.this, getPackageName(), "rate_menu_item");
-                    break;
-                case 5:
-                    drawerLayout.closeDrawers();
-                    NavigationHelper.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker/issues/new");
-                    break;
-                case 6:
-                    drawerLayout.closeDrawers();
-                    NavigationHelper.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker");
-                    break;
-                case 7:
-                    drawerLayout.closeDrawers();
-                    NavigationHelper.redirectToActivity(MainActivity.this, AboutActivity.class);
-                    break;
-                default:
-                    finish();
-                    break;
-            }
-        }
-    }
-
     private class FiltersMenuItemClickListener implements PopupMenu.OnMenuItemClickListener {
         @Override
         public boolean onMenuItemClick(MenuItem item) {
@@ -516,51 +496,11 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                     openFiltersSettings();
                     return true;
                 case R.id.check_filter_updates:
-                    refreshStatus();
+                    updateFilters();
                     return true;
             }
 
             return false;
-        }
-    }
-
-    private class DrawerListItem {
-        String text;
-        int imageResourceId;
-
-        DrawerListItem(String text, int imageResourceId) {
-            this.text = text;
-            this.imageResourceId = imageResourceId;
-        }
-
-        @Override
-        public String toString() {
-            return text;
-        }
-    }
-
-    private class DrawerArrayAdapter<T> extends ArrayAdapter<T> {
-
-        private int imageFieldId;
-
-        DrawerArrayAdapter(Context context, int resource, int textViewResourceId, int imageFieldId, T[] objects) {
-            super(context, resource, textViewResourceId, objects);
-            this.imageFieldId = imageFieldId;
-        }
-
-        @NonNull
-        public View getView(int position, View convertView, @NonNull ViewGroup parent) {
-            View view = super.getView(position, convertView, parent);
-
-            if (imageFieldId != 0) {
-                ImageView imageView = view.findViewById(imageFieldId);
-                T item = getItem(position);
-                if (item instanceof DrawerListItem) {
-                    imageView.setImageResource(((DrawerListItem) item).imageResourceId);
-                }
-            }
-
-            return view;
         }
     }
 }

@@ -21,7 +21,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.adguard.android.commons.RawResources;
+import com.adguard.android.contentblocker.commons.RawResources;
 import com.adguard.android.contentblocker.model.FilterList;
 
 import java.util.ArrayList;

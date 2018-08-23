@@ -20,10 +20,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import com.adguard.android.ServiceLocator;
+import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.ui.utils.FilterViewAdapter;
 import com.adguard.android.contentblocker.R;
-import com.adguard.android.service.FilterService;
+import com.adguard.android.contentblocker.service.FilterService;
 
 public class FiltersActivity extends AppCompatActivity {
 

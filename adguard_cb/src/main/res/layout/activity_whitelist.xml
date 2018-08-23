@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/whitelist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_domain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_new"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|end"
+        app:fabSize="normal"/>
+
+    <LinearLayout
+        android:id="@+id/emptyWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/settingsListEmptyLabel"
+            android:text="@string/emptyWhitelistTextViewText" />
+
+        <ImageView
+            style="@style/settingsEmptyListImageStyle"
+            android:contentDescription="@string/empty" />
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

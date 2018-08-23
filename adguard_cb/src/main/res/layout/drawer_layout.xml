@@ -1,19 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:id="@+id/left_drawer"
-              android:layout_width="250dp"
-              android:layout_height="match_parent"
-              android:background="#FFF"
-              android:layout_gravity="start"
-              android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/left_drawer"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="UseCompoundDrawables,ContentDescription">
 
-    <ListView
-        android:id="@+id/drawer_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFF"
-        android:choiceMode="singleChoice"
-        android:layout_marginTop="8dp"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"/>
+    <LinearLayout
+        android:id="@+id/nav_filters"
+        style="@style/NavigationItem">
+
+        <ImageView
+            style="@style/NavigationIconItem"
+            android:src="@drawable/ic_filter_black_24dp" />
+
+        <TextView
+            style="@style/NavigationTitleItem"
+            android:text="@string/filters" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_user_filter"
+        style="@style/NavigationItem">
+
+        <ImageView
+            style="@style/NavigationIconItem"
+            android:src="@drawable/ic_account_black_24dp" />
+
+        <TextView
+            style="@style/NavigationTitleItem"
+            android:text="@string/user_filter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_whitelist"
+        style="@style/NavigationItem">
+
+        <ImageView
+            style="@style/NavigationIconItem"
+            android:src="@drawable/ic_verified_user" />
+
+        <TextView
+            style="@style/NavigationTitleItem"
+            android:text="@string/whitelist_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_settings"
+        style="@style/NavigationItem">
+
+        <ImageView
+            style="@style/NavigationIconItem"
+            android:src="@drawable/ic_settings_black" />
+
+        <TextView
+            style="@style/NavigationTitleItem"
+            android:text="@string/settings" />
+    </LinearLayout>
+
+    <View style="@style/DivLine" />
+
+    <LinearLayout
+        android:id="@+id/nav_check_filter_updates"
+        style="@style/NavigationItem">
+
+        <ImageView
+            style="@style/NavigationIconItem"
+            android:src="@drawable/ic_sync_black_24dp" />
+
+        <TextView
+            style="@style/NavigationTitleItem"
+            android:text="@string/check_filter_updates" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_report_bug"
+        style="@style/NavigationItem">
+
+        <ImageView
+            style="@style/NavigationIconItem"
+            android:src="@drawable/ic_support" />
+
+        <TextView
+            style="@style/NavigationTitleItem"
+            android:text="@string/reportBug" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_github"
+        style="@style/NavigationItem">
+
+        <ImageView
+            style="@style/NavigationIconItem"
+            android:src="@drawable/ic_github" />
+
+        <TextView
+            style="@style/NavigationTitleItem"
+            android:text="@string/github" />
+    </LinearLayout>
+
+    <View style="@style/DivLine" />
+
+    <LinearLayout
+        android:id="@+id/nav_rate_app"
+        style="@style/NavigationItem">
+
+        <ImageView
+            style="@style/NavigationIconItem"
+            android:src="@drawable/ic_stars_black" />
+
+        <TextView
+            style="@style/NavigationTitleItem"
+            android:text="@string/rateAdguardButtonText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_about"
+        style="@style/NavigationItem">
+
+        <ImageView
+            style="@style/NavigationIconItem"
+            android:src="@drawable/ic_info_black_24dp" />
+
+        <TextView
+            style="@style/NavigationTitleItem"
+            android:text="@string/about" />
+    </LinearLayout>
+
+    <View style="@style/DivLine" />
+
+    <LinearLayout
+        android:id="@+id/nav_exit"
+        style="@style/NavigationItem">
+
+        <ImageView
+            style="@style/NavigationIconItem"
+            android:src="@drawable/ic_exit" />
+
+        <TextView
+            style="@style/NavigationTitleItem"
+            android:text="@string/exit" />
+    </LinearLayout>
 </LinearLayout>

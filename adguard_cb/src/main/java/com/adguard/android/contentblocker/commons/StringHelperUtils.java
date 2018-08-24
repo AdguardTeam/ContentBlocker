@@ -25,7 +25,7 @@ import java.util.List;
 public class StringHelperUtils {
     public static List<String> splitAndTrim(String string, String sep) {
         String[] strings = StringUtils.split(string, sep);
-        ArrayList<String> result = new ArrayList<>();
+        List<String> result = new ArrayList<>();
         if (ArrayUtils.isNotEmpty(strings)) {
             for (String rule : strings) {
                 rule = StringUtils.trim(rule);

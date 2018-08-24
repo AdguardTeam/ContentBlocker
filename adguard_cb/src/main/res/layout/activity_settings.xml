@@ -133,4 +133,27 @@
             android:textSize="@dimen/settingsDescriptionTextSize"
             android:textColor="@color/summary_text_selector"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/clear_filter_cache_wrapper"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/selectable_background_marker_right">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/clear_filters_cache_title"
+            android:textSize="@dimen/settingsTitleTextSize"
+            android:textColor="@color/common_text_selector"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/clear_filters_cache_summary"
+            android:textSize="@dimen/settingsDescriptionTextSize"
+            android:textColor="@color/summary_text_selector"/>
+    </LinearLayout>
 </LinearLayout>

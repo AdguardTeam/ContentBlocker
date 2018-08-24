@@ -17,6 +17,7 @@
 package com.adguard.android.contentblocker.service;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 
 import com.adguard.android.contentblocker.model.FilterList;
 
@@ -198,4 +199,9 @@ public interface FilterService {
      * @param enabled  enabled
      */
     void enableWhitelistRule(String ruleText, boolean enabled);
+
+    /**
+     * Clears the filters cache and updates filters
+     */
+    void clearCacheAndUpdateFilters(ProgressDialog progressDialog);
 }

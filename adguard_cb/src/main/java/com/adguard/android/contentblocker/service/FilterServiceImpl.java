@@ -379,6 +379,11 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         }
     }
 
+    @Override
+    public void clearCacheAndUpdateFilters(ProgressDialog progressDialog) {
+        DispatcherThreadPool.getInstance().submit(new ClearFilterCacheTask(progressDialog));
+    }
+
     /**
      * Creates whilelist rule from domain name
      *
@@ -699,6 +704,26 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
             }
 
             return sb.toString();
+        }
+    }
+
+    private class ClearFilterCacheTask extends LongRunningTask {
+
+        ClearFilterCacheTask(ProgressDialog progressDialog) {
+            super(progressDialog);
+        }
+
+        @Override
+        protected void processTask() {
+            String[] fileList = context.fileList();
+
+            for (String file : fileList) {
+                if (StringUtils.startsWith(file, "filter_")) {
+                    context.deleteFile(file);
+                }
+            }
+
+            checkFilterUpdates(true);
         }
     }
 }

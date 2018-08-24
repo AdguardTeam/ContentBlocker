@@ -20,7 +20,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.adguard.android.ServiceLocator;
+import com.adguard.android.contentblocker.ServiceLocator;
 
 import java.util.concurrent.Executors;
 

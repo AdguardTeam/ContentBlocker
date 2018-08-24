@@ -16,7 +16,7 @@
  */
 package com.adguard.android.contentblocker.model;
 
-import com.adguard.android.commons.ProductVersion;
+import com.adguard.android.contentblocker.commons.ProductVersion;
 
 import java.util.Date;
 

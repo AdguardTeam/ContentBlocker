@@ -22,8 +22,7 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 
 import com.adguard.android.contentblocker.R;
-import com.adguard.android.service.FilterService;
-import com.adguard.android.contentblocker.ui.utils.ProgressDialogUtils;
+import com.adguard.android.contentblocker.service.FilterService;
 
 public class ApplyAndRefreshTask extends AsyncTask<Void, Void, Void> {
 

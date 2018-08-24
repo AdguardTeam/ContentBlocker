@@ -22,9 +22,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.preference.PreferenceManager;
 
-import com.adguard.android.ServiceLocator;
-import com.adguard.android.commons.RawResources;
-import com.adguard.android.service.PreferencesService;
+import com.adguard.android.contentblocker.commons.RawResources;
+import com.adguard.android.contentblocker.service.PreferencesService;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

@@ -45,7 +45,6 @@
     <string name="githubLabelText">Zdrojový kód</string>
     <string name="copyrightMessage">AdGuard Content Blocker je volný software: je možná ho redistribuovat a/nebo upravovat pod podmínkami GNU General Public License, tak, jak bylo zveřejněno organizací Free Software Foundation a to pod verzí licence číslo 3 a novější.</string>
     <string name="warning">Upozornění</string>
-    <string name="too_many_filters_warning">Vybrali jste příliš mnoho filtrů. To může výrazně zpomalit prohlížení webů.</string>
     <string name="onboarding_title1">Vítejte!</string>
     <string name="onboarding_text1">Jste jen několik kroků od rychlého a čistého internetu, bez reklam.</string>
     <string name="onboarding_button_text1">Začít</string>

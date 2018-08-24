@@ -30,6 +30,7 @@ import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.service.FilterService;
 import com.adguard.android.contentblocker.service.PreferencesService;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
+import com.adguard.android.contentblocker.ui.utils.ProgressDialogUtils;
 
 public class SettingsActivity extends AppCompatActivity {
 

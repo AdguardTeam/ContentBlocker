@@ -40,14 +40,14 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.adguard.android.ServiceLocator;
+import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ui.utils.AlertDialogUtils;
 import com.adguard.android.contentblocker.ui.utils.ApplyAndRefreshTask;
 import com.adguard.android.contentblocker.ui.utils.FilterRulesAdapter;
-import com.adguard.android.service.FilterService;
-import com.adguard.android.service.FilterServiceImpl;
-import com.adguard.android.service.PreferencesService;
+import com.adguard.android.contentblocker.service.FilterService;
+import com.adguard.android.contentblocker.service.FilterServiceImpl;
+import com.adguard.android.contentblocker.service.PreferencesService;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -181,12 +181,6 @@ public class UserFilterActivity extends AppCompatActivity implements FilterServi
         userFilterAdapter.reload(userRules, disabledItems);
     }
 
-    /**
-     * Shows a dialog for adding or editing a rule
-     *
-     * @param rule     Rule text (if editing)
-     * @param position Rule position (if editing)
-     */
     @SuppressLint("InflateParams")
     private void showNewOrEditItemDialog(final String rule, final int position) {
         View dialogLayout = getLayoutInflater().inflate(R.layout.new_item_dialog, null);
@@ -310,18 +304,8 @@ public class UserFilterActivity extends AppCompatActivity implements FilterServi
         addUserRuleFloatingButton.setVisibility(userFilterAdapter.getCount() == 0 ? View.GONE : View.VISIBLE);
     }
 
-    /**
-     * ArrayAdapter to be used by the user filter
-     */
     private class UserFilterRulesAdapter extends FilterRulesAdapter {
 
-        /**
-         * Creates an instance of the UserFilterRulesAdapter
-         *
-         * @param context       Application context
-         * @param userRules     User rules
-         * @param disabledItems Disabled rules
-         */
         UserFilterRulesAdapter(Context context, List<String> userRules, Set<String> disabledItems) {
             super(context, userRules, disabledItems);
         }
@@ -346,12 +330,6 @@ public class UserFilterActivity extends AppCompatActivity implements FilterServi
             new ApplyAndRefreshTask(filterService, UserFilterActivity.this).execute();
         }
 
-        /**
-         * Replaces an item at the specified index with a new value
-         *
-         * @param item  Item
-         * @param index Index
-         */
         @Override
         public void replace(String item, int index) {
             super.replace(item, index);

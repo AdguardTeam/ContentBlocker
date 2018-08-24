@@ -40,12 +40,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.adguard.android.ServiceLocator;
-import com.adguard.android.commons.BrowserUtils;
+import com.adguard.android.contentblocker.ServiceLocator;
+import com.adguard.android.contentblocker.commons.BrowserUtils;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ui.ClickViewPager;
-import com.adguard.android.service.PreferencesService;
-import com.adguard.android.commons.concurrent.ExecutorsPool;
+import com.adguard.android.contentblocker.service.PreferencesService;
+import com.adguard.android.contentblocker.commons.concurrent.ExecutorsPool;
 
 import org.apache.commons.collections4.CollectionUtils;
 

@@ -36,31 +36,40 @@
             android:label="@string/about"
             android:parentActivityName=".ui.MainActivity"
             android:theme="@style/AppTheme.Toolbar"/>
+
         <activity
             android:name=".ui.SettingsActivity"
             android:label="@string/settings"
             android:parentActivityName=".ui.MainActivity"
             android:theme="@style/AppTheme.Toolbar"/>
+
         <activity
             android:name=".ui.FiltersActivity"
             android:label="@string/filters"
             android:parentActivityName=".ui.SettingsActivity"
             android:theme="@style/AppTheme.Toolbar"/>
+
         <activity
             android:name=".ui.UserFilterActivity"
-           android:label="@string/user_filter"
-           android:parentActivityName=".ui.MainActivity"
-           android:theme="@style/AppTheme.Toolbar"/>
+            android:label="@string/user_filter"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/AppTheme.Toolbar"/>
+
+        <activity
+            android:name=".ui.WhitelistActivity"
+            android:label="@string/whitelist_title"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/AppTheme.Toolbar"/>
 
         <activity
             android:name=".ui.NoBrowsersFoundActivity"
             android:theme="@style/AppTheme.Toolbar"/>
 
         <activity
-                android:name=".onboarding.OnboardingActivity"
-                android:label="@string/title_activity_onboarding"
-                android:screenOrientation="portrait"
-                android:theme="@style/AppTheme"/>
+            android:name=".onboarding.OnboardingActivity"
+            android:label="@string/title_activity_onboarding"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
 
         <provider
             android:name=".FiltersContentProvider"

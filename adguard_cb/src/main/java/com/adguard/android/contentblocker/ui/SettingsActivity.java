@@ -25,11 +25,10 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
-import com.adguard.android.ServiceLocator;
+import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.R;
-import com.adguard.android.contentblocker.ui.utils.ProgressDialogUtils;
-import com.adguard.android.service.FilterService;
-import com.adguard.android.service.PreferencesService;
+import com.adguard.android.contentblocker.service.FilterService;
+import com.adguard.android.contentblocker.service.PreferencesService;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
 
 public class SettingsActivity extends AppCompatActivity {

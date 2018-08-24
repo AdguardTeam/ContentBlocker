@@ -19,7 +19,7 @@ package com.adguard.android.contentblocker.receiver;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.adguard.android.ServiceLocator;
+import com.adguard.android.contentblocker.ServiceLocator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

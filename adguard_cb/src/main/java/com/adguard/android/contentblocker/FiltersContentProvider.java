@@ -18,16 +18,13 @@ package com.adguard.android.contentblocker;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
-import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import android.support.annotation.NonNull;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import com.adguard.android.ServiceLocator;
-import com.adguard.android.service.PreferencesService;
+import com.adguard.android.contentblocker.service.PreferencesService;
 
 import java.io.File;
 import java.io.FileNotFoundException;

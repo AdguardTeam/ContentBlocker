@@ -90,6 +90,9 @@
     <string name="delete">Delete</string>
     <string name="confirmClearUserFilterMessage">Are you sure you want to clear the user filter? This operation cannot be undone.</string>
     <string name="confirmRemoveUserRuleMessage">Are you sure you want to delete this rule? This operation cannot be undone.</string>
+    <string name="clear_filters_cache_title">Clear filters cache</string>
+    <string name="clear_filters_cache_summary">Clears the filters cache and updates filters again</string>
+    <string name="clear_filters_cache_progress_message">Clears cache and updates filters</string>
 
     <string name="list_bullet" translatable="false">•</string>
     <string name="userRuleNewItemDialogHint" translatable="false">||example.com^$third-party</string>
@@ -106,6 +109,4 @@
     <string name="githubLink" translatable="false"><a href="https://github.com/AdGuardTeam/ContentBlocker">github.com</a></string>
     <string name="adguardComLink" translatable="false"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink" translatable="false"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
-    <string name="clear_filters_cache_title">Clear filters cache</string>
-    <string name="clear_filters_cache_summary">Removes the filters cache and updates filters again</string>
 </resources>

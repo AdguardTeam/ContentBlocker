@@ -17,6 +17,8 @@
 package com.adguard.android.service;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+
 import com.adguard.android.contentblocker.model.FilterList;
 
 import java.util.List;
@@ -159,7 +161,7 @@ public interface FilterService {
     void enableUserRule(String ruleText, boolean enabled);
 
     /**
-     * Clears the filters cache
+     * Clears the filters cache and updates filters
      */
-    void clearFiltersCache();
+    void clearCacheAndUpdateFilters(ProgressDialog progressDialog);
 }

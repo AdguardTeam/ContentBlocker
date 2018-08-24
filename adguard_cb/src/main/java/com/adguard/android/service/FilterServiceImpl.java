@@ -336,13 +336,8 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     }
 
     @Override
-    public void clearFiltersCache() {
-        Collection<File> files = FileUtils.listFiles(context.getCacheDir(), null, false);
-        for (File file : files) {
-            if (StringUtils.startsWith(file.getName(), "filter_")) {
-                FileUtils.deleteQuietly(file);
-            }
-        }
+    public void clearCacheAndUpdateFilters(ProgressDialog progressDialog) {
+        DispatcherThreadPool.getInstance().submit(new ClearFilterCacheTask(progressDialog));
     }
 
     /**
@@ -655,6 +650,26 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
             }
 
             return sb.toString();
+        }
+    }
+
+    private class ClearFilterCacheTask extends LongRunningTask {
+
+        ClearFilterCacheTask(ProgressDialog progressDialog) {
+            super(progressDialog);
+        }
+
+        @Override
+        protected void processTask() {
+            String[] fileList = context.fileList();
+
+            for (String file : fileList) {
+                if (StringUtils.startsWith(file, "filter_")) {
+                    context.deleteFile(file);
+                }
+            }
+
+            checkFilterUpdates(true);
         }
     }
 }

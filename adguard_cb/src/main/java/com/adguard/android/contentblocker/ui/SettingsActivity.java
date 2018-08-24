@@ -16,6 +16,7 @@
  */
 package com.adguard.android.contentblocker.ui;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,7 @@ import android.widget.CompoundButton;
 
 import com.adguard.android.ServiceLocator;
 import com.adguard.android.contentblocker.R;
+import com.adguard.android.contentblocker.ui.utils.ProgressDialogUtils;
 import com.adguard.android.service.FilterService;
 import com.adguard.android.service.PreferencesService;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
@@ -98,6 +100,17 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 NavigationHelper.redirectToActivity(SettingsActivity.this, FiltersActivity.class);
+            }
+        });
+
+        findViewById(R.id.clear_filter_cache_wrapper).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ProgressDialog progressDialog = ProgressDialogUtils.showProgressDialog(SettingsActivity.this,
+                        R.string.please_wait,
+                        R.string.clear_filters_cache_progress_message);
+
+                filterService.clearCacheAndUpdateFilters(progressDialog);
             }
         });
     }

@@ -54,8 +54,8 @@ public class ServiceApiClient extends HttpServiceClient {
      * @return List of rules
      * @throws IOException
      */
-    public static List<String> downloadFilterRules(Context context, int filterId) throws IOException {
-        String downloadUrl = RawResources.getFilterUrl(context);
+    public static List<String> downloadFilterRules(int filterId) throws IOException {
+        String downloadUrl = BuildConfig.getFilterUrl;
         downloadUrl = downloadUrl.replace("{0}", UrlUtils.urlEncode(Integer.toString(filterId)));
 
         LOG.info("Sending request to {}", downloadUrl);
@@ -80,8 +80,8 @@ public class ServiceApiClient extends HttpServiceClient {
      * @param filters list
      * @return filters list with downloaded versions
      */
-    public static List<FilterList> downloadFilterVersions(Context context, List<FilterList> filters) throws IOException, JSONException {
-        String downloadUrl = RawResources.getCheckFilterVersionsUrl(context);
+    public static List<FilterList> downloadFilterVersions(List<FilterList> filters) throws IOException {
+        String downloadUrl = BuildConfig.checkFilterVersionsUrl;
         LOG.info("Sending request to {}", downloadUrl);
         String response = downloadString(downloadUrl);
         if (StringUtils.isBlank(response)) {

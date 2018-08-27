@@ -24,23 +24,60 @@ android {
 
     buildTypes {
         release {
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            debuggable true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            zipAlignEnabled true
         }
     }
 
-    flavorDimensions 'api'
+    def checkFilterVersionsUrl = "/extension/android-content-blocker/filters.json"
+    def getFilterUrl = "/extension/android-content-blocker/filters/{0}_optimized.txt"
+
+    def reportToolUrl = '/new_issue.html'
+
+    flavorDimensions "buildChannel",  "serverChannel"
     productFlavors {
+
         yandex_api16 {
             minSdkVersion 16
             versionCode 16002200
-            dimension "api"
+            dimension "buildChannel"
         }
+
         samsung_api21 {
             minSdkVersion 21
             versionCode 21002200
-            dimension "api"
+            dimension "buildChannel"
+        }
+
+        prodBackend {
+            dimension "serverChannel"
+
+            def filtersHost = 'https://filters.adtidy.org'
+            def reportToolHost = 'https://reports.adguard.com'
+
+            buildConfigField "String", "checkFilterVersionsUrl", '"' + filtersHost + checkFilterVersionsUrl + '"'
+            buildConfigField "String", "getFilterUrl", '"' + filtersHost + getFilterUrl + '"'
+
+            buildConfigField "String", "reportToolUrl", '"' + reportToolHost + reportToolUrl + '"'
+        }
+
+        devBackend {
+            dimension "serverChannel"
+
+            def filtersHost = 'http://testfilters.adtidy.org'
+            def reportToolHost = 'https://reports.adguard.com'
+
+            buildConfigField "String", "checkFilterVersionsUrl", '"' + filtersHost + checkFilterVersionsUrl + '"'
+            buildConfigField "String", "getFilterUrl", '"' + filtersHost + getFilterUrl + '"'
+
+            buildConfigField "String", "reportToolUrl", '"' + reportToolHost + reportToolUrl + '"'
         }
     }
 

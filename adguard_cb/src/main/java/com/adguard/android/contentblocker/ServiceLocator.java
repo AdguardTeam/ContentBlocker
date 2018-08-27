@@ -30,8 +30,10 @@ public class ServiceLocator {
     private final Context context;
     private static final Logger LOG = LoggerFactory.getLogger(ServiceLocator.class);
     private static WeakHashMap<Context, ServiceLocator> locators = new WeakHashMap<>();
+
     private FilterService filterService;
     private PreferencesService preferencesService;
+    private NotificationService notificationService;
 
     /**
      * Creates an instance of the ServiceLocator
@@ -80,5 +82,16 @@ public class ServiceLocator {
         }
 
         return preferencesService;
+    }
+
+    /**
+     * @return notifications service singleton
+     */
+    public NotificationService getNotificationService() {
+        if (notificationService == null) {
+            notificationService = new NotificationServiceImpl(context);
+        }
+
+        return notificationService;
     }
 }

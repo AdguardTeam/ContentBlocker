@@ -121,4 +121,11 @@
     <string name="githubLink" translatable="false"><a href="https://github.com/AdGuardTeam/ContentBlocker">github.com</a></string>
     <string name="adguardComLink" translatable="false"><a href="https://adguard.com">adguard.com</a></string>
     <string name="forumAdguardComLink" translatable="false"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+
+    <string name="report_dialog_title">Report type</string>
+    <string name="reportTypeMissedAd">Missed Ad or tracker</string>
+    <string name="reportTypeIncorrectBlocking">Incorrect blocking</string>
+    <string name="reportTypeBugReport">Bug report</string>
+    <string name="reportTypeFeatureRequest">Feature request</string>
+    <string name="reportTypeCustom">Other</string>
 </resources>

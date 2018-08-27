@@ -18,6 +18,8 @@ package com.adguard.android.contentblocker.ui;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
@@ -48,6 +50,7 @@ import com.adguard.android.contentblocker.service.FilterServiceImpl;
 import com.adguard.android.contentblocker.service.PreferencesService;
 import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
+import com.adguard.android.contentblocker.ui.utils.ReportToolUtils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -64,11 +67,21 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     private LinearLayout leftDrawer;
     private ActionBarDrawerToggle drawerToggle;
 
+    private String[] reportTypeList;
+
     @SuppressWarnings("ConstantConditions")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        reportTypeList = new String[] {
+                getResources().getString(R.string.reportTypeMissedAd),
+                getResources().getString(R.string.reportTypeIncorrectBlocking),
+                getResources().getString(R.string.reportTypeBugReport),
+                getResources().getString(R.string.reportTypeFeatureRequest),
+                getResources().getString(R.string.reportTypeCustom),
+        };
 
         // As we're using a Toolbar, we should retrieve it and set it to be our ActionBar
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -448,7 +461,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 break;
             case R.id.nav_report_bug:
                 drawerLayout.closeDrawers();
-                NavigationHelper.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker/issues/new");
+                showReportDialog();
                 break;
             case R.id.nav_github:
                 drawerLayout.closeDrawers();
@@ -462,6 +475,26 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 finish();
                 break;
         }
+    }
+
+    private void showReportDialog() {
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.report_dialog_title);
+        builder.setSingleChoiceItems(reportTypeList, -1, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialogInterface, int selectedIndex) {
+                dialogInterface.dismiss();
+
+                if (selectedIndex == 0 || selectedIndex == 1) {
+                    NavigationHelper.redirectToWebSite(MainActivity.this, ReportToolUtils.getUrl(MainActivity.this));
+                } else {
+                    NavigationHelper.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker/issues/new");
+                }
+            }
+        }).show();
     }
 
     private static class ApplyAndRefreshTask extends AsyncTask<Void, Void, Integer> {

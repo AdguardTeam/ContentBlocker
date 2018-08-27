@@ -46,6 +46,7 @@ import com.adguard.android.contentblocker.commons.concurrent.DispatcherThreadPoo
 import com.adguard.android.contentblocker.commons.io.IoUtils;
 import com.adguard.android.contentblocker.commons.network.InternetUtils;
 import com.adguard.android.contentblocker.commons.web.UrlUtils;
+import com.adguard.android.contentblocker.ui.utils.ProgressDialogUtils;
 
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.collections4.IterableUtils;
@@ -66,7 +67,7 @@ import java.util.*;
 /**
  * Filter service implementation.
  */
-public class FilterServiceImpl extends BaseUiService implements FilterService {
+public class FilterServiceImpl implements FilterService {
     private static final Logger LOG = LoggerFactory.getLogger(FilterServiceImpl.class);
 
     public static final int SHOW_USEFUL_ADS_FILTER_ID = 10;
@@ -89,6 +90,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     private final FilterListDao filterListDao;
     private final FilterRuleDao filterRuleDao;
     private final PreferencesService preferencesService;
+    private final NotificationService notificationService;
 
     private int cachedFilterRuleCount = 0;
 
@@ -102,7 +104,10 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         this.context = context;
         filterListDao = new FilterListDaoImpl(context);
         filterRuleDao = new FilterRuleDaoImpl(context);
-        preferencesService = ServiceLocator.getInstance(context).getPreferencesService();
+
+        ServiceLocator serviceLocator = ServiceLocator.getInstance(context);
+        preferencesService = serviceLocator.getPreferencesService();
+        notificationService = serviceLocator.getNotificationService();
     }
 
     public static void enableContentBlocker(Context context) {
@@ -115,9 +120,9 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     @Override
     public void checkFiltersUpdates(Activity activity) {
         LOG.info("Start manual filters updates check");
-        ServiceLocator.getInstance(activity.getApplicationContext()).getPreferencesService().setLastUpdateCheck(new Date().getTime());
+        ServiceLocator.getInstance(activity).getPreferencesService().setLastUpdateCheck(new Date().getTime());
 
-        ProgressDialog progressDialog = showProgressDialog(activity, R.string.checkUpdatesProgressDialogTitle, R.string.checkUpdatesProgressDialogMessage);
+        ProgressDialog progressDialog = ProgressDialogUtils.showProgressDialog(activity, R.string.checkUpdatesProgressDialogTitle, R.string.checkUpdatesProgressDialogMessage);
         DispatcherThreadPool.getInstance().submit(FILTERS_UPDATE_QUEUE, new CheckUpdatesTask(activity, progressDialog));
         LOG.info("Submitted filters update task");
     }
@@ -208,7 +213,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     public void importUserRulesFromUrl(Activity activity, String url) {
         LOG.info("Start import user rules from {}", url);
 
-        ProgressDialog progressDialog = showProgressDialog(activity, R.string.importUserRulesProgressDialogTitle, R.string.importUserRulesProgressDialogMessage);
+        ProgressDialog progressDialog = ProgressDialogUtils.showProgressDialog(activity, R.string.importUserRulesProgressDialogTitle, R.string.importUserRulesProgressDialogMessage);
         DispatcherThreadPool.getInstance().submit(new ImportUserRulesTask(activity, progressDialog, url));
         LOG.info("Submitted import user rules task");
     }
@@ -460,7 +465,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
         preferencesService.setLastUpdateCheck(new Date().getTime());
 
         try {
-            final List<FilterList> updated = ServiceApiClient.downloadFilterVersions(context, filters);
+            final List<FilterList> updated = ServiceApiClient.downloadFilterVersions(filters);
             if (updated == null) {
                 LOG.warn("Cannot download filter updates.");
                 return null;
@@ -525,7 +530,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
     }
 
     private void updateFilterRules(int filterId) throws IOException {
-        final List<String> rules = ServiceApiClient.downloadFilterRules(context, filterId);
+        final List<String> rules = ServiceApiClient.downloadFilterRules(filterId);
         filterRuleDao.setFilterRules(filterId, rules);
     }
 
@@ -620,7 +625,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
             ServiceLocator.getInstance(activity.getApplicationContext()).getFilterService().applyNewSettings();
 
             String message = activity.getString(R.string.importUserRulesSuccessResultMessage).replace("{0}", String.valueOf(rulesList.size()));
-            showToast(activity, message);
+            notificationService.showToast(message);
 
             if (onImportListener != null) {
                 activity.runOnUiThread(new Runnable() {
@@ -634,7 +639,7 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
 
         private void onError() {
             String message = activity.getString(R.string.importUserRulesErrorResultMessage);
-            showToast(activity, message);
+            notificationService.showToast(message);
         }
 
         private String loadFromFile(String url) throws Exception {
@@ -670,20 +675,20 @@ public class FilterServiceImpl extends BaseUiService implements FilterService {
             final List<FilterList> filters = ServiceLocator.getInstance(context).getFilterService().checkFilterUpdates(true);
             if (filters == null) {
                 String message = activity.getString(R.string.checkUpdatesErrorResultMessage);
-                showToast(activity, message);
+                notificationService.showToast(message);
             } else {
                 if (filters.size() == 0) {
                     String message = activity.getString(R.string.checkUpdatesZeroResultMessage);
-                    showToast(activity, message);
+                    notificationService.showToast(message);
                 } else {
                     if (filters.size() == 1) {
                         String message = activity.getString(R.string.checkUpdatesOneResultMessage).replace("{0}", parseFilterNames(filters));
-                        showToast(activity, message);
+                        notificationService.showToast(message);
                     } else {
                         String message = activity.getString(R.string.checkUpdatesManyResultMessage)
                                 .replace("{0}", Integer.toString(filters.size()))
                                 .replace("{1}", parseFilterNames(filters));
-                        showToast(activity, message);
+                        notificationService.showToast(message);
                     }
                 }
                 preferencesService.setLastUpdateCheck(System.currentTimeMillis());

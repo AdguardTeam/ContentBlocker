@@ -45,8 +45,8 @@ android {
     def websiteUrl = "action=home&app=content_blocker"
     def forumUrl = "action=forum&app=content_blocker"
 
-    def gihubUrl = "action=github&app=content_blocker"
-    def gihubIssueUrl = "action=issue&app=content_blocker"
+    def githubUrl = "action=github&app=content_blocker"
+    def githubIssueUrl = "action=issue&app=content_blocker"
 
     def otherAdguardProductUrl = "action=other_product&app=content_blocker"
 
@@ -82,8 +82,8 @@ android {
             buildConfigField "String", "websiteUrl", '"' + forwardHost + '?' + websiteUrl + '"'
             buildConfigField "String", "forumUrl", '"' + forwardHost + '?' + forumUrl + '"'
 
-            buildConfigField "String", "gihubUrl", '"' + forwardHost + '?' + gihubUrl + '"'
-            buildConfigField "String", "gihubIssueUrl", '"' + forwardHost + '?' + gihubIssueUrl + '"'
+            buildConfigField "String", "gihubUrl", '"' + forwardHost + '?' + githubUrl + '"'
+            buildConfigField "String", "gihubIssueUrl", '"' + forwardHost + '?' + githubIssueUrl + '"'
 
             buildConfigField "String", "otherAdguardProductUrl", '"' + forwardHost + '?' + otherAdguardProductUrl + '"'
         }
@@ -105,8 +105,8 @@ android {
             buildConfigField "String", "websiteUrl", '"' + forwardHost + '?' + websiteUrl + '"'
             buildConfigField "String", "forumUrl", '"' + forwardHost + '?' + forumUrl + '"'
 
-            buildConfigField "String", "gihubUrl", '"' + forwardHost + '?' + gihubUrl + '"'
-            buildConfigField "String", "gihubIssueUrl", '"' + forwardHost + '?' + gihubIssueUrl + '"'
+            buildConfigField "String", "gihubUrl", '"' + forwardHost + '?' + githubUrl + '"'
+            buildConfigField "String", "gihubIssueUrl", '"' + forwardHost + '?' + githubIssueUrl + '"'
 
             buildConfigField "String", "otherAdguardProductUrl", '"' + forwardHost + '?' + otherAdguardProductUrl + '"'
         }

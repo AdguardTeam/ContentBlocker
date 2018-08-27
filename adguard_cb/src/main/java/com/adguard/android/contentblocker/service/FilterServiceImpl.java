@@ -30,22 +30,22 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 
-import com.adguard.android.contentblocker.commons.StringHelperUtils;
-import com.adguard.android.contentblocker.receiver.AlarmReceiver;
 import com.adguard.android.contentblocker.FilterUpdateJobService;
 import com.adguard.android.contentblocker.R;
+import com.adguard.android.contentblocker.ServiceApiClient;
 import com.adguard.android.contentblocker.ServiceLocator;
+import com.adguard.android.contentblocker.commons.StringHelperUtils;
+import com.adguard.android.contentblocker.commons.concurrent.DispatcherThreadPool;
+import com.adguard.android.contentblocker.commons.io.IoUtils;
+import com.adguard.android.contentblocker.commons.network.InternetUtils;
+import com.adguard.android.contentblocker.commons.network.NetworkUtils;
+import com.adguard.android.contentblocker.commons.web.UrlUtils;
 import com.adguard.android.contentblocker.db.FilterListDao;
 import com.adguard.android.contentblocker.db.FilterListDaoImpl;
 import com.adguard.android.contentblocker.db.FilterRuleDao;
 import com.adguard.android.contentblocker.db.FilterRuleDaoImpl;
-import com.adguard.android.contentblocker.ServiceApiClient;
 import com.adguard.android.contentblocker.model.FilterList;
-import com.adguard.android.contentblocker.commons.network.NetworkUtils;
-import com.adguard.android.contentblocker.commons.concurrent.DispatcherThreadPool;
-import com.adguard.android.contentblocker.commons.io.IoUtils;
-import com.adguard.android.contentblocker.commons.network.InternetUtils;
-import com.adguard.android.contentblocker.commons.web.UrlUtils;
+import com.adguard.android.contentblocker.receiver.AlarmReceiver;
 import com.adguard.android.contentblocker.ui.utils.ProgressDialogUtils;
 
 import org.apache.commons.collections4.CollectionUtils;
@@ -62,7 +62,13 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Filter service implementation.
@@ -327,8 +333,8 @@ public class FilterServiceImpl implements FilterService {
 
     @Override
     public void clearWhiteList() {
-       setWhiteList(StringUtils.EMPTY);
-       preferencesService.setDisabledWhitelistRules(new HashSet<String>());
+        setWhiteList(StringUtils.EMPTY);
+        preferencesService.setDisabledWhitelistRules(new HashSet<String>());
     }
 
     @Override
@@ -403,7 +409,6 @@ public class FilterServiceImpl implements FilterService {
      * Checks the rules of non ascii symbols and control symbols
      *
      * @param userRule rule
-     *
      * @return true if correct rule or false
      */
     private boolean validateRuleText(String userRule) {
@@ -581,8 +586,10 @@ public class FilterServiceImpl implements FilterService {
                 try {
                     ContentResolver contentResolver = activity.getContentResolver();
                     inputStream = contentResolver.openInputStream(Uri.parse(url));
-                    String buf = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
-                    importRules(buf);
+                    if (inputStream != null) {
+                        String buf = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
+                        importRules(buf);
+                    }
                 } finally {
                     IOUtils.closeQuietly(inputStream);
                 }
@@ -676,23 +683,23 @@ public class FilterServiceImpl implements FilterService {
             if (filters == null) {
                 String message = activity.getString(R.string.checkUpdatesErrorResultMessage);
                 notificationService.showToast(message);
-            } else {
-                if (filters.size() == 0) {
-                    String message = activity.getString(R.string.checkUpdatesZeroResultMessage);
-                    notificationService.showToast(message);
-                } else {
-                    if (filters.size() == 1) {
-                        String message = activity.getString(R.string.checkUpdatesOneResultMessage).replace("{0}", parseFilterNames(filters));
-                        notificationService.showToast(message);
-                    } else {
-                        String message = activity.getString(R.string.checkUpdatesManyResultMessage)
-                                .replace("{0}", Integer.toString(filters.size()))
-                                .replace("{1}", parseFilterNames(filters));
-                        notificationService.showToast(message);
-                    }
-                }
-                preferencesService.setLastUpdateCheck(System.currentTimeMillis());
+                return;
             }
+
+            if (filters.size() == 0) {
+                String message = activity.getString(R.string.checkUpdatesZeroResultMessage);
+                notificationService.showToast(message);
+            } else if (filters.size() == 1) {
+                String message = activity.getString(R.string.checkUpdatesOneResultMessage).replace("{0}", parseFilterNames(filters));
+                notificationService.showToast(message);
+            } else {
+                String message = activity.getString(R.string.checkUpdatesManyResultMessage)
+                        .replace("{0}", Integer.toString(filters.size()))
+                        .replace("{1}", parseFilterNames(filters));
+                notificationService.showToast(message);
+            }
+            preferencesService.setLastUpdateCheck(System.currentTimeMillis());
+
             applyNewSettings();
         }
 

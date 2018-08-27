@@ -26,6 +26,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -37,13 +38,17 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ServiceLocator;
+import com.adguard.android.contentblocker.commons.AppLink;
 import com.adguard.android.contentblocker.commons.BrowserUtils;
 import com.adguard.android.contentblocker.model.FilterList;
+import com.adguard.android.contentblocker.model.ReportType;
 import com.adguard.android.contentblocker.onboarding.OnboardingActivity;
 import com.adguard.android.contentblocker.service.FilterService;
 import com.adguard.android.contentblocker.service.FilterServiceImpl;
@@ -67,21 +72,11 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     private LinearLayout leftDrawer;
     private ActionBarDrawerToggle drawerToggle;
 
-    private String[] reportTypeList;
-
     @SuppressWarnings("ConstantConditions")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        reportTypeList = new String[] {
-                getResources().getString(R.string.reportTypeMissedAd),
-                getResources().getString(R.string.reportTypeIncorrectBlocking),
-                getResources().getString(R.string.reportTypeBugReport),
-                getResources().getString(R.string.reportTypeFeatureRequest),
-                getResources().getString(R.string.reportTypeCustom),
-        };
 
         // As we're using a Toolbar, we should retrieve it and set it to be our ActionBar
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -159,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                     preferencesService.setWelcomeMessage(true);
                     bottomBarView.setVisibility(View.GONE);
 
-                    NavigationHelper.redirectToWebSite(MainActivity.this, "http://agrd.io/cb_adguard_products");
+                    NavigationHelper.redirectToWebSite(MainActivity.this, AppLink.Website.getOtherProductUrl(getApplicationContext()));
                 }
             });
         }
@@ -465,7 +460,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 break;
             case R.id.nav_github:
                 drawerLayout.closeDrawers();
-                NavigationHelper.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker");
+                NavigationHelper.redirectToWebSite(MainActivity.this, AppLink.Github.getHomeUrl(getApplicationContext(), "main_activity"));
                 break;
             case R.id.nav_about:
                 drawerLayout.closeDrawers();
@@ -478,11 +473,25 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     }
 
     private void showReportDialog() {
+        ArrayAdapter<ReportType> arrayAdapter = new ArrayAdapter<ReportType>(getApplicationContext(), R.layout.simple_dialog_item, ReportType.values()) {
+            @NonNull
+            @Override
+            public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+                View view = super.getView(position, convertView, parent);
 
+                ReportType reportType = getItem(position);
+                if (reportType != null) {
+                    TextView textView = view.findViewById(R.id.text1);
+                    textView.setText(reportType.getStringId());
+                }
+
+                return view;
+            }
+        };
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.report_dialog_title);
-        builder.setSingleChoiceItems(reportTypeList, -1, new DialogInterface.OnClickListener() {
+        builder.setSingleChoiceItems(arrayAdapter, -1, new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialogInterface, int selectedIndex) {
@@ -491,7 +500,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 if (selectedIndex == 0 || selectedIndex == 1) {
                     NavigationHelper.redirectToWebSite(MainActivity.this, ReportToolUtils.getUrl(MainActivity.this));
                 } else {
-                    NavigationHelper.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker/issues/new");
+                    NavigationHelper.redirectToWebSite(MainActivity.this, AppLink.Github.getNewIssueUrl(getApplicationContext(), "main_activity"));
                 }
             }
         }).show();

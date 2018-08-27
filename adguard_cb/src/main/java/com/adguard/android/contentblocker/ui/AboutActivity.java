@@ -16,16 +16,16 @@
  */
 package com.adguard.android.contentblocker.ui;
 
-import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
+import com.adguard.android.contentblocker.BuildConfig;
 import com.adguard.android.contentblocker.R;
+import com.adguard.android.contentblocker.commons.AppLink;
+import com.adguard.android.contentblocker.commons.PackageUtils;
+import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
 
 public class AboutActivity extends AppCompatActivity {
@@ -36,21 +36,37 @@ public class AboutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about);
 
         final TextView versionInfoTextView = findViewById(R.id.versionInfoTextView);
-        String versionName = getVersionName();
-        versionInfoTextView.setText(versionInfoTextView.getText().toString().replace("{0}", versionName));
+        versionInfoTextView.setText(getString(R.string.versionInfoTextViewText).replace("{0}", PackageUtils.getVersionName(this)));
 
         final TextView adguardComLinkTextView = findViewById(R.id.adguardComLinkTextView);
-        adguardComLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
+        adguardComLinkTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavigationHelper.redirectToWebSite(AboutActivity.this, AppLink.Website.getHomeUrl(getApplicationContext(), "about_activity"));
+            }
+        });
+
         final TextView forumAdguardComLinkTextView = findViewById(R.id.forumAdguardComLinkTextView);
-        forumAdguardComLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
+        forumAdguardComLinkTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavigationHelper.redirectToWebSite(AboutActivity.this, AppLink.Website.getForumUrl(getApplicationContext(), "about_activity"));
+            }
+        });
+
         final TextView githubLinkTextView = findViewById(R.id.githubLinkTextView);
-        githubLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
+        githubLinkTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavigationHelper.redirectToWebSite(AboutActivity.this, AppLink.Github.getHomeUrl(getApplicationContext(), "about_activity"));
+            }
+        });
 
         final View rateAppButton = findViewById(R.id.rateAppButton);
         rateAppButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavigationHelper.redirectToWebSite(AboutActivity.this, getApplicationMarketLink(getApplicationContext()));
+                ActivityUtils.startMarket(AboutActivity.this, getPackageName(), null);
             }
         });
 
@@ -58,48 +74,24 @@ public class AboutActivity extends AppCompatActivity {
         issuesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavigationHelper.redirectToWebSite(AboutActivity.this,"https://github.com/AdguardTeam/ContentBlocker/issues");
+                NavigationHelper.redirectToWebSite(AboutActivity.this, BuildConfig.gihubIssueUrl);
             }
         });
 
         final TextView eulaLinkTextView = findViewById(R.id.eulaLinkTextView);
-        eulaLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
+        eulaLinkTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavigationHelper.redirectToWebSite(AboutActivity.this, AppLink.Website.getEULAUrl(getApplicationContext(), "about_activity"));
+            }
+        });
+
         final TextView privacyPolicyLinkTextView = findViewById(R.id.privacyPolicyLinkTextView);
-        privacyPolicyLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
-    }
-
-    public String getVersionName() {
-        PackageInfo packageInfo = getPackageInfo(this, this.getPackageName());
-        if (packageInfo != null) {
-            return packageInfo.versionName;
-        }
-
-        // Default version name
-        return "1.0";
-    }
-
-    /**
-     * Gets package info by the package name.
-     * If package is not installed - returns null.
-     *
-     * @param context     Android context
-     * @param packageName Package name
-     * @return Package info or null
-     */
-    public static PackageInfo getPackageInfo(Context context, String packageName) {
-        PackageManager packageManager = context.getPackageManager();
-
-        try {
-            return packageManager.getPackageInfo(packageName, 0);
-        } catch (PackageManager.NameNotFoundException e) {
-            return null;
-        }
-    }
-
-    /**
-     * @return Link to market
-     */
-    public static String getApplicationMarketLink(Context context) {
-        return "https://play.google.com/store/apps/details?id=" + context.getPackageName();
+        privacyPolicyLinkTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavigationHelper.redirectToWebSite(AboutActivity.this,  AppLink.Website.getPrivacyPolicyUrl(getApplicationContext(), "about_activity"));
+            }
+        });
     }
 }

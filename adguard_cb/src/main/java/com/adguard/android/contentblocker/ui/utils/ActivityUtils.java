@@ -111,6 +111,4 @@ public class ActivityUtils {
     public static void unlockOrientation(Activity activity) {
         activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
     }
-
-
 }

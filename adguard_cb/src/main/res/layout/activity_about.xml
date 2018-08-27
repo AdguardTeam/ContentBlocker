@@ -32,12 +32,6 @@
                     android:layout_marginTop="@dimen/inputMarginTop"
                     android:text="@string/issuesButtonText" />
 
-                <!--<Button
-                    android:id="@+id/feedbackButton"
-                    style="@style/grayBigButton"
-                    android:text="@string/feedbackButtonText"
-                    android:layout_marginTop="@dimen/inputMarginTop"/>-->
-
                 <TableLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

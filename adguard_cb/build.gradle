@@ -82,8 +82,8 @@ android {
             buildConfigField "String", "websiteUrl", '"' + forwardHost + '?' + websiteUrl + '"'
             buildConfigField "String", "forumUrl", '"' + forwardHost + '?' + forumUrl + '"'
 
-            buildConfigField "String", "gihubUrl", '"' + forwardHost + '?' + githubUrl + '"'
-            buildConfigField "String", "gihubIssueUrl", '"' + forwardHost + '?' + githubIssueUrl + '"'
+            buildConfigField "String", "githubUrl", '"' + forwardHost + '?' + githubUrl + '"'
+            buildConfigField "String", "githubIssueUrl", '"' + forwardHost + '?' + githubIssueUrl + '"'
 
             buildConfigField "String", "otherAdguardProductUrl", '"' + forwardHost + '?' + otherAdguardProductUrl + '"'
         }
@@ -105,8 +105,8 @@ android {
             buildConfigField "String", "websiteUrl", '"' + forwardHost + '?' + websiteUrl + '"'
             buildConfigField "String", "forumUrl", '"' + forwardHost + '?' + forumUrl + '"'
 
-            buildConfigField "String", "gihubUrl", '"' + forwardHost + '?' + githubUrl + '"'
-            buildConfigField "String", "gihubIssueUrl", '"' + forwardHost + '?' + githubIssueUrl + '"'
+            buildConfigField "String", "githubUrl", '"' + forwardHost + '?' + githubUrl + '"'
+            buildConfigField "String", "githubIssueUrl", '"' + forwardHost + '?' + githubIssueUrl + '"'
 
             buildConfigField "String", "otherAdguardProductUrl", '"' + forwardHost + '?' + otherAdguardProductUrl + '"'
         }

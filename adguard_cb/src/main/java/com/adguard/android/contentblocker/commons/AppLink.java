@@ -90,7 +90,7 @@ public class AppLink {
          * @return github home page url
          */
         public static String getHomeUrl(Context context, String from) {
-            return getForwardLink(context, BuildConfig.gihubUrl, from);
+            return getForwardLink(context, BuildConfig.githubUrl, from);
         }
 
         /**
@@ -99,7 +99,7 @@ public class AppLink {
          * @return url to the new issue
          */
         public static String getNewIssueUrl(Context context, String from) {
-            return getForwardLink(context, BuildConfig.gihubIssueUrl, from);
+            return getForwardLink(context, BuildConfig.githubIssueUrl, from);
         }
     }
 

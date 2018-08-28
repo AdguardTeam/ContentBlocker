@@ -45,7 +45,6 @@
     <string name="githubLabelText">Broncode</string>
     <string name="copyrightMessage">AdGuard Content Blocker is vrije software: je kan ze verdelen en/of wijzigen onder de regels van de GNU General Public License zoals gepubliceerd door The Free Software Foundation, ofwel versie 3 van de Licentie, of elke latere versie.</string>
     <string name="warning">Waarschuwing</string>
-    <string name="too_many_filters_warning">Je hebt te veel filters geselecteerd. Dit kan je internetverkeer merkbaar vertragen.</string>
     <string name="onboarding_title1">Welkom !</string>
     <string name="onboarding_text1">Je bent slechts enkele stappen verwijderd van een snel internet zonder advertenties.</string>
     <string name="onboarding_button_text1">Aan de slag</string>
@@ -85,4 +84,5 @@
     <string name="learn_more">Meer info</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="too_many_filters_warning">Je hebt te veel filters geselecteerd. Dit kan je internetverkeer merkbaar vertragen.</string>
 </resources>

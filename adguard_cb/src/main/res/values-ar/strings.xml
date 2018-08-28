@@ -45,7 +45,6 @@
     <string name="githubLabelText">الكود المصدري</string>
     <string name="copyrightMessage">AdGuard Content Blocker هو برنامج مجاني: يمكنك إعادة توزيعه و / أو تعديله بموجب شروط رخصة جنو العمومية كما نشرتها مؤسسة البرمجيات الحرة، إما الإصدار 3 من الترخيص، أو (في الخيار الخاص بك) أي إصدار لاحق.</string>
     <string name="warning">تحذير</string>
-    <string name="too_many_filters_warning">لقد حددت عددا كبيرا جدا من اشتراكات الفلتر. قد يؤدي ذلك إلى إبطاء تصفح الويب بشكل ملحوظ.</string>
     <string name="onboarding_title1">مرحبا بكم</string>
     <string name="onboarding_text1">أنت غلى بعد  بضع خطوات عن الإنترنت السريع والنظيف دون إعلانات.</string>
     <string name="onboarding_button_text1">احصل على جولة سريعة</string>
@@ -85,4 +84,5 @@
     <string name="learn_more">التعرف على المزيد</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html"> سياسة الخصوصية </a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html"> اتفاقية ترخيص المستخدم النهائي </a></string>
+    <string name="too_many_filters_warning">لقد حددت عددا كبيرا جدا من اشتراكات الفلتر. قد يؤدي ذلك إلى إبطاء تصفح الويب بشكل ملحوظ.</string>
 </resources>

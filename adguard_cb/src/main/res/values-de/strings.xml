@@ -45,7 +45,6 @@
     <string name="githubLabelText">Quellcode</string>
     <string name="copyrightMessage">AdGuard-Inhaltsblocker ist freie Software: Sie können es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 3 der Lizenz oder (nach Ihrem Wunsch) jeder späteren Version.</string>
     <string name="warning">Warnung</string>
-    <string name="too_many_filters_warning">Sie haben zu viele Filter-Abonnements ausgewählt. Dies kann das Surfen im Internet deutlich verlangsamen.</string>
     <string name="onboarding_title1">Willkommen!</string>
     <string name="onboarding_text1">Sie sind nur ein paar Schritte, zu einem schnellen und sauberen Internet ohne Werbung, entfernt.</string>
     <string name="onboarding_button_text1">Erste Schritte</string>
@@ -85,4 +84,5 @@
     <string name="learn_more">Mehr erfahren</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Datenschutzbestimmungen</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="too_many_filters_warning">Sie haben zu viele Filter-Abonnements ausgewählt. Dies kann das Surfen im Internet deutlich verlangsamen.</string>
 </resources>

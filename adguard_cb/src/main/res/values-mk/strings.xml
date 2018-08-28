@@ -45,7 +45,6 @@
     <string name="githubLabelText">Изворен код</string>
     <string name="copyrightMessage">AdGuard Блокатор на Содржина е бесплатен софтвер: вие можите да го редистрибутирате и/или да го изменувате под условите на GNU Општата Јавна Лиценца како што е издадена од Слободната Фондација за Софтвер, или верзијата 3 на Лиценцата, или (како ваша опција) било која покасна верзија.</string>
     <string name="warning">Предупредување</string>
-    <string name="too_many_filters_warning">Вие избравте премногу претплати за филтри. Ова може да го намали вашето веб прелистување значајно.</string>
     <string name="onboarding_title1">Добредојдовте!</string>
     <string name="onboarding_text1">Вие сте само неколку чекори од брз и чист интернет, без реклами.</string>
     <string name="onboarding_button_text1">Започнете</string>
@@ -82,4 +81,5 @@
     <string name="reportBug">Пријавете грешка</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Политика на Приватност</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="too_many_filters_warning">Вие избравте премногу претплати за филтри. Ова може да го намали вашето веб прелистување значајно.</string>
 </resources>

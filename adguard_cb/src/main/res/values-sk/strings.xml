@@ -45,7 +45,6 @@
     <string name="githubLabelText">Zdrojový kód</string>
     <string name="copyrightMessage">AdGuard blokovač obsahu je bezplatný softvér: môžete ho redistribuovať a/alebo modifikovať pri dodržaní podmienok GNU General Public License publikovanej Free Software Foundation vo verzii 3 alebo novšej.</string>
     <string name="warning">Varovanie</string>
-    <string name="too_many_filters_warning">Zvolili ste príliš veľa filtrov. To môže výrazne spomaliť Vaše prehliadanie internetových stránok.</string>
     <string name="onboarding_title1">Vitajte!</string>
     <string name="onboarding_text1">Ste len pár krokov od rýchleho a čistého internetu bez reklám.</string>
     <string name="onboarding_button_text1">Začíname.</string>
@@ -86,4 +85,5 @@
     <string name="privacyPolicyLinkText">"<a href="http://www.adguard.com/privacy.html">Pravidlá ochrany súkromia</a>
  "</string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="too_many_filters_warning">Zvolili ste príliš veľa filtrov. To môže výrazne spomaliť Vaše prehliadanie internetových stránok.</string>
 </resources>

@@ -45,7 +45,6 @@
     <string name="githubLabelText">Codice sorgente</string>
     <string name="copyrightMessage">AdGuard Content Blocker è un software gratuito: puoi ridistribuirlo e/o modificarlo nei termini della GNU General Public License come pubblicato dalla Free Software Foundation nella versione 3 della Licenza o (a tua discrezione) in qualsiasi versione successiva.</string>
     <string name="warning">Attenzione</string>
-    <string name="too_many_filters_warning">Hai attivato troppi filtri. Ciò potrebbe rallentare notevolmente la tua navigazione internet.</string>
     <string name="onboarding_title1">Benvenuto!</string>
     <string name="onboarding_text1">Sei solo a pochi passi da internet veloce e libero da annunci.</string>
     <string name="onboarding_button_text1">Per iniziare</string>
@@ -85,4 +84,5 @@
     <string name="learn_more">Per saperne di più</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="too_many_filters_warning">Hai attivato troppi filtri. Ciò potrebbe rallentare notevolmente la tua navigazione internet.</string>
 </resources>

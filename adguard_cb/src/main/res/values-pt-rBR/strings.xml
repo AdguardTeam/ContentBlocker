@@ -45,7 +45,6 @@
     <string name="githubLabelText">Código-fonte</string>
     <string name="copyrightMessage">O AdGuard Bloqueador de Conteúdo é um aplicativo gratuito: você pode redistribuir ou modificá-lo de acordo com os termos do GNU General Public License, conforme publicado pela Free Software Foundation, seja na versão 3 da Licença, ou posterior.</string>
     <string name="warning">Aviso</string>
-    <string name="too_many_filters_warning">Você selecionou muitos filtros. Isso pode diminuir  significativamente a sua navegação na internet.</string>
     <string name="onboarding_title1">Bem-vindo(a)!</string>
     <string name="onboarding_text1">Você está a poucos passos de uma internet rápida e sem anúncios.</string>
     <string name="onboarding_button_text1">Iniciar</string>
@@ -85,4 +84,5 @@
     <string name="learn_more">Saber Mais</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Política de Privacidade</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">Contrato</a></string>
+    <string name="too_many_filters_warning">Você selecionou muitos filtros. Isso pode diminuir  significativamente a sua navegação na internet.</string>
 </resources>

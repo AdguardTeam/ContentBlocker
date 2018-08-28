@@ -45,7 +45,6 @@
     <string name="githubLabelText">Kildekode</string>
     <string name="copyrightMessage">AdGuard Indholdsblokker er et gratis program: du kan omfordele det og/eller ændre det under betingelserne af GNU General Public License som er udgivet af Free Software Foundation, enten version 3 af Licensen eller (efter dit valg) enhver senere version.</string>
     <string name="warning">Advarsel</string>
-    <string name="too_many_filters_warning">Du har valgt for mange filterabonnenter. Dette vil muligvis sænke din internetsøgning betydeligt.</string>
     <string name="onboarding_title1">Velkommen!</string>
     <string name="onboarding_text1">Du er kun et par skridt væk fra et hurtigt og rent internet uden annoncer.</string>
     <string name="onboarding_button_text1">Kom i gang</string>
@@ -85,4 +84,5 @@
     <string name="learn_more">Lær Mere</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privatlivspolitik</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="too_many_filters_warning">Du har valgt for mange filterabonnenter. Dette vil muligvis sænke din internetsøgning betydeligt.</string>
 </resources>

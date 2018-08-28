@@ -45,7 +45,6 @@
     <string name="githubLabelText">Вихідний код</string>
     <string name="copyrightMessage">AdGuard Content Blocker є бескоштовним програмним забезпеченням: ви можете вільно поширювати та/або змінювати його відповідно до GNU General Public License, що опубліковано Free Software Foundation, або версією 3 цієї Ліцензії, або (за вашим бажанням) більш пізньої версії.</string>
     <string name="warning">Увага</string>
-    <string name="too_many_filters_warning">Ви вибрали занадто багато фільтрів. Це може значно уповільнити швидкість завантаження сайтів.</string>
     <string name="onboarding_title1">Ласкаво просимо!</string>
     <string name="onboarding_text1">Ви всього в парі кроків від швидкого і чистого Інтернету без реклами.</string>
     <string name="onboarding_button_text1">Почати</string>
@@ -85,4 +84,5 @@
     <string name="learn_more">Дізнатися більше</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Конфіденційність</a></string>
     <string name="eulaLinkText">&lt;а href=\"https://adguard.com/ru/eula.html\"&gt;Угода&lt;/а&gt;</string>
+    <string name="too_many_filters_warning">Ви вибрали занадто багато фільтрів. Це може значно уповільнити швидкість завантаження сайтів.</string>
 </resources>

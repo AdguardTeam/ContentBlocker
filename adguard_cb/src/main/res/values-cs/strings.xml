@@ -84,4 +84,5 @@
     <string name="learn_more">Zjistit více</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Zásady ochrany osobních údajů</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="too_many_filters_warning">Vybrali jste příliš mnoho filtrů. To může výrazně zpomalit prohlížení webů.</string>
 </resources>

@@ -83,8 +83,8 @@
     <string name="description_about_other_adguard_product">Do you know that you can use AdGuard on any device, computer, and OS? Learn more on our website.</string>
     <string name="no_thanks">No Thanks</string>
     <string name="learn_more">Learn More</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="privacyPolicyLinkText">Privacy Policy</string>
+    <string name="eulaLinkText">EULA</string>
 
     <string name="delete">Delete</string>
     <string name="confirmClearUserFilterMessage">Are you sure you want to clear the user filter? This operation cannot be undone.</string>
@@ -118,7 +118,14 @@
     <string name="samsung_browser_rating" translatable="false">4,4</string>
     <string name="closed_drawer_title" translatable="false">AdGuard Content Blocker</string>
     <string name="empty" translatable="false"></string>
-    <string name="githubLink" translatable="false"><a href="https://github.com/AdGuardTeam/ContentBlocker">github.com</a></string>
-    <string name="adguardComLink" translatable="false"><a href="https://adguard.com">adguard.com</a></string>
-    <string name="forumAdguardComLink" translatable="false"><a href="https://forum.adguard.com">forum.adguard.com</a></string>
+    <string name="githubLink" translatable="false">github.com</string>
+    <string name="adguardComLink" translatable="false">adguard.com</string>
+    <string name="forumAdguardComLink" translatable="false">forum.adguard.com</string>
+
+    <string name="report_dialog_title">Report type</string>
+    <string name="reportTypeMissedAd">Missed Ad or tracker</string>
+    <string name="reportTypeIncorrectBlocking">Incorrect blocking</string>
+    <string name="reportTypeBugReport">Bug report</string>
+    <string name="reportTypeFeatureRequest">Feature request</string>
+    <string name="reportTypeCustom">Other</string>
 </resources>

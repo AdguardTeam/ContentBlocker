@@ -17,7 +17,6 @@
 package com.adguard.android.contentblocker.commons;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.view.inputmethod.InputMethodSubtype;
@@ -28,8 +27,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.*;
 
 /**
@@ -39,45 +36,10 @@ public class RawResources {
 
     private final static Logger LOG = LoggerFactory.getLogger(RawResources.class);
 
-    private static Properties properties;
-
     private static String createTablesScript;
-    private static String dropTablesScript;
     private static String insertFiltersScript;
     private static String insertFiltersLocalizationScript;
     private static String enableDefaultFiltersScript;
-
-    /**
-     * Gets check filters versions url
-     *
-     * @param context Context
-     * @return URL for checking filter version
-     */
-    public static String getCheckFilterVersionsUrl(Context context) {
-        if (properties == null) {
-            if (loadProperties(context) == null) {
-                return null;
-            }
-        }
-
-        return properties.getProperty("check.filter.versions.url");
-    }
-
-    /**
-     * Gets filter get url
-     *
-     * @param context Current context
-     * @return Url for getting filter rules
-     */
-    public static String getFilterUrl(Context context) {
-        if (properties == null) {
-            if (loadProperties(context) == null) {
-                return null;
-            }
-        }
-
-        return properties.getProperty("get.filter.url");
-    }
 
     /**
      * @param context Current context
@@ -170,26 +132,10 @@ public class RawResources {
      */
     private static String getResourceAsString(Context context, int resourceId) {
         try {
-            return IOUtils.toString(context.getResources().openRawResource(resourceId));
+            return IOUtils.toString(context.getResources().openRawResource(resourceId), "UTF-8");
         } catch (Exception ex) {
             throw new RuntimeException("Error getting resource " + resourceId, ex);
         }
-    }
-
-    private static Properties loadProperties(Context context) {
-        try {
-            InputStream rawResource = context.getResources().openRawResource(R.raw.application);
-            properties = new Properties();
-            properties.load(rawResource);
-
-            return properties;
-        } catch (Resources.NotFoundException e) {
-            LOG.error("Did not find raw resource", e);
-        } catch (IOException e) {
-            LOG.error("Failed to open properties file");
-        }
-
-        return null;
     }
 
     /**
@@ -203,8 +149,11 @@ public class RawResources {
 
         try {
             InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
-            List<InputMethodInfo> ims = imm.getEnabledInputMethodList();
+            if (imm == null) {
+                return languages;
+            }
 
+            List<InputMethodInfo> ims = imm.getEnabledInputMethodList();
             for (InputMethodInfo method : ims) {
                 List<InputMethodSubtype> subMethods = imm.getEnabledInputMethodSubtypeList(method, true);
                 for (InputMethodSubtype subMethod : subMethods) {

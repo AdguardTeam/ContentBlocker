@@ -16,9 +16,11 @@
  */
 package com.adguard.android.contentblocker.service;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 
 import com.adguard.android.contentblocker.R;
+import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.ui.utils.ProgressDialogUtils;
 import com.adguard.android.contentblocker.commons.concurrent.DispatcherTask;
 import org.slf4j.Logger;
@@ -30,7 +32,7 @@ import org.slf4j.LoggerFactory;
 public abstract class LongRunningTask implements DispatcherTask {
 
     protected final static Logger LOG = LoggerFactory.getLogger(LongRunningTask.class);
-    protected final ProgressDialog progressDialog;
+    private final ProgressDialog progressDialog;
 
     /**
      * Creates an instance of the LongRunningTask
@@ -45,7 +47,7 @@ public abstract class LongRunningTask implements DispatcherTask {
      *
      * @param progressDialog Progress dialog to show while task is in process
      */
-    protected LongRunningTask(ProgressDialog progressDialog) {
+    LongRunningTask(ProgressDialog progressDialog) {
         this.progressDialog = progressDialog;
     }
 
@@ -72,7 +74,7 @@ public abstract class LongRunningTask implements DispatcherTask {
      *
      * @param progressDialog Progress dialog to dismiss
      */
-    protected void dismissProgressDialog(final ProgressDialog progressDialog) {
+    private void dismissProgressDialog(final ProgressDialog progressDialog) {
 		ProgressDialogUtils.dismissProgressDialog(progressDialog);
 	}
 
@@ -81,22 +83,12 @@ public abstract class LongRunningTask implements DispatcherTask {
      *
      * @param progressDialog Progress dialog
      */
-    protected void dismissProgressDialogOnError(ProgressDialog progressDialog, Exception ex) {
+    private void dismissProgressDialogOnError(ProgressDialog progressDialog, Exception ex) {
         LOG.warn("Dismissing progress dialog on error:\r\n", ex);
 
-		showToastMessage(R.string.progressGenericErrorText);
+        Activity ownerActivity = progressDialog.getOwnerActivity();
+        NotificationService notificationService = ServiceLocator.getInstance(ownerActivity).getNotificationService();
+        notificationService.showToast(R.string.progressGenericErrorText);
 		ProgressDialogUtils.dismissProgressDialog(progressDialog);
     }
-
-    /**
-     * Shows toast message
-     *
-     * @param resourceId Resource ID
-     */
-    protected void showToastMessage(int resourceId) {
-        if (progressDialog != null) {
-            BaseUiService.showToast(progressDialog.getOwnerActivity(), resourceId);
-        }
-    }
-
 }

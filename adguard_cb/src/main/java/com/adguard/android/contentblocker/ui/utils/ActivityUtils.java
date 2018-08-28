@@ -21,6 +21,8 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Point;
 import android.net.Uri;
@@ -61,50 +63,6 @@ public class ActivityUtils {
      */
     public static String formatTime(Date time, Locale locale) {
         return new SimpleDateFormat("HH:mm", locale).format(time).replaceFirst("^0?", "");
-    }
-
-    /**
-     * Formats date
-     *
-     * @param time   Time to format
-     * @param locale Locale
-     * @return Formatted string
-     */
-    public static String formatDateTime(Date time, Locale locale) {
-        DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.SHORT, locale);
-        return dateFormat.format(time);
-    }
-
-    /**
-     * Formats decimal number for specified locale
-     *
-     * @param v      Value to format
-     * @param locale Locale
-     * @return Formatted string
-     */
-    public static String formatBigDecimal(BigDecimal v, Locale locale) {
-        NumberFormat numberFormat = NumberFormat.getInstance(locale);
-
-        int scale = 2;
-        if (v.intValue() >= 100) {
-            scale = 1;
-        }
-
-        return numberFormat.format(v.setScale(scale, RoundingMode.UP));
-    }
-
-    /**
-     * Determining the smallest size of the screen to detect "real small devices",
-     * the dpi modifier is not reliable on Samsung devices
-     *
-     * @param activity - current activity
-     * @return the size of the smallest edge of default display in pixels
-     */
-    private static int getSmallestScreenSize(Activity activity) {
-        Display display = activity.getWindowManager().getDefaultDisplay();
-        Point point = new Point();
-        display.getSize(point);
-        return Math.min(point.x, point.y);
     }
 
     public static void startMarket(Context context, String packageName, String referrer) {

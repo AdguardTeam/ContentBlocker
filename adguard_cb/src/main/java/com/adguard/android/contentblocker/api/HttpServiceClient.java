@@ -40,9 +40,8 @@ public class HttpServiceClient {
      *
      * @param downloadUrl Download url
      * @return String or null
-     * @throws IOException
      */
-    public static String downloadString(String downloadUrl) throws IOException {
+    protected static String downloadString(String downloadUrl) throws IOException {
         LOG.debug("Sending HTTP GET request to {}", downloadUrl);
 
         final String response = UrlUtils.downloadString(downloadUrl, READ_TIMEOUT, CONNECTION_TIMEOUT);
@@ -61,7 +60,6 @@ public class HttpServiceClient {
      * @param uploadUrl URL to send POST request to
      * @param data      POST body
      * @return Response string
-     * @throws IOException
      */
     protected static String postData(String uploadUrl, String data) throws IOException {
         LOG.debug("Sending HTTP POST request to {}. Length={}", uploadUrl, StringUtils.length(data));

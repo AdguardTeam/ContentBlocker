@@ -24,23 +24,91 @@ android {
 
     buildTypes {
         release {
+            debuggable false
+            minifyEnabled true
+        }
+
+        debug {
+            debuggable true
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            zipAlignEnabled true
         }
     }
 
-    flavorDimensions 'api'
+    def checkFilterVersionsUrl = "/extension/android-content-blocker/filters.json"
+    def getFilterUrl = "/extension/android-content-blocker/filters/{0}_optimized.txt"
+
+    def reportToolUrl = '/new_issue.html'
+
+    def eulaUrl = "action=eula&app=content_blocker"
+    def privatePolicyUrl = "action=private&app=content_blocker"
+
+    def websiteUrl = "action=home&app=content_blocker"
+    def forumUrl = "action=forum&app=content_blocker"
+
+    def githubUrl = "action=github&app=content_blocker"
+    def githubIssueUrl = "action=issue&app=content_blocker"
+
+    def otherAdguardProductUrl = "action=other_product&app=content_blocker"
+
+    flavorDimensions "buildChannel",  "serverChannel"
     productFlavors {
+
         yandex_api16 {
             minSdkVersion 16
             versionCode 16002200
-            dimension "api"
+            dimension "buildChannel"
         }
+
         samsung_api21 {
             minSdkVersion 21
             versionCode 21002200
-            dimension "api"
+            dimension "buildChannel"
+        }
+
+        prodBackend {
+            dimension "serverChannel"
+
+            def filtersHost = 'https://filters.adtidy.org'
+            def reportToolHost = 'https://reports.adguard.com'
+            def forwardHost = "https://adguard.com/forward.html"
+
+            buildConfigField "String", "checkFilterVersionsUrl", '"' + filtersHost + checkFilterVersionsUrl + '"'
+            buildConfigField "String", "getFilterUrl", '"' + filtersHost + getFilterUrl + '"'
+
+            buildConfigField "String", "reportToolUrl", '"' + reportToolHost + reportToolUrl + '"'
+
+            buildConfigField "String", "eulaUrl", '"' + forwardHost + '?' + eulaUrl + '"'
+            buildConfigField "String", "privateUrl", '"' + forwardHost + '?' + privatePolicyUrl + '"'
+            buildConfigField "String", "websiteUrl", '"' + forwardHost + '?' + websiteUrl + '"'
+            buildConfigField "String", "forumUrl", '"' + forwardHost + '?' + forumUrl + '"'
+
+            buildConfigField "String", "githubUrl", '"' + forwardHost + '?' + githubUrl + '"'
+            buildConfigField "String", "githubIssueUrl", '"' + forwardHost + '?' + githubIssueUrl + '"'
+
+            buildConfigField "String", "otherAdguardProductUrl", '"' + forwardHost + '?' + otherAdguardProductUrl + '"'
+        }
+
+        devBackend {
+            dimension "serverChannel"
+
+            def filtersHost = 'http://testfilters.adtidy.org'
+            def reportToolHost = 'https://reports.adguard.com'
+            def forwardHost = "https://dev.adguard.com/forward.html"
+
+            buildConfigField "String", "checkFilterVersionsUrl", '"' + filtersHost + checkFilterVersionsUrl + '"'
+            buildConfigField "String", "getFilterUrl", '"' + filtersHost + getFilterUrl + '"'
+
+            buildConfigField "String", "reportToolUrl", '"' + reportToolHost + reportToolUrl + '"'
+
+            buildConfigField "String", "eulaUrl", '"' + forwardHost + '?' + eulaUrl + '"'
+            buildConfigField "String", "privateUrl", '"' + forwardHost + '?' + privatePolicyUrl + '"'
+            buildConfigField "String", "websiteUrl", '"' + forwardHost + '?' + websiteUrl + '"'
+            buildConfigField "String", "forumUrl", '"' + forwardHost + '?' + forumUrl + '"'
+
+            buildConfigField "String", "githubUrl", '"' + forwardHost + '?' + githubUrl + '"'
+            buildConfigField "String", "githubIssueUrl", '"' + forwardHost + '?' + githubIssueUrl + '"'
+
+            buildConfigField "String", "otherAdguardProductUrl", '"' + forwardHost + '?' + otherAdguardProductUrl + '"'
         }
     }
 

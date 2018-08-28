@@ -18,12 +18,15 @@ package com.adguard.android.contentblocker.ui;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -35,19 +38,24 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ServiceLocator;
+import com.adguard.android.contentblocker.commons.AppLink;
 import com.adguard.android.contentblocker.commons.BrowserUtils;
 import com.adguard.android.contentblocker.model.FilterList;
+import com.adguard.android.contentblocker.model.ReportType;
 import com.adguard.android.contentblocker.onboarding.OnboardingActivity;
 import com.adguard.android.contentblocker.service.FilterService;
 import com.adguard.android.contentblocker.service.FilterServiceImpl;
 import com.adguard.android.contentblocker.service.PreferencesService;
 import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
+import com.adguard.android.contentblocker.ui.utils.ReportToolUtils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -146,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                     preferencesService.setWelcomeMessage(true);
                     bottomBarView.setVisibility(View.GONE);
 
-                    NavigationHelper.redirectToWebSite(MainActivity.this, "http://agrd.io/cb_adguard_products");
+                    NavigationHelper.redirectToWebSite(MainActivity.this, AppLink.Website.getOtherProductUrl(getApplicationContext()));
                 }
             });
         }
@@ -448,11 +456,11 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 break;
             case R.id.nav_report_bug:
                 drawerLayout.closeDrawers();
-                NavigationHelper.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker/issues/new");
+                showReportDialog();
                 break;
             case R.id.nav_github:
                 drawerLayout.closeDrawers();
-                NavigationHelper.redirectToWebSite(MainActivity.this, "https://github.com/AdguardTeam/ContentBlocker");
+                NavigationHelper.redirectToWebSite(MainActivity.this, AppLink.Github.getHomeUrl(getApplicationContext(), "main_activity"));
                 break;
             case R.id.nav_about:
                 drawerLayout.closeDrawers();
@@ -462,6 +470,47 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 finish();
                 break;
         }
+    }
+
+    private void showReportDialog() {
+        final ArrayAdapter<ReportType> arrayAdapter = new ArrayAdapter<ReportType>(getApplicationContext(), R.layout.simple_dialog_item, ReportType.values()) {
+            @NonNull
+            @Override
+            public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+                View view = super.getView(position, convertView, parent);
+
+                ReportType reportType = getItem(position);
+                if (reportType != null) {
+                    TextView textView = view.findViewById(R.id.text1);
+                    textView.setText(reportType.getStringId());
+                }
+
+                return view;
+            }
+        };
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.report_dialog_title);
+        builder.setSingleChoiceItems(arrayAdapter, -1, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialogInterface, int selectedIndex) {
+                dialogInterface.dismiss();
+
+                ReportType reportType = arrayAdapter.getItem(selectedIndex);
+                if (reportType != null) {
+                    switch (reportType) {
+                        case MISSED_AD:
+                        case INCORRECT_BLOCKING:
+                            NavigationHelper.redirectToWebSite(MainActivity.this, ReportToolUtils.getUrl(MainActivity.this));
+                            break;
+                        default:
+                            NavigationHelper.redirectToWebSite(MainActivity.this, AppLink.Github.getNewIssueUrl(getApplicationContext(), "main_activity"));
+                            break;
+                    }
+                }
+            }
+        }).show();
     }
 
     private static class ApplyAndRefreshTask extends AsyncTask<Void, Void, Integer> {

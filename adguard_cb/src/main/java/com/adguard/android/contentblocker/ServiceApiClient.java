@@ -16,23 +16,26 @@
  */
 package com.adguard.android.contentblocker;
 
-import android.content.Context;
-import com.adguard.android.contentblocker.commons.RawResources;
 import com.adguard.android.contentblocker.api.HttpServiceClient;
-import com.adguard.android.contentblocker.model.FilterList;
+import com.adguard.android.contentblocker.commons.AppLink;
 import com.adguard.android.contentblocker.commons.web.UrlUtils;
+import com.adguard.android.contentblocker.model.FilterList;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 import org.codehaus.jackson.annotate.JsonAutoDetect;
 import org.codehaus.jackson.annotate.JsonMethod;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.json.JSONException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.text.ParseException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Special client to communicate with out backend
@@ -50,12 +53,11 @@ public class ServiceApiClient extends HttpServiceClient {
     /**
      * Downloads filter rules
      *
-     * @param filterId    Filter id
+     * @param filterId Filter id
      * @return List of rules
-     * @throws IOException
      */
-    public static List<String> downloadFilterRules(Context context, int filterId) throws IOException {
-        String downloadUrl = RawResources.getFilterUrl(context);
+    public static List<String> downloadFilterRules(int filterId) throws IOException {
+        String downloadUrl = AppLink.FilterApi.getFilterUrl();
         downloadUrl = downloadUrl.replace("{0}", UrlUtils.urlEncode(Integer.toString(filterId)));
 
         LOG.info("Sending request to {}", downloadUrl);
@@ -80,8 +82,8 @@ public class ServiceApiClient extends HttpServiceClient {
      * @param filters list
      * @return filters list with downloaded versions
      */
-    public static List<FilterList> downloadFilterVersions(Context context, List<FilterList> filters) throws IOException, JSONException {
-        String downloadUrl = RawResources.getCheckFilterVersionsUrl(context);
+    public static List<FilterList> downloadFilterVersions(List<FilterList> filters) throws IOException {
+        String downloadUrl = AppLink.FilterApi.getCheckFilterVersionsUrl();
         LOG.info("Sending request to {}", downloadUrl);
         String response = downloadString(downloadUrl);
         if (StringUtils.isBlank(response)) {

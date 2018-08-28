@@ -21,7 +21,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.adguard.android.contentblocker.BuildConfig;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.commons.AppLink;
 import com.adguard.android.contentblocker.commons.PackageUtils;

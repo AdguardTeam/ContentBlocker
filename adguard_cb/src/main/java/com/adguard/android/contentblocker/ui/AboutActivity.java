@@ -74,7 +74,7 @@ public class AboutActivity extends AppCompatActivity {
         issuesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavigationHelper.redirectToWebSite(AboutActivity.this, BuildConfig.gihubIssueUrl);
+                NavigationHelper.redirectToWebSite(AboutActivity.this, BuildConfig.githubIssueUrl);
             }
         });
 

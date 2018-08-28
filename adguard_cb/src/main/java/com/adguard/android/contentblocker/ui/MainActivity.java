@@ -473,7 +473,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     }
 
     private void showReportDialog() {
-        ArrayAdapter<ReportType> arrayAdapter = new ArrayAdapter<ReportType>(getApplicationContext(), R.layout.simple_dialog_item, ReportType.values()) {
+        final ArrayAdapter<ReportType> arrayAdapter = new ArrayAdapter<ReportType>(getApplicationContext(), R.layout.simple_dialog_item, ReportType.values()) {
             @NonNull
             @Override
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -497,10 +497,17 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             public void onClick(DialogInterface dialogInterface, int selectedIndex) {
                 dialogInterface.dismiss();
 
-                if (selectedIndex == 0 || selectedIndex == 1) {
-                    NavigationHelper.redirectToWebSite(MainActivity.this, ReportToolUtils.getUrl(MainActivity.this));
-                } else {
-                    NavigationHelper.redirectToWebSite(MainActivity.this, AppLink.Github.getNewIssueUrl(getApplicationContext(), "main_activity"));
+                ReportType reportType = arrayAdapter.getItem(selectedIndex);
+                if (reportType != null) {
+                    switch (reportType) {
+                        case MISSED_AD:
+                        case INCORRECT_BLOCKING:
+                            NavigationHelper.redirectToWebSite(MainActivity.this, ReportToolUtils.getUrl(MainActivity.this));
+                            break;
+                        default:
+                            NavigationHelper.redirectToWebSite(MainActivity.this, AppLink.Github.getNewIssueUrl(getApplicationContext(), "main_activity"));
+                            break;
+                    }
                 }
             }
         }).show();

@@ -45,7 +45,6 @@
     <string name="githubLabelText">Исходный код</string>
     <string name="copyrightMessage">AdGuard Content Blocker - свободное программное обеспечение: вы можете распространять и/или изменять его в соответствии с условиями GNU General Public License, опубликованной Free Software Foundation, либо версии 3 лицензии, либо (по вашему выбору) любой более поздней версии.</string>
     <string name="warning">Внимание</string>
-    <string name="too_many_filters_warning">Вы выбрали слишком много подписок на фильтры. Это может значительно замедлить работу браузера.</string>
     <string name="onboarding_title1">Добро пожаловать!</string>
     <string name="onboarding_text1">Вы всего в нескольких шагах от быстрого и чистого интернета без рекламы!</string>
     <string name="onboarding_button_text1">Начать</string>
@@ -85,4 +84,26 @@
     <string name="learn_more">Узнать больше</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Политика конфиденциальности</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="delete">Удалить</string>
+    <string name="confirmClearUserFilterMessage">Вы уверены что хотите очистить собственный фильтр? Данную операцию нельзя отменить.</string>
+    <string name="confirmRemoveUserRuleMessage">Вы уверены, что хотите удалить это правило? Данную операцию нельзя отменить.</string>
+    <string name="clear_filters_cache_title">Очистить кеш фильтров</string>
+    <string name="clear_filters_cache_summary">Очищает кеш фильтров и обновляет фильтры</string>
+    <string name="clear_filters_cache_progress_message">Очистка кеша и обновление фильтров</string>
+    <string name="whitelist_title">Белый список</string>
+    <string name="addToWhitelistButtonText">Добавить сайт</string>
+    <string name="clearWhitelistButtonText">Удалить все</string>
+    <string name="whitelistNewItemDialogTitle">Введите сайт</string>
+    <string name="whitelistNewItemErrorMessage">Неверный формат</string>
+    <string name="whitelistNewItemExistsErrorMessage">Сайт уже есть в белом списке</string>
+    <string name="confirmClearWhitelistMessage">Вы уверены что хотите очистить собственный фильтр? Данную операцию нельзя отменить.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">Вы уверены, что хотите удалить этот сайт? Данную операцию нельзя отменить.</string>
+    <string name="emptyWhitelistTextViewText">Белый список пуст</string>
+    <string name="report_dialog_title">Тип проблемы</string>
+    <string name="reportTypeMissedAd">Пропущенная реклама или счетчик</string>
+    <string name="reportTypeIncorrectBlocking">Некорректная блокировка</string>
+    <string name="reportTypeBugReport">Дефект</string>
+    <string name="reportTypeFeatureRequest">Предложение</string>
+    <string name="reportTypeCustom">Другое</string>
+    <string name="too_many_filters_warning">Вы выбрали слишком много подписок на фильтры. Это может значительно замедлить работу браузера.</string>
 </resources>

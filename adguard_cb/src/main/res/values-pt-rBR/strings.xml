@@ -45,7 +45,6 @@
     <string name="githubLabelText">Código-fonte</string>
     <string name="copyrightMessage">O AdGuard Bloqueador de Conteúdo é um aplicativo gratuito: você pode redistribuir ou modificá-lo de acordo com os termos do GNU General Public License, conforme publicado pela Free Software Foundation, seja na versão 3 da Licença, ou posterior.</string>
     <string name="warning">Aviso</string>
-    <string name="too_many_filters_warning">Você selecionou muitos filtros. Isso pode diminuir  significativamente a sua navegação na internet.</string>
     <string name="onboarding_title1">Bem-vindo(a)!</string>
     <string name="onboarding_text1">Você está a poucos passos de uma internet rápida e sem anúncios.</string>
     <string name="onboarding_button_text1">Iniciar</string>
@@ -83,6 +82,28 @@
     <string name="description_about_other_adguard_product">Você sabia que pode usar o AdGuard em qualquer dispositivo, computador e sistema operacional? Saiba mais em nosso site.</string>
     <string name="no_thanks">Não Obrigado</string>
     <string name="learn_more">Saber Mais</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Política de Privacidade</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">Contrato</a></string>
+    <string name="privacyPolicyLinkText">Política de Privacidade</string>
+    <string name="eulaLinkText">Contrato</string>
+    <string name="delete">Excluir</string>
+    <string name="confirmClearUserFilterMessage">Você tem certeza que deseja limpar o filtro de usuário? Esta ação não poderá ser desfeita.</string>
+    <string name="confirmRemoveUserRuleMessage">Você tem certeza que deseja excluir esta regra? Esta ação não poderá ser desfeita.</string>
+    <string name="clear_filters_cache_title">Limpar cache de filtros</string>
+    <string name="clear_filters_cache_summary">Limpa o cache e atualiza os filtros</string>
+    <string name="clear_filters_cache_progress_message">Limpando cache e atualizando os filtros</string>
+    <string name="whitelist_title">Listra branca</string>
+    <string name="addToWhitelistButtonText">Adicionar site</string>
+    <string name="clearWhitelistButtonText">Remover tudo</string>
+    <string name="whitelistNewItemDialogTitle">Digite o nome do domínio</string>
+    <string name="whitelistNewItemErrorMessage">O nome do domínio é inválido</string>
+    <string name="whitelistNewItemExistsErrorMessage">Este domínio já está na lista branca</string>
+    <string name="confirmClearWhitelistMessage">Você tem certeza que deseja limpar a lista branca? Esta ação não poderá ser desfeita.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">Você tem certeza que deseja excluir este domínio? Esta ação não poderá ser desfeita.</string>
+    <string name="emptyWhitelistTextViewText">A lista branca está vazia</string>
+    <string name="report_dialog_title">Tipo do problema</string>
+    <string name="reportTypeMissedAd">Anúncio ou rastreador não bloqueado</string>
+    <string name="reportTypeIncorrectBlocking">Bloqueio incorreto</string>
+    <string name="reportTypeBugReport">Reportar bug</string>
+    <string name="reportTypeFeatureRequest">Solicitação de recurso</string>
+    <string name="reportTypeCustom">Outro</string>
+    <string name="too_many_filters_warning">Você selecionou muitos filtros. Isso pode diminuir  significativamente a sua navegação na internet.</string>
 </resources>

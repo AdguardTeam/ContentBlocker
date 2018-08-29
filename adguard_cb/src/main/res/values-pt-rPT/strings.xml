@@ -45,7 +45,6 @@
     <string name="githubLabelText">Código fonte</string>
     <string name="copyrightMessage">O Bloqueado de Conteúdo AdGuard  é um software livre: pode redistribuí-lo e / ou modificá-lo de acordo com os termos da GNU General Public License, conforme publicado pela Free Software Foundation, seja a versão 3 da Licença, ou (à sua escolha) qualquer versão posterior.</string>
     <string name="warning">Cuidado</string>
-    <string name="too_many_filters_warning">Seleccionou muitas assinaturas de filtros. Isso pode diminuir significativamente a velocidade da navegação na web.</string>
     <string name="onboarding_title1">Bem-vindo!</string>
     <string name="onboarding_text1">Está a poucos passos de distância de uma internet rápida e limpa, sem publicidade.</string>
     <string name="onboarding_button_text1">Vamos começar</string>
@@ -85,4 +84,5 @@
     <string name="learn_more">Saber Mais</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Política de Privacidade</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="too_many_filters_warning">Seleccionou muitas assinaturas de filtros. Isso pode diminuir significativamente a velocidade da navegação na web.</string>
 </resources>

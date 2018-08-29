@@ -45,7 +45,6 @@
     <string name="githubLabelText">Kod źródłowy</string>
     <string name="copyrightMessage">AdGuard Bloker Zawartości jest darmowym oprogramowaniem: możesz go rozpowszechniać lub modyfikować zgodnie z warunkami GNU General Public License opublikowane przez Free Software Foundation, dowolnej wersji 3 Licencji lub (Twoim zdaniem) dowolnej późniejszej wersji.</string>
     <string name="warning">Ostrzeżenie</string>
-    <string name="too_many_filters_warning">Wybrałeś za dużo subskrypcji filtrów. Może to skutkować znaczącym spowolnieniem przeglądania sieci.</string>
     <string name="onboarding_title1">Witaj!</string>
     <string name="onboarding_text1">Jesteś tylko kilka kroków od szybkiego i czystego internetu, bez reklam.</string>
     <string name="onboarding_button_text1">Zaczynamy</string>
@@ -85,4 +84,5 @@
     <string name="learn_more">Dowiedz się więcej</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Polityka Prywatności</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="too_many_filters_warning">Wybrałeś za dużo subskrypcji filtrów. Może to skutkować znaczącym spowolnieniem przeglądania sieci.</string>
 </resources>

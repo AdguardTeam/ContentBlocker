@@ -45,7 +45,6 @@
     <string name="githubLabelText">Kildekode</string>
     <string name="copyrightMessage">AdGuard Indholdsblokker er et gratis program: du kan omfordele det og/eller ændre det under betingelserne af GNU General Public License som er udgivet af Free Software Foundation, enten version 3 af Licensen eller (efter dit valg) enhver senere version.</string>
     <string name="warning">Advarsel</string>
-    <string name="too_many_filters_warning">Du har valgt for mange filterabonnenter. Dette vil muligvis sænke din internetsøgning betydeligt.</string>
     <string name="onboarding_title1">Velkommen!</string>
     <string name="onboarding_text1">Du er kun et par skridt væk fra et hurtigt og rent internet uden annoncer.</string>
     <string name="onboarding_button_text1">Kom i gang</string>
@@ -83,6 +82,28 @@
     <string name="description_about_other_adguard_product">Vidste du, at du kan bruge AdGuard på en hvilken som helst enhed, computer og OS? Lær mere på vores hjemmeside.</string>
     <string name="no_thanks">Nej Tak</string>
     <string name="learn_more">Lær Mere</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privatlivspolitik</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="privacyPolicyLinkText">Privatlivspolitik</string>
+    <string name="eulaLinkText">EULA</string>
+    <string name="delete">Slet</string>
+    <string name="confirmClearUserFilterMessage">Er du sikker på, at du vil rydde brugerfiltret? Denne handling kan ikke fortrydes.</string>
+    <string name="confirmRemoveUserRuleMessage">Er du sikker på, at du vil slette denne regel? Denne handling kan ikke fortrydes.</string>
+    <string name="clear_filters_cache_title">Ryd filtercache</string>
+    <string name="clear_filters_cache_summary">Rydder filtercache og opdaterer filtrene</string>
+    <string name="clear_filters_cache_progress_message">Rydder cache og opdaterer filtrene</string>
+    <string name="whitelist_title">Whitelist</string>
+    <string name="addToWhitelistButtonText">Tilføj hjemmeside</string>
+    <string name="clearWhitelistButtonText">Fjern alt</string>
+    <string name="whitelistNewItemDialogTitle">Indtast domænenavn</string>
+    <string name="whitelistNewItemErrorMessage">Domænenavnet er ikke gyldigt</string>
+    <string name="whitelistNewItemExistsErrorMessage">Dette domæne findes allerede i whitelisten</string>
+    <string name="confirmClearWhitelistMessage">Er du sikker på, at du vil rydde whitelisten? Denne handling kan ikke fortrydes.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">Er du sikker på, at du vil slette dette domæne? Denne handling kan ikke fortrydes.</string>
+    <string name="emptyWhitelistTextViewText">Whitelisten er tom</string>
+    <string name="report_dialog_title">Rapporter type</string>
+    <string name="reportTypeMissedAd">Overset annonce eller tracker</string>
+    <string name="reportTypeIncorrectBlocking">Ukorrekt blokering</string>
+    <string name="reportTypeBugReport">Fejlrapport</string>
+    <string name="reportTypeFeatureRequest">Funktionsanmodning</string>
+    <string name="reportTypeCustom">Andre</string>
+    <string name="too_many_filters_warning">Du har valgt for mange filterabonnenter. Dette vil muligvis sænke din internetsøgning betydeligt.</string>
 </resources>

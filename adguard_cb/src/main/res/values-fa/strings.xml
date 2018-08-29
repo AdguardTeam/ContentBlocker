@@ -45,7 +45,6 @@
     <string name="githubLabelText">کُد منبع</string>
     <string name="copyrightMessage">مسدودساز محتوای AdGuard یک نرم افزار رایگان است:شما میتوانید تحت مجوز عمومی همگانی گنو بر مبنای نرم افزار رایگان  چه نسخه 3 مجوز(به گزینش خود) یا هر نسخه بعدی، آن را منتشر وتوزیع مجدد/یا ویرایش کنید.</string>
     <string name="warning">هشدار</string>
-    <string name="too_many_filters_warning">شما اشتراک های بسیاری را انتخاب کرده اید.این میتواند بطور اثرگذاری وبگردی شما را آهسته کند.</string>
     <string name="onboarding_title1">خوش آمدید!</string>
     <string name="onboarding_text1">شما چند مرحله از اینترنت سریع و بدون تبلیغات فاصله دارید.</string>
     <string name="onboarding_button_text1">شروع به کار</string>
@@ -85,4 +84,26 @@
     <string name="learn_more">بیشتر بدانید</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">سیاست حریم خصوصی</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">توافق نامه مجوز کاربر-نهایی</a></string>
+    <string name="delete">حذف</string>
+    <string name="confirmClearUserFilterMessage">آیا واقعا میخواهید فیلتر کاربر را پاکسازی کنید؟ این عملکرد غیر قابل بازگشت است.</string>
+    <string name="confirmRemoveUserRuleMessage">آیا واقعا میخواهید این دستور را حذف کنید؟ این عملکرد غیر قابل بازگشت است.</string>
+    <string name="clear_filters_cache_title">پاکسازی کَش فیلتر</string>
+    <string name="clear_filters_cache_summary">پاکسازی کَش فیلترها و بروز رسانی فیلترها</string>
+    <string name="clear_filters_cache_progress_message">پاکسازی کَش و بروز رسانی فیلترها</string>
+    <string name="whitelist_title">لیست سفید</string>
+    <string name="addToWhitelistButtonText">افزودن وبسایت</string>
+    <string name="clearWhitelistButtonText">حذف همه</string>
+    <string name="whitelistNewItemDialogTitle">نام دامنه را وارد کنید</string>
+    <string name="whitelistNewItemErrorMessage">نام دامنه معتبر نیست</string>
+    <string name="whitelistNewItemExistsErrorMessage">این دامنه از قبل در لیست سفید است</string>
+    <string name="confirmClearWhitelistMessage">آیا واقعا میخواهید لیست سفید را پاکسازی کنید؟ این عملکرد غیر قابل بازگشت است.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">آیا واقعا میخواهید این دامنه را پاکسازی کنید؟ این عملکرد غیر قابل بازگشت است.</string>
+    <string name="emptyWhitelistTextViewText">لیست سفید خالی است</string>
+    <string name="report_dialog_title">نوع گزارش</string>
+    <string name="reportTypeMissedAd">تبلیغ رَد شده یا ردیاب</string>
+    <string name="reportTypeIncorrectBlocking">مسدودسازی اشتباه</string>
+    <string name="reportTypeBugReport">گزارش مشکل</string>
+    <string name="reportTypeFeatureRequest">درخواست ویژگی</string>
+    <string name="reportTypeCustom">سایر</string>
+    <string name="too_many_filters_warning">شما اشتراک های بسیاری را انتخاب کرده اید.این میتواند بطور اثرگذاری وبگردی شما را آهسته کند.</string>
 </resources>

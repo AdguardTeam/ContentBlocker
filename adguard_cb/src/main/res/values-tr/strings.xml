@@ -45,7 +45,6 @@
     <string name="githubLabelText">Kaynak kod</string>
     <string name="copyrightMessage">AdGuard İçerik Engelleyicisi ücretsiz bir yazılımdır: GNU Genel Kamu Lisansı\'nın sürüm 3 veya (isteğe bağlı olarak) herhangi bir sonraki sürümde yayımlanan GNU Genel Kamu Lisansı koşulları altında yeniden dağıtabilir ve / veya değiştirebilirsiniz.</string>
     <string name="warning">Uyarı</string>
-    <string name="too_many_filters_warning">Çok fazla filtre seçtiniz. Çok fazla filtre seçmek gezinme hızınızı önemli derecede yavaşlatabilir.</string>
     <string name="onboarding_title1">Hoşgeldiniz!</string>
     <string name="onboarding_text1">Reklamsız, hızlı ve temiz internetten sadece birkaç adım uzaklıktasınız.</string>
     <string name="onboarding_button_text1">Başlangıç</string>
@@ -85,4 +84,5 @@
     <string name="learn_more">Göster bakalım!</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Gizlilik Sözleşmesi</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="too_many_filters_warning">Çok fazla filtre seçtiniz. Çok fazla filtre seçmek gezinme hızınızı önemli derecede yavaşlatabilir.</string>
 </resources>

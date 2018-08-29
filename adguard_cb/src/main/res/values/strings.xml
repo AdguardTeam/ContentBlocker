@@ -85,19 +85,15 @@
     <string name="learn_more">Learn More</string>
     <string name="privacyPolicyLinkText">Privacy Policy</string>
     <string name="eulaLinkText">EULA</string>
-
     <string name="delete">Delete</string>
     <string name="confirmClearUserFilterMessage">Are you sure you want to clear the user filter? This operation cannot be undone.</string>
     <string name="confirmRemoveUserRuleMessage">Are you sure you want to delete this rule? This operation cannot be undone.</string>
-
     <string name="clear_filters_cache_title">Clear the filter cache</string>
-    <string name="clear_filters_cache_summary">Clears the filter cache and updates filters</string>
-    <string name="clear_filters_cache_progress_message">Clearing the cache and updating the filters</string>
-
+    <string name="clear_filters_cache_summary">Clears filters cache and updates the filters</string>
+    <string name="clear_filters_cache_progress_message">Clearing cache and updating filters</string>
     <string name="whitelist_title">Whitelist</string>
     <string name="addToWhitelistButtonText">Add website</string>
     <string name="clearWhitelistButtonText">Remove all</string>
-
     <string name="whitelistNewItemDialogTitle">Enter domain name</string>
     <string name="whitelistNewItemErrorMessage">The domain name is not valid</string>
     <string name="whitelistNewItemExistsErrorMessage">This domain is already in the whitelist</string>
@@ -105,7 +101,6 @@
     <string name="confirmClearWhitelistMessage">Are you sure you want to clear the whitelist? This operation cannot be undone.</string>
     <string name="confirmRemoveWhitelistDomainMessage">Are you sure you want to delete this domain? This operation cannot be undone.</string>
     <string name="emptyWhitelistTextViewText">The whitelist is empty</string>
-
     <string name="list_bullet" translatable="false">•</string>
     <string name="userRuleNewItemDialogHint" translatable="false">||example.com^$third-party</string>
     <string name="github" translatable="false">GitHub</string>
@@ -121,11 +116,11 @@
     <string name="githubLink" translatable="false">github.com</string>
     <string name="adguardComLink" translatable="false">adguard.com</string>
     <string name="forumAdguardComLink" translatable="false">forum.adguard.com</string>
-
     <string name="report_dialog_title">Report type</string>
     <string name="reportTypeMissedAd">Missed Ad or tracker</string>
     <string name="reportTypeIncorrectBlocking">Incorrect blocking</string>
     <string name="reportTypeBugReport">Bug report</string>
     <string name="reportTypeFeatureRequest">Feature request</string>
     <string name="reportTypeCustom">Other</string>
+    <string name="too_many_filters_warning">You have selected too many filter subscriptions. This might slow down your web browsing significantly.</string>
 </resources>

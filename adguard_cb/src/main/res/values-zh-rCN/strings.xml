@@ -45,7 +45,6 @@
     <string name="githubLabelText">源码</string>
     <string name="copyrightMessage">AdGuard Content Blocker 为免费软件：您可在遵守由自由软件基金会发布的 GUN 通用公共许可 v3 或更新版本的条款下重新分布或修改它。</string>
     <string name="warning">警告</string>
-    <string name="too_many_filters_warning">您选定的过滤器订阅过多。它会显著降低您的网络浏览速度。</string>
     <string name="onboarding_title1">欢迎！</string>
     <string name="onboarding_text1">你仅需几步便可远离广告，快速浏览干净的因特网。</string>
     <string name="onboarding_button_text1">入门</string>
@@ -85,4 +84,5 @@
     <string name="learn_more">了解更多</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">隐私策略</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">最终用户许可协议</a></string>
+    <string name="too_many_filters_warning">您选定的过滤器订阅过多。它会显著降低您的网络浏览速度。</string>
 </resources>

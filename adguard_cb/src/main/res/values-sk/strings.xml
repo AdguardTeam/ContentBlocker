@@ -82,8 +82,28 @@
     <string name="description_about_other_adguard_product">Vedeli ste, že AdGuard môžete používať na ľubovoľnom zariadení, počítači a operačnom systéme? Viac o tom na našej webovej stránke.</string>
     <string name="no_thanks">Nie, ďakujem</string>
     <string name="learn_more">Dozvedieť sa viac</string>
-    <string name="privacyPolicyLinkText">"<a href="http://www.adguard.com/privacy.html">Pravidlá ochrany súkromia</a>
- "</string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="privacyPolicyLinkText">Pravidlá ochrany súkromia</string>
+    <string name="eulaLinkText">EULA</string>
+    <string name="delete">Vymazať</string>
+    <string name="confirmClearUserFilterMessage">Naozaj chcete vyčistiť používateľský filter? Táto operácia sa nedá vrátiť späť.</string>
+    <string name="confirmRemoveUserRuleMessage">Naozaj chcete vymazať toto pravidlo? Táto operácia sa nedá vrátiť späť.</string>
+    <string name="clear_filters_cache_title">Vymazať cache pamäť filtra</string>
+    <string name="clear_filters_cache_summary">Vyčistí cache pamäť filtrov a aktualizuje ich</string>
+    <string name="clear_filters_cache_progress_message">Čistenie cache pamäte a aktualizácia filtrov</string>
+    <string name="whitelist_title">Biela listina</string>
+    <string name="addToWhitelistButtonText">Pridať webovú stránku</string>
+    <string name="clearWhitelistButtonText">Odstrániť všetko</string>
+    <string name="whitelistNewItemDialogTitle">Zadajte meno domény</string>
+    <string name="whitelistNewItemErrorMessage">Toto meno domény nie je platné</string>
+    <string name="whitelistNewItemExistsErrorMessage">Táto doména už je na bielej listine</string>
+    <string name="confirmClearWhitelistMessage">Naozaj chcete vyčistiť bielu listinu? Táto operácia sa nedá vrátiť späť.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">Naozaj chcete vymazať túto doménu? Táto operácia sa nedá vrátiť späť.</string>
+    <string name="emptyWhitelistTextViewText">Biela listina je prázdna</string>
+    <string name="report_dialog_title">Typ správy</string>
+    <string name="reportTypeMissedAd">Vynechaná reklama alebo sledovač</string>
+    <string name="reportTypeIncorrectBlocking">Nesprávne blokovanie</string>
+    <string name="reportTypeBugReport">Hlásenie chyby</string>
+    <string name="reportTypeFeatureRequest">Požiadavka na funkciu</string>
+    <string name="reportTypeCustom">Iné</string>
     <string name="too_many_filters_warning">Zvolili ste príliš veľa filtrov. To môže výrazne spomaliť Vaše prehliadanie internetových stránok.</string>
 </resources>

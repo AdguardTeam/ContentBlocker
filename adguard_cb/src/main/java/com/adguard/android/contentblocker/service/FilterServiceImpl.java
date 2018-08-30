@@ -379,7 +379,7 @@ public class FilterServiceImpl implements FilterService {
                 /**
                  * Add these rules, because the yandex browser does not support the $ document modifier
                  */
-                rules.add(String.format("@@http*$domain=%s", whitelistRule);
+                rules.add(String.format("@@http*$domain=%s", whitelistRule));
                 rules.add(String.format("@@||%s^$elemhide", whitelistRule));
             }
         }

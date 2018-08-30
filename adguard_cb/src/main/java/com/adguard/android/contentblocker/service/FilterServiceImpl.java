@@ -377,8 +377,9 @@ public class FilterServiceImpl implements FilterService {
                 rules.add(createWhiteListRule(whitelistRule));
 
                 /**
-                 * Add these rules, because the yandex browser does not support the $ document modifier
+                 * Add these rules, because the Ya Browser does not support the $document modifier
                  */
+                // TODO Should remove this after the Ya Browser browser add support $document modifier
                 rules.add(String.format("@@http*$domain=%s", whitelistRule));
                 rules.add(String.format("@@||%s^$elemhide", whitelistRule));
             }

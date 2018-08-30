@@ -375,6 +375,13 @@ public class FilterServiceImpl implements FilterService {
         for (String whitelistRule : whitelistRules) {
             if (!disabledWhitelistRules.contains(whitelistRule)) {
                 rules.add(createWhiteListRule(whitelistRule));
+
+                /**
+                 * Add these rules, because the Ya Browser does not support the $document modifier
+                 */
+                // TODO Should remove this after the Ya Browser browser add support $document modifier
+                rules.add(String.format("@@http*$domain=%s", whitelistRule));
+                rules.add(String.format("@@||%s^$elemhide", whitelistRule));
             }
         }
 
@@ -402,7 +409,7 @@ public class FilterServiceImpl implements FilterService {
      * @return Url filter rule text
      */
     private String createWhiteListRule(String domain) {
-        return "@@||{0}^$document".replace("{0}", domain);
+        return "@@{0}^$document".replace("{0}", domain);
     }
 
     /**

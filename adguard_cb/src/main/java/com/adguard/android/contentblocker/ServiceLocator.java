@@ -52,11 +52,15 @@ public class ServiceLocator {
      * @return ServiceLocator instance
      */
     public synchronized static ServiceLocator getInstance(Context context) {
-        ServiceLocator instance = locators.get(context.getApplicationContext());
+        Context applicationContext = context.getApplicationContext();
+        if (applicationContext == null) {
+            applicationContext = context;
+        }
+        ServiceLocator instance = locators.get(applicationContext);
 
         if (instance == null) {
-            instance = new ServiceLocator(context);
-            locators.put(context, instance);
+            instance = new ServiceLocator(applicationContext);
+            locators.put(applicationContext, instance);
         }
 
         return instance;

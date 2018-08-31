@@ -321,7 +321,7 @@ public class FilterServiceImpl implements FilterService {
         if (StringUtils.isBlank(whiteList)) {
             whiteList = item;
         } else {
-            whiteList = "\n" + item;
+            whiteList += "\n" + item;
         }
         setWhiteList(whiteList);
     }

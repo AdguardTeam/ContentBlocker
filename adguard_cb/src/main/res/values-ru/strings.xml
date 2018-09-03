@@ -77,7 +77,7 @@
     <string name="importUserRulesDialogTitle">Введите URL или путь к файлу</string>
     <string name="importUserRulesUrlErrorMessage">Недопустимый URL-адрес</string>
     <string name="clearUserRulesButtonText">Удалить все</string>
-    <string name="browseButtonText">Просмотреть</string>
+    <string name="browseButtonText">Обзор</string>
     <string name="reportBug">Сообщить об ошибке</string>
     <string name="description_about_other_adguard_product">Вы знаете, что Вы можете использовать AdGuard на любом устройстве, компьютере и операционной системе? Узнайте больше на нашем вебсайте.</string>
     <string name="no_thanks">Нет, спасибо</string>
@@ -106,4 +106,5 @@
     <string name="reportTypeFeatureRequest">Предложение</string>
     <string name="reportTypeCustom">Другое</string>
     <string name="too_many_filters_warning">Вы выбрали слишком много подписок на фильтры. Это может значительно замедлить работу браузера.</string>
+    <string name="overwrite_existing_rules">Перезаписать существующие правила</string>
 </resources>

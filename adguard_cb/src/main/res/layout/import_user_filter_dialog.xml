@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme">
+
+    <EditText
+        android:id="@+id/newItemTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="@dimen/inputSectionMarginTop"
+        android:background="@android:color/transparent"
+        android:cursorVisible="true"
+        android:inputType="textNoSuggestions|textUri"
+        android:padding="5dp"
+        android:textColor="@color/common_text"
+        android:textCursorDrawable="@null" />
+
+    <CheckBox
+        android:id="@+id/overwriteCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="15dp"
+        android:checked="true"
+        android:text="@string/overwrite_existing_rules"
+        android:textColor="@color/common_text" />
+</LinearLayout>

@@ -16,19 +16,25 @@
  */
 package com.adguard.android.contentblocker.commons.web;
 
+import com.adguard.android.contentblocker.commons.io.IoUtils;
+
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.input.CountingInputStream;
+import org.apache.commons.io.output.StringBuilderWriter;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.Proxy;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 /**
@@ -39,6 +45,8 @@ public class UrlUtils {
     private final static Logger LOG = LoggerFactory.getLogger(UrlUtils.class);
     private final static int DEFAULT_READ_TIMEOUT = 10000; // 10 seconds
     private final static int DEFAULT_SOCKET_TIMEOUT = 10000; // 10 seconds
+    private final static String USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36";
+    private static final int READ_BUFFER_SIZE = 4096;
 
     /**
      * Tries to url encode specified text (using utf-8 encoding).
@@ -64,7 +72,19 @@ public class UrlUtils {
      */
     @SuppressWarnings("UnusedDeclaration")
     public static String downloadString(String url) throws MalformedURLException {
-        return downloadString(new URL(url));
+        return downloadString(url, DEFAULT_READ_TIMEOUT, DEFAULT_SOCKET_TIMEOUT);
+    }
+
+    /**
+     * Downloads string from the specified url
+     *
+     * @param url Url
+     * @param limit response size limit in bytes
+     * @return Response
+     */
+    @SuppressWarnings("UnusedDeclaration")
+    public static String downloadString(String url, long limit) throws MalformedURLException {
+        return downloadString(new URL(url), null, DEFAULT_READ_TIMEOUT, DEFAULT_SOCKET_TIMEOUT, "utf-8", limit);
     }
 
     /**
@@ -77,41 +97,7 @@ public class UrlUtils {
      * @throws MalformedURLException
      */
     public static String downloadString(String url, int readTimeout, int connectionTimeout) throws MalformedURLException {
-        return downloadString(new URL(url), null, readTimeout, connectionTimeout, "utf-8");
-    }
-
-    /**
-     * Tries to download from the specified url for triesCount times
-     *
-     * @param url        Url
-     * @param triesCount Tries count
-     * @return Repsponse
-     */
-    public static String downloadString(String url, int triesCount) throws MalformedURLException {
-        return downloadString(new URL(url), null, DEFAULT_READ_TIMEOUT, DEFAULT_SOCKET_TIMEOUT, "utf-8", triesCount);
-    }
-
-    /**
-     * Downloads content from the specified url.
-     * Returns null if there's an error.
-     *
-     * @param url url
-     * @return downloaded string
-     */
-    public static String downloadString(URL url) {
-        return downloadString(url, null, DEFAULT_READ_TIMEOUT, DEFAULT_SOCKET_TIMEOUT, "utf-8");
-    }
-
-    /**
-     * Downloads content from the specified url using specified proxy (or do not using it).
-     * Returns null if there's an error.
-     *
-     * @param url   url
-     * @param proxy proxy to use
-     */
-    @SuppressWarnings("UnusedDeclaration")
-    public static String downloadString(URL url, Proxy proxy) {
-        return downloadString(url, proxy, DEFAULT_READ_TIMEOUT, DEFAULT_SOCKET_TIMEOUT, "utf-8");
+        return downloadString(new URL(url), null, readTimeout, connectionTimeout, "utf-8", -1);
     }
 
     /**
@@ -122,17 +108,19 @@ public class UrlUtils {
      * @param proxy         proxy to use
      * @param readTimeout   read timeout
      * @param socketTimeout connection timeout
+     * @param limit         response size limit in bytes
      * @return Downloaded string
      */
-    public static String downloadString(URL url, Proxy proxy, int readTimeout, int socketTimeout, String encoding) {
+    public static String downloadString(URL url, Proxy proxy, int readTimeout, int socketTimeout, String encoding, long limit) {
         HttpURLConnection connection = null;
         InputStream inputStream = null;
 
         try {
             connection = (HttpURLConnection) (proxy == null ? url.openConnection() : url.openConnection(proxy));
-            connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36");
+            connection.setRequestProperty("User-Agent", USER_AGENT);
             connection.setReadTimeout(readTimeout);
             connection.setConnectTimeout(socketTimeout);
+            connection.setRequestProperty("Accept-Encoding", "gzip");
             connection.connect();
             if (connection.getResponseCode() >= 400) {
                 throw new IOException("Response status is " + connection.getResponseCode());
@@ -142,15 +130,32 @@ public class UrlUtils {
                 String location = connection.getHeaderField("Location");
                 // HttpURLConnection does not follow redirects from HTTP to HTTPS
                 // So we handle it manually
-                return downloadString(new URL(location), proxy, readTimeout, socketTimeout, encoding);
+                return downloadString(new URL(location), proxy, readTimeout, socketTimeout, encoding, limit);
             }
 
             if (connection.getResponseCode() == 204) {
                 return StringUtils.EMPTY;
             }
 
-            inputStream = connection.getInputStream();
-            return IOUtils.toString(inputStream, encoding);
+            CountingInputStream countingInputStream = new CountingInputStream(connection.getInputStream());
+            inputStream = countingInputStream;
+
+            if ("gzip".equals(connection.getHeaderField("Content-Encoding"))) {
+                inputStream = new GZIPInputStream(inputStream);
+            }
+
+            StringBuilderWriter stringBuilderWriter = new StringBuilderWriter();
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream, encoding);
+            char[] buffer = new char[READ_BUFFER_SIZE];
+            int readBytes;
+            while((readBytes = inputStreamReader.read(buffer)) != -1) {
+                if (limit != -1 && countingInputStream.getByteCount() > limit) {
+                    throw new IOException("The response exceeded the limit of " + limit + " bytes");
+                }
+                stringBuilderWriter.write(buffer, 0, readBytes);
+            }
+
+            return stringBuilderWriter.toString();
         } catch (IOException ex) {
             if (LOG.isDebugEnabled()) {
                 LOG.warn("Error downloading string from {}:\r\n", url, ex);
@@ -160,92 +165,11 @@ public class UrlUtils {
             // Ignoring exception
             return null;
         } finally {
-            IOUtils.closeQuietly(inputStream);
+            IoUtils.closeQuietly(inputStream);
             if (connection != null) {
                 connection.disconnect();
             }
         }
-    }
-
-    /**
-     * Downloads content from the specified url using specified proxy (or do not using it) and timeouts.
-     * Returns null if there's an error.
-     *
-     * @param url           url
-     * @param proxy         proxy to use
-     * @param readTimeout   read timeout
-     * @param socketTimeout connection timeout
-     * @return Downloaded string
-     */
-    public static String downloadString(URL url, Proxy proxy, int readTimeout, int socketTimeout, String encoding, int triesCount) {
-        IOException lastException = null;
-
-        for (int i = 0; i < triesCount; i++) {
-            lastException = null;
-            HttpURLConnection connection = null;
-            InputStream inputStream = null;
-
-            try {
-                connection = (HttpURLConnection) (proxy == null ? url.openConnection() : url.openConnection(proxy));
-                connection.setReadTimeout(readTimeout);
-                connection.setConnectTimeout(socketTimeout);
-                connection.connect();
-                inputStream = connection.getInputStream();
-                return IOUtils.toString(inputStream, encoding);
-            } catch (IOException ex) {
-                if (LOG.isDebugEnabled()) {
-                    LOG.warn("Error downloading string from {}. Try number: {}. Cause:\r\n", url, triesCount, ex);
-                } else {
-                    LOG.warn("Error downloading string from {}. Try number: {}. Cause:{}", url, triesCount, ex.getMessage());
-                }
-                lastException = ex;
-            } finally {
-                IOUtils.closeQuietly(inputStream);
-                if (connection != null) {
-                    connection.disconnect();
-                }
-            }
-        }
-
-        if (lastException != null) {
-            LOG.error("Could not download string from url: " + url, lastException);
-        }
-
-        return null;
-    }
-
-    /**
-     * Sends a post request
-     *
-     * @param url           url
-     * @param postData      data to post
-     * @param encoding      response encoding
-     * @param contentType   content type
-     * @param readTimeout   socket read timeout
-     * @param socketTimeout socket connect timeout
-     * @return downloaded string
-     */
-    public static String postRequest(String url, String postData, String encoding, String contentType, int readTimeout, int socketTimeout) {
-
-        try {
-            return postRequest(new URL(url), postData, encoding, contentType, readTimeout, socketTimeout);
-        } catch (MalformedURLException ex) {
-            LOG.error("Error posting request to {}, post data length={}", url, StringUtils.length(postData), ex);
-            return null;
-        }
-    }
-
-    /**
-     * Sends a post request
-     *
-     * @param url         url
-     * @param postData    data to post
-     * @param encoding    response encoding
-     * @param contentType content type
-     * @return downloaded string
-     */
-    public static String postRequest(URL url, String postData, String encoding, String contentType) {
-        return postRequest(url, postData, encoding, contentType, DEFAULT_READ_TIMEOUT, DEFAULT_SOCKET_TIMEOUT);
     }
 
     /**

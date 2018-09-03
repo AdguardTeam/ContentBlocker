@@ -84,5 +84,26 @@
     <string name="learn_more">Даведацца больш</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Палітыка прыватнасці</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">Пагадненне</a></string>
+    <string name="delete">Выдаліць</string>
+    <string name="confirmClearUserFilterMessage">Вы ўпэўнены што хочаце ачысціць уласны фільтр? Дадзеную аперацыю няможна скасаваць.</string>
+    <string name="confirmRemoveUserRuleMessage">Вы ўпэўнены, што хочаце выдаліць гэта правіла? Дадзеную аперацыю няможна скасаваць.</string>
+    <string name="clear_filters_cache_title">Ачысціць кэш фільтраў</string>
+    <string name="clear_filters_cache_summary">Чысціць кэш фільтраў і абнаўляе фільтры</string>
+    <string name="clear_filters_cache_progress_message">Ачыстка кэша і абнаўленне фільтраў</string>
+    <string name="whitelist_title">Белы спіс</string>
+    <string name="addToWhitelistButtonText">Дадаць сайт</string>
+    <string name="clearWhitelistButtonText">Выдаліць усё</string>
+    <string name="whitelistNewItemDialogTitle">Увядзіце сайт</string>
+    <string name="whitelistNewItemErrorMessage">Няслушны фармат</string>
+    <string name="whitelistNewItemExistsErrorMessage">Сайт ужо ёсць у белым спісе</string>
+    <string name="confirmClearWhitelistMessage">Вы ўпэўнены што хочаце ачысціць уласны фільтр? Дадзеную аперацыю няможна скасаваць.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">Вы ўпэўнены, што хочаце выдаліць гэты сайт? Дадзеную аперацыю няможна скасаваць.</string>
+    <string name="emptyWhitelistTextViewText">Белы спіс пусты</string>
+    <string name="report_dialog_title">Тып паведамлення</string>
+    <string name="reportTypeMissedAd">Прапушчаная аб\'ява ці трэкер</string>
+    <string name="reportTypeIncorrectBlocking">Некарэктнае блакаванне</string>
+    <string name="reportTypeBugReport">Дэфект</string>
+    <string name="reportTypeFeatureRequest">Прапанова</string>
+    <string name="reportTypeCustom">Іншае</string>
     <string name="too_many_filters_warning">Вы абралі зашмат падпісак на фільтры. Гэта можа значна запаволіць працу вашага вэб-браўзара.</string>
 </resources>

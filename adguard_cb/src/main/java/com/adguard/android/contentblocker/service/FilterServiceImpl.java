@@ -35,6 +35,7 @@ import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ServiceApiClient;
 import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.commons.StringHelperUtils;
+import com.adguard.android.contentblocker.commons.TextStatistics;
 import com.adguard.android.contentblocker.commons.concurrent.DispatcherThreadPool;
 import com.adguard.android.contentblocker.commons.io.IoUtils;
 import com.adguard.android.contentblocker.commons.network.InternetUtils;
@@ -53,6 +54,7 @@ import org.apache.commons.collections4.IterableUtils;
 import org.apache.commons.collections4.Predicate;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.input.BOMInputStream;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -69,6 +71,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import static org.apache.commons.io.ByteOrderMark.UTF_16BE;
+import static org.apache.commons.io.ByteOrderMark.UTF_16LE;
+import static org.apache.commons.io.ByteOrderMark.UTF_32BE;
+import static org.apache.commons.io.ByteOrderMark.UTF_32LE;
+import static org.apache.commons.io.ByteOrderMark.UTF_8;
 
 /**
  * Filter service implementation.
@@ -216,11 +224,11 @@ public class FilterServiceImpl implements FilterService {
     }
 
     @Override
-    public void importUserRulesFromUrl(Activity activity, String url) {
+    public void importUserRulesFromUrl(Activity activity, String url, boolean overwrite) {
         LOG.info("Start import user rules from {}", url);
 
         ProgressDialog progressDialog = ProgressDialogUtils.showProgressDialog(activity, R.string.importUserRulesProgressDialogTitle, R.string.importUserRulesProgressDialogMessage);
-        DispatcherThreadPool.getInstance().submit(new ImportUserRulesTask(activity, progressDialog, url));
+        DispatcherThreadPool.getInstance().submit(new ImportUserRulesTask(activity, progressDialog, url, overwrite));
         LOG.info("Submitted import user rules task");
     }
 
@@ -570,15 +578,17 @@ public class FilterServiceImpl implements FilterService {
      */
     private class ImportUserRulesTask extends LongRunningTask {
 
-        private Activity activity;
-        private String url;
+        private final Activity activity;
+        private final String url;
+        private final boolean overwrite;
 
         private OnImportListener onImportListener;
 
-        ImportUserRulesTask(Activity activity, ProgressDialog progressDialog, String url) {
+        ImportUserRulesTask(Activity activity, ProgressDialog progressDialog, String url, boolean overwrite) {
             super(progressDialog);
             this.activity = activity;
             this.url = url;
+            this.overwrite = overwrite;
 
             if (activity instanceof OnImportListener) {
                 onImportListener = (OnImportListener) activity;
@@ -586,27 +596,55 @@ public class FilterServiceImpl implements FilterService {
         }
 
         @Override
-        protected void processTask() throws Exception {
+        protected void processTask() {
             LOG.info("Downloading user rules from {}", url);
-            if (url.startsWith("content://")) {
-                InputStream inputStream = null;
-                try {
-                    ContentResolver contentResolver = activity.getContentResolver();
-                    inputStream = contentResolver.openInputStream(Uri.parse(url));
-                    if (inputStream != null) {
-                        String buf = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
-                        importRules(buf);
-                    }
-                } finally {
-                    IOUtils.closeQuietly(inputStream);
+            InputStream inputStream = null;
+            BOMInputStream bomInputStream = null;
+            try {
+                inputStream = IoUtils.getInputStreamFromUrl(context, url);
+                if (isTextPlain(inputStream)) {
+                    bomInputStream = new BOMInputStream(inputStream, UTF_8, UTF_16BE, UTF_16LE, UTF_32BE, UTF_32LE);
+                    importRules(IOUtils.toString(bomInputStream, "utf-8"));
+                } else {
+                    notificationService.showToast(R.string.importUserRulesErrorResultMessage);
                 }
-                return;
+            } catch (IOException e) {
+                LOG.error("Error downloading user rules from {}", url, e);
+                notificationService.showToast(R.string.importUserRulesErrorResultMessage);
+            } finally {
+                IoUtils.closeQuietly(bomInputStream);
+                IoUtils.closeQuietly(inputStream);
+            }
+        }
+
+        /**
+         * Checks that the input stream contains text
+         *
+         * @param inputStream Input stream
+         * @return true if input stream contains the text otherwise false
+         */
+        private boolean isTextPlain(InputStream inputStream) throws IOException {
+            if (inputStream == null) {
+                return false;
             }
 
-            String file = loadFromFile(url);
-            final String download = file != null ? file : UrlUtils.downloadString(url);
-            importRules(download);
+            try {
+                byte[] buffer = new byte[512];
+                inputStream.mark(buffer.length);
+                int read = inputStream.read(buffer);
+                if (read != -1) {
+                    TextStatistics textStatistics = new TextStatistics();
+                    textStatistics.addData(buffer, 0, read);
+
+                    return textStatistics.isMostlyAscii() || textStatistics.looksLikeUTF8();
+                }
+            } finally {
+                inputStream.reset();
+            }
+
+            return false;
         }
+
 
         private void importRules(String download) {
             final String[] rules = StringUtils.split(download, "\n");
@@ -633,10 +671,15 @@ public class FilterServiceImpl implements FilterService {
                 return;
             }
 
-            preferencesService.setUserRuleItems(StringUtils.join(rulesList, "\n"));
+            String newRules = StringUtils.join(rulesList, "\n");
+            if (!overwrite) {
+                newRules = preferencesService.getUserRules() + "\n" + newRules;
+            }
+
+            preferencesService.setUserRuleItems(newRules);
             LOG.info("User rules added successfully.");
 
-            ServiceLocator.getInstance(activity.getApplicationContext()).getFilterService().applyNewSettings();
+            applyNewSettings();
 
             String message = activity.getString(R.string.importUserRulesSuccessResultMessage).replace("{0}", String.valueOf(rulesList.size()));
             notificationService.showToast(message);
@@ -654,17 +697,6 @@ public class FilterServiceImpl implements FilterService {
         private void onError() {
             String message = activity.getString(R.string.importUserRulesErrorResultMessage);
             notificationService.showToast(message);
-        }
-
-        private String loadFromFile(String url) throws Exception {
-            File f = new File(url);
-            if (f.exists() && f.isFile() && f.canRead()) {
-                FileInputStream fis = new FileInputStream(f);
-                byte[] buf = IoUtils.readToEnd(fis);
-                IOUtils.closeQuietly(fis);
-                return new String(buf);
-            }
-            return null;
         }
     }
 

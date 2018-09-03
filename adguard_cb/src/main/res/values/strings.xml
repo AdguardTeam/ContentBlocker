@@ -123,4 +123,5 @@
     <string name="reportTypeFeatureRequest">Feature request</string>
     <string name="reportTypeCustom">Other</string>
     <string name="too_many_filters_warning">You have selected too many filter subscriptions. This might slow down your web browsing significantly.</string>
+    <string name="overwrite_existing_rules">Overwrite existing rules</string>
 </resources>

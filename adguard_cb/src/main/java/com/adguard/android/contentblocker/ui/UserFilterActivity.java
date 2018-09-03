@@ -36,12 +36,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.R;
+import com.adguard.android.contentblocker.service.NotificationService;
 import com.adguard.android.contentblocker.ui.utils.AlertDialogUtils;
 import com.adguard.android.contentblocker.ui.utils.ApplyAndRefreshTask;
 import com.adguard.android.contentblocker.ui.utils.FilterRulesAdapter;
@@ -62,6 +64,8 @@ public class UserFilterActivity extends AppCompatActivity implements FilterServi
     private FilterService filterService;
     private FilterRulesAdapter userFilterAdapter;
     private FloatingActionButton addUserRuleFloatingButton;
+
+    private boolean overwriteRules = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -155,7 +159,7 @@ public class UserFilterActivity extends AppCompatActivity implements FilterServi
         if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             if (data != null && data.getData() != null) {
                 Uri uri = data.getData();
-                ServiceLocator.getInstance(this).getFilterService().importUserRulesFromUrl(this, uri.toString());
+                filterService.importUserRulesFromUrl(this, uri.toString(), overwriteRules);
                 return;
             }
         }
@@ -242,8 +246,9 @@ public class UserFilterActivity extends AppCompatActivity implements FilterServi
 
     @SuppressLint("InflateParams")
     private void showImportDialog() {
-        final View dialogLayout = getLayoutInflater().inflate(R.layout.new_item_dialog, null);
+        final View dialogLayout = getLayoutInflater().inflate(R.layout.import_user_filter_dialog, null);
         final EditText view = dialogLayout.findViewById(R.id.newItemTextView);
+        final CheckBox overwriteView = dialogLayout.findViewById(R.id.overwriteCheckBox);
 
         final PreferencesService preferencesService = ServiceLocator.getInstance(this).getPreferencesService();
         final String lastImportUrl = preferencesService.getLastImportUrl();
@@ -258,7 +263,8 @@ public class UserFilterActivity extends AppCompatActivity implements FilterServi
 
                 final String url = text.toString();
                 if (isReadableFile(url) || validateUrl(url)) {
-                    ServiceLocator.getInstance(UserFilterActivity.this).getFilterService().importUserRulesFromUrl(UserFilterActivity.this, url);
+                    overwriteRules = overwriteView.isChecked();
+                    filterService.importUserRulesFromUrl(UserFilterActivity.this, url, overwriteRules);
                     preferencesService.setLastImportUrl(url);
                     text.clear();
                     dialog.dismiss();
@@ -277,27 +283,30 @@ public class UserFilterActivity extends AppCompatActivity implements FilterServi
             }
         };
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AlertDialog)
+        DialogInterface.OnClickListener browseListener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                try {
+                    Intent intent = new Intent();
+                    intent.setType("*/*");
+                    intent.setAction(Intent.ACTION_OPEN_DOCUMENT);
+                    intent.addCategory(Intent.CATEGORY_OPENABLE);
+                    startActivityForResult(intent, REQUEST_CODE);
+                } catch (ActivityNotFoundException e) {
+                    NotificationService notificationService = ServiceLocator.getInstance(getApplicationContext()).getNotificationService();
+                    notificationService.showToast(R.string.progressGenericErrorText);
+                }
+            }
+        };
+
+        new AlertDialog.Builder(this, R.style.AlertDialog)
                 .setTitle(R.string.importUserRulesDialogTitle)
                 .setView(dialogLayout)
                 .setCancelable(true)
                 .setPositiveButton(R.string.ok, okListener)
                 .setNegativeButton(R.string.cancel, null)
-                .setNeutralButton(R.string.browseButtonText, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        try {
-                            Intent intent = new Intent();
-                            intent.setType("*/*");
-                            intent.setAction(Intent.ACTION_OPEN_DOCUMENT);
-                            intent.addCategory(Intent.CATEGORY_OPENABLE);
-                            startActivityForResult(intent, REQUEST_CODE);
-                        } catch (ActivityNotFoundException e) {
-                            Toast.makeText(getApplicationContext(), R.string.progressGenericErrorText, Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
-        builder.show();
+                .setNeutralButton(R.string.browseButtonText, browseListener)
+                .show();
     }
 
     private void updateFloatingButton() {

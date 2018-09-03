@@ -87,8 +87,9 @@ public interface FilterService {
      * Downloads and adds batch of user rules from specified url.
      *
      * @param url url
+     * @param overwrite True if we should overwrite existing rules
      */
-    void importUserRulesFromUrl(Activity activity, String url);
+    void importUserRulesFromUrl(Activity activity, String url, boolean overwrite);
 
     /**
      * @return list of all enabled rules

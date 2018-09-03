@@ -82,7 +82,28 @@
     <string name="description_about_other_adguard_product">Sabe que pode usar o AdGuard em qualquer dispositivo, computador e sistema operacional OS? Saiba mais no nosso site.</string>
     <string name="no_thanks">Não, Obrigado</string>
     <string name="learn_more">Saber Mais</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Política de Privacidade</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="privacyPolicyLinkText">Política de Privacidade</string>
+    <string name="eulaLinkText">EULA</string>
+    <string name="delete">Apagar</string>
+    <string name="confirmClearUserFilterMessage">Tem a certeza de que deseja limpar o filtro do utilizador? Esta operação não pode ser anulada.</string>
+    <string name="confirmRemoveUserRuleMessage">Tem a certeza de que deseja excluir esta regra? Esta operação não pode ser anulada.</string>
+    <string name="clear_filters_cache_title">Limpar cache do filtro</string>
+    <string name="clear_filters_cache_summary">Limpa o cache de filtro e actualiza os filtros</string>
+    <string name="clear_filters_cache_progress_message">A limpar o cache e a atualizar filtros</string>
+    <string name="whitelist_title">Lista Branca</string>
+    <string name="addToWhitelistButtonText">Adicionar website</string>
+    <string name="clearWhitelistButtonText">Apagar todos</string>
+    <string name="whitelistNewItemDialogTitle">Inserir nome do domínio</string>
+    <string name="whitelistNewItemErrorMessage">O nome de domínio não é válido</string>
+    <string name="whitelistNewItemExistsErrorMessage">Este domínio já está na lista branca</string>
+    <string name="confirmClearWhitelistMessage">Tem a certeza de que deseja limpar a lista branca? Esta operação não pode ser anulada.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">Tem a certeza de que deseja excluir este domínio? Esta operação não pode ser anulada.</string>
+    <string name="emptyWhitelistTextViewText">A lista branca está vazia</string>
+    <string name="report_dialog_title">Tipo de relatório</string>
+    <string name="reportTypeMissedAd">Anúncio ou monitorizador perdido</string>
+    <string name="reportTypeIncorrectBlocking">Bloqueio incorrecto</string>
+    <string name="reportTypeBugReport">Relatório de erro</string>
+    <string name="reportTypeFeatureRequest">Solicitação de recurso</string>
+    <string name="reportTypeCustom">Outro</string>
     <string name="too_many_filters_warning">Seleccionou muitas assinaturas de filtros. Isso pode diminuir significativamente a velocidade da navegação na web.</string>
 </resources>

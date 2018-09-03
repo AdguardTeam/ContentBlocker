@@ -106,4 +106,5 @@
     <string name="reportTypeFeatureRequest">Požiadavka na funkciu</string>
     <string name="reportTypeCustom">Iné</string>
     <string name="too_many_filters_warning">Zvolili ste príliš veľa filtrov. To môže výrazne spomaliť Vaše prehliadanie internetových stránok.</string>
+    <string name="overwrite_existing_rules">Prepísať existujúce pravidlá</string>
 </resources>

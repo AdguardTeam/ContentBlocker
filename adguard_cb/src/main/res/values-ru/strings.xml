@@ -106,4 +106,5 @@
     <string name="reportTypeFeatureRequest">Предложение</string>
     <string name="reportTypeCustom">Другое</string>
     <string name="too_many_filters_warning">Вы выбрали слишком много подписок на фильтры. Это может значительно замедлить работу браузера.</string>
+    <string name="overwrite_existing_rules">Перезаписать существующие правила</string>
 </resources>

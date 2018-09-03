@@ -46,7 +46,7 @@ public class UrlUtils {
     private final static int DEFAULT_READ_TIMEOUT = 10000; // 10 seconds
     private final static int DEFAULT_SOCKET_TIMEOUT = 10000; // 10 seconds
     private final static String USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36";
-    private static final int READ_BUFFER_SIZE = 4098;
+    private static final int READ_BUFFER_SIZE = 4096;
 
     /**
      * Tries to url encode specified text (using utf-8 encoding).

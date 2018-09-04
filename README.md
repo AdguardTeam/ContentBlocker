@@ -16,7 +16,7 @@ To see the 'big picture', to watch current progress and to get an idea of approx
 
 ### Releases
 
- * Latest version: [2.1.2](https://github.com/AdguardTeam/ContentBlocker/releases/tag/v2.1.2)
+ * Latest version: [2.2.1](https://github.com/AdguardTeam/ContentBlocker/releases/tag/v2.2.1)
 
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
       alt="Get it on Google Play"

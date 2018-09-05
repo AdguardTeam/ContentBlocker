@@ -21,6 +21,9 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.adguard.android.contentblocker.ServiceLocator;
+import com.adguard.android.contentblocker.service.FilterService;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.concurrent.Executors;
 
@@ -29,14 +32,16 @@ public class AlarmReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, final Intent intent) {
-        String action = intent.getAction();
-        if (UPDATE_FILTER_ACTION.equals(action)) {
-            Executors.newSingleThreadExecutor().execute(new Runnable() {
-                @Override
-                public void run() {
-                    ServiceLocator.getInstance(context).getFilterService().tryUpdateFilters();
-                }
-            });
+        if (intent == null || !StringUtils.equalsIgnoreCase(UPDATE_FILTER_ACTION, intent.getAction())) {
+            return;
         }
+
+        final FilterService filterService = ServiceLocator.getInstance(context).getFilterService();
+        Executors.newSingleThreadExecutor().execute(new Runnable() {
+            @Override
+            public void run() {
+                filterService.tryUpdateFilters();
+            }
+        });
     }
 }

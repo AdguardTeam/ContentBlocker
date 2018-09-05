@@ -19,11 +19,22 @@ package com.adguard.android.contentblocker;
 import android.app.job.JobParameters;
 import android.app.job.JobService;
 
+import com.adguard.android.contentblocker.service.FilterService;
+
 public class FilterUpdateJobService extends JobService {
+
+    private FilterService filterService;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        filterService = ServiceLocator.getInstance(getApplicationContext()).getFilterService();
+    }
 
     @Override
     public boolean onStartJob(JobParameters jobParameters) {
-        ServiceLocator.getInstance(getApplicationContext()).getFilterService().tryUpdateFilters();
+
+        filterService.tryUpdateFilters();
         return true;
     }
 

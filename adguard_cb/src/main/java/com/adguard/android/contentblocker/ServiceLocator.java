@@ -74,7 +74,7 @@ public class ServiceLocator {
      */
     public FilterService getFilterService() {
         if (filterService == null) {
-            filterService = new FilterServiceImpl(context, dbHelper);
+            filterService = new FilterServiceImpl(context, getDbHelper());
         }
 
         return filterService;
@@ -102,6 +102,9 @@ public class ServiceLocator {
         return notificationService;
     }
 
+    /**
+     * @return Data base helper
+     */
     private DbHelper getDbHelper() {
         if (dbHelper == null) {
             dbHelper = new DbHelper(context);

@@ -52,14 +52,16 @@ public class FilterListDaoImpl implements FilterListDao {
             FILTER_LIST_TIME_LAST_DOWNLOADED,
             FILTER_LIST_DISPLAY_ORDER
     };
+
     private final Context context;
+    private final DbHelper dbHelper;
+
     private int cachedFilterCount = 0;
     private int cachedEnabledFilterCount = 0;
-    private DbHelper dbHelper;
 
-    public FilterListDaoImpl(Context context) {
+    public FilterListDaoImpl(Context context, DbHelper dbHelper) {
         this.context = context;
-        this.dbHelper = new DbHelper(context);
+        this.dbHelper = dbHelper;
     }
 
     @Override

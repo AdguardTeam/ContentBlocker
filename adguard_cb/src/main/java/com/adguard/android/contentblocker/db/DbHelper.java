@@ -46,7 +46,7 @@ public class DbHelper extends SQLiteOpenHelper {
     private final Context context;
     private final PreferenceUpgrade preferenceUpgrade;
 
-    DbHelper(Context context) {
+    public DbHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
         this.context = context;
         this.preferenceUpgrade = new PreferenceUpgrade(context);

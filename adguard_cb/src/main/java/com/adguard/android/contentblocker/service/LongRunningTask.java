@@ -57,7 +57,7 @@ public abstract class LongRunningTask implements DispatcherTask {
     protected abstract void processTask() throws Exception;
 
     @Override
-    public void execute() throws Exception {
+    public void execute() {
         try {
             LOG.info("Start task {} execution", this.getClass().getSimpleName());
             processTask();
@@ -87,6 +87,10 @@ public abstract class LongRunningTask implements DispatcherTask {
         LOG.warn("Dismissing progress dialog on error:\r\n", ex);
 
         Activity ownerActivity = progressDialog.getOwnerActivity();
+        if (ownerActivity == null) {
+            return;
+        }
+
         NotificationService notificationService = ServiceLocator.getInstance(ownerActivity).getNotificationService();
         notificationService.showToast(R.string.progressGenericErrorText);
 		ProgressDialogUtils.dismissProgressDialog(progressDialog);

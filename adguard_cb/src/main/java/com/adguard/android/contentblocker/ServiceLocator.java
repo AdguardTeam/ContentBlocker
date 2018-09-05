@@ -17,6 +17,8 @@
 package com.adguard.android.contentblocker;
 
 import android.content.Context;
+
+import com.adguard.android.contentblocker.db.DbHelper;
 import com.adguard.android.contentblocker.service.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,6 +36,7 @@ public class ServiceLocator {
     private FilterService filterService;
     private PreferencesService preferencesService;
     private NotificationService notificationService;
+    private DbHelper dbHelper;
 
     /**
      * Creates an instance of the ServiceLocator
@@ -71,7 +74,7 @@ public class ServiceLocator {
      */
     public FilterService getFilterService() {
         if (filterService == null) {
-            filterService = new FilterServiceImpl(context);
+            filterService = new FilterServiceImpl(context, dbHelper);
         }
 
         return filterService;
@@ -97,5 +100,13 @@ public class ServiceLocator {
         }
 
         return notificationService;
+    }
+
+    private DbHelper getDbHelper() {
+        if (dbHelper == null) {
+            dbHelper = new DbHelper(context);
+        }
+
+        return dbHelper;
     }
 }

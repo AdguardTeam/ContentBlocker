@@ -24,7 +24,6 @@ import android.app.ProgressDialog;
 import android.app.job.JobInfo;
 import android.app.job.JobScheduler;
 import android.content.ComponentName;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -40,7 +39,7 @@ import com.adguard.android.contentblocker.commons.concurrent.DispatcherThreadPoo
 import com.adguard.android.contentblocker.commons.io.IoUtils;
 import com.adguard.android.contentblocker.commons.network.InternetUtils;
 import com.adguard.android.contentblocker.commons.network.NetworkUtils;
-import com.adguard.android.contentblocker.commons.web.UrlUtils;
+import com.adguard.android.contentblocker.db.DbHelper;
 import com.adguard.android.contentblocker.db.FilterListDao;
 import com.adguard.android.contentblocker.db.FilterListDaoImpl;
 import com.adguard.android.contentblocker.db.FilterRuleDao;
@@ -60,10 +59,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -113,10 +110,10 @@ public class FilterServiceImpl implements FilterService {
      *
      * @param context Context
      */
-    public FilterServiceImpl(Context context) {
+    public FilterServiceImpl(Context context, DbHelper dbHelper) {
         LOG.info("Creating AdguardService instance for {}", context);
         this.context = context;
-        filterListDao = new FilterListDaoImpl(context);
+        filterListDao = new FilterListDaoImpl(context, dbHelper);
         filterRuleDao = new FilterRuleDaoImpl(context);
 
         ServiceLocator serviceLocator = ServiceLocator.getInstance(context);

@@ -17,6 +17,8 @@
 package com.adguard.android.contentblocker.db;
 
 import android.content.Context;
+import android.content.res.Resources;
+
 import org.apache.commons.collections4.list.SetUniqueList;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.ArrayUtils;
@@ -25,6 +27,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -57,11 +61,10 @@ public class FilterRuleDaoImpl implements FilterRuleDao {
 
     @Override
     public List<String> selectRuleTexts(List<Integer> filterIds, boolean useCosmetics) {
-        //noinspection unchecked
         List<String> rules = SetUniqueList.setUniqueList(new ArrayList<String>());
 
         for (int filterId : filterIds) {
-            addRules(filterId, rules, useCosmetics);
+            rules.addAll(getRules(filterId, useCosmetics));
         }
 
         return rules;
@@ -72,8 +75,9 @@ public class FilterRuleDaoImpl implements FilterRuleDao {
         try {
             String fileName = getOrCreateFilterFile(filterId);
             context.deleteFile(fileName);
-            OutputStream outputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE);
-            IOUtils.writeLines(rules, null, outputStream);
+            OutputStream outputStream = context.getApplicationContext().openFileOutput(fileName, Context.MODE_PRIVATE);
+
+            IOUtils.writeLines(rules, null, outputStream, "UTF-8");
         } catch (Exception ex) {
             log.error("Cannot insert new rules to filter {}:\r\n{}", filterId, ex);
             throw new RuntimeException("Cannot insert new rules to filter " + filterId, ex);
@@ -86,7 +90,7 @@ public class FilterRuleDaoImpl implements FilterRuleDao {
      * @param filterId Filter identifier
      * @return Filter file name
      */
-    private String getOrCreateFilterFile(int filterId) {
+    private String getOrCreateFilterFile(int filterId) throws IOException {
         String[] files = context.fileList();
         String fileName = "filter_" + filterId;
 
@@ -101,16 +105,19 @@ public class FilterRuleDaoImpl implements FilterRuleDao {
      * Adds rules from the specified filter to the list
      *
      * @param filterId Filter ID
-     * @param rules    Rules
+     *
      * @return List of rules
      */
-    private List<String> addRules(int filterId, List<String> rules, boolean useCosmetics) {
+    private List<String> getRules(int filterId, boolean useCosmetics) {
         InputStream inputStream = null;
         InputStreamReader inputStreamReader = null;
         BufferedReader reader = null;
+
+        List<String> rules = new ArrayList<>();
         try {
             String fileName = getOrCreateFilterFile(filterId);
-            inputStream = context.openFileInput(fileName);
+
+            inputStream = context.getApplicationContext().openFileInput(fileName);
             inputStreamReader = new InputStreamReader(inputStream);
             reader = new BufferedReader(inputStreamReader);
 
@@ -121,7 +128,6 @@ public class FilterRuleDaoImpl implements FilterRuleDao {
                 }
                 line = reader.readLine();
             }
-
             return rules;
         } catch (Exception ex) {
             log.error("Cannot select rules for filter {}", filterId, ex);
@@ -154,27 +160,24 @@ public class FilterRuleDaoImpl implements FilterRuleDao {
      *
      * @param fileName File name
      */
-    private void initDefaultFilterRules(String fileName) {
+    private void initDefaultFilterRules(String fileName) throws IOException {
         log.info("Initializing filter rules file {}", fileName);
 
         InputStream inputStream = null;
-        OutputStream outputStream = null;
-
+        FileOutputStream outputStream = null;
         try {
-            int id = context.getResources().getIdentifier(fileName, "raw", context.getPackageName());
-            context.deleteFile(fileName);
-            outputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE);
+            Resources resources = context.getResources();
 
+            int id = resources.getIdentifier(fileName, "raw", context.getPackageName());
             if (id > 0) {
+                context.deleteFile(fileName);
+                outputStream = context.getApplicationContext().openFileOutput(fileName, Context.MODE_PRIVATE);
+
                 log.info("Found default filter rules. Writing to the file.");
-                inputStream = context.getResources().openRawResource(id);
+                inputStream = resources.openRawResource(id);
                 IOUtils.copy(inputStream, outputStream);
             }
             log.info("Default filter has been initialized");
-        } catch (Exception ex) {
-            // TODO: Handle these exceptions -- use default filter rules
-            log.error("Cannot init default filter:\r\n{}", ex);
-            throw new RuntimeException("Cannot init default filter", ex);
         } finally {
             IOUtils.closeQuietly(inputStream);
             IOUtils.closeQuietly(outputStream);

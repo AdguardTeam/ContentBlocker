@@ -16,6 +16,8 @@
  */
 package com.adguard.android.contentblocker.commons;
 
+import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -24,12 +26,12 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 
 import com.adguard.android.contentblocker.R;
+import com.adguard.android.contentblocker.ServiceLocator;
+import com.adguard.android.contentblocker.service.NotificationService;
 import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
 import org.apache.commons.collections4.CollectionUtils;
 
@@ -45,12 +47,12 @@ public class BrowserUtils {
 
     public static final String YANDEX_BROWSER_PACKAGE = "com.yandex.browser";
     public static final String SAMSUNG_BROWSER_PACKAGE = "com.sec.android.app.sbrowser";
-    public static final String SAMSUNG_CONTENT_BLOCKER_ACTION = "com.samsung.android.sbrowser.contentBlocker.ACTION_SETTING";
-    public static final String YANDEX_CONTENT_BLOCKER_ACTION = "com.yandex.browser.contentBlocker.ACTION_SETTING";
+    private static final String SAMSUNG_CONTENT_BLOCKER_ACTION = "com.samsung.android.sbrowser.contentBlocker.ACTION_SETTING";
+    private static final String YANDEX_CONTENT_BLOCKER_ACTION = "com.yandex.browser.contentBlocker.ACTION_SETTING";
 
-    public static final String SAMSUNG_PACKAGE_PREFIX = "com.sec.";
+    private static final String SAMSUNG_PACKAGE_PREFIX = "com.sec.";
 
-    public static final String REFERRER = "adguard1";
+    private static final String REFERRER = "adguard1";
 
     private static final List<String> yandexBrowserPackageList = new ArrayList<>();
 
@@ -98,15 +100,12 @@ public class BrowserUtils {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
-            boolean found = false;
             for (ResolveInfo info : list) {
                 if (info.activityInfo.packageName.contains(SAMSUNG_PACKAGE_PREFIX) || info.activityInfo.packageName.contains(SAMSUNG)) {
-                    found = true;
                     intent.setClassName(info.activityInfo.packageName, info.activityInfo.name);
+                    startActivity(context, intent);
+                    return;
                 }
-            }
-            if (found) {
-                context.startActivity(intent);
             }
         }
     }
@@ -131,7 +130,7 @@ public class BrowserUtils {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         if (list.size() > 0) {
-            context.startActivity(intent);
+            startActivity(context, intent);
             return;
         }
 
@@ -145,7 +144,7 @@ public class BrowserUtils {
                 intent.setClassName(componentName.getPackageName(), componentName.getClassName());
             }
 
-            context.startActivity(intent);
+            startActivity(context, intent);
         }
     }
 
@@ -174,30 +173,15 @@ public class BrowserUtils {
         return false;
     }
 
+    @SuppressLint("InflateParams")
     public static void showBrowserInstallDialog(final Context context) {
-        // Touch listener for changing colors of CardViews
-        View.OnTouchListener touchListener = new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                int action = event.getActionMasked();
-                if (action == MotionEvent.ACTION_DOWN) {
-                    ((CardView) v).setCardBackgroundColor(R.color.card_view_background_pressed);
-                } else if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL || action == MotionEvent.ACTION_OUTSIDE) {
-                    ((CardView) v).setCardBackgroundColor(R.color.white);
-                }
-                return false;
-            }
-        };
+        View dialogLayout = LayoutInflater.from(context).inflate(R.layout.select_browser_dialog, null);
 
-        final LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        final View dialogLayout = inflater.inflate(R.layout.select_browser_dialog, null);
-        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AlertDialog);
-        builder.setNegativeButton(android.R.string.cancel, null);
-        builder.setView(dialogLayout);
-        final AlertDialog dialog = builder.create();
+        final AlertDialog dialog = new AlertDialog.Builder(context, R.style.AlertDialog)
+            .setNegativeButton(android.R.string.cancel, null)
+            .setView(dialogLayout).create();
 
         View cardView = dialogLayout.findViewById(R.id.browser_yandex);
-        cardView.setOnTouchListener(touchListener);
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -207,7 +191,6 @@ public class BrowserUtils {
         });
 
         cardView = dialogLayout.findViewById(R.id.browser_samsung);
-        cardView.setOnTouchListener(touchListener);
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -235,12 +218,12 @@ public class BrowserUtils {
         }
     }
 
-    public static void startBrowser(Context context, ComponentName component) {
+    private static void startBrowser(Context context, ComponentName component) {
         Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.addCategory(Intent.CATEGORY_LAUNCHER);
         intent.setComponent(component);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
+        startActivity(context, intent);
     }
 
     // https://github.com/AdguardTeam/ContentBlocker/issues/56
@@ -285,11 +268,25 @@ public class BrowserUtils {
 
             if (!installedPackages.isEmpty()) {
                 ResolveInfo resolveInfo = installedPackages.get(0);
-
                 return new ComponentName(resolveInfo.activityInfo.packageName, resolveInfo.activityInfo.name);
             }
         }
 
         return null;
+    }
+
+    /**
+     * Starts activity and shows notification if activity not found
+     *
+     * @param context context
+     * @param intent intent
+     */
+    private static void startActivity(Context context, Intent intent) {
+        try {
+            context.startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            NotificationService notificationService = ServiceLocator.getInstance(context).getNotificationService();
+            notificationService.showToast(R.string.progressGenericErrorText);
+        }
     }
 }

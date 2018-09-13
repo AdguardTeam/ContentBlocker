@@ -44,22 +44,24 @@ public class FilterUpdateJobService extends JobService {
     }
 
     @SuppressLint("StaticFieldLeak")
-    private class FilterUpdateTask extends AsyncTask<JobParameters, Void, Boolean> {
+    private class FilterUpdateTask extends AsyncTask<JobParameters, Void, Void> {
         private JobParameters jobParameters;
 
         @Override
-        protected Boolean doInBackground(JobParameters... jobParameters) {
+        protected Void doInBackground(JobParameters... jobParameters) {
             if (jobParameters != null) {
                 this.jobParameters = jobParameters[0];
             }
 
-            ServiceLocator.getInstance(getApplicationContext()).getFilterService().tryUpdateFilters();
-            return true;
+            FilterService filterService = ServiceLocator.getInstance(getApplicationContext()).getFilterService();
+            filterService.tryUpdateFilters();
+
+            return null;
         }
 
         @Override
-        protected void onPostExecute(Boolean result) {
-            jobFinished(jobParameters, result);
+        protected void onPostExecute(Void result) {
+            jobFinished(jobParameters, true);
         }
     }
 }

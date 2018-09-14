@@ -16,31 +16,52 @@
  */
 package com.adguard.android.contentblocker;
 
+import android.annotation.SuppressLint;
 import android.app.job.JobParameters;
 import android.app.job.JobService;
+import android.os.AsyncTask;
 
 import com.adguard.android.contentblocker.service.FilterService;
 
 public class FilterUpdateJobService extends JobService {
-
-    private FilterService filterService;
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        filterService = ServiceLocator.getInstance(getApplicationContext()).getFilterService();
-    }
+    private FilterUpdateTask filterUpdateTask;
 
     @Override
     public boolean onStartJob(JobParameters jobParameters) {
+        filterUpdateTask = new FilterUpdateTask();
+        filterUpdateTask.execute(jobParameters);
 
-        filterService.tryUpdateFilters();
         return true;
     }
 
     @Override
     public boolean onStopJob(JobParameters jobParameters) {
-        jobFinished(jobParameters, true);
+        if (!filterUpdateTask.isCancelled()) {
+            filterUpdateTask.cancel(true);
+        }
+
         return true;
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    private class FilterUpdateTask extends AsyncTask<JobParameters, Void, Void> {
+        private JobParameters jobParameters;
+
+        @Override
+        protected Void doInBackground(JobParameters... jobParameters) {
+            if (jobParameters != null) {
+                this.jobParameters = jobParameters[0];
+            }
+
+            FilterService filterService = ServiceLocator.getInstance(getApplicationContext()).getFilterService();
+            filterService.tryUpdateFilters();
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            jobFinished(jobParameters, true);
+        }
     }
 }

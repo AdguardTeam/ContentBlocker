@@ -25,9 +25,11 @@ import com.adguard.android.contentblocker.service.FilterService;
 
 public class FilterUpdateJobService extends JobService {
     private FilterUpdateTask filterUpdateTask;
+    private FilterService filterService;
 
     @Override
     public boolean onStartJob(JobParameters jobParameters) {
+        filterService = ServiceLocator.getInstance(getApplicationContext()).getFilterService();
         filterUpdateTask = new FilterUpdateTask();
         filterUpdateTask.execute(jobParameters);
 
@@ -53,7 +55,6 @@ public class FilterUpdateJobService extends JobService {
                 this.jobParameters = jobParameters[0];
             }
 
-            FilterService filterService = ServiceLocator.getInstance(getApplicationContext()).getFilterService();
             filterService.tryUpdateFilters();
 
             return null;

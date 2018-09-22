@@ -1,0 +1,3 @@
+AdGuard Content Blocker is an app that blocks ads on mobile devices operated by Android in browsers that support content blocking technology. As of today, there are only two such browsers: Yandex Browser and Samsung Internet browser.
+
+The app does not require root access.

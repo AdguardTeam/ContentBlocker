@@ -33,6 +33,7 @@ import com.adguard.android.contentblocker.FilterUpdateJobService;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ServiceApiClient;
 import com.adguard.android.contentblocker.ServiceLocator;
+import com.adguard.android.contentblocker.commons.BrowserUtils;
 import com.adguard.android.contentblocker.commons.StringHelperUtils;
 import com.adguard.android.contentblocker.commons.TextStatistics;
 import com.adguard.android.contentblocker.commons.concurrent.DispatcherThreadPool;
@@ -122,10 +123,15 @@ public class FilterServiceImpl implements FilterService {
     }
 
     public static void enableContentBlocker(Context context) {
-        Intent intent = new Intent();
-        intent.setAction("com.samsung.android.sbrowser.contentBlocker.ACTION_UPDATE");
-        intent.setData(Uri.parse("package:com.adguard.android.contentblocker"));
-        context.sendBroadcast(intent);
+        Set<String> availableBrowsers = BrowserUtils.getAvailableBrowsers(context);
+
+        if (!CollectionUtils.isEmpty(availableBrowsers)) {
+            for (String availableBrowser : availableBrowsers) {
+                sendUpdateFiltersInBrowser(context, availableBrowser);
+            }
+        } else {
+            sendUpdateFiltersInBrowser(context, null);
+        }
     }
 
     @Override
@@ -568,6 +574,14 @@ public class FilterServiceImpl implements FilterService {
         });
 
         return jobInfo != null;
+    }
+
+    private static void sendUpdateFiltersInBrowser(Context context, String packageName) {
+        Intent intent = new Intent();
+        intent.setAction("com.samsung.android.sbrowser.contentBlocker.ACTION_UPDATE");
+        intent.setData(Uri.parse("package:com.adguard.android.contentblocker"));
+        intent.setPackage(packageName);
+        context.sendBroadcast(intent);
     }
 
     /**

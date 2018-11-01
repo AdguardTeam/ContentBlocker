@@ -94,6 +94,19 @@ public class BrowserUtils {
         return result;
     }
 
+    public static Set<String> getAvailableBrowsers(Context context) {
+        Set<String> result = new HashSet<>();
+
+        List<PackageInfo> packages = context.getPackageManager().getInstalledPackages(0);
+        for (PackageInfo packageInfo : packages) {
+            if (packageInfo.packageName.startsWith(YANDEX_BROWSER_PACKAGE) || packageInfo.packageName.startsWith(SAMSUNG_BROWSER_PACKAGE)) {
+                result.add(packageInfo.packageName);
+            }
+        }
+
+        return result;
+    }
+
     public static void openSamsungBlockingOptions(Context context) {
         Intent intent = new Intent();
         intent.setAction(SAMSUNG_CONTENT_BLOCKER_ACTION);

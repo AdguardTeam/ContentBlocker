@@ -128,6 +128,8 @@ public class FilterServiceImpl implements FilterService {
         for (String browser : browsers) {
             sendUpdateFiltersInBrowser(context, browser);
         }
+
+        sendUpdateFiltersInBrowser(context, null);
     }
 
     @Override

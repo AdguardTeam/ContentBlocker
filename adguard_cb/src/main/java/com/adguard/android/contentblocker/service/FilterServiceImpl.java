@@ -123,14 +123,10 @@ public class FilterServiceImpl implements FilterService {
     }
 
     public static void enableContentBlocker(Context context) {
-        Set<String> availableBrowsers = BrowserUtils.getAvailableBrowsers(context);
+        Set<String> browsers = BrowserUtils.getKnownBrowsers();
 
-        if (!CollectionUtils.isEmpty(availableBrowsers)) {
-            for (String availableBrowser : availableBrowsers) {
-                sendUpdateFiltersInBrowser(context, availableBrowser);
-            }
-        } else {
-            sendUpdateFiltersInBrowser(context, null);
+        for (String browser : browsers) {
+            sendUpdateFiltersInBrowser(context, browser);
         }
     }
 

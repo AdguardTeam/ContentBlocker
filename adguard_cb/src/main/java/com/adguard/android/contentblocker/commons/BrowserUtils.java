@@ -55,11 +55,15 @@ public class BrowserUtils {
     private static final String REFERRER = "adguard1";
 
     private static final List<String> yandexBrowserPackageList = new ArrayList<>();
+    private static final List<String> samsungBrowserPackageList = new ArrayList<>();
 
     static {
         yandexBrowserPackageList.add("com.yandex.browser");
         yandexBrowserPackageList.add("com.yandex.browser.beta");
         yandexBrowserPackageList.add("com.yandex.browser.alpha");
+
+        samsungBrowserPackageList.add("com.sec.android.app.sbrowser");
+        samsungBrowserPackageList.add("com.sec.android.app.sbrowser.beta");
     }
 
     public static Set<String> getBrowsersAvailableByIntent(Context context) {
@@ -94,16 +98,10 @@ public class BrowserUtils {
         return result;
     }
 
-    public static Set<String> getAvailableBrowsers(Context context) {
+    public static Set<String> getKnownBrowsers() {
         Set<String> result = new HashSet<>();
-
-        List<PackageInfo> packages = context.getPackageManager().getInstalledPackages(0);
-        for (PackageInfo packageInfo : packages) {
-            if (packageInfo.packageName.startsWith(YANDEX_BROWSER_PACKAGE) || packageInfo.packageName.startsWith(SAMSUNG_BROWSER_PACKAGE)) {
-                result.add(packageInfo.packageName);
-            }
-        }
-
+        result.addAll(yandexBrowserPackageList);
+        result.addAll(samsungBrowserPackageList);
         return result;
     }
 

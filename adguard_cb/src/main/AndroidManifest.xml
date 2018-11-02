@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          android:installLocation="internalOnly"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:installLocation="internalOnly"
           package="com.adguard.android.contentblocker">
 
     <uses-permission android:name="com.samsung.android.sbrowser.permission.CONTENTBLOCKER"/>
@@ -15,7 +16,8 @@
         android:roundIcon="@mipmap/app_icon_round"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
 
         <meta-data
             android:name="com.samsung.android.sbrowser.contentBlocker.interfaceVersion"
@@ -76,7 +78,8 @@
             android:name=".FiltersContentProvider"
             android:authorities="com.adguard.android.contentblocker.contentBlocker.contentProvider"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true"
+            android:grantUriPermissions="true"/>
 
         <receiver
             android:name=".receiver.AlarmReceiver"

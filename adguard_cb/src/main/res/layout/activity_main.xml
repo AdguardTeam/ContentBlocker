@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -12,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -26,27 +25,15 @@
                     android:id="@+id/cards_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingBottom="@dimen/cardview_margin">
+                    android:orientation="vertical">
 
-                    <!-- A CardView that contains a TextView -->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/cardview_margin"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:padding="@dimen/cardview_margin"
-                        android:text="@string/main_activity_adguard_info"
-                        android:textColor="@color/primaryText"
-                        android:textSize="14sp" />
-
-                    <include layout="@layout/main_no_browser_card"/>
-
-                    <include layout="@layout/main_info_card"/>
+                    <include layout="@layout/main_other_products"/>
 
                     <include layout="@layout/main_yandex_card"/>
 
                     <include layout="@layout/main_samsung_card"/>
+
+                    <include layout="@layout/main_info_card" />
 
                 </LinearLayout>
 
@@ -54,6 +41,7 @@
 
             <include layout="@layout/welcome_message_layout" />
         </LinearLayout>
+
         <include layout="@layout/drawer_layout" />
 
     </android.support.v4.widget.DrawerLayout>

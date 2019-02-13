@@ -58,14 +58,6 @@
     <string name="check_filter_updates">Перевірити оновлення фільтрів</string>
     <string name="go_to_filters">Перейти до фільтрів</string>
     <string name="install">Встановити</string>
-    <string name="start">Запустити</string>
-    <string name="get_started">Почати</string>
-    <string name="adguard_conditions_title">Для роботи AdGuard повинні бути виконані дві умови:</string>
-    <string name="adguard_conditions_list1">Ви маєте використовувати браузер, який підтримує технологію блокування контенту.</string>
-    <string name="adguard_conditions_list2">В налаштуваннях блокування контенту цього браузеру необхідно включити AdGuard.</string>
-    <string name="choose_browser">Виберіть браузер</string>
-    <string name="enable_adguard">Включити AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard блокує рекламу, захищає вашу конфіденційність, підвищує швидкість завантаження сторінок і знижує використання мобільних даних.</string>
     <string name="exit">Вихід</string>
     <string name="user_filter">Фільтр користувача</string>
     <string name="enter_rule_text">Введіть текст правила</string>
@@ -79,10 +71,6 @@
     <string name="clearUserRulesButtonText">Видалити все</string>
     <string name="browseButtonText">Огляд</string>
     <string name="reportBug">Повідомити про помилку</string>
-    <string name="description_about_other_adguard_product">Ви знаєте, що ви можете використовувати AdGuard на будь-якому пристрої, комп\'ютері та ОС? Дізнайтеся більше на нашому сайті.</string>
-    <string name="no_thanks">Ні, дякую</string>
-    <string name="learn_more">Дізнатися більше</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Конфіденційність</a></string>
     <string name="eulaLinkText">&lt;а href=\"https://adguard.com/ru/eula.html\"&gt;Угода&lt;/а&gt;</string>
-    <string name="too_many_filters_warning">Ви вибрали занадто багато фільтрів. Це може значно уповільнити швидкість завантаження сайтів.</string>
 </resources>

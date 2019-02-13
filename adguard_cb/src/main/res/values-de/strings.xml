@@ -58,14 +58,6 @@
     <string name="check_filter_updates">Auf Filter-Updates prüfen</string>
     <string name="go_to_filters">Filter öffnen</string>
     <string name="install">Installieren</string>
-    <string name="start">Starten</string>
-    <string name="get_started">Erste Schritte</string>
-    <string name="adguard_conditions_title">Damit AdGuard funktioniert, müssen zwei Bedingungen erfüllt werden:</string>
-    <string name="adguard_conditions_list1">Sie müssen einen Browser verwenden, der Inhaltsblockierung unterstützt.</string>
-    <string name="adguard_conditions_list2">AdGuard muss in den Inhaltsblockierungs-Einstellungen des Browsers aktiviert sein.</string>
-    <string name="choose_browser">Browser auswählen</string>
-    <string name="enable_adguard">AdGuard aktivieren</string>
-    <string name="main_activity_adguard_info">AdGuard blockiert Werbung, schützt Ihre Privatsphäre, beschleunigt die Ladezeiten der Seiten und reduziert Ihre mobile Datennutzung.</string>
     <string name="exit">Beenden</string>
     <string name="user_filter">Benutzer-Filter</string>
     <string name="enter_rule_text">Regeltext eingeben</string>
@@ -79,10 +71,6 @@
     <string name="clearUserRulesButtonText">Alle entfernen</string>
     <string name="browseButtonText">Durchsuchen</string>
     <string name="reportBug">Fehler melden</string>
-    <string name="description_about_other_adguard_product">Wissen Sie, dass Sie AdGuard auf jedem Gerät, Computer und iOS verwenden können? Erfahren Sie mehr auf unserer Website.</string>
-    <string name="no_thanks">Nein, Danke</string>
-    <string name="learn_more">Mehr erfahren</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Datenschutzbestimmungen</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="too_many_filters_warning">Sie haben zu viele Filter-Abonnements ausgewählt. Dies kann das Surfen im Internet deutlich verlangsamen.</string>
 </resources>

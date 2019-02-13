@@ -58,14 +58,6 @@
     <string name="check_filter_updates">Controlla per aggiornamenti filtro</string>
     <string name="go_to_filters">Vai ai filtri</string>
     <string name="install">Installa</string>
-    <string name="start">Avvia</string>
-    <string name="get_started">Per iniziare</string>
-    <string name="adguard_conditions_title">Due condizioni devono essere soddisfatte per far funzionare AdGuard:</string>
-    <string name="adguard_conditions_list1">Devi utilizzare un browser che supporta la tecnologia di blocco annunci.</string>
-    <string name="adguard_conditions_list2">AdGuard deve essere abilitato nelle impostazioni di blocco contenuti in questo browser.</string>
-    <string name="choose_browser">Scegli browser</string>
-    <string name="enable_adguard">Abilita AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard blocca gli annunci, protegge la tua privacy, velocizza il caricamento delle pagine e riduce l\'utilizzo dei dati.</string>
     <string name="exit">Esci</string>
     <string name="user_filter">Filtro Utente</string>
     <string name="enter_rule_text">Inserisci il testo della regola</string>
@@ -79,10 +71,6 @@
     <string name="clearUserRulesButtonText">Rimuovi tutti</string>
     <string name="browseButtonText">Scegli</string>
     <string name="reportBug">Segnala Bug</string>
-    <string name="description_about_other_adguard_product">Sai che puoi utilizzare AdGuard su qualsiasi dispositivo, computer e sistema operativo? Scopri di più sul nostro sito web.</string>
-    <string name="no_thanks">No grazie</string>
-    <string name="learn_more">Per saperne di più</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="too_many_filters_warning">Hai attivato troppi filtri. Ciò potrebbe rallentare notevolmente la tua navigazione internet.</string>
 </resources>

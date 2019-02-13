@@ -58,14 +58,6 @@
     <string name="check_filter_updates">Filtreleri güncelle</string>
     <string name="go_to_filters">Filtrelere git</string>
     <string name="install">Yükle</string>
-    <string name="start">Başla</string>
-    <string name="get_started">Başlangıç</string>
-    <string name="adguard_conditions_title">AdGuard\'ın çalışabilmesi için iki şartın sağlanması gerekiyor:</string>
-    <string name="adguard_conditions_list1">İçerik engelleme teknolojisini destekleyen bir tarayıcı kullanmalısınız.</string>
-    <string name="adguard_conditions_list2">Bu tarayıcının içerik engelleme ayarlarında AdGuard\'ın etkinleştirilmesi gerekiyor.</string>
-    <string name="choose_browser">Tarayıcı seç</string>
-    <string name="enable_adguard">AdGuard\'ı Etkinleştir</string>
-    <string name="main_activity_adguard_info">AdGuard reklamları engeller, gizliliğinizi korur, sayfa yükleme hızını artırır ve mobil veri kullanımınızı azaltır.</string>
     <string name="exit">Çıkış</string>
     <string name="user_filter">Kullanıcı Filtresi</string>
     <string name="enter_rule_text">Kural metni girin</string>
@@ -79,10 +71,6 @@
     <string name="clearUserRulesButtonText">Tümünü sil</string>
     <string name="browseButtonText">Gözat</string>
     <string name="reportBug">Hata Bildir</string>
-    <string name="description_about_other_adguard_product">AdGuard\'ı tüm cihazlarda, bilgisayar ve diğer işletim sistemlerinde kullanabileceğinizi biliyor musunuz? Sitemizden daha fazla bilgi edinin.</string>
-    <string name="no_thanks">Hayır teşekkürler</string>
-    <string name="learn_more">Göster bakalım!</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Gizlilik Sözleşmesi</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="too_many_filters_warning">Çok fazla filtre seçtiniz. Çok fazla filtre seçmek gezinme hızınızı önemli derecede yavaşlatabilir.</string>
 </resources>

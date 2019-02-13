@@ -58,14 +58,6 @@
     <string name="check_filter_updates">Verificar atualizações de filtro</string>
     <string name="go_to_filters">Ir para filtros</string>
     <string name="install">Instalar</string>
-    <string name="start">Abrir</string>
-    <string name="get_started">Iniciar</string>
-    <string name="adguard_conditions_title">Duas condições devem ser cumpridas para que o AdGuard funcione:</string>
-    <string name="adguard_conditions_list1">Você deve usar um navegador que suporte a tecnologia de bloqueio de conteúdo.</string>
-    <string name="adguard_conditions_list2">O AdGuard deve ser ativado nas configurações de bloqueio de conteúdo deste navegador.</string>
-    <string name="choose_browser">Escolha o navegador</string>
-    <string name="enable_adguard">Ativar AdGuard</string>
-    <string name="main_activity_adguard_info">O AdGuard bloqueia anúncios, protege sua privacidade, aumenta a velocidade de carregamento da página e reduz o uso de dados móveis.</string>
     <string name="exit">Sair</string>
     <string name="user_filter">Filtro de Usuário</string>
     <string name="enter_rule_text">Digite o texto da regra</string>
@@ -79,9 +71,6 @@
     <string name="clearUserRulesButtonText">Remover todos</string>
     <string name="browseButtonText">Procurar</string>
     <string name="reportBug">Reportar um problema</string>
-    <string name="description_about_other_adguard_product">Você sabia que pode usar o AdGuard em qualquer dispositivo, computador e sistema operacional? Saiba mais em nosso site.</string>
-    <string name="no_thanks">Não Obrigado</string>
-    <string name="learn_more">Saber Mais</string>
     <string name="privacyPolicyLinkText">Política de Privacidade</string>
     <string name="eulaLinkText">Contrato</string>
     <string name="delete">Excluir</string>
@@ -105,6 +94,5 @@
     <string name="reportTypeBugReport">Reportar bug</string>
     <string name="reportTypeFeatureRequest">Solicitação de recurso</string>
     <string name="reportTypeCustom">Outro</string>
-    <string name="too_many_filters_warning">Você selecionou muitos filtros. Isso pode diminuir  significativamente a sua navegação na internet.</string>
     <string name="overwrite_existing_rules">Substituir regras existentes</string>
 </resources>

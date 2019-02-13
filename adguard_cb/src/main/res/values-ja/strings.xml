@@ -58,14 +58,6 @@
     <string name="check_filter_updates">フィルターの更新を確認</string>
     <string name="go_to_filters">フィルターを確認する</string>
     <string name="install">インストール</string>
-    <string name="start">はじめる</string>
-    <string name="get_started">はじめる</string>
-    <string name="adguard_conditions_title">AdGuard の動作には次の2つの条件を満たす必要があります :</string>
-    <string name="adguard_conditions_list1">コンテンツブロッカーが利用できるブラウザを使用する必要があります。</string>
-    <string name="adguard_conditions_list2">ブラウザ上のコンテンツブロッカーの設定から AdGuard を有効にする必要があります。</string>
-    <string name="choose_browser">ブラウザを選択</string>
-    <string name="enable_adguard">AdGuard を有効にする</string>
-    <string name="main_activity_adguard_info">AdGuard は広告をブロックやプライバシーを保護を行い、さらにページの読み込み速度の向上やモバイルデータ通信量の削減が期待できます。</string>
     <string name="exit">終了</string>
     <string name="user_filter">ユーザーフィルター</string>
     <string name="enter_rule_text">ルールを追加</string>
@@ -79,10 +71,6 @@
     <string name="clearUserRulesButtonText">すべて削除</string>
     <string name="browseButtonText">参照</string>
     <string name="reportBug">バグを報告</string>
-    <string name="description_about_other_adguard_product">AdGuardはどんなデバイス、OSでも利用できます。詳しくはAdGuardウェブサイトで。</string>
-    <string name="no_thanks">いえ、結構です</string>
-    <string name="learn_more">もっと知る</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">プライバシーポリシー</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">利用許諾契約(EULA)</a></string>
-    <string name="too_many_filters_warning">有効にされているフィルタが多すぎます。フィルタの数を多くすると、ブラウザの表示速度が低下する可能性があります。</string>
 </resources>

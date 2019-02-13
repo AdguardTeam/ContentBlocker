@@ -58,14 +58,6 @@
     <string name="check_filter_updates">Sprawdź aktualizacje filtra</string>
     <string name="go_to_filters">Przejdź do filtrów</string>
     <string name="install">Instaluj</string>
-    <string name="start">Start</string>
-    <string name="get_started">Zacznijmy</string>
-    <string name="adguard_conditions_title">Dwa warunki muszą zostać spełnione by AdGuard mógł działać:</string>
-    <string name="adguard_conditions_list1">Musisz używać przeglądarki, która wspiera technologię blokowania zawartości.</string>
-    <string name="adguard_conditions_list2">AdGuard musi być włączony w ustawieniach blokowania zawartości przeglądarki.</string>
-    <string name="choose_browser">Wybierz przeglądarkę</string>
-    <string name="enable_adguard">Włącz AdGuarda</string>
-    <string name="main_activity_adguard_info">AdGuard blokuje reklamy, chroni Twoją prywatność, zwiększa szybkość ładowania stron i zmniejsza zużycie danych mobilnych.</string>
     <string name="exit">Wyjdź</string>
     <string name="user_filter">Filtr użytkownika</string>
     <string name="enter_rule_text">Podaj tekst reguły</string>
@@ -79,10 +71,6 @@
     <string name="clearUserRulesButtonText">Usuń wszystko</string>
     <string name="browseButtonText">Przeglądaj</string>
     <string name="reportBug">Raportuj błąd</string>
-    <string name="description_about_other_adguard_product">Czy wiesz, że możesz używać AdGuard na dowolnym urządzeniu, komputerze i systemie operacyjnym? Dowiedz się więcej na naszej stronie internetowej.</string>
-    <string name="no_thanks">Nie, dziękuję</string>
-    <string name="learn_more">Dowiedz się więcej</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Polityka Prywatności</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="too_many_filters_warning">Wybrałeś za dużo subskrypcji filtrów. Może to skutkować znaczącym spowolnieniem przeglądania sieci.</string>
 </resources>

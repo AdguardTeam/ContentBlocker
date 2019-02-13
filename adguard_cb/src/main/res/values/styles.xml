@@ -239,11 +239,6 @@
         <item name="android:drawablePadding">1dp</item>
     </style>
 
-    <style name="transparentButton" parent="parentButtonStyle">
-        <item name="android:background">@android:color/transparent</item>
-        <item name="android:textColor">@color/common_text</item>
-    </style>
-
     <style name="NavigationItem">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48dp</item>

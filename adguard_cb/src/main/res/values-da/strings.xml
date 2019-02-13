@@ -58,14 +58,6 @@
     <string name="check_filter_updates">Søg efter opdateringer til filtrene</string>
     <string name="go_to_filters">Gå til filtre</string>
     <string name="install">Installer</string>
-    <string name="start">Start</string>
-    <string name="get_started">Kom i gang</string>
-    <string name="adguard_conditions_title">To betingelser skal være opfyldt for, at AdGuard kan fungere:</string>
-    <string name="adguard_conditions_list1">Du skal bruge en browser som understøtter teknologien bag indholdsblokering.</string>
-    <string name="adguard_conditions_list2">AdGuard skal være aktiveret i browserens indstillinger for indholdsblokering</string>
-    <string name="choose_browser">Vælg browser</string>
-    <string name="enable_adguard">Aktiver AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard blokerer annoncer, beskytter dit privatliv, øger indlæsningstiden for sider, og reducerer dit forbrug af mobildata.</string>
     <string name="exit">Afslut</string>
     <string name="user_filter">Brugerfilter</string>
     <string name="enter_rule_text">Indtast regeltekst</string>
@@ -79,9 +71,6 @@
     <string name="clearUserRulesButtonText">Fjern alt</string>
     <string name="browseButtonText">Gennemse</string>
     <string name="reportBug">Rapporter en fejl</string>
-    <string name="description_about_other_adguard_product">Vidste du, at du kan bruge AdGuard på en hvilken som helst enhed, computer og OS? Lær mere på vores hjemmeside.</string>
-    <string name="no_thanks">Nej Tak</string>
-    <string name="learn_more">Lær Mere</string>
     <string name="privacyPolicyLinkText">Privatlivspolitik</string>
     <string name="eulaLinkText">EULA</string>
     <string name="delete">Slet</string>
@@ -105,6 +94,5 @@
     <string name="reportTypeBugReport">Fejlrapport</string>
     <string name="reportTypeFeatureRequest">Funktionsanmodning</string>
     <string name="reportTypeCustom">Andre</string>
-    <string name="too_many_filters_warning">Du har valgt for mange filterabonnenter. Dette vil muligvis sænke din internetsøgning betydeligt.</string>
     <string name="overwrite_existing_rules">Overskriv eksisterende regler</string>
 </resources>

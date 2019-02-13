@@ -58,14 +58,6 @@
     <string name="check_filter_updates">Zkontrolovat aktualizace filtrů</string>
     <string name="go_to_filters">Přejít na filtry</string>
     <string name="install">Instalovat</string>
-    <string name="start">Start</string>
-    <string name="get_started">Jak začít</string>
-    <string name="adguard_conditions_title">Pro funkčnost AdGuard je třeba dodržet 2 podmínky:</string>
-    <string name="adguard_conditions_list1">Potřebujete prohlížeč, který podporuje technologii blokování obsahu.</string>
-    <string name="adguard_conditions_list2">AdGuard musí být zapnutý v nastavení prohlížeče, záložka blokování obsahu.</string>
-    <string name="choose_browser">Vybrat prohlížeč</string>
-    <string name="enable_adguard">Zapnout AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard blokuje reklamy, chrání vaše soukromí, zrychluje načítání stránek a snižuje využití mobilních dat.</string>
     <string name="exit">Konec</string>
     <string name="user_filter">Uživatelský filtr</string>
     <string name="enter_rule_text">Zadej text pravidla</string>
@@ -79,10 +71,6 @@
     <string name="clearUserRulesButtonText">Odstranit vše</string>
     <string name="browseButtonText">Procházet</string>
     <string name="reportBug">Nahlásit chybu</string>
-    <string name="description_about_other_adguard_product">Víte, že AdGuard můžete používat na kterémkoli zařízení, počítači nebo operačním systému ? Více se dozvíte na našich webových stránkách.</string>
-    <string name="no_thanks">Ne děkuji</string>
-    <string name="learn_more">Zjistit více</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Zásady ochrany osobních údajů</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="too_many_filters_warning">Vybrali jste příliš mnoho filtrů. To může výrazně zpomalit prohlížení webů.</string>
 </resources>

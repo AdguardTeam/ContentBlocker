@@ -38,8 +38,6 @@
                 </LinearLayout>
 
             </ScrollView>
-
-            <include layout="@layout/welcome_message_layout" />
         </LinearLayout>
 
         <include layout="@layout/drawer_layout" />

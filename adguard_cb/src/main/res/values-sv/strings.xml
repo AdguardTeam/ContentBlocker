@@ -58,14 +58,6 @@
     <string name="check_filter_updates">Kontrollera filteruppdateringar</string>
     <string name="go_to_filters">Gå till filter</string>
     <string name="install">Installera</string>
-    <string name="start">Sätt igång</string>
-    <string name="get_started">Kom igång</string>
-    <string name="adguard_conditions_title">Två krav måste uppfyllas för att AdGuard skall fungera:</string>
-    <string name="adguard_conditions_list1">Du måste använda en webbläsare som stöder teknik för innehållsblockering (content-blocking).</string>
-    <string name="adguard_conditions_list2">AdGuard måste kopplas in i webbläsaren Inställningar för innehållsblockering.</string>
-    <string name="choose_browser">Välj webbläsare</string>
-    <string name="enable_adguard">Koppla på AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard blockerar reklam, skyddar din integritet, förbättrar sidinläsningstider och minskar din mobildataförbrukning.</string>
     <string name="exit">Avsluta</string>
     <string name="user_filter">Eget filter</string>
     <string name="enter_rule_text">Skriv in text för filtreringsregeln</string>
@@ -79,10 +71,6 @@
     <string name="clearUserRulesButtonText">Ta bort allt</string>
     <string name="browseButtonText">Sök</string>
     <string name="reportBug">Rapportera bugg</string>
-    <string name="description_about_other_adguard_product">Känner du till att du kan använda AdGuard på alla sorts enheter, datorer och operativsystem? Läs mer på vår hemsida.</string>
-    <string name="no_thanks">Nej tack</string>
-    <string name="learn_more">Läs mer</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Sekretesspolicy</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="too_many_filters_warning">Du har markerat för många filterabonnemang. Det kan göra ditt webbläsande påtagligt långsammare,</string>
 </resources>

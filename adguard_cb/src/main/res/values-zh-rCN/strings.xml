@@ -58,14 +58,6 @@
     <string name="check_filter_updates">检查过滤器更新</string>
     <string name="go_to_filters">转到过滤器</string>
     <string name="install">安装</string>
-    <string name="start">开始</string>
-    <string name="get_started">入门</string>
-    <string name="adguard_conditions_title">要使 AdGuard 工作，需要符合两个条件：</string>
-    <string name="adguard_conditions_list1">使用支持内容拦截技术的浏览器。</string>
-    <string name="adguard_conditions_list2">在此浏览器的内容拦截设置内必须开启 AdGuard。</string>
-    <string name="choose_browser">选择浏览器</string>
-    <string name="enable_adguard">开启 AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard 可拦截广告，保护您的隐私，提升页面加载速度，降低移动数据使用率。</string>
     <string name="exit">退出</string>
     <string name="user_filter">用户过滤器</string>
     <string name="enter_rule_text">输入规则文本</string>
@@ -79,10 +71,6 @@
     <string name="clearUserRulesButtonText">移除全部</string>
     <string name="browseButtonText">浏览</string>
     <string name="reportBug">报告错误</string>
-    <string name="description_about_other_adguard_product">您知道您可在任何设备，计算机和操作系统上使用 AdGuard 吗？请转到我们的网站以了解更多信息。</string>
-    <string name="no_thanks">不，谢谢</string>
-    <string name="learn_more">了解更多</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">隐私策略</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">最终用户许可协议</a></string>
-    <string name="too_many_filters_warning">您选定的过滤器订阅过多。它会显著降低您的网络浏览速度。</string>
 </resources>

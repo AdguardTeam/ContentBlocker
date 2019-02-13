@@ -58,14 +58,6 @@
     <string name="check_filter_updates">التحقق من تحديثات عامل التصفية</string>
     <string name="go_to_filters">انتقل إلى الفلاتر</string>
     <string name="install">التثبت</string>
-    <string name="start">بدء</string>
-    <string name="get_started">احصل على جولة سريعة</string>
-    <string name="adguard_conditions_title">AdGuardيجب استيفاء شرطين لكي يعمل</string>
-    <string name="adguard_conditions_list1">يجب استخدام مستعرض يدعم تقنيه حظر المحتوي.</string>
-    <string name="adguard_conditions_list2">يجب تمكين \"AdGuard\" في إعدادات حظر محتويات هذا المستعرض.</string>
-    <string name="choose_browser">اختر المستعرض</string>
-    <string name="enable_adguard">AdGuardتمكين</string>
-    <string name="main_activity_adguard_info">AdGuardيمنع الكتل الاعلانيه ، ويحمي خصوصيتك ، ويعزز سرعه تحميل الصفحة ويقلل من استخدام بينات الجوال الخاصة بك.</string>
     <string name="exit">خروج</string>
     <string name="user_filter">فلتر المستخدم</string>
     <string name="enter_rule_text">إدخال نص القاعدة</string>
@@ -79,9 +71,6 @@
     <string name="clearUserRulesButtonText">ازالة الكل</string>
     <string name="browseButtonText">المتصفح</string>
     <string name="reportBug">تقرير الشوائب</string>
-    <string name="description_about_other_adguard_product">هل تعلم أنه يمكنك استخدام أدجارد على أي جهاز. جهاز كمبيوتر أو نظام تشغيل أوس؟ معرفة المزيد على موقعنا.</string>
-    <string name="no_thanks">لا، شكراً</string>
-    <string name="learn_more">التعرف على المزيد</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html"> سياسة الخصوصية </a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html"> اتفاقية ترخيص المستخدم النهائي </a></string>
     <string name="delete">حذف</string>
@@ -105,5 +94,4 @@
     <string name="reportTypeBugReport">تقرير الشوائب</string>
     <string name="reportTypeFeatureRequest">طلب الميزة</string>
     <string name="reportTypeCustom">آخر</string>
-    <string name="too_many_filters_warning">لقد حددت عددا كبيرا جدا من اشتراكات الفلتر. قد يؤدي ذلك إلى إبطاء تصفح الويب بشكل ملحوظ.</string>
 </resources>

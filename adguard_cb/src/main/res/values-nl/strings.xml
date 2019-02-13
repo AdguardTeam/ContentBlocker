@@ -58,14 +58,6 @@
     <string name="check_filter_updates">Controleer op filter updates</string>
     <string name="go_to_filters">Ga naar filters</string>
     <string name="install">Installeer</string>
-    <string name="start">Start</string>
-    <string name="get_started">Aan de slag</string>
-    <string name="adguard_conditions_title">Aan twee voorwaarden dient voldaan te zijn om AdGuard te laten werken:</string>
-    <string name="adguard_conditions_list1">Je moet een browser gebruiken die blokkeren van inhoud ondersteunt.</string>
-    <string name="adguard_conditions_list2">AdGuard moet geactiveerd worden in de instellingen van de browser.</string>
-    <string name="choose_browser">Selecteer browser</string>
-    <string name="enable_adguard">Activeer AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard blokkeert advertenties, versnelt opladen van pagina\'s en vermindert gebruik van mobiele data.</string>
     <string name="exit">Afsluiten</string>
     <string name="user_filter">Gebruikersfilter</string>
     <string name="enter_rule_text">Regel invoeren</string>
@@ -79,9 +71,6 @@
     <string name="clearUserRulesButtonText">Alles verwijderen</string>
     <string name="browseButtonText">Bladeren</string>
     <string name="reportBug">Bug signaleren</string>
-    <string name="description_about_other_adguard_product">Wist je dat je AdGuard kunt gebruiken op elk apparaat, computer en operating systeem? Zie voor meer info op onze website.</string>
-    <string name="no_thanks">Nee. bedankt</string>
-    <string name="learn_more">Meer info</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
     <string name="delete">Verwijderen</string>
@@ -105,5 +94,4 @@
     <string name="reportTypeBugReport">Bug rapport</string>
     <string name="reportTypeFeatureRequest">Functie verzoek</string>
     <string name="reportTypeCustom">Andere</string>
-    <string name="too_many_filters_warning">Je hebt te veel filters geselecteerd. Dit kan je internetverkeer merkbaar vertragen.</string>
 </resources>

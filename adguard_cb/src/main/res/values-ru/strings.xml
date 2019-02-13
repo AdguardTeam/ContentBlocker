@@ -58,14 +58,6 @@
     <string name="check_filter_updates">Проверить обновления фильтров</string>
     <string name="go_to_filters">Перейти к фильтрам</string>
     <string name="install">Установить</string>
-    <string name="start">Запуск</string>
-    <string name="get_started">Начать</string>
-    <string name="adguard_conditions_title">Для работы AdGuard требуется выполнение двух условий:</string>
-    <string name="adguard_conditions_list1">Необходимо использовать браузер, поддерживающий технологию блокировки контента.</string>
-    <string name="adguard_conditions_list2">AdGuard должен быть включен в настройках блокировки контента браузера.</string>
-    <string name="choose_browser">Выбрать браузер</string>
-    <string name="enable_adguard">Включить AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard блокирует рекламу, защищает вашу конфиденциальность, увеличивает скорость загрузки страниц и экономит использование мобильных данных.</string>
     <string name="exit">Выход</string>
     <string name="user_filter">Пользовательский фильтр</string>
     <string name="enter_rule_text">Введите текст правила</string>
@@ -79,9 +71,6 @@
     <string name="clearUserRulesButtonText">Удалить все</string>
     <string name="browseButtonText">Обзор</string>
     <string name="reportBug">Сообщить об ошибке</string>
-    <string name="description_about_other_adguard_product">Вы знаете, что Вы можете использовать AdGuard на любом устройстве, компьютере и операционной системе? Узнайте больше на нашем вебсайте.</string>
-    <string name="no_thanks">Нет, спасибо</string>
-    <string name="learn_more">Узнать больше</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Политика конфиденциальности</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
     <string name="delete">Удалить</string>
@@ -105,6 +94,5 @@
     <string name="reportTypeBugReport">Дефект</string>
     <string name="reportTypeFeatureRequest">Предложение</string>
     <string name="reportTypeCustom">Другое</string>
-    <string name="too_many_filters_warning">Вы выбрали слишком много подписок на фильтры. Это может значительно замедлить работу браузера.</string>
     <string name="overwrite_existing_rules">Перезаписать существующие правила</string>
 </resources>

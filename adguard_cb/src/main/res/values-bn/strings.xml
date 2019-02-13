@@ -58,14 +58,6 @@
     <string name="check_filter_updates">ফিল্টার আপডেটের জন্য চেক করুন</string>
     <string name="go_to_filters">ফিল্টারগুলিতে যান</string>
     <string name="install">ইনস্টল করুন</string>
-    <string name="start">শুরু</string>
-    <string name="get_started">এবার শুরু করুন</string>
-    <string name="adguard_conditions_title">AdGuard কাজ করার জন্য দুটি শর্ত পূরণ করতে হবে:</string>
-    <string name="adguard_conditions_list1">আপনাকে এমন একটি ব্রাউজার ব্যবহার করতে হবে যা কন্টেন্ট ব্লক করার প্রযুক্তি সমর্থন করে।</string>
-    <string name="adguard_conditions_list2">ওই ব্রাউজারের কন্টেন্ট -ব্লক করার সেটিংস এ AdGuard চালু করা থাকতে হবে।</string>
-    <string name="choose_browser">ব্রাউজার নির্বাচন করুন</string>
-    <string name="enable_adguard">AdGuard চালু করুন</string>
-    <string name="main_activity_adguard_info">AdGuard বিজ্ঞাপনগুলিকে ব্লক করে, আপনার গোপনীয়তা রক্ষা করে, ওয়েবপেজ লোডিং এর গতি বৃদ্ধি করে এবং আপনার মোবাইল ডেটা ব্যবহার হ্রাস করে।</string>
     <string name="exit">বাহির</string>
     <string name="user_filter">ব্যবহারকারীর ফিল্টার</string>
     <string name="enter_rule_text">নিয়ম লিখুন</string>
@@ -79,10 +71,6 @@
     <string name="clearUserRulesButtonText">সব মুছে ফেলুন</string>
     <string name="browseButtonText">ব্রাউজ</string>
     <string name="reportBug">ত্রুটি রিপোর্ট করুন</string>
-    <string name="description_about_other_adguard_product">আপনি কি জানেন যে আপনি যে কোন ডিভাইস, কম্পিউটার এবং অপারেটিং সিস্টেমে AdGuard ব্যবহার করতে পারেন? এই সম্পর্কে আমাদের ওয়েবসাইটে আরও জানুন।</string>
-    <string name="no_thanks">ধন্যবাদ নয়</string>
-    <string name="learn_more">আরও জানুন</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">গোপনীয়তা নীতি</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="too_many_filters_warning">আপনি অনেকগুলি ফিল্টার সাবস্ক্রিপশনগুলি নির্বাচন করেছেন। এই কারনে সম্ভবত আপনার ওয়েব ব্রাউজিং ধীরগতি হতে পারে।</string>
 </resources>

@@ -124,4 +124,7 @@
     <string name="reportTypeCustom">Other</string>
     <string name="too_many_filters_warning">You have selected too many filter subscriptions. This might slow down your web browsing significantly.</string>
     <string name="overwrite_existing_rules">Overwrite existing rules</string>
+    <string name="other_product_message">This app works in Samsung and Yandex browsers only. Not quite what you need? Check out other AdGuard products on our website</string>
+    <string name="go_to_products">Go to Products</string>
+    <string name="star_symbols" translatable="false">★</string>
 </resources>

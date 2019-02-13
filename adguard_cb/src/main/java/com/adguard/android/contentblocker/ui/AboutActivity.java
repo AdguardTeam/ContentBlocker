@@ -27,6 +27,8 @@ import com.adguard.android.contentblocker.commons.PackageUtils;
 import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
 
+import java.util.Calendar;
+
 public class AboutActivity extends AppCompatActivity {
 
     @Override
@@ -36,6 +38,10 @@ public class AboutActivity extends AppCompatActivity {
 
         final TextView versionInfoTextView = findViewById(R.id.versionInfoTextView);
         versionInfoTextView.setText(getString(R.string.versionInfoTextViewText).replace("{0}", PackageUtils.getVersionName(this)));
+
+        int year = Calendar.getInstance().get(Calendar.YEAR);
+        TextView copyrightInfoView = findViewById(R.id.copyrightInfo);
+        copyrightInfoView.setText(getString(R.string.copyrightInfoTextViewText, year));
 
         final TextView adguardComLinkTextView = findViewById(R.id.adguardComLinkTextView);
         adguardComLinkTextView.setOnClickListener(new View.OnClickListener() {

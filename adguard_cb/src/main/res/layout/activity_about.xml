@@ -17,6 +17,7 @@
             <LinearLayout style="@style/verticalStackPanel">
 
                 <TextView
+                    android:id="@+id/copyrightInfo"
                     style="@style/descriptionTextView"
                     android:text="@string/copyrightInfoTextViewText" />
 

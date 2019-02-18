@@ -32,9 +32,8 @@
     <string name="stats_update_time">Ultima Actualización:</string>
     <string name="filterVersionTemplate">Versión {0}</string>
     <string name="filterUpdatedTemplate">Actualizado {0} en {1}</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Versión {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nTodos los derechos reservados</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nTodos los derechos reservados</string>
     <string name="rateAdguardButtonText">"Denos su opinión "</string>
     <string name="officialSiteLabelText">Sitio Oficial</string>
     <string name="forumLabelText">Foro</string>
@@ -58,14 +57,6 @@
     <string name="check_filter_updates">Comprobar actualizaciones</string>
     <string name="go_to_filters">Ir a los filtros</string>
     <string name="install">Instalar</string>
-    <string name="start">Iniciar</string>
-    <string name="get_started">Requisitos para usar AdGuard</string>
-    <string name="adguard_conditions_title">Debe cumplir con estas dos condiciones  para que AdGuard funcione en su móvil:</string>
-    <string name="adguard_conditions_list1">Utilizar un navegador que soporte el bloqueo de contenido.</string>
-    <string name="adguard_conditions_list2">AdGuard debe estar habilitado en la configuración de bloqueo de contenido su navegador.</string>
-    <string name="choose_browser">Elegir navegador</string>
-    <string name="enable_adguard">Habilitar AdGuard en su navegador</string>
-    <string name="main_activity_adguard_info">AdGuard bloquea anuncios, protege su privacidad, aumenta la velocidad de carga de las páginas y reduce el uso de datos móviles.</string>
     <string name="exit">Salir</string>
     <string name="user_filter">Filtros de usuario</string>
     <string name="enter_rule_text">Ingrese la nueva regla</string>
@@ -79,10 +70,28 @@
     <string name="clearUserRulesButtonText">Eliminar todo</string>
     <string name="browseButtonText">Dar un vistazo</string>
     <string name="reportBug">Reportar un error</string>
-    <string name="description_about_other_adguard_product">¿Sabía usted que puede usar AdGuard en cualquier dispositivo, ordenador o sistema operativo? Aprenda más en nuestro sitio web.</string>
-    <string name="no_thanks">No gracias</string>
-    <string name="learn_more">Saber más</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Política de Privacidad</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">Acuerdo de Licencia</a></string>
-    <string name="too_many_filters_warning">Seleccionar demasiadas suscripciones de filtros puede ralentizar su navegación web significativamente.</string>
+    <string name="privacyPolicyLinkText">Política de Privacidad</string>
+    <string name="eulaLinkText">Acuerdo de Licencia</string>
+    <string name="delete">Eliminar</string>
+    <string name="confirmClearUserFilterMessage">¿Está seguro de que desea borrar los filtros? Esta operación no se puede deshacer.</string>
+    <string name="confirmRemoveUserRuleMessage">¿Está seguro de que desea eliminar esta regla? Esta operación no se puede deshacer.</string>
+    <string name="clear_filters_cache_title">Borrar la caché del filtro</string>
+    <string name="clear_filters_cache_summary">Borrar la caché de los filtros y actualizarlos</string>
+    <string name="clear_filters_cache_progress_message">Borrando caché y actualizando los filtros</string>
+    <string name="whitelist_title">Lista blanca</string>
+    <string name="addToWhitelistButtonText">Añadir sitio web</string>
+    <string name="clearWhitelistButtonText">Eliminar todo</string>
+    <string name="whitelistNewItemDialogTitle">Ingrese nombre de dominio</string>
+    <string name="whitelistNewItemErrorMessage">El nombre de dominio no es válido</string>
+    <string name="whitelistNewItemExistsErrorMessage">Este dominio ya está en la lista blanca</string>
+    <string name="confirmClearWhitelistMessage">¿Está seguro de que quiere borrar la lista blanca? Esta operación no se puede deshacer.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">¿Está seguro de que desea eliminar este dominio? Esta operación no se puede deshacer.</string>
+    <string name="emptyWhitelistTextViewText">La lista blanca está vacía</string>
+    <string name="report_dialog_title">Tipo de reporte</string>
+    <string name="reportTypeMissedAd">Anuncio o rastreador omitido</string>
+    <string name="reportTypeIncorrectBlocking">Bloqueo incorrecto</string>
+    <string name="reportTypeBugReport">Reportar un error</string>
+    <string name="reportTypeFeatureRequest">Solicitud de función</string>
+    <string name="reportTypeCustom">Otros</string>
+    <string name="overwrite_existing_rules">Sobrescribir reglas existentes</string>
 </resources>

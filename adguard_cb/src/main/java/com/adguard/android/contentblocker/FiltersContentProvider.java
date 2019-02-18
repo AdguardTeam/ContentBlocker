@@ -31,7 +31,6 @@ import java.io.FileNotFoundException;
 
 public class FiltersContentProvider extends ContentProvider {
 
-    public static final String ACTION_CONNECTED = "com.adguard.contentblocker.ACTION_CONNECTED";
     private String filtersPath;
 
     public FiltersContentProvider() {
@@ -40,9 +39,10 @@ public class FiltersContentProvider extends ContentProvider {
     @Override
     public ParcelFileDescriptor openFile(@NonNull Uri uri, @NonNull String mode) throws FileNotFoundException {
         ParcelFileDescriptor parcel = ParcelFileDescriptor.open(new File(filtersPath), ParcelFileDescriptor.MODE_READ_ONLY);
-        Log.i("FiltersContentProvider", "Browser opened filters...");
-        PreferencesService preferencesService = ServiceLocator.getInstance(getContext().getApplicationContext()).getPreferencesService();
+
+        PreferencesService preferencesService = ServiceLocator.getInstance(getContext()).getPreferencesService();
         preferencesService.incBrowserConnectedCount();
+
         return parcel;
     }
 

@@ -32,9 +32,8 @@
     <string name="stats_update_time">Оновлено:</string>
     <string name="filterVersionTemplate">Версія {0}.</string>
     <string name="filterUpdatedTemplate">Оновлено {0} в {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Версія {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nВсі права захищені.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nВсі права захищені.</string>
     <string name="rateAdguardButtonText">Оцінити AdGuard</string>
     <string name="officialSiteLabelText">Офіційний сайт</string>
     <string name="forumLabelText">Форум</string>
@@ -58,14 +57,6 @@
     <string name="check_filter_updates">Перевірити оновлення фільтрів</string>
     <string name="go_to_filters">Перейти до фільтрів</string>
     <string name="install">Встановити</string>
-    <string name="start">Запустити</string>
-    <string name="get_started">Почати</string>
-    <string name="adguard_conditions_title">Для роботи AdGuard повинні бути виконані дві умови:</string>
-    <string name="adguard_conditions_list1">Ви маєте використовувати браузер, який підтримує технологію блокування контенту.</string>
-    <string name="adguard_conditions_list2">В налаштуваннях блокування контенту цього браузеру необхідно включити AdGuard.</string>
-    <string name="choose_browser">Виберіть браузер</string>
-    <string name="enable_adguard">Включити AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard блокує рекламу, захищає вашу конфіденційність, підвищує швидкість завантаження сторінок і знижує використання мобільних даних.</string>
     <string name="exit">Вихід</string>
     <string name="user_filter">Фільтр користувача</string>
     <string name="enter_rule_text">Введіть текст правила</string>
@@ -79,10 +70,28 @@
     <string name="clearUserRulesButtonText">Видалити все</string>
     <string name="browseButtonText">Огляд</string>
     <string name="reportBug">Повідомити про помилку</string>
-    <string name="description_about_other_adguard_product">Ви знаєте, що ви можете використовувати AdGuard на будь-якому пристрої, комп\'ютері та ОС? Дізнайтеся більше на нашому сайті.</string>
-    <string name="no_thanks">Ні, дякую</string>
-    <string name="learn_more">Дізнатися більше</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Конфіденційність</a></string>
-    <string name="eulaLinkText">&lt;а href=\"https://adguard.com/ru/eula.html\"&gt;Угода&lt;/а&gt;</string>
-    <string name="too_many_filters_warning">Ви вибрали занадто багато фільтрів. Це може значно уповільнити швидкість завантаження сайтів.</string>
+    <string name="privacyPolicyLinkText">Конфіденційність</string>
+    <string name="eulaLinkText">Угода</string>
+    <string name="delete">Видалити</string>
+    <string name="confirmClearUserFilterMessage">Ви впевнені, що хочете очистити користувацький фільтр? Цю операцію не можна скасувати.</string>
+    <string name="confirmRemoveUserRuleMessage">Ви впевнені, що хочете видалити це правило? Цю операцію не можна скасувати.</string>
+    <string name="clear_filters_cache_title">Очистити кеш фільтра</string>
+    <string name="clear_filters_cache_summary">Очистити кеш фільтрів та оновити фільтри</string>
+    <string name="clear_filters_cache_progress_message">Очищення кешу та оновлення фільтрів</string>
+    <string name="whitelist_title">Білий список</string>
+    <string name="addToWhitelistButtonText">Додати веб-сайт</string>
+    <string name="clearWhitelistButtonText">Видалити все</string>
+    <string name="whitelistNewItemDialogTitle">Введіть доменне ім\'я</string>
+    <string name="whitelistNewItemErrorMessage">Доменне ім\'я недійсне</string>
+    <string name="whitelistNewItemExistsErrorMessage">Цей домен вже знаходиться в білому списку</string>
+    <string name="confirmClearWhitelistMessage">Ви впевнені, що хочете очистити білий список? Цю операцію не можна скасувати.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">Ви впевнені, що хочете видалити цей домен? Цю операцію не можна скасувати.</string>
+    <string name="emptyWhitelistTextViewText">Білий список порожній</string>
+    <string name="report_dialog_title">Тип звіту</string>
+    <string name="reportTypeMissedAd">Пропущена реклама або лічильник</string>
+    <string name="reportTypeIncorrectBlocking">Некоректне блокування</string>
+    <string name="reportTypeBugReport">Повідомити про помилку</string>
+    <string name="reportTypeFeatureRequest">Запит на функцію</string>
+    <string name="reportTypeCustom">Інше</string>
+    <string name="overwrite_existing_rules">Перезаписати існуючі правила</string>
 </resources>

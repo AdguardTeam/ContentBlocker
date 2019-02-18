@@ -32,9 +32,8 @@
     <string name="stats_update_time">Aktualizováno:</string>
     <string name="filterVersionTemplate">Verze {0}.</string>
     <string name="filterUpdatedTemplate">Aktualizováno {0} v {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Verze {0}.</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nVšechna práva vyhrazena.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nVšechna práva vyhrazena.</string>
     <string name="rateAdguardButtonText">Ohodnotit AdGuard.</string>
     <string name="officialSiteLabelText">Oficiální stránka</string>
     <string name="forumLabelText">Fórum</string>
@@ -58,14 +57,6 @@
     <string name="check_filter_updates">Zkontrolovat aktualizace filtrů</string>
     <string name="go_to_filters">Přejít na filtry</string>
     <string name="install">Instalovat</string>
-    <string name="start">Start</string>
-    <string name="get_started">Jak začít</string>
-    <string name="adguard_conditions_title">Pro funkčnost AdGuard je třeba dodržet 2 podmínky:</string>
-    <string name="adguard_conditions_list1">Potřebujete prohlížeč, který podporuje technologii blokování obsahu.</string>
-    <string name="adguard_conditions_list2">AdGuard musí být zapnutý v nastavení prohlížeče, záložka blokování obsahu.</string>
-    <string name="choose_browser">Vybrat prohlížeč</string>
-    <string name="enable_adguard">Zapnout AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard blokuje reklamy, chrání vaše soukromí, zrychluje načítání stránek a snižuje využití mobilních dat.</string>
     <string name="exit">Konec</string>
     <string name="user_filter">Uživatelský filtr</string>
     <string name="enter_rule_text">Zadej text pravidla</string>
@@ -79,10 +70,30 @@
     <string name="clearUserRulesButtonText">Odstranit vše</string>
     <string name="browseButtonText">Procházet</string>
     <string name="reportBug">Nahlásit chybu</string>
-    <string name="description_about_other_adguard_product">Víte, že AdGuard můžete používat na kterémkoli zařízení, počítači nebo operačním systému ? Více se dozvíte na našich webových stránkách.</string>
-    <string name="no_thanks">Ne děkuji</string>
-    <string name="learn_more">Zjistit více</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Zásady ochrany osobních údajů</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="too_many_filters_warning">Vybrali jste příliš mnoho filtrů. To může výrazně zpomalit prohlížení webů.</string>
+    <string name="privacyPolicyLinkText">Zásady ochrany osobních údajů</string>
+    <string name="eulaLinkText">EULA</string>
+    <string name="delete">Smazat</string>
+    <string name="confirmClearUserFilterMessage">Opravdu chcete vyčistit uživatelský filtr? Tato operace nemůže být vrácena.</string>
+    <string name="confirmRemoveUserRuleMessage">Opravdu chcete smazat toto pravidlo? Tato operace nemůže být vrácena.</string>
+    <string name="clear_filters_cache_title">Vyčistit cache filtrů</string>
+    <string name="clear_filters_cache_summary">Vyčistí cache filtrů a aktualizuje filtry</string>
+    <string name="clear_filters_cache_progress_message">Čistím cache a aktualizuji filtry...</string>
+    <string name="whitelist_title">Seznam povolených webů</string>
+    <string name="addToWhitelistButtonText">Přidat stránku</string>
+    <string name="clearWhitelistButtonText">Odebrat vše</string>
+    <string name="whitelistNewItemDialogTitle">Vložit jméno domény</string>
+    <string name="whitelistNewItemErrorMessage">Jméno domény je nesprávné</string>
+    <string name="whitelistNewItemExistsErrorMessage">Doména je již na seznamu povolených webů</string>
+    <string name="confirmClearWhitelistMessage">Opravdu chcete vyčistit seznam povolených webů? Tato operace nemůže být vrácena.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">Opravdu chcete smazat tuto doménu? Tato operace nemůže být vrácena.</string>
+    <string name="emptyWhitelistTextViewText">Seznam povolených webů je prázdný</string>
+    <string name="report_dialog_title">Typ zprávy</string>
+    <string name="reportTypeMissedAd">Nezachycená reklama nebo slídič</string>
+    <string name="reportTypeIncorrectBlocking">Nesprávné blokování</string>
+    <string name="reportTypeBugReport">Hlášení chyby</string>
+    <string name="reportTypeFeatureRequest">Požadavek na novou funkci</string>
+    <string name="reportTypeCustom">Ostatní</string>
+    <string name="overwrite_existing_rules">Přepsat existující pravidla</string>
+    <string name="other_product_message">Tato aplikace funguje pouze v prohlížečích Samsung a Yandex. Není to přesně to, co potřebujete? Podívejte se na další produkty AdGuardu na našich webových stránkách</string>
+    <string name="go_to_products">Přejít na produkty</string>
 </resources>

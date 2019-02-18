@@ -32,9 +32,8 @@
     <string name="stats_update_time">最終更新日時：</string>
     <string name="filterVersionTemplate">バージョン：{0}</string>
     <string name="filterUpdatedTemplate">{0}を{1}に更新しました。</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">バージョン {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAll Rights Reserved.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nAll Rights Reserved.</string>
     <string name="rateAdguardButtonText">AdGuard を評価</string>
     <string name="officialSiteLabelText">公式サイト</string>
     <string name="forumLabelText">フォーラム</string>
@@ -58,14 +57,6 @@
     <string name="check_filter_updates">フィルターの更新を確認</string>
     <string name="go_to_filters">フィルターを確認する</string>
     <string name="install">インストール</string>
-    <string name="start">はじめる</string>
-    <string name="get_started">はじめる</string>
-    <string name="adguard_conditions_title">AdGuard の動作には次の2つの条件を満たす必要があります :</string>
-    <string name="adguard_conditions_list1">コンテンツブロッカーが利用できるブラウザを使用する必要があります。</string>
-    <string name="adguard_conditions_list2">ブラウザ上のコンテンツブロッカーの設定から AdGuard を有効にする必要があります。</string>
-    <string name="choose_browser">ブラウザを選択</string>
-    <string name="enable_adguard">AdGuard を有効にする</string>
-    <string name="main_activity_adguard_info">AdGuard は広告をブロックやプライバシーを保護を行い、さらにページの読み込み速度の向上やモバイルデータ通信量の削減が期待できます。</string>
     <string name="exit">終了</string>
     <string name="user_filter">ユーザーフィルター</string>
     <string name="enter_rule_text">ルールを追加</string>
@@ -79,10 +70,30 @@
     <string name="clearUserRulesButtonText">すべて削除</string>
     <string name="browseButtonText">参照</string>
     <string name="reportBug">バグを報告</string>
-    <string name="description_about_other_adguard_product">AdGuardはどんなデバイス、OSでも利用できます。詳しくはAdGuardウェブサイトで。</string>
-    <string name="no_thanks">いえ、結構です</string>
-    <string name="learn_more">もっと知る</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">プライバシーポリシー</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">利用許諾契約(EULA)</a></string>
-    <string name="too_many_filters_warning">有効にされているフィルタが多すぎます。フィルタの数を多くすると、ブラウザの表示速度が低下する可能性があります。</string>
+    <string name="privacyPolicyLinkText">プライバシーポリシー</string>
+    <string name="eulaLinkText">利用許諾契約(EULA)</string>
+    <string name="delete">削除</string>
+    <string name="confirmClearUserFilterMessage">ユーザーフィルタを削除してよろしいですか？この操作は元に戻すことはできません。</string>
+    <string name="confirmRemoveUserRuleMessage">このルールを削除してよろしいですか？この操作は元に戻すことはできません。</string>
+    <string name="clear_filters_cache_title">フィルタキャッシュをクリアする</string>
+    <string name="clear_filters_cache_summary">フィルタキャッシュをクリアし、フィルタを更新します</string>
+    <string name="clear_filters_cache_progress_message">キャッシュの消去とフィルタの更新</string>
+    <string name="whitelist_title">ホワイトリスト</string>
+    <string name="addToWhitelistButtonText">ウェブサイトを追加</string>
+    <string name="clearWhitelistButtonText">すべて削除</string>
+    <string name="whitelistNewItemDialogTitle">ドメイン名を入力</string>
+    <string name="whitelistNewItemErrorMessage">ドメイン名を正しく入力してください</string>
+    <string name="whitelistNewItemExistsErrorMessage">このドメインはすでにホワイトリストに登録されています</string>
+    <string name="confirmClearWhitelistMessage">ホワイトリストを削除してよろしいですか？この操作は元に戻すことはできません。</string>
+    <string name="confirmRemoveWhitelistDomainMessage">このドメインを削除してよろしいですか？この操作は元に戻すことはできません。</string>
+    <string name="emptyWhitelistTextViewText">ホワイトリストは設定されていません</string>
+    <string name="report_dialog_title">報告の種類</string>
+    <string name="reportTypeMissedAd">広告の見落としまたはトラッカー</string>
+    <string name="reportTypeIncorrectBlocking">不適切なブロック</string>
+    <string name="reportTypeBugReport">バグを報告</string>
+    <string name="reportTypeFeatureRequest">機能リクエスト</string>
+    <string name="reportTypeCustom">その他</string>
+    <string name="overwrite_existing_rules">既存のルールを上書きする</string>
+    <string name="other_product_message">本アプリは、SamsungブラウザとYandexブラウザでのみ動作します。お探ししている用ものと多少違う場合は、当社Webサイトで他のAdGuard製品をチェックしてください。</string>
+    <string name="go_to_products">製品一覧へ移動する</string>
 </resources>

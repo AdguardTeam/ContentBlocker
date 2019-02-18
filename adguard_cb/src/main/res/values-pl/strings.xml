@@ -32,9 +32,8 @@
     <string name="stats_update_time">Zaktualizowano:</string>
     <string name="filterVersionTemplate">Wersja {0}.</string>
     <string name="filterUpdatedTemplate">Zaktualizowano {0} o {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Wersja {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nWszelkie prawa zastrzeżone.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nWszelkie prawa zastrzeżone.</string>
     <string name="rateAdguardButtonText">Oceń AdGuard</string>
     <string name="officialSiteLabelText">Oficjalna strona</string>
     <string name="forumLabelText">Forum</string>
@@ -58,14 +57,6 @@
     <string name="check_filter_updates">Sprawdź aktualizacje filtra</string>
     <string name="go_to_filters">Przejdź do filtrów</string>
     <string name="install">Instaluj</string>
-    <string name="start">Start</string>
-    <string name="get_started">Zacznijmy</string>
-    <string name="adguard_conditions_title">Dwa warunki muszą zostać spełnione by AdGuard mógł działać:</string>
-    <string name="adguard_conditions_list1">Musisz używać przeglądarki, która wspiera technologię blokowania zawartości.</string>
-    <string name="adguard_conditions_list2">AdGuard musi być włączony w ustawieniach blokowania zawartości przeglądarki.</string>
-    <string name="choose_browser">Wybierz przeglądarkę</string>
-    <string name="enable_adguard">Włącz AdGuarda</string>
-    <string name="main_activity_adguard_info">AdGuard blokuje reklamy, chroni Twoją prywatność, zwiększa szybkość ładowania stron i zmniejsza zużycie danych mobilnych.</string>
     <string name="exit">Wyjdź</string>
     <string name="user_filter">Filtr użytkownika</string>
     <string name="enter_rule_text">Podaj tekst reguły</string>
@@ -79,10 +70,30 @@
     <string name="clearUserRulesButtonText">Usuń wszystko</string>
     <string name="browseButtonText">Przeglądaj</string>
     <string name="reportBug">Raportuj błąd</string>
-    <string name="description_about_other_adguard_product">Czy wiesz, że możesz używać AdGuard na dowolnym urządzeniu, komputerze i systemie operacyjnym? Dowiedz się więcej na naszej stronie internetowej.</string>
-    <string name="no_thanks">Nie, dziękuję</string>
-    <string name="learn_more">Dowiedz się więcej</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Polityka Prywatności</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="too_many_filters_warning">Wybrałeś za dużo subskrypcji filtrów. Może to skutkować znaczącym spowolnieniem przeglądania sieci.</string>
+    <string name="privacyPolicyLinkText">Polityka Prywatności</string>
+    <string name="eulaLinkText">EULA</string>
+    <string name="delete">Usuń</string>
+    <string name="confirmClearUserFilterMessage">Czy na pewno chcesz wyczyścić filtr użytkownika? Ta operacja nie może zostać cofnięta.</string>
+    <string name="confirmRemoveUserRuleMessage">Czy na pewno chcesz usunąć tę regułę? Ta operacja nie może zostać cofnięta.</string>
+    <string name="clear_filters_cache_title">Wyczyść pamięć podręczną filtru</string>
+    <string name="clear_filters_cache_summary">Czyści pamięć podręczną filtrów i aktualizuje filtry</string>
+    <string name="clear_filters_cache_progress_message">Czyszczenie pamięci podręcznej i aktualizowanie filtrów</string>
+    <string name="whitelist_title">Biała lista</string>
+    <string name="addToWhitelistButtonText">Dodaj stronę internetową</string>
+    <string name="clearWhitelistButtonText">Usuń wszystko</string>
+    <string name="whitelistNewItemDialogTitle">Wpisz nazwę domeny</string>
+    <string name="whitelistNewItemErrorMessage">Nazwa domeny jest nieprawidłowa</string>
+    <string name="whitelistNewItemExistsErrorMessage">Ta domena jest już na białej liście</string>
+    <string name="confirmClearWhitelistMessage">Czy na pewno chcesz wyczyścić białą listę? Ta operacja nie może zostać cofnięta.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">Czy na pewno chcesz usunąć tę domenę? Ta operacja nie może zostać cofnięta.</string>
+    <string name="emptyWhitelistTextViewText">Biała lista jest pusta</string>
+    <string name="report_dialog_title">Typ raportu</string>
+    <string name="reportTypeMissedAd">Pominięta reklama lub element śledzący</string>
+    <string name="reportTypeIncorrectBlocking">Nieprawidłowe blokowanie</string>
+    <string name="reportTypeBugReport">Zgłoszenie błędu</string>
+    <string name="reportTypeFeatureRequest">Żądanie funkcji</string>
+    <string name="reportTypeCustom">Inne</string>
+    <string name="overwrite_existing_rules">Zastąp istniejące reguły</string>
+    <string name="other_product_message">Ta aplikacja działa tylko w przeglądarkach Samsung i Yandex. Czy nie jest to dokładnie to, czego potrzebujesz? Sprawdź inne produkty AdGuard na naszej stronie internetowej</string>
+    <string name="go_to_products">Idź do produktów</string>
 </resources>

@@ -32,9 +32,8 @@
     <string name="stats_update_time">Güncellendi:</string>
     <string name="filterVersionTemplate">Sürüm {0}.</string>
     <string name="filterUpdatedTemplate">Güncellendi {0} {1}</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Sürüm {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nTüm Hakları Saklıdır.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nTüm Hakları Saklıdır.</string>
     <string name="rateAdguardButtonText">AdGuard\'ı Oyla</string>
     <string name="officialSiteLabelText">Resmi site</string>
     <string name="forumLabelText">Forum</string>
@@ -58,14 +57,6 @@
     <string name="check_filter_updates">Filtreleri güncelle</string>
     <string name="go_to_filters">Filtrelere git</string>
     <string name="install">Yükle</string>
-    <string name="start">Başla</string>
-    <string name="get_started">Başlangıç</string>
-    <string name="adguard_conditions_title">AdGuard\'ın çalışabilmesi için iki şartın sağlanması gerekiyor:</string>
-    <string name="adguard_conditions_list1">İçerik engelleme teknolojisini destekleyen bir tarayıcı kullanmalısınız.</string>
-    <string name="adguard_conditions_list2">Bu tarayıcının içerik engelleme ayarlarında AdGuard\'ın etkinleştirilmesi gerekiyor.</string>
-    <string name="choose_browser">Tarayıcı seç</string>
-    <string name="enable_adguard">AdGuard\'ı Etkinleştir</string>
-    <string name="main_activity_adguard_info">AdGuard reklamları engeller, gizliliğinizi korur, sayfa yükleme hızını artırır ve mobil veri kullanımınızı azaltır.</string>
     <string name="exit">Çıkış</string>
     <string name="user_filter">Kullanıcı Filtresi</string>
     <string name="enter_rule_text">Kural metni girin</string>
@@ -79,10 +70,30 @@
     <string name="clearUserRulesButtonText">Tümünü sil</string>
     <string name="browseButtonText">Gözat</string>
     <string name="reportBug">Hata Bildir</string>
-    <string name="description_about_other_adguard_product">AdGuard\'ı tüm cihazlarda, bilgisayar ve diğer işletim sistemlerinde kullanabileceğinizi biliyor musunuz? Sitemizden daha fazla bilgi edinin.</string>
-    <string name="no_thanks">Hayır teşekkürler</string>
-    <string name="learn_more">Göster bakalım!</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Gizlilik Sözleşmesi</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="too_many_filters_warning">Çok fazla filtre seçtiniz. Çok fazla filtre seçmek gezinme hızınızı önemli derecede yavaşlatabilir.</string>
+    <string name="privacyPolicyLinkText">Gizlilik Sözleşmesi</string>
+    <string name="eulaLinkText">EULA</string>
+    <string name="delete">Sil</string>
+    <string name="confirmClearUserFilterMessage">Kullanıcı filtresini temizlemek istediğinize emin misiniz? Bu eylem geri alınamaz.</string>
+    <string name="confirmRemoveUserRuleMessage">Bu kuralı silmek istediğinize emin misiniz? Bu eylem geri alınamaz.</string>
+    <string name="clear_filters_cache_title">Filtre önbelleğini temizle</string>
+    <string name="clear_filters_cache_summary">Filtre önbelleğini temizler ve filtreleri günceller</string>
+    <string name="clear_filters_cache_progress_message">Önbellek temizleniyor ve filtreler güncelleniyor</string>
+    <string name="whitelist_title">Beyazliste</string>
+    <string name="addToWhitelistButtonText">Site ekle</string>
+    <string name="clearWhitelistButtonText">Tümünü sil</string>
+    <string name="whitelistNewItemDialogTitle">Alan adı gir</string>
+    <string name="whitelistNewItemErrorMessage">Alan adı geçerli değil</string>
+    <string name="whitelistNewItemExistsErrorMessage">Bu alan adı zaten beyazlistede var</string>
+    <string name="confirmClearWhitelistMessage">Beyazlisteyi temizlemek istediğinize emin misiniz? Bu eylem geri alınamaz.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">Bu alan adını silmek istediğinize emin misiniz? Bu eylem geri alınamaz.</string>
+    <string name="emptyWhitelistTextViewText">Beyazliste boş</string>
+    <string name="report_dialog_title">Rapor türü</string>
+    <string name="reportTypeMissedAd">Engellenmemiş reklam veya takipçi</string>
+    <string name="reportTypeIncorrectBlocking">Yanlış engelleme</string>
+    <string name="reportTypeBugReport">Hata raporlama</string>
+    <string name="reportTypeFeatureRequest">Bir önerim var</string>
+    <string name="reportTypeCustom">Diğer</string>
+    <string name="overwrite_existing_rules">Varolan kuralın üzerine yaz</string>
+    <string name="other_product_message">Bu uygulama sadece Samsung ve Yandex tarayıcılarda çalışır. Tam olarak ihtiyacınız bu değil mi? Sitemizdeki diğer AdGuard ürünlerine bakın</string>
+    <string name="go_to_products">Ürünlere gidin</string>
 </resources>

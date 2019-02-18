@@ -71,7 +71,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="2dp"
-                        android:text="&#9733;"
+                        android:text="@string/star_symbols"
                         android:textColor="@color/primaryText"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -94,16 +94,11 @@
                 android:textColor="@color/primaryText" />
 
             <Button
-                android:id="@+id/start_yandex_settings"
+                android:id="@+id/setting_adguard_yandex"
                 style="@style/Widget.AppCompat.Button.Borderless.CardView"
                 android:text="@string/settings"
                 android:textColor="@color/primaryText" />
 
-            <Button
-                android:id="@+id/start_yandex_browser"
-                style="@style/Widget.AppCompat.Button.Borderless.CardView"
-                android:text="@string/start"
-                android:textColor="@color/primaryText" />
         </LinearLayout>
     </LinearLayout>
 

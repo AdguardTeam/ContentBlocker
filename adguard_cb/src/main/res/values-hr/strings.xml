@@ -32,7 +32,6 @@
     <string name="stats_update_time">Ažurirano:</string>
     <string name="filterVersionTemplate">Verzija {0}.</string>
     <string name="filterUpdatedTemplate">Ažurirano {0} u {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Verzija {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nSva prava pridržana.</string>
     <string name="rateAdguardButtonText">Ocjeni AdGuard</string>
@@ -58,14 +57,6 @@
     <string name="check_filter_updates">Provjerite ažuriranja filtera</string>
     <string name="go_to_filters">Odi do filtera</string>
     <string name="install">Instalacija</string>
-    <string name="start">Pokretanje</string>
-    <string name="get_started">Započnite</string>
-    <string name="adguard_conditions_title">Dva zahtjeva moraju biti ispunjena da bi AdGuard radio:</string>
-    <string name="adguard_conditions_list1">Trebali biste koristiti preglednik koji podržava tehnologiju blokiranja elemenata.</string>
-    <string name="adguard_conditions_list2">AdGuard mora biti omogućen u postakama blokiranja elemenata u pregledniku.</string>
-    <string name="choose_browser">Odaberite preglednik</string>
-    <string name="enable_adguard">Omogući AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard blokira oglase, štiti vašu privatnost, ubzava učitavanje web stranica i smanjuje potrošnju mobilnih podataka.</string>
     <string name="exit">Izlaz</string>
     <string name="user_filter">Korisnički filter</string>
     <string name="enter_rule_text">Unesite tekst pravila</string>
@@ -81,5 +72,4 @@
     <string name="reportBug">Prijavite pogrešku</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Politika privatnosti</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="too_many_filters_warning">Odabrali ste previše filtera. Može Vam se značajno usporiti pregledavanje weba.</string>
 </resources>

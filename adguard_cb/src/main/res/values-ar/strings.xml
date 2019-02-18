@@ -93,4 +93,7 @@
     <string name="reportTypeBugReport">تقرير الشوائب</string>
     <string name="reportTypeFeatureRequest">طلب الميزة</string>
     <string name="reportTypeCustom">آخر</string>
+    <string name="overwrite_existing_rules">الكتابة فوق القواعد الموجودة</string>
+    <string name="other_product_message">هذا التطبيق يعمل في متصفحات سامسونج وياندكس فقط ليس تماما ما تحتاجه؟ تحقق من منتجات ادجوارد الأخرى على موقعنا</string>
+    <string name="go_to_products">الذهاب إلى المنتجات</string>
 </resources>

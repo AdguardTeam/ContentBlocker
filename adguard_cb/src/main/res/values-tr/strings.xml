@@ -94,4 +94,6 @@
     <string name="reportTypeFeatureRequest">Bir önerim var</string>
     <string name="reportTypeCustom">Diğer</string>
     <string name="overwrite_existing_rules">Varolan kuralın üzerine yaz</string>
+    <string name="other_product_message">Bu uygulama sadece Samsung ve Yandex tarayıcılarda çalışır. Tam olarak ihtiyacınız bu değil mi? Sitemizdeki diğer AdGuard ürünlerine bakın</string>
+    <string name="go_to_products">Ürünlere gidin</string>
 </resources>

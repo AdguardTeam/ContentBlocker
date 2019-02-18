@@ -32,9 +32,8 @@
     <string name="stats_update_time">Bijgewerkt:</string>
     <string name="filterVersionTemplate">Versie {0}.</string>
     <string name="filterUpdatedTemplate">Bigewerkt {0} op {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Versie {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAlle rechten voorbehouden.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nAlle rechten voorbehouden.</string>
     <string name="rateAdguardButtonText">Beoordeer AdGuard</string>
     <string name="officialSiteLabelText">Officiële website</string>
     <string name="forumLabelText">Forum</string>
@@ -94,4 +93,5 @@
     <string name="reportTypeBugReport">Bug rapport</string>
     <string name="reportTypeFeatureRequest">Functie verzoek</string>
     <string name="reportTypeCustom">Andere</string>
+    <string name="overwrite_existing_rules">Bestaande regels overschrijven</string>
 </resources>

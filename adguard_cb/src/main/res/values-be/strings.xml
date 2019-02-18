@@ -32,9 +32,8 @@
     <string name="stats_update_time">Абноўлена:</string>
     <string name="filterVersionTemplate">Версія {0}.</string>
     <string name="filterUpdatedTemplate">Абноўлена {0} у {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Версія {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nУсе правы захаваныя.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nУсе правы захаваныя.</string>
     <string name="rateAdguardButtonText">Ацаніць AdGuard</string>
     <string name="officialSiteLabelText">Афіцыйны сайт</string>
     <string name="forumLabelText">Форум</string>

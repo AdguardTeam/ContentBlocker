@@ -32,9 +32,8 @@
     <string name="stats_update_time">Aktualizované:</string>
     <string name="filterVersionTemplate">Verzia {0}.</string>
     <string name="filterUpdatedTemplate">Aktualizované {0} o {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Verzia {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nVšetky práva vyhradené.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nVšetky práva vyhradené.</string>
     <string name="rateAdguardButtonText">Ohodnoťte AdGuard</string>
     <string name="officialSiteLabelText">Oficiálna stránka</string>
     <string name="forumLabelText">Fórum</string>
@@ -95,4 +94,6 @@
     <string name="reportTypeFeatureRequest">Požiadavka na funkciu</string>
     <string name="reportTypeCustom">Iné</string>
     <string name="overwrite_existing_rules">Prepísať existujúce pravidlá</string>
+    <string name="other_product_message">Táto aplikácia funguje iba v prehliadačoch Samsung a Yandex. Nie je to presne to, čo potrebujete? Pozrite sa na iné produkty AdGuard na našej webovej stránke</string>
+    <string name="go_to_products">Ísť na Produkty</string>
 </resources>

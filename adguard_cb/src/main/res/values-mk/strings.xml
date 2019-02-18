@@ -32,7 +32,6 @@
     <string name="stats_update_time">Ажурирани:</string>
     <string name="filterVersionTemplate">Верзија {0}.</string>
     <string name="filterUpdatedTemplate">Ажурирано на {0} во {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Верзија {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAll Rights Reserved.</string>
     <string name="rateAdguardButtonText">Оцени го AdGuard</string>

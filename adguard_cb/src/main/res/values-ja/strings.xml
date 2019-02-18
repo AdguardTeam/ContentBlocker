@@ -32,9 +32,8 @@
     <string name="stats_update_time">最終更新日時：</string>
     <string name="filterVersionTemplate">バージョン：{0}</string>
     <string name="filterUpdatedTemplate">{0}を{1}に更新しました。</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">バージョン {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAll Rights Reserved.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nAll Rights Reserved.</string>
     <string name="rateAdguardButtonText">AdGuard を評価</string>
     <string name="officialSiteLabelText">公式サイト</string>
     <string name="forumLabelText">フォーラム</string>
@@ -71,6 +70,30 @@
     <string name="clearUserRulesButtonText">すべて削除</string>
     <string name="browseButtonText">参照</string>
     <string name="reportBug">バグを報告</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">プライバシーポリシー</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">利用許諾契約(EULA)</a></string>
+    <string name="privacyPolicyLinkText">プライバシーポリシー</string>
+    <string name="eulaLinkText">利用許諾契約(EULA)</string>
+    <string name="delete">削除</string>
+    <string name="confirmClearUserFilterMessage">ユーザーフィルタを削除してよろしいですか？この操作は元に戻すことはできません。</string>
+    <string name="confirmRemoveUserRuleMessage">このルールを削除してよろしいですか？この操作は元に戻すことはできません。</string>
+    <string name="clear_filters_cache_title">フィルタキャッシュをクリアする</string>
+    <string name="clear_filters_cache_summary">フィルタキャッシュをクリアし、フィルタを更新します</string>
+    <string name="clear_filters_cache_progress_message">キャッシュの消去とフィルタの更新</string>
+    <string name="whitelist_title">ホワイトリスト</string>
+    <string name="addToWhitelistButtonText">ウェブサイトを追加</string>
+    <string name="clearWhitelistButtonText">すべて削除</string>
+    <string name="whitelistNewItemDialogTitle">ドメイン名を入力</string>
+    <string name="whitelistNewItemErrorMessage">ドメイン名を正しく入力してください</string>
+    <string name="whitelistNewItemExistsErrorMessage">このドメインはすでにホワイトリストに登録されています</string>
+    <string name="confirmClearWhitelistMessage">ホワイトリストを削除してよろしいですか？この操作は元に戻すことはできません。</string>
+    <string name="confirmRemoveWhitelistDomainMessage">このドメインを削除してよろしいですか？この操作は元に戻すことはできません。</string>
+    <string name="emptyWhitelistTextViewText">ホワイトリストは設定されていません</string>
+    <string name="report_dialog_title">報告の種類</string>
+    <string name="reportTypeMissedAd">広告の見落としまたはトラッカー</string>
+    <string name="reportTypeIncorrectBlocking">不適切なブロック</string>
+    <string name="reportTypeBugReport">バグを報告</string>
+    <string name="reportTypeFeatureRequest">機能リクエスト</string>
+    <string name="reportTypeCustom">その他</string>
+    <string name="overwrite_existing_rules">既存のルールを上書きする</string>
+    <string name="other_product_message">本アプリは、SamsungブラウザとYandexブラウザでのみ動作します。お探ししている用ものと多少違う場合は、当社Webサイトで他のAdGuard製品をチェックしてください。</string>
+    <string name="go_to_products">製品一覧へ移動する</string>
 </resources>

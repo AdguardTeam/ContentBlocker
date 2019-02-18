@@ -32,9 +32,8 @@
     <string name="stats_update_time">Uppdaterad:</string>
     <string name="filterVersionTemplate">Version {0}.</string>
     <string name="filterUpdatedTemplate">Uppdaterade {0} at {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Version {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAlla rättigheter förbehållna.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nAlla rättigheter förbehållna.</string>
     <string name="rateAdguardButtonText">Betygsätt AdGuard</string>
     <string name="officialSiteLabelText">Officiell webbplats</string>
     <string name="forumLabelText">Forum</string>
@@ -71,6 +70,30 @@
     <string name="clearUserRulesButtonText">Ta bort allt</string>
     <string name="browseButtonText">Sök</string>
     <string name="reportBug">Rapportera bugg</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Sekretesspolicy</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="privacyPolicyLinkText">Sekretesspolicy</string>
+    <string name="eulaLinkText">EULA</string>
+    <string name="delete">Ta bort</string>
+    <string name="confirmClearUserFilterMessage">Är du säker på att ta bort det egna filtret? Åtgärden kan inte ångras</string>
+    <string name="confirmRemoveUserRuleMessage">Är du säker på att ta bort den här regeln? Åtgärden kan inte ångras.</string>
+    <string name="clear_filters_cache_title">Tömmer filtercachen</string>
+    <string name="clear_filters_cache_summary">Tömmer filtercachen och uppdaterar filtren</string>
+    <string name="clear_filters_cache_progress_message">Tömmer cachen och uppdaterar filter</string>
+    <string name="whitelist_title">Vitlista</string>
+    <string name="addToWhitelistButtonText">Lägg till webbadress</string>
+    <string name="clearWhitelistButtonText">Ta bort allt</string>
+    <string name="whitelistNewItemDialogTitle">Skriv in domännamn</string>
+    <string name="whitelistNewItemErrorMessage">Ogiltigt domännamn</string>
+    <string name="whitelistNewItemExistsErrorMessage">Det här domännamnet finns redan i Vitlistan</string>
+    <string name="confirmClearWhitelistMessage">Är du säker på att tömma Vitlistan? Åtgärden kan inte ångras.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">Är du säker på att du vill ta bort domänen? Åtgärden kan inte ångras.</string>
+    <string name="emptyWhitelistTextViewText">Vitlistan är tom</string>
+    <string name="report_dialog_title">Rapporttyp</string>
+    <string name="reportTypeMissedAd">Missad annons eller spårare</string>
+    <string name="reportTypeIncorrectBlocking">Felaktig blockering</string>
+    <string name="reportTypeBugReport">Buggrapport</string>
+    <string name="reportTypeFeatureRequest">Funktionsönskemål</string>
+    <string name="reportTypeCustom">Annat</string>
+    <string name="overwrite_existing_rules">Skriv över befintliga regler</string>
+    <string name="other_product_message">Den här appen fungerar endast med webbläsare från Samsung och Yandex. Inte precis det du behöver? Kontrollera AdGuard andra produkter på vår hemsida.</string>
+    <string name="go_to_products">Gå till Produkter</string>
 </resources>

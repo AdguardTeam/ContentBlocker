@@ -32,7 +32,6 @@
     <string name="stats_update_time">আপডেট করা হয়েছে:</string>
     <string name="filterVersionTemplate">সংস্করণ {0}</string>
     <string name="filterUpdatedTemplate">{0} কে আপডেট করা হয়েছে {1} এ</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">সংস্করণ {0}</string>
     <string name="copyrightInfoTextViewText">© ২০০৯-২০১৮ Adguard সফটওয়্যার লিমিটেড\nসর্বস্বত্ব সংরক্ষিত।</string>
     <string name="rateAdguardButtonText">AdGuard রেটিং দিন</string>

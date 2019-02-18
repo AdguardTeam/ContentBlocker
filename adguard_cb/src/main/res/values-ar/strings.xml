@@ -32,9 +32,8 @@
     <string name="stats_update_time">محدث:</string>
     <string name="filterVersionTemplate">الإصدار {0}.</string>
     <string name="filterUpdatedTemplate">تم تحديث {0} في {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">الإصدار {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nجميع الحقوق محفوظه.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nجميع الحقوق محفوظه.</string>
     <string name="rateAdguardButtonText">AdGuardقيم تطبيق</string>
     <string name="officialSiteLabelText">الموقع الرسمي</string>
     <string name="forumLabelText">منتدى للنقاش</string>

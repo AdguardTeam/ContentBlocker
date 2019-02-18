@@ -5,11 +5,11 @@
     <string name="main_info">Este aplicativo é uma extensão para navegadores que suportam bloqueio de conteúdo.\n\nAtualmente, existem dois desses navegadores:\n\n1. Samsung Internet browser\n2. Yandex Browser\n\nCom a ajuda deste aplicativo você pode bloquear todos os anúncios nesses navegadores.\n\nAlém disso, você pode selecionar quais filtros usar nas Configurações.</string>
     <string name="progressGenericErrorText">Ocorreu um erro!</string>
     <string name="importUserRulesSuccessResultMessage">{0} filtro(s) importado(s) com sucesso!</string>
-    <string name="importUserRulesErrorResultMessage">Erro ao importar os filtros</string>
+    <string name="importUserRulesErrorResultMessage">Erro ao importar os filtros!</string>
     <string name="importUserRulesProgressDialogTitle">Importação em progresso</string>
     <string name="importUserRulesProgressDialogMessage">Carregando...</string>
     <string name="checkUpdatesProgressDialogTitle">Verificando atualizações</string>
-    <string name="checkUpdatesProgressDialogMessage">Verificando atualizações, por favor, aguarde...</string>
+    <string name="checkUpdatesProgressDialogMessage">Verificando atualizações. Por favor, aguarde...</string>
     <string name="checkUpdatesErrorResultMessage">Falha na atualização. Por favor, tente novamente mais tarde.</string>
     <string name="checkUpdatesZeroResultMessage">Você está usando as versões mais recentes dos filtros.</string>
     <string name="checkUpdatesOneResultMessage">Um filtro foi atualizado:{0}</string>
@@ -19,7 +19,7 @@
     <string name="about">Sobre</string>
     <string name="settings">Configurações</string>
     <string name="pref_autoupdate_filters">Atualização automática de filtros</string>
-    <string name="pref_summary_autoupdate_filters">Atualize filtros automaticamente</string>
+    <string name="pref_summary_autoupdate_filters">Atualiza os filtros automaticamente</string>
     <string name="pref_update_wifi_only">Atualize apenas usando Wi-Fi</string>
     <string name="pref_summary_update_wifi_only">O AdGuard receberá atualizações de filtro somente por Wi-Fi.</string>
     <string name="pref_show_useful_ads">Mostrar anúncios úteis</string>
@@ -32,9 +32,8 @@
     <string name="stats_update_time">Atualizado:</string>
     <string name="filterVersionTemplate">Versão {0}.</string>
     <string name="filterUpdatedTemplate">Atualizado {0} em {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Versão {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nTodos os direitos reservados.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nTodos os direitos reservados.</string>
     <string name="rateAdguardButtonText">Avalie AdGuard</string>
     <string name="officialSiteLabelText">Site oficial</string>
     <string name="forumLabelText">Fórum</string>
@@ -43,7 +42,7 @@
     <string name="install_yandex_browser">Instalar Yandex Browser</string>
     <string name="issuesButtonText">Reportar Erro</string>
     <string name="githubLabelText">Código-fonte</string>
-    <string name="copyrightMessage">O AdGuard Bloqueador de Conteúdo é um aplicativo gratuito: você pode redistribuir ou modificá-lo de acordo com os termos do GNU General Public License, conforme publicado pela Free Software Foundation, seja na versão 3 da Licença, ou posterior.</string>
+    <string name="copyrightMessage">O Bloqueador de Conteúdo do AdGuard é um aplicativo gratuito: você pode redistribuir ou modificá-lo de acordo com os termos do GNU General Public License, conforme publicado pela Free Software Foundation, seja na versão 3, ou posterior.</string>
     <string name="warning">Aviso</string>
     <string name="onboarding_title1">Bem-vindo(a)!</string>
     <string name="onboarding_text1">Você está a poucos passos de uma internet rápida e sem anúncios.</string>
@@ -95,4 +94,6 @@
     <string name="reportTypeFeatureRequest">Solicitação de recurso</string>
     <string name="reportTypeCustom">Outro</string>
     <string name="overwrite_existing_rules">Substituir regras existentes</string>
+    <string name="other_product_message">Este aplicativo funciona apenas nos navegadores da Samsung e Yandex. Não é o que você estava procurando? Venha conferir a nossa  página de produtos no site do AdGuard.</string>
+    <string name="go_to_products">Ir para produtos</string>
 </resources>

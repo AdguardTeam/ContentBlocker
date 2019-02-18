@@ -99,7 +99,7 @@
     <string name="samsung_developer" translatable="false">Samsung Electronics Co., Ltd.</string>
     <string name="samsung_browser_rating" translatable="false">4,4</string>
     <string name="closed_drawer_title" translatable="false">AdGuard Content Blocker</string>
-    <string name="empty" translatable="false" />
+    <string name="empty" translatable="false"></string>
     <string name="githubLink" translatable="false">github.com</string>
     <string name="adguardComLink" translatable="false">adguard.com</string>
     <string name="forumAdguardComLink" translatable="false">forum.adguard.com</string>

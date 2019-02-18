@@ -32,9 +32,8 @@
     <string name="stats_update_time">Opdateret:</string>
     <string name="filterVersionTemplate">Version {0}.</string>
     <string name="filterUpdatedTemplate">Opdateret {0} klokken {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Version {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAlle Rettigheder Forbeholdt.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nAlle Rettigheder Forbeholdt.</string>
     <string name="rateAdguardButtonText">Bedøm AdGuard</string>
     <string name="officialSiteLabelText">Officiel side</string>
     <string name="forumLabelText">Forum</string>
@@ -95,4 +94,6 @@
     <string name="reportTypeFeatureRequest">Funktionsanmodning</string>
     <string name="reportTypeCustom">Andre</string>
     <string name="overwrite_existing_rules">Overskriv eksisterende regler</string>
+    <string name="other_product_message">Denne app fungerer kun i Samsung og Yandex browsere. Ikke helt hvad du har brug for? Tjek de andre AdGuard produkter på vores hjemmeside</string>
+    <string name="go_to_products">Gå til Produkter</string>
 </resources>

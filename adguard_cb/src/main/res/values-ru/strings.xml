@@ -32,7 +32,6 @@
     <string name="stats_update_time">Обновлены:</string>
     <string name="filterVersionTemplate">Версия {0}.</string>
     <string name="filterUpdatedTemplate">Обновлен {0} в {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Версия {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. AdGuard Software Ltd.\nВсе права защищены.</string>
     <string name="rateAdguardButtonText">Оценить AdGuard</string>
@@ -95,4 +94,6 @@
     <string name="reportTypeFeatureRequest">Предложение</string>
     <string name="reportTypeCustom">Другое</string>
     <string name="overwrite_existing_rules">Перезаписать существующие правила</string>
+    <string name="other_product_message">Это приложение работает только в Samsung и Yandex браузерах. Не совсем то, что вам нужно? Ознакомьтесь с другими продуктами AdGuard на нашем вебсайте</string>
+    <string name="go_to_products">Перейти в \"Продукты\"</string>
 </resources>

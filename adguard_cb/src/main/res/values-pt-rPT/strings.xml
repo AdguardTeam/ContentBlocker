@@ -2,7 +2,7 @@
 <resources>
     <string name="refresh">Actualizar</string>
     <string name="please_wait">Por favor, aguarde...</string>
-    <string name="main_info">Esta aplicação é uma extensão para navegadores que suportam bloqueio de conteúdo.\n\nActualmente, existem dois desses navegadores:\n\n1. Navegador de Internet da Samsung\n2. Navegador Yandex \n\nCom a ajuda desta aplicação, pode bloquear todos os anúncios nesses navegadores.\n\nAlém disso, pode seleccionar que filtros usar em Definições.</string>
+    <string name="main_info">Esta aplicação é uma extensão para navegadores que suportam bloqueio de conteúdo.\nActualmente, existem dois desses navegadores:\n1. Navegador de Internet da Samsung\n2. Navegador Yandex \nCom a ajuda desta aplicação, pode bloquear todos os anúncios nesses navegadores.\nAlém disso, pode seleccionar que filtros usar em Definições.</string>
     <string name="progressGenericErrorText">Ocorreu um erro!</string>
     <string name="importUserRulesSuccessResultMessage">{0} filtro(s) importados com sucesso!</string>
     <string name="importUserRulesErrorResultMessage">Ocorreu um erro ao importar os filtros!</string>
@@ -32,9 +32,8 @@
     <string name="stats_update_time">Actualizados:</string>
     <string name="filterVersionTemplate">Versão {0}.</string>
     <string name="filterUpdatedTemplate">Actualizados {0} em {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Versão {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nTodos os Direitos Reservados.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nTodos os Direitos Reservados.</string>
     <string name="rateAdguardButtonText">Avalie o AdGuard</string>
     <string name="officialSiteLabelText">Site Oficial</string>
     <string name="forumLabelText">Fórum</string>
@@ -94,4 +93,5 @@
     <string name="reportTypeBugReport">Relatório de erro</string>
     <string name="reportTypeFeatureRequest">Solicitação de recurso</string>
     <string name="reportTypeCustom">Outro</string>
+    <string name="overwrite_existing_rules">Substituir regras existentes</string>
 </resources>

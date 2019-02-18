@@ -32,9 +32,8 @@
     <string name="stats_update_time">بروز رسانی شده:</string>
     <string name="filterVersionTemplate">نسخه {0}.</string>
     <string name="filterUpdatedTemplate">بروز رسانی شده {0} در {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">نسخه {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nهمه حقوق محفوظ است.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nهمه حقوق محفوظ است.</string>
     <string name="rateAdguardButtonText">امتیاز به AdGuard</string>
     <string name="officialSiteLabelText">سایت رسمی</string>
     <string name="forumLabelText">انجمن</string>

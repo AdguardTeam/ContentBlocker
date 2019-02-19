@@ -32,9 +32,8 @@
     <string name="stats_update_time">Абноўлена:</string>
     <string name="filterVersionTemplate">Версія {0}.</string>
     <string name="filterUpdatedTemplate">Абноўлена {0} у {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Версія {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nУсе правы захаваныя.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nУсе правы захаваныя.</string>
     <string name="rateAdguardButtonText">Ацаніць AdGuard</string>
     <string name="officialSiteLabelText">Афіцыйны сайт</string>
     <string name="forumLabelText">Форум</string>
@@ -58,14 +57,6 @@
     <string name="check_filter_updates">Праверыць наяўнасць абнаўленняў фільтраў</string>
     <string name="go_to_filters">Перайсці да фільтраў</string>
     <string name="install">Усталяваць</string>
-    <string name="start">Запусціць</string>
-    <string name="get_started">Пачатак працы</string>
-    <string name="adguard_conditions_title">Для працы AdGuard трэба выканаць дзве ўмовы:</string>
-    <string name="adguard_conditions_list1">Вам трэба выкарыстоўваць браўзар, які падтрымвае тэхналогію блакавання кантэнту.</string>
-    <string name="adguard_conditions_list2">AdGuard павінен быць уключаны ў наладах браўзара па блакаванню кантэнту.</string>
-    <string name="choose_browser">Абярыце браўзар</string>
-    <string name="enable_adguard">Уключыце AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard блакуе рэкламу, абараняе вашу прыватнасць, павялічвае хуткасць загрузкі старонак і зніжае выкарыстанне мабільных дадзеных.</string>
     <string name="exit">Выхад</string>
     <string name="user_filter">Карыстальніцкі фільтр</string>
     <string name="enter_rule_text">Увядзіце тэкст правіла</string>
@@ -79,9 +70,6 @@
     <string name="clearUserRulesButtonText">Выдаліць усё</string>
     <string name="browseButtonText">Агляд</string>
     <string name="reportBug">Паведаміць пра памылку</string>
-    <string name="description_about_other_adguard_product">Ці ведаеце вы, што вы можаце выкарыстоўваць AdGuard на хоць якой прыладзе, кампутары і АС? Даведайцеся больш на нашым сайце.</string>
-    <string name="no_thanks">Не, дзякуй</string>
-    <string name="learn_more">Даведацца больш</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Палітыка прыватнасці</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">Пагадненне</a></string>
     <string name="delete">Выдаліць</string>
@@ -105,5 +93,4 @@
     <string name="reportTypeBugReport">Дэфект</string>
     <string name="reportTypeFeatureRequest">Прапанова</string>
     <string name="reportTypeCustom">Іншае</string>
-    <string name="too_many_filters_warning">Вы абралі зашмат падпісак на фільтры. Гэта можа значна запаволіць працу вашага вэб-браўзара.</string>
 </resources>

@@ -174,18 +174,6 @@ public class PreferencesServiceImpl implements PreferencesService {
     }
 
     @Override
-    public boolean isWelcomeMessage() {
-        return sharedPreferences.getBoolean(KEY_ABOUT_OTHER_PRODUCT_SHOWN, false);
-    }
-
-    @Override
-    public void setWelcomeMessage(boolean value) {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean(KEY_ABOUT_OTHER_PRODUCT_SHOWN, value);
-        editor.apply();
-    }
-
-    @Override
     public String getWhitelist() {
         return sharedPreferences.getString(KEY_WHITELIST_STRING, null);
     }

@@ -32,7 +32,6 @@
     <string name="stats_update_time">Ажурирани:</string>
     <string name="filterVersionTemplate">Верзија {0}.</string>
     <string name="filterUpdatedTemplate">Ажурирано на {0} во {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Верзија {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAll Rights Reserved.</string>
     <string name="rateAdguardButtonText">Оцени го AdGuard</string>
@@ -58,14 +57,6 @@
     <string name="check_filter_updates">Провери за ажурирања на филтрите</string>
     <string name="go_to_filters">Оди во филтри</string>
     <string name="install">Инсталирај</string>
-    <string name="start">Стартувај</string>
-    <string name="get_started">Започнете</string>
-    <string name="adguard_conditions_title">Два услови треба да бидат исполнети за AdGuard да работи:</string>
-    <string name="adguard_conditions_list1">Вие треба да користите прелистувач кој поддржува технологија на блокирање на реклами.</string>
-    <string name="adguard_conditions_list2">AdGuard мора да биде вклучен во поставките на овај прелистувач за блокирање на содржината.</string>
-    <string name="choose_browser">Изберете прелистувач</string>
-    <string name="enable_adguard">Вклучи го AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard блокира реклами, ја заштитува вашата приватност, ги зголемува брзините на вчитување на страниците, и ја намалува употребата на мобилни податоци.</string>
     <string name="exit">Излез</string>
     <string name="user_filter">Кориснички Филтер</string>
     <string name="enter_rule_text">Внесете текст на правилото</string>
@@ -81,5 +72,4 @@
     <string name="reportBug">Пријавете грешка</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Политика на Приватност</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
-    <string name="too_many_filters_warning">Вие избравте премногу претплати за филтри. Ова може да го намали вашето веб прелистување значајно.</string>
 </resources>

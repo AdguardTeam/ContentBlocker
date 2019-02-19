@@ -72,23 +72,42 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     private LinearLayout leftDrawer;
     private ActionBarDrawerToggle drawerToggle;
 
+    private PreferencesService preferencesService;
+    private FilterService filterService;
+
     @SuppressWarnings("ConstantConditions")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // As we're using a Toolbar, we should retrieve it and set it to be our ActionBar
+        filterService = ServiceLocator.getInstance(getApplicationContext()).getFilterService();
+        preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
+
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("");
+        toolbar.setTitle(R.string.empty);
+
         setSupportActionBar(toolbar);
 
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeButtonEnabled(true);
+        }
+
         initDrawerLayout();
+
+        findViewById(R.id.go_to_products).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavigationHelper.redirectToWebSite(MainActivity.this, AppLink.Website.getOtherProductUrl(getApplicationContext()));
+            }
+        });
 
         findViewById(R.id.go_to_filters).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openFiltersSettings();
+                NavigationHelper.redirectToActivity(MainActivity.this, FiltersActivity.class);
             }
         });
 
@@ -107,50 +126,16 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             });
         }
 
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setHomeButtonEnabled(true);
-        }
-
-        final PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
         if (!preferencesService.isOnboardingShown()) {
             NavigationHelper.redirectToActivity(this, OnboardingActivity.class);
         }
 
-        if (!preferencesService.isWelcomeMessage()) {
-            final View bottomBarView = findViewById(R.id.bottom_bar);
-            bottomBarView.setVisibility(View.VISIBLE);
-
-            bottomBarView.findViewById(R.id.no_thanks).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    preferencesService.setWelcomeMessage(true);
-                    bottomBarView.setVisibility(View.GONE);
-                }
-            });
-
-            bottomBarView.findViewById(R.id.learn_more).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    preferencesService.setWelcomeMessage(true);
-                    bottomBarView.setVisibility(View.GONE);
-
-                    NavigationHelper.redirectToWebSite(MainActivity.this, AppLink.Website.getOtherProductUrl(getApplicationContext()));
-                }
-            });
-        }
-
-        ServiceLocator.getInstance(getApplicationContext()).getFilterService().scheduleFiltersUpdate();
+        filterService.scheduleFiltersUpdate();
     }
-
-
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        //drawerToggle.setHomeAsUpIndicator(R.drawable.ic_drawer);
-        // Sync the toggle state after onRestoreInstanceState has occurred.
         drawerToggle.syncState();
     }
 
@@ -158,7 +143,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         drawerToggle.onConfigurationChanged(newConfig);
-        // drawerToggle.setHomeAsUpIndicator(R.drawable.ic_drawer);
     }
 
     @Override
@@ -168,10 +152,8 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         return true;
     }
 
-    /* Called whenever we call invalidateOptionsMenu() */
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        // If the nav drawer is open, hide action items related to the content view
         boolean drawerOpen = drawerLayout.isDrawerVisible(leftDrawer);
         menu.findItem(R.id.refresh).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
@@ -184,10 +166,9 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
         switch (item.getItemId()) {
             case R.id.refresh:
-                updateFilters();
+                filterService.checkFiltersUpdates(this);
                 return true;
             default:
-                LOG.warn("ItemId = {}", item.getItemId());
                 return super.onOptionsItemSelected(item);
         }
     }
@@ -239,132 +220,54 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.openned_drawer_title, R.string.closed_drawer_title);
     }
 
-    @SuppressWarnings("ConstantConditions")
     private void refreshMainInfo() {
-        boolean available = false;
-        boolean reorder = false;
+        boolean samsungBrowserAvailable = BrowserUtils.isSamsungBrowserAvailable(this);
 
-        final boolean samsungBrowserAvailable = BrowserUtils.isSamsungBrowserAvailable(this);
-        final boolean yandexBrowserAvailable = BrowserUtils.isYandexBrowserAvailable(this);
-
-        if (samsungBrowserAvailable) {
-            available = true;
-            if (!yandexBrowserAvailable) {
-                reorder = true;
+        View settingAdguardInSumsung = findViewById(R.id.setting_adguard_samsung);
+        settingAdguardInSumsung.setVisibility(samsungBrowserAvailable ? View.VISIBLE : View.GONE);
+        settingAdguardInSumsung.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BrowserUtils.openSamsungBlockingOptions(MainActivity.this);
             }
+        });
 
-            findViewById(R.id.start_samsung_browser).setVisibility(View.VISIBLE);
-            findViewById(R.id.start_samsung_settings).setVisibility(View.VISIBLE);
-            findViewById(R.id.install_samsung_browser).setVisibility(View.GONE);
-            findViewById(R.id.start_samsung_browser).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    BrowserUtils.startSamsungBrowser(MainActivity.this);
-                }
-            });
 
-            findViewById(R.id.start_samsung_settings).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    BrowserUtils.openSamsungBlockingOptions(MainActivity.this);
-                }
-            });
-        } else {
-            findViewById(R.id.start_samsung_browser).setVisibility(View.GONE);
-            findViewById(R.id.start_samsung_settings).setVisibility(View.GONE);
-            findViewById(R.id.install_samsung_browser).setVisibility(View.VISIBLE);
-            findViewById(R.id.install_samsung_browser).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    ActivityUtils.startMarket(MainActivity.this, BrowserUtils.SAMSUNG_BROWSER_PACKAGE, null);
-                }
-            });
-        }
-
-        if (yandexBrowserAvailable) {
-            available = true;
-            findViewById(R.id.start_yandex_browser).setVisibility(View.VISIBLE);
-            findViewById(R.id.start_yandex_settings).setVisibility(View.VISIBLE);
-            findViewById(R.id.install_yandex_browser).setVisibility(View.GONE);
-            findViewById(R.id.start_yandex_browser).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    BrowserUtils.startYandexBrowser(MainActivity.this);
-                }
-            });
-
-            findViewById(R.id.start_yandex_settings).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    BrowserUtils.openYandexBlockingOptions(MainActivity.this);
-                }
-            });
-        } else {
-            findViewById(R.id.start_yandex_browser).setVisibility(View.GONE);
-            findViewById(R.id.start_yandex_settings).setVisibility(View.GONE);
-            findViewById(R.id.install_yandex_browser).setVisibility(View.VISIBLE);
-            findViewById(R.id.install_yandex_browser).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    ActivityUtils.startMarket(MainActivity.this, BrowserUtils.YANDEX_BROWSER_PACKAGE, "adguard1");
-                }
-            });
-        }
-
-        if (available) {
-            findViewById(R.id.choose_browser_button).setVisibility(View.GONE);
-            findViewById(R.id.enable_adguard_button).setVisibility(View.VISIBLE);
-
-            findViewById(R.id.enable_adguard_button).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (yandexBrowserAvailable) {
-                        BrowserUtils.openYandexBlockingOptions(MainActivity.this);
-                    } else {
-                        BrowserUtils.openSamsungBlockingOptions(MainActivity.this);
-                    }
-                }
-            });
-
-            if (reorder) {
-                View yandex = findViewById(R.id.yandex_card);
-                LinearLayout layout = findViewById(R.id.cards_layout);
-                layout.removeView(yandex);
-                layout.addView(yandex);
+        View installSamsungBrowser = findViewById(R.id.install_samsung_browser);
+        installSamsungBrowser.setVisibility(samsungBrowserAvailable ? View.GONE : View.VISIBLE);
+        installSamsungBrowser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityUtils.startMarket(MainActivity.this, BrowserUtils.SAMSUNG_BROWSER_PACKAGE, null);
             }
+        });
 
-            PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
-            if (preferencesService.getBrowserConnectedCount() > 0) {
-                View noBrowsersCard = findViewById(R.id.no_browsers_card);
-                LinearLayout layout = findViewById(R.id.cards_layout);
-                layout.removeView(noBrowsersCard);
-                layout.addView(noBrowsersCard);
+        boolean yandexBrowserAvailable = BrowserUtils.isYandexBrowserAvailable(this);
+
+        View settingAdgaurdInYandex = findViewById(R.id.setting_adguard_yandex);
+        settingAdgaurdInYandex.setVisibility(yandexBrowserAvailable ? View.VISIBLE : View.GONE);
+        settingAdgaurdInYandex.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BrowserUtils.openYandexBlockingOptions(MainActivity.this);
             }
-        } else {
-            findViewById(R.id.choose_browser_button).setVisibility(View.VISIBLE);
-            findViewById(R.id.enable_adguard_button).setVisibility(View.GONE);
+        });
 
-            findViewById(R.id.choose_browser_button).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    BrowserUtils.showBrowserInstallDialog(MainActivity.this);
-                }
-            });
-        }
+        View installYandexBrowser = findViewById(R.id.install_yandex_browser);
+        installYandexBrowser.setVisibility(yandexBrowserAvailable ? View.GONE : View.VISIBLE);
+        installYandexBrowser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityUtils.startMarket(MainActivity.this, BrowserUtils.YANDEX_BROWSER_PACKAGE, "adguard1");
+            }
+        });
 
         refreshStatistics();
         FilterServiceImpl.enableContentBlocker(this);
     }
 
-    private void updateFilters() {
-        ServiceLocator.getInstance(getApplicationContext()).getFilterService().checkFiltersUpdates(this);
-    }
-
     @SuppressLint("DefaultLocale")
     private void refreshStatistics() {
-        PreferencesService preferencesService = ServiceLocator.getInstance(this).getPreferencesService();
-        final FilterService filterService = ServiceLocator.getInstance(this).getFilterService();
-
         Date now = preferencesService.getLastUpdateCheck();
         // Last update time
         if (now == null) {
@@ -399,10 +302,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         if (filterRuleCount == 0) {
             new ApplyAndRefreshTask(filterService, this).execute();
         }
-    }
-
-    private void openFiltersSettings() {
-        NavigationHelper.redirectToActivity(MainActivity.this, FiltersActivity.class);
     }
 
     @Override
@@ -455,7 +354,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 break;
             case R.id.nav_check_filter_updates:
                 drawerLayout.closeDrawers();
-                updateFilters();
+                filterService.checkFiltersUpdates(this);
                 break;
             case R.id.nav_rate_app:
                 drawerLayout.closeDrawers();
@@ -549,10 +448,10 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         public boolean onMenuItemClick(MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.go_to_filters:
-                    openFiltersSettings();
+                    NavigationHelper.redirectToActivity(MainActivity.this, FiltersActivity.class);
                     return true;
                 case R.id.check_filter_updates:
-                    updateFilters();
+                    filterService.checkFiltersUpdates(MainActivity.this);
                     return true;
             }
 

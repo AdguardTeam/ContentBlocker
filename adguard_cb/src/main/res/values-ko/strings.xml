@@ -32,9 +32,8 @@
     <string name="stats_update_time">마지막 업데이트:</string>
     <string name="filterVersionTemplate">버전 {0}.</string>
     <string name="filterUpdatedTemplate">마지막 업데이트 {0} {1}</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">{0} 버전</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nAll Rights Reserved.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nAll Rights Reserved.</string>
     <string name="rateAdguardButtonText">AdGuard 후기 남기기</string>
     <string name="officialSiteLabelText">공식 홈페이지</string>
     <string name="forumLabelText">포험</string>
@@ -58,14 +57,6 @@
     <string name="check_filter_updates">필터 업데이트 체크</string>
     <string name="go_to_filters">필터 설정으로..</string>
     <string name="install">설치</string>
-    <string name="start">실행</string>
-    <string name="get_started">시작하기</string>
-    <string name="adguard_conditions_title">AdGuard가 동작하기 위해 두 가지 조건이 충족되어야 합니다.</string>
-    <string name="adguard_conditions_list1">컨텐츠 차단 기능을 지원하는 브라우저를 사용해야 합니다.</string>
-    <string name="adguard_conditions_list2">그 브라우저의 컨텐츠 차단 설정에서 AdGuard가 사용 설정 되어 있어야 합니다.</string>
-    <string name="choose_browser">브라우저 선택</string>
-    <string name="enable_adguard">AdGuard 활성화</string>
-    <string name="main_activity_adguard_info">AdGuard는 당신의 브라우저의 광고를 차단하고, 프라이버시를 보호하며, 페이지 로딩 속도를 향상시키고, 데이터를 절약합니다.</string>
     <string name="exit">종료</string>
     <string name="user_filter">사용자 필터</string>
     <string name="enter_rule_text">규칙을 입력하세요</string>
@@ -81,5 +72,26 @@
     <string name="reportBug">버그 제보하기</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">개인정보취급방침</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">이용약관</a></string>
-    <string name="too_many_filters_warning">너무 많은 필터를 구독하고 있습니다. 웹 브라우징 속도가 저하될 수 있습니다.</string>
+    <string name="delete">삭제</string>
+    <string name="confirmClearUserFilterMessage">사용자 필터를 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.</string>
+    <string name="confirmRemoveUserRuleMessage">이 규칙을 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.</string>
+    <string name="clear_filters_cache_title">필터 캐시 삭제</string>
+    <string name="clear_filters_cache_summary">필터 캐시 삭제 및 필터 업데이트 하기</string>
+    <string name="clear_filters_cache_progress_message">캐시 삭제 및 필터 업데이트</string>
+    <string name="whitelist_title">화이트리스트</string>
+    <string name="addToWhitelistButtonText">웹사이트 추가</string>
+    <string name="clearWhitelistButtonText">모두 제거</string>
+    <string name="whitelistNewItemDialogTitle">도메인 이름 입력</string>
+    <string name="whitelistNewItemErrorMessage">유효하지 않은 도메인 이름입니다.</string>
+    <string name="whitelistNewItemExistsErrorMessage">이 도메인은 이미 화이트리스트에 있습니다.</string>
+    <string name="confirmClearWhitelistMessage">화이트리스트를 지우시겠습니까? 이 작업은 취소할 수 없습니다.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">이 도메인을 지우시겠습니까? 이 작업은 취소할 수 없습니다.</string>
+    <string name="emptyWhitelistTextViewText">화이트리스트 비어있음</string>
+    <string name="report_dialog_title">제보 종류</string>
+    <string name="reportTypeMissedAd">놓친 광고나 추적기</string>
+    <string name="reportTypeIncorrectBlocking">올바르지 못한 차단</string>
+    <string name="reportTypeBugReport">버그 제보</string>
+    <string name="reportTypeFeatureRequest">기능 제안</string>
+    <string name="reportTypeCustom">기타</string>
+    <string name="overwrite_existing_rules">기존 규칙 덮어쓰기</string>
 </resources>

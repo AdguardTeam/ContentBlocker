@@ -32,9 +32,8 @@
     <string name="stats_update_time">بروز رسانی شده:</string>
     <string name="filterVersionTemplate">نسخه {0}.</string>
     <string name="filterUpdatedTemplate">بروز رسانی شده {0} در {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">نسخه {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nهمه حقوق محفوظ است.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nهمه حقوق محفوظ است.</string>
     <string name="rateAdguardButtonText">امتیاز به AdGuard</string>
     <string name="officialSiteLabelText">سایت رسمی</string>
     <string name="forumLabelText">انجمن</string>
@@ -58,14 +57,6 @@
     <string name="check_filter_updates">بررسی بروز رسانی فیلترها</string>
     <string name="go_to_filters">برو به فیلترها</string>
     <string name="install">نصب</string>
-    <string name="start">شروع</string>
-    <string name="get_started">شروع به کار</string>
-    <string name="adguard_conditions_title">برای کارکرد AdGuard دو شرایط  نیاز است:</string>
-    <string name="adguard_conditions_list1">شما باید از مرورگری استفاده کنید که از تکنولوژی مسدودسازی محتوا پشتیبانی کند.</string>
-    <string name="adguard_conditions_list2">AdGuard باید در تنظیمات مسدودسازی محتوای این مرورگرها فعال شود.</string>
-    <string name="choose_browser">مرورگر را انتخاب کنید</string>
-    <string name="enable_adguard">فعالسازی AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard تبلیغات را مسدود می کند،حریم خصوصی شما را حفاظت می کند،سرعت بارگیری صفحه را افزایش داده و مصرف داده موبایل را کاهش می دهد.</string>
     <string name="exit">خروج</string>
     <string name="user_filter">فیلتر کاربر</string>
     <string name="enter_rule_text">متن دستور را وارد کنید</string>
@@ -79,9 +70,6 @@
     <string name="clearUserRulesButtonText">حذف همه</string>
     <string name="browseButtonText">مرور</string>
     <string name="reportBug">گزارش مشکل</string>
-    <string name="description_about_other_adguard_product">آیا میدانستید که میتوانید از AdGuard روی هرگونه وسیله ای، کامپیوتر و سیستم عاملی استفاده کنید؟ برای اطلاعات بیشتر به وبسایت ما مراجعه کنید.</string>
-    <string name="no_thanks">نه،متشکرم</string>
-    <string name="learn_more">بیشتر بدانید</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">سیاست حریم خصوصی</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">توافق نامه مجوز کاربر-نهایی</a></string>
     <string name="delete">حذف</string>
@@ -105,5 +93,4 @@
     <string name="reportTypeBugReport">گزارش مشکل</string>
     <string name="reportTypeFeatureRequest">درخواست ویژگی</string>
     <string name="reportTypeCustom">سایر</string>
-    <string name="too_many_filters_warning">شما اشتراک های بسیاری را انتخاب کرده اید.این میتواند بطور اثرگذاری وبگردی شما را آهسته کند.</string>
 </resources>

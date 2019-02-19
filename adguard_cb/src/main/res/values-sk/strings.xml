@@ -32,9 +32,8 @@
     <string name="stats_update_time">Aktualizované:</string>
     <string name="filterVersionTemplate">Verzia {0}.</string>
     <string name="filterUpdatedTemplate">Aktualizované {0} o {1}.</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">Verzia {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nVšetky práva vyhradené.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nVšetky práva vyhradené.</string>
     <string name="rateAdguardButtonText">Ohodnoťte AdGuard</string>
     <string name="officialSiteLabelText">Oficiálna stránka</string>
     <string name="forumLabelText">Fórum</string>
@@ -58,14 +57,6 @@
     <string name="check_filter_updates">Skontrolovať aktualizácie filtrov</string>
     <string name="go_to_filters">Ísť do sekcie filtrov</string>
     <string name="install">Inštalovať</string>
-    <string name="start">Spustiť</string>
-    <string name="get_started">Začíname</string>
-    <string name="adguard_conditions_title">Pre prácu AdGuard musia byť splnené dve podmienky:</string>
-    <string name="adguard_conditions_list1">Musíte mať prehliadač, ktorý podporuje technológiu blokovania reklám.</string>
-    <string name="adguard_conditions_list2">AdGuard musí byť povolený pre blokovanie obsahu v nastaveniach prehliadača.</string>
-    <string name="choose_browser">Zvoľte prehliadač</string>
-    <string name="enable_adguard">Povoliť AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard blokuje reklamy, chráni Vaše súkromie, urýchľuje načítanie internetových stránok a redukuje spotrebu mobilných dát.</string>
     <string name="exit">Ukončenie</string>
     <string name="user_filter">Používateľský filter</string>
     <string name="enter_rule_text">Vložiť text pravidla</string>
@@ -79,9 +70,6 @@
     <string name="clearUserRulesButtonText">Odstrániť všetko</string>
     <string name="browseButtonText">Prechádzať</string>
     <string name="reportBug">Nahlásiť chybu</string>
-    <string name="description_about_other_adguard_product">Vedeli ste, že AdGuard môžete používať na ľubovoľnom zariadení, počítači a operačnom systéme? Viac o tom na našej webovej stránke.</string>
-    <string name="no_thanks">Nie, ďakujem</string>
-    <string name="learn_more">Dozvedieť sa viac</string>
     <string name="privacyPolicyLinkText">Pravidlá ochrany súkromia</string>
     <string name="eulaLinkText">EULA</string>
     <string name="delete">Vymazať</string>
@@ -105,6 +93,7 @@
     <string name="reportTypeBugReport">Hlásenie chyby</string>
     <string name="reportTypeFeatureRequest">Požiadavka na funkciu</string>
     <string name="reportTypeCustom">Iné</string>
-    <string name="too_many_filters_warning">Zvolili ste príliš veľa filtrov. To môže výrazne spomaliť Vaše prehliadanie internetových stránok.</string>
     <string name="overwrite_existing_rules">Prepísať existujúce pravidlá</string>
+    <string name="other_product_message">Táto aplikácia funguje iba v prehliadačoch Samsung a Yandex. Nie je to presne to, čo potrebujete? Pozrite sa na iné produkty AdGuard na našej webovej stránke</string>
+    <string name="go_to_products">Ísť na Produkty</string>
 </resources>

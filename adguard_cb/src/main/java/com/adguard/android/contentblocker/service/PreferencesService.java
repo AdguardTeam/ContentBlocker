@@ -32,7 +32,6 @@ public interface PreferencesService {
     String KEY_FILTER_RULE_COUNT = "key_filter_rule_count";
     String KEY_BROWSER_CONNECTED_COUNT = "key_browser_connected_count";
     String KEY_ONBOARDING_SHOWN = "key_onboarding_shown";
-    String KEY_ABOUT_OTHER_PRODUCT_SHOWN = "key_about_other_product_shown";
     String KEY_USER_RULES_STRING = "key_user_rules_string";
     String KEY_DISABLED_USER_RULES = "key_disabled_user_rules";
     String KEY_WHITELIST_STRING = "key_whitelist_string";
@@ -167,16 +166,4 @@ public interface PreferencesService {
      * @return Browser connected count
      */
     int getBrowserConnectedCount();
-
-    /**
-     * @return @return True if we have shown the welcome message
-     */
-    boolean isWelcomeMessage();
-
-    /**
-     * Save the flag determining that we have shown welcome message
-     *
-     * @param value True if shown
-     */
-    void setWelcomeMessage(boolean value);
 }

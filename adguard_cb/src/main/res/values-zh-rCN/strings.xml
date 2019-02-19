@@ -21,7 +21,7 @@
     <string name="pref_autoupdate_filters">自动更新过滤器</string>
     <string name="pref_summary_autoupdate_filters">自动更新过滤器</string>
     <string name="pref_update_wifi_only">仅通过 Wi-Fi 更新</string>
-    <string name="pref_summary_update_wifi_only">不通过移动网络更新过滤器</string>
+    <string name="pref_summary_update_wifi_only">AdGuard 将仅通过  Wi-Fi 获取过滤器更新。</string>
     <string name="pref_show_useful_ads">显示有用的广告</string>
     <string name="pref_summary_show_useful_ads">不拦截对用户有用的广告。</string>
     <string name="pref_filters_category">过滤器</string>
@@ -32,9 +32,8 @@
     <string name="stats_update_time">更新于</string>
     <string name="filterVersionTemplate">版本 {0}。</string>
     <string name="filterUpdatedTemplate">已更新 {0} 于 {1}。</string>
-    <!--About Adguard-->
     <string name="versionInfoTextViewText">版本 {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd。\n保留所有版权。</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd。\n保留所有版权。</string>
     <string name="rateAdguardButtonText">评级 AdGuard</string>
     <string name="officialSiteLabelText">官方网站</string>
     <string name="forumLabelText">论坛</string>
@@ -58,14 +57,6 @@
     <string name="check_filter_updates">检查过滤器更新</string>
     <string name="go_to_filters">转到过滤器</string>
     <string name="install">安装</string>
-    <string name="start">开始</string>
-    <string name="get_started">入门</string>
-    <string name="adguard_conditions_title">要使 AdGuard 工作，需要符合两个条件：</string>
-    <string name="adguard_conditions_list1">使用支持内容拦截技术的浏览器。</string>
-    <string name="adguard_conditions_list2">在此浏览器的内容拦截设置内必须开启 AdGuard。</string>
-    <string name="choose_browser">选择浏览器</string>
-    <string name="enable_adguard">开启 AdGuard</string>
-    <string name="main_activity_adguard_info">AdGuard 可拦截广告，保护您的隐私，提升页面加载速度，降低移动数据使用率。</string>
     <string name="exit">退出</string>
     <string name="user_filter">用户过滤器</string>
     <string name="enter_rule_text">输入规则文本</string>
@@ -79,10 +70,28 @@
     <string name="clearUserRulesButtonText">移除全部</string>
     <string name="browseButtonText">浏览</string>
     <string name="reportBug">报告错误</string>
-    <string name="description_about_other_adguard_product">您知道您可在任何设备，计算机和操作系统上使用 AdGuard 吗？请转到我们的网站以了解更多信息。</string>
-    <string name="no_thanks">不，谢谢</string>
-    <string name="learn_more">了解更多</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">隐私策略</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">最终用户许可协议</a></string>
-    <string name="too_many_filters_warning">您选定的过滤器订阅过多。它会显著降低您的网络浏览速度。</string>
+    <string name="privacyPolicyLinkText">隐私策略</string>
+    <string name="eulaLinkText">最终用户许可协议</string>
+    <string name="delete">删除</string>
+    <string name="confirmClearUserFilterMessage">您确定要清除用户过滤器？此操作无法撤销。</string>
+    <string name="confirmRemoveUserRuleMessage">您确定要删除此规则？此操作无法撤销。</string>
+    <string name="clear_filters_cache_title">清除过滤器缓存</string>
+    <string name="clear_filters_cache_summary">清除过滤器缓存并更新过滤器</string>
+    <string name="clear_filters_cache_progress_message">清除缓存并更新过滤器</string>
+    <string name="whitelist_title">白名单</string>
+    <string name="addToWhitelistButtonText">添加网站</string>
+    <string name="clearWhitelistButtonText">移除全部</string>
+    <string name="whitelistNewItemDialogTitle">输入域名</string>
+    <string name="whitelistNewItemErrorMessage">域名无效</string>
+    <string name="whitelistNewItemExistsErrorMessage">此域已存在于白名单之上</string>
+    <string name="confirmClearWhitelistMessage">您确定要清除白名单？此操作无法撤销。</string>
+    <string name="confirmRemoveWhitelistDomainMessage">您确定是要删除此域？此操作无法撤销。</string>
+    <string name="emptyWhitelistTextViewText">白名单为空</string>
+    <string name="report_dialog_title">报告类型</string>
+    <string name="reportTypeMissedAd">漏拦截的广告/跟踪器</string>
+    <string name="reportTypeIncorrectBlocking">错误拦截</string>
+    <string name="reportTypeBugReport">错误报告</string>
+    <string name="reportTypeFeatureRequest">请求功能</string>
+    <string name="reportTypeCustom">其它</string>
+    <string name="overwrite_existing_rules">覆盖现有规则</string>
 </resources>

@@ -55,13 +55,13 @@ android {
 
         yandex_api16 {
             minSdkVersion 16
-            versionCode 16002300
+            versionCode 16002301
             dimension "buildChannel"
         }
 
         samsung_api21 {
             minSdkVersion 21
-            versionCode 21002300
+            versionCode 21002301
             dimension "buildChannel"
         }
 

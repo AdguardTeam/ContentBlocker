@@ -18,7 +18,7 @@ android {
     defaultConfig {
         targetSdkVersion 27
         applicationId 'com.adguard.android.contentblocker'
-        versionName "2.3.0"
+        versionName "2.3.1"
         signingConfig signingConfigs.config
     }
 

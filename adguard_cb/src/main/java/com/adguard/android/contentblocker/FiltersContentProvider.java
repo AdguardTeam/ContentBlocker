@@ -22,33 +22,24 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import android.support.annotation.NonNull;
-import android.util.Log;
-
-import com.adguard.android.contentblocker.service.PreferencesService;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 
 public class FiltersContentProvider extends ContentProvider {
 
-    private String filtersPath;
+    private static final String FILTERS_FILE_PATH = "/filters.txt";
 
-    public FiltersContentProvider() {
-    }
+    private String filtersPath;
 
     @Override
     public ParcelFileDescriptor openFile(@NonNull Uri uri, @NonNull String mode) throws FileNotFoundException {
-        ParcelFileDescriptor parcel = ParcelFileDescriptor.open(new File(filtersPath), ParcelFileDescriptor.MODE_READ_ONLY);
+        File filterFile = new File(filtersPath);
+        if (!filterFile.exists()) {
+            ServiceLocator.getInstance(getContext()).getFilterService().applyNewSettings();
+        }
 
-        PreferencesService preferencesService = ServiceLocator.getInstance(getContext()).getPreferencesService();
-        preferencesService.incBrowserConnectedCount();
-
-        return parcel;
-    }
-
-    @Override
-    public int delete(@NonNull Uri uri, String selection, String[] selectionArgs) {
-        throw new UnsupportedOperationException("Not implemented");
+        return ParcelFileDescriptor.open(filterFile, ParcelFileDescriptor.MODE_READ_ONLY);
     }
 
     @Override
@@ -57,17 +48,8 @@ public class FiltersContentProvider extends ContentProvider {
     }
 
     @Override
-    public Uri insert(@NonNull Uri uri, ContentValues values) {
-        throw new UnsupportedOperationException("Not implemented");
-    }
-
-    @Override
     public boolean onCreate() {
-        filtersPath = getContext().getFilesDir().getAbsolutePath() + "/filters.txt";
-        File f = new File(filtersPath);
-        if (!f.exists()) {
-            ServiceLocator.getInstance(getContext().getApplicationContext()).getFilterService().applyNewSettings();
-        }
+        filtersPath = getContext().getFilesDir().getAbsolutePath() + FILTERS_FILE_PATH;
         return true;
     }
 
@@ -77,7 +59,17 @@ public class FiltersContentProvider extends ContentProvider {
     }
 
     @Override
+    public Uri insert(@NonNull Uri uri, ContentValues values) {
+        throw new UnsupportedOperationException("Not implemented");
+    }
+
+    @Override
     public int update(@NonNull Uri uri, ContentValues values, String selection, String[] selectionArgs) {
+        throw new UnsupportedOperationException("Not implemented");
+    }
+
+    @Override
+    public int delete(@NonNull Uri uri, String selection, String[] selectionArgs) {
         throw new UnsupportedOperationException("Not implemented");
     }
 }

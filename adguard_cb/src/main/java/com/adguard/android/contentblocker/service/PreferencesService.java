@@ -30,7 +30,6 @@ public interface PreferencesService {
     String KEY_LAST_UPDATE_CHECK_DATE = "last_update_check_date";
     String KEY_LAST_IMPORT_URL = "key_last_import_rule";
     String KEY_FILTER_RULE_COUNT = "key_filter_rule_count";
-    String KEY_BROWSER_CONNECTED_COUNT = "key_browser_connected_count";
     String KEY_ONBOARDING_SHOWN = "key_onboarding_shown";
     String KEY_USER_RULES_STRING = "key_user_rules_string";
     String KEY_DISABLED_USER_RULES = "key_disabled_user_rules";
@@ -156,14 +155,4 @@ public interface PreferencesService {
      * @return Filter rules count
      */
     int getFilterRuleCount();
-
-    /**
-     * Increments browser connected count
-     */
-    void incBrowserConnectedCount();
-
-    /**
-     * @return Browser connected count
-     */
-    int getBrowserConnectedCount();
 }

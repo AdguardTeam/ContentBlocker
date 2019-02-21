@@ -22,13 +22,20 @@ import android.net.Uri;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.content.ContextCompat;
 
+import com.adguard.android.contentblocker.ServiceLocator;
+import com.adguard.android.contentblocker.service.NotificationService;
 import com.adguard.android.contentblocker.ui.MainActivity;
 import com.adguard.android.contentblocker.R;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Activity navigation helper
  */
 public class NavigationHelper {
+
+    private static final Logger LOG = LoggerFactory.getLogger(NavigationHelper.class);
 
     /**
      * Redirects to activityClass activity.
@@ -52,16 +59,22 @@ public class NavigationHelper {
     }
 
     private static void redirectUsingCustomTab(Activity context, String url) {
-        Uri uri = Uri.parse(url);
-        CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
+        try {
+            Uri uri = Uri.parse(url);
+            CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
 
-        // set desired toolbar colors
-        intentBuilder.setToolbarColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
-        // Doesn't work anyway
-        intentBuilder.setSecondaryToolbarColor(ContextCompat.getColor(context, R.color.white));
+            // set desired toolbar colors
+            intentBuilder.setToolbarColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
+            // Doesn't work anyway
+            intentBuilder.setSecondaryToolbarColor(ContextCompat.getColor(context, R.color.white));
 
-        CustomTabsIntent customTabsIntent = intentBuilder.build();
-        customTabsIntent.launchUrl(context, uri);
+            CustomTabsIntent customTabsIntent = intentBuilder.build();
+            customTabsIntent.launchUrl(context, uri);
+        } catch (Exception e) {
+            LOG.error("Error while launching an URL: {}", url, e);
+            NotificationService notificationService = ServiceLocator.getInstance(context).getNotificationService();
+            notificationService.showToast(R.string.progressGenericErrorText);
+        }
     }
 
     /**

@@ -163,16 +163,6 @@ public class PreferencesServiceImpl implements PreferencesService {
         return sharedPreferences.getInt(KEY_FILTER_RULE_COUNT, 0);
     }
 
-    public void incBrowserConnectedCount() {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(KEY_BROWSER_CONNECTED_COUNT, sharedPreferences.getInt(KEY_BROWSER_CONNECTED_COUNT, 0) + 1);
-        editor.apply();
-    }
-
-    public int getBrowserConnectedCount() {
-        return sharedPreferences.getInt(KEY_BROWSER_CONNECTED_COUNT, 0);
-    }
-
     @Override
     public String getWhitelist() {
         return sharedPreferences.getString(KEY_WHITELIST_STRING, null);

@@ -784,6 +784,7 @@ public class FilterServiceImpl implements FilterService {
             }
 
             checkFilterUpdates(true);
+            applyNewSettings();
         }
     }
 }

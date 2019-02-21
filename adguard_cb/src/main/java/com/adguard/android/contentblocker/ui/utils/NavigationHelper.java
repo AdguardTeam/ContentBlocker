@@ -17,6 +17,7 @@
 package com.adguard.android.contentblocker.ui.utils;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.customtabs.CustomTabsIntent;
@@ -70,7 +71,7 @@ public class NavigationHelper {
 
             CustomTabsIntent customTabsIntent = intentBuilder.build();
             customTabsIntent.launchUrl(context, uri);
-        } catch (Exception e) {
+        } catch (ActivityNotFoundException e) {
             LOG.error("Error while launching an URL: {}", url, e);
             NotificationService notificationService = ServiceLocator.getInstance(context).getNotificationService();
             notificationService.showToast(R.string.progressGenericErrorText);

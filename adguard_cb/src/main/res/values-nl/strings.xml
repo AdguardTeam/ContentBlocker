@@ -94,4 +94,6 @@
     <string name="reportTypeFeatureRequest">Functie verzoek</string>
     <string name="reportTypeCustom">Andere</string>
     <string name="overwrite_existing_rules">Bestaande regels overschrijven</string>
+    <string name="other_product_message">Deze app is enkel compatibel met Samsung en Yandex browsers. Niet wat je nodig hebt ? Bekijk onze andere AdGuard producten op onze website.</string>
+    <string name="go_to_products">Ga naar produkten</string>
 </resources>

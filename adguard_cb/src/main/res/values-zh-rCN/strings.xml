@@ -94,4 +94,6 @@
     <string name="reportTypeFeatureRequest">请求功能</string>
     <string name="reportTypeCustom">其它</string>
     <string name="overwrite_existing_rules">覆盖现有规则</string>
+    <string name="other_product_message">本应用仅工作于运行在三星手机之上的 Yandex 浏览器。不满足您的需要？请检查我们网站上的其它 AdGuard 产品。</string>
+    <string name="go_to_products">转到产品</string>
 </resources>

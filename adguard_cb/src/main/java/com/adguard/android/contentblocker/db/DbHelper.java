@@ -88,8 +88,7 @@ public class DbHelper extends SQLiteOpenHelper {
             }
         }
 
-        // Refresh filters and localizations
-        fillFilters(db);
+        // Refresh filters localizations
         fillFiltersLocalization(db);
 
         preferenceUpgrade.onUpgrade(oldVersion, newVersion);

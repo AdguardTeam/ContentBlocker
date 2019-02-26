@@ -1,8 +1,8 @@
-! Checksum: 2JXy5cdGXWLAYL0jHKjevw
+! Checksum: 4KTpSP5LqFsxS58qvQa4RQ
 ! Title: Adblock-Persian list
 ! Description: Adblock-Persian list
-! Version: 1.0.0.23
-! TimeUpdated: 2016-10-28T09:36:01.219+04:00
+! Version: 2.0.0.24
+! TimeUpdated: 2018-08-29T19:00:08+03:00
 ! Expires: 2 days (update frequency)
 .ir/baner
 /banner.js
@@ -21,16 +21,17 @@ _TabBanner_
 -265x265
 -230x230.
 _468x120
+48-300x100
 468x60
 -120x120
 -120x90
 *haraji*
 /ads-pic/
 .ir/laser*.*gif
+/Adver/
 /image/ad/*
 /ads.$script,image
 120_240
-468x60
 170x70
 582x85-
 _237x90
@@ -100,7 +101,6 @@ _vps-banner*.gif
 ||apktops.ir/wp-content/uppic/*
 ||ads.virlan.co/*
 ||ads.iran-forum.ir/banner/
-||ariamovie.ir^$third-party
 ||asandownload.com/shop/
 ||accfile.com*.swf
 ||anaj.ir*.swf
@@ -159,6 +159,7 @@ _vps-banner*.gif
 ||emalls.ir/src/*
 ||emalls.ir/ads/
 ||farsnews.com/Banner/MainPage/Left/
+||media.farsnews.com*Test.gif
 ||media.farsnews.com/*_Test.gif
 ||fars3da.net/*/banner*.gif
 ||files.irzaban.com/pic/
@@ -186,13 +187,10 @@ _vps-banner*.gif
 ||gsm.ir/*.swf
 ||hamkaran.in/*
 ||hipersian.com/joingroup_files/*
-||digiato.com##.author-banner FIGCAPTION
 ||digiato.com/wp-content/uploads*.gif
 ||155x155.gif
 ||digiato.com/*bahar-155-155*
-||155x155.gif
 ||digiato.com/*baner*
-||digiato.com/*swf
 ||google-analytics.com^
 ||iransetup.com/*.swf
 ||shop.ir-dl.com/*
@@ -265,7 +263,7 @@ _vps-banner*.gif
 ||narenji.ir/*.swf
 ||nardebaan.ir/sites/default/files/images/b/*
 ||www.noandishaan.com/*.gif
-@@http://w...content-available-to-author-only...n.com/forums/
+@@noandishaan.com/forums/
 ||narenji.ir/sites/default/files/images/b/*
 ||naghdnews.ir/uploadcenter/*.swf
 ||naghola.com/tabligh*/
@@ -287,7 +285,6 @@ _vps-banner*.gif
 ||persian-star.net/template/*
 ||persian-star.*/shop/*
 ||persian-star.*/fal/*
-||persianmob.net/imgb/*
 ||perspolisnews.com/images/M_images/*
 ||p30click.ir/*.swf
 ||p30download.com/tabliq/banner/*.gif
@@ -322,6 +319,7 @@ _vps-banner*.gif
 ||soft98.ir*.swf
 ||soft98.ir/android*.jpg
 ||sekehfa.com/*.swf
+||tabnak.ir/files/adv/
 ||tafrihi.com/toplink/shop1.htm
 ||triggers.wp.bandoo.com/signature_001.gif
 ||tehran98.com/*.swf
@@ -366,7 +364,6 @@ _vps-banner*.gif
 ||blograh.com^$third-party
 ||chare.in^$third-party
 ||cloob.com^$third-party
-||chare.in^$third-party
 ||dabi.ir$~third-party
 ||digikala.com^$third-party
 ||delearia.org^$third-party
@@ -421,12 +418,10 @@ _vps-banner*.gif
 ||vidasms.com$third-party
 ||xs-games.ir^$third-party
 ||cyberad.ir^$third-party
-||tabliq.com^$third-party
 ||tablighcity.com^$third-party
 ----------3rdpartyblockinghealthysite----------
 ||saveinter.net^$domain=fbcdn.net
 ||saveinter.net^$domain=facebook.com
-||saveinter.net^$domaina=kamaihd.net
 ||nayabprojects.com^$third-party,domain=venusdownload.com
 ||picofile.com^$domain=7irani.ir
 ||picofile.com^$domain=p9q.ir
@@ -436,6 +431,7 @@ _vps-banner*.gif
 ||dropboxusercontent.com^$domain=ieclub.ir
 ||ad.adtube.ir^
 ||eshopcomp.com^
+||kaprila.com^
 ||irna.ir/Counter.aspx
 ||stats.mehrnews.com^
 ||tinystat.*^$third-party
@@ -454,7 +450,6 @@ _vps-banner*.gif
 ||countomat.com^$third-party
 ||fastwebcounter.com^$third-party
 ||fastonlineusers.com^$third-party
-||countomat.com^$third-party
 ||utop.ir^$third-party
 /counter.$domain=~cnbeta.com|~dl.pconline.com.cn|~shooter.cn
 /stat.$~script,domain=~ameba.jp|~ameblo.jp|~zcool.com.cn
@@ -462,7 +457,6 @@ _vps-banner*.gif
 ||clickyab.com^
 //tracking.$third-party
 ||adpersia.com^$third-party
-||google-analytics.com^
 ||vatanclick.ir^
 ||30forosh.biz^
 @@||psiloc.com/
@@ -492,6 +486,7 @@ _vps-banner*.gif
 ||peyvandha.ir^
 ||saveinter.net^
 saveinter.net##HTML
+||adnegah.net^
 ||badoo.com^
 ||winksspot.com^
 ||banners.ilivid.com^
@@ -593,14 +588,12 @@ saveinter.net##HTML
 ||booof.ir^
 ||bziran.com^
 ||bermoda.ir^
-||blog4i.com^
 ||cafeserial.ir^
 ||cddarya.ir^
 ||cityshop.ir^
 ||chango.com^
 ||cheshmnavaz.com^
 ||downloadaneh.com^
-||davoodonline.com^
 ||domain.com^
 ||daraje1.com^
 ||drbuy.info^
@@ -697,9 +690,7 @@ saveinter.net##HTML
 ||webphoto.ir^
 ||30tlink.mihanblog.com^
 ||brainyday.com^
-||tehranshoping.in^
 ||melimarket.com^
-||marketshoping.com^
 ||payamshop.com^
 ||hamkaran.biz^
 ----------POPuprules-----------
@@ -742,7 +733,6 @@ saveinter.net##HTML
 ###plusone
 ##.plus1
 ##.ggoogle
-##.ggoogle
 ##.Gbutton
 ##.gplusboxh
 ##.kadr
@@ -750,10 +740,8 @@ saveinter.net##HTML
 ##.sidebar-textads
 ##a[href*="?aff="]
 ##a[href*="/affiliate.php?"]
-##.ads:not(.adf):not(.adn)
 ##.guestwarn
 ##a[href*="-ad."]
-##a[href*="/ad/"]
 ##a[href*="-pr/"]
 ##a[href*="?adid="]
 ##.advert
@@ -782,7 +770,6 @@ saveinter.net##HTML
 ~slideboom.com##*[class*="advertisement"]:not(body):not(input)
 ~gamespot.com,~megaupload.com##*[class*="_ad_"]:not(body):not(input)
 ~mobile01.com##*[id$="-ads"]:not(body):not(input)
-~t-mobile.co.uk,~channel4.com,~amusingplanet.com,~apple.com,~sportsdirect.com,~burningcamel.com,~prosperitybanktx.com,~repubblica.it,~mail.google.com##.ads
 us.mg5.mail.yahoo.com##P[align="center"]
 36ohk6dgmcd1n.yom.mail.yahoo.net###yui_3_2_0_5_13102684919344953
 36ohk6dgmcd1n.yom.mail.yahoo.net,~yahoo.com##TABLE[style="font-size:10pt;font-family:Tahoma;border-left:2px solid #333333;border-right:2px solid #333333;border-bottom:2px solid #333333;"]
@@ -909,7 +896,6 @@ forum.farspatogh.com###lwflotante
 forum.p30world.com##IMG[src="http://w...content-available-to-author-only...d.com/nw_imgs/jz-download.gif"]
 forum.p30world.com##.blocked
 forum.p30world.com,forum.p30world.net,forum.p30world.ir##[id^="navbar_notice_"]
-forum.p30world.com##yui-gen0,#yui-gen30,#yui-gen31,#yui-gen32,#yui-gen33,#yui-gen34,#yui-gen35,#yui-gen36gen37,#yui-gen38,##yui-gen39,#yui-gen40,#yui-gen41,#yui-gen42,#yui-gen43,#yui-gen44,#yui-gen45,#yui-gen46,#yui-gen47,#yui-gen48,#yui-gen49,#yui-gen50,#yui-gen51,#yui-gen52,#yui-gen53,#yui-gen54,#yui-gen55,#yui-gen56,#yui-gen57,#yui-gen58,#yui-gen59,#yui-gen60,#yui-gen61,#yui-gen62,#yui-gen63,#yui-gen64,#yui-gen65,#yui-gen66,#yui-gen67,#yui-gen68,#yui-gen69,#yui-gen70
 forum.p30world.com##DIV#pagetitle
 ###navbar_notice_50
 forum.p30world.com###navbar_notice_61
@@ -960,17 +946,13 @@ iran-forum.ir##DIV[onclick="MyAdvertisements.do_click(1);"]
 iran-forum.ir##A[href="http://i...content-available-to-author-only...p.ir/Register-To-Yahoo-Group.html"]
 iran-forum.ir###reklam01
 iran-forum.ir##A[style="display:block;position:fixed;left:5px;bottom:0px;padding:5px 10px 6px 130px;color:#fff;background:#000;border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0; -moz-opacity:0.7; opacity:0.7;"]
-iran-forum.ir###reklam01
 iran-forum.ir##A[href="http://w...content-available-to-author-only...o.com"]
-iran-forum.ir##A[style="display:block;position:fixed;left:5px;bottom:0px;padding:5px 10px 6px 130px;color:#fff;background:#000;border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0; -moz-opacity:0.7; opacity:0.7;"]
 ir-dl.com##.jcarousel-container.jcarousel-container-horizontal.jcarousel-direction-rtl
 ir-dl.com##.post.shop
 jaleb.ir##[class^="text_adver"]
 jaleb.ir##[id^="adver"]
 jaleb.ir##[class="select_text_body2"]
-jaleb.ir##[id^="ADVER"]
 jaleb.ir###LEFT_S_ADVER
-jaleb.ir##[id^="adver"]
 jaleb.ir##[id^="text_adver"]
 nice.3jokes.com##IFRAME[src="http://w...content-available-to-author-only...s.com/data/a_side.html"]
 javanha.com##.linkbox
@@ -1099,6 +1081,9 @@ stereophile.com###sub_pop
 sakhtemoon.com###jGrowl
 shahrekhabar.com##.sidebar.left
 softgozar.com###ctl00_dtlAdvertiseRightPan
+##TABLE[width="140px"]
+softgozar.com###backgray-layout
+softgozar.com##[href="http://w...content-available-to-author-only...e.ir"] > IMG
 softgozar.com###dtlAdvertiseBan
 soft98.ir##.ss_topwhite[style="padding:10px 2px 10px 5px"]
 soft98.ir##.shad
@@ -1108,13 +1093,11 @@ soft98.ir##TABLE[style="width: 100%"]
 soft98.ir##TABLE[style="width: 100%;"]
 soft98.ir##P[align="center"]
 soft98.ir##P[style="font-family:Tahoma;font-size:11px"]
-soft98.ir##.block_h_1.block_f_t
 soft98.ir##.elan.boxi + * + * > .block_asli
 soft98.ir##.elan.boxi
 soft98.ir###left > .elan.boxi + * > .block_asli
 soft98.ir##.shad2
 soft98.ir##.shad2.tinrnmnyveoccoyxgxpw
-soft98.ir##.block_h_1.block_f_t
 soft98.ir##:first-child + .block_h_1.block_f_t + * + DIV.block_asli
 soft98.ir##:first-child > .block_h_1.block_f_t + * + .block_asli + * + * + DIV
 shop.mobilestan.net##.lProLayer
@@ -1155,6 +1138,9 @@ vazeh.com##.side
 weblogina.com###reportaj
 zaminblog.com###table6
 zoomit.ir##.bannergroup
+zoomit.ir##.h_iframe-sabavision_responsive_ads_300x250 > *
+zoomit.ir##.h_iframe-sabavision_responsive_ads_728x90 > [style="display: block; padding-top: 12.362637362637363%;"]
+zoomit.ir##[class*="_ads_"] > *
 zibasho.com###text-4
 zohur12.ir##DIV[class="ADS021"]
 yekmobile.com##UL

@@ -39,7 +39,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private static final Logger LOG = LoggerFactory.getLogger(DbHelper.class);
 
-    private static final int DB_VERSION = 21;
+    private static final int DB_VERSION = 22;
     private static final String DB_NAME = "adguard.db";
 
 
@@ -87,6 +87,10 @@ public class DbHelper extends SQLiteOpenHelper {
                 LOG.info("Update script not found for {}=>{}, recreating DB.", prevDbVersion, newDbVersion);
             }
         }
+
+        // Refresh filters and localizations
+        fillFilters(db);
+        fillFiltersLocalization(db);
 
         preferenceUpgrade.onUpgrade(oldVersion, newVersion);
 

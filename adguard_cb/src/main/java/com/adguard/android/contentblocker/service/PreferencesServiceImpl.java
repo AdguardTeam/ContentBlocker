@@ -148,7 +148,7 @@ public class PreferencesServiceImpl implements PreferencesService {
 
     @Override
     public boolean isShowUsefulAds() {
-        return sharedPreferences.getBoolean(PREF_SHOW_USEFUL_ADS, true);
+        return sharedPreferences.getBoolean(PREF_SHOW_USEFUL_ADS, false);
     }
 
     @Override

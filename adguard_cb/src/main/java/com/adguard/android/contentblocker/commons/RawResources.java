@@ -116,11 +116,22 @@ public class RawResources {
     }
 
     /**
-     * @param context Current context
+     * @param context  Current context
+     * @param language Language code
+     * @param country  Country code
      * @return select filters script string
      */
-    public static String getSelectFiltersScript(Context context) {
-        return getResourceAsString(context, R.raw.select_filters).replace("{0}", Locale.getDefault().getLanguage());
+    public static String getSelectFiltersScript(Context context, String language, String country) {
+        // Simple language name
+        // Normally it is equal to "ru" or "es"
+        // In case of sr-latn we should also strip the part after "-"
+        String simpleLocale = StringUtils.substringBefore(language.toLowerCase(), "-");
+        // Full locale: zh-tw, ru-ru, sr-latn, etc
+        String fullLocale = (language + (StringUtils.isEmpty(country) ? StringUtils.EMPTY : ("-" + country))).toLowerCase();
+
+        return getResourceAsString(context, R.raw.select_filters)
+                .replace("{0}", fullLocale)
+                .replace("{1}", simpleLocale);
     }
 
     /**

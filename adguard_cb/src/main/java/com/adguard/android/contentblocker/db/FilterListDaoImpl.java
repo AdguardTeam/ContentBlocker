@@ -27,6 +27,7 @@ import com.adguard.android.contentblocker.model.FilterList;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Filter list dao implementation (using db)
@@ -72,7 +73,8 @@ public class FilterListDaoImpl implements FilterListDao {
         try {
             SQLiteDatabase db = dbHelper.getReadableDatabase();
 
-            cursor = db.rawQuery(RawResources.getSelectFiltersScript(context), null);
+            Locale locale = Locale.getDefault();
+            cursor = db.rawQuery(RawResources.getSelectFiltersScript(context, locale.getLanguage(), locale.getCountry()), null);
             while (cursor.moveToNext()) {
                 items.add(parseFilterList(cursor));
             }

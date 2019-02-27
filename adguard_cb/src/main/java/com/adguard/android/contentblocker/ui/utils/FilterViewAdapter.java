@@ -127,10 +127,9 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
         final Date updated = filter.getLastTimeDownloaded();
         if (updated != null && updated.getTime() > 0) {
             sb.append("\r\n");
-            final Locale locale = Locale.getDefault();
             sb.append(context.getString(R.string.filterUpdatedTemplate)
-                    .replace("{0}", ActivityUtils.formatDate(updated, locale))
-                    .replace("{1}", ActivityUtils.formatTime(updated, locale)));
+                    .replace("{0}", ActivityUtils.formatDate(updated))
+                    .replace("{1}", ActivityUtils.formatTime(updated)));
         }
 
         return sb.toString();

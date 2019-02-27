@@ -47,22 +47,24 @@ public class ActivityUtils {
      * Formats date string
      *
      * @param date   Date
-     * @param locale Locale
      * @return Formatted date
      */
-    public static String formatDate(Date date, Locale locale) {
-        return new SimpleDateFormat("dd MMMM yyyy", locale).format(date).replaceFirst("^0*", "");
+    public static String formatDate(Date date) {
+        return DateFormat.getDateInstance().format(date);
     }
 
     /**
      * Formats date to time string
      *
      * @param time   Time
-     * @param locale Locale
      * @return Formatted time
      */
-    public static String formatTime(Date time, Locale locale) {
-        return new SimpleDateFormat("HH:mm", locale).format(time).replaceFirst("^0?", "");
+    public static String formatTime(Date time) {
+        return DateFormat.getTimeInstance().format(time);
+    }
+
+    public static String formatDateTime(Date dateTime) {
+        return DateFormat.getDateTimeInstance().format(dateTime);
     }
 
     public static void startMarket(Context context, String packageName, String referrer) {

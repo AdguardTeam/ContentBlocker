@@ -70,8 +70,8 @@
     <string name="clearUserRulesButtonText">Удалить все</string>
     <string name="browseButtonText">Обзор</string>
     <string name="reportBug">Сообщить об ошибке</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Политика конфиденциальности</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="privacyPolicyLinkText">Политика конфиденциальности</string>
+    <string name="eulaLinkText">EULA</string>
     <string name="delete">Удалить</string>
     <string name="confirmClearUserFilterMessage">Вы уверены что хотите очистить собственный фильтр? Данную операцию нельзя отменить.</string>
     <string name="confirmRemoveUserRuleMessage">Вы уверены, что хотите удалить это правило? Данную операцию нельзя отменить.</string>
@@ -96,4 +96,6 @@
     <string name="overwrite_existing_rules">Перезаписать существующие правила</string>
     <string name="other_product_message">Это приложение работает только в Samsung и Yandex браузерах. Не совсем то, что вам нужно? Ознакомьтесь с другими продуктами AdGuard на нашем вебсайте</string>
     <string name="go_to_products">Перейти в \"Продукты\"</string>
+    <string name="select_browser_dialog_adguard_products_title">Не совсем то, что вам нужно?</string>
+    <string name="select_browser_dialog_adguard_products_message">Ознакомьтесь с другими продуктами AdGuard на нашем вебсайте</string>
 </resources>

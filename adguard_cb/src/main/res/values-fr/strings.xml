@@ -90,4 +90,6 @@
     <string name="reportTypeCustom">Autre</string>
     <string name="other_product_message">L\'appli fonctionne uniquement dans les navigateurs Samsung et Yandex. Si ce n\'est pas ce qu\'il vous faut, vous trouverez d\'autres produits AdGuard sur notre site Web.</string>
     <string name="go_to_products">Aller vers Produits</string>
+    <string name="select_browser_dialog_adguard_products_title">Ce n\'est pas exactement ce que vous recherchiez ?</string>
+    <string name="select_browser_dialog_adguard_products_message">Consultez notre site Web pour voir les audres logiciels AdGuard</string>
 </resources>

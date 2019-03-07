@@ -100,7 +100,8 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         findViewById(R.id.go_to_products).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavigationHelper.redirectToWebSite(MainActivity.this, AppLink.Website.getOtherProductUrl(getApplicationContext()));
+                String url = AppLink.Website.getOtherProductUrl(getApplicationContext(), "main_activity");
+                NavigationHelper.redirectToWebSite(MainActivity.this, url);
             }
         });
 

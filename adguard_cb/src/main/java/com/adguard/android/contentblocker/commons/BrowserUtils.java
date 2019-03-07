@@ -32,7 +32,10 @@ import android.view.View;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.service.NotificationService;
+import com.adguard.android.contentblocker.ui.MainActivity;
 import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
+import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
+
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.*;
@@ -207,6 +210,14 @@ public class BrowserUtils {
             public void onClick(View v) {
                 ActivityUtils.startMarket(context, SAMSUNG_BROWSER_PACKAGE, null);
                 dialog.dismiss();
+            }
+        });
+
+        dialogLayout.findViewById(R.id.others_product_card).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = AppLink.Website.getOtherProductUrl(context, "select_browser_dialog");
+                NavigationHelper.redirectToWebSite(context, url);
             }
         });
 

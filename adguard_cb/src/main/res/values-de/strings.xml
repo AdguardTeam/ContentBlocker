@@ -86,4 +86,7 @@
     <string name="overwrite_existing_rules">Bestehende Regeln überschreiben</string>
     <string name="other_product_message">Diese App funktioniert nur in Samsung- und Yandex-Browsern. Brauchen Sie was anderes? Probieren Sie andere AdGuard-Produkte aus, die Sie auf unserer Webseite finden</string>
     <string name="go_to_products">Zu den Produkten übergehen</string>
+    <string name="select_browser_dialog_adguard_products_title">Nicht ganz das, was Sie brauchen?</string>
+    <string name="select_browser_dialog_adguard_products_message">"Finden Sie weitere AdGuard-Produkte auf unserer Webseite.
+"</string>
 </resources>

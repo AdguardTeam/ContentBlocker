@@ -75,8 +75,8 @@ public class AppLink {
          *
          * @return url to other adguard products
          */
-        public static String getOtherProductUrl(Context context) {
-            return getForwardLink(context, BuildConfig.otherAdguardProductUrl, "main_activity");
+        public static String getOtherProductUrl(Context context, String from) {
+            return getForwardLink(context, BuildConfig.otherAdguardProductUrl, from);
         }
     }
 

@@ -18,6 +18,7 @@ package com.adguard.android.contentblocker.ui.utils;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.customtabs.CustomTabsIntent;
@@ -55,11 +56,11 @@ public class NavigationHelper {
      * @param from Context
      * @param url  Url to open
      */
-    public static void redirectToWebSite(Activity from, String url) {
+    public static void redirectToWebSite(Context from, String url) {
         redirectUsingCustomTab(from, url);
     }
 
-    private static void redirectUsingCustomTab(Activity context, String url) {
+    private static void redirectUsingCustomTab(Context context, String url) {
         try {
             Uri uri = Uri.parse(url);
             CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();

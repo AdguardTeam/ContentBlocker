@@ -17,6 +17,7 @@
 package com.adguard.android.contentblocker.service;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -466,7 +467,7 @@ public class FilterServiceImpl implements FilterService {
         long timeFromUpdate = System.currentTimeMillis() - UPDATE_INVALIDATE_PERIOD;
         for (FilterList filter : getEnabledFilters()) {
 
-            if (force || (filter.getLastTimeDownloaded() == null) || (filter.getLastTimeDownloaded().getTime() - timeFromUpdate < 0)) {
+            if (force || shouldUpdateOutdatedFilter(filter, timeFromUpdate)) {
                 filtersToUpdate.add(filter);
             }
         }
@@ -506,7 +507,9 @@ public class FilterServiceImpl implements FilterService {
                 }
 
                 FilterList update = map.get(filterId);
-                if (update.getVersion().compareTo(current.getVersion()) > 0) {
+                if (update.getVersion().compareTo(current.getVersion()) > 0
+                        || !filterRuleDao.hasFilterRules(filterId)) {
+
                     current.setVersion(update.getVersion().toString());
                     current.setLastTimeDownloaded(new Date());
                     current.setTimeUpdated(update.getTimeUpdated());
@@ -514,6 +517,7 @@ public class FilterServiceImpl implements FilterService {
 
                     LOG.info("Updating filter:" + current.getFilterId());
                     updateFilter(current);
+
                     LOG.info("Updating rules for filter:" + current.getFilterId());
                     updateFilterRules(filterId);
                 } else {
@@ -559,6 +563,7 @@ public class FilterServiceImpl implements FilterService {
         filterListDao.updateFilter(current);
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private boolean isJobCreated(JobScheduler jobScheduler, final int jobId) {
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
             return jobScheduler.getPendingJob(jobId) != null;
@@ -572,6 +577,15 @@ public class FilterServiceImpl implements FilterService {
         });
 
         return jobInfo != null;
+    }
+
+    private boolean shouldUpdateOutdatedFilter(FilterList filterList, long timeFromUpdate) {
+        if (!filterList.isEnabled()) {
+            return false;
+        }
+
+        Date lastTimeDownloaded = filterList.getLastTimeDownloaded();
+        return lastTimeDownloaded == null || (lastTimeDownloaded.getTime() - timeFromUpdate < 0);
     }
 
     private static void sendUpdateFiltersInBrowser(Context context, String packageName) {

@@ -84,6 +84,14 @@ public class FilterRuleDaoImpl implements FilterRuleDao {
         }
     }
 
+    @Override
+    public boolean hasFilterRules(int filterId) {
+        String filterName = "filter_" + filterId;
+
+        String[] strings = context.getApplicationContext().fileList();
+        return ArrayUtils.contains(strings, filterName);
+    }
+
     /**
      * Gets or creates filter file
      *

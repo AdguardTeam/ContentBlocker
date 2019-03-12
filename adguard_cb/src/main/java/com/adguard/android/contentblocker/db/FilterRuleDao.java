@@ -38,4 +38,12 @@ public interface FilterRuleDao {
      * @param rules    Rules to be inserted
      */
     void setFilterRules(int filterId, List<String> rules);
+
+    /**
+     * Checks if we have filter rules for this filter locally
+     *
+     * @param filterId Filter id to check
+     * @return True if we do not need to download rules, False otherwise
+     */
+    boolean hasFilterRules(int filterId);
 }

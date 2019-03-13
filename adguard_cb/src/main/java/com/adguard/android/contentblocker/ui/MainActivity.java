@@ -289,7 +289,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             }
         }
 
-        String dateTime = DateUtils.formatDateTime(this, now.getTime(), DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_NO_YEAR | DateUtils.FORMAT_ABBREV_MONTH | DateUtils.FORMAT_SHOW_TIME);
+        String dateTime = ActivityUtils.formatDateTime(this, now);
         ((TextView) findViewById(R.id.updateTimeTextView)).setText(dateTime);
 
         // Enabled filters count

@@ -21,22 +21,12 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.content.res.Configuration;
-import android.graphics.Point;
 import android.net.Uri;
-import android.view.*;
-import com.adguard.android.contentblocker.R;
-//import org.apache.commons.lang.time.DateUtils;
+import android.text.format.DateFormat;
+import android.view.Surface;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.text.DateFormat;
-import java.text.NumberFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 /**
  * Activity utils methods.
@@ -46,25 +36,32 @@ public class ActivityUtils {
     /**
      * Formats date string
      *
-     * @param date   Date
+     * @param date Date
      * @return Formatted date
      */
-    public static String formatDate(Date date) {
-        return DateFormat.getDateInstance().format(date);
+    public static String formatDate(Context context, Date date) {
+        return DateFormat.getDateFormat(context).format(date);
     }
 
     /**
      * Formats date to time string
      *
-     * @param time   Time
+     * @param time Time
      * @return Formatted time
      */
-    public static String formatTime(Date time) {
-        return DateFormat.getTimeInstance().format(time);
+    public static String formatTime(Context context, Date time) {
+        return DateFormat.getTimeFormat(context).format(time);
     }
 
-    public static String formatDateTime(Date dateTime) {
-        return DateFormat.getDateTimeInstance().format(dateTime);
+    /**
+     * Formats a date into a datetime string.
+     *
+     * @param context  the application context
+     * @param dateTime dateTime
+     * @return the formatted time string
+     */
+    public static String formatDateTime(Context context, Date dateTime) {
+        return formatDate(context, dateTime) + " " + formatTime(context, dateTime);
     }
 
     public static void startMarket(Context context, String packageName, String referrer) {

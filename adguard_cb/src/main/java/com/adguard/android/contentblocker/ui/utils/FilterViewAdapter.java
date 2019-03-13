@@ -18,6 +18,7 @@ package com.adguard.android.contentblocker.ui.utils;
 
 import android.app.Activity;
 
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -128,8 +129,8 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
         if (updated != null && updated.getTime() > 0) {
             sb.append("\r\n");
             sb.append(context.getString(R.string.filterUpdatedTemplate)
-                    .replace("{0}", ActivityUtils.formatDate(updated))
-                    .replace("{1}", ActivityUtils.formatTime(updated)));
+                    .replace("{0}", ActivityUtils.formatDate(context, updated))
+                    .replace("{1}", ActivityUtils.formatTime(context, updated)));
         }
 
         return sb.toString();

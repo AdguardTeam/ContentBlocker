@@ -237,7 +237,13 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
         Log.i(TAG, "onNewBrowserInstalled()");
         if (page < 2) {
             viewPager.setCurrentItem(2, false);
-            BrowserUtils.openYandexBlockingOptions(OnboardingActivity.this);
+
+            if (BrowserUtils.isYandexBrowserAvailable(this)) {
+                BrowserUtils.startYandexBrowser(OnboardingActivity.this);
+            } else {
+                BrowserUtils.startSamsungBrowser(OnboardingActivity.this);
+            }
+
             scheduleOptionsEnabledCheckTask();
         }
     }
@@ -410,9 +416,7 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
                 String intentPackageName = intent.getData().getSchemeSpecificPart();
 
                 Log.i(TAG, "package = " + intentPackageName);
-                if (intentPackageName.startsWith("com.yandex.browser")) {
-                    activity.onNewBrowserInstalled();
-                }
+                activity.onNewBrowserInstalled();
             }
         }
     }

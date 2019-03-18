@@ -115,4 +115,7 @@
     <string name="star_symbols" translatable="false">★</string>
     <string name="select_browser_dialog_adguard_products_title">Not quite what you need?</string>
     <string name="select_browser_dialog_adguard_products_message">Check out other AdGuard products on our website</string>
+
+    <string name="send_feedback">Send Feedback</string>
+    <string name="send_feedback_title">Feedback type</string>
 </resources>

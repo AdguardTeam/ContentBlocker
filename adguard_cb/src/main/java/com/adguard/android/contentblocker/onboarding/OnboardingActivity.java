@@ -42,7 +42,6 @@ import android.widget.TextView;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.commons.BrowserUtils;
-import com.adguard.android.contentblocker.commons.concurrent.ExecutorsPool;
 import com.adguard.android.contentblocker.service.PreferencesService;
 import com.adguard.android.contentblocker.ui.ClickViewPager;
 
@@ -50,8 +49,8 @@ import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
+
+import static com.adguard.android.contentblocker.commons.BrowserUtils.YANDEX_BROWSER_PACKAGE;
 
 public class OnboardingActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -180,7 +179,12 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
 
     public void onLastPageClick() {
         if (BrowserUtils.isYandexBrowserAvailable(getApplicationContext())) {
-            BrowserUtils.openYandexBlockingOptions(getApplicationContext());
+            if (browsersFound) {
+                BrowserUtils.openYandexBlockingOptions(getApplicationContext());
+            } else {
+                BrowserUtils.startYandexBrowser(getApplicationContext());
+            }
+
         } else {
             BrowserUtils.openSamsungBlockingOptions(getApplicationContext());
         }
@@ -237,26 +241,7 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
         Log.i(TAG, "onNewBrowserInstalled()");
         if (page < 2) {
             viewPager.setCurrentItem(2, false);
-
-            if (BrowserUtils.isYandexBrowserAvailable(this)) {
-                BrowserUtils.startYandexBrowser(OnboardingActivity.this);
-            } else {
-                BrowserUtils.startSamsungBrowser(OnboardingActivity.this);
-            }
-
-            scheduleOptionsEnabledCheckTask();
         }
-    }
-
-    private void scheduleOptionsEnabledCheckTask() {
-        BrowserInstallPollingTask job = new BrowserInstallPollingTask();
-        job.future = ExecutorsPool.getSingleThreadScheduledExecutorService().scheduleAtFixedRate(job, 10000, 500, TimeUnit.MILLISECONDS);
-    }
-
-    private void bringActivityToFront() {
-        Intent i = new Intent(OnboardingActivity.this, OnboardingActivity.class);
-        i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        startActivity(i);
     }
 
     /**
@@ -416,22 +401,8 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
                 String intentPackageName = intent.getData().getSchemeSpecificPart();
 
                 Log.i(TAG, "package = " + intentPackageName);
-                activity.onNewBrowserInstalled();
-            }
-        }
-    }
-
-    private class BrowserInstallPollingTask implements Runnable {
-
-        ScheduledFuture<?> future = null;
-
-        @Override
-        public void run() {
-            if (!BrowserUtils.getBrowsersAvailableByIntent(OnboardingActivity.this).isEmpty()) {
-                bringActivityToFront();
-                if (future != null) {
-                    future.cancel(false);
-                    future = null;
+                if (intentPackageName.startsWith(YANDEX_BROWSER_PACKAGE)) {
+                    activity.onNewBrowserInstalled();
                 }
             }
         }

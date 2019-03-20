@@ -224,9 +224,9 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     private void refreshMainInfo() {
         boolean samsungBrowserAvailable = BrowserUtils.isSamsungBrowserAvailable(this);
 
-        View settingAdguardInSumsung = findViewById(R.id.setting_adguard_samsung);
-        settingAdguardInSumsung.setVisibility(samsungBrowserAvailable ? View.VISIBLE : View.GONE);
-        settingAdguardInSumsung.setOnClickListener(new View.OnClickListener() {
+        View settingAdguardInSamsung = findViewById(R.id.setting_adguard_samsung);
+        settingAdguardInSamsung.setVisibility(samsungBrowserAvailable ? View.VISIBLE : View.GONE);
+        settingAdguardInSamsung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 BrowserUtils.openSamsungBlockingOptions(MainActivity.this);

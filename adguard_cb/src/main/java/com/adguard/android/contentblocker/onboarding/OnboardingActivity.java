@@ -20,61 +20,49 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.Toolbar;
-
+import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.commons.BrowserUtils;
-import com.adguard.android.contentblocker.R;
-import com.adguard.android.contentblocker.ui.ClickViewPager;
 import com.adguard.android.contentblocker.service.PreferencesService;
-import com.adguard.android.contentblocker.commons.concurrent.ExecutorsPool;
+import com.adguard.android.contentblocker.ui.ClickViewPager;
 
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
+
+import static com.adguard.android.contentblocker.commons.BrowserUtils.YANDEX_BROWSER_PACKAGE;
 
 public class OnboardingActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final String TAG = "Onboarding";
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
-    private SectionsPagerAdapter mSectionsPagerAdapter;
 
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
     private ClickViewPager viewPager;
 
     private ImageView[] indicators;
+
     private int page = 0;
     private boolean browsersFound = false;
+
     private PackageReceiver packageReceiver = null;
 
     @Override
@@ -82,22 +70,23 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FragmentManager supportFragmentManager = getSupportFragmentManager();
         // Remove all fragments on configuration change (screen rotation)
         removeAllFragments(supportFragmentManager);
+
         // Create the adapter that will return a fragment for each of the three primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(this, supportFragmentManager);
+        SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(this, supportFragmentManager);
 
         indicators = new ImageView[]{
-                (ImageView) findViewById(R.id.intro_indicator_0),
-                (ImageView) findViewById(R.id.intro_indicator_1),
-                (ImageView) findViewById(R.id.intro_indicator_2)
+                findViewById(R.id.intro_indicator_0),
+                findViewById(R.id.intro_indicator_1),
+                findViewById(R.id.intro_indicator_2)
         };
 
         // Set up the ViewPager with the sections adapter.
-        viewPager = (ClickViewPager) findViewById(R.id.container);
+        viewPager = findViewById(R.id.container);
         viewPager.setPagingEnabled(false);
         viewPager.setAdapter(mSectionsPagerAdapter);
 
@@ -189,14 +178,20 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
     }
 
     public void onLastPageClick() {
-        Set<String> browsersAvailable = BrowserUtils.getBrowsersAvailableByPackage(getApplicationContext());
-        if (browsersAvailable.contains(BrowserUtils.YANDEX)) {
-            BrowserUtils.openYandexBlockingOptions(getApplicationContext());
-        } else if (browsersAvailable.contains(BrowserUtils.SAMSUNG)) {
+        if (BrowserUtils.isYandexBrowserAvailable(getApplicationContext())) {
+            if (browsersFound) {
+                BrowserUtils.openYandexBlockingOptions(getApplicationContext());
+            } else {
+                BrowserUtils.startYandexBrowser(getApplicationContext());
+            }
+
+        } else {
             BrowserUtils.openSamsungBlockingOptions(getApplicationContext());
         }
+
         PreferencesService preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
         preferencesService.setOnboardingShown(true);
+
         finish();
     }
 
@@ -246,20 +241,7 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
         Log.i(TAG, "onNewBrowserInstalled()");
         if (page < 2) {
             viewPager.setCurrentItem(2, false);
-            BrowserUtils.startYandexBrowser(OnboardingActivity.this);
-            scheduleOptionsEnabledCheckTask();
         }
-    }
-
-    private void scheduleOptionsEnabledCheckTask() {
-        BrowserInstallPollingTask job = new BrowserInstallPollingTask();
-        job.future = ExecutorsPool.getSingleThreadScheduledExecutorService().scheduleAtFixedRate(job, 10000, 500, TimeUnit.MILLISECONDS);
-    }
-
-    private void bringActivityToFront() {
-        Intent i = new Intent(OnboardingActivity.this, OnboardingActivity.class);
-        i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        startActivity(i);
     }
 
     /**
@@ -290,20 +272,26 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
         }
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            int page = getArguments().getInt(ARG_SECTION_NUMBER);
+        public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            int page = 0;
+
+            Bundle arguments = getArguments();
+            if (arguments != null) {
+                page = arguments.getInt(ARG_SECTION_NUMBER);
+            }
+
             View rootView = inflater.inflate(R.layout.fragment_onboarding, container, false);
 
-            ImageView image = (ImageView) rootView.findViewById(R.id.sectionImage);
-            image.setImageResource(getImageForBrowser(page, 1));
+            ImageView image = rootView.findViewById(R.id.sectionImage);
+            image.setImageResource(getImageForBrowser(page));
 
-            TextView titleView = (TextView) rootView.findViewById(R.id.sectionTitle);
+            TextView titleView = rootView.findViewById(R.id.sectionTitle);
             titleView.setText(getTitleForPage(page));
 
-            TextView textView = (TextView) rootView.findViewById(R.id.sectionMessage);
+            TextView textView = rootView.findViewById(R.id.sectionMessage);
             textView.setText(getTextForPage(page));
 
-            AppCompatButton button = (AppCompatButton) rootView.findViewById(R.id.sectionButton);
+            AppCompatButton button = rootView.findViewById(R.id.sectionButton);
             button.setText(getButtonTextForPage(page));
             button.setOnClickListener(listener);
 
@@ -349,35 +337,25 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
             }
         }
 
-        private int getImageForBrowser(int page, int browser) {
+        private int getImageForBrowser(int page) {
             switch (page) {
                 case 1:
                     return R.drawable.onboarding_1;
                 case 2:
                     return R.drawable.onboarding_2;
                 case 3:
-                    switch (browser) {
-                        case 1:
-                        case 2:
-                            return R.drawable.onboarding_3;
-                        default:
-                            return 0;
-                    }
+                    return R.drawable.onboarding_3;
                 default:
                     return 0;
             }
         }
     }
 
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+    class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         private final View.OnClickListener listener;
 
-        public SectionsPagerAdapter(View.OnClickListener listener, FragmentManager fm) {
+        SectionsPagerAdapter(View.OnClickListener listener, FragmentManager fm) {
             super(fm);
             this.listener = listener;
         }
@@ -419,27 +397,12 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
         @Override
         public void onReceive(Context context, Intent intent) {
             Log.i(TAG, "onReceive: " + intent.toString());
-            if (Intent.ACTION_PACKAGE_ADDED.equals(intent.getAction())) {
+            if (Intent.ACTION_PACKAGE_ADDED.equals(intent.getAction()) && intent.getData() != null) {
                 String intentPackageName = intent.getData().getSchemeSpecificPart();
+
                 Log.i(TAG, "package = " + intentPackageName);
-                if (intentPackageName.startsWith("com.yandex.browser")) {
+                if (intentPackageName.startsWith(YANDEX_BROWSER_PACKAGE)) {
                     activity.onNewBrowserInstalled();
-                }
-            }
-        }
-    }
-
-    private class BrowserInstallPollingTask implements Runnable {
-
-        ScheduledFuture<?> future = null;
-
-        @Override
-        public void run() {
-            if (!BrowserUtils.getBrowsersAvailableByIntent(OnboardingActivity.this).isEmpty()) {
-                bringActivityToFront();
-                if (future != null) {
-                    future.cancel(false);
-                    future = null;
                 }
             }
         }

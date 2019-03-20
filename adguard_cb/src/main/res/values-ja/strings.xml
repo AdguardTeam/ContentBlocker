@@ -69,7 +69,7 @@
     <string name="importUserRulesUrlErrorMessage">このURLは利用できません。</string>
     <string name="clearUserRulesButtonText">すべて削除</string>
     <string name="browseButtonText">参照</string>
-    <string name="reportBug">バグを報告</string>
+    <string name="reportBug">フィードバックを送信</string>
     <string name="privacyPolicyLinkText">プライバシーポリシー</string>
     <string name="eulaLinkText">利用許諾契約(EULA)</string>
     <string name="delete">削除</string>
@@ -87,7 +87,7 @@
     <string name="confirmClearWhitelistMessage">ホワイトリストを削除してよろしいですか？この操作は元に戻すことはできません。</string>
     <string name="confirmRemoveWhitelistDomainMessage">このドメインを削除してよろしいですか？この操作は元に戻すことはできません。</string>
     <string name="emptyWhitelistTextViewText">ホワイトリストは設定されていません</string>
-    <string name="report_dialog_title">報告の種類</string>
+    <string name="report_dialog_title">フィードバックの種類</string>
     <string name="reportTypeMissedAd">広告の見落としまたはトラッカー</string>
     <string name="reportTypeIncorrectBlocking">不適切なブロック</string>
     <string name="reportTypeBugReport">バグを報告</string>

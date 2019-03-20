@@ -93,4 +93,9 @@
     <string name="reportTypeBugReport">گزارش مشکل</string>
     <string name="reportTypeFeatureRequest">درخواست ویژگی</string>
     <string name="reportTypeCustom">سایر</string>
+    <string name="overwrite_existing_rules">جایگزینی دستورات موجود</string>
+    <string name="other_product_message">این برنامه فقط در مرورگرهای  سامسونگ و یاندکس کار می کند.کاملا چیزی که شما میخواهید نیست؟ سایر محصولات AdGuard را در وبسایت ما ببینید</string>
+    <string name="go_to_products">برو به محصولات</string>
+    <string name="select_browser_dialog_adguard_products_title">چیزی که نیاز داشتید نبود؟</string>
+    <string name="select_browser_dialog_adguard_products_message">از محصولات دیگر اَدگارد در وب سایت ما دیدن فرمایید</string>
 </resources>

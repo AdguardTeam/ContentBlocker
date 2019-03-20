@@ -96,4 +96,6 @@
     <string name="overwrite_existing_rules">Prepísať existujúce pravidlá</string>
     <string name="other_product_message">Táto aplikácia funguje iba v prehliadačoch Samsung a Yandex. Nie je to presne to, čo potrebujete? Pozrite sa na iné produkty AdGuard na našej webovej stránke</string>
     <string name="go_to_products">Ísť na Produkty</string>
+    <string name="select_browser_dialog_adguard_products_title">Nie celkom to, čo potrebujete?</string>
+    <string name="select_browser_dialog_adguard_products_message">Prezrite si ďalšie AdGuard produkty na našej webovej stránke</string>
 </resources>

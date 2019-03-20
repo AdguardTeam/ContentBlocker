@@ -397,7 +397,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         };
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(R.string.send_feedback_title);
+        builder.setTitle(R.string.report_dialog_title);
         builder.setSingleChoiceItems(arrayAdapter, -1, new DialogInterface.OnClickListener() {
 
             @Override

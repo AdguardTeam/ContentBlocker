@@ -94,4 +94,8 @@
     <string name="reportTypeFeatureRequest">기능 제안</string>
     <string name="reportTypeCustom">기타</string>
     <string name="overwrite_existing_rules">기존 규칙 덮어쓰기</string>
+    <string name="other_product_message">이 앱은 삼성 브라우저와 얀덱스 브라우저에서만 작동합니다. 원하시던게 아닌가요? 다른 AdGuard 제품들을 저희 웹사이트에서 확인해보세요</string>
+    <string name="go_to_products">제품들로</string>
+    <string name="select_browser_dialog_adguard_products_title">원하시던게 아닌가요?</string>
+    <string name="select_browser_dialog_adguard_products_message">다른 AdGuard 제품들을 저희 웹사이트에서 확인해보세요</string>
 </resources>

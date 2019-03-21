@@ -48,6 +48,7 @@ import com.adguard.android.contentblocker.commons.AppLink;
 import com.adguard.android.contentblocker.commons.BrowserUtils;
 import com.adguard.android.contentblocker.model.FilterList;
 import com.adguard.android.contentblocker.model.ReportType;
+import com.adguard.android.contentblocker.onboarding.OnboardingActivity;
 import com.adguard.android.contentblocker.service.FilterService;
 import com.adguard.android.contentblocker.service.FilterServiceImpl;
 import com.adguard.android.contentblocker.service.PreferencesService;
@@ -125,9 +126,9 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             });
         }
 
-        /*if (!preferencesService.isOnboardingShown()) {
+        if (!preferencesService.isOnboardingShown()) {
             NavigationHelper.redirectToActivity(this, OnboardingActivity.class);
-        }*/
+        }
 
         filterService.scheduleFiltersUpdate();
     }

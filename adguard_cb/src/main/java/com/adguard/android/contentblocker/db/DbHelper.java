@@ -39,7 +39,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private static final Logger LOG = LoggerFactory.getLogger(DbHelper.class);
 
-    private static final int DB_VERSION = 23;
+    private static final int DB_VERSION = 24;
     private static final String DB_NAME = "adguard.db";
 
 

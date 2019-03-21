@@ -70,7 +70,7 @@
     <string name="importUserRulesUrlErrorMessage">The URL is not valid</string>
     <string name="clearUserRulesButtonText">Remove all</string>
     <string name="browseButtonText">Browse</string>
-    <string name="reportBug">Report a bug</string>
+    <string name="reportBug">Send Feedback</string>
     <string name="privacyPolicyLinkText">Privacy Policy</string>
     <string name="eulaLinkText">EULA</string>
     <string name="delete">Delete</string>
@@ -103,7 +103,7 @@
     <string name="githubLink" translatable="false">github.com</string>
     <string name="adguardComLink" translatable="false">adguard.com</string>
     <string name="forumAdguardComLink" translatable="false">forum.adguard.com</string>
-    <string name="report_dialog_title">Report type</string>
+    <string name="report_dialog_title">Feedback type</string>
     <string name="reportTypeMissedAd">Missed Ad or tracker</string>
     <string name="reportTypeIncorrectBlocking">Incorrect blocking</string>
     <string name="reportTypeBugReport">Bug report</string>

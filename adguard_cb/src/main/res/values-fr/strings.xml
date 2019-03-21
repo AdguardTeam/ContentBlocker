@@ -69,7 +69,7 @@
     <string name="importUserRulesUrlErrorMessage">L\'URL n\'est pas valide</string>
     <string name="clearUserRulesButtonText">Supprimer tout</string>
     <string name="browseButtonText">Parcourir</string>
-    <string name="reportBug">Signaler un bug</string>
+    <string name="reportBug">Envoyer un retour</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Politique de Confidentialité</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
     <string name="delete">Supprimer</string>

@@ -87,7 +87,7 @@
     <string name="confirmClearWhitelistMessage">Вы уверены что хотите очистить собственный фильтр? Данную операцию нельзя отменить.</string>
     <string name="confirmRemoveWhitelistDomainMessage">Вы уверены, что хотите удалить этот сайт? Данную операцию нельзя отменить.</string>
     <string name="emptyWhitelistTextViewText">Белый список пуст</string>
-    <string name="report_dialog_title">Тип проблемы</string>
+    <string name="report_dialog_title">Тип сообщения</string>
     <string name="reportTypeMissedAd">Пропущенная реклама или счетчик</string>
     <string name="reportTypeIncorrectBlocking">Некорректная блокировка</string>
     <string name="reportTypeBugReport">Дефект</string>

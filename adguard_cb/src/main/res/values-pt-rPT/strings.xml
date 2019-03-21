@@ -94,4 +94,8 @@
     <string name="reportTypeFeatureRequest">Solicitação de recurso</string>
     <string name="reportTypeCustom">Outro</string>
     <string name="overwrite_existing_rules">Substituir regras existentes</string>
+    <string name="other_product_message">Esta aplicação funciona apenas nos navegadores Samsung e Yandex. Não é exactamente o que procura? Confira outros produtos AdGuard no nosso site</string>
+    <string name="go_to_products">Ir para Produtos</string>
+    <string name="select_browser_dialog_adguard_products_title">Não é exactamente o que procura?</string>
+    <string name="select_browser_dialog_adguard_products_message">Confira outros produtos AdGuard no nosso site</string>
 </resources>

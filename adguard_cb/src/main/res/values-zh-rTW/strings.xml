@@ -69,7 +69,7 @@
     <string name="importUserRulesUrlErrorMessage">該網址為無效的</string>
     <string name="clearUserRulesButtonText">移除全部</string>
     <string name="browseButtonText">瀏覽</string>
-    <string name="reportBug">報告程式錯誤</string>
+    <string name="reportBug">傳送回饋意見</string>
     <string name="privacyPolicyLinkText">隱私政策</string>
     <string name="eulaLinkText">終端用戶授權協定</string>
     <string name="delete">刪除</string>
@@ -87,13 +87,15 @@
     <string name="confirmClearWhitelistMessage">您確定您想要清除該白名單嗎？這操作無法還原。</string>
     <string name="confirmRemoveWhitelistDomainMessage">您確定您想要刪除該網域嗎？這操作無法還原。</string>
     <string name="emptyWhitelistTextViewText">白名單為空</string>
-    <string name="report_dialog_title">報告類型</string>
+    <string name="report_dialog_title">回饋意見類型</string>
     <string name="reportTypeMissedAd">漏失的廣告或追蹤器</string>
     <string name="reportTypeIncorrectBlocking">不正確的封鎖</string>
     <string name="reportTypeBugReport">程式錯誤報告</string>
     <string name="reportTypeFeatureRequest">功能請求</string>
     <string name="reportTypeCustom">其它的</string>
     <string name="overwrite_existing_rules">覆寫現存的規則</string>
-    <string name="other_product_message">該應用程式僅運作於Samsung和Yandex 瀏覽器。不完全是您需要的事物？試試於我們的網站上之其它的AdGuard產品</string>
+    <string name="other_product_message">該應用程式僅運作於Samsung和Yandex 瀏覽器。不完全是您需要的事物嗎？試試於我們的網站上之其它的AdGuard產品</string>
     <string name="go_to_products">至產品</string>
+    <string name="select_browser_dialog_adguard_products_title">不完全是您需要的事物嗎？</string>
+    <string name="select_browser_dialog_adguard_products_message">試試於我們的網站上之其它的AdGuard產品</string>
 </resources>

@@ -96,4 +96,6 @@
     <string name="overwrite_existing_rules">Overskriv eksisterende regler</string>
     <string name="other_product_message">Denne app fungerer kun i Samsung og Yandex browsere. Ikke helt hvad du har brug for? Tjek de andre AdGuard produkter på vores hjemmeside</string>
     <string name="go_to_products">Gå til Produkter</string>
+    <string name="select_browser_dialog_adguard_products_title">Ikke helt hvad du har brug for?</string>
+    <string name="select_browser_dialog_adguard_products_message">Tjek andre AdGuard produkter på vores hjemmeside</string>
 </resources>

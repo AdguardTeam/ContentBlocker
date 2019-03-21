@@ -23,8 +23,10 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.net.Uri;
-import android.text.format.DateFormat;
+import android.text.format.DateUtils;
 import android.view.Surface;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Date;
 
@@ -40,7 +42,8 @@ public class ActivityUtils {
      * @return Formatted date
      */
     public static String formatDate(Context context, Date date) {
-        return DateFormat.getDateFormat(context).format(date);
+        String dateTime = DateUtils.formatDateTime(context, date.getTime(), DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_YEAR);
+        return StringUtils.replace(dateTime, " ", "");
     }
 
     /**
@@ -50,13 +53,12 @@ public class ActivityUtils {
      * @return Formatted time
      */
     public static String formatTime(Context context, Date time) {
-        return DateFormat.getTimeFormat(context).format(time);
+        return DateUtils.formatDateTime(context, time.getTime(), DateUtils.FORMAT_SHOW_TIME);
     }
 
     /**
      * Formats a date into a datetime string.
      *
-     * @param context  the application context
      * @param dateTime dateTime
      * @return the formatted time string
      */

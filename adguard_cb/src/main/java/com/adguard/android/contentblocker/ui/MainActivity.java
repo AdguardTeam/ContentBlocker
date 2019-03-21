@@ -33,7 +33,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
-import android.text.format.DateUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -49,7 +48,6 @@ import com.adguard.android.contentblocker.commons.AppLink;
 import com.adguard.android.contentblocker.commons.BrowserUtils;
 import com.adguard.android.contentblocker.model.FilterList;
 import com.adguard.android.contentblocker.model.ReportType;
-import com.adguard.android.contentblocker.onboarding.OnboardingActivity;
 import com.adguard.android.contentblocker.service.FilterService;
 import com.adguard.android.contentblocker.service.FilterServiceImpl;
 import com.adguard.android.contentblocker.service.PreferencesService;
@@ -127,9 +125,9 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             });
         }
 
-        if (!preferencesService.isOnboardingShown()) {
+        /*if (!preferencesService.isOnboardingShown()) {
             NavigationHelper.redirectToActivity(this, OnboardingActivity.class);
-        }
+        }*/
 
         filterService.scheduleFiltersUpdate();
     }

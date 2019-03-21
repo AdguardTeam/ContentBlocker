@@ -17,8 +17,6 @@
 package com.adguard.android.contentblocker.ui.utils;
 
 import android.app.Activity;
-
-import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,15 +24,14 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.R;
+import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.model.FilterList;
 import com.adguard.android.contentblocker.service.FilterService;
 import com.adguard.android.contentblocker.service.FilterServiceImpl;
 import com.adguard.android.contentblocker.service.PreferencesService;
 
 import java.util.Date;
-import java.util.Locale;
 
 /**
  *
@@ -105,7 +102,7 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
     public void onClick(View v) {
         FilterList filterList = (FilterList) v.getTag();
         filterService.updateFilterEnabled(filterList, !filterList.isEnabled());
-        ((CheckBox)v.findViewById(R.id.checkbox)).setChecked(filterList.isEnabled());
+        ((CheckBox) v.findViewById(R.id.checkbox)).setChecked(filterList.isEnabled());
 
         if (filterList.getFilterId() == FilterServiceImpl.SHOW_USEFUL_ADS_FILTER_ID) {
             PreferencesService preferencesService = ServiceLocator.getInstance(context.getApplicationContext()).getPreferencesService();

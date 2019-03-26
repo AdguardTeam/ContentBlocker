@@ -1,0 +1,12 @@
+AdGuard 内容过滤器是一款<b>面向 Yandex 浏览器与三星网络浏览器</b>的，能够帮助您过滤一切广告，同时无需 Root 权限的应用。AdGuard 内容过滤器<b>不会</b>对其它任何应用进行广告过滤。
+
+对应用进行自定义以满足你的需要——可以从超过 20 种针对各语种专门编写的过滤规则和通用过滤规则中加以选择，以符合你的需要。
+
+本应用现已开源，可以在 GitHub 上获取：
+https://github.com/AdguardTeam/ContentBlocker 
+
+在社交网站上关注我们并提出任何问题：
+• Facebook: https://www.facebook.com/AdguardEn/ 
+• Twitter: https://twitter.com/AdguardEn 
+• Instagram: https://www.instagram.com/adguard/ 
+• Google+: https://plus.google.com/+AdguardEn/

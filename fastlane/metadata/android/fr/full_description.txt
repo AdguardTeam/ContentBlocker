@@ -1,0 +1,11 @@
+AdGuard Content Blocker est une application qui bloquera toutes les pubs <b>seulement dans les navigateurs Yandex Browser et Samsung Internet</b> sans nécessiter un appareil rooté. AdGuard Content Blocker <b>ne bloque pas</b> les pubs dans les autres applications.
+Customize the app to suit your needs - choose any from more than 20 language-specific and general filtering rules lists available to you.
+
+L'application est open source et peut être trouvée sur GitHub :
+https://github.com/AdguardTeam/ContentBlocker  
+
+Suivez-nous et posez-nous vos questions sur les réseaux sociaux :  
+• Facebook : https://www.facebook.com/AdguardEn/  
+• Twitter : https://twitter.com/AdguardEn  
+• Instagram : https://www.instagram.com/adguard/  
+• Google+ : https://plus.google.com/+AdguardEn/

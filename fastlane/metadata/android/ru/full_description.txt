@@ -1,0 +1,13 @@
+Это приложение заблокирует всю рекламу, но только в браузерах Яндекс и Самсунг, не требуя при этом root-доступа к устройству. В прочих приложениях реклама не блокируется.
+
+Настройте приложение под себя - выбирайте любые из более чем 20 доступных языковых и общих фильтров.
+
+AdGuard Content Blocker - приложение с открытым кодом, его можно найти на GitHub: 
+https://github.com/AdguardTeam/ContentBlocker
+
+Следите за нашими новостями и задавайте свои вопросы в социальных сетях: 
+• VK: https://vk.com/adguard 
+• Facebook: https://www.facebook.com/adguardRU/ 
+• Twitter: https://twitter.com/AdguardRu 
+• Instagram: https://www.instagram.com/adguard/ 
+• Google+: https://plus.google.com/+AdguardRu/

@@ -69,7 +69,7 @@
     <string name="importUserRulesUrlErrorMessage">Bu URL geçerli değil</string>
     <string name="clearUserRulesButtonText">Tümünü sil</string>
     <string name="browseButtonText">Gözat</string>
-    <string name="reportBug">Hata Bildir</string>
+    <string name="reportBug">Geribildirim Gönder</string>
     <string name="privacyPolicyLinkText">Gizlilik Sözleşmesi</string>
     <string name="eulaLinkText">EULA</string>
     <string name="delete">Sil</string>
@@ -87,7 +87,7 @@
     <string name="confirmClearWhitelistMessage">Beyazlisteyi temizlemek istediğinize emin misiniz? Bu eylem geri alınamaz.</string>
     <string name="confirmRemoveWhitelistDomainMessage">Bu alan adını silmek istediğinize emin misiniz? Bu eylem geri alınamaz.</string>
     <string name="emptyWhitelistTextViewText">Beyazliste boş</string>
-    <string name="report_dialog_title">Rapor türü</string>
+    <string name="report_dialog_title">Geribildirim türü</string>
     <string name="reportTypeMissedAd">Engellenmemiş reklam veya takipçi</string>
     <string name="reportTypeIncorrectBlocking">Yanlış engelleme</string>
     <string name="reportTypeBugReport">Hata raporlama</string>
@@ -96,4 +96,6 @@
     <string name="overwrite_existing_rules">Varolan kuralın üzerine yaz</string>
     <string name="other_product_message">Bu uygulama sadece Samsung ve Yandex tarayıcılarda çalışır. Tam olarak ihtiyacınız bu değil mi? Sitemizdeki diğer AdGuard ürünlerine bakın</string>
     <string name="go_to_products">Ürünlere gidin</string>
+    <string name="select_browser_dialog_adguard_products_title">Tam olarak ihtiyacınız olan bu değil mi?</string>
+    <string name="select_browser_dialog_adguard_products_message">Diğer AdGuard programlarını sitemizde inceleyin</string>
 </resources>

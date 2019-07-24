@@ -20,12 +20,12 @@
     <string name="settings">Configurações</string>
     <string name="pref_autoupdate_filters">Atualização automática de filtros</string>
     <string name="pref_summary_autoupdate_filters">Atualiza os filtros automaticamente</string>
-    <string name="pref_update_wifi_only">Atualize apenas usando Wi-Fi</string>
-    <string name="pref_summary_update_wifi_only">O AdGuard receberá atualizações de filtro somente por Wi-Fi.</string>
+    <string name="pref_update_wifi_only">Atualizar apenas no Wi-Fi</string>
+    <string name="pref_summary_update_wifi_only">O AdGuard receberá atualizações de filtro apenas no Wi-Fi.</string>
     <string name="pref_show_useful_ads">Mostrar anúncios úteis</string>
     <string name="pref_summary_show_useful_ads">Desbloqueia anúncios que podem ser úteis aos usuários.</string>
     <string name="pref_filters_category">Filtros</string>
-    <string name="pref_summary_filters_category">Selecione os filtros a serem usados</string>
+    <string name="pref_summary_filters_category">Selecione os filtros a serem utilizados</string>
     <string name="filters">Filtros</string>
     <string name="stats_enabled_filters">Filtros</string>
     <string name="stats_enabled_rules">Regras</string>
@@ -37,7 +37,7 @@
     <string name="rateAdguardButtonText">Avalie AdGuard</string>
     <string name="officialSiteLabelText">Site oficial</string>
     <string name="forumLabelText">Fórum</string>
-    <string name="install_browsers">Você não possui navegadores suportados instalados! Você pode instalá-los no Google Play:</string>
+    <string name="install_browsers">Você não tem um navegador compatível instalado! Você pode instalá-los no Google Play:</string>
     <string name="install_samsung_browser">Instalar Samsung Internet Browser</string>
     <string name="install_yandex_browser">Instalar Yandex Browser</string>
     <string name="issuesButtonText">Reportar Erro</string>
@@ -45,16 +45,16 @@
     <string name="copyrightMessage">O Bloqueador de Conteúdo do AdGuard é um aplicativo gratuito: você pode redistribuir ou modificá-lo de acordo com os termos do GNU General Public License, conforme publicado pela Free Software Foundation, seja na versão 3, ou posterior.</string>
     <string name="warning">Aviso</string>
     <string name="onboarding_title1">Bem-vindo(a)!</string>
-    <string name="onboarding_text1">Você está a poucos passos de uma internet rápida e sem anúncios.</string>
-    <string name="onboarding_button_text1">Iniciar</string>
+    <string name="onboarding_text1">Você está a poucos passos de uma internet rápida e livre de anúncios.</string>
+    <string name="onboarding_button_text1">Começar</string>
     <string name="onboarding_title2">Selecione um navegador</string>
-    <string name="onboarding_text2">Para funcionar o AdGuard precisa de um navegador que tenha suporte a tecnologia de bloqueio de anúncios. Atualmente, existem dois desses navegadores.</string>
+    <string name="onboarding_text2">Para funcionar o AdGuard precisa de um navegador que tenha suporte a tecnologia de bloqueio de anúncios. Atualmente, existem apenas dois navegadores.</string>
     <string name="onboarding_button_text2">Selecione um navegador</string>
     <string name="onboarding_title3">Estamos quase lá!</string>
     <string name="onboarding_text3">Um navegador compatível foi encontrado. Só é permitido ativar o AdGuard nas suas configurações.</string>
     <string name="onboarding_button_text3">Ativar o AdGuard</string>
     <string name="count">Contagem</string>
-    <string name="check_filter_updates">Verificar atualizações de filtro</string>
+    <string name="check_filter_updates">Verificar atualizações de filtros</string>
     <string name="go_to_filters">Ir para filtros</string>
     <string name="install">Instalar</string>
     <string name="exit">Sair</string>
@@ -69,7 +69,7 @@
     <string name="importUserRulesUrlErrorMessage">A URL não é válida</string>
     <string name="clearUserRulesButtonText">Remover todos</string>
     <string name="browseButtonText">Procurar</string>
-    <string name="reportBug">Reportar um problema</string>
+    <string name="reportBug">Enviar feedback</string>
     <string name="privacyPolicyLinkText">Política de Privacidade</string>
     <string name="eulaLinkText">Contrato</string>
     <string name="delete">Excluir</string>
@@ -87,7 +87,7 @@
     <string name="confirmClearWhitelistMessage">Você tem certeza que deseja limpar a lista branca? Esta ação não poderá ser desfeita.</string>
     <string name="confirmRemoveWhitelistDomainMessage">Você tem certeza que deseja excluir este domínio? Esta ação não poderá ser desfeita.</string>
     <string name="emptyWhitelistTextViewText">A lista branca está vazia</string>
-    <string name="report_dialog_title">Tipo do problema</string>
+    <string name="report_dialog_title">Tipo de feedback</string>
     <string name="reportTypeMissedAd">Anúncio ou rastreador não bloqueado</string>
     <string name="reportTypeIncorrectBlocking">Bloqueio incorreto</string>
     <string name="reportTypeBugReport">Reportar bug</string>
@@ -96,4 +96,6 @@
     <string name="overwrite_existing_rules">Substituir regras existentes</string>
     <string name="other_product_message">Este aplicativo funciona apenas nos navegadores da Samsung e Yandex. Não é o que você estava procurando? Venha conferir a nossa  página de produtos no site do AdGuard.</string>
     <string name="go_to_products">Ir para produtos</string>
+    <string name="select_browser_dialog_adguard_products_title">Não é exatamente o que você precisa?</string>
+    <string name="select_browser_dialog_adguard_products_message">Veja os outros produtos do AdGuard em nosso site</string>
 </resources>

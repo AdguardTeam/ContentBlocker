@@ -69,7 +69,7 @@
     <string name="importUserRulesUrlErrorMessage">Zadaná URL není platná</string>
     <string name="clearUserRulesButtonText">Odstranit vše</string>
     <string name="browseButtonText">Procházet</string>
-    <string name="reportBug">Nahlásit chybu</string>
+    <string name="reportBug">Odeslat zpětnou vazbu</string>
     <string name="privacyPolicyLinkText">Zásady ochrany osobních údajů</string>
     <string name="eulaLinkText">EULA</string>
     <string name="delete">Smazat</string>
@@ -87,7 +87,7 @@
     <string name="confirmClearWhitelistMessage">Opravdu chcete vyčistit seznam povolených webů? Tato operace nemůže být vrácena.</string>
     <string name="confirmRemoveWhitelistDomainMessage">Opravdu chcete smazat tuto doménu? Tato operace nemůže být vrácena.</string>
     <string name="emptyWhitelistTextViewText">Seznam povolených webů je prázdný</string>
-    <string name="report_dialog_title">Typ zprávy</string>
+    <string name="report_dialog_title">Typ zpětné vazby</string>
     <string name="reportTypeMissedAd">Nezachycená reklama nebo slídič</string>
     <string name="reportTypeIncorrectBlocking">Nesprávné blokování</string>
     <string name="reportTypeBugReport">Hlášení chyby</string>

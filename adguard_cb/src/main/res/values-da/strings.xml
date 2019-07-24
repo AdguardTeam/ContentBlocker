@@ -69,7 +69,7 @@
     <string name="importUserRulesUrlErrorMessage">URL\'en er ikke gyldig</string>
     <string name="clearUserRulesButtonText">Fjern alt</string>
     <string name="browseButtonText">Gennemse</string>
-    <string name="reportBug">Rapporter en fejl</string>
+    <string name="reportBug">Send Feedback</string>
     <string name="privacyPolicyLinkText">Privatlivspolitik</string>
     <string name="eulaLinkText">EULA</string>
     <string name="delete">Slet</string>
@@ -87,7 +87,7 @@
     <string name="confirmClearWhitelistMessage">Er du sikker på, at du vil rydde whitelisten? Denne handling kan ikke fortrydes.</string>
     <string name="confirmRemoveWhitelistDomainMessage">Er du sikker på, at du vil slette dette domæne? Denne handling kan ikke fortrydes.</string>
     <string name="emptyWhitelistTextViewText">Whitelisten er tom</string>
-    <string name="report_dialog_title">Rapporter type</string>
+    <string name="report_dialog_title">Feedback type</string>
     <string name="reportTypeMissedAd">Overset annonce eller tracker</string>
     <string name="reportTypeIncorrectBlocking">Ukorrekt blokering</string>
     <string name="reportTypeBugReport">Fejlrapport</string>

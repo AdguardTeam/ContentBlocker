@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">AdGuard Content Blocker</string>
+    <string name="userRuleNewItemDialogHint" translatable="false">||example.com^$third-party</string>
+    <string name="github" translatable="false">GitHub</string>
+    <string name="title_activity_onboarding" translatable="false">Welcome!</string>
+    <string name="yandex_browser" translatable="false">Yandex Browser</string>
+    <string name="yandex_developer" translatable="false">Yandex</string>
+    <string name="yandex_browser_rating" translatable="false">4,5</string>
+    <string name="samsung_browser" translatable="false">Samsung Internet Browser</string>
+    <string name="samsung_developer" translatable="false">Samsung Electronics Co., Ltd.</string>
+    <string name="samsung_browser_rating" translatable="false">4,4</string>
+    <string name="closed_drawer_title" translatable="false">AdGuard Content Blocker</string>
+    <string name="empty" translatable="false"></string>
+    <string name="githubLink" translatable="false">github.com</string>
+    <string name="adguardComLink" translatable="false">adguard.com</string>
+    <string name="forumAdguardComLink" translatable="false">forum.adguard.com</string>
+    <string name="star_symbols" translatable="false">★</string>
+</resources>

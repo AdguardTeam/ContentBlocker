@@ -1,29 +1,29 @@
-#!/usr/bin/python
-import md5
-import urllib2
-import time
-import hashlib
-import os
+#!/usr/bin/python3
+
 import sys
 import optparse
-import re
-from exceptions import RuntimeError
+import urllib.request, urllib.error, urllib.parse
+
+def download_content(url):
+    request = urllib.request.Request(url, headers={
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome"
+    })
+
+    resp = urllib.request.urlopen(request)
+    content = resp.read()
+    if len(content) == 0:
+        raise RuntimeError("Error downloading content from %s" % url)
+    resp.close()
+    return content
+
+# https://twosky.adtidy.org/api/v1/download?format=xml&language=sk&filename=strings.xml&project=android
 
 parser = optparse.OptionParser(usage="%prog [options]. %prog -h for help.")
-parser.add_option("-f", "--file", dest="fileName", help="Localized file name", metavar="FILE")
-parser.add_option("-a", "--apikey", dest="apiKey", help="Oneskyapp API public key", metavar="APIKEY")
-parser.add_option("-s", "--secretkey", dest="secretKey", help="Oneskyapp API secretkey key", metavar="SECRETKEY")
 parser.add_option("-l", "--locale", dest="locale", help="Translation locale (two-character)", metavar="LOCALE")
-parser.add_option("-p", "--project", dest="projectId", help="Oneskyapp project ID", metavar="PROJECT_ID")
+parser.add_option("-p", "--project", dest="projectId", help="Project ID", metavar="PROJECT_ID")
 parser.add_option("-o", "--output", dest="output", help="Output file name", metavar="FILE")
 (options, args) = parser.parse_args(sys.argv)
 
-if (not options.fileName):
-    parser.error('File name not given')
-if (not options.apiKey):
-    parser.error('API public key not given')
-if (not options.secretKey):
-    parser.error('API secret key not given')
 if (not options.locale):
     parser.error('Locale not given')
 if (not options.projectId):
@@ -31,48 +31,14 @@ if (not options.projectId):
 if (not options.output):
     parser.error('Output file name not given')
 
-timestamp = str(int(time.time()))
-devHash = md5.new(timestamp + options.secretKey).hexdigest()
+response = download_content("https://twosky.adtidy.org/api/v1/download?format=xml&language=%s&filename=%s&project=%s" % (options.locale, options.output, options.projectId))
 
-url = "https://platform.api.onesky.io/1/projects/"
-url += options.projectId
-url += "/translations?locale="
-url += options.locale
-url += "&source_file_name="
-url += options.fileName
-url += "&export_file_name="
-url += options.output
-url += "&api_key="
-url += options.apiKey
-url += "&timestamp="
-url += timestamp
-url += "&dev_hash="
-url += devHash
+#print('SERVER RESPONSE:')
+#print(response)
 
-def downloadFile(url):
-    print "Downloading " + options.fileName + "/" + options.locale + " from Oneskyapp"
-    respHtml = ""
-    for x in range(0, 5):
-        if x > 0:
-            print "    Retrying download (%d/5)..." % (x + 1)
-        response = urllib2.urlopen(url)
-        respHtml = response.read()
-        if len(respHtml) > 0:
-            break
-        time.sleep(3)
-    if len(respHtml) == 0:
-        raise RuntimeError("Error downloading file!")
-    return respHtml
-
-# http://support.oneskyapp.com/support/tickets/5989
-# Sometimes html files download contains garbage in the end
-def removeGarbage(html):
-    return re.sub('\{"code":500.*$', '', html)
-
-responseHtml = downloadFile(url)
-responseHtml = removeGarbage(responseHtml).strip()
-
-with open(options.output, "wb") as localFile:
-    localFile.write(responseHtml)
-
-print "File has been successfully downloaded to " + options.output
+if response != "":
+    print("File has been successfully downloaded to " + options.output)
+    with open(options.output, "wb") as f:
+        f.write(response)
+else:
+    print("!!!Error downloading file for ", options.locale)

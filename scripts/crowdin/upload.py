@@ -9,7 +9,7 @@ import certifi
 parser = optparse.OptionParser(usage="%prog [options]. %prog -h for help.")
 parser.add_option("-f", "--file", dest="fileName", help="File name", metavar="FILE")
 parser.add_option("-l", "--locale", dest="locale", help="Translation locale (two-character)", metavar="LOCALE")
-parser.add_option("-p", "--project", dest="projectId", help="Oneskyapp project ID", metavar="PROJECT_ID")
+parser.add_option("-p", "--project", dest="projectId", help="Crowdin project ID", metavar="PROJECT_ID")
 (options, args) = parser.parse_args(sys.argv)
 if (not options.fileName):
     parser.error('File name not given')

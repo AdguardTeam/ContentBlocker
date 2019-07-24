@@ -1,11 +1,20 @@
 #!/bin/bash
-apikey=$1
-secretkey=$2
-project=$3
+project=content_blocker_google_play
+cache=../../fastlane/metadata/android/strings-cache.json
+input=strings.json
 
-python fastlane.py -l en-US -p $project -o ../../fastlane/metadata/android/en-US -a $apikey -s $secretkey
-python fastlane.py -l ru -p $project -o ../../fastlane/metadata/android/ru -a $apikey -s $secretkey
-python fastlane.py -l fr -p $project -o ../../fastlane/metadata/android/fr -a $apikey -s $secretkey
-python fastlane.py -l de -p $project -o ../../fastlane/metadata/android/de -a $apikey -s $secretkey
-python fastlane.py -l zh-TW -p $project -o ../../fastlane/metadata/android/zh-TW -a $apikey -s $secretkey
-python fastlane.py -l zh-CN -p $project -o ../../fastlane/metadata/android/zh-CN -a $apikey -s $secretkey
+# Moving to a folder with scripts
+cd $(dirname $0)
+
+# Installing missing python packages
+python3 -c "import requests" &> /dev/null || pip3 install requests
+
+locales=("ru" "fr" "de" "zh-TW" "zh-CN")
+for i in ${locales[@]}
+do
+    python3 fastlane.py -l $i -p $project -o ../../fastlane/metadata/android/$i -c $cache -i $input
+done
+
+# Exception
+
+python3 fastlane.py -l en -p $project -o ../../fastlane/metadata/android/en-US -c $cache -i $input

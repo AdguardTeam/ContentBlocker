@@ -16,7 +16,7 @@ def download_content(url):
     resp.close()
     return content
 
-# https://twosky.adtidy.org/api/v1/download?format=xml&language=sk&filename=strings.xml&project=android
+# https://twosky.adtidy.org/api/v1/download?format=xml&language=sk&filename=strings.xml&project=content_blocker
 
 parser = optparse.OptionParser(usage="%prog [options]. %prog -h for help.")
 parser.add_option("-l", "--locale", dest="locale", help="Translation locale (two-character)", metavar="LOCALE")

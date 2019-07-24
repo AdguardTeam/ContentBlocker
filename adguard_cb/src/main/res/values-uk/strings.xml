@@ -69,7 +69,7 @@
     <string name="importUserRulesUrlErrorMessage">URL не є дійсним</string>
     <string name="clearUserRulesButtonText">Видалити все</string>
     <string name="browseButtonText">Огляд</string>
-    <string name="reportBug">Повідомити про помилку</string>
+    <string name="reportBug">Надіслати відгук</string>
     <string name="privacyPolicyLinkText">Конфіденційність</string>
     <string name="eulaLinkText">Угода</string>
     <string name="delete">Видалити</string>
@@ -87,11 +87,15 @@
     <string name="confirmClearWhitelistMessage">Ви впевнені, що хочете очистити білий список? Цю операцію не можна скасувати.</string>
     <string name="confirmRemoveWhitelistDomainMessage">Ви впевнені, що хочете видалити цей домен? Цю операцію не можна скасувати.</string>
     <string name="emptyWhitelistTextViewText">Білий список порожній</string>
-    <string name="report_dialog_title">Тип звіту</string>
+    <string name="report_dialog_title">Тип відгуку</string>
     <string name="reportTypeMissedAd">Пропущена реклама або лічильник</string>
     <string name="reportTypeIncorrectBlocking">Некоректне блокування</string>
     <string name="reportTypeBugReport">Повідомити про помилку</string>
     <string name="reportTypeFeatureRequest">Запит на функцію</string>
     <string name="reportTypeCustom">Інше</string>
     <string name="overwrite_existing_rules">Перезаписати існуючі правила</string>
+    <string name="other_product_message">Ця програма працює лише в браузерах Samsung і Yandex. Не зовсім те, що вам потрібно? Погляньте на інші продукти AdGuard на нашому веб-сайті.</string>
+    <string name="go_to_products">Перейти до продуктів</string>
+    <string name="select_browser_dialog_adguard_products_title">Не зовсім те, що вам потрібно?</string>
+    <string name="select_browser_dialog_adguard_products_message">Погляньте на інші продукти AdGuard на нашому веб-сайті.</string>
 </resources>

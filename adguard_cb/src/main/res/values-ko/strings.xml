@@ -54,7 +54,7 @@
     <string name="onboarding_text3">적합한 브라우저가 설치되어 있습니다. 이제 브라우저 설정에서 AdGuard를 활성화하기만 하면 됩니다.</string>
     <string name="onboarding_button_text3">AdGuard 활성화</string>
     <string name="count">갯수</string>
-    <string name="check_filter_updates">필터 업데이트 체크</string>
+    <string name="check_filter_updates">필터 업데이트 확인</string>
     <string name="go_to_filters">필터 설정으로..</string>
     <string name="install">설치</string>
     <string name="exit">종료</string>

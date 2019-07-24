@@ -92,7 +92,7 @@
     <string name="reportTypeIncorrectBlocking">Netinkamas blokavimas</string>
     <string name="reportTypeBugReport">Pranešimas apie klaidą</string>
     <string name="reportTypeFeatureRequest">Pageidavimas</string>
-    <string name="reportTypeCustom">Kitka</string>
+    <string name="reportTypeCustom">Kitkas</string>
     <string name="overwrite_existing_rules">Pakeisti esamas taisykles</string>
     <string name="other_product_message">Ši programa veikia tik Samsung ir Yandex naršyklėse. Ne visai tai, ko jūs tikėjotės? Susipažinkite su kitais AdGuard produktais mūsų svetainėje</string>
     <string name="go_to_products">Eiti į svetainę</string>

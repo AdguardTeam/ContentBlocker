@@ -69,14 +69,14 @@
     <string name="importUserRulesUrlErrorMessage">URL niet geldig</string>
     <string name="clearUserRulesButtonText">Alles verwijderen</string>
     <string name="browseButtonText">Bladeren</string>
-    <string name="reportBug">Bug signaleren</string>
-    <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Privacy Policy</a></string>
-    <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="reportBug">Feedback sturen</string>
+    <string name="privacyPolicyLinkText">Privacy Policy</string>
+    <string name="eulaLinkText">EULA</string>
     <string name="delete">Verwijderen</string>
     <string name="confirmClearUserFilterMessage">Ben je zeker dat je de gebruikersfilter wil wissen ? Deze actie kan je niet ongedaan maken.</string>
     <string name="confirmRemoveUserRuleMessage">Ben je zeker dat je deze regel wil wissen ? Deze actie kan je niet ongedaan maken.</string>
     <string name="clear_filters_cache_title">Filter cache wissen</string>
-    <string name="clear_filters_cache_summary">Filter cache wissen en filters updaten</string>
+    <string name="clear_filters_cache_summary">Wist filters cache en update je filters</string>
     <string name="clear_filters_cache_progress_message">Filter cache wissen en filters updaten</string>
     <string name="whitelist_title">Whitelist</string>
     <string name="addToWhitelistButtonText">Website toevoegen</string>
@@ -87,7 +87,7 @@
     <string name="confirmClearWhitelistMessage">Ben je zeker dat je de whitelist wil wissen ? Deze actie kan je niet ongedaan maken.</string>
     <string name="confirmRemoveWhitelistDomainMessage">Ben je zeker dat je dit domein wil wissen ? Deze actie kan je niet ongedaan maken.</string>
     <string name="emptyWhitelistTextViewText">De whitelist is leeg</string>
-    <string name="report_dialog_title">Rapport type</string>
+    <string name="report_dialog_title">Feedback type</string>
     <string name="reportTypeMissedAd">Gemiste advertentie of volger</string>
     <string name="reportTypeIncorrectBlocking">Onjuiste blokkering</string>
     <string name="reportTypeBugReport">Bug rapport</string>
@@ -95,5 +95,7 @@
     <string name="reportTypeCustom">Andere</string>
     <string name="overwrite_existing_rules">Bestaande regels overschrijven</string>
     <string name="other_product_message">Deze app is enkel compatibel met Samsung en Yandex browsers. Niet wat je nodig hebt ? Bekijk onze andere AdGuard producten op onze website.</string>
-    <string name="go_to_products">Ga naar produkten</string>
+    <string name="go_to_products">Ga naar producten</string>
+    <string name="select_browser_dialog_adguard_products_title">Niet echt wat je zocht ?</string>
+    <string name="select_browser_dialog_adguard_products_message">Bekijk onze andere AdGuard producten op onze website</string>
 </resources>

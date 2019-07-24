@@ -69,7 +69,7 @@
     <string name="importUserRulesUrlErrorMessage">Webbadressen är inte giltig</string>
     <string name="clearUserRulesButtonText">Ta bort allt</string>
     <string name="browseButtonText">Sök</string>
-    <string name="reportBug">Rapportera bugg</string>
+    <string name="reportBug">Skicka rapport</string>
     <string name="privacyPolicyLinkText">Sekretesspolicy</string>
     <string name="eulaLinkText">EULA</string>
     <string name="delete">Ta bort</string>
@@ -96,4 +96,6 @@
     <string name="overwrite_existing_rules">Skriv över befintliga regler</string>
     <string name="other_product_message">Den här appen fungerar endast med webbläsare från Samsung och Yandex. Inte precis det du behöver? Kontrollera AdGuard andra produkter på vår hemsida.</string>
     <string name="go_to_products">Gå till Produkter</string>
+    <string name="select_browser_dialog_adguard_products_title">Inte riktigt vad du behöver?</string>
+    <string name="select_browser_dialog_adguard_products_message">Kolla AdGuards andra produkter på vår webbplats</string>
 </resources>

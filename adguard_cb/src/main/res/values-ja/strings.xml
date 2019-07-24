@@ -96,4 +96,6 @@
     <string name="overwrite_existing_rules">既存のルールを上書きする</string>
     <string name="other_product_message">本アプリは、SamsungブラウザとYandexブラウザでのみ動作します。お探ししている用ものと多少違う場合は、当社Webサイトで他のAdGuard製品をチェックしてください。</string>
     <string name="go_to_products">製品一覧へ移動する</string>
+    <string name="select_browser_dialog_adguard_products_title">解決しませんでしたか？</string>
+    <string name="select_browser_dialog_adguard_products_message">AdGuardのWebサイトで他の製品をチェックしましょう</string>
 </resources>

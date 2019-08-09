@@ -17,8 +17,8 @@ Please answer the following questions for yourself before submitting an issue. *
 
 - **AdGuard version:**
   - <!-- (e.g. v2.3.7) -->
-- **Filtering mode:**
-  - <!-- (e.g. Google Pixel 3 XL) -->
+- **Browser:**
+  - <!-- (e.g. Samsung Internet) -->
 - **Operating system and version:**
   - <!-- (e.g. Android 7.1.2) -->
 - **Root access:**

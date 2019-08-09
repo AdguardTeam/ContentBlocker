@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for AdGuard for Android
+about: Suggest an idea for AdGuard Content Blocker
 ---
 
 ### Prerequisites

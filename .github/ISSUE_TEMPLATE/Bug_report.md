@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a bug report to help us improve AdGuard for Android
+about: Create a bug report to help us improve AdGuard Content Blocker
 ---
 
 ### Prerequisites
@@ -16,9 +16,7 @@ Please answer the following questions for yourself before submitting an issue. *
 <!--- Please include all relevant details about the environment you experienced the bug in -->
 
 - **AdGuard version:**
-  - <!-- (e.g. v3.2.1) -->
-- **Filtering mode:**
-  - <!-- (e.g. Local VPN / HTTP Proxy (Auto/Manual)) -->
+  - <!-- (e.g. v2.3.7) -->
 - **Filtering mode:**
   - <!-- (e.g. Google Pixel 3 XL) -->
 - **Operating system and version:**

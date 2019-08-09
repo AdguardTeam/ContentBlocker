@@ -19,10 +19,10 @@ Please answer the following questions for yourself before submitting an issue. *
   - <!-- (e.g. v2.3.7) -->
 - **Browser:**
   - <!-- (e.g. Samsung Internet) -->
+- **Device model:**
+  - <!-- (e.g. Google Pixel 3 XL) -->
 - **Operating system and version:**
   - <!-- (e.g. Android 7.1.2) -->
-- **Root access:**
-  - <!-- (e.g. Yes / No) -->
 
 ### Expected Behavior
 

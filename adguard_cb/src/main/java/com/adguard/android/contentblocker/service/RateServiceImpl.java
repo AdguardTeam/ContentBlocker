@@ -70,20 +70,20 @@ public class RateServiceImpl implements RateService {
 
     @Override
     public void showRateNotification() {
-//        if (!shouldShowNotification()) {
-//            scheduleRateNotificationShow();
-//            return;
-//        }
-//
-//        Long flex = flexPeriods.get(preferencesService.getRateAppDialogCount());
-//        if (flex == null) {
-//            flex = (long) 1000;
-//        }
-//
-//        long installationTime = preferencesService.getInstallationTime();
-//        if (System.currentTimeMillis() - installationTime < flex) {
-//            return;
-//        }
+        if (!shouldShowNotification()) {
+            scheduleRateNotificationShow();
+            return;
+        }
+
+        Long flexPeriod = flexPeriods.get(preferencesService.getRateAppDialogCount());
+        if (flexPeriod == null) {
+            return;
+        }
+
+        long installationTime = preferencesService.getInstallationTime();
+        if (System.currentTimeMillis() - installationTime < flexPeriod) {
+            return;
+        }
 
         ServiceLocator.getInstance(context).getNotificationService().showRateAppNotification();
         preferencesService.increaseRateAppDialogCount();

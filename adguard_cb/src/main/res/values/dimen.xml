@@ -37,4 +37,7 @@
     <dimen name="settingsEditableListItemPaddingLeft">15dp</dimen>
     <dimen name="settingsEditableListItemPaddingRight">35dp</dimen>
 
+    <!-- New text sizes -->
+    <dimen name="commonTextSizeNew">15sp</dimen>
+
 </resources>

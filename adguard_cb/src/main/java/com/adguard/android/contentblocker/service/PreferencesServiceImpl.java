@@ -165,13 +165,13 @@ public class PreferencesServiceImpl implements PreferencesService {
 
     @Override
     public Long getInstallationTime() {
-        return sharedPreferences.getLong(KEY_LAST_COMMUNICATION_DATE, 0L);
+        return sharedPreferences.getLong(KEY_INSTALLATION_TIME, 0L);
     }
 
     @Override
     public void setInstallationTime(Long lastTimeCommunication) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putLong(KEY_LAST_COMMUNICATION_DATE, lastTimeCommunication);
+        editor.putLong(KEY_INSTALLATION_TIME, lastTimeCommunication);
         editor.apply();
     }
 

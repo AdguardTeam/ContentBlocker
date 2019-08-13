@@ -10,12 +10,11 @@
 
     <TextView
         style="@style/RateAppDialogSummary"
-        android:text="@string/rate_app_dialog_summary" />
+        android:text="@string/rate_app_summary" />
 
     <LinearLayout
         android:id="@+id/stars_layout"
-        style="@style/RateAppDialogStarsLayout"
-        android:orientation="horizontal">
+        style="@style/RateAppDialogStarsLayout.Dialog">
 
         <ImageView
             android:id="@+id/star1"
@@ -32,47 +31,20 @@
         <ImageView
             android:id="@+id/star4"
             style="@style/RateAppDialogStar" />
+
         <ImageView
             android:id="@+id/star5"
             style="@style/RateAppDialogStar" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/feedback_layout"
-        android:visibility="gone"
-        style="@style/LayoutFullWidth.Vertical">
-
-        <TextView
-            style="@style/RateAppDialogSummary"
-            android:text="What's wrong with you?" />
-
-        <EditText
-            android:id="@+id/feedback"
-            style="@style/RateAppDialogButtonFeedback" />
-
-    </LinearLayout>
+    <EditText
+        android:id="@+id/feedback"
+        style="@style/RateAppDialogButtonFeedback" />
 
     <LinearLayout
-        android:id="@+id/first_buttons"
-        style="@style/LayoutFullWidth.Horizontal">
-
-        <TextView
-            android:id="@+id/button_never"
-            style="@style/RateAppDialogButton.Negative"
-            android:text="@string/never" />
-
-        <TextView
-            android:id="@+id/button_later"
-            style="@style/RateAppDialogButton.Positive"
-            android:text="@string/later" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/second_buttons"
-        android:visibility="gone"
-        style="@style/LayoutFullWidth.Horizontal">
+        android:id="@+id/buttons"
+        style="@style/RateAppDialogButtons">
 
         <TextView
             android:id="@+id/button_cancel"

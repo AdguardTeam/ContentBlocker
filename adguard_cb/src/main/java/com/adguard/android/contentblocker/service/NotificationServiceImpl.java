@@ -11,6 +11,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.annotation.IdRes;
@@ -47,6 +48,7 @@ public class NotificationServiceImpl implements NotificationService {
     private static final String STARS_COUNT_ACTION_5 = "count_action_5";
 
     private static final long REDIRECTION_DELAY = 300;
+    private static final int RATE_NOTIFICATION_ID = 128;
 
     private final Context context;
     private final Handler handler;
@@ -117,11 +119,9 @@ public class NotificationServiceImpl implements NotificationService {
     }
 
     /**
-     * Creates {@link NotificationChannel}s
+     * Creates {@link NotificationChannel}s for API >= 26
      */
     private void createNotificationChannel() {
-        // Create the NotificationChannel, but only on API 26+ because
-        // the NotificationChannel class is new and not in the support library
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             try {
                 List<NotificationChannel> notificationChannels = new ArrayList<>();
@@ -176,10 +176,13 @@ public class NotificationServiceImpl implements NotificationService {
         Intent intent = new Intent();
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.setComponent(new ComponentName(context, MainActivity.class));
-        NotificationCompat.Builder builder = createDefaultNotificationBuilder(context.getString(R.string.rate_app_dialog_title), context.getString(R.string.rate_app_dialog_summary));
+        Bundle bundle = new Bundle();
+        bundle.putInt(MainActivity.STARS_COUNT, count);
+        intent.putExtras(bundle);
+        NotificationCompat.Builder builder = createDefaultNotificationBuilder(context.getString(R.string.rate_app_dialog_title), context.getString(R.string.rate_app_summary));
         builder.setContentIntent(PendingIntent.getActivity(context, 0, intent, 0));
         builder.setAutoCancel(true);
-        builder.setSmallIcon(R.drawable.ic_star_filled);
+        builder.setSmallIcon(R.drawable.ic_content_blocker);
         builder.setDefaults(Notification.DEFAULT_LIGHTS);
         builder.setPriority( NotificationCompat.PRIORITY_HIGH);
         builder.setStyle(new NotificationCompat.DecoratedCustomViewStyle());
@@ -187,7 +190,7 @@ public class NotificationServiceImpl implements NotificationService {
         Notification notification = builder.build();
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         if (notificationManager != null) {
-            notificationManager.notify(R.string.rate_app_dialog_title, notification);
+            notificationManager.notify(RATE_NOTIFICATION_ID, notification);
         }
     }
 
@@ -256,24 +259,26 @@ public class NotificationServiceImpl implements NotificationService {
      * Redirects to Google Play market or to feedback dialog.
      * {@link Handler#postDelayed} used to fill selected stars count explicit before redirection
      *
-     * @param googlePlay {@code True} if we should redirect user to Google Play market
+     * @param count Selected stars count
      */
-    private void redirectWithDelay(final boolean googlePlay) {
+    private void redirectWithDelay(final int count) {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 NotificationManager notificationManager = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
                 if (notificationManager != null) {
                     // Cancel current 'rate app' notification and close notification bar before redirection
-                    notificationManager.cancel(R.string.rate_app_dialog_title);
+                    notificationManager.cancel(RATE_NOTIFICATION_ID);
                     Intent closeIntent = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
                     context.sendBroadcast(closeIntent);
                 }
 
-                if (googlePlay) {
+                if (count > 3) {
                     NavigationHelper.redirectToPlayMarket(context);
                 } else {
-                    NavigationHelper.redirectToActivity(context, MainActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt(MainActivity.STARS_COUNT, count);
+                    NavigationHelper.redirectToActivity(context, MainActivity.class, bundle);
                 }
             }
         }, REDIRECTION_DELAY);
@@ -289,17 +294,8 @@ public class NotificationServiceImpl implements NotificationService {
             String action = intent.getAction();
             if (action != null) {
                 showRateAppNotification(countActions.get(action).getCount());
-                boolean googlePlay;
-                switch (action) {
-                    case STARS_COUNT_ACTION_4:
-                    case STARS_COUNT_ACTION_5:
-                        googlePlay = true;
-                        break;
-                    default:
-                        googlePlay = false;
-                }
-
-                redirectWithDelay(googlePlay);
+                int count = countActions.get(action).getCount();
+                redirectWithDelay(count);
             }
         }
     }

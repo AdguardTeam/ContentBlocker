@@ -68,7 +68,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements DrawerLayout.DrawerListener, SharedPreferences.OnSharedPreferenceChangeListener, View.OnClickListener {
 
-    public final static String RATE_DIALOG = "com.adguard.android.contentblocker.RATE";
     public final static String STARS_COUNT = "stars_count";
     private static Logger LOG = LoggerFactory.getLogger(MainActivity.class);
 
@@ -198,6 +197,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     public void onResume() {
         super.onResume();
+        ServiceLocator.getInstance(this).getRateService().showRateNotification();
         refreshMainInfo();
     }
 
@@ -211,7 +211,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     }
 
     private void showRateDialog(Intent intent) {
-        if (intent == null || !intent.hasExtra(RATE_DIALOG)) {
+        if (intent == null || !intent.hasExtra(STARS_COUNT)) {
             return;
         }
 
@@ -219,9 +219,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         final LayoutInflater inflater = LayoutInflater.from(this);
         final View dialogLayout = inflater.inflate(R.layout.rate_dialog, null);
         final ViewGroup starsLayout = dialogLayout.findViewById(R.id.stars_layout);
-        final ViewGroup feedback = dialogLayout.findViewById(R.id.feedback_layout);
-        final ViewGroup buttonsLater = dialogLayout.findViewById(R.id.first_buttons);
-        final ViewGroup buttonsSubmit = dialogLayout.findViewById(R.id.second_buttons);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(dialogLayout);
@@ -231,7 +228,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             @Override
             public void onClick(View v) {
                 int count = (int) v.getTag();
-                refreshDialogView(dialog, starsLayout, feedback, buttonsLater, buttonsSubmit, count);
+                refreshDialogView(dialog, starsLayout, count);
             }
         };
 
@@ -243,44 +240,29 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         View.OnClickListener buttonsListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (v.getId()) {
-                    case R.id.button_never:
-                        preferencesService.setAppRated(true);
-                        ServiceLocator.getInstance(MainActivity.this).getNotificationService().showToast("Never");
-                        break;
-                    case R.id.button_submit:
-                        // TODO collect feedback
-                        preferencesService.setAppRated(true);
-                        break;
+                if (v.getId() == R.id.button_submit) {
+                    // TODO collect feedback
+                    preferencesService.setAppRated(true);
                 }
                 preferencesService.increaseRateAppDialogCount();
                 dialog.cancel();
             }
         };
 
-        dialogLayout.findViewById(R.id.button_never).setOnClickListener(buttonsListener);
-        dialogLayout.findViewById(R.id.button_later).setOnClickListener(buttonsListener);
         dialogLayout.findViewById(R.id.button_cancel).setOnClickListener(buttonsListener);
         dialogLayout.findViewById(R.id.button_submit).setOnClickListener(buttonsListener);
-        refreshDialogView(dialog, starsLayout, feedback, buttonsLater, buttonsSubmit, filledCount);
+        refreshDialogView(dialog, starsLayout, filledCount);
     }
 
-    private void refreshDialogView(AlertDialog dialog, ViewGroup stars, ViewGroup feedback, ViewGroup buttonsLater, ViewGroup buttonsSubmit, int count) {
-        buttonsLater.setVisibility(View.GONE);
-        for (int i = 0; i < stars.getChildCount(); i++) {
-            ((ImageView) stars.getChildAt(i)).setImageDrawable(this.getDrawable(i < count ? R.drawable.ic_star_filled :
-                    R.drawable.ic_star_empty));
-        }
-
+    private void refreshDialogView(AlertDialog dialog, ViewGroup stars, int count) {
         if (count > 3) {
-            preferencesService.setAppRated(true);
-            feedback.setVisibility(View.GONE);
-            buttonsSubmit.setVisibility(View.GONE);
             NavigationHelper.redirectToPlayMarket(this);
             dialog.cancel();
-        } else {
-            feedback.setVisibility(View.VISIBLE);
-            buttonsSubmit.setVisibility(View.VISIBLE);
+        }
+
+        for (int i = 0; i < stars.getChildCount(); i++) {
+            ((ImageView) stars.getChildAt(i)).setImageDrawable(this.getDrawable(i < count ? R.drawable.ic_star_filled_big :
+                    R.drawable.ic_star_empty_big));
         }
     }
 

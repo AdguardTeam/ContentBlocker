@@ -114,6 +114,9 @@ public class ServiceLocator {
         return dbHelper;
     }
 
+    /**
+     * @return rate service singleton
+     */
     public RateService getRateService() {
         if (rateService == null) {
             rateService = new RateServiceImpl(context);

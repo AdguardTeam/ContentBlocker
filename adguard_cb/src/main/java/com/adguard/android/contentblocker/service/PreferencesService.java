@@ -35,9 +35,9 @@ public interface PreferencesService {
     String KEY_DISABLED_USER_RULES = "key_disabled_user_rules";
     String KEY_WHITELIST_STRING = "key_whitelist_string";
     String KEY_DISABLED_WHITELIST = "key_disabled_whitelist";
-    String KEY_LAST_COMMUNICATION_DATE = "key_last_communication_date";
+    String KEY_INSTALLATION_TIME = "key_installation_time";
     String KEY_APP_RATED = "key_app_rated";
-    String KEY_RATE_APP_DIALOG_COUNT = "key_rate_app_dialog";
+    String KEY_RATE_APP_DIALOG_COUNT = "key_rate_app_dialog_count";
 
     /**
      * @return true if filters autoupdate is enabled

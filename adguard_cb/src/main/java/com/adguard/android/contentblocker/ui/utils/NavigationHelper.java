@@ -21,6 +21,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.content.ContextCompat;
 
@@ -46,7 +47,14 @@ public class NavigationHelper {
      * @param activityClass Activity class
      */
     public static void redirectToActivity(Context from, Class activityClass) {
-        Intent intent = new Intent(from.getApplicationContext(), activityClass);
+        redirectToActivity(from, activityClass, null);
+    }
+
+    public static void redirectToActivity(Context from, Class activityClass, Bundle bundle) {
+        Intent intent = new Intent(from, activityClass).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        if (bundle != null) {
+            intent.putExtras(bundle);
+        }
         from.startActivity(intent);
     }
 
@@ -64,6 +72,7 @@ public class NavigationHelper {
         try {
             from.startActivity(createPlayMarketIntent(from));
         } catch (ActivityNotFoundException e) {
+            // TODO redirect via browser
             ServiceLocator.getInstance(from).getNotificationService().showToast("FAILED");
         }
     }

@@ -73,6 +73,8 @@
     <string name="reportBug">Send Feedback</string>
     <string name="privacyPolicyLinkText">Privacy Policy</string>
     <string name="eulaLinkText">EULA</string>
+    <string name="rate_app_submit_feedback_title">Thank you for your feedback!</string>
+    <string name="rate_app_submit_feedback_summary">We are working on a solution right now.</string>
     <string name="delete">Delete</string>
     <string name="submit">Submit</string>
     <string name="rate_app_dialog_title">Rate this app</string>

@@ -243,6 +243,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 if (v.getId() == R.id.button_submit) {
                     // TODO collect feedback
                     preferencesService.setAppRated(true);
+                    showFeedbackSubmitDialog();
                 }
                 preferencesService.increaseRateAppDialogCount();
                 dialog.cancel();
@@ -252,6 +253,19 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         dialogLayout.findViewById(R.id.button_cancel).setOnClickListener(buttonsListener);
         dialogLayout.findViewById(R.id.button_submit).setOnClickListener(buttonsListener);
         refreshDialogView(dialog, starsLayout, filledCount);
+    }
+
+    private void showFeedbackSubmitDialog() {
+        new AlertDialog.Builder(this)
+            .setTitle(R.string.rate_app_submit_feedback_title)
+            .setMessage(R.string.rate_app_submit_feedback_summary)
+            .setCancelable(true)
+            .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            }).show();
     }
 
     private void refreshDialogView(AlertDialog dialog, ViewGroup stars, int count) {

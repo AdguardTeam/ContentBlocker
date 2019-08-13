@@ -40,6 +40,9 @@ public class NavigationHelper {
 
     private static final Logger LOG = LoggerFactory.getLogger(NavigationHelper.class);
 
+    private static final String PLAY_MARKET_PREFIX_CUSTOM_SCHEME = "market://details?id=";
+    private static final String PLAY_MARKET_PREFIX_HTTP_SCHEME = "http://play.google.com/store/apps/details?id=";
+
     /**
      * Redirects to activityClass activity.
      *
@@ -68,17 +71,28 @@ public class NavigationHelper {
         redirectUsingCustomTab(from, url);
     }
 
-    public static void redirectToPlayMarket(Context from) {
+    /**
+     * Redirects to Google Play Market
+     *
+     * @param context Application context
+     */
+    public static void redirectToPlayMarket(Context context) {
         try {
-            from.startActivity(createPlayMarketIntent(from));
+            context.startActivity(createPlayMarketIntent(context, PLAY_MARKET_PREFIX_CUSTOM_SCHEME));
         } catch (ActivityNotFoundException e) {
-            // TODO redirect via browser
-            ServiceLocator.getInstance(from).getNotificationService().showToast("FAILED");
+            context.startActivity(createPlayMarketIntent(context, PLAY_MARKET_PREFIX_HTTP_SCHEME));
         }
     }
 
-    private static Intent createPlayMarketIntent(Context context) {
-        Uri uri = Uri.parse("market://details?id=" + context.getPackageName());
+    /**
+     * Creates {@link Intent} to open Google Play Market
+     *
+     * @param context Application context
+     * @param prefix  Prefix with scheme (http or market)
+     * @return {@link Intent} to open Google Play Market
+     */
+    private static Intent createPlayMarketIntent(Context context, String prefix) {
+        Uri uri = Uri.parse(prefix + context.getPackageName());
         return new Intent(Intent.ACTION_VIEW, uri);
     }
 

@@ -6,7 +6,6 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -173,14 +172,13 @@ public class NotificationServiceImpl implements NotificationService {
      * @param count count of filled stars
      */
     private void showRateAppNotification(int count) {
-        Intent intent = new Intent();
+        Intent intent = new Intent(context, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setComponent(new ComponentName(context, MainActivity.class));
         Bundle bundle = new Bundle();
         bundle.putInt(MainActivity.STARS_COUNT, count);
         intent.putExtras(bundle);
         NotificationCompat.Builder builder = createDefaultNotificationBuilder(context.getString(R.string.rate_app_dialog_title), context.getString(R.string.rate_app_summary));
-        builder.setContentIntent(PendingIntent.getActivity(context, 0, intent, 0));
+        builder.setContentIntent(PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT));
         builder.setAutoCancel(true);
         builder.setSmallIcon(R.drawable.ic_content_blocker);
         builder.setDefaults(Notification.DEFAULT_LIGHTS);

@@ -37,6 +37,7 @@ public interface PreferencesService {
     String KEY_DISABLED_WHITELIST = "key_disabled_whitelist";
     String KEY_LAST_COMMUNICATION_DATE = "key_last_communication_date";
     String KEY_APP_RATED = "key_app_rated";
+    String KEY_RATE_APP_DIALOG_COUNT = "key_rate_app_dialog";
 
     /**
      * @return true if filters autoupdate is enabled
@@ -159,14 +160,14 @@ public interface PreferencesService {
     int getFilterRuleCount();
 
     /**
-     * @return Last time we show `Rate this app` dialog
+     * @return Installation time
      */
-    Long getLastTimeCommunication();
+    Long getInstallationTime();
 
     /**
-     * @param lastTimeCommunication Last time we show `Rate this app` dialog
+     * @param installationTime Installation time in millis
      */
-    void setLastTimeCommunication(Long lastTimeCommunication);
+    void setInstallationTime(Long installationTime);
 
     /**
      * @return {@code True} if user already rate app
@@ -177,4 +178,14 @@ public interface PreferencesService {
      * @param appRated {@code True} if user already rate app
      */
     void setAppRated(boolean appRated);
+
+    /**
+     * @return Count of 'Rate app' dialog shows
+     */
+    int getRateAppDialogCount();
+
+    /**
+     * Increases count of 'Rate app' dialog shows
+     */
+    void increaseRateAppDialogCount();
 }

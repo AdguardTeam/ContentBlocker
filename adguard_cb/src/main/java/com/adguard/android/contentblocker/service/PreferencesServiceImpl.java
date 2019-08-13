@@ -164,12 +164,12 @@ public class PreferencesServiceImpl implements PreferencesService {
     }
 
     @Override
-    public Long getLastTimeCommunication() {
+    public Long getInstallationTime() {
         return sharedPreferences.getLong(KEY_LAST_COMMUNICATION_DATE, 0L);
     }
 
     @Override
-    public void setLastTimeCommunication(Long lastTimeCommunication) {
+    public void setInstallationTime(Long lastTimeCommunication) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putLong(KEY_LAST_COMMUNICATION_DATE, lastTimeCommunication);
         editor.apply();
@@ -184,6 +184,18 @@ public class PreferencesServiceImpl implements PreferencesService {
     public void setAppRated(boolean appRated) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(KEY_APP_RATED, appRated);
+        editor.apply();
+    }
+
+    @Override
+    public int getRateAppDialogCount() {
+        return sharedPreferences.getInt(KEY_RATE_APP_DIALOG_COUNT, 0);
+    }
+
+    @Override
+    public void increaseRateAppDialogCount() {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(KEY_RATE_APP_DIALOG_COUNT, getRateAppDialogCount() + 1);
         editor.apply();
     }
 

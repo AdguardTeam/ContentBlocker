@@ -20,6 +20,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
@@ -33,12 +34,14 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -52,8 +55,6 @@ import com.adguard.android.contentblocker.onboarding.OnboardingActivity;
 import com.adguard.android.contentblocker.service.FilterService;
 import com.adguard.android.contentblocker.service.FilterServiceImpl;
 import com.adguard.android.contentblocker.service.PreferencesService;
-import com.adguard.android.contentblocker.service.RateService;
-import com.adguard.android.contentblocker.service.RateServiceImpl;
 import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
 import com.adguard.android.contentblocker.ui.utils.ReportToolUtils;
@@ -67,6 +68,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements DrawerLayout.DrawerListener, SharedPreferences.OnSharedPreferenceChangeListener, View.OnClickListener {
 
+    public final static String RATE_DIALOG = "com.adguard.android.contentblocker.RATE";
+    public final static String STARS_COUNT = "stars_count";
     private static Logger LOG = LoggerFactory.getLogger(MainActivity.class);
 
     private DrawerLayout drawerLayout;
@@ -76,7 +79,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     private PreferencesService preferencesService;
     private FilterService filterService;
 
-    @SuppressWarnings("ConstantConditions")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -133,6 +135,13 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
 
         filterService.scheduleFiltersUpdate();
+        ServiceLocator.getInstance(this).getRateService().scheduleRateNotificationShow();
+        showRateDialog(getIntent());
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        showRateDialog(intent);
     }
 
     @Override
@@ -189,7 +198,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     public void onResume() {
         super.onResume();
-        new RateServiceImpl(this).showRateDialog(this);
         refreshMainInfo();
     }
 
@@ -199,6 +207,80 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             drawerLayout.closeDrawers();
         } else {
             super.onBackPressed();
+        }
+    }
+
+    private void showRateDialog(Intent intent) {
+        if (intent == null || !intent.hasExtra(RATE_DIALOG)) {
+            return;
+        }
+
+        int filledCount = intent.getIntExtra(STARS_COUNT, 0);
+        final LayoutInflater inflater = LayoutInflater.from(this);
+        final View dialogLayout = inflater.inflate(R.layout.rate_dialog, null);
+        final ViewGroup starsLayout = dialogLayout.findViewById(R.id.stars_layout);
+        final ViewGroup feedback = dialogLayout.findViewById(R.id.feedback_layout);
+        final ViewGroup buttonsLater = dialogLayout.findViewById(R.id.first_buttons);
+        final ViewGroup buttonsSubmit = dialogLayout.findViewById(R.id.second_buttons);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogLayout);
+        final AlertDialog dialog = builder.show();
+
+        View.OnClickListener starsListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int count = (int) v.getTag();
+                refreshDialogView(dialog, starsLayout, feedback, buttonsLater, buttonsSubmit, count);
+            }
+        };
+
+        for (int i = 0; i < starsLayout.getChildCount(); i++) {
+            starsLayout.getChildAt(i).setTag(i + 1);
+            starsLayout.getChildAt(i).setOnClickListener(starsListener);
+        }
+
+        View.OnClickListener buttonsListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()) {
+                    case R.id.button_never:
+                        preferencesService.setAppRated(true);
+                        ServiceLocator.getInstance(MainActivity.this).getNotificationService().showToast("Never");
+                        break;
+                    case R.id.button_submit:
+                        // TODO collect feedback
+                        preferencesService.setAppRated(true);
+                        break;
+                }
+                preferencesService.increaseRateAppDialogCount();
+                dialog.cancel();
+            }
+        };
+
+        dialogLayout.findViewById(R.id.button_never).setOnClickListener(buttonsListener);
+        dialogLayout.findViewById(R.id.button_later).setOnClickListener(buttonsListener);
+        dialogLayout.findViewById(R.id.button_cancel).setOnClickListener(buttonsListener);
+        dialogLayout.findViewById(R.id.button_submit).setOnClickListener(buttonsListener);
+        refreshDialogView(dialog, starsLayout, feedback, buttonsLater, buttonsSubmit, filledCount);
+    }
+
+    private void refreshDialogView(AlertDialog dialog, ViewGroup stars, ViewGroup feedback, ViewGroup buttonsLater, ViewGroup buttonsSubmit, int count) {
+        buttonsLater.setVisibility(View.GONE);
+        for (int i = 0; i < stars.getChildCount(); i++) {
+            ((ImageView) stars.getChildAt(i)).setImageDrawable(this.getDrawable(i < count ? R.drawable.ic_star_filled :
+                    R.drawable.ic_star_empty));
+        }
+
+        if (count > 3) {
+            preferencesService.setAppRated(true);
+            feedback.setVisibility(View.GONE);
+            buttonsSubmit.setVisibility(View.GONE);
+            NavigationHelper.redirectToPlayMarket(this);
+            dialog.cancel();
+        } else {
+            feedback.setVisibility(View.VISIBLE);
+            buttonsSubmit.setVisibility(View.VISIBLE);
         }
     }
 

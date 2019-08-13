@@ -86,7 +86,8 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.adguard.contentblocker.UPDATE_FILTER"/>
+                <action android:name="com.adguard.contentblocker.RATE_DIALOG" />
+                <action android:name="com.adguard.contentblocker.UPDATE_FILTER" />
             </intent-filter>
         </receiver>
 

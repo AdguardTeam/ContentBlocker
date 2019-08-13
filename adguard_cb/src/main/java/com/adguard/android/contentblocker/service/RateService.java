@@ -1,7 +1,17 @@
 package com.adguard.android.contentblocker.service;
 
-import android.app.Activity;
-
+/**
+ * Interface to manage rate notifications and check if user rates app
+ */
 public interface RateService {
-    void showRateDialog(Activity activity);
+
+    /**
+     * Schedules rate notification show if necessary
+     */
+    void scheduleRateNotificationShow();
+
+    /**
+     * Shows rate notification
+     */
+    void showRateNotification();
 }

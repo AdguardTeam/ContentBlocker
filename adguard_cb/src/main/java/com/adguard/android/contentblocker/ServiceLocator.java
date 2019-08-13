@@ -36,6 +36,7 @@ public class ServiceLocator {
     private FilterService filterService;
     private PreferencesService preferencesService;
     private NotificationService notificationService;
+    private RateService rateService;
     private DbHelper dbHelper;
 
     /**
@@ -111,5 +112,12 @@ public class ServiceLocator {
         }
 
         return dbHelper;
+    }
+
+    public RateService getRateService() {
+        if (rateService == null) {
+            rateService = new RateServiceImpl(context);
+        }
+        return rateService;
     }
 }

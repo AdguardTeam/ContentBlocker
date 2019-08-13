@@ -45,7 +45,7 @@ public class NavigationHelper {
      * @param from          Activity from
      * @param activityClass Activity class
      */
-    public static void redirectToActivity(Activity from, Class activityClass) {
+    public static void redirectToActivity(Context from, Class activityClass) {
         Intent intent = new Intent(from.getApplicationContext(), activityClass);
         from.startActivity(intent);
     }
@@ -58,6 +58,19 @@ public class NavigationHelper {
      */
     public static void redirectToWebSite(Context from, String url) {
         redirectUsingCustomTab(from, url);
+    }
+
+    public static void redirectToPlayMarket(Context from) {
+        try {
+            from.startActivity(createPlayMarketIntent(from));
+        } catch (ActivityNotFoundException e) {
+            ServiceLocator.getInstance(from).getNotificationService().showToast("FAILED");
+        }
+    }
+
+    private static Intent createPlayMarketIntent(Context context) {
+        Uri uri = Uri.parse("market://details?id=" + context.getPackageName());
+        return new Intent(Intent.ACTION_VIEW, uri);
     }
 
     private static void redirectUsingCustomTab(Context context, String url) {

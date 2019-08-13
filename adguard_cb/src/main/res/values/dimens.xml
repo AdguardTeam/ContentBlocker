@@ -10,4 +10,5 @@
     <dimen name="cardview_vertical_padding">16dp</dimen>
     <dimen name="cardview_button_margin">8dp</dimen>
     <dimen name="cardview_button_minwidth">10dp</dimen>
+    <dimen name="indent_normal">16dp</dimen>
 </resources>

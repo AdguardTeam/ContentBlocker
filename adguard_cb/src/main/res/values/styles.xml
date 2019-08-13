@@ -273,4 +273,86 @@
         <item name="android:layout_height">1dp</item>
         <item name="android:background">@color/gray</item>
     </style>
+
+    <style name="LayoutWrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="LayoutFullWidth">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:baselineAligned">false</item>
+    </style>
+
+    <style name="LayoutFullWidth.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LayoutFullWidth.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="RateAppDialog" parent="LayoutFullWidth.Vertical">
+        <item name="android:padding">@dimen/indent_normal</item>
+    </style>
+
+    <style name="RateAppDialogHeader" parent="LayoutFullWidth">
+        <item name="android:textSize">@dimen/headerTextSize</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RateAppDialogSummary" parent="LayoutFullWidth">
+        <item name="android:textSize">@dimen/subHeaderTextSize</item>
+    </style>
+
+    <style name="RateAppDialogStarsLayout" parent="LayoutFullWidth.Horizontal">
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="RateAppDialogStar" parent="LayoutWrapContent">
+        <item name="android:padding">@dimen/indent_normal</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:src">@drawable/ic_star_empty</item>
+    </style>
+
+    <style name="RateAppNotificationStar" parent="LayoutWrapContent">
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:clickable">true</item>
+        <item name="android:src">@drawable/ic_star_empty</item>
+    </style>
+
+    <style name="RateAppDialogButton" parent="RateAppDialogSummary">
+        <item name="android:padding">@dimen/indent_normal</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="RateAppDialogButton.Positive">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="RateAppDialogButton.Negative">
+        <item name="android:textColor">@color/light_gray_text</item>
+    </style>
+
+    <style name="RateAppDialogButtonFeedback">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:textColor">@color/primaryText</item>
+        <item name="android:layout_marginTop">@dimen/indent_normal</item>
+        <item name="android:background">@drawable/edittext_background</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:inputType">textMultiLine|textCapSentences</item>
+        <item name="android:lines">8</item>
+        <item name="android:maxLines">10</item>
+        <item name="android:minLines">6</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:textColorHint">@color/light_gray_text</item>
+    </style>
 </resources>

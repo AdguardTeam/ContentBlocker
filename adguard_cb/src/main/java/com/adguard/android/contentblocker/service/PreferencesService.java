@@ -35,6 +35,8 @@ public interface PreferencesService {
     String KEY_DISABLED_USER_RULES = "key_disabled_user_rules";
     String KEY_WHITELIST_STRING = "key_whitelist_string";
     String KEY_DISABLED_WHITELIST = "key_disabled_whitelist";
+    String KEY_LAST_COMMUNICATION_DATE = "key_last_communication_date";
+    String KEY_APP_RATED = "key_app_rated";
 
     /**
      * @return true if filters autoupdate is enabled
@@ -155,4 +157,24 @@ public interface PreferencesService {
      * @return Filter rules count
      */
     int getFilterRuleCount();
+
+    /**
+     * @return Last time we show `Rate this app` dialog
+     */
+    Long getLastTimeCommunication();
+
+    /**
+     * @param lastTimeCommunication Last time we show `Rate this app` dialog
+     */
+    void setLastTimeCommunication(Long lastTimeCommunication);
+
+    /**
+     * @return {@code True} if user already rate app
+     */
+    boolean isAppRated();
+
+    /**
+     * @param appRated {@code True} if user already rate app
+     */
+    void setAppRated(boolean appRated);
 }

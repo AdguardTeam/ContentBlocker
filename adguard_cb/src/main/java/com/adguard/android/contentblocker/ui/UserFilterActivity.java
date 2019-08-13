@@ -39,7 +39,6 @@ import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.R;

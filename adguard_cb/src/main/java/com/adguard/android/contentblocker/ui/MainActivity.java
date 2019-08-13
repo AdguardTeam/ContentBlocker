@@ -52,6 +52,8 @@ import com.adguard.android.contentblocker.onboarding.OnboardingActivity;
 import com.adguard.android.contentblocker.service.FilterService;
 import com.adguard.android.contentblocker.service.FilterServiceImpl;
 import com.adguard.android.contentblocker.service.PreferencesService;
+import com.adguard.android.contentblocker.service.RateService;
+import com.adguard.android.contentblocker.service.RateServiceImpl;
 import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
 import com.adguard.android.contentblocker.ui.utils.ReportToolUtils;
@@ -187,6 +189,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     public void onResume() {
         super.onResume();
+        new RateServiceImpl(this).showRateDialog(this);
         refreshMainInfo();
     }
 

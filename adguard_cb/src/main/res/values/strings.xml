@@ -74,6 +74,15 @@
     <string name="privacyPolicyLinkText">Privacy Policy</string>
     <string name="eulaLinkText">EULA</string>
     <string name="delete">Delete</string>
+    <string name="submit">Submit</string>
+    <string name="later">Later</string>
+    <string name="never">Never</string>
+    <string name="rate_app_dialog_title">Rate this app</string>
+    <string name="rate_app_dialog_summary">Enjoying AdGuard? Rate us 5⭐ on Google Play</string>
+    <string name="rate_app_notification_title">Rate us ⭐⭐⭐⭐⭐</string>
+    <string name="notification_channel_rate_name">Rates</string>
+    <string name="notification_channel_rate_description">Notifications about app rates</string>
+    <string name="rate_app_notification_summary">Enjoying AdGuard Content Blocker? Rate us 5 on Google Play</string>
     <string name="confirmClearUserFilterMessage">Are you sure you want to clear the user filter? This operation cannot be undone.</string>
     <string name="confirmRemoveUserRuleMessage">Are you sure you want to delete this rule? This operation cannot be undone.</string>
     <string name="clear_filters_cache_title">Clear the filter cache</string>

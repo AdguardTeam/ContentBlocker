@@ -20,7 +20,7 @@
             android:src="@drawable/ic_google_play" />
     </LinearLayout>
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/browser_yandex"
         style="@style/CardViewStyle"
         android:layout_width="match_parent"
@@ -94,9 +94,9 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/browser_samsung"
         style="@style/CardViewStyle"
         android:layout_width="match_parent"
@@ -156,9 +156,9 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/others_product_card"
         style="@style/CardViewStyle"
         android:layout_width="match_parent"
@@ -203,5 +203,5 @@
             </LinearLayout>
 
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

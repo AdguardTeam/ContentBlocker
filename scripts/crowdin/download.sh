@@ -7,10 +7,10 @@ python3 -c "import requests" &> /dev/null || pip3 install requests
 
 locales=("ar" "da" "de" "es" "fa" "hr" "hu" "it"
         "ja" "ko"  "fr" "lv" "mk" "nl" "no" "pl"
-        "ru" "sk" "sv" "tr" "uk" "be" "cs" "bn")
+        "ru" "sk" "sv" "tr" "uk" "be" "cs" "bn"
+        "bg" "lt" "ms" "sr" "vi" "in")
 
-locales_exceptions=("pt-BR:pt-rBR" "pt-PT:pt-rPT" "zh-TW:zh-rTW"
-                    "zh-CN:zh-rCN" "id:in" "zh-TW:zh-rTW")
+locales_exceptions=("pt-BR:pt-rBR" "pt-PT:pt-rPT" "zh-CN:zh-rCN" "zh-TW:zh-rTW")
 
 for i in ${locales[@]}
 do

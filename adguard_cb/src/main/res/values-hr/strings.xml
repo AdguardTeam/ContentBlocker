@@ -73,4 +73,30 @@
     <string name="reportBug">Prijavite pogrešku</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Politika privatnosti</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
+    <string name="delete">Izbriši</string>
+    <string name="confirmClearUserFilterMessage">Jeste li sigurni da želite izbrisati korisnički filter? Ova je operacija nepovratna.</string>
+    <string name="confirmRemoveUserRuleMessage">Jeste li sigurni da želite izbrisati ovo pravilo? Ova operacija je nepovratna.</string>
+    <string name="clear_filters_cache_title">Očistite predmemoriju filtera</string>
+    <string name="clear_filters_cache_summary">Briše predmemoriju filtera i obnavlja filter</string>
+    <string name="clear_filters_cache_progress_message">Brisanje predmemorije i obnavljanje filtera</string>
+    <string name="whitelist_title">Bijela lista</string>
+    <string name="addToWhitelistButtonText">Dodaj web stranicu</string>
+    <string name="clearWhitelistButtonText">Ukloni sve</string>
+    <string name="whitelistNewItemDialogTitle">Upišite ime domene</string>
+    <string name="whitelistNewItemErrorMessage">Domena ej nepravilna</string>
+    <string name="whitelistNewItemExistsErrorMessage">Ova domena je već u bijeloj listi</string>
+    <string name="confirmClearWhitelistMessage">Jeste li sigurni da želite obrisati bijelu listu? Ova operacija je nepovratna.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">Jeste li sigurni da želite obrisati ovu domenu? Ova operacija je nepovratna.</string>
+    <string name="emptyWhitelistTextViewText">Bijela lista je prazna</string>
+    <string name="report_dialog_title">Vrsta povratne informacije</string>
+    <string name="reportTypeMissedAd">Propuštena reklama ili pratitelj</string>
+    <string name="reportTypeIncorrectBlocking">Nepravilno blokiranje</string>
+    <string name="reportTypeBugReport">Prijava greške</string>
+    <string name="reportTypeFeatureRequest">Prijedlog nove značajke</string>
+    <string name="reportTypeCustom">Drugo</string>
+    <string name="overwrite_existing_rules">Natpisati postojeća pravila</string>
+    <string name="other_product_message">Ova aplikacija radi samo u Samsung i Yandex preglednicima. Ako to nije ono što ste tražili probajte druge proizvode na Web stranici AdGuarda</string>
+    <string name="go_to_products">Otvorite proizvode</string>
+    <string name="select_browser_dialog_adguard_products_title">Nije li to baš ono što ste tražili?</string>
+    <string name="select_browser_dialog_adguard_products_message">Pogledajte ostale AdGuard proizvode na našoj web stranici</string>
 </resources>

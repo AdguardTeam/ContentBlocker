@@ -95,4 +95,8 @@
     <string name="reportTypeFeatureRequest">Permintaan fitur</string>
     <string name="reportTypeCustom">Lainnya</string>
     <string name="overwrite_existing_rules">Timpa aturan yang ada</string>
+    <string name="other_product_message">Aplikasi ini hanya bekerja pada browser Samsung dan Yandex. Tidak cukup dengan apa yang Anda butuhkan? Lihat produk AdGuard lainnya di situs web kami</string>
+    <string name="go_to_products">Ke Produk</string>
+    <string name="select_browser_dialog_adguard_products_title">Tidak cukup dengan apa yang Anda butuhkan?</string>
+    <string name="select_browser_dialog_adguard_products_message">Lihat produk AdGuard lainnya di situs web kami</string>
 </resources>

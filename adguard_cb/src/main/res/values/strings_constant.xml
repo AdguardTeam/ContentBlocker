@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name" translatable="false">AdGuard Content Blocker</string>
     <string name="userRuleNewItemDialogHint" translatable="false">||example.com^$third-party</string>
+    <string name="whitelistNewItemDialogHint" translatable="false">example.com</string>
     <string name="github" translatable="false">GitHub</string>
     <string name="title_activity_onboarding" translatable="false">Welcome!</string>
     <string name="yandex_browser" translatable="false">Yandex Browser</string>

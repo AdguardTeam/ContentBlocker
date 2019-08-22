@@ -49,14 +49,24 @@ public class NavigationHelper {
      * @param from          Activity from
      * @param activityClass Activity class
      */
-    public static void redirectToActivity(Context from, Class activityClass) {
+    public static void redirectToActivity(Activity from, Class activityClass) {
         redirectToActivity(from, activityClass, null);
     }
 
+    /**
+     * Redirects to activityClass activity.
+     *
+     * @param from          Application context (non-activity context requires {@link Intent.FLAG_ACTIVITY_NEW_TASK}
+     * @param activityClass Activity class
+     * @param bundle        {@link Bundle} to add into intent
+     */
     public static void redirectToActivity(Context from, Class activityClass, Bundle bundle) {
         Intent intent = new Intent(from, activityClass).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         if (bundle != null) {
             intent.putExtras(bundle);
+        }
+        if (!(from instanceof Activity)) {
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         }
         from.startActivity(intent);
     }

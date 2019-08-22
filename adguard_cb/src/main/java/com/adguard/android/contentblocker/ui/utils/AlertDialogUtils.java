@@ -2,7 +2,7 @@ package com.adguard.android.contentblocker.ui.utils;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 
 import com.adguard.android.contentblocker.R;
 

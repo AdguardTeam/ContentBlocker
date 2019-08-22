@@ -25,14 +25,13 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.support.v7.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.service.NotificationService;
-import com.adguard.android.contentblocker.ui.MainActivity;
 import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
 

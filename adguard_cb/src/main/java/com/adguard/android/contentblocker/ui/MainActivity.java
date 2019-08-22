@@ -216,13 +216,13 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
 
         int filledCount = intent.getIntExtra(STARS_COUNT, 0);
-        final LayoutInflater inflater = LayoutInflater.from(this);
-        final View dialogLayout = inflater.inflate(R.layout.rate_dialog, null);
+        final View dialogLayout = LayoutInflater.from(this).inflate(R.layout.rate_dialog, null);
         final ViewGroup starsLayout = dialogLayout.findViewById(R.id.stars_layout);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setView(dialogLayout);
-        final AlertDialog dialog = builder.show();
+        final AlertDialog dialog = new AlertDialog.Builder(this)
+                .setView(dialogLayout)
+                .setCancelable(false)
+                .show();
 
         View.OnClickListener starsListener = new View.OnClickListener() {
             @Override
@@ -256,16 +256,18 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     }
 
     private void showFeedbackSubmitDialog() {
-        new AlertDialog.Builder(this)
-            .setTitle(R.string.rate_app_submit_feedback_title)
-            .setMessage(R.string.rate_app_submit_feedback_summary)
-            .setCancelable(true)
-            .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.cancel();
-                }
-            }).show();
+        final View dialogLayout = LayoutInflater.from(this).inflate(R.layout.rate_dialog_gratitude, null);
+        final AlertDialog dialog = new AlertDialog.Builder(this)
+                .setCancelable(true)
+                .setView(dialogLayout)
+                .show();
+
+        dialogLayout.findViewById(R.id.ok_button).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
     }
 
     private void refreshDialogView(AlertDialog dialog, ViewGroup stars, int count) {

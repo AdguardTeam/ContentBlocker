@@ -26,6 +26,7 @@ import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ui.MainActivity;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
 
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -79,12 +80,9 @@ public class NotificationServiceImpl implements NotificationService {
             Toast toast = getToast(message, duration);
             toast.show();
         } else {
-            handler.post(new Runnable() {
-                @Override
-                public void run() {
-                    Toast toast = getToast(message, duration);
-                    toast.show();
-                }
+            handler.post(() -> {
+                Toast toast = getToast(message, duration);
+                toast.show();
             });
         }
     }
@@ -172,20 +170,22 @@ public class NotificationServiceImpl implements NotificationService {
      * @param count count of filled stars
      */
     private void showRateAppNotification(int count) {
-        Intent intent = new Intent(context, MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        Bundle bundle = new Bundle();
-        bundle.putInt(MainActivity.STARS_COUNT, count);
-        intent.putExtras(bundle);
-        NotificationCompat.Builder builder = createDefaultNotificationBuilder(context.getString(R.string.rate_app_dialog_title), context.getString(R.string.rate_app_summary));
-        builder.setContentIntent(PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT));
-        builder.setAutoCancel(true);
-        builder.setSmallIcon(R.drawable.ic_content_blocker);
-        builder.setDefaults(Notification.DEFAULT_LIGHTS);
-        builder.setPriority( NotificationCompat.PRIORITY_HIGH);
-        builder.setStyle(new NotificationCompat.DecoratedCustomViewStyle());
-        builder.setCustomBigContentView(createStarsRemoteViews(count));
-        Notification notification = builder.build();
+        Bundle countBundle = new Bundle();
+        countBundle.putInt(MainActivity.STARS_COUNT, count);
+        Intent intent = new Intent(context, MainActivity.class)
+                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                .putExtras(countBundle);
+
+        Notification notification = createDefaultNotificationBuilder(NotificationChannelMeta.RATE_APP_CHANNEL, context.getString(R.string.rate_app_dialog_title), context.getString(R.string.rate_app_summary))
+            .setContentIntent(PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT))
+            .setAutoCancel(true)
+            .setSmallIcon(R.drawable.ic_content_blocker)
+            .setDefaults(Notification.DEFAULT_LIGHTS)
+            .setPriority( NotificationCompat.PRIORITY_HIGH)
+            .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+            .setCustomBigContentView(createStarsRemoteViews(count))
+            .build();
+
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         if (notificationManager != null) {
             notificationManager.notify(RATE_NOTIFICATION_ID, notification);
@@ -226,20 +226,21 @@ public class NotificationServiceImpl implements NotificationService {
     /**
      * Creates notification builder with default parameters
      *
+     * @param meta      {@link NotificationChannelMeta}
      * @param title     Title
      * @param message   Message
      * @return default {@link NotificationCompat.Builder} with given title and message
      */
-    private NotificationCompat.Builder createDefaultNotificationBuilder(CharSequence title, CharSequence message) {
-        final NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "1");
-        builder.setContentTitle(title);
-        builder.setContentText(message);
-        builder.setDefaults(Notification.DEFAULT_LIGHTS);
-        builder.setStyle(new NotificationCompat.BigTextStyle().bigText(message));
-        builder.setColor(context.getResources().getColor(R.color.colorPrimary));
-        return builder;
+    private NotificationCompat.Builder createDefaultNotificationBuilder(NotificationChannelMeta meta, CharSequence title, CharSequence message) {
+        return new NotificationCompat.Builder(context, meta.getChannelId())
+                .setContentTitle(title)
+                .setContentText(message)
+                .setDefaults(Notification.DEFAULT_LIGHTS)
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(message))
+                .setColor(context.getResources().getColor(R.color.colorPrimary));
     }
 
+    @SuppressWarnings("InflateParams")
     private Toast getToast(String message, int duration) {
         View v = LayoutInflater.from(context).inflate(R.layout.transient_notification, null);
         TextView tv = v.findViewById(android.R.id.message);
@@ -260,24 +261,21 @@ public class NotificationServiceImpl implements NotificationService {
      * @param count Selected stars count
      */
     private void redirectWithDelay(final int count) {
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                NotificationManager notificationManager = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
-                if (notificationManager != null) {
-                    // Cancel current 'rate app' notification and close notification bar before redirection
-                    notificationManager.cancel(RATE_NOTIFICATION_ID);
-                    Intent closeIntent = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
-                    context.sendBroadcast(closeIntent);
-                }
+        handler.postDelayed(() -> {
+            NotificationManager notificationManager = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
+            if (notificationManager != null) {
+                // Cancel current 'rate app' notification and close notification bar before redirection
+                notificationManager.cancel(RATE_NOTIFICATION_ID);
+                Intent closeIntent = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
+                context.sendBroadcast(closeIntent);
+            }
 
-                if (count > 3) {
-                    NavigationHelper.redirectToPlayMarket(context);
-                } else {
-                    Bundle bundle = new Bundle();
-                    bundle.putInt(MainActivity.STARS_COUNT, count);
-                    NavigationHelper.redirectToActivity(context, MainActivity.class, bundle);
-                }
+            if (count > 3) {
+                NavigationHelper.redirectToPlayMarket(context);
+            } else {
+                Bundle bundle = new Bundle();
+                bundle.putInt(MainActivity.STARS_COUNT, count);
+                NavigationHelper.redirectToActivity(context, MainActivity.class, bundle);
             }
         }, REDIRECTION_DELAY);
     }
@@ -290,11 +288,18 @@ public class NotificationServiceImpl implements NotificationService {
         @Override
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
-            if (action != null) {
-                showRateAppNotification(countActions.get(action).getCount());
-                int count = countActions.get(action).getCount();
-                redirectWithDelay(count);
+            if (StringUtils.isEmpty(action)) {
+                return;
             }
+            CountId countId = countActions.get(action);
+            if (countId == null) {
+                return;
+            }
+
+            showRateAppNotification(countId.getCount());
+            int count = countId.getCount();
+            redirectWithDelay(count);
+
         }
     }
 

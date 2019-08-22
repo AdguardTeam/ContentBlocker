@@ -55,7 +55,7 @@
                 android:gravity="center_vertical|center_horizontal"/>
         </LinearLayout>
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/onboarding_button_text1"

@@ -18,9 +18,9 @@ package com.adguard.android.contentblocker.ui;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;

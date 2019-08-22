@@ -1,0 +1,46 @@
+[
+  {
+    "project_id": "android",
+    "base_locale": "en",
+    "languages": {
+      "en": "English",
+      "ru": "Русский",
+      "de": "Deutsch",
+      "da": "Dansk",
+      "uk": "Українська",
+      "pt-BR": "Português (Brasil)",
+      "pt-PT": "Português (Portugal)",
+      "ko": "한국어",
+      "pl": "Polski",
+      "zh-CN": "中国简体",
+      "zh-TW": "正體中文",
+      "in": "Indonesia",
+      "it": "Italiano",
+      "cs": "Čeština",
+      "sk": "Slovenčina",
+      "bg": "Български",
+      "es": "Español",
+      "sr": "Srpski",
+      "tr": "Türkçe",
+      "fr": "Français",
+      "lt": "Lietuvių",
+      "sv": "Svenska",
+      "hu": "Magyar",
+      "vi": "Tiếng Việt",
+      "hr": "Hrvatski",
+      "nl": "Dutch",
+      "fa": "فارسیl",
+      "ja": "日本語",
+      "ar": "عربى",
+      "lv": "Latvian",
+      "mk": "Macedonian",
+      "no": "Norwegian",
+      "be": "Беларуская",
+      "bn": "Bengali",
+      "ms": "Malay"
+    },
+    "localizable_files": [
+      "adguard_cb/main/res/values/strings*.xml"
+    ]
+  }
+]

@@ -74,9 +74,11 @@
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Politique de Confidentialité</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
     <string name="delete">Supprimer</string>
+    <string name="confirmClearUserFilterMessage">Êtes-vous sûr(e) de vouloir effacer le filtre utilisateur ? Cette opération ne peut pas être annulée.</string>
     <string name="confirmRemoveUserRuleMessage">Êtes vous certain de vouloir supprimer cette règle? Cette opération ne peut pas être annulée.</string>
     <string name="clear_filters_cache_title">Vider le cache du filtre</string>
     <string name="clear_filters_cache_summary">Vider le cache des filtres et mettre à jour les filtres</string>
+    <string name="clear_filters_cache_progress_message">Effacement du cache et mise à jour des filtres</string>
     <string name="whitelist_title">Liste blanche</string>
     <string name="addToWhitelistButtonText">Ajouter un site web</string>
     <string name="clearWhitelistButtonText">Tout retirer</string>
@@ -87,8 +89,12 @@
     <string name="confirmRemoveWhitelistDomainMessage">Êtes vous certain de vouloir supprimer ce domaine? Cette opération ne peut pas être annulée.</string>
     <string name="emptyWhitelistTextViewText">La liste blanche est vide</string>
     <string name="report_dialog_title">Reporter le type</string>
+    <string name="reportTypeMissedAd">Annonce ou tracker manqués</string>
     <string name="reportTypeIncorrectBlocking">Bloqueur incorrect</string>
+    <string name="reportTypeBugReport">Rapport de bug</string>
+    <string name="reportTypeFeatureRequest">Demande de fonctionnalité</string>
     <string name="reportTypeCustom">Autre</string>
+    <string name="overwrite_existing_rules">Écraser les règles existantes</string>
     <string name="other_product_message">L\'appli fonctionne uniquement dans les navigateurs Samsung et Yandex. Si ce n\'est pas ce qu\'il vous faut, vous trouverez d\'autres produits AdGuard sur notre site Web.</string>
     <string name="go_to_products">Aller vers Produits</string>
     <string name="select_browser_dialog_adguard_products_title">Ce n\'est pas exactement ce que vous recherchiez ?</string>

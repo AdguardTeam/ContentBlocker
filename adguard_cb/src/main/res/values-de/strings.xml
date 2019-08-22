@@ -74,19 +74,30 @@
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Datenschutzbestimmungen</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">EULA</a></string>
     <string name="delete">Löschen</string>
+    <string name="confirmClearUserFilterMessage">Möchten Sie den eigenen Filter wirklich entfernen? Dieser Vorgang kann nicht widerrufen werden.</string>
+    <string name="confirmRemoveUserRuleMessage">Möchten Sie diese Regel wirklich löschen? Dieser Vorgang kann nicht widerrufen werden.</string>
     <string name="clear_filters_cache_title">Filtercache leeren</string>
+    <string name="clear_filters_cache_summary">Filter-Cache leeren und Filter aktualisieren</string>
+    <string name="clear_filters_cache_progress_message">Filter-Cache leeren und Filter aktualisieren</string>
     <string name="whitelist_title">Whitelist</string>
     <string name="addToWhitelistButtonText">Webseite hinzufügen</string>
     <string name="clearWhitelistButtonText">Alle entfernen</string>
     <string name="whitelistNewItemDialogTitle">Domainname eingeben</string>
     <string name="whitelistNewItemErrorMessage">Der Domainname ist ungültig</string>
     <string name="whitelistNewItemExistsErrorMessage">Diese Domain ist bereits auf der Whitelist</string>
+    <string name="confirmClearWhitelistMessage">Möchten Sie die Positivliste wirklich löschen? Dieser Vorgang kann nicht widerrufen werden.</string>
+    <string name="confirmRemoveWhitelistDomainMessage">Möchten Sie diese Domain wirklich löschen? Dieser Vorgang kann nicht widerrufen werden.</string>
     <string name="emptyWhitelistTextViewText">Die Whitelist ist leer</string>
+    <string name="report_dialog_title">Feedback-Art</string>
+    <string name="reportTypeMissedAd">Übersehene Anzeige oder Tracker</string>
+    <string name="reportTypeIncorrectBlocking">Falsche Blockierung</string>
     <string name="reportTypeBugReport">Fehlermeldung</string>
+    <string name="reportTypeFeatureRequest">Funktions-Anfrage</string>
     <string name="reportTypeCustom">Sonstiges</string>
     <string name="overwrite_existing_rules">Bestehende Regeln überschreiben</string>
     <string name="other_product_message">Diese App funktioniert nur in Samsung- und Yandex-Browsern. Brauchen Sie was anderes? Probieren Sie andere AdGuard-Produkte aus, die Sie auf unserer Webseite finden</string>
     <string name="go_to_products">Zu den Produkten übergehen</string>
     <string name="select_browser_dialog_adguard_products_title">Nicht ganz das, was Sie brauchen?</string>
-    <string name="select_browser_dialog_adguard_products_message">Finden Sie weitere AdGuard-Produkte auf unserer Webseite.</string>
+    <string name="select_browser_dialog_adguard_products_message">\"Finden Sie weitere AdGuard-Produkte auf unserer Webseite.
+\"</string>
 </resources>

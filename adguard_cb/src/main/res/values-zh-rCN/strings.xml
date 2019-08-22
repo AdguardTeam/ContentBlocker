@@ -97,4 +97,6 @@
     <string name="overwrite_existing_rules">覆盖现有规则</string>
     <string name="other_product_message">本应用仅工作于运行在三星手机之上的 Yandex 浏览器。不满足您的需要？请检查我们网站上的其它 AdGuard 产品。</string>
     <string name="go_to_products">转到产品</string>
+    <string name="select_browser_dialog_adguard_products_title">不是您需要的？</string>
+    <string name="select_browser_dialog_adguard_products_message">检查我们网站上的其它 AdGuard 产品</string>
 </resources>

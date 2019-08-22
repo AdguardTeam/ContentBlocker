@@ -31,6 +31,7 @@
         <ImageView
             android:id="@+id/star4"
             style="@style/RateAppNotificationStar" />
+
         <ImageView
             android:id="@+id/star5"
             style="@style/RateAppNotificationStar" />

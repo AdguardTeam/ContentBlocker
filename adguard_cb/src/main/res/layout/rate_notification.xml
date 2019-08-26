@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RateAppNotification">
+
+    <TextView
+        style="@style/DefaultText"
+        android:textStyle="bold"
+        android:text="@string/rate_app_notification_title" />
+
+    <TextView
+        style="@style/LayoutFullWidth"
+        android:paddingTop="2dp"
+        android:text="@string/rate_app_summary" />
+
+    <LinearLayout
+        android:id="@+id/stars_layout"
+        style="@style/RateAppDialogStarsLayout.Notification">
+
+        <ImageView
+            android:id="@+id/star1"
+            style="@style/RateAppNotificationStar" />
+
+        <ImageView
+            android:id="@+id/star2"
+            style="@style/RateAppNotificationStar" />
+
+        <ImageView
+            android:id="@+id/star3"
+            style="@style/RateAppNotificationStar" />
+
+        <ImageView
+            android:id="@+id/star4"
+            style="@style/RateAppNotificationStar" />
+
+        <ImageView
+            android:id="@+id/star5"
+            style="@style/RateAppNotificationStar" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -19,7 +19,7 @@ package com.adguard.android.contentblocker.ui;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
@@ -33,12 +33,14 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -65,6 +67,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements DrawerLayout.DrawerListener, SharedPreferences.OnSharedPreferenceChangeListener, View.OnClickListener {
 
+    public final static String STARS_COUNT = "stars_count";
     private static Logger LOG = LoggerFactory.getLogger(MainActivity.class);
 
     private DrawerLayout drawerLayout;
@@ -74,7 +77,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     private PreferencesService preferencesService;
     private FilterService filterService;
 
-    @SuppressWarnings("ConstantConditions")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,33 +98,22 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
         initDrawerLayout();
 
-        findViewById(R.id.go_to_products).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String url = AppLink.Website.getOtherProductUrl(getApplicationContext(), "main_activity");
-                NavigationHelper.redirectToWebSite(MainActivity.this, url);
-            }
+        findViewById(R.id.go_to_products).setOnClickListener(v -> {
+            String url = AppLink.Website.getOtherProductUrl(getApplicationContext(), "main_activity");
+            NavigationHelper.redirectToWebSite(MainActivity.this, url);
         });
 
-        findViewById(R.id.go_to_filters).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NavigationHelper.redirectToActivity(MainActivity.this, FiltersActivity.class);
-            }
-        });
+        findViewById(R.id.go_to_filters).setOnClickListener(v -> NavigationHelper.redirectToActivity(MainActivity.this, FiltersActivity.class));
 
         final View menuImageView = findViewById(R.id.menuImageView);
         if (menuImageView != null) {
-            menuImageView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    // inflate menu
-                    PopupMenu popup = new PopupMenu(menuImageView.getContext(), menuImageView);
-                    MenuInflater inflater = popup.getMenuInflater();
-                    inflater.inflate(R.menu.filters_popup_menu, popup.getMenu());
-                    popup.setOnMenuItemClickListener(new FiltersMenuItemClickListener());
-                    popup.show();
-                }
+            menuImageView.setOnClickListener(v -> {
+                // inflate menu
+                PopupMenu popup = new PopupMenu(menuImageView.getContext(), menuImageView);
+                MenuInflater inflater = popup.getMenuInflater();
+                inflater.inflate(R.menu.filters_popup_menu, popup.getMenu());
+                popup.setOnMenuItemClickListener(new FiltersMenuItemClickListener());
+                popup.show();
             });
         }
 
@@ -131,6 +122,13 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         }
 
         filterService.scheduleFiltersUpdate();
+        ServiceLocator.getInstance(this).getRateService().scheduleRateNotificationShow();
+        showRateDialog(getIntent());
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        showRateDialog(intent);
     }
 
     @Override
@@ -164,13 +162,11 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         if (drawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
-        switch (item.getItemId()) {
-            case R.id.refresh:
-                filterService.checkFiltersUpdates(this);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.refresh) {
+            filterService.checkFiltersUpdates(this);
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -187,6 +183,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     public void onResume() {
         super.onResume();
+        ServiceLocator.getInstance(this).getRateService().showRateNotification();
         refreshMainInfo();
     }
 
@@ -196,6 +193,67 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             drawerLayout.closeDrawers();
         } else {
             super.onBackPressed();
+        }
+    }
+
+    private void showRateDialog(Intent intent) {
+        if (intent == null || !intent.hasExtra(STARS_COUNT)) {
+            return;
+        }
+
+        int filledCount = intent.getIntExtra(STARS_COUNT, 0);
+        final View dialogLayout = LayoutInflater.from(this).inflate(R.layout.rate_dialog, null);
+        final ViewGroup starsLayout = dialogLayout.findViewById(R.id.stars_layout);
+
+        final AlertDialog dialog = new AlertDialog.Builder(this)
+                .setView(dialogLayout)
+                .setCancelable(false)
+                .show();
+
+        View.OnClickListener starsListener = v -> {
+            int count = (int) v.getTag();
+            refreshDialogView(dialog, starsLayout, count);
+        };
+
+        for (int i = 0; i < starsLayout.getChildCount(); i++) {
+            starsLayout.getChildAt(i).setTag(i + 1);
+            starsLayout.getChildAt(i).setOnClickListener(starsListener);
+        }
+
+        View.OnClickListener buttonsListener = v -> {
+            if (v.getId() == R.id.button_submit) {
+                // TODO collect feedback
+                preferencesService.setAppRated(true);
+                showFeedbackSubmitDialog();
+            }
+            preferencesService.increaseRateAppDialogCount();
+            dialog.cancel();
+        };
+
+        dialogLayout.findViewById(R.id.button_cancel).setOnClickListener(buttonsListener);
+        dialogLayout.findViewById(R.id.button_submit).setOnClickListener(buttonsListener);
+        refreshDialogView(dialog, starsLayout, filledCount);
+    }
+
+    private void showFeedbackSubmitDialog() {
+        final View dialogLayout = LayoutInflater.from(this).inflate(R.layout.rate_dialog_gratitude, null);
+        final AlertDialog dialog = new AlertDialog.Builder(this)
+                .setCancelable(true)
+                .setView(dialogLayout)
+                .show();
+
+        dialogLayout.findViewById(R.id.ok_button).setOnClickListener(v -> dialog.cancel());
+    }
+
+    private void refreshDialogView(AlertDialog dialog, ViewGroup stars, int count) {
+        if (count > 3) {
+            NavigationHelper.redirectToPlayMarket(this);
+            dialog.cancel();
+        }
+
+        for (int i = 0; i < stars.getChildCount(); i++) {
+            ((ImageView) stars.getChildAt(i)).setImageDrawable(this.getDrawable(i < count ? R.drawable.ic_star_filled_big :
+                    R.drawable.ic_star_empty_big));
         }
     }
 
@@ -225,42 +283,23 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
         View settingAdguardInSamsung = findViewById(R.id.setting_adguard_samsung);
         settingAdguardInSamsung.setVisibility(samsungBrowserAvailable ? View.VISIBLE : View.GONE);
-        settingAdguardInSamsung.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                BrowserUtils.openSamsungBlockingOptions(MainActivity.this);
-            }
-        });
+        settingAdguardInSamsung.setOnClickListener(v -> BrowserUtils.openSamsungBlockingOptions(MainActivity.this));
 
 
         View installSamsungBrowser = findViewById(R.id.install_samsung_browser);
         installSamsungBrowser.setVisibility(samsungBrowserAvailable ? View.GONE : View.VISIBLE);
-        installSamsungBrowser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ActivityUtils.startMarket(MainActivity.this, BrowserUtils.SAMSUNG_BROWSER_PACKAGE, null);
-            }
-        });
+        installSamsungBrowser.setOnClickListener(v -> ActivityUtils.startMarket(MainActivity.this, BrowserUtils.SAMSUNG_BROWSER_PACKAGE, null));
 
         boolean yandexBrowserAvailable = BrowserUtils.isYandexBrowserAvailable(this);
 
         View settingAdgaurdInYandex = findViewById(R.id.setting_adguard_yandex);
         settingAdgaurdInYandex.setVisibility(yandexBrowserAvailable ? View.VISIBLE : View.GONE);
-        settingAdgaurdInYandex.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                BrowserUtils.openYandexBlockingOptions(MainActivity.this);
-            }
-        });
+        settingAdgaurdInYandex.setOnClickListener(v -> BrowserUtils.openYandexBlockingOptions(MainActivity.this));
 
         View installYandexBrowser = findViewById(R.id.install_yandex_browser);
         installYandexBrowser.setVisibility(yandexBrowserAvailable ? View.GONE : View.VISIBLE);
-        installYandexBrowser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ActivityUtils.startMarket(MainActivity.this, BrowserUtils.YANDEX_BROWSER_PACKAGE, "adguard1");
-            }
-        });
+        installYandexBrowser.setOnClickListener(v ->
+                ActivityUtils.startMarket(MainActivity.this, BrowserUtils.YANDEX_BROWSER_PACKAGE, "adguard1"));
 
         refreshStatistics();
         FilterServiceImpl.enableContentBlocker(this);
@@ -397,23 +436,19 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.report_dialog_title);
-        builder.setSingleChoiceItems(arrayAdapter, -1, new DialogInterface.OnClickListener() {
+        builder.setSingleChoiceItems(arrayAdapter, -1, (dialogInterface, selectedIndex) -> {
+            dialogInterface.dismiss();
 
-            @Override
-            public void onClick(DialogInterface dialogInterface, int selectedIndex) {
-                dialogInterface.dismiss();
-
-                ReportType reportType = arrayAdapter.getItem(selectedIndex);
-                if (reportType != null) {
-                    switch (reportType) {
-                        case MISSED_AD:
-                        case INCORRECT_BLOCKING:
-                            NavigationHelper.redirectToWebSite(MainActivity.this, ReportToolUtils.getUrl(MainActivity.this));
-                            break;
-                        default:
-                            NavigationHelper.redirectToWebSite(MainActivity.this, AppLink.Github.getNewIssueUrl(getApplicationContext(), "main_activity"));
-                            break;
-                    }
+            ReportType reportType = arrayAdapter.getItem(selectedIndex);
+            if (reportType != null) {
+                switch (reportType) {
+                    case MISSED_AD:
+                    case INCORRECT_BLOCKING:
+                        NavigationHelper.redirectToWebSite(MainActivity.this, ReportToolUtils.getUrl(MainActivity.this));
+                        break;
+                    default:
+                        NavigationHelper.redirectToWebSite(MainActivity.this, AppLink.Github.getNewIssueUrl(getApplicationContext(), "main_activity"));
+                        break;
                 }
             }
         }).show();

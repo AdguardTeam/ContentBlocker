@@ -21,6 +21,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.content.ContextCompat;
 
@@ -39,6 +40,9 @@ public class NavigationHelper {
 
     private static final Logger LOG = LoggerFactory.getLogger(NavigationHelper.class);
 
+    private static final String PLAY_MARKET_PREFIX_CUSTOM_SCHEME = "market://details?id=";
+    private static final String PLAY_MARKET_PREFIX_HTTP_SCHEME = "http://play.google.com/store/apps/details?id=";
+
     /**
      * Redirects to activityClass activity.
      *
@@ -46,7 +50,24 @@ public class NavigationHelper {
      * @param activityClass Activity class
      */
     public static void redirectToActivity(Activity from, Class activityClass) {
-        Intent intent = new Intent(from.getApplicationContext(), activityClass);
+        redirectToActivity(from, activityClass, null);
+    }
+
+    /**
+     * Redirects to activityClass activity.
+     *
+     * @param from          Application context (non-activity context requires {@link Intent.FLAG_ACTIVITY_NEW_TASK}
+     * @param activityClass Activity class
+     * @param bundle        {@link Bundle} to add into intent
+     */
+    public static void redirectToActivity(Context from, Class activityClass, Bundle bundle) {
+        Intent intent = new Intent(from, activityClass).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        if (bundle != null) {
+            intent.putExtras(bundle);
+        }
+        if (!(from instanceof Activity)) {
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
         from.startActivity(intent);
     }
 
@@ -58,6 +79,31 @@ public class NavigationHelper {
      */
     public static void redirectToWebSite(Context from, String url) {
         redirectUsingCustomTab(from, url);
+    }
+
+    /**
+     * Redirects to Google Play Market
+     *
+     * @param context Application context
+     */
+    public static void redirectToPlayMarket(Context context) {
+        try {
+            context.startActivity(createPlayMarketIntent(context, PLAY_MARKET_PREFIX_CUSTOM_SCHEME));
+        } catch (ActivityNotFoundException e) {
+            context.startActivity(createPlayMarketIntent(context, PLAY_MARKET_PREFIX_HTTP_SCHEME));
+        }
+    }
+
+    /**
+     * Creates {@link Intent} to open Google Play Market
+     *
+     * @param context Application context
+     * @param prefix  Prefix with scheme (http or market)
+     * @return {@link Intent} to open Google Play Market
+     */
+    private static Intent createPlayMarketIntent(Context context, String prefix) {
+        Uri uri = Uri.parse(prefix + context.getPackageName());
+        return new Intent(Intent.ACTION_VIEW, uri);
     }
 
     private static void redirectUsingCustomTab(Context context, String url) {

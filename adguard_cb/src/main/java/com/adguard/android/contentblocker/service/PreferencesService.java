@@ -35,6 +35,9 @@ public interface PreferencesService {
     String KEY_DISABLED_USER_RULES = "key_disabled_user_rules";
     String KEY_WHITELIST_STRING = "key_whitelist_string";
     String KEY_DISABLED_WHITELIST = "key_disabled_whitelist";
+    String KEY_INSTALLATION_TIME = "key_installation_time";
+    String KEY_APP_RATED = "key_app_rated";
+    String KEY_RATE_APP_DIALOG_COUNT = "key_rate_app_dialog_count";
 
     /**
      * @return true if filters autoupdate is enabled
@@ -155,4 +158,34 @@ public interface PreferencesService {
      * @return Filter rules count
      */
     int getFilterRuleCount();
+
+    /**
+     * @return Installation time
+     */
+    Long getInstallationTime();
+
+    /**
+     * @param installationTime Installation time in millis
+     */
+    void setInstallationTime(Long installationTime);
+
+    /**
+     * @return {@code True} if user already rate app
+     */
+    boolean isAppRated();
+
+    /**
+     * @param appRated {@code True} if user already rate app
+     */
+    void setAppRated(boolean appRated);
+
+    /**
+     * @return Count of 'Rate app' dialog shows
+     */
+    int getRateAppDialogCount();
+
+    /**
+     * Increases count of 'Rate app' dialog shows
+     */
+    void increaseRateAppDialogCount();
 }

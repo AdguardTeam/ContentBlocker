@@ -27,21 +27,31 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.util.concurrent.Executors;
 
+/**
+ * Receiver to perform scheduled actions
+ */
 public class AlarmReceiver extends BroadcastReceiver {
+
     public static final String UPDATE_FILTER_ACTION = "com.adguard.contentblocker.UPDATE_FILTER";
+    public static final String SHOW_RATE_DIALOG_ACTION = "com.adguard.contentblocker.RATE_DIALOG";
 
     @Override
     public void onReceive(final Context context, final Intent intent) {
-        if (intent == null || !StringUtils.equalsIgnoreCase(UPDATE_FILTER_ACTION, intent.getAction())) {
+        if (intent == null) {
             return;
         }
 
-        final FilterService filterService = ServiceLocator.getInstance(context).getFilterService();
-        Executors.newSingleThreadExecutor().execute(new Runnable() {
-            @Override
-            public void run() {
-                filterService.tryUpdateFilters();
-            }
-        });
+        String action = intent.getAction();
+        if (StringUtils.equalsIgnoreCase(UPDATE_FILTER_ACTION, action)) {
+            final FilterService filterService = ServiceLocator.getInstance(context).getFilterService();
+            Executors.newSingleThreadExecutor().execute(new Runnable() {
+                @Override
+                public void run() {
+                    filterService.tryUpdateFilters();
+                }
+            });
+        } else if (StringUtils.equalsIgnoreCase(SHOW_RATE_DIALOG_ACTION, action)) {
+            ServiceLocator.getInstance(context).getRateService().showRateNotification();
+        }
     }
 }

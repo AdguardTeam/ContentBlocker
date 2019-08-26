@@ -25,4 +25,9 @@ public interface NotificationService {
      * @param duration duration
      */
     void showToast(String message, int duration);
+
+    /**
+     * Shows a notification asking user to rate this app
+     */
+    void showRateAppNotification();
 }

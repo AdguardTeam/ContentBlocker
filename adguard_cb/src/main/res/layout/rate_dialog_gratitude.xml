@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RateAppDialog">
+
+    <TextView
+        style="@style/RateAppDialogHeader"
+        android:text="@string/rate_app_submit_feedback_title" />
+
+    <TextView
+        style="@style/RateAppDialogSummary"
+        android:text="@string/rate_app_submit_feedback_summary" />
+
+    <ImageView style="@style/RateAppDialogPaperPlane" />
+
+    <TextView
+        android:id="@+id/ok_button"
+        style="@style/RateAppDialogButton.Positive"
+        android:layout_gravity="end"
+        android:text="@string/ok" />
+
+</LinearLayout>

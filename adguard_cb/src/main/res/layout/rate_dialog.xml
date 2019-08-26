@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/RateAppDialog"
+    tools:ignore="contentDescription">
+
+    <TextView
+        style="@style/RateAppDialogHeader"
+        android:text="@string/rate_app_dialog_title" />
+
+    <TextView
+        style="@style/RateAppDialogSummary"
+        android:text="@string/rate_app_summary" />
+
+    <LinearLayout
+        android:id="@+id/stars_layout"
+        style="@style/RateAppDialogStarsLayout.Dialog">
+
+        <ImageView
+            android:id="@+id/star1"
+            style="@style/RateAppDialogStar" />
+
+        <ImageView
+            android:id="@+id/star2"
+            style="@style/RateAppDialogStar" />
+
+        <ImageView
+            android:id="@+id/star3"
+            style="@style/RateAppDialogStar" />
+
+        <ImageView
+            android:id="@+id/star4"
+            style="@style/RateAppDialogStar" />
+
+        <ImageView
+            android:id="@+id/star5"
+            style="@style/RateAppDialogStar" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/feedback"
+        style="@style/RateAppDialogButtonFeedback" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        style="@style/RateAppDialogButtons">
+
+        <TextView
+            android:id="@+id/button_cancel"
+            style="@style/RateAppDialogButton.Negative"
+            android:text="@string/cancel" />
+
+        <TextView
+            android:id="@+id/button_submit"
+            style="@style/RateAppDialogButton.Positive"
+            android:text="@string/submit" />
+
+    </LinearLayout>
+</LinearLayout>

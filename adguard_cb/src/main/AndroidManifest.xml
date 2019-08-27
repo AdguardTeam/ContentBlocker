@@ -100,6 +100,14 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name=".receiver.UpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package" android:path="com.adguard.android.contentblocker" />
+                <data android:scheme="package" android:path="com.sec.android.app.sbrowser" />
+            </intent-filter>
+        </receiver>
+
         <service
             android:exported="true"
             android:name=".FilterUpdateJobService"

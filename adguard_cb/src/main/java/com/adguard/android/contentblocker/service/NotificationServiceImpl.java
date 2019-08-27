@@ -56,6 +56,7 @@ public class NotificationServiceImpl implements NotificationService {
     private Map<String, CountId> countActions;
 
     public NotificationServiceImpl(Context context) {
+        prepareLooper();
         this.context = context;
         this.handler = new Handler();
 
@@ -90,6 +91,17 @@ public class NotificationServiceImpl implements NotificationService {
     @Override
     public void showRateAppNotification() {
         showRateAppNotification(0);
+    }
+
+    /**
+     * Initializes the current thread as a looper in case if application was started implicitly in non-UI thread
+     * This case may occurs after installation via browser menu without app launching.
+     * There are no opportunities to create {@link Handler} without this call ¯\_(ツ)_/¯
+     */
+    private void prepareLooper() {
+        if (Looper.myLooper() == null) {
+            Looper.prepare();
+        }
     }
 
     /**

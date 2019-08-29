@@ -108,4 +108,8 @@
     <string name="go_to_products">Go to Products</string>
     <string name="select_browser_dialog_adguard_products_title">Not quite what you need?</string>
     <string name="select_browser_dialog_adguard_products_message">Check out other AdGuard products on our website</string>
+    <string name="choose_your_browser">Choose your browser:</string>
+    <string name="chrome_dialog_title">Want to block ads in Chrome?</string>
+    <string name="chrome_dialog_text"><![CDATA[As of 2019, Chrome does not support any ad blocking extensions or apps.\nYou can urge Chrome developers on adding support for AdGuard and other content blockers. To do so, visit <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> and upvote the issue.]]></string>
+    <string name="back">Back</string>
 </resources>

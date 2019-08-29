@@ -5,6 +5,7 @@
     <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
          https://developer.android.com/design/patterns/navigation-drawer.html -->
     <dimen name="pager_indicator_size">8dp</dimen>
+    <dimen name="dialog_title_margin">20dp</dimen>
     <dimen name="cardview_margin">8dp</dimen>
     <dimen name="cardview_horizontal_padding">16dp</dimen>
     <dimen name="cardview_vertical_padding">16dp</dimen>
@@ -22,4 +23,5 @@
     <dimen name="indent_normal">16dp</dimen>
     <dimen name="indent_normal_and_half">24dp</dimen>
     <dimen name="indent_double">32dp</dimen>
+    <dimen name="icon_size">64dp</dimen>
 </resources>

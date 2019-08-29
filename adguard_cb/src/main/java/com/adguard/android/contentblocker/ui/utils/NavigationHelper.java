@@ -72,13 +72,25 @@ public class NavigationHelper {
     }
 
     /**
-     * Opens web browser at specified url
+     * Opens custom tab at specified url
      *
      * @param from Context
      * @param url  Url to open
      */
     public static void redirectToWebSite(Context from, String url) {
         redirectUsingCustomTab(from, url);
+    }
+
+    /**
+     * Opens web browser at specified url
+     *
+     * @param from Context
+     * @param url  Url to open
+     */
+    public static void openWebSite(Context from, String url) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url)).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        from.startActivity(i);
     }
 
     /**

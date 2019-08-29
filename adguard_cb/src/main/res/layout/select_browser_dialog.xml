@@ -3,193 +3,205 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EEEEEE"
     android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:gravity="center_vertical"
-        android:paddingStart="@dimen/dialog_title_margin"
-        android:paddingEnd="@dimen/dialog_title_margin"
-        android:text="@string/choose_your_browser"
-        android:textColor="#212121"
-        android:textSize="20sp" />
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
 
-    <LinearLayout
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="24dp"
+            android:src="@drawable/ic_google_play" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/browser_yandex"
-        style="@style/BrowserDialogItem">
-
-        <ImageView
-            android:src="@drawable/ic_yandex_browser"
-            style="@style/BrowserDialogItemIcon" />
+        style="@style/CardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/card_view_selector"
+        app:cardElevation="2dp">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/yandex_browser"
-                android:textColor="#212121"
-                android:textSize="16sp" />
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="4dp"
+                android:src="@drawable/ic_browser_yandex" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/yandex_developer"
-                    android:textColor="#616161"
-                    android:textSize="12sp" />
+                    android:text="@string/yandex_browser"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:src="@drawable/ic_best_developer" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yandex_developer"
+                        android:textColor="#616161"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:src="@drawable/ic_best_developer" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yandex_browser_rating"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="2dp"
+                        android:text="&#9733;"
+                        android:textColor="#616161"
+                        android:textSize="12sp" />
+                </LinearLayout>
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/yandex_browser_rating"
-                    android:textColor="#000000"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="2dp"
-                    android:text="&#9733;"
-                    android:textColor="#616161"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
         </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/indent_half"
-            app:srcCompat="@drawable/arrow_right"
-            android:contentDescription="@string/empty" />
-    </LinearLayout>
-
-    <View style="@style/DivLine" />
-
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/browser_samsung"
-        style="@style/BrowserDialogItem">
-
-        <ImageView
-            android:src="@drawable/ic_samsung_browser"
-            style="@style/BrowserDialogItemIcon" />
+        style="@style/CardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/card_view_selector"
+        app:cardElevation="2dp">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/samsung_browser"
-                android:textColor="#212121"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/samsung_developer"
-                android:textColor="#616161"
-                android:textSize="12sp" />
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="4dp"
+                android:src="@drawable/ic_browser_samsung" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/samsung_browser_rating"
-                    android:textColor="#000000"
-                    android:textSize="12sp" />
+                    android:text="@string/samsung_browser"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="2dp"
-                    android:text="&#9733;"
+                    android:text="@string/samsung_developer"
                     android:textColor="#616161"
                     android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/samsung_browser_rating"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="2dp"
+                        android:text="&#9733;"
+                        android:textColor="#616161"
+                        android:textSize="12sp" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/indent_half"
-            app:srcCompat="@drawable/arrow_right"
-            android:contentDescription="@string/empty" />
-    </LinearLayout>
-
-    <View style="@style/DivLine" />
-
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/others_product_card"
-        android:orientation="horizontal"
-        style="@style/BrowserDialogItem"
-        android:layout_marginBottom="@dimen/indent_normal">
-
-        <ImageView
-            android:src="@drawable/ic_adguard_shield"
-            style="@style/BrowserDialogItemIcon" />
+        style="@style/CardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="@color/card_view_selector"
+        app:cardElevation="2dp">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <TextView
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="4dp"
+                android:src="@mipmap/app_icon" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:layout_gravity="center_vertical"
-                android:text="@string/select_browser_dialog_adguard_products_title"
-                android:textColor="#212121"
-                android:textSize="16sp" />
+                android:layout_marginRight="8dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/select_browser_dialog_adguard_products_message"
-                android:textColor="#616161"
-                android:textSize="12sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/select_browser_dialog_adguard_products_title"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_browser_dialog_adguard_products_message"
+                    android:textColor="#616161"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
 
         </LinearLayout>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/indent_half"
-            app:srcCompat="@drawable/arrow_right"
-            android:contentDescription="@string/empty" />
-    </LinearLayout>
-
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

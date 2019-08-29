@@ -21,7 +21,7 @@
         <item name="windowNoTitle">false</item>
     </style>
 
-    <style name="AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog">
+    <style name="AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog.FixedSize">
         <item name="android:colorAccent">@color/colorPrimary</item>
         <item name="android:textColor">@color/common_text</item>
         <item name="android:colorControlNormal">@color/colorPrimary</item>
@@ -30,9 +30,8 @@
         <item name="android:colorButtonNormal">@color/colorPrimary</item>
         <item name="android:colorBackground">#ffeeeeee</item>
 
-        <item name="android:minWidth">320dp</item>
-        <!--<item name="windowFixedHeightMajor">0dp</item>
-        <item name="windowFixedHeightMinor">0dp</item>-->
+        <item name="windowFixedHeightMajor">0dp</item>
+        <item name="windowFixedHeightMinor">0dp</item>
     </style>
 
     <style name="settingItemWrapper">
@@ -391,23 +390,5 @@
         <item name="android:scrollbars">vertical</item>
         <item name="android:textColorHint">@color/light_gray_text</item>
         <item name="android:hint">@string/rate_app_dialog_hint</item>
-    </style>
-
-    <style name="BrowserDialogItem">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingStart">@dimen/indent_normal</item>
-        <item name="android:paddingEnd">@dimen/indent_normal</item>
-        <item name="android:paddingTop">@dimen/indent_half</item>
-        <item name="android:paddingBottom">@dimen/indent_half</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:background">@drawable/selectable_background_gray</item>
-    </style>
-
-    <style name="BrowserDialogItemIcon">
-        <item name="android:layout_width">@dimen/icon_size</item>
-        <item name="android:layout_height">@dimen/icon_size</item>
-        <item name="android:layout_marginEnd">@dimen/indent_normal</item>
-        <item name="android:contentDescription">@string/empty</item>
     </style>
 </resources>

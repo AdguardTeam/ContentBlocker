@@ -12,7 +12,7 @@
         android:paddingStart="@dimen/dialog_title_margin"
         android:paddingEnd="@dimen/dialog_title_margin"
         android:text="@string/choose_your_browser"
-        android:textColor="#212121"
+        android:textColor="@color/primaryText"
         android:textSize="20sp" />
 
     <LinearLayout
@@ -20,22 +20,14 @@
         style="@style/BrowserDialogItem">
 
         <ImageView
-            android:src="@drawable/ic_yandex_browser"
+            android:src="@drawable/ic_browser_yandex"
             style="@style/BrowserDialogItemIcon" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+        <LinearLayout style="@style/BrowserDialogInnerItem">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="@string/yandex_browser"
-                android:textColor="#212121"
-                android:textSize="16sp" />
+                style="@style/BrowserDialogItemTitle" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -47,45 +39,34 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/yandex_developer"
-                    android:textColor="#616161"
+                    android:textColor="@color/grayText"
                     android:textSize="12sp" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:src="@drawable/ic_best_developer" />
+                    android:layout_marginStart="2dp"
+                    android:src="@drawable/ic_best_developer"
+                    android:contentDescription="@string/empty" />
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <LinearLayout style="@style/LayoutFullWidth">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/yandex_browser_rating"
-                    android:textColor="#000000"
-                    android:textSize="12sp" />
+                    style="@style/BrowserDialogRating" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="2dp"
-                    android:text="&#9733;"
-                    android:textColor="#616161"
-                    android:textSize="12sp" />
+                    android:text="@string/asterisk"
+                    style="@style/BrowserDialogAsterisk" />
             </LinearLayout>
 
         </LinearLayout>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/indent_half"
             app:srcCompat="@drawable/arrow_right"
-            android:contentDescription="@string/empty" />
+            style="@style/BrowserDialogArrow" />
     </LinearLayout>
 
     <View style="@style/DivLine" />
@@ -95,57 +76,34 @@
         style="@style/BrowserDialogItem">
 
         <ImageView
-            android:src="@drawable/ic_samsung_browser"
+            android:src="@drawable/ic_browser_samsung"
             style="@style/BrowserDialogItemIcon" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+        <LinearLayout style="@style/BrowserDialogInnerItem">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="@string/samsung_browser"
-                android:textColor="#212121"
-                android:textSize="16sp" />
+                style="@style/BrowserDialogItemTitle" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="@string/samsung_developer"
-                android:textColor="#616161"
-                android:textSize="12sp" />
+                style="@style/BrowserDialogItemPublisher" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <LinearLayout style="@style/LayoutFullWidth">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/samsung_browser_rating"
-                    android:textColor="#000000"
-                    android:textSize="12sp" />
+                    style="@style/BrowserDialogRating" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="2dp"
-                    android:text="&#9733;"
-                    android:textColor="#616161"
-                    android:textSize="12sp" />
+                    android:text="@string/asterisk"
+                    style="@style/BrowserDialogAsterisk" />
             </LinearLayout>
         </LinearLayout>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/indent_half"
             app:srcCompat="@drawable/arrow_right"
-            android:contentDescription="@string/empty" />
+            style="@style/BrowserDialogArrow" />
     </LinearLayout>
 
     <View style="@style/DivLine" />
@@ -160,36 +118,22 @@
             android:src="@drawable/ic_adguard_shield"
             style="@style/BrowserDialogItemIcon" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+        <LinearLayout style="@style/BrowserDialogInnerItem">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="@string/select_browser_dialog_adguard_products_title"
-                android:textColor="#212121"
-                android:textSize="16sp" />
+                style="@style/BrowserDialogItemTitle" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="@string/select_browser_dialog_adguard_products_message"
-                android:textColor="#616161"
-                android:textSize="12sp" />
+                style="@style/BrowserDialogItemPublisher" />
 
         </LinearLayout>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/indent_half"
             app:srcCompat="@drawable/arrow_right"
-            android:contentDescription="@string/empty" />
+            style="@style/BrowserDialogArrow" />
     </LinearLayout>
 
 </LinearLayout>

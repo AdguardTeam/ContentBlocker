@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:text="@string/chrome_dialog_title"
-            android:textColor="#212121"
+            android:textColor="@color/primaryText"
             android:textSize="20sp" />
 
     </LinearLayout>
@@ -36,7 +36,7 @@
         android:layout_marginRight="@dimen/dialog_title_margin"
         android:layout_marginBottom="@dimen/dialog_title_margin"
         android:text="@string/chrome_dialog_text"
-        android:textColor="#212121"
+        android:textColor="@color/primaryText"
         android:textColorLink="@color/black"
         android:textColorHighlight="@color/adguard_green_light"
         android:textSize="16sp" />

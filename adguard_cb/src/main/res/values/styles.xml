@@ -398,8 +398,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingStart">@dimen/indent_normal</item>
         <item name="android:paddingEnd">@dimen/indent_normal</item>
-        <item name="android:paddingTop">@dimen/indent_half</item>
-        <item name="android:paddingBottom">@dimen/indent_half</item>
+        <item name="android:paddingTop">@dimen/indent_normal</item>
+        <item name="android:paddingBottom">@dimen/indent_normal</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:background">@drawable/selectable_background_gray</item>
     </style>

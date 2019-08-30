@@ -226,16 +226,11 @@ public class BrowserUtils {
         });
 
         dialog.show();
-
-        // Center the button
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        layoutParams.weight = 1.0f;
-        layoutParams.gravity = Gravity.CENTER; //this is layout_gravity
-        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setLayoutParams(layoutParams);
+        centerDialogButton(dialog);
     }
 
     @SuppressLint("InflateParams")
-    public static void showProductsDialog(final Context context) {
+    private static void showProductsDialog(final Context context) {
         View dialogLayout = LayoutInflater.from(context).inflate(R.layout.products_dialog, null);
 
         final AlertDialog dialog = new AlertDialog.Builder(context, R.style.AlertDialog)
@@ -252,12 +247,7 @@ public class BrowserUtils {
         });
 
         dialog.show();
-
-        // Center the button
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        layoutParams.weight = 1.0f;
-        layoutParams.gravity = Gravity.CENTER; //this is layout_gravity
-        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setLayoutParams(layoutParams);
+        centerDialogButton(dialog);
     }
 
     public static void startYandexBrowser(Context context) {
@@ -274,6 +264,14 @@ public class BrowserUtils {
         if (componentName != null) {
             startBrowser(context, componentName);
         }
+    }
+
+    private static void centerDialogButton(AlertDialog dialog) {
+        // Center the button
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        layoutParams.weight = 1.0f;
+        layoutParams.gravity = Gravity.CENTER; //this is layout_gravity
+        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setLayoutParams(layoutParams);
     }
 
     private static void startBrowser(Context context, ComponentName component) {

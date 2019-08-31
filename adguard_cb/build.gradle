@@ -23,6 +23,12 @@ android {
         signingConfig signingConfigs.config
     }
 
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.outputFileName = "../../adguard-android.apk"
+        }
+    }
+
     buildTypes {
         release {
             debuggable false

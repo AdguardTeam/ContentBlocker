@@ -25,7 +25,7 @@ android {
 
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
-            output.outputFileName = "../../adguard-android.apk"
+            output.outputFileName = "../../content-blocker-android.apk"
         }
     }
 

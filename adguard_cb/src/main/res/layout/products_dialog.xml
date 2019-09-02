@@ -22,7 +22,7 @@
             android:gravity="center_vertical"
             android:text="@string/chrome_dialog_title"
             android:textColor="@color/primaryText"
-            android:textSize="20sp" />
+            android:textSize="@dimen/buttonTextSize" />
 
     </LinearLayout>
 
@@ -36,7 +36,7 @@
         android:textColor="@color/primaryText"
         android:textColorLink="@color/black"
         android:textColorHighlight="@color/adguard_green_light"
-        android:textSize="16sp" />
+        android:textSize="@dimen/labelTextSize" />
 
     <Button
         android:id="@+id/go_to_products"

@@ -12,7 +12,7 @@
         android:paddingEnd="@dimen/dialog_title_margin"
         android:text="@string/choose_your_browser"
         android:textColor="@color/primaryText"
-        android:textSize="20sp" />
+        android:textSize="@dimen/buttonTextSize" />
 
     <LinearLayout
         android:id="@+id/browser_yandex"
@@ -29,15 +29,14 @@
                 style="@style/BrowserDialogItemTitle" />
 
             <LinearLayout
-                style="@style/LayoutFullWidth"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                style="@style/LayoutFullWidth.Horizontal"
+                android:gravity="center_vertical">
 
                 <TextView
                     style="@style/LayoutWrapContent"
                     android:text="@string/yandex_developer"
                     android:textColor="@color/grayText"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/commonTextSize" />
 
                 <ImageView
                     style="@style/LayoutWrapContent"
@@ -106,8 +105,8 @@
 
     <LinearLayout
         android:id="@+id/others_product_card"
-        android:orientation="horizontal"
         style="@style/BrowserDialogItem"
+        android:orientation="horizontal"
         android:layout_marginBottom="@dimen/indent_normal">
 
         <ImageView

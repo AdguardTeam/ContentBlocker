@@ -278,6 +278,11 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="LayoutFullParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
     <style name="LayoutFullWidth">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

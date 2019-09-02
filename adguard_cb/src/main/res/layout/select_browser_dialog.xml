@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/LayoutFullParent"
     android:orientation="vertical">
 
     <TextView
@@ -30,21 +29,18 @@
                 style="@style/BrowserDialogItemTitle" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/LayoutFullWidth"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/LayoutWrapContent"
                     android:text="@string/yandex_developer"
                     android:textColor="@color/grayText"
                     android:textSize="12sp" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/LayoutWrapContent"
                     android:layout_marginStart="2dp"
                     android:src="@drawable/ic_best_developer"
                     android:contentDescription="@string/empty" />

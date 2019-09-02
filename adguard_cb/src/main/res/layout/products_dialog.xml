@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LayoutFullParent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/cardview_margin"
+        android:paddingEnd="@dimen/cardview_margin">
+
+        <ImageView
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginStart="@dimen/indent_normal"
+            android:layout_marginEnd="@dimen/indent_normal"
+            android:src="@drawable/chrome" />
+
+        <TextView
+            style="@style/LayoutFullWidth"
+            android:gravity="center_vertical"
+            android:text="@string/chrome_dialog_title"
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/buttonTextSize" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dialog_text"
+        style="@style/LayoutFullWidth"
+        android:layout_marginLeft="@dimen/dialog_title_margin"
+        android:layout_marginRight="@dimen/dialog_title_margin"
+        android:layout_marginBottom="@dimen/dialog_title_margin"
+        android:text="@string/chrome_dialog_text"
+        android:textColor="@color/primaryText"
+        android:textColorLink="@color/black"
+        android:textColorHighlight="@color/adguard_green_light"
+        android:textSize="@dimen/labelTextSize" />
+
+    <Button
+        android:id="@+id/go_to_products"
+        style="@style/LayoutFullWidth"
+        android:textColor="@color/white"
+        android:layout_marginRight="@dimen/dialog_title_margin"
+        android:layout_marginLeft="@dimen/dialog_title_margin"
+        android:layout_marginBottom="@dimen/indent_normal"
+        android:background="@drawable/button_rounded_selector"
+        android:text="@string/go_to_products"/>
+</LinearLayout>

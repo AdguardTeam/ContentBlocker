@@ -20,14 +20,26 @@ import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import androidx.appcompat.app.AlertDialog;
+
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewParent;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ServiceLocator;
@@ -38,6 +50,8 @@ import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.*;
+
+import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
 /**
  * Some functions for working with browsers
@@ -58,6 +72,7 @@ public class BrowserUtils {
 
     private static final List<String> yandexBrowserPackageList = new ArrayList<>();
     private static final List<String> samsungBrowserPackageList = new ArrayList<>();
+    public static final String TAG = "BrowserUtils";
 
     static {
         yandexBrowserPackageList.add("com.yandex.browser");
@@ -194,33 +209,45 @@ public class BrowserUtils {
             .setNegativeButton(android.R.string.cancel, null)
             .setView(dialogLayout).create();
 
-        View cardView = dialogLayout.findViewById(R.id.browser_yandex);
-        cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ActivityUtils.startMarket(context, YANDEX_BROWSER_PACKAGE, REFERRER);
-                dialog.dismiss();
-            }
+        View browserItem = dialogLayout.findViewById(R.id.browser_yandex);
+        browserItem.setOnClickListener(v -> {
+            ActivityUtils.startMarket(context, YANDEX_BROWSER_PACKAGE, REFERRER);
+            dialog.dismiss();
         });
 
-        cardView = dialogLayout.findViewById(R.id.browser_samsung);
-        cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ActivityUtils.startMarket(context, SAMSUNG_BROWSER_PACKAGE, null);
-                dialog.dismiss();
-            }
+        browserItem = dialogLayout.findViewById(R.id.browser_samsung);
+        browserItem.setOnClickListener(v -> {
+            ActivityUtils.startMarket(context, SAMSUNG_BROWSER_PACKAGE, null);
+            dialog.dismiss();
         });
 
-        dialogLayout.findViewById(R.id.others_product_card).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String url = AppLink.Website.getOtherProductUrl(context, "select_browser_dialog");
-                NavigationHelper.redirectToWebSite(context, url);
-            }
+        dialogLayout.findViewById(R.id.others_product_card).setOnClickListener(v -> {
+            showProductsDialog(context);
         });
 
         dialog.show();
+        centerDialogButton(dialog);
+    }
+
+    @SuppressLint("InflateParams")
+    private static void showProductsDialog(final Context context) {
+        View dialogLayout = LayoutInflater.from(context).inflate(R.layout.products_dialog, null);
+
+        final AlertDialog dialog = new AlertDialog.Builder(context, R.style.AlertDialog)
+                .setNegativeButton(R.string.back, null)
+                .setView(dialogLayout).create();
+
+        TextView textView = dialogLayout.findViewById(R.id.dialog_text);
+        textView.setText(Html.fromHtml(context.getString(R.string.chrome_dialog_text)));
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+
+        dialogLayout.findViewById(R.id.go_to_products).setOnClickListener(v -> {
+            String url = AppLink.Website.getOtherProductUrl(context, "chrome_dialog");
+            NavigationHelper.openWebSite(context, url);
+        });
+
+        dialog.show();
+        centerDialogButton(dialog);
     }
 
     public static void startYandexBrowser(Context context) {
@@ -237,6 +264,14 @@ public class BrowserUtils {
         if (componentName != null) {
             startBrowser(context, componentName);
         }
+    }
+
+    private static void centerDialogButton(AlertDialog dialog) {
+        // Center the button
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        layoutParams.weight = 1.0f;
+        layoutParams.gravity = Gravity.CENTER; //this is layout_gravity
+        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setLayoutParams(layoutParams);
     }
 
     private static void startBrowser(Context context, ComponentName component) {

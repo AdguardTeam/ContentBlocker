@@ -21,7 +21,7 @@
         <item name="windowNoTitle">false</item>
     </style>
 
-    <style name="AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog.FixedSize">
+    <style name="AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog">
         <item name="android:colorAccent">@color/colorPrimary</item>
         <item name="android:textColor">@color/common_text</item>
         <item name="android:colorControlNormal">@color/colorPrimary</item>
@@ -30,8 +30,7 @@
         <item name="android:colorButtonNormal">@color/colorPrimary</item>
         <item name="android:colorBackground">#ffeeeeee</item>
 
-        <item name="windowFixedHeightMajor">0dp</item>
-        <item name="windowFixedHeightMinor">0dp</item>
+        <item name="android:minWidth">320dp</item>
     </style>
 
     <style name="settingItemWrapper">
@@ -279,6 +278,11 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="LayoutFullParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
     <style name="LayoutFullWidth">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -390,5 +394,52 @@
         <item name="android:scrollbars">vertical</item>
         <item name="android:textColorHint">@color/light_gray_text</item>
         <item name="android:hint">@string/rate_app_dialog_hint</item>
+    </style>
+
+    <style name="BrowserDialogItem" parent="LayoutFullWidth">
+        <item name="android:padding">@dimen/indent_normal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/selectable_background_gray</item>
+    </style>
+
+    <style name="BrowserDialogItemIcon">
+        <item name="android:layout_width">@dimen/icon_size</item>
+        <item name="android:layout_height">@dimen/icon_size</item>
+        <item name="android:layout_marginEnd">@dimen/indent_normal</item>
+        <item name="android:contentDescription">@string/empty</item>
+    </style>
+
+    <style name="BrowserDialogInnerItem">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="BrowserDialogItemTitle" parent="LayoutFullWidth">
+        <item name="android:textColor">@color/primaryText</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BrowserDialogItemPublisher" parent="LayoutFullWidth">
+        <item name="android:textColor">@color/grayText</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BrowserDialogArrow" parent="LayoutWrapContent">
+        <item name="android:padding">@dimen/indent_half</item>
+        <item name="android:contentDescription">@string/empty</item>
+    </style>
+
+    <style name="BrowserDialogRating" parent="LayoutWrapContent">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BrowserDialogAsterisk" parent="LayoutWrapContent">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:textColor">@color/grayText</item>
+        <item name="android:textSize">12sp</item>
     </style>
 </resources>

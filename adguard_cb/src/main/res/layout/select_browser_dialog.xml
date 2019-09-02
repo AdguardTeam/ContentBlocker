@@ -1,207 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#EEEEEE"
+    style="@style/LayoutFullParent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:gravity="center_vertical|center_horizontal"
-        android:orientation="vertical">
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dialog_title_margin"
+        android:paddingEnd="@dimen/dialog_title_margin"
+        android:text="@string/choose_your_browser"
+        android:textColor="@color/primaryText"
+        android:textSize="@dimen/buttonTextSize" />
+
+    <LinearLayout
+        android:id="@+id/browser_yandex"
+        style="@style/BrowserDialogItem">
 
         <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_margin="24dp"
-            android:src="@drawable/ic_google_play" />
+            android:src="@drawable/ic_browser_yandex"
+            style="@style/BrowserDialogItemIcon" />
+
+        <LinearLayout style="@style/BrowserDialogInnerItem">
+
+            <TextView
+                android:text="@string/yandex_browser"
+                style="@style/BrowserDialogItemTitle" />
+
+            <LinearLayout
+                style="@style/LayoutFullWidth.Horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/LayoutWrapContent"
+                    android:text="@string/yandex_developer"
+                    android:textColor="@color/grayText"
+                    android:textSize="@dimen/commonTextSize" />
+
+                <ImageView
+                    style="@style/LayoutWrapContent"
+                    android:layout_marginStart="2dp"
+                    android:src="@drawable/ic_best_developer"
+                    android:contentDescription="@string/empty" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/LayoutFullWidth">
+
+                <TextView
+                    android:text="@string/yandex_browser_rating"
+                    style="@style/BrowserDialogRating" />
+
+                <TextView
+                    android:text="@string/asterisk"
+                    style="@style/BrowserDialogAsterisk" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            app:srcCompat="@drawable/arrow_right"
+            style="@style/BrowserDialogArrow" />
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/browser_yandex"
-        style="@style/CardViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/card_view_selector"
-        app:cardElevation="2dp">
+    <View style="@style/DivLine" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent">
-
-            <ImageView
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_margin="4dp"
-                android:src="@drawable/ic_browser_yandex" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="0dp"
-                android:gravity="center_vertical"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/yandex_browser"
-                    android:textColor="#212121"
-                    android:textSize="16sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/yandex_developer"
-                        android:textColor="#616161"
-                        android:textSize="12sp" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="2dp"
-                        android:src="@drawable/ic_best_developer" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/yandex_browser_rating"
-                        android:textColor="#000000"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="2dp"
-                        android:text="&#9733;"
-                        android:textColor="#616161"
-                        android:textSize="12sp" />
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:id="@+id/browser_samsung"
-        style="@style/CardViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/card_view_selector"
-        app:cardElevation="2dp">
+        style="@style/BrowserDialogItem">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/ic_browser_samsung"
+            style="@style/BrowserDialogItemIcon" />
 
-            <ImageView
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_margin="4dp"
-                android:src="@drawable/ic_browser_samsung" />
+        <LinearLayout style="@style/BrowserDialogInnerItem">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="0dp"
-                android:gravity="center_vertical"
-                android:orientation="vertical">
+            <TextView
+                android:text="@string/samsung_browser"
+                style="@style/BrowserDialogItemTitle" />
+
+            <TextView
+                android:text="@string/samsung_developer"
+                style="@style/BrowserDialogItemPublisher" />
+
+            <LinearLayout style="@style/LayoutFullWidth">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/samsung_browser"
-                    android:textColor="#212121"
-                    android:textSize="16sp" />
+                    android:text="@string/samsung_browser_rating"
+                    style="@style/BrowserDialogRating" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/samsung_developer"
-                    android:textColor="#616161"
-                    android:textSize="12sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/samsung_browser_rating"
-                        android:textColor="#000000"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="2dp"
-                        android:text="&#9733;"
-                        android:textColor="#616161"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                    android:text="@string/asterisk"
+                    style="@style/BrowserDialogAsterisk" />
             </LinearLayout>
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
+        <ImageView
+            app:srcCompat="@drawable/arrow_right"
+            style="@style/BrowserDialogArrow" />
+    </LinearLayout>
+
+    <View style="@style/DivLine" />
+
+    <LinearLayout
         android:id="@+id/others_product_card"
-        style="@style/CardViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        app:cardBackgroundColor="@color/card_view_selector"
-        app:cardElevation="2dp">
+        style="@style/BrowserDialogItem"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/indent_normal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        <ImageView
+            android:src="@drawable/ic_adguard_shield"
+            style="@style/BrowserDialogItemIcon" />
 
-            <ImageView
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_margin="4dp"
-                android:src="@mipmap/app_icon" />
+        <LinearLayout style="@style/BrowserDialogInnerItem">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
+            <TextView
                 android:layout_gravity="center_vertical"
-                android:layout_marginRight="8dp">
+                android:text="@string/select_browser_dialog_adguard_products_title"
+                style="@style/BrowserDialogItemTitle" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="@string/select_browser_dialog_adguard_products_title"
-                    android:textColor="#212121"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/select_browser_dialog_adguard_products_message"
-                    android:textColor="#616161"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
+            <TextView
+                android:text="@string/select_browser_dialog_adguard_products_message"
+                style="@style/BrowserDialogItemPublisher" />
 
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+
+        <ImageView
+            app:srcCompat="@drawable/arrow_right"
+            style="@style/BrowserDialogArrow" />
+    </LinearLayout>
+
 </LinearLayout>

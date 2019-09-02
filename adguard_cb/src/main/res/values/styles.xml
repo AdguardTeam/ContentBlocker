@@ -31,8 +31,6 @@
         <item name="android:colorBackground">#ffeeeeee</item>
 
         <item name="android:minWidth">320dp</item>
-        <!--<item name="windowFixedHeightMajor">0dp</item>
-        <item name="windowFixedHeightMinor">0dp</item>-->
     </style>
 
     <style name="settingItemWrapper">

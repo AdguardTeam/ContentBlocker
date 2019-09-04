@@ -7,6 +7,7 @@ cd $(dirname $0)
 
 # Installing missing python packages
 python3 -c "import requests" &> /dev/null || pip3 install requests
+python3 -c "import xlrd" &> /dev/null || pip3 install xlrd
 
 locales=("ru:Russian" "fr:French" "de:German" "zh-TW:ChineseTraditional" "zh-CN:ChineseSimplified")
 for i in ${locales[@]}

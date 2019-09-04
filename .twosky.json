@@ -1,6 +1,6 @@
 [
   {
-    "project_id": "android",
+    "project_id": "content_blocker",
     "base_locale": "en",
     "languages": {
       "en": "English",

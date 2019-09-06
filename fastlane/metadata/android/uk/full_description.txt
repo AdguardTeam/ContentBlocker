@@ -1,0 +1,11 @@
+AdGuard Content Blocker  - це додаток, яка заблокує усі рекламні оголошення <b>лише в Браузері Яндекс та інтернет браузері Samsung</b> не вимагаючи root на вашому пристрої. AdGuard Content Blocker <b>не блокує</b> рекламу в інших додатках.
+Налаштуйте додаток відповідно до ваших потреб - виберіть будь-які з більш ніж 20 спеціальних мовних і загальних списків правил фільтрації, доступних для вас.
+
+Додаток з відкритим вихідним кодом,  який можна знайти на GitHub:
+https://github.com/AdguardTeam/ContentBlocker 
+
+Слідкуйте за нашими новинами та ставте будь-які питання в соціальних мережах:
+• Facebook: https://www.facebook.com/adguardRU/ 
+• Twitter: https://twitter.com/AdguardRu 
+• Instagram: https://www.instagram.com/adguard/ 
+• Telegram: https://t.me/adguard_en

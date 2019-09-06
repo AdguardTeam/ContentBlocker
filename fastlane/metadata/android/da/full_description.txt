@@ -1,0 +1,11 @@
+AdGuard Indholdsblokker er en app som vil blokere alle annoncer <b>kun i Yandex Browser og Samsung Internet Browser</b> uden at kræve at du rooter din enhed. AdGuard Indholdsblokker<b> blokerer ikke</b> annoncer i andre apps.
+Tilpas appen, så den passer til dine behov - vælg mellem mere end 20 sprogspecifikke og generelle filtreringsregler, der er tilgængelige.
+
+Appen er åben kildekode og kan findes på GitHub:
+https://github.com/AdguardTeam/ContentBlocker
+
+Følg os og stil ethvert spørgsmål på de sociale medier:
+• Facebook: https://www.facebook.com/AdguardEn/
+• Twitter: https://twitter.com/AdGuard
+• Instagram: https://www.instagram.com/adguard/
+• Telegram: https://t.me/adguard_en

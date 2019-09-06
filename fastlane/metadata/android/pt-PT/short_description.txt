@@ -1,0 +1,1 @@
+Aplicação bloqueadora de publicidade apenas nos navegadores Yandex e da Samsung

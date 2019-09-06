@@ -1,1 +1,1 @@
-AdGuard Content Blocker
+AdGuard 内容拦截器

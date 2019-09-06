@@ -1,0 +1,11 @@
+Blokátor obsahu AdGuard je aplikace, která blokuje všechny reklamy <b>pouze v prohlížečíš Yandex a Samsung</b> bez nutnosti mít oprávnění ROOT. AdGuard filtr obsahu <b>neblokuje</b> reklamy v dalších aplikacích.
+Přizpůsobte si aplikaci podle svých potřeb - vyberte si libovolnou sadu z 20 různých kolekcí pravidel pro různá jazyková prostředí a obecná pravidla.
+
+Aplikace je Open Source a můžete ji najít na GitHubu:
+https://github.com/AdGuardTeam/ContentBlocker  
+
+Sledujte nás nebo nám položte libovolnou otázku na sociálních sítích:  
+• Facebook: https://www.facebook.com/AdGuardEn/  
+• Twitter: https://twitter.com/AdGuard  
+• Instagram: https://www.instagram.com/adguard/  
+• Telegram+: https://t.me/adguard_en

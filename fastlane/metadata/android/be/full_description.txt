@@ -1,0 +1,13 @@
+Гэты дадатак заблакуе ўсю рэкламу, але толькі ў браўзарах Яндэкс і Самсунг, не патрабуючы пры гэтым root-доступу да прылады. У іншых дадатках рэклама не блакуецца.
+
+Наладзьце дадатак пад сябе - абірайце кожныя з больш чым 20 даступных моўных і агульных фільтраў.
+
+AdGuard Content Blocker - дадатак з адкрытым кодам, яго можна знайсці на GitHub: 
+https://github.com/AdguardTeam/ContentBlocker
+
+Сачыце за нашымі навінамі і задавайце свае пытанні ў сацыяльных сетках: 
+• VK: https://vk.com/adguard 
+• Facebook: https://www.facebook.com/AdGuardEn/ 
+• Twitter: https://twitter.com/AdGuardEn 
+• Instagram: https://www.instagram.com/adguard/ 
+• https://plus.google.com/+AdGuardEn/ 

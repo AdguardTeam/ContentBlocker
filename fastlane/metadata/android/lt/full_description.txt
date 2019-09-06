@@ -1,0 +1,12 @@
+AdGuard Content Blocker programa yra skirta <b>Yandex  ir Samsung Internet naršyklėms</b>, blokuoti visų rūšių reklamas.  AdGuard Content Blocker veikimui nereikia turėti ROOT teisių. AdGuard Content Blocker <b>neblokuoja</b> reklamas kitose programose, išskyrus aukščiau minėtas.
+
+Pritaikykite programą pagal savo poreikius - pasirinkite bet kurį filtrą iš daugiau nei 20 spec. kalbų ir bendrų filtravimo taisyklių sąrašo.
+
+AdGuard Content Blocker yra atviro kodo programa ir ją galima rasti GitHub:
+https://github.com/AdGuardTeam/ContentBlocker 
+
+Sekite mus ir užduokite klausimus socialinėje žiniasklaidoje:
+• Facebook: https://www.facebook.com/AdGuardEn/ 
+• Twitter: https://twitter.com/AdGuard 
+• Instagram: https://www.instagram.com/adguard/ 
+• Telegram: https://t.me/adguard_en

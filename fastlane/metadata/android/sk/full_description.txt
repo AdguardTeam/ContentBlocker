@@ -1,0 +1,11 @@
+AdGuard Blokovač obsahu je aplikácia, ktorá zablokuje všetky reklamy <b>iba v prehliadači Yandex a Samsung Internet</ b> bez toho, aby ste požadovali rootovanie Vášho zariadenia. AdGuard Content Blocker <b>neblokuje</ b> reklamy v iných aplikáciách.
+Prispôsobte si aplikáciu tak, aby vyhovovala vašim potrebám - zvoľte si niektorý z viac ako 20 jazykových zoznamov a všeobecných zoznamov pravidiel filtrovania, ktoré máte k dispozícii.
+
+Aplikácia je open source a nachádza sa na GitHub:
+https://github.com/AdGuardTeam/ContentBlocker
+
+Sledujte nás a položte akékoľvek otázky týkajúce sa sociálnych médií:
+• Facebook: https://www.facebook.com/AdGuardEn/
+• Twitter: https://twitter.com/AdGuardEn
+•  Instagram: https://www.instagram.com/adguard/
+• Google+: https://plus.google.com/+AdGuardEn/

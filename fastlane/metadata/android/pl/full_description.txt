@@ -1,0 +1,10 @@
+AdGuard Bloker Zawartości jest aplikacją, która blokuje wszystkie reklamy <b>tylko w Yandex Browser i Samsung Internet Browser</b> bez wymogu roota swojego urządzenia. AdGuard Bloker Zawartości <b>nie blokuje</b> reklam w żadnych innych aplikacjach.
+Dostosuj aplikację do swoich potrzeb - wybierz dowolny z ponad 20 specyficznych dla języka i ogólnie dostępnych list reguł filtrowania.
+
+Aplikacja jest dostępna na zasadach open source i można ją znaleźć na GitHub: https://github.com/AdguardTeam/ContentBlocker
+
+Polub nas i pytaj o cokolwiek korzystając z mediów społecznościowych:
+• Facebook: https://www.facebook.com/AdguardEn/ 
+• Twitter: https://twitter.com/AdguardEn 
+• Instagram: https://www.instagram.com/adguard/ 
+• Google+: https://plus.google.com/+AdguardEn/

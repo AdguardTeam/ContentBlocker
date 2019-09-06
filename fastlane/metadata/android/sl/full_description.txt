@@ -1,0 +1,11 @@
+AdGuard Blokirnik vsebine je aplikacija, ki bo blokirala vse oglase <b>samo v Yandex brskalniku in Samsung Internet brskalniku</b> brez zahteve korena vaše naprave. AdGuard Blokirnik vsebine <b>ne blokira</b> oglasov v drugih aplikacijah.
+Prilagodite aplikacijo tako, da bo ustrezala vašim potrebam - izberite katero koli od več kot 20 seznamov in splošnih pravil filtriranja, ki so vam na voljo.
+
+Aplikacija je odprtokodna in jo lahko najdete v GitHubu:
+https://github.com/AdGuardTeam/ContentBlocker  
+
+Spremljajte nas in postavljajte vprašanja na družbenih medijih:  
+• Facebook: https://www.facebook.com/AdGuardEn/  
+• Twitter: https://twitter.com/AdGuard  
+• Instagram: https://www.instagram.com/adguard/  
+• Telegram: https://t.me/adguard_en

@@ -1,0 +1,1 @@
+Reklamblockeringsapp för endast Yandex webbläsare och Samsungs Internet Browser.

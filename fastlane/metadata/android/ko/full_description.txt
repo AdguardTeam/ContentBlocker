@@ -1,0 +1,11 @@
+AdGuard 콘텐츠 차단기는 <b>삼성 브라우저와 얀덱스 브라우저</b>에서만, 사용하고 계신 기기의 루팅 없이 광고를 차단합니다. 다른 앱에서는 광고를 <b>차단하지 않습니다</b>.
+AdGuard를 당신의 필요에 맞게 설정해보세요 - 20여 개의 언어별 필터, 용도별 필터들을 사용하실 수 있습니다!
+
+이 앱은 오픈소스이며 GitHub에서 찾을 수 있습니다.
+https://github.com/AdguardTeam/ContentBlocker
+
+SNS에서 팔로우하고 궁금한 점을 찾아보세요:
+• Facebook: https://www.facebook.com/AdguardEn/
+• Twitter: https://twitter.com/Adguard
+• Instagram: https://www.instagram.com/adguard/
+• Telegram: https://t.me/adguard_en

@@ -42,5 +42,47 @@
     "localizable_files": [
       "adguard_cb/main/res/values/strings*.xml"
     ]
+  },
+  {
+    "project_id": "content_blocker_google_play",
+    "base_locale": "en",
+    "languages": {
+      "en": "English",
+      "ru": "Russian",
+      "de": "German",
+      "da": "Danish",
+      "uk": "Ukrainian",
+      "pt-BR": "Portuguese (Brazil)",
+      "pt-PT": "Portuguese (Portugal)",
+      "ko": "Korean",
+      "pl": "Polish",
+      "zh-CN": "Chinese Simplified",
+      "zh-TW": "Chinese Traditional",
+      "in": "Indonesian",
+      "it": "Italian",
+      "cs": "Czech",
+      "sk": "Slovak",
+      "es": "Spanish",
+      "tr": "Turkish",
+      "fr": "French",
+      "lt": "Lithuanian (Lithuania)",
+      "sv": "Swedish",
+      "vi": "Vietnamese",
+      "nl": "Dutch",
+      "fa": "Persian",
+      "ja": "Japanese",
+      "ar": "Arabic",
+      "mk": "Macedonian (Macedonia)",
+      "no": "Norwegian",
+      "be": "Belarusian (Belarus)",
+      "ms": "Malay",
+      "hi": "Hindi (India)",
+      "sl": "Slovenian (Slovenia)"
+    },
+    "localizable_files": [
+    ],
+    "mapping": {
+      "en": "en-US"
+    }
   }
 ]

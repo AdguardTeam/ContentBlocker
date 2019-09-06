@@ -1,0 +1,11 @@
+AdGuard İçerik Engelleyicisi root gerektirmeyen <b>sadece Yandex ve Samsung tarayıcılarında</b> reklamları engelleyen bir uygulamadır. AdGuard İçerik Engelleyicisi diğer uygulamalarda reklamları <b>engellemez.</b>
+Uygulamayı ihtiyaçlarınıza göre özelleştirin - mevcut 20'den fazla dile özgü ve genel filtreleme kural listesinden istediğinizi seçin.
+
+Bu uygulama açık kaynaklıdır ve GitHub üzerinden ulaşılabilir:
+https://github.com/AdguardTeam/ContentBlocker
+
+Bizi sosyal medyada takip edin ve sorularınızı sorun:
+• Facebook: https://www.facebook.com/AdguardEn/ 
+• Twitter: https://twitter.com/AdGuard 
+• Instagram: https://www.instagram.com/adguard/ 
+• Telegram: https://t.me/adguard_en

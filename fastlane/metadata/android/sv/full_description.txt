@@ -1,0 +1,9 @@
+AdGuard Content Blocker blockerar all reklam <b> i webbläsare med teknik för reklamblockering. Enda webbläsare med tekniken är f.n. Yandex och Samsung Internet Browser</b>. AdGuard Content Blocker <b>blockerar inte</b> reklam i andra appar.
+Appen kan konfigureras efter dina egna behov - du kan välja bland fler än 20 språkspecifika filtreringsregler.
+Appen är Öppen källkod och finns tillgänglig på GitHub:
+https://github.com/AdguardTeam/ContentBlocker 
+Följ oss och ställ frågor på sociala medier.
+• Facebook: https://www.facebook.com/AdguardEn/
+• Twitter: https://twitter.com/AdguardEn
+• Instagram: https://www.instagram.com/adguard/
+• Google+: https://plus.google.com/+AdguardEn/

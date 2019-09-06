@@ -1,0 +1,11 @@
+AdGuard-innholdsblokkerer er en applikasjon som vil blokkere alle annonser <b>kun i Yandex Browser og Samsung Internet Browser</b> uten root-tilgang. AdGuard-innholdsblokkerer <b>blokkerer ikke</b> annonser i andre applikasjoner.
+Tilpass applikasjonen til dine behov - velg fra mer enn 20 språkspesifikke og generelle filtreringsregler som er tilgjengelige for deg.
+
+Denne applikasjonen har åpen kildekode og kan finnes på GitHub:
+https://github.com/AdguardTeam/ContentBlocker  
+
+Følg oss og still oss spørsmål på sosiale medier:  
+• Facebook: https://www.facebook.com/AdguardEn/  
+• Twitter: https://twitter.com/AdguardEn  
+• Instagram: https://www.instagram.com/adguard/  
+• Google+: https://plus.google.com/+AdguardEn/

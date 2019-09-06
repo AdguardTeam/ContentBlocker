@@ -1,0 +1,12 @@
+【完全日本語版】AdGuardコンテンツブロッカーは、デバイスをルート化する必要なく、<b>SamsungインターネットブラウザとYandexブラウザのみで</b>すべての広告をブロックするアプリです。 ※Adguardコンテンツブロッカーは、他のアプリの広告を<b>ブロックしません</b>。
+
+ニーズに合わせて広告ブロックをカスタマイズできます：20本以上もの一般や言語固有フィルタリングルールリストから幅広く選択可能。
+
+アプリはオープンソースであり、GitHubで確認することができます↓
+https://github.com/AdguardTeam/ContentBlocker
+
+SNSで私たちをフォローして、なんでもご質問ください：
+• Twitter：https://twitter.com/AdGuardJP （日本語）
+• Facebook：https://www.facebook.com/AdGuardJP/ （日本語）
+• Instagram：https://www.instagram.com/adguard/
+• Telegram：https://t.me/adguard_en

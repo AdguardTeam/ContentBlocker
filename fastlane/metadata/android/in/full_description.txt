@@ -1,0 +1,11 @@
+Pemblokir Konten AdGuard adalah aplikasi yang akan memblokir semua iklan <b>hanya di Peramban Yandex dan Samsung Internet</b> tanpa mengharuskan Anda melakukan root pada perangkat Anda. Pemblokir Konten AdGuard <b>tidak memblokir</b> iklan di aplikasi lain.
+Sesuaikan aplikasi agar sesuai dengan kebutuhan Anda - pilih salah satu dari lebih dari 20 daftar aturan penyaringan yang tersedia untuk Anda.
+
+Aplikasi ini bersumber terbuka dan dapat ditemukan di GitHub:
+https://github.com/AdGuardTeam/ContentBlocker
+
+Ikuti kami dan ajukan pertanyaan di media sosial:
+• Facebook: https://www.facebook.com/AdGuardEn/
+• Twitter: https://twitter.com/AdGuardEn
+• Instagram: https://www.instagram.com/adguard/
+• Google+: https://plus.google.com/+AdGuardEn/

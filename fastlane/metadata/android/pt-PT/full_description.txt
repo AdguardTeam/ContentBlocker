@@ -1,0 +1,9 @@
+O Bloqueador de conteúdo AdGuard é uma aplicação que bloqueará toda a publicidade <b> somente no Navegador Yandex e no navegador da Internet Samsung </b> sem exigir que rooteie o seu dispositivo. O Bloqueador de conteúdo AdGuard <b> não bloqueia </b> publicidade em qualquer outra aplicação.
+Personalize a aplicação para atender às suas necessidades - escolha uma de mais de 20 listas de regras de filtragem gerais específicas do idioma que estão disponíveis para si.
+A aplicação é de código aberto e pode ser encontrado no GitHub:
+https://github.com/AdguardTeam/ContentBlocker
+Siga-nos e coloque as suas perguntas nas redes sociais:
+• Facebook: https://www.facebook.com/AdguardEn/
+• Twitter: https://twitter.com/AdGuard
+• Instagram: https://www.instagram.com/adguard/
+• Telegram: https://t.me/adguard_en

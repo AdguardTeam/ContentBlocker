@@ -1,0 +1,1 @@
+App til at blokere annoncer kun i Yandex Browser og Samsung Internet browser

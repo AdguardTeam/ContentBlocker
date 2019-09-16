@@ -120,14 +120,12 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         if (!preferencesService.isOnboardingShown()) {
             NavigationHelper.redirectToActivity(this, OnboardingActivity.class);
         }
-
-        filterService.scheduleFiltersUpdate();
-        ServiceLocator.getInstance(this).getRateService().scheduleRateNotificationShow();
         showRateDialog(getIntent());
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
         showRateDialog(intent);
     }
 
@@ -138,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         drawerToggle.onConfigurationChanged(newConfig);
     }
@@ -183,7 +181,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     public void onResume() {
         super.onResume();
-        ServiceLocator.getInstance(this).getRateService().showRateNotification();
         refreshMainInfo();
     }
 

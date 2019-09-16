@@ -4,11 +4,11 @@
     android:installLocation="internalOnly"
     package="com.adguard.android.contentblocker">
 
-    <uses-permission android:name="com.samsung.android.sbrowser.permission.CONTENTBLOCKER"/>
+    <uses-permission android:name="com.samsung.android.sbrowser.permission.CONTENTBLOCKER" />
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -21,16 +21,16 @@
 
         <meta-data
             android:name="com.samsung.android.sbrowser.contentBlocker.interfaceVersion"
-            android:value="API_1.0"/>
+            android:value="API_1.0" />
 
         <activity
             android:name=".ui.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
@@ -38,65 +38,55 @@
             android:name=".ui.AboutActivity"
             android:label="@string/about"
             android:parentActivityName=".ui.MainActivity"
-            android:theme="@style/AppTheme.Toolbar"/>
+            android:theme="@style/AppTheme.Toolbar" />
 
         <activity
             android:name=".ui.SettingsActivity"
             android:label="@string/settings"
             android:parentActivityName=".ui.MainActivity"
-            android:theme="@style/AppTheme.Toolbar"/>
+            android:theme="@style/AppTheme.Toolbar" />
 
         <activity
             android:name=".ui.FiltersActivity"
             android:label="@string/filters"
             android:parentActivityName=".ui.SettingsActivity"
-            android:theme="@style/AppTheme.Toolbar"/>
+            android:theme="@style/AppTheme.Toolbar" />
 
         <activity
             android:name=".ui.UserFilterActivity"
             android:label="@string/user_filter"
             android:parentActivityName=".ui.MainActivity"
-            android:theme="@style/AppTheme.Toolbar"/>
+            android:theme="@style/AppTheme.Toolbar" />
 
         <activity
             android:name=".ui.WhitelistActivity"
             android:label="@string/whitelist_title"
             android:parentActivityName=".ui.MainActivity"
-            android:theme="@style/AppTheme.Toolbar"/>
+            android:theme="@style/AppTheme.Toolbar" />
 
         <activity
             android:name=".ui.NoBrowsersFoundActivity"
-            android:theme="@style/AppTheme.Toolbar"/>
+            android:theme="@style/AppTheme.Toolbar" />
 
         <activity
             android:name=".onboarding.OnboardingActivity"
             android:label="@string/title_activity_onboarding"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
 
         <provider
             android:name=".FiltersContentProvider"
             android:authorities="com.adguard.android.contentblocker.contentBlocker.contentProvider"
             android:enabled="true"
             android:exported="true"
-            android:grantUriPermissions="true"/>
-
-        <receiver
-            android:name=".receiver.AlarmReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.adguard.contentblocker.RATE_DIALOG" />
-                <action android:name="com.adguard.contentblocker.UPDATE_FILTER" />
-            </intent-filter>
-        </receiver>
+            android:grantUriPermissions="true" />
 
         <receiver android:name=".receiver.BootUpReceiver"
             android:enabled="true">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
-                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
             </intent-filter>
         </receiver>
 

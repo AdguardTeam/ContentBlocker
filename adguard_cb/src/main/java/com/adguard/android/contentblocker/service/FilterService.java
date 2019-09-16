@@ -71,11 +71,6 @@ public interface FilterService {
     List<FilterList> checkFilterUpdates(boolean force);
 
     /**
-     * Schedules filters updates periodic job.
-     */
-    void scheduleFiltersUpdate();
-
-    /**
      * Updates filter status.
      *
      * @param filter  Filter status

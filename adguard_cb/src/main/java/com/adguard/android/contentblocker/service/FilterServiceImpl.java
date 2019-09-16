@@ -19,18 +19,14 @@ package com.adguard.android.contentblocker.service;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.app.job.JobInfo;
 import android.app.job.JobScheduler;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 
-import com.adguard.android.contentblocker.FilterUpdateJobService;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ServiceApiClient;
 import com.adguard.android.contentblocker.ServiceLocator;
@@ -47,7 +43,6 @@ import com.adguard.android.contentblocker.db.FilterListDaoImpl;
 import com.adguard.android.contentblocker.db.FilterRuleDao;
 import com.adguard.android.contentblocker.db.FilterRuleDaoImpl;
 import com.adguard.android.contentblocker.model.FilterList;
-import com.adguard.android.contentblocker.receiver.AlarmReceiver;
 import com.adguard.android.contentblocker.ui.utils.ProgressDialogUtils;
 
 import org.apache.commons.collections4.CollectionUtils;
@@ -169,41 +164,6 @@ public class FilterServiceImpl implements FilterService {
     @Override
     public List<FilterList> checkFilterUpdates(boolean force) {
         return checkOutdatedFilterUpdates(force);
-    }
-
-    @Override
-    public void scheduleFiltersUpdate() {
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
-            JobScheduler jobScheduler = (JobScheduler) context.getSystemService(Context.JOB_SCHEDULER_SERVICE);
-            if (jobScheduler != null) {
-                if (!isJobCreated(jobScheduler, JOB_ID)) {
-                    JobInfo.Builder builder = new JobInfo.Builder(JOB_ID, new ComponentName(context, FilterUpdateJobService.class))
-                            .setPeriodic(UPDATE_INTERVAL_PERIOD)
-                            .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
-                            .setPersisted(true);
-
-                    if (jobScheduler.schedule(builder.build()) != JobScheduler.RESULT_SUCCESS) {
-                        LOG.error("Error while create the filter update job!");
-                    }
-                } else {
-                    LOG.info("Filters update is running");
-                }
-            }
-        } else {
-            Intent alarmIntent = new Intent(AlarmReceiver.UPDATE_FILTER_ACTION);
-            boolean isRunning = PendingIntent.getBroadcast(context, 0, alarmIntent, PendingIntent.FLAG_NO_CREATE) != null;
-            if (!isRunning) {
-                LOG.info("Starting scheduler of filters updating");
-                PendingIntent broadcastIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
-
-                AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-                if (alarmManager != null) {
-                    alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, UPDATE_INITIAL_PERIOD, UPDATE_INTERVAL_PERIOD, broadcastIntent);
-                }
-            } else {
-                LOG.info("Filters update is running");
-            }
-        }
     }
 
     @Override

@@ -19,7 +19,16 @@ package com.adguard.android.contentblocker;
 import android.content.Context;
 
 import com.adguard.android.contentblocker.db.DbHelper;
-import com.adguard.android.contentblocker.service.*;
+import com.adguard.android.contentblocker.service.FilterService;
+import com.adguard.android.contentblocker.service.FilterServiceImpl;
+import com.adguard.android.contentblocker.service.NotificationService;
+import com.adguard.android.contentblocker.service.NotificationServiceImpl;
+import com.adguard.android.contentblocker.service.PreferencesService;
+import com.adguard.android.contentblocker.service.PreferencesServiceImpl;
+import com.adguard.android.contentblocker.service.job.Id;
+import com.adguard.android.contentblocker.service.job.JobService;
+import com.adguard.android.contentblocker.service.job.JobServiceImpl;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,7 +45,7 @@ public class ServiceLocator {
     private FilterService filterService;
     private PreferencesService preferencesService;
     private NotificationService notificationService;
-    private RateService rateService;
+    private JobService jobService;
     private DbHelper dbHelper;
 
     /**
@@ -47,6 +56,9 @@ public class ServiceLocator {
     private ServiceLocator(Context context) {
         LOG.info("Initializing ServiceLocator for {}", context);
         this.context = context;
+
+        checkFirstLaunch();
+        getJobService().scheduleJobs(Id.FILTERS, Id.RATE_NOTIFICATION);
     }
 
     /**
@@ -114,13 +126,17 @@ public class ServiceLocator {
         return dbHelper;
     }
 
-    /**
-     * @return rate service singleton
-     */
-    public RateService getRateService() {
-        if (rateService == null) {
-            rateService = new RateServiceImpl(context);
+    public JobService getJobService() {
+        if (jobService == null) {
+            jobService = new JobServiceImpl(this);
         }
-        return rateService;
+        return jobService;
+    }
+
+    private void checkFirstLaunch() {
+        if (getPreferencesService().getInstallationTime() == 0L) {
+            // It's first launch. We need to set installation time to current
+            getPreferencesService().setInstallationTime(System.currentTimeMillis());
+        }
     }
 }

@@ -28,9 +28,11 @@ import androidx.annotation.NonNull;
 public enum Id {
     UNKNOWN("Unknown"),
 
+    /** Id of job to update filters */
     FILTERS("Filters"),
-    RATE_NOTIFICATION("Rate notification")
-    ;
+
+    /** Id of job to show notification "Rate us" */
+    RATE_NOTIFICATION("Rate notification");
 
     private String tag;
 

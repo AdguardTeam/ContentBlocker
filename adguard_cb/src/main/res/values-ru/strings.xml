@@ -34,7 +34,7 @@
     <string name="filterVersionTemplate">Версия {0}.</string>
     <string name="filterUpdatedTemplate">Обновлен {0} в {1}.</string>
     <string name="versionInfoTextViewText">Версия {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. AdGuard Software Ltd.\nВсе права защищены.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. AdGuard Software Ltd.\nВсе права защищены.</string>
     <string name="rateAdguardButtonText">Оценить AdGuard</string>
     <string name="officialSiteLabelText">Официальный сайт</string>
     <string name="forumLabelText">Форум</string>

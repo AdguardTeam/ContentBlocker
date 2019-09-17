@@ -18,8 +18,8 @@ android {
         minSdkVersion 21
         targetSdkVersion 28
         applicationId 'com.adguard.android.contentblocker'
-        versionCode 22000000
-        versionName '2.4.0'
+        versionCode 22000001
+        versionName '2.5.0'
         signingConfig signingConfigs.config
     }
 
@@ -136,12 +136,13 @@ dependencies {
     implementation 'commons-io:commons-io:2.5'
 
     // Android library
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.browser:browser:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.work:work-runtime:2.2.0'
 
     // Logger
     implementation 'org.slf4j:slf4j-android:1.7.7'

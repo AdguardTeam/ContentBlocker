@@ -43,6 +43,7 @@ public class BootUpReceiver extends BroadcastReceiver {
             return;
         }
 
-        ServiceLocator.getInstance(context).getFilterService().scheduleFiltersUpdate();
+        // We initialize service locator to do default actions inside its constructor
+        ServiceLocator.getInstance(context);
     }
 }

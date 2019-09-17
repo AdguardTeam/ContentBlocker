@@ -14,36 +14,50 @@
  * You should have received a copy of the GNU General Public License along with
  * AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.contentblocker.service;
+package com.adguard.android.contentblocker.service.job;
+
+import java.util.UUID;
 
 /**
- * Application notifications service. Responsible for notifications and toast messages.
+ * <pre>
+ * Service for scheduling of application's jobs.
+ *
+ * If you want to create job you should implement interface {@link Job}.</pre>
  */
-public interface NotificationService {
-    /**
-     * Shows toast with the specified text
-     *
-     * @param textResId Text resource Id
-     */
-    void showToast(int textResId);
+public interface JobService {
 
     /**
-     * Shows toast with the specified text
+     * Schedules jobs using {@link Job} instances.
+     * The job will not be scheduled if it's already scheduled.
      *
-     * @param message  messagen
+     * @param ids ids of Jobs
      */
-    void showToast(String message);
+    void scheduleJobs(Id... ids);
 
     /**
-     * Shows toast with the specified text
+     * Cancels job with same id.
      *
-     * @param message  message
-     * @param duration duration
+     * @param uuid id of job
      */
-    void showToast(String message, int duration);
+    void cancelJob(UUID uuid);
 
     /**
-     * Shows a notification asking user to rate this app
+     * Cancels jobs.
+     *
+     * @param ids ids of Jobs
      */
-    void showRateAppNotification();
+    void cancelJobs(Id... ids);
+
+    /**
+     * Cancels all jobs which scheduled in old versions of app.
+     */
+    void cancelOldJobs();
+
+    /**
+     * Gets state whether or not job is pending.
+     *
+     * @param id id of job
+     * @return state of job
+     */
+    boolean isJobPending(Id id);
 }

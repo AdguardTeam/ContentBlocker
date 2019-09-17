@@ -34,7 +34,7 @@
     <string name="filterVersionTemplate">Version {0}.</string>
     <string name="filterUpdatedTemplate">Mis à jour {0} à {1}.</string>
     <string name="versionInfoTextViewText">Version {0}</string>
-    <string name="copyrightInfoTextViewText">© 2009–2018. Adguard Software Ltd.\nTous droits réservés.</string>
+    <string name="copyrightInfoTextViewText">© 2009–%s. Adguard Software Ltd.\nTous droits réservés.</string>
     <string name="rateAdguardButtonText">Évaluer AdGuard</string>
     <string name="officialSiteLabelText">Site officiel</string>
     <string name="forumLabelText">Forum</string>

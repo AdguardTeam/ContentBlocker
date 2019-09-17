@@ -17,23 +17,14 @@
 package com.adguard.android.contentblocker.service;
 
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.app.ProgressDialog;
-import android.app.job.JobInfo;
-import android.app.job.JobScheduler;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 
-import com.adguard.android.contentblocker.FilterUpdateJobService;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ServiceApiClient;
-import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.commons.BrowserUtils;
 import com.adguard.android.contentblocker.commons.StringHelperUtils;
 import com.adguard.android.contentblocker.commons.TextStatistics;
@@ -47,12 +38,9 @@ import com.adguard.android.contentblocker.db.FilterListDaoImpl;
 import com.adguard.android.contentblocker.db.FilterRuleDao;
 import com.adguard.android.contentblocker.db.FilterRuleDaoImpl;
 import com.adguard.android.contentblocker.model.FilterList;
-import com.adguard.android.contentblocker.receiver.AlarmReceiver;
 import com.adguard.android.contentblocker.ui.utils.ProgressDialogUtils;
 
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.collections4.IterableUtils;
-import org.apache.commons.collections4.Predicate;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.BOMInputStream;
@@ -83,8 +71,6 @@ import static org.apache.commons.io.ByteOrderMark.UTF_8;
 public class FilterServiceImpl implements FilterService {
     private static final Logger LOG = LoggerFactory.getLogger(FilterServiceImpl.class);
 
-    public static final int SHOW_USEFUL_ADS_FILTER_ID = 10;
-
     private static final int MIN_RULE_LENGTH = 4;
     private static final String ASCII_SYMBOL = "\\p{ASCII}+";
     private static final String COMMENT = "!";
@@ -93,11 +79,8 @@ public class FilterServiceImpl implements FilterService {
     private static final String MASK_OBSOLETE_STYLE_INJECTION = "###adg_start_style_inject";
 
     private static final int UPDATE_INVALIDATE_PERIOD = 24 * 60 * 60 * 1000; // 24 hours
-    private static final int UPDATE_INTERVAL_PERIOD = 60 * 60 * 1000; // 1 hours
-    private static final int UPDATE_INITIAL_PERIOD = 60 * 1000; // 1 minute
 
     private static final String FILTERS_UPDATE_QUEUE = "filters-update-queue";
-    private static final int JOB_ID = 322;
 
     private final Context context;
     private final FilterListDao filterListDao;
@@ -112,31 +95,20 @@ public class FilterServiceImpl implements FilterService {
      *
      * @param context Context
      */
-    public FilterServiceImpl(Context context, DbHelper dbHelper) {
+    public FilterServiceImpl(Context context, DbHelper dbHelper, PreferencesService preferencesService, NotificationService notificationService) {
         LOG.info("Creating AdguardService instance for {}", context);
         this.context = context;
         filterListDao = new FilterListDaoImpl(context, dbHelper);
         filterRuleDao = new FilterRuleDaoImpl(context);
 
-        ServiceLocator serviceLocator = ServiceLocator.getInstance(context);
-        preferencesService = serviceLocator.getPreferencesService();
-        notificationService = serviceLocator.getNotificationService();
-    }
-
-    public static void enableContentBlocker(Context context) {
-        Set<String> browsers = BrowserUtils.getKnownBrowsers();
-
-        for (String browser : browsers) {
-            sendUpdateFiltersInBrowser(context, browser);
-        }
-
-        sendUpdateFiltersInBrowser(context, null);
+        this.preferencesService = preferencesService;
+        this.notificationService = notificationService;
     }
 
     @Override
     public void checkFiltersUpdates(Activity activity) {
         LOG.info("Start manual filters updates check");
-        ServiceLocator.getInstance(activity).getPreferencesService().setLastUpdateCheck(new Date().getTime());
+        preferencesService.setLastUpdateCheck(new Date().getTime());
 
         ProgressDialog progressDialog = ProgressDialogUtils.showProgressDialog(activity, R.string.checkUpdatesProgressDialogTitle, R.string.checkUpdatesProgressDialogMessage);
         DispatcherThreadPool.getInstance().submit(FILTERS_UPDATE_QUEUE, new CheckUpdatesTask(activity, progressDialog));
@@ -172,51 +144,28 @@ public class FilterServiceImpl implements FilterService {
     }
 
     @Override
-    public void scheduleFiltersUpdate() {
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
-            JobScheduler jobScheduler = (JobScheduler) context.getSystemService(Context.JOB_SCHEDULER_SERVICE);
-            if (jobScheduler != null) {
-                if (!isJobCreated(jobScheduler, JOB_ID)) {
-                    JobInfo.Builder builder = new JobInfo.Builder(JOB_ID, new ComponentName(context, FilterUpdateJobService.class))
-                            .setPeriodic(UPDATE_INTERVAL_PERIOD)
-                            .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
-                            .setPersisted(true);
+    public void enableContentBlocker(Context context) {
+        Set<String> browsers = BrowserUtils.getKnownBrowsers();
 
-                    if (jobScheduler.schedule(builder.build()) != JobScheduler.RESULT_SUCCESS) {
-                        LOG.error("Error while create the filter update job!");
-                    }
-                } else {
-                    LOG.info("Filters update is running");
-                }
-            }
-        } else {
-            Intent alarmIntent = new Intent(AlarmReceiver.UPDATE_FILTER_ACTION);
-            boolean isRunning = PendingIntent.getBroadcast(context, 0, alarmIntent, PendingIntent.FLAG_NO_CREATE) != null;
-            if (!isRunning) {
-                LOG.info("Starting scheduler of filters updating");
-                PendingIntent broadcastIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
-
-                AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-                if (alarmManager != null) {
-                    alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, UPDATE_INITIAL_PERIOD, UPDATE_INTERVAL_PERIOD, broadcastIntent);
-                }
-            } else {
-                LOG.info("Filters update is running");
-            }
+        for (String browser : browsers) {
+            sendUpdateFiltersInBrowser(context, browser);
         }
+
+        sendUpdateFiltersInBrowser(context, null);
     }
 
     @Override
-    public void tryUpdateFilters() {
-        FilterService filterService = ServiceLocator.getInstance(context).getFilterService();
-        PreferencesService preferencesService = ServiceLocator.getInstance(context).getPreferencesService();
-
-        List<FilterList> filterLists = filterService.checkFilterUpdates(false);
-        if (!CollectionUtils.isEmpty(filterLists)) {
-            filterService.applyNewSettings();
+    public boolean tryUpdateFilters() {
+        List<FilterList> filterLists = checkFilterUpdates(false);
+        if (filterLists == null) {
+            return false;
         }
 
+        if (!CollectionUtils.isEmpty(filterLists)) {
+            applyNewSettings();
+        }
         preferencesService.setLastUpdateCheck(System.currentTimeMillis());
+        return true;
     }
 
     @Override
@@ -412,6 +361,14 @@ public class FilterServiceImpl implements FilterService {
         DispatcherThreadPool.getInstance().submit(new ClearFilterCacheTask(progressDialog));
     }
 
+    private void sendUpdateFiltersInBrowser(Context context, String packageName) {
+        Intent intent = new Intent();
+        intent.setAction("com.samsung.android.sbrowser.contentBlocker.ACTION_UPDATE");
+        intent.setData(Uri.parse("package:com.adguard.android.contentblocker"));
+        intent.setPackage(packageName);
+        context.sendBroadcast(intent);
+    }
+
     /**
      * Creates whilelist rule from domain name
      *
@@ -446,20 +403,15 @@ public class FilterServiceImpl implements FilterService {
      */
     private List<FilterList> checkOutdatedFilterUpdates(boolean force) {
         if (!force) {
-            if (!NetworkUtils.isNetworkAvailable(context) || !InternetUtils.isInternetAvailable()) {
-                LOG.info("checkOutdatedFilterUpdates: internet is not available, doing nothing.");
-                return new ArrayList<>();
+            boolean updateFilters = preferencesService.isAutoUpdateFilters();
+            if (!updateFilters) {
+                LOG.info("Filters auto-update is disabled, doing nothing");
+                return null;
             }
 
             if (preferencesService.isUpdateOverWifiOnly() && !NetworkUtils.isConnectionWifi(context)) {
                 LOG.info("checkOutdatedFilterUpdates: Updates permitted over Wi-Fi only, doing nothing.");
-                return new ArrayList<>();
-            }
-
-            boolean updateFilters = preferencesService.isAutoUpdateFilters();
-            if (!updateFilters) {
-                LOG.info("Filters auto-update is disabled, doing nothing");
-                return new ArrayList<>();
+                return null;
             }
         }
 
@@ -563,22 +515,6 @@ public class FilterServiceImpl implements FilterService {
         filterListDao.updateFilter(current);
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    private boolean isJobCreated(JobScheduler jobScheduler, final int jobId) {
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
-            return jobScheduler.getPendingJob(jobId) != null;
-        }
-
-        JobInfo jobInfo = IterableUtils.find(jobScheduler.getAllPendingJobs(), new Predicate<JobInfo>() {
-            @Override
-            public boolean evaluate(JobInfo jobInfo) {
-                return jobInfo != null && jobId == jobInfo.getId();
-            }
-        });
-
-        return jobInfo != null;
-    }
-
     private boolean shouldUpdateOutdatedFilter(FilterList filterList, long timeFromUpdate) {
         if (!filterList.isEnabled()) {
             return false;
@@ -586,14 +522,6 @@ public class FilterServiceImpl implements FilterService {
 
         Date lastTimeDownloaded = filterList.getLastTimeDownloaded();
         return lastTimeDownloaded == null || (lastTimeDownloaded.getTime() - timeFromUpdate < 0);
-    }
-
-    private static void sendUpdateFiltersInBrowser(Context context, String packageName) {
-        Intent intent = new Intent();
-        intent.setAction("com.samsung.android.sbrowser.contentBlocker.ACTION_UPDATE");
-        intent.setData(Uri.parse("package:com.adguard.android.contentblocker"));
-        intent.setPackage(packageName);
-        context.sendBroadcast(intent);
     }
 
     /**
@@ -723,10 +651,6 @@ public class FilterServiceImpl implements FilterService {
         }
     }
 
-    public interface OnImportListener {
-        void onSuccess();
-    }
-
     /**
      * Task for checking updates
      */
@@ -741,7 +665,7 @@ public class FilterServiceImpl implements FilterService {
 
         @Override
         protected void processTask() {
-            final List<FilterList> filters = ServiceLocator.getInstance(context).getFilterService().checkFilterUpdates(true);
+            final List<FilterList> filters = checkFilterUpdates(true);
             if (filters == null) {
                 String message = activity.getString(R.string.checkUpdatesErrorResultMessage);
                 notificationService.showToast(message);

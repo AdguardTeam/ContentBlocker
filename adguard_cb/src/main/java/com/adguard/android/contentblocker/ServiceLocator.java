@@ -19,7 +19,16 @@ package com.adguard.android.contentblocker;
 import android.content.Context;
 
 import com.adguard.android.contentblocker.db.DbHelper;
-import com.adguard.android.contentblocker.service.*;
+import com.adguard.android.contentblocker.service.FilterService;
+import com.adguard.android.contentblocker.service.FilterServiceImpl;
+import com.adguard.android.contentblocker.service.NotificationService;
+import com.adguard.android.contentblocker.service.NotificationServiceImpl;
+import com.adguard.android.contentblocker.service.PreferencesService;
+import com.adguard.android.contentblocker.service.PreferencesServiceImpl;
+import com.adguard.android.contentblocker.service.job.Id;
+import com.adguard.android.contentblocker.service.job.JobService;
+import com.adguard.android.contentblocker.service.job.JobServiceImpl;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,15 +38,13 @@ import java.util.WeakHashMap;
  * Service locator class.
  */
 public class ServiceLocator {
-    private final Context context;
     private static final Logger LOG = LoggerFactory.getLogger(ServiceLocator.class);
     private static WeakHashMap<Context, ServiceLocator> locators = new WeakHashMap<>();
 
     private FilterService filterService;
     private PreferencesService preferencesService;
     private NotificationService notificationService;
-    private RateService rateService;
-    private DbHelper dbHelper;
+    private JobService jobService;
 
     /**
      * Creates an instance of the ServiceLocator
@@ -46,7 +53,15 @@ public class ServiceLocator {
      */
     private ServiceLocator(Context context) {
         LOG.info("Initializing ServiceLocator for {}", context);
-        this.context = context;
+        preferencesService = new PreferencesServiceImpl(context);
+        notificationService = new NotificationServiceImpl(context);
+        filterService = new FilterServiceImpl(context, new DbHelper(context), preferencesService, notificationService);
+        jobService = new JobServiceImpl(this);
+
+        LOG.info("ServiceLocator setup...");
+        checkFirstLaunch();
+        jobService.cancelOldJobs();
+        jobService.scheduleJobs(Id.FILTERS, Id.RATE_NOTIFICATION);
     }
 
     /**
@@ -71,56 +86,37 @@ public class ServiceLocator {
     }
 
     /**
-     * @return Filter service singleton
+     * @return Filter service reference
      */
     public FilterService getFilterService() {
-        if (filterService == null) {
-            filterService = new FilterServiceImpl(context, getDbHelper());
-        }
-
         return filterService;
     }
 
     /**
-     * @return Preferences service singleton
+     * @return Preferences service reference
      */
     public PreferencesService getPreferencesService() {
-        if (preferencesService == null) {
-            preferencesService = new PreferencesServiceImpl(context);
-        }
-
         return preferencesService;
     }
 
     /**
-     * @return notifications service singleton
+     * @return notifications service reference
      */
     public NotificationService getNotificationService() {
-        if (notificationService == null) {
-            notificationService = new NotificationServiceImpl(context);
-        }
-
         return notificationService;
     }
 
     /**
-     * @return Data base helper
+     * @return job service reference
      */
-    private DbHelper getDbHelper() {
-        if (dbHelper == null) {
-            dbHelper = new DbHelper(context);
-        }
-
-        return dbHelper;
+    public JobService getJobService() {
+        return jobService;
     }
 
-    /**
-     * @return rate service singleton
-     */
-    public RateService getRateService() {
-        if (rateService == null) {
-            rateService = new RateServiceImpl(context);
+    private void checkFirstLaunch() {
+        if (preferencesService.getInstallationTime() == 0L) {
+            // It's first launch. We need to set installation time to current
+            preferencesService.setInstallationTime(System.currentTimeMillis());
         }
-        return rateService;
     }
 }

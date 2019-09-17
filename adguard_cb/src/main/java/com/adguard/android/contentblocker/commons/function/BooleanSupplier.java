@@ -14,28 +14,22 @@
  * You should have received a copy of the GNU General Public License along with
  * AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.contentblocker.receiver;
-
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-
-import com.adguard.android.contentblocker.ServiceLocator;
-import com.adguard.android.contentblocker.service.FilterService;
-
-import org.apache.commons.lang3.StringUtils;
+package com.adguard.android.contentblocker.commons.function;
 
 /**
- * This receiver is necessary in case if application was installed but not launched.
- * We need to inform browsers about our filters and enable content blocker
+ * <pre>
+ * Represents a function that produces a {@code boolean} result.
+ *
+ * This is a functional interface
+ * which functional method is {@link #get()}.</pre>
  */
-public class UpdateReceiver extends BroadcastReceiver {
+@FunctionalInterface
+public interface BooleanSupplier {
 
-    @Override
-    public void onReceive(Context context, Intent intent) {
-        if (!StringUtils.equals(intent.getAction(), "android.intent.action.PACKAGE_REPLACED")) {
-            return;
-        }
-        ServiceLocator.getInstance(context).getFilterService().enableContentBlocker(context);
-    }
+    /**
+     * Gets a result
+     *
+     * @return the function result as boolean
+     */
+    boolean get();
 }

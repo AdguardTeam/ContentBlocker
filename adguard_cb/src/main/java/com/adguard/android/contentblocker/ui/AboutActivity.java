@@ -41,62 +41,33 @@ public class AboutActivity extends AppCompatActivity {
 
         int year = Calendar.getInstance().get(Calendar.YEAR);
         TextView copyrightInfoView = findViewById(R.id.copyrightInfo);
-        copyrightInfoView.setText(getString(R.string.copyrightInfoTextViewText, year));
+        copyrightInfoView.setText(getString(R.string.copyrightInfoTextViewText, String.valueOf(year)));
 
         final TextView adguardComLinkTextView = findViewById(R.id.adguardComLinkTextView);
-        adguardComLinkTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NavigationHelper.redirectToWebSite(AboutActivity.this, AppLink.Website.getHomeUrl(getApplicationContext(), "about_activity"));
-            }
-        });
+        adguardComLinkTextView.setOnClickListener(v -> NavigationHelper.redirectToWebSite(AboutActivity.this,
+                AppLink.Website.getHomeUrl(getApplicationContext(), "about_activity")));
 
         final TextView forumAdguardComLinkTextView = findViewById(R.id.forumAdguardComLinkTextView);
-        forumAdguardComLinkTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NavigationHelper.redirectToWebSite(AboutActivity.this, AppLink.Website.getForumUrl(getApplicationContext(), "about_activity"));
-            }
-        });
+        forumAdguardComLinkTextView.setOnClickListener(v -> NavigationHelper.redirectToWebSite(AboutActivity.this,
+                AppLink.Website.getForumUrl(getApplicationContext(), "about_activity")));
 
         final TextView githubLinkTextView = findViewById(R.id.githubLinkTextView);
-        githubLinkTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NavigationHelper.redirectToWebSite(AboutActivity.this, AppLink.Github.getHomeUrl(getApplicationContext(), "about_activity"));
-            }
-        });
+        githubLinkTextView.setOnClickListener(v -> NavigationHelper.redirectToWebSite(AboutActivity.this,
+                AppLink.Github.getHomeUrl(getApplicationContext(), "about_activity")));
 
         final View rateAppButton = findViewById(R.id.rateAppButton);
-        rateAppButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ActivityUtils.startMarket(AboutActivity.this, getPackageName(), null);
-            }
-        });
+        rateAppButton.setOnClickListener(v -> ActivityUtils.startMarket(AboutActivity.this, getPackageName(), null));
 
         final View issuesButton = findViewById(R.id.issuesButton);
-        issuesButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NavigationHelper.redirectToWebSite(AboutActivity.this, AppLink.Github.getNewIssueUrl(getApplicationContext(), "about_activity"));
-            }
-        });
+        issuesButton.setOnClickListener(v -> NavigationHelper.redirectToWebSite(AboutActivity.this,
+                AppLink.Github.getNewIssueUrl(getApplicationContext(), "about_activity")));
 
         final TextView eulaLinkTextView = findViewById(R.id.eulaLinkTextView);
-        eulaLinkTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NavigationHelper.redirectToWebSite(AboutActivity.this, AppLink.Website.getEULAUrl(getApplicationContext(), "about_activity"));
-            }
-        });
+        eulaLinkTextView.setOnClickListener(v -> NavigationHelper.redirectToWebSite(AboutActivity.this,
+                AppLink.Website.getEULAUrl(getApplicationContext(), "about_activity")));
 
         final TextView privacyPolicyLinkTextView = findViewById(R.id.privacyPolicyLinkTextView);
-        privacyPolicyLinkTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NavigationHelper.redirectToWebSite(AboutActivity.this,  AppLink.Website.getPrivacyPolicyUrl(getApplicationContext(), "about_activity"));
-            }
-        });
+        privacyPolicyLinkTextView.setOnClickListener(v -> NavigationHelper.redirectToWebSite(AboutActivity.this,
+                AppLink.Website.getPrivacyPolicyUrl(getApplicationContext(), "about_activity")));
     }
 }

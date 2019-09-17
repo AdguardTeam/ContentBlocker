@@ -16,14 +16,15 @@
  */
 package com.adguard.android.contentblocker.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import com.adguard.android.contentblocker.ServiceLocator;
-import com.adguard.android.contentblocker.ui.utils.FilterViewAdapter;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.adguard.android.contentblocker.R;
+import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.service.FilterService;
+import com.adguard.android.contentblocker.ui.utils.FilterViewAdapter;
 
 public class FiltersActivity extends AppCompatActivity {
 

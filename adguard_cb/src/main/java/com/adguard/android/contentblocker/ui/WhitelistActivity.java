@@ -64,20 +64,12 @@ public class WhitelistActivity extends AppCompatActivity {
         ListView whiteList = findViewById(R.id.whitelist);
         whiteList.setEmptyView(emptyWrapper);
         whiteList.setAdapter(whitelistAdapter);
-        whiteList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String domain = whitelistAdapter.getItem(position);
-                showNewOrEditItemDialog(domain, position);
-            }
+        whiteList.setOnItemClickListener((parent, view, position, id) -> {
+            String domain = whitelistAdapter.getItem(position);
+            showNewOrEditItemDialog(domain, position);
         });
 
-        findViewById(R.id.add_domain).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showNewOrEditItemDialog(null, 0);
-            }
-        });
+        findViewById(R.id.add_domain).setOnClickListener(v -> showNewOrEditItemDialog(null, 0));
     }
 
     @Override
@@ -131,51 +123,43 @@ public class WhitelistActivity extends AppCompatActivity {
 
         if (domainName != null) {
             view.setText(domainName);
-            builder.setNeutralButton(R.string.delete, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                    final Editable text = view.getText();
-                    text.clear();
-                    AlertDialogUtils.confirm(WhitelistActivity.this, R.string.warning, R.string.confirmRemoveWhitelistDomainMessage,
-                            new AlertDialogUtils.DefaultConfirmationListener() {
-                                @Override
-                                public void ok() {
-                                    whitelistAdapter.remove(domainName);
-                                }
-                            });
-                }
+            builder.setNeutralButton(R.string.delete, (dialog, which) -> {
+                dialog.dismiss();
+                final Editable text = view.getText();
+                text.clear();
+                AlertDialogUtils.confirm(WhitelistActivity.this,
+                        R.string.warning, R.string.confirmRemoveWhitelistDomainMessage,
+                        new AlertDialogUtils.DefaultConfirmationListener() {
+                            @Override
+                            public void ok() {
+                                whitelistAdapter.remove(domainName);
+                            }
+                        });
             });
         }
 
         final AlertDialog alertDialog = builder.create();
-        alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
-            @Override
-            public void onShow(DialogInterface dialog) {
-                alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Editable text = view.getText();
-                        String item = StringUtils.trim(text.toString());
+        alertDialog.setOnShowListener(dialog -> {
+            alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
+                Editable text = view.getText();
+                String item = StringUtils.trim(text.toString());
 
-                        if (!validateWhitelistItem(item)) {
-                            view.setError(getString(R.string.whitelistNewItemErrorMessage));
-                        } else if (filterService.getWhiteListItems().contains(item)) {
-                            view.setError(getString(R.string.whitelistNewItemExistsErrorMessage));
-                        } else {
-                            if (domainName == null) {
-                                whitelistAdapter.add(item);
-                            } else {
-                                whitelistAdapter.replace(item, position);
-                            }
-                            text.clear();
-                            alertDialog.dismiss();
-                        }
+                if (!validateWhitelistItem(item)) {
+                    view.setError(getString(R.string.whitelistNewItemErrorMessage));
+                } else if (filterService.getWhiteListItems().contains(item)) {
+                    view.setError(getString(R.string.whitelistNewItemExistsErrorMessage));
+                } else {
+                    if (domainName == null) {
+                        whitelistAdapter.add(item);
+                    } else {
+                        whitelistAdapter.replace(item, position);
                     }
-                });
-                int color = ContextCompat.getColor(getApplicationContext(), android.R.color.holo_red_light);
-                alertDialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(color);
-            }
+                    text.clear();
+                    alertDialog.dismiss();
+                }
+            });
+            int color = ContextCompat.getColor(getApplicationContext(), android.R.color.holo_red_light);
+            alertDialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(color);
         });
 
         alertDialog.show();

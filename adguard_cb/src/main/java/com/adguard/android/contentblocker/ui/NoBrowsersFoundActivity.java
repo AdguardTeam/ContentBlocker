@@ -16,9 +16,9 @@
  */
 package com.adguard.android.contentblocker.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
@@ -30,20 +30,14 @@ public class NoBrowsersFoundActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_no_browsers_found);
 
-        findViewById(R.id.install_samsung_browser).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ActivityUtils.startMarket(NoBrowsersFoundActivity.this, "com.sec.android.app.sbrowser", null);
-                finish();
-            }
+        findViewById(R.id.install_samsung_browser).setOnClickListener(v -> {
+            ActivityUtils.startMarket(NoBrowsersFoundActivity.this, "com.sec.android.app.sbrowser", null);
+            finish();
         });
 
-        findViewById(R.id.install_yandex_browser).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ActivityUtils.startMarket(NoBrowsersFoundActivity.this, "com.yandex.browser", "adguard1");
-                finish();
-            }
+        findViewById(R.id.install_yandex_browser).setOnClickListener(v -> {
+            ActivityUtils.startMarket(NoBrowsersFoundActivity.this, "com.yandex.browser", "adguard1");
+            finish();
         });
     }
 }

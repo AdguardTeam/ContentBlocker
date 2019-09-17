@@ -52,7 +52,6 @@ import com.adguard.android.contentblocker.model.FilterList;
 import com.adguard.android.contentblocker.model.ReportType;
 import com.adguard.android.contentblocker.onboarding.OnboardingActivity;
 import com.adguard.android.contentblocker.service.FilterService;
-import com.adguard.android.contentblocker.service.FilterServiceImpl;
 import com.adguard.android.contentblocker.service.PreferencesService;
 import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
@@ -82,8 +81,9 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        filterService = ServiceLocator.getInstance(getApplicationContext()).getFilterService();
-        preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
+        ServiceLocator serviceLocator = ServiceLocator.getInstance(getApplicationContext());
+        filterService = serviceLocator.getFilterService();
+        preferencesService = serviceLocator.getPreferencesService();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.empty);
@@ -119,15 +119,15 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
         if (!preferencesService.isOnboardingShown()) {
             NavigationHelper.redirectToActivity(this, OnboardingActivity.class);
+            return;
         }
 
-        filterService.scheduleFiltersUpdate();
-        ServiceLocator.getInstance(this).getRateService().scheduleRateNotificationShow();
         showRateDialog(getIntent());
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
         showRateDialog(intent);
     }
 
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         drawerToggle.onConfigurationChanged(newConfig);
     }
@@ -183,7 +183,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     public void onResume() {
         super.onResume();
-        ServiceLocator.getInstance(this).getRateService().showRateNotification();
         refreshMainInfo();
     }
 
@@ -302,7 +301,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 ActivityUtils.startMarket(MainActivity.this, BrowserUtils.YANDEX_BROWSER_PACKAGE, "adguard1"));
 
         refreshStatistics();
-        FilterServiceImpl.enableContentBlocker(this);
+        filterService.enableContentBlocker(this);
     }
 
     @SuppressLint("DefaultLocale")

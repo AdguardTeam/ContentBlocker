@@ -1,4 +1,4 @@
-/**
+/*
  * This file is part of AdGuard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
  * Copyright © 2018 AdGuard Content Blocker. All rights reserved.
  * <p>
@@ -47,7 +47,6 @@ import com.adguard.android.contentblocker.ui.utils.AlertDialogUtils;
 import com.adguard.android.contentblocker.ui.utils.ApplyAndRefreshTask;
 import com.adguard.android.contentblocker.ui.utils.FilterRulesAdapter;
 import com.adguard.android.contentblocker.service.FilterService;
-import com.adguard.android.contentblocker.service.FilterServiceImpl;
 import com.adguard.android.contentblocker.service.PreferencesService;
 
 import org.apache.commons.lang3.StringUtils;
@@ -56,7 +55,7 @@ import java.io.File;
 import java.util.List;
 import java.util.Set;
 
-public class UserFilterActivity extends AppCompatActivity implements FilterServiceImpl.OnImportListener {
+public class UserFilterActivity extends AppCompatActivity implements FilterService.OnImportListener {
 
     private static final int REQUEST_CODE = 1237;
 

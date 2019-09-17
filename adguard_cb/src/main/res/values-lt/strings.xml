@@ -73,7 +73,16 @@
     <string name="reportBug">Panešti apie klaidą</string>
     <string name="privacyPolicyLinkText">Privatumo politika</string>
     <string name="eulaLinkText">EULA</string>
+    <string name="rate_app_submit_feedback_title">Dėkojame už jūsų atsiliepimą!</string>
+    <string name="rate_app_submit_feedback_summary">Šiuo metu ieškome sprendimo.</string>
     <string name="delete">Ištrinti</string>
+    <string name="submit">Pateikti</string>
+    <string name="rate_app_dialog_title">Įvertinkite šią programą</string>
+    <string name="rate_app_dialog_hint">Palikite savo atsiliepimą</string>
+    <string name="rate_app_notification_title">Įvertinkite mus</string>
+    <string name="notification_channel_rate_name">Reitingai</string>
+    <string name="notification_channel_rate_description">Pranešimai apie programos reitingus</string>
+    <string name="rate_app_summary">Jums patinka AdGuard Content Blocker? Įvertinkite mus 5 žvaigždutėmis Google Play</string>
     <string name="confirmClearUserFilterMessage">Ar tikrai norite išvalyti naudotojo filtrą? Šio veiksmo negalima bus atšaukti.</string>
     <string name="confirmRemoveUserRuleMessage">Ar tikrai norite ištrinti šią taisyklę? Šios veiksmo negalima bus atšaukti.</string>
     <string name="clear_filters_cache_title">Išvalyti filtro talpyklą</string>
@@ -99,4 +108,8 @@
     <string name="go_to_products">Eiti į svetainę</string>
     <string name="select_browser_dialog_adguard_products_title">Ne visai tai, ko jūs tikėjotės?</string>
     <string name="select_browser_dialog_adguard_products_message">Susipažinkite su kitais AdGuard produktais mūsų svetainėje</string>
+    <string name="choose_your_browser">Pasirinkti naršyklę:</string>
+    <string name="chrome_dialog_title">Norite blokuoti reklamą Chrome?</string>
+    <string name="chrome_dialog_text"><![CDATA[Nuo 2019 m. Chrome, skirtas Android, nepalaiko jokių reklamos blokavimo plėtinių ar programų.\nGalite paraginti Chrome kūrėjus pridėti AdGuard ir kitų turinio blokatorių palaikymą. Norėdami tai padaryti, apsilankykite svetainėje <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> ir išreikšite savo palaikymą.]]></string>
+    <string name="back">Grįžti</string>
 </resources>

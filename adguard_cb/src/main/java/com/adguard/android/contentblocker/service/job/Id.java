@@ -14,28 +14,44 @@
  * You should have received a copy of the GNU General Public License along with
  * AdGuard Content Blocker.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.adguard.android.contentblocker.receiver;
+package com.adguard.android.contentblocker.service.job;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-
-import com.adguard.android.contentblocker.ServiceLocator;
-import com.adguard.android.contentblocker.service.FilterService;
-
-import org.apache.commons.lang3.StringUtils;
+import androidx.annotation.NonNull;
 
 /**
- * This receiver is necessary in case if application was installed but not launched.
- * We need to inform browsers about our filters and enable content blocker
+ * <pre>
+ * IDs for scheduled jobs and updates
+ *
+ * Id has a tag which should be <b>unique</b>.
+ * This tag is used for scheduling and job search.
  */
-public class UpdateReceiver extends BroadcastReceiver {
+public enum Id {
+    UNKNOWN("Unknown"),
 
-    @Override
-    public void onReceive(Context context, Intent intent) {
-        if (!StringUtils.equals(intent.getAction(), "android.intent.action.PACKAGE_REPLACED")) {
-            return;
+    /** Id of job to update filters */
+    FILTERS("Filters"),
+
+    /** Id of job to show notification "Rate us" */
+    RATE_NOTIFICATION("Rate notification");
+
+    private String tag;
+
+    Id(String tag) {
+        this.tag = tag;
+    }
+
+    @NonNull
+    public static Id valueOfTag(String tag) {
+        for (Id id: values()) {
+            if (id.tag.equals(tag)) {
+                return id;
+            }
         }
-        ServiceLocator.getInstance(context).getFilterService().enableContentBlocker(context);
+        return UNKNOWN;
+    }
+
+    @NonNull
+    public String getTag() {
+        return tag;
     }
 }

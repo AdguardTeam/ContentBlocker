@@ -56,7 +56,7 @@ public class NavigationHelper {
     /**
      * Redirects to activityClass activity.
      *
-     * @param from          Application context (non-activity context requires {@link Intent.FLAG_ACTIVITY_NEW_TASK}
+     * @param from          Application context (non-activity context requires {@link Intent#FLAG_ACTIVITY_NEW_TASK}
      * @param activityClass Activity class
      * @param bundle        {@link Bundle} to add into intent
      */

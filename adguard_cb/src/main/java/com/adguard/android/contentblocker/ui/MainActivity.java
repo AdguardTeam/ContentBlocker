@@ -52,7 +52,6 @@ import com.adguard.android.contentblocker.model.FilterList;
 import com.adguard.android.contentblocker.model.ReportType;
 import com.adguard.android.contentblocker.onboarding.OnboardingActivity;
 import com.adguard.android.contentblocker.service.FilterService;
-import com.adguard.android.contentblocker.service.FilterServiceImpl;
 import com.adguard.android.contentblocker.service.PreferencesService;
 import com.adguard.android.contentblocker.ui.utils.ActivityUtils;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
@@ -82,8 +81,9 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        filterService = ServiceLocator.getInstance(getApplicationContext()).getFilterService();
-        preferencesService = ServiceLocator.getInstance(getApplicationContext()).getPreferencesService();
+        ServiceLocator serviceLocator = ServiceLocator.getInstance(getApplicationContext());
+        filterService = serviceLocator.getFilterService();
+        preferencesService = serviceLocator.getPreferencesService();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.empty);
@@ -119,7 +119,9 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
         if (!preferencesService.isOnboardingShown()) {
             NavigationHelper.redirectToActivity(this, OnboardingActivity.class);
+            return;
         }
+
         showRateDialog(getIntent());
     }
 
@@ -299,7 +301,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 ActivityUtils.startMarket(MainActivity.this, BrowserUtils.YANDEX_BROWSER_PACKAGE, "adguard1"));
 
         refreshStatistics();
-        FilterServiceImpl.enableContentBlocker(this);
+        filterService.enableContentBlocker(this);
     }
 
     @SuppressLint("DefaultLocale")

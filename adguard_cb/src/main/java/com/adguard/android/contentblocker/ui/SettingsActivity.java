@@ -50,68 +50,35 @@ public class SettingsActivity extends AppCompatActivity {
 
         final CheckBox autoUpdateView = findViewById(R.id.auto_update_checkbox);
         autoUpdateView.setChecked(preferencesService.isAutoUpdateFilters());
-        autoUpdateView.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean enable) {
-                preferencesService.setAutoUpdateFilters(enable);
-            }
-        });
+        autoUpdateView.setOnCheckedChangeListener((compoundButton, enable) -> preferencesService.setAutoUpdateFilters(enable));
 
-        findViewById(R.id.auto_update_wrapper).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                autoUpdateView.setChecked(!autoUpdateView.isChecked());
-            }
-        });
+        findViewById(R.id.auto_update_wrapper).setOnClickListener(view ->
+                autoUpdateView.setChecked(!autoUpdateView.isChecked()));
 
         final CheckBox updateWifiOnlyView = findViewById(R.id.update_wifi_only_checkbox);
         updateWifiOnlyView.setChecked(preferencesService.isUpdateOverWifiOnly());
-        updateWifiOnlyView.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean enable) {
-                preferencesService.setUpdateOverWifiOnly(enable);
-            }
-        });
+        updateWifiOnlyView.setOnCheckedChangeListener((compoundButton, enable) ->
+                preferencesService.setUpdateOverWifiOnly(enable));
 
-        findViewById(R.id.update_wifi_only_wrapper).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                updateWifiOnlyView.setChecked(!updateWifiOnlyView.isChecked());
-            }
-        });
+        findViewById(R.id.update_wifi_only_wrapper).setOnClickListener(view ->
+                updateWifiOnlyView.setChecked(!updateWifiOnlyView.isChecked()));
 
         final CheckBox showUsefulAdsView = findViewById(R.id.show_useful_ads_checkbox);
         showUsefulAdsView.setChecked(filterService.isShowUsefulAds());
-        showUsefulAdsView.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean enable) {
-                filterService.setShowUsefulAds(enable);
-            }
-        });
+        showUsefulAdsView.setOnCheckedChangeListener((compoundButton, enable) -> filterService.setShowUsefulAds(enable));
 
-        findViewById(R.id.show_useful_ads_wrapper).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showUsefulAdsView.setChecked(!showUsefulAdsView.isChecked());
-            }
-        });
+        findViewById(R.id.show_useful_ads_wrapper).setOnClickListener(view ->
+                showUsefulAdsView.setChecked(!showUsefulAdsView.isChecked()));
 
-        findViewById(R.id.filter_list_wrapper).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavigationHelper.redirectToActivity(SettingsActivity.this, FiltersActivity.class);
-            }
-        });
+        findViewById(R.id.filter_list_wrapper).setOnClickListener(view ->
+                NavigationHelper.redirectToActivity(SettingsActivity.this, FiltersActivity.class));
 
-        findViewById(R.id.clear_filter_cache_wrapper).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ProgressDialog progressDialog = ProgressDialogUtils.showProgressDialog(SettingsActivity.this,
-                        R.string.please_wait,
-                        R.string.clear_filters_cache_progress_message);
+        findViewById(R.id.clear_filter_cache_wrapper).setOnClickListener(v -> {
+            ProgressDialog progressDialog = ProgressDialogUtils.showProgressDialog(SettingsActivity.this,
+                    R.string.please_wait,
+                    R.string.clear_filters_cache_progress_message);
 
-                filterService.clearCacheAndUpdateFilters(progressDialog);
-            }
+            filterService.clearCacheAndUpdateFilters(progressDialog);
         });
     }
 }

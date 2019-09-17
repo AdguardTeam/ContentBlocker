@@ -4,7 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.adguard.android.contentblocker.service.FilterServiceImpl;
+import com.adguard.android.contentblocker.ServiceLocator;
+import com.adguard.android.contentblocker.service.FilterService;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -19,6 +20,6 @@ public class UpdateReceiver extends BroadcastReceiver {
         if (!StringUtils.equals(intent.getAction(), "android.intent.action.PACKAGE_REPLACED")) {
             return;
         }
-        FilterServiceImpl.enableContentBlocker(context);
+        ServiceLocator.getInstance(context).getFilterService().enableContentBlocker(context);
     }
 }

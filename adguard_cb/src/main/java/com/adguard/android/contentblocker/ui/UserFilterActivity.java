@@ -1,4 +1,4 @@
-/**
+/*
  * This file is part of AdGuard Content Blocker (https://github.com/AdguardTeam/ContentBlocker).
  * Copyright © 2018 AdGuard Content Blocker. All rights reserved.
  * <p>

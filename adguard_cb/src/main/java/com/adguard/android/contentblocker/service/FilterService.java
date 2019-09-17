@@ -44,7 +44,7 @@ public interface FilterService {
      * <p>
      * The method is not asynchronous!
      */
-    void tryUpdateFilters();
+    boolean tryUpdateFilters();
 
     /**
      * Checks for filter updates and shows waiting dialog on UI

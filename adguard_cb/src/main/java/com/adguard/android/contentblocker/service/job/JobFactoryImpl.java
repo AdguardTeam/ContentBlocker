@@ -16,10 +16,7 @@ interface JobFactoryImpl {
         UpdateFiltersJobImpl(FilterService filterService) {
             super(
                     Id.FILTERS,
-                    () -> {
-                        filterService.tryUpdateFilters();
-                        return true;
-                    },
+                    filterService::tryUpdateFilters,
                     UPDATE_FILTERS_PERIOD
             );
         }

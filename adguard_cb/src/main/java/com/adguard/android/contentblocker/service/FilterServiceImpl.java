@@ -155,12 +155,17 @@ public class FilterServiceImpl implements FilterService {
     }
 
     @Override
-    public void tryUpdateFilters() {
+    public boolean tryUpdateFilters() {
         List<FilterList> filterLists = checkFilterUpdates(false);
+        if (filterLists == null) {
+            return false;
+        }
+
         if (!CollectionUtils.isEmpty(filterLists)) {
             applyNewSettings();
         }
         preferencesService.setLastUpdateCheck(System.currentTimeMillis());
+        return true;
     }
 
     @Override
@@ -398,20 +403,15 @@ public class FilterServiceImpl implements FilterService {
      */
     private List<FilterList> checkOutdatedFilterUpdates(boolean force) {
         if (!force) {
-            if (!NetworkUtils.isNetworkAvailable(context) || !InternetUtils.isInternetAvailable()) {
-                LOG.info("checkOutdatedFilterUpdates: internet is not available, doing nothing.");
-                return new ArrayList<>();
+            boolean updateFilters = preferencesService.isAutoUpdateFilters();
+            if (!updateFilters) {
+                LOG.info("Filters auto-update is disabled, doing nothing");
+                return null;
             }
 
             if (preferencesService.isUpdateOverWifiOnly() && !NetworkUtils.isConnectionWifi(context)) {
                 LOG.info("checkOutdatedFilterUpdates: Updates permitted over Wi-Fi only, doing nothing.");
-                return new ArrayList<>();
-            }
-
-            boolean updateFilters = preferencesService.isAutoUpdateFilters();
-            if (!updateFilters) {
-                LOG.info("Filters auto-update is disabled, doing nothing");
-                return new ArrayList<>();
+                return null;
             }
         }
 

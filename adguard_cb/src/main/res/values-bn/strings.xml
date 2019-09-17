@@ -34,7 +34,7 @@
     <string name="filterVersionTemplate">সংস্করণ {0}</string>
     <string name="filterUpdatedTemplate">{0} কে আপডেট করা হয়েছে {1} এ</string>
     <string name="versionInfoTextViewText">সংস্করণ {0}</string>
-    <string name="copyrightInfoTextViewText">© ২০০৯-২০১৮ Adguard সফটওয়্যার লিমিটেড\nসর্বস্বত্ব সংরক্ষিত।</string>
+    <string name="copyrightInfoTextViewText">© ২০০৯ - %s Adguard সফটওয়্যার লিমিটেড\nসর্বস্বত্ব সংরক্ষিত।</string>
     <string name="rateAdguardButtonText">AdGuard রেটিং দিন</string>
     <string name="officialSiteLabelText">অফিসিয়াল ওয়েবসাইট</string>
     <string name="forumLabelText">ফোরাম</string>

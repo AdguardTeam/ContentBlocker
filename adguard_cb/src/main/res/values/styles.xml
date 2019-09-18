@@ -29,8 +29,6 @@
         <item name="android:colorControlHighlight">@color/colorPrimary</item>
         <item name="android:colorButtonNormal">@color/colorPrimary</item>
         <item name="android:colorBackground">#ffeeeeee</item>
-
-        <item name="android:minWidth">320dp</item>
     </style>
 
     <style name="settingItemWrapper">

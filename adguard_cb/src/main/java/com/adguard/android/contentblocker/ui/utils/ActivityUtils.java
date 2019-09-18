@@ -26,35 +26,12 @@ import android.net.Uri;
 import android.text.format.DateUtils;
 import android.view.Surface;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.Date;
 
 /**
  * Activity utils methods.
  */
 public class ActivityUtils {
-
-    /**
-     * Formats date string
-     *
-     * @param date Date
-     * @return Formatted date
-     */
-    public static String formatDate(Context context, Date date) {
-        String dateTime = DateUtils.formatDateTime(context, date.getTime(), DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_YEAR);
-        return StringUtils.replace(dateTime, " ", "");
-    }
-
-    /**
-     * Formats date to time string
-     *
-     * @param time Time
-     * @return Formatted time
-     */
-    public static String formatTime(Context context, Date time) {
-        return DateUtils.formatDateTime(context, time.getTime(), DateUtils.FORMAT_SHOW_TIME);
-    }
 
     /**
      * Formats a date into a datetime string.
@@ -81,11 +58,31 @@ public class ActivityUtils {
     }
 
     /**
+     * Formats date string
+     *
+     * @param date Date
+     * @return Formatted date
+     */
+    static String formatDate(Context context, Date date) {
+        return DateUtils.formatDateTime(context, date.getTime(), DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_YEAR);
+    }
+
+    /**
+     * Formats date to time string
+     *
+     * @param time Time
+     * @return Formatted time
+     */
+    static String formatTime(Context context, Date time) {
+        return DateUtils.formatDateTime(context, time.getTime(), DateUtils.FORMAT_SHOW_TIME);
+    }
+
+    /**
      * Locks specified activity's orientation until it is unlocked or recreated.
      *
      * @param activity activity
      */
-    public static void lockOrientation(Activity activity) {
+    static void lockOrientation(Activity activity) {
         Configuration config = activity.getResources().getConfiguration();
         final int deviceOrientation = config.orientation;
         int rotation = activity.getWindowManager().getDefaultDisplay().getRotation();
@@ -109,7 +106,7 @@ public class ActivityUtils {
      *
      * @param activity activity
      */
-    public static void unlockOrientation(Activity activity) {
+    static void unlockOrientation(Activity activity) {
         activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
     }
 }

@@ -5,8 +5,8 @@
     <string name="please_wait">Please wait...</string>
     <string name="main_info">This application is an extension for browsers that support content-blocking.\n\nCurrently there are two such browsers:\n\n1. Samsung Internet Browser\n2. Yandex Browser\n\nWith the help of this application ,you can block all advertisements in these browsers.\n\nAlso, you can select which filters to use in Settings.</string>
     <string name="progressGenericErrorText">Some error occurred!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} filter(s) imported successfully!</string>
-    <string name="importUserRulesErrorResultMessage">Error importing filters!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} filter rule(s) imported successfully!</string>
+    <string name="importUserRulesErrorResultMessage">Error importing filter rules!</string>
     <string name="importUserRulesProgressDialogTitle">Import in progress</string>
     <string name="importUserRulesProgressDialogMessage">Loading…</string>
     <string name="checkUpdatesProgressDialogTitle">Checking for updates</string>
@@ -112,4 +112,5 @@
     <string name="chrome_dialog_title">Want to block ads in Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[As of 2019, Chrome for Android does not support any ad blocking extensions or apps.\nYou can urge Chrome developers on adding support for AdGuard and other content blockers. To do so, visit <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> and upvote the issue.]]></string>
     <string name="back">Back</string>
+    <string name="import_dialog_hint">URL or path</string>
 </resources>

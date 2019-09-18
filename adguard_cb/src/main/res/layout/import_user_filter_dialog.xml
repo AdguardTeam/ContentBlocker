@@ -18,6 +18,7 @@
         android:cursorVisible="true"
         android:inputType="textNoSuggestions|textUri"
         android:padding="5dp"
+        android:hint="@string/import_dialog_hint"
         android:textColor="@color/common_text"
         android:textCursorDrawable="@null" />
 

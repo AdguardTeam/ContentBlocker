@@ -42,7 +42,7 @@ interface JobFactoryImpl {
         private static int MAX_RATE_DIALOG_COUNT = 2;
         private static final long FIRST_FLEX_PERIOD =  TimeUnit.DAYS.toMillis(1L);
         private static final long SECOND_FLEX_PERIOD = TimeUnit.DAYS.toMillis(7L);
-        private static final long BACKOFF_PERIOD = TimeUnit.HOURS.toMillis(12L);
+        private static final long BACKOFF_PERIOD = TimeUnit.HOURS.toMillis(6L);
 
         ShowRateNotificationImpl(NotificationService notificationService, PreferencesService preferencesService, JobService jobService) {
             super(

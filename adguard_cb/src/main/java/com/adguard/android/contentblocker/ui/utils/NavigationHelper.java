@@ -26,6 +26,7 @@ import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.content.ContextCompat;
 
 import com.adguard.android.contentblocker.ServiceLocator;
+import com.adguard.android.contentblocker.commons.PackageUtils;
 import com.adguard.android.contentblocker.service.NotificationService;
 import com.adguard.android.contentblocker.ui.MainActivity;
 import com.adguard.android.contentblocker.R;
@@ -99,6 +100,14 @@ public class NavigationHelper {
      * @param context Application context
      */
     public static void redirectToPlayMarket(Context context) {
+        // We redirect to Google Play Store if it exists on device
+        if (PackageUtils.isPlayStoreInstalled(context)) {
+            try {
+                context.startActivity(createPlayMarketIntent(context, PLAY_MARKET_PREFIX_HTTP_SCHEME));
+                return;
+            } catch (ActivityNotFoundException ignored) { }
+        }
+
         try {
             context.startActivity(createPlayMarketIntent(context, PLAY_MARKET_PREFIX_CUSTOM_SCHEME));
         } catch (ActivityNotFoundException e) {
@@ -115,7 +124,7 @@ public class NavigationHelper {
      */
     private static Intent createPlayMarketIntent(Context context, String prefix) {
         Uri uri = Uri.parse(prefix + context.getPackageName());
-        return new Intent(Intent.ACTION_VIEW, uri);
+        return new Intent(Intent.ACTION_VIEW, uri).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     }
 
     private static void redirectUsingCustomTab(Context context, String url) {

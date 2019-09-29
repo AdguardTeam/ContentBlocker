@@ -39,8 +39,23 @@ public class PackageUtils {
         return "1.0";
     }
 
+    /**
+     * Checks Google Play Store is installed or not
+     *
+     * @param context App context
+     * @return Google Play Store is installed or not
+     */
+    public static boolean isPlayStoreInstalled(Context context){
+        try {
+            context.getPackageManager().getPackageInfo("com.android.vending", 0);
+            return true;
+        } catch (Exception ignored) {
+            return false;
+        }
+    }
+
     @SuppressLint("HardwareIds")
-    public static String getApplicationId(Context context) {
+    static String getApplicationId(Context context) {
         final String androidId = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
         return androidId != null ? androidId : "Android";
     }

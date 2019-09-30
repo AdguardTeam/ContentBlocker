@@ -39,4 +39,4 @@ To become a beta tester, go to Content Blocker's [Google Play page](https://play
 
 ### Translating into other languages
 
-You can help us translate the Content Blocker into other languages. Everything you need to know to start translating is gathered in this [KB article](https://kb.adguard.com/general/adguard-translations). Once you are ready, head to [this website](https://adguard.oneskyapp.com/collaboration/) and scroll down to "Content Blocker" project — even if the translation exists already, you can always suggest a better variant.
+You can help us translate Content Blocker into other languages. Everything you need to know about AdGuard translations is gathered in this [KB article](https://kb.adguard.com/general/adguard-translations). Once you are ready, head to [CrowdIn website](https://crowdin.com/project/adguard-applications/en#/adguard-content-blocker) and start translating — even if the translation already exists, you can always suggest a better variant.

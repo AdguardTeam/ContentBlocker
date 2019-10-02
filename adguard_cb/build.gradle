@@ -18,8 +18,8 @@ android {
         minSdkVersion 21
         targetSdkVersion 28
         applicationId 'com.adguard.android.contentblocker'
-        versionCode 22000003
-        versionName '2.5.2'
+        versionCode 22000004
+        versionName '2.5.3'
         signingConfig signingConfigs.config
     }
 

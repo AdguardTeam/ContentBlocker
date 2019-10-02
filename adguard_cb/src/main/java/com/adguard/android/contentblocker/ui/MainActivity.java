@@ -200,6 +200,9 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
             return;
         }
 
+        // We show notification MAX_RATE_DIALOG_COUNT times or while user didn't push a notification
+        preferencesService.setAppRated(true);
+
         int filledCount = intent.getIntExtra(STARS_COUNT, 0);
         final View dialogLayout = LayoutInflater.from(this).inflate(R.layout.rate_dialog, null);
         final ViewGroup starsLayout = dialogLayout.findViewById(R.id.stars_layout);
@@ -222,7 +225,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         View.OnClickListener buttonsListener = v -> {
             if (v.getId() == R.id.button_submit) {
                 // TODO collect feedback
-                preferencesService.setAppRated(true);
                 showFeedbackSubmitDialog();
             }
             preferencesService.increaseRateAppDialogCount();

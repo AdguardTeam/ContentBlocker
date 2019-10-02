@@ -224,6 +224,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
         View.OnClickListener buttonsListener = v -> {
             if (v.getId() == R.id.button_submit) {
+                // TODO collect feedback
                 showFeedbackSubmitDialog();
             }
             preferencesService.increaseRateAppDialogCount();

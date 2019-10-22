@@ -5,8 +5,6 @@
     <string name="please_wait">منتظر بمانید...</string>
     <string name="main_info">این برنامه یک افزونه برای مرورگرهایی است که از مسدودسازی محتوا پشتیبانی می کنند.\n\nاکنون دو مرورگر چنین قابلیتی دارند:\n\n1. مرورگر اینترنت سامسونگ\n2. مرورگر یاندکس\n\nبا کمک این برنامه شما میتوانید همه تبلیغات در این مرورگرها را مسدود کنید.\n\nهمچنین در تنظیمات میتوانید انتخاب کنید کدام فیلترها استفاده شود.</string>
     <string name="progressGenericErrorText">تعدادی خطا رخ داد!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} فیلتر با موفقیت وارد شد!</string>
-    <string name="importUserRulesErrorResultMessage">خطای وارد کردن دستورات!</string>
     <string name="importUserRulesProgressDialogTitle">وارد کردن در پیشرفت است</string>
     <string name="importUserRulesProgressDialogMessage">در حال بارگیری...</string>
     <string name="checkUpdatesProgressDialogTitle">بررسی بروز رسانی</string>
@@ -112,4 +110,5 @@
     <string name="chrome_dialog_title">میخواهید تبلیغات را در کروم مسدود کنید؟</string>
     <string name="chrome_dialog_text"><![CDATA[از تاریخ 2019، کروم برای آندروئید از هیچ افزونه یا برنامه مسدودسازی تبلیغ پشتیبانی نمی کند.\n شما میتوانید توسعه دهندگان کروم را به افزودن پشتیبانی از AdGuard و سایر مسدودسازهای محتوا ترغیب کنید. برای انجام آن باز دید کنید از<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111"> ردیاب باگ کروم</a> و مشکل را رای داده و بالا بیاورید.]]></string>
     <string name="back">قبلی</string>
+    <string name="import_dialog_hint">آدرس یا مسیر</string>
 </resources>

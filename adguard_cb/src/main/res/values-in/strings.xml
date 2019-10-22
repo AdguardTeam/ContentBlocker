@@ -5,8 +5,6 @@
     <string name="please_wait">Harap tunggu...</string>
     <string name="main_info">Aplikasi ini adalah ekstensi untuk browser yang mendukung pemblokiran konten.\n\nSaat ini ada dua browser seperti itu:\n\n1. Samsung Internet browser\n2. Yandex Browser\n\nDengan aplikasi ini Anda dapat memblokir semua iklan dalam browser ini.\n\nTambahan lagi, Anda dapat memilih penyaring yang digunakan dalam Pengaturan.</string>
     <string name="progressGenericErrorText">Terjadi kesalahan!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} penyaring berhasil diimpor!</string>
-    <string name="importUserRulesErrorResultMessage">Terjadi kesalahan saat mengimpor penyaring!</string>
     <string name="importUserRulesProgressDialogTitle">Impor berlangsung</string>
     <string name="importUserRulesProgressDialogMessage">Memuat...</string>
     <string name="checkUpdatesProgressDialogTitle">Mencari pembaruan</string>

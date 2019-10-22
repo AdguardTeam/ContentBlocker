@@ -5,8 +5,7 @@
     <string name="please_wait">Bitte warten...</string>
     <string name="main_info">Diese Anwendung ist eine Erweiterung für Internet-Browser, die das Blockieren von Inhalten unterstützen.\n\nAktuell gibt es zwei Browser:\n\n1. Samsung Internet-Browser\n2. Yandex Browser\n\nMit Hilfe dieser Anwendung können Sie alle Werbungen in diesen Browsern blockieren.\n\nZusätzlich können Sie in den Einstellungen auswählen, welche Filter Sie nutzen wollen.</string>
     <string name="progressGenericErrorText">Ein Fehler ist aufgetreten!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} Filter erfolgreich importiert!</string>
-    <string name="importUserRulesErrorResultMessage">Fehler beim Importieren der Filter!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} Filter-Regel(n) erfolgreich importiert!</string>
     <string name="importUserRulesProgressDialogTitle">Importvorgang läuft</string>
     <string name="importUserRulesProgressDialogMessage">Laden...</string>
     <string name="checkUpdatesProgressDialogTitle">Auf Updates prüfen</string>
@@ -113,4 +112,5 @@
     <string name="chrome_dialog_title">Möchten Sie Werbung in Chrome blockieren?</string>
     <string name="chrome_dialog_text"><![CDATA[Ab 2019 unterstützt Chrome für Android keine Erweiterungen oder Apps mehr zum Blockieren von Werbung.\nSie können Chrome-Entwickler auffordern, eine Unterstützung für AdGuard und andere Inhaltsblocker hinzuzufügen. Besuchen Sie dazu die Seite <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome Bug Tracker</a> und votieren Sie dafür.]]></string>
     <string name="back">Zurück</string>
+    <string name="import_dialog_hint">URL oder Pfad</string>
 </resources>

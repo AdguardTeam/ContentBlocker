@@ -5,8 +5,6 @@
     <string name="please_wait">Molimo pričekajte...</string>
     <string name="main_info">Ova aplikacija je dodatak za preglednike koji podržavaju blokiranje elemenata.\n\nTrenutno postoje dva takva preglednika:\n\n1. Samsung Internet browser\n2. Yandex Browser\n\nUz pomoć ove aplikacije možete blokirati sve oglase u tim preglednicima.\n\nTakođer, možete odabrati koje filtere želite koristiti u postavkama.</string>
     <string name="progressGenericErrorText">Dogodila se neka pogreška!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} filter(a) uvezen(o) uspješno!</string>
-    <string name="importUserRulesErrorResultMessage">Pogreška uvoženja filtera!</string>
     <string name="importUserRulesProgressDialogTitle">Uvoz u tijeku</string>
     <string name="importUserRulesProgressDialogMessage">Učitavanje...</string>
     <string name="checkUpdatesProgressDialogTitle">Provjera ažuriranja</string>

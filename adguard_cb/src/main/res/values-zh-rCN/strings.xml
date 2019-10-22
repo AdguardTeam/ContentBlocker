@@ -5,8 +5,6 @@
     <string name="please_wait">请稍候...</string>
     <string name="main_info">此应用为支持内容拦截的浏览器的扩展。 \n\n当前有两种支持内容拦截的浏览器：\n\n1. Samsung Internet browser\n2. Yandex Browser\n\n有此应用的帮助，您可以拦截以上浏览器内的所有广告。\n\n此外，您可在设置内选择要使用的过滤器。</string>
     <string name="progressGenericErrorText">发生错误！</string>
-    <string name="importUserRulesSuccessResultMessage">{0} 个过滤器成功导入！</string>
-    <string name="importUserRulesErrorResultMessage">导入过滤器错误！</string>
     <string name="importUserRulesProgressDialogTitle">导入进行中</string>
     <string name="importUserRulesProgressDialogMessage">加载中...</string>
     <string name="checkUpdatesProgressDialogTitle">检查更新</string>

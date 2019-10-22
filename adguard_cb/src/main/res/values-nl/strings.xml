@@ -5,8 +5,8 @@
     <string name="please_wait">Even geduld...</string>
     <string name="main_info">Deze toepassing is een invoegtoepassing voor browsers die blokkering van ongewenste inhoud ondersteunen.\n\nOp dit moment zijn er 2 dergelijke browsers:\n\n1. Samsung Internet Browser\n2. Yandex Browser\n\nMet behulp van deze toepassing kan je alle advertenties in deze browsers blokkeren.\n\nOnder \"Instellingen\" kan je selecteren welke filters je wil gebruiken.</string>
     <string name="progressGenericErrorText">Fout opgetreden !</string>
-    <string name="importUserRulesSuccessResultMessage">{0} filter(s) sucesvol geïmporteerd !</string>
-    <string name="importUserRulesErrorResultMessage">Fout bij importeren van filters !</string>
+    <string name="importUserRulesSuccessResultMessage">{0} filter regel(s) succesvol geïmporteerd!</string>
+    <string name="importUserRulesErrorResultMessage">Fout bij importeren van filter regels!</string>
     <string name="importUserRulesProgressDialogTitle">Bezig met importeren</string>
     <string name="importUserRulesProgressDialogMessage">Laden...</string>
     <string name="checkUpdatesProgressDialogTitle">Updates controleren</string>
@@ -112,4 +112,5 @@
     <string name="chrome_dialog_title">Advertenties blokkeren in Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[Vanaf 2019 ondersteunt Chrome geen ad block extensies of apps meer.\nJe kan de Chrome ontwikkelaars aansporen om ondersteuning toe te voegen voor AdGuard en andere inhoudsblokkering apps. Doe dit door te gaan naar <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> en en upvote dit item.]]></string>
     <string name="back">Terug</string>
+    <string name="import_dialog_hint">URL of pad</string>
 </resources>

@@ -5,8 +5,6 @@
     <string name="please_wait">الرجاء الانتظار...</string>
     <string name="main_info">هذا التطبيق هو امتداد للمتصفحات التي تدعم حظر المحتوى.\n:يوجد حاليًا متصفحان من هذا القبيل\n\n1. متصفح الإنترنت سامسونج\n2. المتصفح ياندكس\n\nبمساعدة هذا التطبيق ، يمكنك حظر جميع الإعلانات في هذه المتصفحات\nكما يمكنك تحديد المرشحات لاستخدامها في الإعدادات.</string>
     <string name="progressGenericErrorText">! حدث خطا ما</string>
-    <string name="importUserRulesSuccessResultMessage">{0}!تم استيراد الفلتر بنجاح</string>
-    <string name="importUserRulesErrorResultMessage">! خطا في استيراد الفلاتر</string>
     <string name="importUserRulesProgressDialogTitle">الاستيراد قيد التقدم</string>
     <string name="importUserRulesProgressDialogMessage">يتم الآن تحميل...</string>
     <string name="checkUpdatesProgressDialogTitle">التحقق من  التحديثات</string>
@@ -99,4 +97,5 @@
     <string name="go_to_products">الذهاب إلى المنتجات</string>
     <string name="select_browser_dialog_adguard_products_title">ليس تماما ما تحتاجه؟</string>
     <string name="select_browser_dialog_adguard_products_message">الأخرى على موقعنا AdGuard  تحقق من منتجات</string>
+    <string name="import_dialog_hint">أو مسارURLعنوان</string>
 </resources>

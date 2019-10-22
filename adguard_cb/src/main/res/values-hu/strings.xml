@@ -5,8 +5,6 @@
     <string name="please_wait">Kérem várjon...</string>
     <string name="main_info">Ez a program egy szűrő az azt támogató böngészőkhöz.\n\nJelenleg két ilyen böngésző van:\n\n1. Samsung Internet böngésző\n2. Yandex Böngésző\n\nEnnek a program a segítségével megtudjuk valósítani a hirdetések szűrését.\n\nKitudod választani a kívánt szűrőket a Beállítások menüpont alatt.</string>
     <string name="progressGenericErrorText">Valamilyen hiba történt!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} szűrő sikeren importálva!</string>
-    <string name="importUserRulesErrorResultMessage">Szűrő importálási hiba!</string>
     <string name="importUserRulesProgressDialogTitle">Importálás folyamatban</string>
     <string name="importUserRulesProgressDialogMessage">Betöltés...</string>
     <string name="checkUpdatesProgressDialogTitle">Frissítések ellenőrzése</string>

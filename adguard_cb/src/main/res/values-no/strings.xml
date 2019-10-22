@@ -5,8 +5,6 @@
     <string name="please_wait">Vennligst vent...</string>
     <string name="main_info">Denne applikasjonen er en utvidelse for nettlesere som støtter innholdsblokkering.\n\nFor øyeblikket er det kun to slike nettlesere:\n\n1. Samsung Internet Browser\n2. Yandex Browser\n\nVed hjelp av denne applikasjonen kan du blokkere alle annonser i disse nettleserne.\n\nDu kan også velge hvilke filtre som skal brukes i innstillingene.</string>
     <string name="progressGenericErrorText">En feil oppstod!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} filtre importert!</string>
-    <string name="importUserRulesErrorResultMessage">En feil oppstod under importeringen av filtrene!</string>
     <string name="importUserRulesProgressDialogTitle">Importering pågår</string>
     <string name="importUserRulesProgressDialogMessage">Laster...</string>
     <string name="checkUpdatesProgressDialogTitle">Ser etter oppdateringer</string>

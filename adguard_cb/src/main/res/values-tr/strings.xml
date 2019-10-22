@@ -5,8 +5,6 @@
     <string name="please_wait">Lütfen bekleyin...</string>
     <string name="main_info">Bu uygulama, içerik engellemeyi destekleyen tarayıcılar için bir eklentidir.\n\nŞu anda içerik engelleme teknolojisine sahip iki tarayıcı var:\n\n1. Samsung Internet Browser\n2. Yandex Browser\n\nBu uygulamanın desteği ile bu tarayıcılarda tüm reklamları engelleyebilirsiniz.\n\nAyrıca, Ayarlardan hangi filtreleri kullanacağınızı seçebilirsiniz.</string>
     <string name="progressGenericErrorText">Bazı hatalar oluştu!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} filtre(leri) başarıyla içe aktarıldı!</string>
-    <string name="importUserRulesErrorResultMessage">Filtreleri aktarırken hata oluştu!</string>
     <string name="importUserRulesProgressDialogTitle">Aktarma sürüyor</string>
     <string name="importUserRulesProgressDialogMessage">Yükleniyor...</string>
     <string name="checkUpdatesProgressDialogTitle">Güncellemeler denetleniyor</string>

@@ -5,8 +5,6 @@
     <string name="please_wait">Palaukite...</string>
     <string name="main_info">Ši programa yra naršyklių, palaikančių turinio blokavimą, plėtinys.\n\nŠiuo metu yra dvi tokios naršyklės:\n\n1. Samsung Internet Browser\n2. Yandex Browser\n\nNaudodamiesi šia programa galite užblokuoti visas reklamas šiose naršyklėse.\n\nTaip pat nustatymuose galite pasirinkti, kuriuos filtrus naudoti.</string>
     <string name="progressGenericErrorText">Įvyko klaida!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} filtro (-ų) importas  sėkmingas!</string>
-    <string name="importUserRulesErrorResultMessage">Importuojant filtrus įvyko klaida!</string>
     <string name="importUserRulesProgressDialogTitle">Importuojama</string>
     <string name="importUserRulesProgressDialogMessage">Įkeliama...</string>
     <string name="checkUpdatesProgressDialogTitle">Programos naujinimas</string>

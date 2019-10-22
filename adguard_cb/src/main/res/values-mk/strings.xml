@@ -5,8 +5,6 @@
     <string name="please_wait">Ве молиме почекајте...</string>
     <string name="main_info">Оваа апликација е екстензија за прелистувачи кои поддржуваат блокирање на содржината.\n\nМоментално има два такви прелистувачи:\n\n1. Samsung Интернет Прелистувач\n2. Yandex Прелистувач\n\nСо помош на оваа апликација, вие можете да ги блокирате сите огласи во овие прелистувачи.\n\nИсто така, вие можите да изберете кои филтри да ги користите во Поставки.</string>
     <string name="progressGenericErrorText">Се случи некоја грешка!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} филтер(и) внесени успешно!</string>
-    <string name="importUserRulesErrorResultMessage">Грешка при внесувањето на филтрите!</string>
     <string name="importUserRulesProgressDialogTitle">Внесувањето е во напредок</string>
     <string name="importUserRulesProgressDialogMessage">Вчитување...</string>
     <string name="checkUpdatesProgressDialogTitle">Проверка за ажурирања</string>

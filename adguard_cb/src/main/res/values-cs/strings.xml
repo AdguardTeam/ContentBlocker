@@ -5,8 +5,8 @@
     <string name="please_wait">Prosím čekejte...</string>
     <string name="main_info">Tato aplikace je rozšířením pro prohlížeče, které podporují blokování obsahu.\n\nMomentálně jsou zde 2 takové prohlížeče:\n\n1. Samsung Internet Browser\n2. Yandex Browser\n\nS pomocí této aplikace můžete blokovat všechny reklamy v těchto prohlížečích.\n\nZároveň si můžete v Nastavení zvolit, které filtry chcete používat.</string>
     <string name="progressGenericErrorText">Vyskytla se nějaká chyba!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} filtrů bylo úspěšně naimportováno!</string>
-    <string name="importUserRulesErrorResultMessage">Chyba při importu filtrů!</string>
+    <string name="importUserRulesSuccessResultMessage">Úspěšně naimportovaných pravidel filtrování: {0}</string>
+    <string name="importUserRulesErrorResultMessage">Chyba při exportu pravidel filtrování!</string>
     <string name="importUserRulesProgressDialogTitle">Probíhá import</string>
     <string name="importUserRulesProgressDialogMessage">Načítám...</string>
     <string name="checkUpdatesProgressDialogTitle">Kontroluji aktualizace</string>
@@ -112,4 +112,5 @@
     <string name="chrome_dialog_title">Chcete blokovat reklamy v Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[Od roku 2019 Chrome pro Android nepodporuje žádná rozšíření nebo aplikace pro blokování reklam.\nMůžete požádat vývojáře prohlížeče Chrome, aby přidali podporu pro AdGuard a další blokátory obsahu. Chcete-li tak učinit, navštivte <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> a upozorněte na problém.]]></string>
     <string name="back">Zpět</string>
+    <string name="import_dialog_hint">URL nebo cesta</string>
 </resources>

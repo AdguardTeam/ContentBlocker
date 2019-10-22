@@ -5,8 +5,8 @@
     <string name="please_wait">Por favor espere...</string>
     <string name="main_info">Esta aplicación es una extensión para navegadores que admiten el bloqueo de contenido.\n\nEstos son los navegadores compatibles:\n\n1. Navegador de Internet Samsung\n2. Yandex Browser\n\nCon la ayuda de esta aplicación, puede bloquear todos los anuncios en estos navegadores.\n\nAdemás, puede adaptar y seleccionar qué filtros utilizar en la configuración.</string>
     <string name="progressGenericErrorText">¡Se ha producido un error!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} filtros importados correctamente.</string>
-    <string name="importUserRulesErrorResultMessage">¡Error al importar filtros!, intente nuevamente</string>
+    <string name="importUserRulesSuccessResultMessage">¡{0} filtros importados correctamente!</string>
+    <string name="importUserRulesErrorResultMessage">¡Error importando reglas de filtro!</string>
     <string name="importUserRulesProgressDialogTitle">Obteniendo filtros</string>
     <string name="importUserRulesProgressDialogMessage">Cargando...</string>
     <string name="checkUpdatesProgressDialogTitle">Buscar actualizaciones</string>
@@ -112,4 +112,5 @@
     <string name="chrome_dialog_title">¿Quiere bloquear anuncios en Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[A partir de 2019, Chrome para Android no es compatible con ninguna extensión o app de bloqueo de anuncios.\nPuede instar a los desarrolladores de Chrome a que agreguen soporte para AdGuard y otros bloqueadores de contenido. Para hacer esto, visite <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">el sistema de seguimiento de errores de Google</a> y vote por el problema.]]></string>
     <string name="back">Regresar</string>
+    <string name="import_dialog_hint">URL o ruta</string>
 </resources>

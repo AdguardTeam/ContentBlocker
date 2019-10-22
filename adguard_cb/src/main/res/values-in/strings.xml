@@ -80,7 +80,6 @@
     <string name="rate_app_notification_title">Nilai kami</string>
     <string name="notification_channel_rate_name">Nilai</string>
     <string name="notification_channel_rate_description">Pemberitahuan tentang nilai aplikasi</string>
-    <string name="rate_app_summary">Menikmati AdGuard Pemblokir Konten? Beri kami 5 bintang di Google Play</string>
     <string name="confirmClearUserFilterMessage">Anda yakin ingin menghapus penyaring pengguna? Operasi ini tidak dapat diurungkan.</string>
     <string name="confirmRemoveUserRuleMessage">Anda yakin ingin menghapus aturan ini? Operasi ini tidak dapat diurungkan.</string>
     <string name="clear_filters_cache_title">Hapus cache penyaring</string>

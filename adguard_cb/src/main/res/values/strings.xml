@@ -112,5 +112,6 @@
     <string name="chrome_dialog_title">Want to block ads in Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[As of 2019, Chrome for Android does not support any ad blocking extensions or apps.\nYou can urge Chrome developers on adding support for AdGuard and other content blockers. To do so, visit <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> and upvote the issue.]]></string>
     <string name="back">Back</string>
+    <string name="close">Close</string>
     <string name="import_dialog_hint">URL or path</string>
 </resources>

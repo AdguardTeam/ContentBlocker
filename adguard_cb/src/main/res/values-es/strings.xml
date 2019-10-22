@@ -82,7 +82,6 @@
     <string name="rate_app_notification_title">Calífiquenos</string>
     <string name="notification_channel_rate_name">Tarifas</string>
     <string name="notification_channel_rate_description">Notificaciones sobre las tarifas de la app</string>
-    <string name="rate_app_summary">¿Disfruta de Bloqueador de contenido AdGuard? Califíquenos 5 estrellas en Google Play</string>
     <string name="confirmClearUserFilterMessage">¿Está seguro de que desea borrar los filtros? Esta operación no se puede deshacer.</string>
     <string name="confirmRemoveUserRuleMessage">¿Está seguro de que desea eliminar esta regla? Esta operación no se puede deshacer.</string>
     <string name="clear_filters_cache_title">Borrar la caché del filtro</string>

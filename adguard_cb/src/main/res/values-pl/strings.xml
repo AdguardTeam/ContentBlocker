@@ -80,7 +80,6 @@
     <string name="rate_app_notification_title">Oceń nas</string>
     <string name="notification_channel_rate_name">Oceny</string>
     <string name="notification_channel_rate_description">Powiadomienia o ocenach aplikacji</string>
-    <string name="rate_app_summary">Podoba ci się Bloker treści AdGuard? Oceń nas na 5 gwiazdek w Google Play</string>
     <string name="confirmClearUserFilterMessage">Czy na pewno chcesz wyczyścić filtr użytkownika? Ta operacja nie może zostać cofnięta.</string>
     <string name="confirmRemoveUserRuleMessage">Czy na pewno chcesz usunąć tę regułę? Ta operacja nie może zostać cofnięta.</string>
     <string name="clear_filters_cache_title">Wyczyść pamięć podręczną filtru</string>

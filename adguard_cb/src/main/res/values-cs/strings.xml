@@ -82,7 +82,7 @@
     <string name="rate_app_notification_title">Ohodnoťte nás</string>
     <string name="notification_channel_rate_name">Hodnocení</string>
     <string name="notification_channel_rate_description">Oznámení o hodnocení aplikace</string>
-    <string name="rate_app_summary">Užíváte si Blokátor obsahu AdGuard? Dejte nám 5 hvězd v Obchodě Play</string>
+    <string name="rate_app_summary">Užíváte si Blokátor obsahu AdGuard? Ohodnoťte nás v Obchodě Play</string>
     <string name="confirmClearUserFilterMessage">Opravdu chcete vyčistit uživatelský filtr? Tato operace nemůže být vrácena.</string>
     <string name="confirmRemoveUserRuleMessage">Opravdu chcete smazat toto pravidlo? Tato operace nemůže být vrácena.</string>
     <string name="clear_filters_cache_title">Vyčistit cache filtrů</string>
@@ -112,5 +112,6 @@
     <string name="chrome_dialog_title">Chcete blokovat reklamy v Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[Od roku 2019 Chrome pro Android nepodporuje žádná rozšíření nebo aplikace pro blokování reklam.\nMůžete požádat vývojáře prohlížeče Chrome, aby přidali podporu pro AdGuard a další blokátory obsahu. Chcete-li tak učinit, navštivte <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> a upozorněte na problém.]]></string>
     <string name="back">Zpět</string>
+    <string name="close">Zavřít</string>
     <string name="import_dialog_hint">URL nebo cesta</string>
 </resources>

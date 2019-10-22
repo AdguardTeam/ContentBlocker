@@ -112,5 +112,6 @@
     <string name="chrome_dialog_title">Chromeで広告をブロックしたいですか？</string>
     <string name="chrome_dialog_text"><![CDATA[2019年現在、Android版Chromeは広告ブロック拡張機能やアプリをサポートしていません。\nChrome開発者にAdGuardおよびその他のコンテンツブロッカーのサポートの追加を促すことができます。そうするには、<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chromeバグトラッカー</a>でこの問題を投票して優先度をアップさせてください。]]></string>
     <string name="back">戻る</string>
+    <string name="close">閉じる</string>
     <string name="import_dialog_hint">URLまたはパス</string>
 </resources>

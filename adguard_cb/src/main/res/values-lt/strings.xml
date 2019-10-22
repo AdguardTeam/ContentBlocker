@@ -82,7 +82,6 @@
     <string name="rate_app_notification_title">Įvertinkite mus</string>
     <string name="notification_channel_rate_name">Reitingai</string>
     <string name="notification_channel_rate_description">Pranešimai apie programos reitingus</string>
-    <string name="rate_app_summary">Jums patinka AdGuard Content Blocker? Įvertinkite mus 5 žvaigždutėmis Google Play</string>
     <string name="confirmClearUserFilterMessage">Ar tikrai norite išvalyti naudotojo filtrą? Šio veiksmo negalima bus atšaukti.</string>
     <string name="confirmRemoveUserRuleMessage">Ar tikrai norite ištrinti šią taisyklę? Šios veiksmo negalima bus atšaukti.</string>
     <string name="clear_filters_cache_title">Išvalyti filtro talpyklą</string>

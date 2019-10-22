@@ -82,7 +82,7 @@
     <string name="rate_app_notification_title">Оцените приложение</string>
     <string name="notification_channel_rate_name">Оценки</string>
     <string name="notification_channel_rate_description">Уведомления об оценках приложения</string>
-    <string name="rate_app_summary">Наслаждаетесь приложением AdGuard Content Blocker? Поставьте нам 5 звезд в Google Play </string>
+    <string name="rate_app_summary">Вам нравится приложение AdGuard Content Blocker? Поставьте нам оценку в Google Play</string>
     <string name="confirmClearUserFilterMessage">Вы уверены что хотите очистить собственный фильтр? Данную операцию нельзя отменить.</string>
     <string name="confirmRemoveUserRuleMessage">Вы уверены, что хотите удалить это правило? Данную операцию нельзя отменить.</string>
     <string name="clear_filters_cache_title">Очистить кеш фильтров</string>
@@ -112,5 +112,6 @@
     <string name="chrome_dialog_title">Хотите блокировать рекламу в Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[Начиная с 2019 года Chrome для Android не поддерживает расширения и приложения для блокировки рекламы.\Вы можете обратиться к разработчикам Chrome с просьбой о добавлении поддержки для AdGuard и других блокировщиков контента. Для этого посетите <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> и проголосуйте за решение проблемы.]]></string>
     <string name="back">Назад</string>
+    <string name="close">Закрыть</string>
     <string name="import_dialog_hint">URL или путь</string>
 </resources>

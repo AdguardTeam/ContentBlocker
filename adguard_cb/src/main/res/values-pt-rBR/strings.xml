@@ -82,7 +82,6 @@
     <string name="rate_app_notification_title">Avalie-nos</string>
     <string name="notification_channel_rate_name">Avaliação</string>
     <string name="notification_channel_rate_description">Notificações sobre avaliação do aplicativo</string>
-    <string name="rate_app_summary">Esta gostando do bloqueador de anúncios do AdGuard? Avalie-nos com 5 estrelas no Google Play</string>
     <string name="confirmClearUserFilterMessage">Você tem certeza que deseja limpar o filtro de usuário? Esta ação não poderá ser desfeita.</string>
     <string name="confirmRemoveUserRuleMessage">Você tem certeza que deseja excluir esta regra? Esta ação não poderá ser desfeita.</string>
     <string name="clear_filters_cache_title">Limpar cache de filtros</string>

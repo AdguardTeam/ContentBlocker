@@ -82,7 +82,7 @@
     <string name="rate_app_notification_title">Rate us</string>
     <string name="notification_channel_rate_name">Ratings</string>
     <string name="notification_channel_rate_description">Notifications about app ratings</string>
-    <string name="rate_app_summary">Enjoying AdGuard Content Blocker? Rate us 5 stars on Google Play</string>
+    <string name="rate_app_summary">Enjoying AdGuard Content Blocker? Rate us on Google Play</string>
     <string name="confirmClearUserFilterMessage">Are you sure you want to clear the user filter? This operation cannot be undone.</string>
     <string name="confirmRemoveUserRuleMessage">Are you sure you want to delete this rule? This operation cannot be undone.</string>
     <string name="clear_filters_cache_title">Clear the filter cache</string>

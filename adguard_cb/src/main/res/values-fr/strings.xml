@@ -5,8 +5,6 @@
     <string name="please_wait">Veuillez patienter...</string>
     <string name="main_info">Cette application est une extension pour les navigateurs supportant le blocage de contenu.\n\nActuellement, deux navigateurs de ce type existent :\n\n1. Samsung Internet Browser\n2. Yandex Browser\n\nGrâce à cette application, vous pouvez bloquer toutes les publicités dans ces navigateurs.\n\nVous pouvez également sélectionner les filtres de votre choix dans les Paramètres.</string>
     <string name="progressGenericErrorText">Une erreur est survenue !</string>
-    <string name="importUserRulesSuccessResultMessage">{0} filtre(s) ont été importé(s) avec succès !</string>
-    <string name="importUserRulesErrorResultMessage">Erreur lors de l\'importation des filtres !</string>
     <string name="importUserRulesProgressDialogTitle">Importation en cours</string>
     <string name="importUserRulesProgressDialogMessage">Chargement...</string>
     <string name="checkUpdatesProgressDialogTitle">Vérification des mises à jour</string>
@@ -82,7 +80,7 @@
     <string name="rate_app_notification_title">Notez-nous</string>
     <string name="notification_channel_rate_name">Notes</string>
     <string name="notification_channel_rate_description">Notifications sur l\'évaluation de l\'appli</string>
-    <string name="rate_app_summary">Avez-vous apprécié le Bloqueur de contenu AdGuard ? Notez-nous de 5 étoiles sur Google Play</string>
+    <string name="rate_app_summary">Avez-vous apprécié le Bloqueur de contenu AdGuard ? Notez-nous sur Google Play</string>
     <string name="confirmClearUserFilterMessage">Êtes-vous sûr(e) de vouloir effacer le filtre utilisateur ? Cette opération ne peut pas être annulée.</string>
     <string name="confirmRemoveUserRuleMessage">Êtes vous certain de vouloir supprimer cette règle? Cette opération ne peut pas être annulée.</string>
     <string name="clear_filters_cache_title">Vider le cache du filtre</string>
@@ -112,4 +110,6 @@
     <string name="chrome_dialog_title">Souhaitez-vous bloquer la pub sur Chrome ?</string>
     <string name="chrome_dialog_text"><![CDATA[Chrome pour Android ne soutient plus aucune extension ou application bloqueuse de pub dés 2019.\nVous pouvez inciter les développeurs de Chrome à autoriser la compatibilité avec AdGuard et d'autres bloqueurs de contenu. Pour cela il faudra vous rendre sur <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> et voter pour relever le problème.]]></string>
     <string name="back">Retour</string>
+    <string name="close">Fermer</string>
+    <string name="import_dialog_hint">URL ou chemin d’accès</string>
 </resources>

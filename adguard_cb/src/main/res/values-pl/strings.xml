@@ -5,8 +5,6 @@
     <string name="please_wait">Proszę czekać...</string>
     <string name="main_info">Aplikacja ta jest rozszerzeniem dla przeglądarek, które wspierają blokowanie zawartości.\n\nObecnie istnieją dwie takie przeglądarki:\n\n 1. Samsung Internet Browser\n2. Yandex Browser\n\nZa pomocą tej aplikacji możesz zablokować wszystkie reklamy w tych przeglądarkach.\n\nMożesz też wybrać filtry, które mają być użyte w Ustawieniach.</string>
     <string name="progressGenericErrorText">Wystąpił błąd!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} filtr(ów) importowano z powodzeniem!</string>
-    <string name="importUserRulesErrorResultMessage">Wystąpił błąd podczas importowania filtrów!</string>
     <string name="importUserRulesProgressDialogTitle">Import w toku</string>
     <string name="importUserRulesProgressDialogMessage">Wczytuję...</string>
     <string name="checkUpdatesProgressDialogTitle">Sprawdzanie aktualizacji</string>
@@ -82,7 +80,6 @@
     <string name="rate_app_notification_title">Oceń nas</string>
     <string name="notification_channel_rate_name">Oceny</string>
     <string name="notification_channel_rate_description">Powiadomienia o ocenach aplikacji</string>
-    <string name="rate_app_summary">Podoba ci się Bloker treści AdGuard? Oceń nas na 5 gwiazdek w Google Play</string>
     <string name="confirmClearUserFilterMessage">Czy na pewno chcesz wyczyścić filtr użytkownika? Ta operacja nie może zostać cofnięta.</string>
     <string name="confirmRemoveUserRuleMessage">Czy na pewno chcesz usunąć tę regułę? Ta operacja nie może zostać cofnięta.</string>
     <string name="clear_filters_cache_title">Wyczyść pamięć podręczną filtru</string>
@@ -112,4 +109,5 @@
     <string name="chrome_dialog_title">Chcesz zablokować reklamy w Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[Od 2019 r. Chrome na Android nie obsługuje żadnych rozszerzeń ani aplikacji blokujących reklamy. \nMożesz zachęcić programistów Chrome do dodania wsparcia AdGuard i innych programów blokujących zawartość. Aby to zrobić, odwiedź <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> i przegłosuj problem.]]></string>
     <string name="back">Wróć</string>
+    <string name="import_dialog_hint">Adres URL lub ścieżka</string>
 </resources>

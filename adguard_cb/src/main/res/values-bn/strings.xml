@@ -5,8 +5,6 @@
     <string name="please_wait">অনুগ্রহপূর্বক অপেক্ষা করুন...</string>
     <string name="main_info">এই অ্যাপ্লিকেশন ব্রাউজারের জন্য একটি এক্সটেনশন যা কন্টেন্ট বা বিজ্ঞাপন ব্লক করতে সাহায্য করে।\n\nবর্তমানে দুটি ব্রাউজার আছে:\n\n১. স্যামসাং ইন্টারনেট ব্রাউজার\n২. ইয়ান্ডেক্স ব্রাউজার\n\nএই অ্যাপ্লিকেশনের সাহায্যে, আপনি এই ব্রাউজারগুলির সমস্ত বিজ্ঞাপনগুলিকে ব্লক করতে পারবেন।\n\nএছাড়াও, আপনি সেটিংস ব্যবহার করে যে কোন ফিল্টার নির্বাচন করতে পারবেন।</string>
     <string name="progressGenericErrorText">কিছু ত্রুটি ঘটেছে!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} টি  ফিল্টার সফলভাবে ইমপোর্ট করা হয়েছে!</string>
-    <string name="importUserRulesErrorResultMessage">ফিল্টার ইমপোর্ট করার সময় ত্রুটি!</string>
     <string name="importUserRulesProgressDialogTitle">ইমপোর্ট প্রক্রিয়া চলছে</string>
     <string name="importUserRulesProgressDialogMessage">লোড হচ্ছে ...</string>
     <string name="checkUpdatesProgressDialogTitle">আপডেটের জন্য চেক করা হচ্ছে</string>

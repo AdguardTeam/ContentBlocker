@@ -5,8 +5,6 @@
     <string name="please_wait">Калі ласка пачакайце...</string>
     <string name="main_info">Гэты дадатак з\'яўляецца пашырэннем для браўзараў, што падтрымваюць блакаванне кантэнту.\n\nУ гэты час існуе два такія браўзары:\n\n1. Samsung Internet Browser\n2. Браўзар Яндэкса\n\nЗ дапамогай гэтага дадатку вы можаце заблакаваць усе рэкламныя аб\'явы ў гэтых браўзарах.\n\nАпроч таго, вы можаце выбраць, якія фільтры выкарыстоўваць у наладах.</string>
     <string name="progressGenericErrorText">Адбылася нейкая памылка!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} фільтр(-аў) паспяхова імпартаваны!</string>
-    <string name="importUserRulesErrorResultMessage">Памылка імпарту фільтраў!</string>
     <string name="importUserRulesProgressDialogTitle">Імпартаванне ў працэсе</string>
     <string name="importUserRulesProgressDialogMessage">Загрузка...</string>
     <string name="checkUpdatesProgressDialogTitle">Праверка абнаўленняў</string>

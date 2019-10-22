@@ -5,8 +5,6 @@
     <string name="please_wait">Моля, изчакайте...</string>
     <string name="main_info">Това приложение е разширение за браузъри, които поддържат блокиране на съдържание.\n\nВ момента има два такива браузъра:\n\n1. Интернет браузър на Samsung\n2. Yandex браузър\n\nС помощта на това приложение можете да блокирате всички реклами в тези браузъри.\n\nСъщо така, можете да изберете кои филтри да използвате в Настройки.</string>
     <string name="progressGenericErrorText">Възьникна някаква грешка!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} филтър(а) е(са) импортиран(и) успешно!</string>
-    <string name="importUserRulesErrorResultMessage">Грешка при импортиране на филтри!</string>
     <string name="importUserRulesProgressDialogTitle">В ход е импортиране</string>
     <string name="importUserRulesProgressDialogMessage">Зареждане…</string>
     <string name="checkUpdatesProgressDialogTitle">Проверка за ъпдейти</string>

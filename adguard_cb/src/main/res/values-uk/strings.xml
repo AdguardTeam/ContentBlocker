@@ -5,8 +5,6 @@
     <string name="please_wait">Будь ласка, зачекайте...</string>
     <string name="main_info">Цей додаток працює як розширення для браузерів, які підтримують блокування небажаного контенту.\nНа даний момент це два браузера:\n1. Samsung Internet Browser\n2. Yandex Browser\nЗа допомогою цього додатку ви зможете заблокувати в цих браузерах всю рекламу.\nКрім того, в налаштуваннях ви можете налаштувати використовувані фільтри.</string>
     <string name="progressGenericErrorText">Виникла помилка!</string>
-    <string name="importUserRulesSuccessResultMessage">Імпортовано {0} фільтрів!</string>
-    <string name="importUserRulesErrorResultMessage">Помилка імпортування фільтрів!</string>
     <string name="importUserRulesProgressDialogTitle">Імпортування...</string>
     <string name="importUserRulesProgressDialogMessage">Завантаження...</string>
     <string name="checkUpdatesProgressDialogTitle">Перевірка оновлень</string>

@@ -5,8 +5,6 @@
     <string name="please_wait">Čakajte prosím...</string>
     <string name="main_info">Táto aplikácia je rozšírením pre prehliadače, ktoré podporujú blokovanie obsahu.\n\nAktuálne sú podporované tieto dva prehliadače:\n\n1. Samsung internetový prehliadač\n2. Yandex prehliadač\n\nS pomocou tejto aplikácie môžete blokovať všetky reklamy v týchto prehliadačoch.\n\nTiež môžete v Nastaveniach zvoliť, ktoré filtre sa majú používať.</string>
     <string name="progressGenericErrorText">Objavila sa nejaká chyba!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} filter (filtre) bol úspešne importovaný!</string>
-    <string name="importUserRulesErrorResultMessage">Chyba pri importe filtrov!</string>
     <string name="importUserRulesProgressDialogTitle">Import prebieha</string>
     <string name="importUserRulesProgressDialogMessage">Zavádza sa...</string>
     <string name="checkUpdatesProgressDialogTitle">Kontrola aktualizácií</string>

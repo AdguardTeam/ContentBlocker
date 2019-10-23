@@ -5,9 +5,9 @@
     <string name="please_wait">잠시 기다려주세요...</string>
     <string name="main_info">본 앱은 콘텐츠 차단을 지원하는 브라우저를 위한 확장 앱입니다.\n\n현재 두 가지 브라우저가 콘텐츠 차단 기능을 지원합니다:\n\n1. 삼성 인터넷 브라우저\n2. 얀덱스 브라우저\n\n본 앱을 통해 이 브라우저에서 모든 광고를 차단할 수 있습니다.\n\n설정 메뉴에서 어떤 필터를 사용할지 고를 수 있습니다.</string>
     <string name="progressGenericErrorText">오류가 발생했습니다!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} 개의 필터를 성공적으로 가져왔습니다!</string>
-    <string name="importUserRulesErrorResultMessage">필터 가져오기 오류!</string>
-    <string name="importUserRulesProgressDialogTitle">가져오는 중</string>
+    <string name="importUserRulesSuccessResultMessage">{0} 개의 필터 규칙을 성공적으로 가져왔습니다!</string>
+    <string name="importUserRulesErrorResultMessage">필터 규칙 가져오기 오류!</string>
+    <string name="importUserRulesProgressDialogTitle">가져오기가 진행 중입니다</string>
     <string name="importUserRulesProgressDialogMessage">로딩 중...</string>
     <string name="checkUpdatesProgressDialogTitle">업데이트 확인 중</string>
     <string name="checkUpdatesProgressDialogMessage">업데이트 확인 중입니다. 잠시 기다려주세요...</string>
@@ -82,7 +82,7 @@
     <string name="rate_app_notification_title">AdGuard를 평가해주세요</string>
     <string name="notification_channel_rate_name">평가</string>
     <string name="notification_channel_rate_description">앱 평가에 대한 알림입니다</string>
-    <string name="rate_app_summary">AdGuard 콘텐츠 차단기가 마음에 들었다면 Google Play에서 별 5개를 평가해주세요.</string>
+    <string name="rate_app_summary">AdGuard 콘텐츠 차단기가 마음에 드신다면 Google Play에서 평가 해주세요.</string>
     <string name="confirmClearUserFilterMessage">사용자 필터를 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.</string>
     <string name="confirmRemoveUserRuleMessage">이 규칙을 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.</string>
     <string name="clear_filters_cache_title">필터 캐시 삭제</string>
@@ -112,4 +112,6 @@
     <string name="chrome_dialog_title">크롬에서 광고를 차단하고 싶습니까?</string>
     <string name="chrome_dialog_text"><![CDATA[2019년부터 Android용 Chrome은 광고 차단 확장 프로그램이나 앱을 지원하지 않습니다. Chrome 개발자에게 AdGuard나 다른 콘텐츠 차단기 지원을 추가하도록 문의할 수 있습니다. 문제해결을 위해 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome 버그 트래커</a>로 이동하고 투표하세요.]]></string>
     <string name="back">뒤로</string>
+    <string name="close">닫기</string>
+    <string name="import_dialog_hint">URL 또는 경로</string>
 </resources>

@@ -5,8 +5,8 @@
     <string name="please_wait">Por favor, aguarde...</string>
     <string name="main_info">Este aplicativo é uma extensão para navegadores que suportam bloqueio de conteúdo.\n\nAtualmente, existem dois desses navegadores:\n\n1. Samsung Internet browser\n2. Yandex Browser\n\nCom a ajuda deste aplicativo você pode bloquear todos os anúncios nesses navegadores.\n\nAlém disso, você pode selecionar quais filtros usar nas Configurações.</string>
     <string name="progressGenericErrorText">Ocorreu um erro!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} filtro(s) importado(s) com sucesso!</string>
-    <string name="importUserRulesErrorResultMessage">Erro ao importar os filtros!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} regra(s) de filtro(s) importado(s) com sucesso!</string>
+    <string name="importUserRulesErrorResultMessage">Erro ao importar as regras de filtros!</string>
     <string name="importUserRulesProgressDialogTitle">Importação em progresso</string>
     <string name="importUserRulesProgressDialogMessage">Carregando...</string>
     <string name="checkUpdatesProgressDialogTitle">Verificando atualizações</string>
@@ -82,7 +82,6 @@
     <string name="rate_app_notification_title">Avalie-nos</string>
     <string name="notification_channel_rate_name">Avaliação</string>
     <string name="notification_channel_rate_description">Notificações sobre avaliação do aplicativo</string>
-    <string name="rate_app_summary">Esta gostando do bloqueador de anúncios do AdGuard? Avalie-nos com 5 estrelas no Google Play</string>
     <string name="confirmClearUserFilterMessage">Você tem certeza que deseja limpar o filtro de usuário? Esta ação não poderá ser desfeita.</string>
     <string name="confirmRemoveUserRuleMessage">Você tem certeza que deseja excluir esta regra? Esta ação não poderá ser desfeita.</string>
     <string name="clear_filters_cache_title">Limpar cache de filtros</string>
@@ -112,4 +111,5 @@
     <string name="chrome_dialog_title">Deseja bloquear anúncios no Google Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[A partir de 2019, o Chrome para Android não suporta nenhuma extensão ou aplicativo de bloqueio de anúncios.\nVocê pode solicitar aos desenvolvedores do Chrome que adicionem suporte ao AdGuard e outros bloqueadores de conteúdo. Para fazer isso, visite <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">rastreador de erros do Chrome</a> e dê um voto positivo no problema.]]></string>
     <string name="back">Voltar</string>
+    <string name="import_dialog_hint">Caminho ou URL</string>
 </resources>

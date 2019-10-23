@@ -20,6 +20,7 @@ import com.adguard.android.contentblocker.service.FilterService;
 import com.adguard.android.contentblocker.service.NotificationService;
 import com.adguard.android.contentblocker.service.PreferencesService;
 
+import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -49,10 +50,17 @@ interface JobFactoryImpl {
                     Id.RATE_NOTIFICATION,
                     () -> {
                         int count = preferencesService.getRateAppDialogCount();
-                        if (count >= MAX_RATE_DIALOG_COUNT) {
+                        if (count >= MAX_RATE_DIALOG_COUNT || preferencesService.isAppRated()) {
                             jobService.cancelJobs(Id.RATE_NOTIFICATION);
+                            return true;
+                        }
+
+                        // We check the current time and do not send the notification between 10pm and 7am
+                        int currentHour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+                        if (currentHour >= 22 || currentHour <= 7) {
                             return false;
                         }
+
                         // First show is scheduled 24 hours after installation
                         // Second show is scheduled 7 days after installation
                         long flexPeriod = count == 0 ? FIRST_FLEX_PERIOD : SECOND_FLEX_PERIOD;

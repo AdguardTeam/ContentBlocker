@@ -5,8 +5,6 @@
     <string name="please_wait">Vui lòng chờ...</string>
     <string name="main_info">Ứng dụng này là một phần mở rộng cho các trình duyệt hỗ trợ chặn nội dung.\n\nHiện tại có hai trình duyệt như vậy:\n\n1. Samsung Internet Browser\n2. Yandex Browser\n\nVới sự trợ giúp của ứng dụng này, bạn có thể chặn tất cả các quảng cáo trong các trình duyệt này.\n\nNgoài ra, bạn có thể chọn bộ lọc nào sẽ sử dụng trong Cài đặt.</string>
     <string name="progressGenericErrorText">Một vài lỗi đã xảy ra!</string>
-    <string name="importUserRulesSuccessResultMessage">Đã nhập thành công {0} bộ lọc!</string>
-    <string name="importUserRulesErrorResultMessage">Lỗi khi đang nhập bộ lọc!</string>
     <string name="importUserRulesProgressDialogTitle">Đang tiến hành nhập liệu</string>
     <string name="importUserRulesProgressDialogMessage">Đang tải…</string>
     <string name="checkUpdatesProgressDialogTitle">Kiểm tra cập nhật</string>
@@ -99,4 +97,5 @@
     <string name="go_to_products">Đi đến Sản phẩm</string>
     <string name="select_browser_dialog_adguard_products_title">Không hoàn toàn những gì bạn cần?</string>
     <string name="select_browser_dialog_adguard_products_message">Kiểm tra các sản phẩm AdGuard khác trên trang web của chúng tôi</string>
+    <string name="import_dialog_hint">URL hoặc đường dẫn</string>
 </resources>

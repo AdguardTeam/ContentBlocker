@@ -5,8 +5,8 @@
     <string name="please_wait">Пожалуйста, подождите...</string>
     <string name="main_info">Данное приложение является расширением для браузеров, поддерживающих блокировку контента.\n\nВ настоящее время существует два таких браузера: \n\n1. Samsung интернет-браузер \n2. Yandex браузер \n\nС помощью данного приложения вы можете блокировать все рекламные объявления в этих браузерах.\n\nКроме того, в Настройках вы можете выбрать, какие фильтры использовать.</string>
     <string name="progressGenericErrorText">Произошла ошибка!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} пользовательских правил успешно импортировано</string>
-    <string name="importUserRulesErrorResultMessage">Ошибка импорта фильтров!</string>
+    <string name="importUserRulesSuccessResultMessage">Импортировано правил: {0}</string>
+    <string name="importUserRulesErrorResultMessage">Ошибка импорта правил фильтрации!</string>
     <string name="importUserRulesProgressDialogTitle">Выполняется импорт</string>
     <string name="importUserRulesProgressDialogMessage">Загрузка...</string>
     <string name="checkUpdatesProgressDialogTitle">Проверка обновлений</string>
@@ -43,7 +43,7 @@
     <string name="install_yandex_browser">Установить Yandex Browser</string>
     <string name="issuesButtonText">Сообщить об ошибке</string>
     <string name="githubLabelText">Исходный код</string>
-    <string name="copyrightMessage">AdGuard Content Blocker - свободное программное обеспечение: вы можете распространять и/или изменять его в соответствии с условиями GNU General Public License, опубликованной Free Software Foundation, либо версии 3 лицензии, либо (по вашему выбору) любой более поздней версии.</string>
+    <string name="copyrightMessage">AdGuard Content Blocker – свободное программное обеспечение: вы можете распространять и/или изменять его в соответствии с условиями GNU General Public License, опубликованной Free Software Foundation, либо версии 3 лицензии, либо (по вашему выбору) любой более поздней версии.</string>
     <string name="warning">Внимание</string>
     <string name="onboarding_title1">Добро пожаловать!</string>
     <string name="onboarding_text1">Вы всего в нескольких шагах от быстрого и чистого интернета без рекламы!</string>
@@ -82,7 +82,7 @@
     <string name="rate_app_notification_title">Оцените приложение</string>
     <string name="notification_channel_rate_name">Оценки</string>
     <string name="notification_channel_rate_description">Уведомления об оценках приложения</string>
-    <string name="rate_app_summary">Наслаждаетесь приложением AdGuard Content Blocker? Поставьте нам 5 звезд в Google Play </string>
+    <string name="rate_app_summary">Вам нравится приложение AdGuard Content Blocker? Поставьте нам оценку в Google Play</string>
     <string name="confirmClearUserFilterMessage">Вы уверены что хотите очистить собственный фильтр? Данную операцию нельзя отменить.</string>
     <string name="confirmRemoveUserRuleMessage">Вы уверены, что хотите удалить это правило? Данную операцию нельзя отменить.</string>
     <string name="clear_filters_cache_title">Очистить кеш фильтров</string>
@@ -112,4 +112,6 @@
     <string name="chrome_dialog_title">Хотите блокировать рекламу в Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[Начиная с 2019 года Chrome для Android не поддерживает расширения и приложения для блокировки рекламы.\Вы можете обратиться к разработчикам Chrome с просьбой о добавлении поддержки для AdGuard и других блокировщиков контента. Для этого посетите <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> и проголосуйте за решение проблемы.]]></string>
     <string name="back">Назад</string>
+    <string name="close">Закрыть</string>
+    <string name="import_dialog_hint">URL или путь</string>
 </resources>

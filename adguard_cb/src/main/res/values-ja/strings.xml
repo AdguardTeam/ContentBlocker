@@ -5,8 +5,8 @@
     <string name="please_wait">しばらくお待ちください...</string>
     <string name="main_info">このアプリケーションは、コンテンツ・ブロッキングをサポートするブラウザ用の拡張機能です。\n\n現在、2つのブラウザに対応しています:\n\n1.サムスンインターネットブラウザ\n2. Yandexのブラウザ\n\nこのアプリケーションによって、ブラウザ内のすべての広告をブロックすることができます。\n\nまた、設定で使用するフィルタを選択することもできます。</string>
     <string name="progressGenericErrorText">エラーが発生しました!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} 個のフィルターをインポートしました!</string>
-    <string name="importUserRulesErrorResultMessage">フィルタをインポート中にエラーが発生しました!</string>
+    <string name="importUserRulesSuccessResultMessage">{0}本のフィルタルールをインポート完了!</string>
+    <string name="importUserRulesErrorResultMessage">フィルタルールをインポート中にエラーが発生しました!</string>
     <string name="importUserRulesProgressDialogTitle">インポート中</string>
     <string name="importUserRulesProgressDialogMessage">ロード中...</string>
     <string name="checkUpdatesProgressDialogTitle">アップデートを確認中</string>
@@ -112,4 +112,6 @@
     <string name="chrome_dialog_title">Chromeで広告をブロックしたいですか？</string>
     <string name="chrome_dialog_text"><![CDATA[2019年現在、Android版Chromeは広告ブロック拡張機能やアプリをサポートしていません。\nChrome開発者にAdGuardおよびその他のコンテンツブロッカーのサポートの追加を促すことができます。そうするには、<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chromeバグトラッカー</a>でこの問題を投票して優先度をアップさせてください。]]></string>
     <string name="back">戻る</string>
+    <string name="close">閉じる</string>
+    <string name="import_dialog_hint">URLまたはパス</string>
 </resources>

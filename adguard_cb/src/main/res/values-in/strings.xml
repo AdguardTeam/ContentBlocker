@@ -5,8 +5,6 @@
     <string name="please_wait">Harap tunggu...</string>
     <string name="main_info">Aplikasi ini adalah ekstensi untuk browser yang mendukung pemblokiran konten.\n\nSaat ini ada dua browser seperti itu:\n\n1. Samsung Internet browser\n2. Yandex Browser\n\nDengan aplikasi ini Anda dapat memblokir semua iklan dalam browser ini.\n\nTambahan lagi, Anda dapat memilih penyaring yang digunakan dalam Pengaturan.</string>
     <string name="progressGenericErrorText">Terjadi kesalahan!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} penyaring berhasil diimpor!</string>
-    <string name="importUserRulesErrorResultMessage">Terjadi kesalahan saat mengimpor penyaring!</string>
     <string name="importUserRulesProgressDialogTitle">Impor berlangsung</string>
     <string name="importUserRulesProgressDialogMessage">Memuat...</string>
     <string name="checkUpdatesProgressDialogTitle">Mencari pembaruan</string>
@@ -82,7 +80,6 @@
     <string name="rate_app_notification_title">Nilai kami</string>
     <string name="notification_channel_rate_name">Nilai</string>
     <string name="notification_channel_rate_description">Pemberitahuan tentang nilai aplikasi</string>
-    <string name="rate_app_summary">Menikmati AdGuard Pemblokir Konten? Beri kami 5 bintang di Google Play</string>
     <string name="confirmClearUserFilterMessage">Anda yakin ingin menghapus penyaring pengguna? Operasi ini tidak dapat diurungkan.</string>
     <string name="confirmRemoveUserRuleMessage">Anda yakin ingin menghapus aturan ini? Operasi ini tidak dapat diurungkan.</string>
     <string name="clear_filters_cache_title">Hapus cache penyaring</string>

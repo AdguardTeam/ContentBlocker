@@ -5,8 +5,8 @@
     <string name="please_wait">Vent venligst...</string>
     <string name="main_info">Dette program er en udvidelse til browsere som understøtter indholdsblokering.\nDer er i øjeblikket således to browsere:\n1. Samsung Internet Browser\n2. Yandex Browser\nMed hjælp af dette program kan du blokere alle reklamer i disse browsere.\nDu kan også vælge i Indstillinger, hvilke filtre der skal bruges.</string>
     <string name="progressGenericErrorText">Nogle fejl opstod!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} filter(filtre) importeret succesfuldt!</string>
-    <string name="importUserRulesErrorResultMessage">Fejl ved importering af filtre!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} filterregel(regler) importeret succesfuldt!</string>
+    <string name="importUserRulesErrorResultMessage">Fejl ved importering af filterregel!</string>
     <string name="importUserRulesProgressDialogTitle">Fremskridt af importering</string>
     <string name="importUserRulesProgressDialogMessage">Indlæser...</string>
     <string name="checkUpdatesProgressDialogTitle">Søger efter opdateringer</string>
@@ -82,7 +82,7 @@
     <string name="rate_app_notification_title">Bedøm os</string>
     <string name="notification_channel_rate_name">Anmeldelser</string>
     <string name="notification_channel_rate_description">Meddelelser om app-anmeldelser</string>
-    <string name="rate_app_summary">Nyder du AdGuard Indholdsblocker? Giv os 5 stjerner på Google Play</string>
+    <string name="rate_app_summary">Nyder du AdGuard Indholdsblocker? Bedøm os på Google Play</string>
     <string name="confirmClearUserFilterMessage">Er du sikker på, at du vil rydde brugerfiltret? Denne handling kan ikke fortrydes.</string>
     <string name="confirmRemoveUserRuleMessage">Er du sikker på, at du vil slette denne regel? Denne handling kan ikke fortrydes.</string>
     <string name="clear_filters_cache_title">Ryd filtercache</string>
@@ -112,4 +112,6 @@
     <string name="chrome_dialog_title">Vil du gerne blokere annoncer i Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[Fra og med 2019 understøtter Chrome til Android ikke nogen adblocking udvidelser eller apps.\nDu kan opfordre Chrome-udviklerne til at tilføje support til AdGuard og andre indholdsblockere. For at gøre dette, skal du besøge <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> og upvote problemet.]]></string>
     <string name="back">Tilbage</string>
+    <string name="close">Luk</string>
+    <string name="import_dialog_hint">URL eller sti</string>
 </resources>

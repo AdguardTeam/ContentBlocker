@@ -9,7 +9,7 @@
     <string name="importUserRulesErrorResultMessage">Importuojant filtrus įvyko klaida!</string>
     <string name="importUserRulesProgressDialogTitle">Importuojama</string>
     <string name="importUserRulesProgressDialogMessage">Įkeliama…</string>
-    <string name="checkUpdatesProgressDialogTitle">Programos naujinimas</string>
+    <string name="checkUpdatesProgressDialogTitle">Naujinimų paieška</string>
     <string name="checkUpdatesProgressDialogMessage">Ieškoma naujinių. Palaukite…</string>
     <string name="checkUpdatesErrorResultMessage">Atnaujinimas nepavyko. Pabandykite dar kartą vėliau.</string>
     <string name="checkUpdatesZeroResultMessage">Jūs naudojate naujausią filtrų versiją.</string>
@@ -46,11 +46,11 @@
     <string name="copyrightMessage">AdGuard Content Blocker programa yra nemokama: ją galite platinti ir / arba modifikuoti pagal GNU General Public License sąlygas, kurias paskelbė Free Software Foundation, arba pagal Licencijos 3 versiją, arba pagal (jūsų pasirinkimu) bet kurią vėlesnę versiją.</string>
     <string name="warning">Perspėjimas</string>
     <string name="onboarding_title1">Sveiki!</string>
-    <string name="onboarding_text1">Tik keli žingsniai iki greito ir švaraus interneto, be reklamų.</string>
+    <string name="onboarding_text1">Tik keli žingsniai iki greito ir švaraus, be reklamų, interneto.</string>
     <string name="onboarding_button_text1">Pradėti</string>
     <string name="onboarding_title2">Naršyklės pasirinkimas</string>
     <string name="onboarding_text2">Kad AdGuard veiktų, reikia naršyklės, kuri palaiko reklamų blokavimo technologiją. Šiuo metu yra dvi tokios naršyklės.</string>
-    <string name="onboarding_button_text2">Pasirinkti naršyklę</string>
+    <string name="onboarding_button_text2">Pasirinkite naršyklę</string>
     <string name="onboarding_title3">Beveik baigta!</string>
     <string name="onboarding_text3">Tinkama naršyklė rasta. Liko tik įjungti AdGuard nustatymuose.</string>
     <string name="onboarding_button_text3">Įjungti AdGuard</string>
@@ -82,7 +82,6 @@
     <string name="rate_app_notification_title">Įvertinkite mus</string>
     <string name="notification_channel_rate_name">Reitingai</string>
     <string name="notification_channel_rate_description">Pranešimai apie programos reitingus</string>
-    <string name="rate_app_summary">Jums patinka AdGuard Content Blocker? Įvertinkite mus 5 žvaigždutėmis Google Play</string>
     <string name="confirmClearUserFilterMessage">Ar tikrai norite išvalyti naudotojo filtrą? Šio veiksmo negalima bus atšaukti.</string>
     <string name="confirmRemoveUserRuleMessage">Ar tikrai norite ištrinti šią taisyklę? Šios veiksmo negalima bus atšaukti.</string>
     <string name="clear_filters_cache_title">Išvalyti filtro talpyklą</string>
@@ -112,4 +111,5 @@
     <string name="chrome_dialog_title">Norite blokuoti reklamą Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[Nuo 2019 m. Chrome, skirtas Android, nepalaiko jokių reklamos blokavimo plėtinių ar programų.\nGalite paraginti Chrome kūrėjus pridėti AdGuard ir kitų turinio blokatorių palaikymą. Norėdami tai padaryti, apsilankykite svetainėje <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> ir išreikšite savo palaikymą.]]></string>
     <string name="back">Grįžti</string>
+    <string name="import_dialog_hint">URL arba kelias</string>
 </resources>

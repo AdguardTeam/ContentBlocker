@@ -5,8 +5,8 @@
     <string name="please_wait">Por favor, aguarde...</string>
     <string name="main_info">Esta aplicação é uma extensão para navegadores que suportam bloqueio de conteúdo.\nActualmente, existem dois desses navegadores:\n1. Navegador de Internet da Samsung\n2. Navegador Yandex \nCom a ajuda desta aplicação, pode bloquear todos os anúncios nesses navegadores.\nAlém disso, pode seleccionar que filtros usar em Definições.</string>
     <string name="progressGenericErrorText">Ocorreu um erro!</string>
-    <string name="importUserRulesSuccessResultMessage">{0} filtro(s) importados com sucesso!</string>
-    <string name="importUserRulesErrorResultMessage">Ocorreu um erro ao importar os filtros!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} regra(s) de filtragem importada(s) com sucesso!</string>
+    <string name="importUserRulesErrorResultMessage">Ocorreu um erro ao importar as regras de filtragem!</string>
     <string name="importUserRulesProgressDialogTitle">Importação em execução</string>
     <string name="importUserRulesProgressDialogMessage">A carregar...</string>
     <string name="checkUpdatesProgressDialogTitle">A verificar se existem actualizações</string>
@@ -82,7 +82,7 @@
     <string name="rate_app_notification_title">Avalie-nos</string>
     <string name="notification_channel_rate_name">Avaliação</string>
     <string name="notification_channel_rate_description">Notificações sobre a avaliação da aplicação</string>
-    <string name="rate_app_summary">Está a gostar do Bloqueador de Conteúdo do AdGuard? Classifique-nos com 5 estrelas no Google Play</string>
+    <string name="rate_app_summary">Está a gostar do Bloqueador de Conteúdo do AdGuard? Avalie-nos no Google Play</string>
     <string name="confirmClearUserFilterMessage">Tem a certeza de que deseja limpar o filtro do utilizador? Esta operação não pode ser anulada.</string>
     <string name="confirmRemoveUserRuleMessage">Tem a certeza de que deseja excluir esta regra? Esta operação não pode ser anulada.</string>
     <string name="clear_filters_cache_title">Limpar cache do filtro</string>
@@ -112,4 +112,6 @@
     <string name="chrome_dialog_title">Deseja bloquear anúncios no Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[A partir de 2019, o Chrome para Android não suporta extensões ou aplicações de bloqueio de anúncios.\nPode solicitar aos desenvolvedores do Chrome que adicionem suporte ao AdGuard e a outros bloqueadores de conteúdo. Para fazer isso, visite <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">monitorizador de erros do Chrome</a> e actualize o problema.]]></string>
     <string name="back">Retroceder</string>
+    <string name="close">Fechar</string>
+    <string name="import_dialog_hint">URL ou caminho</string>
 </resources>

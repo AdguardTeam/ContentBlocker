@@ -16,6 +16,8 @@
  */
 package com.adguard.android.contentblocker.service;
 
+import androidx.annotation.NonNull;
+
 /**
  * Application notifications service. Responsible for notifications and toast messages.
  */
@@ -46,4 +48,13 @@ public interface NotificationService {
      * Shows a notification asking user to rate this app
      */
     void showRateAppNotification();
+
+    /**
+     * Shows a notification asking user to rate this app.
+     * Same as {@link #showRateAppNotification()} but tries to hint stars automatically recognizing action.
+     * More about actions see in Manifest for {@link com.adguard.android.contentblocker.receiver.StarsCountReceiver}
+     * @param action some action from {@link com.adguard.android.contentblocker.receiver.StarsCountReceiver}
+     * @return count of stars to hint from action (from 1 to 5) or 0 if the action wasn't recognized
+     */
+    int showRateAppNotification(@NonNull String action);
 }

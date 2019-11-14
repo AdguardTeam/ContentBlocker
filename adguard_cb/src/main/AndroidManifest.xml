@@ -99,6 +99,17 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name=".receiver.StarsCountReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.adguard.android.contentblocker.count_action_1" />
+                <action android:name="com.adguard.android.contentblocker.count_action_2" />
+                <action android:name="com.adguard.android.contentblocker.count_action_3" />
+                <action android:name="com.adguard.android.contentblocker.count_action_4" />
+                <action android:name="com.adguard.android.contentblocker.count_action_5" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

@@ -58,8 +58,6 @@ import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
  */
 public class BrowserUtils {
 
-    private static boolean dialogAboutChromeShowed = false;
-
     private static final String YANDEX = "yandex";
     private static final String SAMSUNG = "samsung";
 
@@ -205,15 +203,9 @@ public class BrowserUtils {
     @SuppressLint("InflateParams")
     public static void showBrowserInstallDialog(final Context context) {
         View dialogLayout = LayoutInflater.from(context).inflate(R.layout.select_browser_dialog, null);
-        dialogAboutChromeShowed = false;
 
         final AlertDialog dialog = new AlertDialog.Builder(context, R.style.AlertDialog)
-            .setNegativeButton(android.R.string.cancel, (dialog1, which) -> {
-                dialog1.dismiss();
-                if (!dialogAboutChromeShowed) {
-                    showProductsDialog(context, true);
-                }
-            })
+            .setNegativeButton(android.R.string.cancel, null)
             .setView(dialogLayout).create();
 
         View browserItem = dialogLayout.findViewById(R.id.browser_yandex);
@@ -229,7 +221,7 @@ public class BrowserUtils {
         });
 
         dialogLayout.findViewById(R.id.others_product_card).setOnClickListener(v -> {
-            showProductsDialog(context, false);
+            showProductsDialog(context);
         });
 
         dialog.show();
@@ -237,27 +229,24 @@ public class BrowserUtils {
     }
 
     @SuppressLint("InflateParams")
-    private static void showProductsDialog(final Context context, boolean hideProductsButton) {
+    private static void showProductsDialog(final Context context) {
         View dialogLayout = LayoutInflater.from(context).inflate(R.layout.products_dialog, null);
 
         final AlertDialog dialog = new AlertDialog.Builder(context, R.style.AlertDialog)
-                .setNegativeButton(hideProductsButton ? R.string.close : R.string.back, null)
+                .setNegativeButton(R.string.back, null)
                 .setView(dialogLayout).create();
 
         TextView textView = dialogLayout.findViewById(R.id.dialog_text);
-        textView.setText(Html.fromHtml(context.getString(R.string.chrome_dialog_text) + "<br/><br/>" + context.getString(R.string.select_browser_dialog_adguard_products_message)));
+        textView.setText(Html.fromHtml(context.getString(R.string.chrome_dialog_text)));
         textView.setMovementMethod(LinkMovementMethod.getInstance());
 
-        View productsButton = dialogLayout.findViewById(R.id.go_to_products);
-        productsButton.setOnClickListener(v -> {
+        dialogLayout.findViewById(R.id.go_to_products).setOnClickListener(v -> {
             String url = AppLink.Website.getOtherProductUrl(context, "chrome_dialog");
             NavigationHelper.openWebSite(context, url);
         });
-        productsButton.setVisibility(hideProductsButton ? View.GONE : View.VISIBLE);
 
         dialog.show();
         centerDialogButton(dialog);
-        dialogAboutChromeShowed = true;
     }
 
     public static void startYandexBrowser(Context context) {

@@ -21,28 +21,27 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import androidx.annotation.IdRes;
-import androidx.annotation.StringRes;
-import androidx.core.app.NotificationCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RemoteViews;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.adguard.android.contentblocker.R;
-import com.adguard.android.contentblocker.ui.MainActivity;
-import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
+import androidx.annotation.IdRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
+import androidx.core.app.NotificationCompat;
 
-import org.apache.commons.lang3.StringUtils;
+import com.adguard.android.contentblocker.R;
+import com.adguard.android.contentblocker.receiver.StarsCountReceiver;
+import com.adguard.android.contentblocker.ui.MainActivity;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -57,14 +56,16 @@ public class NotificationServiceImpl implements NotificationService {
 
     private static Logger LOG = LoggerFactory.getLogger(NotificationServiceImpl.class);
 
-    private static final String STARS_COUNT_ACTION_1 = "count_action_1";
-    private static final String STARS_COUNT_ACTION_2 = "count_action_2";
-    private static final String STARS_COUNT_ACTION_3 = "count_action_3";
-    private static final String STARS_COUNT_ACTION_4 = "count_action_4";
-    private static final String STARS_COUNT_ACTION_5 = "count_action_5";
+    /** These actions are the same for {@link StarsCountReceiver}. If you want to change something,
+     *  you don't forget to change the actions in AndroidManifest.xml, also.
+     * */
+    private static final String STARS_COUNT_ACTION_1 = "com.adguard.android.contentblocker.count_action_1";
+    private static final String STARS_COUNT_ACTION_2 = "com.adguard.android.contentblocker.count_action_2";
+    private static final String STARS_COUNT_ACTION_3 = "com.adguard.android.contentblocker.count_action_3";
+    private static final String STARS_COUNT_ACTION_4 = "com.adguard.android.contentblocker.count_action_4";
+    private static final String STARS_COUNT_ACTION_5 = "com.adguard.android.contentblocker.count_action_5";
 
-    private static final long REDIRECTION_DELAY = 300;
-    private static final int RATE_NOTIFICATION_ID = 128;
+    public static final int RATE_NOTIFICATION_ID = 128;
 
     private final Context context;
     private final Handler handler;
@@ -78,7 +79,6 @@ public class NotificationServiceImpl implements NotificationService {
 
         fillActionsMap();
         createNotificationChannel();
-        registerStarsCountReceiver();
     }
 
     @Override
@@ -109,6 +109,14 @@ public class NotificationServiceImpl implements NotificationService {
         showRateAppNotification(0);
     }
 
+    @Override
+    public int showRateAppNotification(@NonNull String action) {
+        CountId countId = countActions.get(action);
+        int count = countId == null ? 0 : countId.getCount();
+        showRateAppNotification(count);
+        return count;
+    }
+
     /**
      * Initializes the current thread as a looper in case if application was started implicitly in non-UI thread
      * This case may occurs after installation via browser menu without app launching.
@@ -130,17 +138,6 @@ public class NotificationServiceImpl implements NotificationService {
         countActions.put(STARS_COUNT_ACTION_3, new CountId(R.id.star3, 3));
         countActions.put(STARS_COUNT_ACTION_4, new CountId(R.id.star4, 4));
         countActions.put(STARS_COUNT_ACTION_5, new CountId(R.id.star5, 5));
-    }
-
-    /**
-     * Registers {@link StarsCountReceiver} with configured {@link IntentFilter}
-     */
-    private void registerStarsCountReceiver() {
-        IntentFilter filter = new IntentFilter();
-        for (String action : countActions.keySet()) {
-            filter.addAction(action);
-        }
-        context.registerReceiver(new StarsCountReceiver(), filter);
     }
 
     /**
@@ -243,7 +240,7 @@ public class NotificationServiceImpl implements NotificationService {
     private RemoteViews createStarsRemoteViews(int filledCount) {
         RemoteViews remote = new RemoteViews(context.getPackageName(), R.layout.rate_notification);
         for (Map.Entry<String, CountId> entry : countActions.entrySet()) {
-            Intent countIntent = new Intent(entry.getKey());
+            Intent countIntent = new Intent(context, StarsCountReceiver.class).setAction(entry.getKey());
             remote.setOnClickPendingIntent(entry.getValue().getViewId(), PendingIntent.getBroadcast(context, 0, countIntent, PendingIntent.FLAG_UPDATE_CURRENT));
         }
 
@@ -280,55 +277,6 @@ public class NotificationServiceImpl implements NotificationService {
         toast.setView(v);
 
         return toast;
-    }
-
-    /**
-     * Redirects to Google Play market or to feedback dialog.
-     * {@link Handler#postDelayed} used to fill selected stars count explicit before redirection
-     *
-     * @param count Selected stars count
-     */
-    private void redirectWithDelay(final int count) {
-        handler.postDelayed(() -> {
-            NotificationManager notificationManager = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
-            if (notificationManager != null) {
-                // Cancel current 'rate app' notification and close notification bar before redirection
-                notificationManager.cancel(RATE_NOTIFICATION_ID);
-                Intent closeIntent = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
-                context.sendBroadcast(closeIntent);
-            }
-
-            if (count > 3) {
-                NavigationHelper.redirectToPlayMarket(context);
-            } else {
-                Bundle bundle = new Bundle();
-                bundle.putInt(MainActivity.STARS_COUNT, count);
-                NavigationHelper.redirectToActivity(context, MainActivity.class, bundle);
-            }
-        }, REDIRECTION_DELAY);
-    }
-
-    /**
-     * Receiver to handle broadcast with 'fill stars` actions
-     */
-    private class StarsCountReceiver extends BroadcastReceiver {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            if (StringUtils.isEmpty(action)) {
-                return;
-            }
-            CountId countId = countActions.get(action);
-            if (countId == null) {
-                return;
-            }
-
-            showRateAppNotification(countId.getCount());
-            int count = countId.getCount();
-            redirectWithDelay(count);
-
-        }
     }
 
     /**

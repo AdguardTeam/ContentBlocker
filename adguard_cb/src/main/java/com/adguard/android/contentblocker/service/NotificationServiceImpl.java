@@ -57,7 +57,7 @@ public class NotificationServiceImpl implements NotificationService {
     private static Logger LOG = LoggerFactory.getLogger(NotificationServiceImpl.class);
 
     /** These actions are the same for {@link StarsCountReceiver}. If you want to change something,
-     *  you dot not forget to change the actions in AndroidManifest.xml, also.
+     *  you don't forget to change the actions in AndroidManifest.xml, also.
      * */
     private static final String STARS_COUNT_ACTION_1 = "com.adguard.android.contentblocker.count_action_1";
     private static final String STARS_COUNT_ACTION_2 = "com.adguard.android.contentblocker.count_action_2";

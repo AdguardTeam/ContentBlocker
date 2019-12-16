@@ -21,14 +21,13 @@ import android.os.Bundle;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.View;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 
 import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.R;
 import com.adguard.android.contentblocker.service.FilterService;
 import com.adguard.android.contentblocker.service.PreferencesService;
+import com.adguard.android.contentblocker.ui.utils.ApplyAndRefreshTask;
 import com.adguard.android.contentblocker.ui.utils.NavigationHelper;
 import com.adguard.android.contentblocker.ui.utils.ProgressDialogUtils;
 
@@ -65,7 +64,10 @@ public class SettingsActivity extends AppCompatActivity {
 
         final CheckBox showUsefulAdsView = findViewById(R.id.show_useful_ads_checkbox);
         showUsefulAdsView.setChecked(filterService.isShowUsefulAds());
-        showUsefulAdsView.setOnCheckedChangeListener((compoundButton, enable) -> filterService.setShowUsefulAds(enable));
+        showUsefulAdsView.setOnCheckedChangeListener((compoundButton, enable) -> {
+            filterService.setShowUsefulAds(enable);
+            new ApplyAndRefreshTask(filterService, this).execute();
+        });
 
         findViewById(R.id.show_useful_ads_wrapper).setOnClickListener(view ->
                 showUsefulAdsView.setChecked(!showUsefulAdsView.isChecked()));

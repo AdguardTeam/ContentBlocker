@@ -104,7 +104,7 @@ public class PreferencesServiceImpl implements PreferencesService {
     @Override
     public Set<String> getDisabledUserRules() {
         Set<String> valueSet = sharedPreferences.getStringSet(KEY_DISABLED_USER_RULES, null);
-        return valueSet != null ? new HashSet<>(valueSet) : new HashSet<String>();
+        return valueSet != null ? new HashSet<>(valueSet) : new HashSet<>();
     }
 
     @Override
@@ -137,18 +137,6 @@ public class PreferencesServiceImpl implements PreferencesService {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(KEY_LAST_IMPORT_URL, url);
         editor.apply();
-    }
-
-    @Override
-    public void setShowUsefulAds(boolean value) {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean(PREF_SHOW_USEFUL_ADS, value);
-        editor.apply();
-    }
-
-    @Override
-    public boolean isShowUsefulAds() {
-        return sharedPreferences.getBoolean(PREF_SHOW_USEFUL_ADS, false);
     }
 
     @Override
@@ -213,7 +201,7 @@ public class PreferencesServiceImpl implements PreferencesService {
 
     @Override
     public Set<String> getDisabledWhitelistRules() {
-        return sharedPreferences.getStringSet(KEY_DISABLED_WHITELIST, new HashSet<String>());
+        return sharedPreferences.getStringSet(KEY_DISABLED_WHITELIST, new HashSet<>());
     }
 
     @Override

@@ -25,10 +25,8 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.adguard.android.contentblocker.R;
-import com.adguard.android.contentblocker.ServiceLocator;
 import com.adguard.android.contentblocker.model.FilterList;
 import com.adguard.android.contentblocker.service.FilterService;
-import com.adguard.android.contentblocker.service.PreferencesService;
 
 import java.util.Date;
 
@@ -99,11 +97,6 @@ public class FilterViewAdapter extends BaseAdapter implements View.OnClickListen
         FilterList filterList = (FilterList) v.getTag();
         filterService.updateFilterEnabled(filterList, !filterList.isEnabled());
         ((CheckBox) v.findViewById(R.id.checkbox)).setChecked(filterList.isEnabled());
-
-        if (filterList.getFilterId() == FilterService.SHOW_USEFUL_ADS_FILTER_ID) {
-            PreferencesService preferencesService = ServiceLocator.getInstance(context.getApplicationContext()).getPreferencesService();
-            preferencesService.setShowUsefulAds(filterList.isEnabled());
-        }
         new ApplyAndRefreshTask(filterService, context).execute();
     }
 

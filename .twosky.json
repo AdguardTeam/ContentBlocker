@@ -37,7 +37,8 @@
       "no": "Norwegian",
       "be": "Беларуская",
       "bn": "Bengali",
-      "ms": "Malay"
+      "ms": "Malay",
+      "sl": "Slovenščina"
     },
     "localizable_files": [
       "adguard_cb/main/res/values/strings*.xml"

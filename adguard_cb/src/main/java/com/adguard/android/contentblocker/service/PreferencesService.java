@@ -24,7 +24,6 @@ import java.util.Set;
  */
 public interface PreferencesService {
 
-    String PREF_SHOW_USEFUL_ADS = "pref_show_useful_ads";
     String KEY_AUTOUPDATE_FILTERS = "auto_update_filters";
     String KEY_UPDATE_OVER_WIFI = "update_over_wifi";
     String KEY_LAST_UPDATE_CHECK_DATE = "last_update_check_date";
@@ -136,16 +135,6 @@ public interface PreferencesService {
      * @param url last url from which user has imported some rules
      */
     void setLastImportUrl(String url);
-
-    /**
-     * Set whether we should show useful ads
-     */
-    void setShowUsefulAds(boolean value);
-
-    /**
-     * Whether we should show useful ads
-     */
-    boolean isShowUsefulAds();
 
     /**
      * Sets filter rules count

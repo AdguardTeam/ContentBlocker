@@ -1,0 +1,1 @@
+INSERT INTO filter_lists (filter_list_id, filter_name, filter_description, enabled, version, time_last_downloaded, time_updated, display_order) VALUES (214,'ABPVN List', 'Filter that blocks ads on Vietnamese sites.', 0, '2.0.5.35', 1576576860000, 1576576860000, 245);

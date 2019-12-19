@@ -30,7 +30,6 @@ import com.adguard.android.contentblocker.commons.StringHelperUtils;
 import com.adguard.android.contentblocker.commons.TextStatistics;
 import com.adguard.android.contentblocker.commons.concurrent.DispatcherThreadPool;
 import com.adguard.android.contentblocker.commons.io.IoUtils;
-import com.adguard.android.contentblocker.commons.network.InternetUtils;
 import com.adguard.android.contentblocker.commons.network.NetworkUtils;
 import com.adguard.android.contentblocker.db.DbHelper;
 import com.adguard.android.contentblocker.db.FilterListDao;
@@ -242,7 +241,7 @@ public class FilterServiceImpl implements FilterService {
     @Override
     public void clearUserRules() {
         setUserRules(StringUtils.EMPTY);
-        preferencesService.setDisabledUserRules(new HashSet<String>());
+        preferencesService.setDisabledUserRules(new HashSet<>());
     }
 
     @Override
@@ -293,7 +292,7 @@ public class FilterServiceImpl implements FilterService {
     @Override
     public void clearWhiteList() {
         setWhiteList(StringUtils.EMPTY);
-        preferencesService.setDisabledWhitelistRules(new HashSet<String>());
+        preferencesService.setDisabledWhitelistRules(new HashSet<>());
     }
 
     @Override
@@ -317,8 +316,6 @@ public class FilterServiceImpl implements FilterService {
 
     @Override
     public void applyNewSettings() {
-        setShowUsefulAds(preferencesService.isShowUsefulAds());
-
         List<String> rules = getAllEnabledRules();
 
         List<String> userRules = StringHelperUtils.splitAndTrim(preferencesService.getUserRules(), "\n");
@@ -606,7 +603,7 @@ public class FilterServiceImpl implements FilterService {
                 return;
             }
 
-            LOG.info("{} user rules downloaded from {}", rules.length);
+            LOG.info("{} user rules downloaded from {}", rules.length, url);
 
             final List<String> rulesList = new ArrayList<>(rules.length);
             for (String rule : rules) {
@@ -636,12 +633,7 @@ public class FilterServiceImpl implements FilterService {
             notificationService.showToast(message);
 
             if (onImportListener != null) {
-                activity.runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        onImportListener.onSuccess();
-                    }
-                });
+                activity.runOnUiThread(() -> onImportListener.onSuccess());
             }
         }
 

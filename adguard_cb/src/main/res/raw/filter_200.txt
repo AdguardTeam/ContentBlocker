@@ -4542,7 +4542,6 @@ _vpaid^$object-subrequest,script,websocket,xmlhttprequest
 ||similarsites.com^$third-party
 ||simplereach.com^$third-party
 ||simpli.fi^$third-party
-||simply.com^$third-party
 ||simplyhired.com^$third-party
 ||simwebjs.info^
 ||simg.sinajs.cn^

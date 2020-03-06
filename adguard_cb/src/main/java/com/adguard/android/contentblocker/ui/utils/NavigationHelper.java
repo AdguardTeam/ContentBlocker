@@ -86,10 +86,10 @@ public class NavigationHelper {
      * Opens web browser at specified url
      *
      * @param from Context
-     * @param url  Url to open
+     * @param uri  Uri to open
      */
-    public static void openWebSite(Context from, String url) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url)).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    public static void openWebSite(Context from, Uri uri) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         /* We should check whether any app can be used to open the website or not.
            Some information from the doc:
 
@@ -101,6 +101,8 @@ public class NavigationHelper {
          */
         if (intent.resolveActivity(from.getPackageManager()) != null) {
             from.startActivity(intent);
+        } else {
+            ServiceLocator.getInstance(from).getNotificationService().showToast(R.string.install_at_least_one_app_for_the_website);
         }
     }
 
@@ -113,15 +115,15 @@ public class NavigationHelper {
         // We redirect to Google Play Store if it exists on device
         if (PackageUtils.isPlayStoreInstalled(context)) {
             try {
-                context.startActivity(createPlayMarketIntent(context, PLAY_MARKET_PREFIX_HTTP_SCHEME));
+                NavigationHelper.openWebSite(context, createPlayMarketUri(context, PLAY_MARKET_PREFIX_HTTP_SCHEME));
                 return;
             } catch (ActivityNotFoundException ignored) { }
         }
 
         try {
-            context.startActivity(createPlayMarketIntent(context, PLAY_MARKET_PREFIX_CUSTOM_SCHEME));
+            NavigationHelper.openWebSite(context, createPlayMarketUri(context, PLAY_MARKET_PREFIX_CUSTOM_SCHEME));
         } catch (ActivityNotFoundException e) {
-            context.startActivity(createPlayMarketIntent(context, PLAY_MARKET_PREFIX_HTTP_SCHEME));
+            NavigationHelper.openWebSite(context, createPlayMarketUri(context, PLAY_MARKET_PREFIX_HTTP_SCHEME));
         }
     }
 
@@ -130,11 +132,10 @@ public class NavigationHelper {
      *
      * @param context Application context
      * @param prefix  Prefix with scheme (http or market)
-     * @return {@link Intent} to open Google Play Market
+     * @return {@link Uri} to open Google Play Market
      */
-    private static Intent createPlayMarketIntent(Context context, String prefix) {
-        Uri uri = Uri.parse(prefix + context.getPackageName());
-        return new Intent(Intent.ACTION_VIEW, uri).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    private static Uri createPlayMarketUri(Context context, String prefix) {
+        return Uri.parse(prefix + context.getPackageName());
     }
 
     private static void redirectUsingCustomTab(Context context, String url) {

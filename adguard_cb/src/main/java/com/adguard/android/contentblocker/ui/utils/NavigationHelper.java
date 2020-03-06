@@ -89,9 +89,19 @@ public class NavigationHelper {
      * @param url  Url to open
      */
     public static void openWebSite(Context from, String url) {
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url)).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        from.startActivity(i);
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url)).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        /* We should check whether any app can be used to open the website or not.
+           Some information from the doc:
+
+           "If there are no apps on the device that can receive the implicit intent, your app will crash
+           when it calls startActivity(). To first verify that an app exists to receive the intent,
+           call resolveActivity() on your Intent object. If the result is non-null, there is at least one app
+           that can handle the intent and it's safe to call startActivity(). If the result is null,
+           you should not use the intent and, if possible, you should disable the feature that invokes the intent."
+         */
+        if (intent.resolveActivity(from.getPackageManager()) != null) {
+            from.startActivity(intent);
+        }
     }
 
     /**

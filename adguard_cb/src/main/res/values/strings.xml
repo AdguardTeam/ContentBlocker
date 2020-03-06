@@ -60,11 +60,11 @@
     <string name="go_to_filters">Go to filters</string>
     <string name="install">Install</string>
     <string name="exit">Exit</string>
-    <string name="user_filter">User Filter</string>
+    <string name="user_filter">User Rules</string>
     <string name="enter_rule_text">Enter rule text</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
-    <string name="emptyUserfilterTextViewText">The user filter is empty</string>
+    <string name="emptyUserfilterTextViewText">There are no user rules yet</string>
     <string name="addUserRuleButtonText">Add rule</string>
     <string name="importUserRulesButtonText">Import</string>
     <string name="importUserRulesDialogTitle">Enter URL or path to file</string>
@@ -84,7 +84,7 @@
     <string name="notification_channel_rate_name">Ratings</string>
     <string name="notification_channel_rate_description">Notifications about app ratings</string>
     <string name="rate_app_summary">Enjoying AdGuard Content Blocker? Rate us on Google Play</string>
-    <string name="confirmClearUserFilterMessage">Are you sure you want to clear the user filter? This operation cannot be undone.</string>
+    <string name="confirmClearUserFilterMessage">Are you sure you want to clear User rules? This operation cannot be undone.</string>
     <string name="confirmRemoveUserRuleMessage">Are you sure you want to delete this rule? This operation cannot be undone.</string>
     <string name="clear_filters_cache_title">Clear the filter cache</string>
     <string name="clear_filters_cache_summary">Clears filters cache and updates the filters</string>

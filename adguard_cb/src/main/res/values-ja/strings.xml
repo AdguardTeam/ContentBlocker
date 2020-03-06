@@ -59,11 +59,9 @@
     <string name="go_to_filters">フィルターを確認する</string>
     <string name="install">インストール</string>
     <string name="exit">終了</string>
-    <string name="user_filter">ユーザーフィルター</string>
     <string name="enter_rule_text">ルールを追加</string>
     <string name="cancel">キャンセル</string>
     <string name="ok">OK</string>
-    <string name="emptyUserfilterTextViewText">ユーザーフィルターが定義されていません。</string>
     <string name="addUserRuleButtonText">ルールを追加</string>
     <string name="importUserRulesButtonText">インポート</string>
     <string name="importUserRulesDialogTitle">URLまたはパスを入力してください 。</string>
@@ -83,7 +81,6 @@
     <string name="notification_channel_rate_name">評価</string>
     <string name="notification_channel_rate_description">アプリ評価についての通知</string>
     <string name="rate_app_summary">AdGuardコンテンツブロッカーに満足いただいていれば、Google Playにて星5の評価をお願いいたします。</string>
-    <string name="confirmClearUserFilterMessage">ユーザーフィルタを削除してよろしいですか？この操作は元に戻すことはできません。</string>
     <string name="confirmRemoveUserRuleMessage">このルールを削除してよろしいですか？この操作は元に戻すことはできません。</string>
     <string name="clear_filters_cache_title">フィルタキャッシュをクリアする</string>
     <string name="clear_filters_cache_summary">フィルタキャッシュをクリアし、フィルタを更新します</string>

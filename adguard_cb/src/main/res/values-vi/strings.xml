@@ -57,11 +57,9 @@
     <string name="go_to_filters">Chuyển đến bộ lọc</string>
     <string name="install">Cài đặt</string>
     <string name="exit">Thoát</string>
-    <string name="user_filter">Bộ lọc của người dùng</string>
     <string name="enter_rule_text">Nhập đoạn quy tắc</string>
     <string name="cancel">Huỷ</string>
     <string name="ok">OK</string>
-    <string name="emptyUserfilterTextViewText">Bộ lọc của người dùng đang trống</string>
     <string name="addUserRuleButtonText">Thêm quy tắc</string>
     <string name="importUserRulesButtonText">Nhập</string>
     <string name="importUserRulesDialogTitle">Nhập URL hoặc đường dẫn đến tập tin</string>
@@ -72,7 +70,6 @@
     <string name="privacyPolicyLinkText">Chính sách riêng tư</string>
     <string name="eulaLinkText">EULA</string>
     <string name="delete">Xoá</string>
-    <string name="confirmClearUserFilterMessage">Bạn có chắc chắn muốn xóa bộ lọc người dùng? Hoạt động này không thể hoàn tác.</string>
     <string name="confirmRemoveUserRuleMessage">Bạn chắc muốn xoá quy tắc này? Hoạt động này không thể hoàn tác.</string>
     <string name="clear_filters_cache_title">Xóa bộ đệm bộ lọc</string>
     <string name="clear_filters_cache_summary">Xóa bộ đệm bộ lọc và cập nhật bộ lọc</string>

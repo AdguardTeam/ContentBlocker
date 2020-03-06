@@ -57,11 +57,9 @@
     <string name="go_to_filters">انتقل إلى الفلاتر</string>
     <string name="install">التثبت</string>
     <string name="exit">خروج</string>
-    <string name="user_filter">فلتر المستخدم</string>
     <string name="enter_rule_text">إدخال نص القاعدة</string>
     <string name="cancel">الغاء</string>
     <string name="ok">موافق</string>
-    <string name="emptyUserfilterTextViewText">فلتر المستخدم فارغ</string>
     <string name="addUserRuleButtonText">أضافه قاعده</string>
     <string name="importUserRulesButtonText">استيراد</string>
     <string name="importUserRulesDialogTitle">أدخل عنوانURL أو مسار الملف</string>
@@ -72,7 +70,6 @@
     <string name="privacyPolicyLinkText">سياسة الخصوصية</string>
     <string name="eulaLinkText">اتفاقية ترخيص المستخدم النهائي</string>
     <string name="delete">حذف</string>
-    <string name="confirmClearUserFilterMessage">هل أنت متأكد من أنك تريد مسح عامل تصفية المستخدم ؟هذه العملية لا يمكن التراجع عنها</string>
     <string name="confirmRemoveUserRuleMessage">هل أنت متأكد من أنك تريد حذف هذه القاعدة؟ هذه العملية لا يمكن التراجع عنها</string>
     <string name="clear_filters_cache_title">مسح ذاكرة التخزين المؤقت للفلتر</string>
     <string name="clear_filters_cache_summary">مسح عوامل تصفية ذاكرة التخزين المؤقت وتحديث المرشحات</string>

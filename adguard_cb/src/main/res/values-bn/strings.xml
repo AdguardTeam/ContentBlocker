@@ -57,11 +57,9 @@
     <string name="go_to_filters">ফিল্টারগুলিতে যান</string>
     <string name="install">ইনস্টল করুন</string>
     <string name="exit">বাহির</string>
-    <string name="user_filter">ব্যবহারকারীর ফিল্টার</string>
     <string name="enter_rule_text">নিয়ম লিখুন</string>
     <string name="cancel">বাতিল</string>
     <string name="ok">ঠিক আছে</string>
-    <string name="emptyUserfilterTextViewText">ব্যবহারকারীর ফিল্টারটি খালি</string>
     <string name="addUserRuleButtonText">নিয়ম যোগ করুন</string>
     <string name="importUserRulesButtonText">ইমপোর্ট</string>
     <string name="importUserRulesDialogTitle">ফাইলের URL বা পাথ লিখুন</string>

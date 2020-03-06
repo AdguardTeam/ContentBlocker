@@ -30,7 +30,7 @@
     <string name="filters">過濾器</string>
     <string name="stats_enabled_filters">過濾器</string>
     <string name="stats_enabled_rules">規則</string>
-    <string name="stats_update_time">已更新：</string>
+    <string name="stats_update_time">已更新於：</string>
     <string name="filterVersionTemplate">版本 {0}。</string>
     <string name="filterUpdatedTemplate">已更新於 {0} {1}。</string>
     <string name="versionInfoTextViewText">版本 {0}</string>
@@ -59,11 +59,11 @@
     <string name="go_to_filters">至過濾器</string>
     <string name="install">安裝</string>
     <string name="exit">離開</string>
-    <string name="user_filter">使用者過濾器</string>
+    <string name="user_filter">使用者規則</string>
     <string name="enter_rule_text">輸入規則文字</string>
     <string name="cancel">取消</string>
     <string name="ok">確定</string>
-    <string name="emptyUserfilterTextViewText">使用者過濾器為空</string>
+    <string name="emptyUserfilterTextViewText">尚未有使用者規則</string>
     <string name="addUserRuleButtonText">增加規則</string>
     <string name="importUserRulesButtonText">匯入</string>
     <string name="importUserRulesDialogTitle">輸入至該檔案的網址或路徑</string>
@@ -83,7 +83,7 @@
     <string name="notification_channel_rate_name">評分</string>
     <string name="notification_channel_rate_description">關於應用程式評分之通知</string>
     <string name="rate_app_summary">正在享受 AdGuard 內容阻擋器嗎？於 Google Play 上對我們評分</string>
-    <string name="confirmClearUserFilterMessage">您確定您想要清除該使用者過濾器嗎？這操作無法被復原。</string>
+    <string name="confirmClearUserFilterMessage">您確定您想要清除使用者規則嗎？這操作無法被復原。</string>
     <string name="confirmRemoveUserRuleMessage">您確定您想要刪除該規則嗎？這操作無法被復原。</string>
     <string name="clear_filters_cache_title">清除該過濾器快取</string>
     <string name="clear_filters_cache_summary">清除過濾器快取並更新過濾器</string>

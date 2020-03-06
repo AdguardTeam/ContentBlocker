@@ -5,6 +5,8 @@
     <string name="please_wait">Čakajte prosím...</string>
     <string name="main_info">Táto aplikácia je rozšírením pre prehliadače, ktoré podporujú blokovanie obsahu.\n\nAktuálne sú podporované tieto dva prehliadače:\n\n1. Samsung internetový prehliadač\n2. Yandex prehliadač\n\nS pomocou tejto aplikácie môžete blokovať všetky reklamy v týchto prehliadačoch.\n\nTiež môžete v Nastaveniach zvoliť, ktoré filtre sa majú používať.</string>
     <string name="progressGenericErrorText">Objavila sa nejaká chyba!</string>
+    <string name="importUserRulesSuccessResultMessage">Počet úspešne importovaných filtrov: {0}!</string>
+    <string name="importUserRulesErrorResultMessage">Chyba pri importe filtrov!</string>
     <string name="importUserRulesProgressDialogTitle">Import prebieha</string>
     <string name="importUserRulesProgressDialogMessage">Zavádza sa...</string>
     <string name="checkUpdatesProgressDialogTitle">Kontrola aktualizácií</string>
@@ -58,20 +60,29 @@
     <string name="install">Inštalovať</string>
     <string name="exit">Ukončenie</string>
     <string name="user_filter">Používateľský filter</string>
-    <string name="enter_rule_text">Vložiť text pravidla</string>
+    <string name="enter_rule_text">Zadajte text pravidla</string>
     <string name="cancel">Zrušiť</string>
     <string name="ok">OK</string>
     <string name="emptyUserfilterTextViewText">Používateľský filter je prázdny</string>
     <string name="addUserRuleButtonText">Pridať pravidlo</string>
     <string name="importUserRulesButtonText">Import</string>
-    <string name="importUserRulesDialogTitle">Vložte URL alebo cestu k súboru</string>
+    <string name="importUserRulesDialogTitle">Zadajte URL adresu alebo cestu k súboru</string>
     <string name="importUserRulesUrlErrorMessage">URL adresa nie je platná</string>
     <string name="clearUserRulesButtonText">Odstrániť všetko</string>
     <string name="browseButtonText">Prechádzať</string>
     <string name="reportBug">Nahlásiť chybu</string>
     <string name="privacyPolicyLinkText">Pravidlá ochrany súkromia</string>
     <string name="eulaLinkText">EULA</string>
+    <string name="rate_app_submit_feedback_title">Ďakujeme Vám za Váš názor!</string>
+    <string name="rate_app_submit_feedback_summary">Momentálne pracujeme na riešení.</string>
     <string name="delete">Vymazať</string>
+    <string name="submit">Poslať</string>
+    <string name="rate_app_dialog_title">Ohodnoťte túto aplikáciu</string>
+    <string name="rate_app_dialog_hint">Zanechajte svoj názor</string>
+    <string name="rate_app_notification_title">Ohodnoťte nás</string>
+    <string name="notification_channel_rate_name">Hodnotenia</string>
+    <string name="notification_channel_rate_description">Upozornenia na hodnotenia aplikácie</string>
+    <string name="rate_app_summary">Máte radi blokovanie obsahu AdGuard? Ohodnoťte nás 5 hviezdičkami v službe Google Play</string>
     <string name="confirmClearUserFilterMessage">Naozaj chcete vyčistiť používateľský filter? Táto operácia sa nedá vrátiť späť.</string>
     <string name="confirmRemoveUserRuleMessage">Naozaj chcete vymazať toto pravidlo? Táto operácia sa nedá vrátiť späť.</string>
     <string name="clear_filters_cache_title">Vymazať cache pamäť filtra</string>
@@ -97,4 +108,10 @@
     <string name="go_to_products">Ísť na Produkty</string>
     <string name="select_browser_dialog_adguard_products_title">Nie celkom to, čo potrebujete?</string>
     <string name="select_browser_dialog_adguard_products_message">Prezrite si ďalšie AdGuard produkty na našej webovej stránke</string>
+    <string name="choose_your_browser">Vyberte Váš prehliadač:</string>
+    <string name="chrome_dialog_title">Chcete blokovať reklamy v prehliadači Chrome?</string>
+    <string name="chrome_dialog_text"><![CDATA[Od roku 2019 nepodporuje prehliadač Chrome pre Android žiadne rozšírenia alebo aplikácie na blokovanie reklám.\nMôžete nabádať vývojárov prehliadača Chrome, aby pridali podporu pre blokovanie obsahu AdGuard a ďalšie blokovače obsahu. Ak to chcete urobiť, prejdite na stránku <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Sledovač chýb prehliadača Chrome</a> a pridajte hlas tomuto problému.]]></string>
+    <string name="back">Naspäť</string>
+    <string name="close">Ukončiť</string>
+    <string name="import_dialog_hint">URL adresa alebo cesta</string>
 </resources>

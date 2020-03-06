@@ -59,11 +59,11 @@
     <string name="go_to_filters">Перейти к фильтрам</string>
     <string name="install">Установить</string>
     <string name="exit">Выход</string>
-    <string name="user_filter">Пользовательский фильтр</string>
+    <string name="user_filter">Пользовательские правила</string>
     <string name="enter_rule_text">Введите текст правила</string>
     <string name="cancel">Отмена</string>
     <string name="ok">OK</string>
-    <string name="emptyUserfilterTextViewText">Пользовательский фильтр пуст</string>
+    <string name="emptyUserfilterTextViewText">Пользовательские правила не добавлены</string>
     <string name="addUserRuleButtonText">Добавить правило</string>
     <string name="importUserRulesButtonText">Импортировать</string>
     <string name="importUserRulesDialogTitle">Введите URL или путь к файлу</string>
@@ -83,7 +83,7 @@
     <string name="notification_channel_rate_name">Оценки</string>
     <string name="notification_channel_rate_description">Уведомления об оценках приложения</string>
     <string name="rate_app_summary">Вам нравится приложение AdGuard Content Blocker? Поставьте нам оценку в Google Play</string>
-    <string name="confirmClearUserFilterMessage">Вы уверены что хотите очистить собственный фильтр? Данную операцию нельзя отменить.</string>
+    <string name="confirmClearUserFilterMessage">Вы уверены, что хотите очистить Пользовательские правила? Данную операцию нельзя отменить.</string>
     <string name="confirmRemoveUserRuleMessage">Вы уверены, что хотите удалить это правило? Данную операцию нельзя отменить.</string>
     <string name="clear_filters_cache_title">Очистить кеш фильтров</string>
     <string name="clear_filters_cache_summary">Очищает кеш фильтров и обновляет фильтры</string>

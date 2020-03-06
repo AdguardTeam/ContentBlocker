@@ -5,6 +5,8 @@
     <string name="please_wait">Будь ласка, зачекайте...</string>
     <string name="main_info">Цей додаток працює як розширення для браузерів, які підтримують блокування небажаного контенту.\nНа даний момент це два браузера:\n1. Samsung Internet Browser\n2. Yandex Browser\nЗа допомогою цього додатку ви зможете заблокувати в цих браузерах всю рекламу.\nКрім того, в налаштуваннях ви можете налаштувати використовувані фільтри.</string>
     <string name="progressGenericErrorText">Виникла помилка!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} правил користувача успішно імпортовано!</string>
+    <string name="importUserRulesErrorResultMessage">Помилка імпорту правил фільтрування!</string>
     <string name="importUserRulesProgressDialogTitle">Імпортування...</string>
     <string name="importUserRulesProgressDialogMessage">Завантаження...</string>
     <string name="checkUpdatesProgressDialogTitle">Перевірка оновлень</string>
@@ -57,11 +59,11 @@
     <string name="go_to_filters">Перейти до фільтрів</string>
     <string name="install">Встановити</string>
     <string name="exit">Вихід</string>
-    <string name="user_filter">Фільтр користувача</string>
+    <string name="user_filter">Правила користувача</string>
     <string name="enter_rule_text">Введіть текст правила</string>
     <string name="cancel">Скасувати</string>
     <string name="ok">OK</string>
-    <string name="emptyUserfilterTextViewText">Фільтр користувача порожній</string>
+    <string name="emptyUserfilterTextViewText">Ще немає правил користувача</string>
     <string name="addUserRuleButtonText">Додати правило</string>
     <string name="importUserRulesButtonText">Імпорт</string>
     <string name="importUserRulesDialogTitle">Введіть URL або шлях до файлу</string>
@@ -71,8 +73,17 @@
     <string name="reportBug">Надіслати відгук</string>
     <string name="privacyPolicyLinkText">Конфіденційність</string>
     <string name="eulaLinkText">Угода</string>
+    <string name="rate_app_submit_feedback_title">Дякуємо за ваш відгук!</string>
+    <string name="rate_app_submit_feedback_summary">Ми вже працюємо над виправленням.</string>
     <string name="delete">Видалити</string>
-    <string name="confirmClearUserFilterMessage">Ви впевнені, що хочете очистити користувацький фільтр? Цю операцію не можна скасувати.</string>
+    <string name="submit">Відправити</string>
+    <string name="rate_app_dialog_title">Оцінити додаток</string>
+    <string name="rate_app_dialog_hint">Напишіть ваш відгук</string>
+    <string name="rate_app_notification_title">Оцініть нас</string>
+    <string name="notification_channel_rate_name">Оцінки</string>
+    <string name="notification_channel_rate_description">Сповіщення про оцінки додатка</string>
+    <string name="rate_app_summary">Подобається AdGuard? Поставте нам оцінку на Google Play</string>
+    <string name="confirmClearUserFilterMessage">Ви впевнені, що хочете очистити правила користувача? Цю операцію не можна скасувати.</string>
     <string name="confirmRemoveUserRuleMessage">Ви впевнені, що хочете видалити це правило? Цю операцію не можна скасувати.</string>
     <string name="clear_filters_cache_title">Очистити кеш фільтра</string>
     <string name="clear_filters_cache_summary">Очистити кеш фільтрів та оновити фільтри</string>
@@ -97,4 +108,10 @@
     <string name="go_to_products">Перейти до продуктів</string>
     <string name="select_browser_dialog_adguard_products_title">Не зовсім те, що вам потрібно?</string>
     <string name="select_browser_dialog_adguard_products_message">Погляньте на інші продукти AdGuard на нашому веб-сайті.</string>
+    <string name="choose_your_browser">Оберіть браузер:</string>
+    <string name="chrome_dialog_title">Хочете блокувати рекламу в Chrome?</string>
+    <string name="chrome_dialog_text"><![CDATA[Починаючи з 2019, Chrome для Android більше не підтримує будь-які додатки чи розширення для блокування реклами.\nВи можете звернутись до розробників Chrome з проханням додати підтримку AdGuard та інших блокувальників. Для цього перейдіть на <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> та проголосуйте за вирішення проблеми.]]></string>
+    <string name="back">Назад</string>
+    <string name="close">Закрити</string>
+    <string name="import_dialog_hint">URL або шлях</string>
 </resources>

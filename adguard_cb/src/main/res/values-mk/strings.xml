@@ -57,11 +57,9 @@
     <string name="go_to_filters">Оди во филтри</string>
     <string name="install">Инсталирај</string>
     <string name="exit">Излез</string>
-    <string name="user_filter">Кориснички Филтер</string>
     <string name="enter_rule_text">Внесете текст на правилото</string>
     <string name="cancel">Откажи</string>
     <string name="ok">Во Ред</string>
-    <string name="emptyUserfilterTextViewText">Корисничкиот филтер е празен</string>
     <string name="addUserRuleButtonText">Додај правило</string>
     <string name="importUserRulesButtonText">Внеси</string>
     <string name="importUserRulesDialogTitle">Внесте УРЛ или патека до датотеката</string>

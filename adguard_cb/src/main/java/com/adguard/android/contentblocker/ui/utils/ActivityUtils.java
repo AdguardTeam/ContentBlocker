@@ -46,14 +46,9 @@ public class ActivityUtils {
     public static void startMarket(Context context, String packageName, String referrer) {
         String referrerParam = referrer != null ? "&referrer=" + referrer : "";
         try {
-            Uri uri = Uri.parse("market://details?id=" + packageName + referrerParam);
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(intent);
-        } catch (ActivityNotFoundException anfe) {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + packageName + referrerParam));
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(intent);
+            NavigationHelper.openWebSite(context, Uri.parse("market://details?id=" + packageName + referrerParam));
+        } catch (ActivityNotFoundException e) {
+            NavigationHelper.openWebSite(context, Uri.parse("https://play.google.com/store/apps/details?id=" + packageName + referrerParam));
         }
     }
 

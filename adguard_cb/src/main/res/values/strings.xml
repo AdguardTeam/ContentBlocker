@@ -38,6 +38,7 @@
     <string name="rateAdguardButtonText">Rate AdGuard</string>
     <string name="officialSiteLabelText">Official site</string>
     <string name="forumLabelText">Forum</string>
+    <string name="install_at_least_one_browser">You have no installed applications to open the website</string>
     <string name="install_browsers">You have no supported browsers installed! You can install them from Google Play:</string>
     <string name="install_samsung_browser">Install Samsung Internet Browser</string>
     <string name="install_yandex_browser">Install Yandex Browser</string>

@@ -5,6 +5,8 @@
     <string name="please_wait">Attendi...</string>
     <string name="main_info">Questa applicazione è un\'estensione per i browser che supportano il blocco di contenuti.\n\nAttualmente ci sono due browser che supportano questo blocco:\n\n1. Samsung Internet browser\n2. Yandex Browser\n\nCon l\'aiuto di questa applicazione puoi bloccare tutte le pubblicità in questi browser.\n\nPuoi scegliere quali filtri applicare nelle Impostazioni.</string>
     <string name="progressGenericErrorText">Si è verificato un errore!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} regola(e) filtri importati correttamente!</string>
+    <string name="importUserRulesErrorResultMessage">Errore durante l\'importazione delle regole filtri!</string>
     <string name="importUserRulesProgressDialogTitle">Importazione in corso</string>
     <string name="importUserRulesProgressDialogMessage">Caricamento...</string>
     <string name="checkUpdatesProgressDialogTitle">Controllo degli aggiornamenti in corso</string>
@@ -57,11 +59,11 @@
     <string name="go_to_filters">Vai ai filtri</string>
     <string name="install">Installa</string>
     <string name="exit">Esci</string>
-    <string name="user_filter">Filtro Utente</string>
+    <string name="user_filter">Regole utente</string>
     <string name="enter_rule_text">Inserisci il testo della regola</string>
     <string name="cancel">Annulla</string>
     <string name="ok">OK</string>
-    <string name="emptyUserfilterTextViewText">Il filtro utente è vuoto</string>
+    <string name="emptyUserfilterTextViewText">Le regole utente sono vuote</string>
     <string name="addUserRuleButtonText">Aggiungi regola</string>
     <string name="importUserRulesButtonText">Importa</string>
     <string name="importUserRulesDialogTitle">Inserisci URL o percorso al file</string>
@@ -81,7 +83,7 @@
     <string name="notification_channel_rate_name">Valutazioni</string>
     <string name="notification_channel_rate_description">Notifiche sulle valutazioni delle app</string>
     <string name="rate_app_summary">Ti piace AdGuard Content Blocker? Votaci su Google Play</string>
-    <string name="confirmClearUserFilterMessage">Sei sicuro di voler cancellare il filtro utente?L\'operazione non può essere annullata.</string>
+    <string name="confirmClearUserFilterMessage">Sei sicuro di voler vuotare le regole utente? L\'operazione non può essere annullata.</string>
     <string name="confirmRemoveUserRuleMessage">Sei sicuro di voler cancellare questa regola? L\'operazione non può essere annullata</string>
     <string name="clear_filters_cache_title">Svuota la cache dei filtri</string>
     <string name="clear_filters_cache_summary">Svuota la cache e aggiorna i filtri</string>

@@ -57,11 +57,9 @@
     <string name="go_to_filters">برو به فیلترها</string>
     <string name="install">نصب</string>
     <string name="exit">خروج</string>
-    <string name="user_filter">فیلتر کاربر</string>
     <string name="enter_rule_text">متن دستور را وارد کنید</string>
     <string name="cancel">لغو</string>
     <string name="ok">تأیید</string>
-    <string name="emptyUserfilterTextViewText">فیلتر کاربر خالی هست</string>
     <string name="addUserRuleButtonText">افزودن دستور</string>
     <string name="importUserRulesButtonText">وارد کردن</string>
     <string name="importUserRulesDialogTitle">آدرس یا مسیر فایل را وارد کنید</string>
@@ -80,7 +78,6 @@
     <string name="rate_app_notification_title">امتیاز به ما</string>
     <string name="notification_channel_rate_name">امتیاز</string>
     <string name="notification_channel_rate_description">اطلاع رسانی درباره امتیاز برنامه</string>
-    <string name="confirmClearUserFilterMessage">آیا واقعا میخواهید فیلتر کاربر را پاکسازی کنید؟ این عملکرد غیر قابل بازگشت است.</string>
     <string name="confirmRemoveUserRuleMessage">آیا واقعا میخواهید این دستور را حذف کنید؟ این عملکرد غیر قابل بازگشت است.</string>
     <string name="clear_filters_cache_title">پاکسازی کَش فیلتر</string>
     <string name="clear_filters_cache_summary">پاکسازی کَش فیلترها و بروز رسانی فیلترها</string>

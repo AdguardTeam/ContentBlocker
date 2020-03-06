@@ -56,7 +56,7 @@ public class ServiceLocator {
         preferencesService = new PreferencesServiceImpl(context);
         notificationService = new NotificationServiceImpl(context);
         filterService = new FilterServiceImpl(context, new DbHelper(context), preferencesService, notificationService);
-        jobService = new JobServiceImpl(this);
+        jobService = new JobServiceImpl(this, context);
 
         LOG.info("ServiceLocator setup...");
         checkFirstLaunch();

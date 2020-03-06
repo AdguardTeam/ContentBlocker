@@ -57,11 +57,9 @@
     <string name="go_to_filters">Eiti į filtrus</string>
     <string name="install">Įdiegti</string>
     <string name="exit">Išeiti</string>
-    <string name="user_filter">Naudotojo filtras</string>
     <string name="enter_rule_text">Įveskite taisyklės tekstą</string>
     <string name="cancel">Atšaukti</string>
     <string name="ok">OK</string>
-    <string name="emptyUserfilterTextViewText">Naudotojo filtras tuščias</string>
     <string name="addUserRuleButtonText">Pridėti taisyklę</string>
     <string name="importUserRulesButtonText">Importuoti</string>
     <string name="importUserRulesDialogTitle">Įveskite URL arba failo kelią</string>
@@ -72,7 +70,6 @@
     <string name="privacyPolicyLinkText">Privatumo politika</string>
     <string name="eulaLinkText">GVLS</string>
     <string name="delete">Ištrinti</string>
-    <string name="confirmClearUserFilterMessage">Ar tikrai norite išvalyti naudotojo filtrą? Šio veiksmo negalima bus atšaukti.</string>
     <string name="confirmRemoveUserRuleMessage">Ar tikrai norite ištrinti šią taisyklę? Šios veiksmo negalima bus atšaukti.</string>
     <string name="clear_filters_cache_title">Išvalyti filtro talpyklą</string>
     <string name="clear_filters_cache_summary">Filtrų talpyklos valymas ir filtrų atnaujinimas</string>

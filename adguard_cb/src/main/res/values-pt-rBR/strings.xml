@@ -59,11 +59,11 @@
     <string name="go_to_filters">Ir para filtros</string>
     <string name="install">Instalar</string>
     <string name="exit">Sair</string>
-    <string name="user_filter">Filtro de Usuário</string>
+    <string name="user_filter">Regras de usuário</string>
     <string name="enter_rule_text">Digite o texto da regra</string>
     <string name="cancel">Cancelar</string>
     <string name="ok">OK</string>
-    <string name="emptyUserfilterTextViewText">O filtro de usuário está vazio</string>
+    <string name="emptyUserfilterTextViewText">Você não tem regras de usuário</string>
     <string name="addUserRuleButtonText">Adicionar regra</string>
     <string name="importUserRulesButtonText">Importar</string>
     <string name="importUserRulesDialogTitle">Digite a URL ou caminho para o arquivo</string>
@@ -82,7 +82,8 @@
     <string name="rate_app_notification_title">Avalie-nos</string>
     <string name="notification_channel_rate_name">Avaliação</string>
     <string name="notification_channel_rate_description">Notificações sobre avaliação do aplicativo</string>
-    <string name="confirmClearUserFilterMessage">Você tem certeza que deseja limpar o filtro de usuário? Esta ação não poderá ser desfeita.</string>
+    <string name="rate_app_summary">Esta gostando do Bloqueador de Conteúdo? Avalie-nos no Google Play</string>
+    <string name="confirmClearUserFilterMessage">Você tem certeza que deseja limpar as regras de usuário? Esta ação não poderá ser desfeita.</string>
     <string name="confirmRemoveUserRuleMessage">Você tem certeza que deseja excluir esta regra? Esta ação não poderá ser desfeita.</string>
     <string name="clear_filters_cache_title">Limpar cache de filtros</string>
     <string name="clear_filters_cache_summary">Limpa o cache e atualiza os filtros</string>
@@ -111,5 +112,6 @@
     <string name="chrome_dialog_title">Deseja bloquear anúncios no Google Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[A partir de 2019, o Chrome para Android não suporta nenhuma extensão ou aplicativo de bloqueio de anúncios.\nVocê pode solicitar aos desenvolvedores do Chrome que adicionem suporte ao AdGuard e outros bloqueadores de conteúdo. Para fazer isso, visite <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">rastreador de erros do Chrome</a> e dê um voto positivo no problema.]]></string>
     <string name="back">Voltar</string>
+    <string name="close">Fechar</string>
     <string name="import_dialog_hint">Caminho ou URL</string>
 </resources>

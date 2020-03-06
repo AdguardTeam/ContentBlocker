@@ -6,6 +6,7 @@
     <string name="main_info">Diese Anwendung ist eine Erweiterung für Internet-Browser, die das Blockieren von Inhalten unterstützen.\n\nAktuell gibt es zwei Browser:\n\n1. Samsung Internet-Browser\n2. Yandex Browser\n\nMit Hilfe dieser Anwendung können Sie alle Werbungen in diesen Browsern blockieren.\n\nZusätzlich können Sie in den Einstellungen auswählen, welche Filter Sie nutzen wollen.</string>
     <string name="progressGenericErrorText">Ein Fehler ist aufgetreten!</string>
     <string name="importUserRulesSuccessResultMessage">{0} Filter-Regel(n) erfolgreich importiert!</string>
+    <string name="importUserRulesErrorResultMessage">Fehler beim Importieren der Filter!</string>
     <string name="importUserRulesProgressDialogTitle">Importvorgang läuft</string>
     <string name="importUserRulesProgressDialogMessage">Laden...</string>
     <string name="checkUpdatesProgressDialogTitle">Auf Updates prüfen</string>
@@ -58,11 +59,11 @@
     <string name="go_to_filters">Filter öffnen</string>
     <string name="install">Installieren</string>
     <string name="exit">Beenden</string>
-    <string name="user_filter">Benutzer-Filter</string>
+    <string name="user_filter">Benutzerregeln</string>
     <string name="enter_rule_text">Regeltext eingeben</string>
     <string name="cancel">Abbrechen</string>
     <string name="ok">OK</string>
-    <string name="emptyUserfilterTextViewText">Benutzerfilter ist leer</string>
+    <string name="emptyUserfilterTextViewText">Die Liste der Benutzerregeln ist leer</string>
     <string name="addUserRuleButtonText">Regel hinzufügen</string>
     <string name="importUserRulesButtonText">Importieren</string>
     <string name="importUserRulesDialogTitle">Geben Sie die URL oder den Dateipfad ein</string>
@@ -82,7 +83,7 @@
     <string name="notification_channel_rate_name">Bewertungen</string>
     <string name="notification_channel_rate_description">Benachrichtigungen über die App-Bewertungen</string>
     <string name="rate_app_summary">Gefällt Ihnen AdGuard-Inhaltsblocker? Bewerten Sie uns auf Google Play</string>
-    <string name="confirmClearUserFilterMessage">Möchten Sie den eigenen Filter wirklich entfernen? Dieser Vorgang kann nicht widerrufen werden.</string>
+    <string name="confirmClearUserFilterMessage">Möchten Sie die Benutzerregeln wirklich entfernen? Dieser Vorgang kann nicht widerrufen werden.</string>
     <string name="confirmRemoveUserRuleMessage">Möchten Sie diese Regel wirklich löschen? Dieser Vorgang kann nicht widerrufen werden.</string>
     <string name="clear_filters_cache_title">Filtercache leeren</string>
     <string name="clear_filters_cache_summary">Filter-Cache leeren und Filter aktualisieren</string>

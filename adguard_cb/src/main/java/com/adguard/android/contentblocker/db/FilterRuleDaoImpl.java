@@ -19,6 +19,8 @@ package com.adguard.android.contentblocker.db;
 import android.content.Context;
 import android.content.res.Resources;
 
+import androidx.annotation.Nullable;
+
 import org.apache.commons.collections4.list.SetUniqueList;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.ArrayUtils;
@@ -61,10 +63,13 @@ public class FilterRuleDaoImpl implements FilterRuleDao {
 
     @Override
     public List<String> selectRuleTexts(List<Integer> filterIds, boolean useCosmetics) {
-        List<String> rules = SetUniqueList.setUniqueList(new ArrayList<String>());
+        List<String> rules = SetUniqueList.setUniqueList(new ArrayList<>());
 
         for (int filterId : filterIds) {
-            rules.addAll(getRules(filterId, useCosmetics));
+            List<String> list = getRules(filterId, useCosmetics);
+            if (list != null) {
+                rules.addAll(list);
+            }
         }
 
         return rules;
@@ -116,6 +121,7 @@ public class FilterRuleDaoImpl implements FilterRuleDao {
      *
      * @return List of rules
      */
+    @Nullable
     private List<String> getRules(int filterId, boolean useCosmetics) {
         InputStream inputStream = null;
         InputStreamReader inputStreamReader = null;
@@ -139,7 +145,7 @@ public class FilterRuleDaoImpl implements FilterRuleDao {
             return rules;
         } catch (Exception ex) {
             log.error("Cannot select rules for filter {}", filterId, ex);
-            throw new RuntimeException("Cannot select rules for filter " + filterId, ex);
+            return null;
         } finally {
             IOUtils.closeQuietly(inputStream);
             IOUtils.closeQuietly(inputStreamReader);

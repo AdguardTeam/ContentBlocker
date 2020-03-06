@@ -57,11 +57,9 @@
     <string name="go_to_filters">Menj a szűrőkhöz</string>
     <string name="install">Telepítés</string>
     <string name="exit">Kilépés</string>
-    <string name="user_filter">Egyéni szűrő</string>
     <string name="enter_rule_text">Adja meg a szabály szövegét</string>
     <string name="cancel">Mégse</string>
     <string name="ok">Ok</string>
-    <string name="emptyUserfilterTextViewText">Nincs egyéni szűrő</string>
     <string name="addUserRuleButtonText">Szabály hozzáadása</string>
     <string name="importUserRulesButtonText">Importálás</string>
     <string name="importUserRulesDialogTitle">Adja meg az URL hivatkozást vagy az útvonalat a fájlhoz</string>

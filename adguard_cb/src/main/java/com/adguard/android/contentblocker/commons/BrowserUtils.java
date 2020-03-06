@@ -242,7 +242,7 @@ public class BrowserUtils {
 
         dialogLayout.findViewById(R.id.go_to_products).setOnClickListener(v -> {
             String url = AppLink.Website.getOtherProductUrl(context, "chrome_dialog");
-            NavigationHelper.openWebSite(context, url);
+            NavigationHelper.redirectToWebSite(context, url);
         });
 
         dialog.show();

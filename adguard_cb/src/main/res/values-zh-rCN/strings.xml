@@ -57,11 +57,9 @@
     <string name="go_to_filters">转到过滤器</string>
     <string name="install">安装</string>
     <string name="exit">退出</string>
-    <string name="user_filter">用户过滤器</string>
     <string name="enter_rule_text">输入规则文本</string>
     <string name="cancel">取消</string>
     <string name="ok">确定</string>
-    <string name="emptyUserfilterTextViewText">用户过滤器为空</string>
     <string name="addUserRuleButtonText">添加规则</string>
     <string name="importUserRulesButtonText">导入</string>
     <string name="importUserRulesDialogTitle">输入 URL 或文件路径</string>
@@ -72,7 +70,6 @@
     <string name="privacyPolicyLinkText">隐私策略</string>
     <string name="eulaLinkText">最终用户许可协议</string>
     <string name="delete">删除</string>
-    <string name="confirmClearUserFilterMessage">您确定要清除用户过滤器？此操作无法撤销。</string>
     <string name="confirmRemoveUserRuleMessage">您确定要删除此规则？此操作无法撤销。</string>
     <string name="clear_filters_cache_title">清除过滤器缓存</string>
     <string name="clear_filters_cache_summary">清除过滤器缓存并更新过滤器</string>

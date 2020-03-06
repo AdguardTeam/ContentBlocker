@@ -5,6 +5,8 @@
     <string name="please_wait">Калі ласка пачакайце...</string>
     <string name="main_info">Гэты дадатак з\'яўляецца пашырэннем для браўзараў, што падтрымваюць блакаванне кантэнту.\n\nУ гэты час існуе два такія браўзары:\n\n1. Samsung Internet Browser\n2. Браўзар Яндэкса\n\nЗ дапамогай гэтага дадатку вы можаце заблакаваць усе рэкламныя аб\'явы ў гэтых браўзарах.\n\nАпроч таго, вы можаце выбраць, якія фільтры выкарыстоўваць у наладах.</string>
     <string name="progressGenericErrorText">Адбылася нейкая памылка!</string>
+    <string name="importUserRulesSuccessResultMessage">{0} фільтр(-аў) паспяхова імпартаваны!</string>
+    <string name="importUserRulesErrorResultMessage">Памылка імпарту фільтраў!</string>
     <string name="importUserRulesProgressDialogTitle">Імпартаванне ў працэсе</string>
     <string name="importUserRulesProgressDialogMessage">Загрузка...</string>
     <string name="checkUpdatesProgressDialogTitle">Праверка абнаўленняў</string>
@@ -71,7 +73,16 @@
     <string name="reportBug">Паведаміць пра памылку</string>
     <string name="privacyPolicyLinkText"><a href="http://www.adguard.com/privacy.html">Палітыка прыватнасці</a></string>
     <string name="eulaLinkText"><a href="https://adguard.com/en/eula.html">Пагадненне</a></string>
+    <string name="rate_app_submit_feedback_title">Дзякуй за ваш водгук!</string>
+    <string name="rate_app_submit_feedback_summary">Мы працуем цяпер над вырашэннем праблемы.</string>
     <string name="delete">Выдаліць</string>
+    <string name="submit">Адправіць</string>
+    <string name="rate_app_dialog_title">Ацаніце гэта дадатак</string>
+    <string name="rate_app_dialog_hint">Пакіньце ваш водгук</string>
+    <string name="rate_app_notification_title">Ацаніце дадатак</string>
+    <string name="notification_channel_rate_name">Ацэнкі</string>
+    <string name="notification_channel_rate_description">Апавяшчэнні пра ацэнкі дадатку</string>
+    <string name="rate_app_summary">Цешыцеся дадаткам AdGuard Content Blocker? Пастаўце нам 5 зорак у Google Play</string>
     <string name="confirmClearUserFilterMessage">Вы ўпэўнены што хочаце ачысціць уласны фільтр? Дадзеную аперацыю няможна скасаваць.</string>
     <string name="confirmRemoveUserRuleMessage">Вы ўпэўнены, што хочаце выдаліць гэта правіла? Дадзеную аперацыю няможна скасаваць.</string>
     <string name="clear_filters_cache_title">Ачысціць кэш фільтраў</string>
@@ -92,4 +103,15 @@
     <string name="reportTypeBugReport">Дэфект</string>
     <string name="reportTypeFeatureRequest">Прапанова</string>
     <string name="reportTypeCustom">Іншае</string>
+    <string name="overwrite_existing_rules">Перазапісаць існыя правілы</string>
+    <string name="other_product_message">Гэта дадатак працуе толькі ў Samsung і Yandex браўзарах. Не зусім тое, што вам патрэбна? Азнаёмцеся з іншымі прадуктамі AdGuard на нашым вэбсайце</string>
+    <string name="go_to_products">Перайсці ў \"Прадукты\"</string>
+    <string name="select_browser_dialog_adguard_products_title">Не зусім тое, што вам патрэбна?</string>
+    <string name="select_browser_dialog_adguard_products_message">Азнаёмцеся з іншымі прадуктамі AdGuard на нашым вэбсайце</string>
+    <string name="choose_your_browser">Выберыце ваш браўзар:</string>
+    <string name="chrome_dialog_title">Хочаце блакаваць рэкламу ў Chrome?</string>
+    <string name="chrome_dialog_text"><![CDATA[Пачынальна з 2019 года Chrome для Android не падтрымвае пашырэння і дадатку для блакавання рэкламы.\Вы можаце звярнуцца да распрацоўнікаў Chrome з просьбай пра даданне падтрымкі для AdGuard і іншых блакавальнікаў кантэнту. Для гэтага наведайце <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> і прагаласуйце за развязак праблемы.]]></string>
+    <string name="back">Назад</string>
+    <string name="close">Зачыніць</string>
+    <string name="import_dialog_hint">Шлях ці спасылка</string>
 </resources>

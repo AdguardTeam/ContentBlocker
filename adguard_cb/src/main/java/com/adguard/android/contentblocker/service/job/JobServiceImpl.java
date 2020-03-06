@@ -16,6 +16,8 @@
  */
 package com.adguard.android.contentblocker.service.job;
 
+import android.content.Context;
+
 import androidx.annotation.NonNull;
 import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
@@ -42,9 +44,9 @@ public class JobServiceImpl implements JobService {
     private WeakReference<ServiceLocator> serviceLocatorRef;
     private WorkManager workManager;
 
-    public JobServiceImpl(ServiceLocator serviceLocator) {
+    public JobServiceImpl(ServiceLocator serviceLocator, Context context) {
         this.serviceLocatorRef = new WeakReference<>(serviceLocator);
-        this.workManager = WorkManager.getInstance();
+        this.workManager = WorkManager.getInstance(context);
     }
 
     @Override

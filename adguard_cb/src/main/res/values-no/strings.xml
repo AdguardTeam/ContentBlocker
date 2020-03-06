@@ -57,11 +57,9 @@
     <string name="go_to_filters">Gå til filtrene</string>
     <string name="install">Installer</string>
     <string name="exit">Avslutt</string>
-    <string name="user_filter">Brukerfilter</string>
     <string name="enter_rule_text">Angi regeltekst</string>
     <string name="cancel">Avbryt</string>
     <string name="ok">OK</string>
-    <string name="emptyUserfilterTextViewText">Brukerfilteret er tomt</string>
     <string name="addUserRuleButtonText">Legg til regel</string>
     <string name="importUserRulesButtonText">Importer</string>
     <string name="importUserRulesDialogTitle">Angi nettadresse eller banen til filen</string>

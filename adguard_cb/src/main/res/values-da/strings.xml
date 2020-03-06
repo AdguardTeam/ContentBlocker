@@ -59,11 +59,11 @@
     <string name="go_to_filters">Gå til filtre</string>
     <string name="install">Installer</string>
     <string name="exit">Afslut</string>
-    <string name="user_filter">Brugerfilter</string>
+    <string name="user_filter">Brugerregler</string>
     <string name="enter_rule_text">Indtast regeltekst</string>
     <string name="cancel">Annuller</string>
     <string name="ok">OK</string>
-    <string name="emptyUserfilterTextViewText">Brugerfilteret er tomt</string>
+    <string name="emptyUserfilterTextViewText">Der er endnu ingen brugerregler</string>
     <string name="addUserRuleButtonText">Tilføj regel</string>
     <string name="importUserRulesButtonText">Importer</string>
     <string name="importUserRulesDialogTitle">Indtast URL eller stien til filen</string>
@@ -83,7 +83,7 @@
     <string name="notification_channel_rate_name">Anmeldelser</string>
     <string name="notification_channel_rate_description">Meddelelser om app-anmeldelser</string>
     <string name="rate_app_summary">Nyder du AdGuard Indholdsblocker? Bedøm os på Google Play</string>
-    <string name="confirmClearUserFilterMessage">Er du sikker på, at du vil rydde brugerfiltret? Denne handling kan ikke fortrydes.</string>
+    <string name="confirmClearUserFilterMessage">Er du sikker på, at du vil rydde Brugerreglerne? Denne handling kan ikke fortrydes.</string>
     <string name="confirmRemoveUserRuleMessage">Er du sikker på, at du vil slette denne regel? Denne handling kan ikke fortrydes.</string>
     <string name="clear_filters_cache_title">Ryd filtercache</string>
     <string name="clear_filters_cache_summary">Rydder filtercache og opdaterer filtrene</string>

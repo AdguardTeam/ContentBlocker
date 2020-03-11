@@ -7,14 +7,14 @@
     <string name="progressGenericErrorText">¡Se ha producido un error!</string>
     <string name="importUserRulesSuccessResultMessage">¡{0} filtros importados correctamente!</string>
     <string name="importUserRulesErrorResultMessage">¡Error importando reglas de filtro!</string>
-    <string name="importUserRulesProgressDialogTitle">Obteniendo filtros</string>
+    <string name="importUserRulesProgressDialogTitle">Importación en progreso</string>
     <string name="importUserRulesProgressDialogMessage">Cargando...</string>
     <string name="checkUpdatesProgressDialogTitle">Buscar actualizaciones</string>
     <string name="checkUpdatesProgressDialogMessage">Buscando actualizaciones, por favor espere...</string>
     <string name="checkUpdatesErrorResultMessage">Error en la actualización. Por favor, inténtelo de nuevo más tarde.</string>
-    <string name="checkUpdatesZeroResultMessage">Los filtros están actualizados a la versión mas reciente.</string>
-    <string name="checkUpdatesOneResultMessage">Se han actualizado {0} filtros</string>
-    <string name="checkUpdatesManyResultMessage">Se han actualizado {0} filtros de {1}</string>
+    <string name="checkUpdatesZeroResultMessage">Los filtros están actualizados a la versión más reciente.</string>
+    <string name="checkUpdatesOneResultMessage">Un filtro fue actualizado: {0}</string>
+    <string name="checkUpdatesManyResultMessage">{0} filtros fueron actualizados: {1}</string>
     <string name="action_settings">Configuración</string>
     <string name="openned_drawer_title">Opciones</string>
     <string name="about">Acerca de</string>
@@ -30,9 +30,9 @@
     <string name="filters">Filtros </string>
     <string name="stats_enabled_filters">Filtros</string>
     <string name="stats_enabled_rules">Reglas</string>
-    <string name="stats_update_time">Ultima Actualización:</string>
+    <string name="stats_update_time">Última actualización:</string>
     <string name="filterVersionTemplate">Versión {0}</string>
-    <string name="filterUpdatedTemplate">Actualizado {0} en {1}</string>
+    <string name="filterUpdatedTemplate">Actualizado el {0} a las {1}</string>
     <string name="versionInfoTextViewText">Versión {0}</string>
     <string name="copyrightInfoTextViewText">© 2009–%s. AdGuard Software Ltd.\nTodos los derechos reservados.</string>
     <string name="rateAdguardButtonText">Denos su opinión</string>
@@ -69,7 +69,7 @@
     <string name="importUserRulesDialogTitle">Ingrese la URL o la ruta del archivo</string>
     <string name="importUserRulesUrlErrorMessage">La URL no es válida</string>
     <string name="clearUserRulesButtonText">Eliminar todo</string>
-    <string name="browseButtonText">Dar un vistazo</string>
+    <string name="browseButtonText">Buscar</string>
     <string name="reportBug">Enviar comentario</string>
     <string name="privacyPolicyLinkText">Política de privacidad</string>
     <string name="eulaLinkText">Acuerdo de licencia</string>
@@ -80,13 +80,13 @@
     <string name="rate_app_dialog_title">Califique esta app</string>
     <string name="rate_app_dialog_hint">Deje sus comentarios</string>
     <string name="rate_app_notification_title">Calífiquenos</string>
-    <string name="notification_channel_rate_name">Tarifas</string>
-    <string name="notification_channel_rate_description">Notificaciones sobre las tarifas de la app</string>
+    <string name="notification_channel_rate_name">Calificaciones</string>
+    <string name="notification_channel_rate_description">Notificaciones sobre calificaciones de la app</string>
     <string name="rate_app_summary">¿Disfruta del Bloqueador de contenido AdGuard? Califíquenos en Google Play</string>
     <string name="confirmClearUserFilterMessage">¿Está seguro de que desea borrar las reglas del usuario? Esta operación no se puede deshacer.</string>
     <string name="confirmRemoveUserRuleMessage">¿Está seguro de que desea eliminar esta regla? Esta operación no se puede deshacer.</string>
     <string name="clear_filters_cache_title">Borrar la caché del filtro</string>
-    <string name="clear_filters_cache_summary">Borrar la caché de los filtros y actualizarlos</string>
+    <string name="clear_filters_cache_summary">Borrar la caché de los filtros y los actualiza</string>
     <string name="clear_filters_cache_progress_message">Borrando caché y actualizando los filtros</string>
     <string name="whitelist_title">Lista blanca</string>
     <string name="addToWhitelistButtonText">Añadir sitio web</string>
@@ -110,7 +110,7 @@
     <string name="select_browser_dialog_adguard_products_message">Echa un vistazo a otros productos AdGuard en nuestro sitio web</string>
     <string name="choose_your_browser">Elija su navegador:</string>
     <string name="chrome_dialog_title">¿Quiere bloquear anuncios en Chrome?</string>
-    <string name="chrome_dialog_text"><![CDATA[A partir de 2019, Chrome para Android no es compatible con ninguna extensión o app de bloqueo de anuncios.\nPuede instar a los desarrolladores de Chrome a que agreguen soporte para AdGuard y otros bloqueadores de contenido. Para hacer esto, visite <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">el sistema de seguimiento de errores de Google</a> y vote por el problema.]]></string>
+    <string name="chrome_dialog_text"><![CDATA[A partir de 2019, Chrome para Android no es compatible con ninguna extensión o app para bloqueo de anuncios.\nPuede instar a los desarrolladores de Chrome a que añadan soporte para AdGuard y otros bloqueadores de contenido. Para hacer esto, visite <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">el sistema de seguimiento de errores de Google</a> y vote por el problema.]]></string>
     <string name="back">Regresar</string>
     <string name="close">Cerrar</string>
     <string name="import_dialog_hint">URL o ruta</string>

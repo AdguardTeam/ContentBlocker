@@ -38,6 +38,7 @@
     <string name="rateAdguardButtonText">Оценить AdGuard</string>
     <string name="officialSiteLabelText">Официальный сайт</string>
     <string name="forumLabelText">Форум</string>
+    <string name="install_at_least_one_app_for_the_website">У вас нет установленных приложений для открытия сайта</string>
     <string name="install_browsers">У вас не установлены поддерживаемые браузеры! Вы можете установить их из Google Play:</string>
     <string name="install_samsung_browser">Установить Samsung Internet Browser</string>
     <string name="install_yandex_browser">Установить Yandex Browser</string>
@@ -104,10 +105,10 @@
     <string name="reportTypeFeatureRequest">Предложение</string>
     <string name="reportTypeCustom">Другое</string>
     <string name="overwrite_existing_rules">Перезаписать существующие правила</string>
-    <string name="other_product_message">Это приложение работает только в Samsung и Yandex браузерах. Не совсем то, что вам нужно? Ознакомьтесь с другими продуктами AdGuard на нашем вебсайте</string>
+    <string name="other_product_message">Это приложение работает только в браузерах Samsung и Yandex. Не совсем то, что вам нужно? Ознакомьтесь с другими продуктами AdGuard на нашем вебсайте</string>
     <string name="go_to_products">Перейти в \"Продукты\"</string>
     <string name="select_browser_dialog_adguard_products_title">Не совсем то, что вам нужно?</string>
-    <string name="select_browser_dialog_adguard_products_message">Ознакомьтесь с другими продуктами AdGuard на нашем вебсайте</string>
+    <string name="select_browser_dialog_adguard_products_message">Ознакомьтесь с другими продуктами AdGuard на нашем сайте</string>
     <string name="choose_your_browser">Выберите ваш браузер:</string>
     <string name="chrome_dialog_title">Хотите блокировать рекламу в Chrome?</string>
     <string name="chrome_dialog_text"><![CDATA[Начиная с 2019 года Chrome для Android не поддерживает расширения и приложения для блокировки рекламы.\Вы можете обратиться к разработчикам Chrome с просьбой о добавлении поддержки для AdGuard и других блокировщиков контента. Для этого посетите <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=113111">Chrome bug tracker</a> и проголосуйте за решение проблемы.]]></string>

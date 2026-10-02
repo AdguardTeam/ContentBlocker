@@ -6,7 +6,7 @@
 </p>
 <h3 align="center">Ad blocker app to block ads in Yandex Browser and Samsung Internet browser</h3>
   <p align="center"> 
-    <a href="https://adguard.com/">Website</a> |
+    <a href="https://adguard.com/adguard-content-blocker/overview.html">Website</a> |
     <a href="https://reddit.com/r/Adguard">Reddit</a> |
     <a href="https://x.com/AdGuard">X</a> |
     <a href="https://t.me/adguard_en">Telegram</a>

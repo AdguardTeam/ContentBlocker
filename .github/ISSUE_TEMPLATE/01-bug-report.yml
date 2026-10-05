@@ -20,23 +20,23 @@ body:
     attributes:
       label: AdGuard Version
       description: What version of AdGuard Content Blocker are you running?
-      placeholder: For example, 3.0
+      placeholder: For example, 2.8
     validations:
       required: true
   - type: input
     id: br_version
     attributes:
       label: Browser Version
-      description: What browser do you use?
-      placeholder: For example, Samsung browser, 30.0.67
+      description: What browser do you use, and what version are you running?
+      placeholder: For example, Samsung Browser, 30.0.5.24
     validations:
       required: true
 
   - type: input
     id: os_version
     attributes:
-      label: OS Version
-      description: What operating system do you use?
+      label: Android Version
+      description: What version of Android are you running?
       placeholder: For example, Android 16
     validations:
       required: true

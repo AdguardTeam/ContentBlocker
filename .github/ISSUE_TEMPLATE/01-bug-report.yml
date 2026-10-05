@@ -18,15 +18,15 @@ body:
   - type: input
     id: app_version
     attributes:
-      label: AdGuard Content blocker version
-      description: What version of our application are you running?
+      label: AdGuard Version
+      description: What version of AdGuard Content Blocker are you running?
       placeholder: For example, 3.0
     validations:
       required: true
   - type: input
     id: br_version
     attributes:
-      label: Browser version
+      label: Browser Version
       description: What browser do you use?
       placeholder: For example, Samsung browser, 30.0.67
     validations:
@@ -35,7 +35,7 @@ body:
   - type: input
     id: os_version
     attributes:
-      label: OS version
+      label: OS Version
       description: What operating system do you use?
       placeholder: For example, Android 16
     validations:
@@ -43,7 +43,7 @@ body:
   - type: input
     id: customer_id
     attributes:
-      label: Support ticket ID
+      label: Support Ticket ID
       description: If you've already sent us a diagnostic report through the application, share the ticket ID number. You can find it in an auto-reply email from AdGuard support after sending a report.
       placeholder: Enter a ticket ID
     validations:
@@ -84,18 +84,17 @@ body:
     attributes:
       label: Screenshots
       description: |
-        If applicable add screenshots explaining your problem.
+        If applicable, add screenshots explaining your problem.
         You can drag and drop images or paste them from clipboard.
         Use `<details> </details>` tag to hide screenshots under the spoiler.
-      placeholder: If applicable add screenshots explaining your problem.
+      placeholder: If applicable, add screenshots explaining your problem.
       value: |
           <details><summary>Screenshot 1</summary>
+          <!-- Paste screenshot below. -->
+          
 
-          <!-- paste screenshot here -->
-
+          
           </details>
-    validations:
-      required: false
       
   - type: textarea
     id: additional
